@@ -1,25 +1,30 @@
 # define base image.
-FROM python:3.7-alpine as base
+FROM alpine:latest as base
 
 #####
 
 ## start builder stage.
 
 # this is the first stage of the build.
-# it will install all python requirements.
+# it will install all requirements.
 FROM base as builder
 
-# create directory at root called 'install'. move to this directory.
-RUN mkdir /install
-WORKDIR /install
+# Installs latest Chromium package.
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" > /etc/apk/repositories
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 
 # update installers.
-RUN apk update && \
-  pip install --upgrade pip
+RUN apk update
 
-# copy the requirements file into the install directory and install all requirements.
+# install all package requirements.
+RUN apk add --upgrade apk-tools python3 py-pip chromium chromium-chromedriver
+
+# copy the python requirements file into the install directory and install all python requirements.
 COPY requirements.txt /requirements.txt
-RUN pip install --prefix=/install --no-warn-script-location -r /requirements.txt
+RUN pip install --upgrade -r /requirements.txt
+
+# copy the source code into /app and move into that directory.
+COPY src /app
 
 ## end builder stage.
 
@@ -28,16 +33,12 @@ RUN pip install --prefix=/install --no-warn-script-location -r /requirements.txt
 ## start base stage.
 
 # this is the image this is run.
-FROM base
+FROM builder
 
-# import the installed files from the builder image into /user/local.
-COPY --from=builder /install /usr/local
-
-# copy the source code into /app and move into that directory.
-COPY src /app
-#WORKDIR /app
+# set the proxy addresses
+ENV HTTP_PROXY "http://12.139.101.100:80"
+ENV HTTPS_PROXY "https://13.59.138.149:80"
 
 # default entry point.
-CMD ["python", "app/main.py"]
-
+CMD ["python3", "app/main.py"]
 ## end base stage.

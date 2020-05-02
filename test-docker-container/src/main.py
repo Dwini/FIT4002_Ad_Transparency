@@ -3,14 +3,30 @@ Entry point of the container.
 """
 # import external libraries.
 import requests
+import json
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-# define constants
-URL = 'https://www.aemo.com.au/aemo/apps/api/report/ELEC_NEM_SUMMARY'
-HEADERS = {
-    'content-type': 'application/json',
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
-}
+# define constants.
+HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
+HTTPS_IP_CHECK_URL = 'https://httpbin.org/ip'
 
-#
-r = requests.get(url=URL, headers=HEADERS)
-print(r.json())
+print('starting selenium')
+
+# load google in selenium
+chrome_options = Options()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--headless")
+driver = webdriver.Chrome(options=chrome_options)
+
+# Connect to HTTP_IP_CHECK_URL and print URL to console.
+print('connecting to '+HTTP_IP_CHECK_URL)
+driver.get(HTTP_IP_CHECK_URL)
+http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+print("http ip: "+http_ip_address)
+
+# Connect to HTTPS_IP_CHECK_URL and print URL to console.
+print('connecting to '+HTTPS_IP_CHECK_URL)
+driver.get(HTTPS_IP_CHECK_URL)
+https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+print("https ip: "+https_ip_address)
