@@ -1,7 +1,10 @@
 import pandas as pd
 import time
+import sys
+import os
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
@@ -23,18 +26,23 @@ def get_bots():
 
 def login(bot, webdriver):
     # Login
-    webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
+    webdriver.get("http://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin")
+    print(webdriver.find_element_by_css_selector('body').get_attribute('innerHTML'))
     sleep(2)
     webdriver.find_element_by_id('identifierId').send_keys(bot.email)
     webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+    print('provided username')
     sleep(4)
+    print(webdriver.find_element_by_css_selector('body').get_attribute('innerHTML'))
     webdriver.find_element_by_css_selector("input[type=password]").send_keys(bot.password)
     webdriver.find_element_by_id('passwordNext').click()
+    print('provided password.')
     sleep(2)
 
 def setup_profile(bot, webdriver):
     # Get Keywords
-    keywords = pd.read_csv(bot.status + '_keywords.csv', index_col=None, header=0)
+    path = os.path.dirname(os.path.realpath(__file__))
+    keywords = pd.read_csv(os.path.join(path, bot.status + '_keywords.csv'), index_col=None, header=0)
     # Go through all keywords
     sleep(1)
     links = []
@@ -75,7 +83,8 @@ def scrape_google_ads(bot, webdriver):
     ad_list = [] #empty list to store ad details
 
     # Get Keywords
-    keywords = pd.read_csv(bot.status + '_keywords.csv', index_col =None, header=0 )
+    path = os.path.dirname(os.path.realpath(__file__))
+    keywords = pd.read_csv(os.path.join(path, bot.status + '_keywords.csv'), index_col=None, header=0)
     # Go through all keywords
     sleep(1)
     for keyword in keywords.Keyword:
@@ -109,14 +118,43 @@ def scrape_google_ads(bot, webdriver):
 
     webdriver.quit()
 
-bots = []
-# bots = get_bots()
-bots.append(bot('Phill', 'phillfranco44@gmail.com', 'pF1234()', 'democrat'))
-bots.append(bot('Phill', 'phillfranco44@gmail.com', 'pF1234()', 'democrat'))
 
-for bot in bots:
-    # Open chrome
-    session = webdriver.Chrome(ChromeDriverManager().install())
-    login(bot, session)
-    setup_profile(bot, session)
-    scrape_google_ads(bot, session)
+if __name__ == '__main__':
+    container_build = False
+
+    # if this is running in the container, import and create virtual display.
+    if len(sys.argv) > 1 and sys.argv[1] == '-c':
+        container_build = True
+        from pyvirtualdisplay import Display
+
+        # set xvfb display since there is no GUI in container.
+        display = Display(visible=0, size=(800, 600))
+        display.start()
+
+    # define accounts
+    bots = []
+    bots.append(bot('Alison', 'burgersa68@gmail.com', 'admin123!', 'democrat'))
+    bots.append(bot('Phill', 'phillfranco44@gmail.com', 'pF1234()', 'democrat'))
+
+    for bot in bots:
+        # define options.
+        print('setting options')
+        chrome_options = Options()
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
+
+        print('building session')
+        session = webdriver.Chrome(options=chrome_options)
+        print('session built succesfully')
+
+        login(bot, session)
+
+        print('setup_profile section')
+        setup_profile(bot, session)
+
+        print('scrape_google_ads section')
+        scrape_google_ads(bot, session)
+
+    # close display if in container.
+    if container_build == True:
+        display.stop()

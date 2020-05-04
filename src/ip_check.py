@@ -23,10 +23,10 @@ driver = webdriver.Chrome(options=chrome_options)
 print('connecting to '+HTTP_IP_CHECK_URL)
 driver.get(HTTP_IP_CHECK_URL)
 http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
-print("http ip: "+http_ip_address)
+print("HTTP IP: "+http_ip_address)
 
 # Connect to HTTPS_IP_CHECK_URL and print URL to console.
 print('connecting to '+HTTPS_IP_CHECK_URL)
 driver.get(HTTPS_IP_CHECK_URL)
 https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
-print("https ip: "+https_ip_address)
+print("HTTPS IP: "+https_ip_address)

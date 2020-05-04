@@ -1,0 +1,6 @@
+requests
+selenium
+webdriver-manager
+requests-html
+pandas
+pyvirtualdisplay
