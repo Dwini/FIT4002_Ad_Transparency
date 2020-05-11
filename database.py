@@ -1,81 +1,77 @@
 import boto3
+import uuid
+import random
 from time import sleep
 from datetime import datetime
 
-import config.keys as keys
-from models.Ad import Ad
-from models.Bot import Bot
-from models.Log import Log
+from config import keys
+import constants
 
-# connect to database
-client = boto3.client(
-    'dynamodb', 
-    aws_access_key_id=keys.aws_access_key_id, 
-    aws_secret_access_key=keys.aws_secret_access_key,
-    region_name='us-east-2'
-)
 
-# create bot using model
-new_bot = Bot(
-    name=['John', 'Smith'],
-    username='johnsmith',
-    password='password123',
-    sex='M',
-    DOB=datetime(1990, 4, 3)
-)
-bot_id = new_bot['id']['S']
+def Ad(bot_id, link, headline, html_string):
+    date_captured = datetime.now().strftime(constants.datetime_format)
+    return {
+        'id': str(uuid.uuid4()),
+        'date_captured': date_captured,
+        'bot_id': bot_id,
+        'link': link,
+        'headline': headline,
+        'html_string': html_string 
+    }
 
-# save bot to db
-print('Creating new bot...')
-response = client.put_item(
-    TableName='Bots',
-    Item=new_bot
-)
+def Log(bot_id, url, actions, search_term):
+    date_logged = datetime.now().strftime(constants.datetime_format)
+    return {
+        'id': str(uuid.uuid4()),
+        'date_logged': date_logged,
+        'bot_id': bot_id,
+        'url': url,
+        'actions': actions,
+        'search_term': search_term
+    }
 
-# get bot from db
-response = client.get_item(
-    TableName='Bots',
-    Key={ 'id': { 'S': bot_id } }
-)['Item']
-print('%s\n' % response)
 
-# log that bot visited Google
-print('Logging that bot visitied Google...')
-response = client.put_item(
-    TableName='Logs',
-    Item=Log(
-        bot_id=bot_id,
-        url='https://google.com',
-        actions=['visit', 'search'],
-        search_term='donald trump'
-    )
-)
+class Database:
 
-# list log entries of bot
-print('Finding log entries of bot...')
-response = client.scan(
-    TableName='Logs',
-    FilterExpression="bot_id = :b",
-    ExpressionAttributeValues={ ':b': { 'S': bot_id } }
-)['Items']
-print(response, end="\n\n")
+    def __init__(self):
+        # connect to database
+        dynamodb = boto3.resource(
+            'dynamodb', 
+            aws_access_key_id=keys.AWS_ACCESS_KEY_ID, 
+            aws_secret_access_key=keys.AWS_SECRET_ACCESS_KEY,
+            region_name=keys.REGION_NAME
+        )
+        self.ads = dynamodb.Table('Ads')
+        self.bots = dynamodb.Table('Bots')
+        self.logs = dynamodb.Table('Logs')
 
-# create ad for new bot
-print('Saving ad bot collected to database...')
-client.put_item(
-    TableName='Ads',
-    Item=Ad(
-        bot_id=bot_id,
-        url="https://google.com",
-        html_string="some content"
-    )
-)
+    def get_all_bots(self):
+        # return a list of all bots in db
+        print("Fetching all bots...", end="")
+        response = self.bots.scan()
+        print("success")
+        return response['Items']
 
-# find all ads collected by bot
-print('Finding ads collected by bot...')
-response = client.scan(
-    TableName='Ads',
-    FilterExpression="bot_id = :b",
-    ExpressionAttributeValues={ ':b': { 'S': bot_id } }
-)['Items']
-print(response)
+    def log_action(self, bot_id, url, actions, search_term='<n/a>'):
+        print("Logging bot action...", end="")
+        self.logs.put_item(
+            Item=Log(
+                bot_id=bot_id,
+                url=url,
+                actions=', '.join(actions),
+                search_term=search_term
+            )
+        )
+        print("success")
+
+    def save_ad(self, bot_id, link, headline, html_string):
+        print("Saving ad to database...", end='')
+        self.ads.put_item(
+            Item=Ad(
+                bot_id=bot_id,
+                link=link,
+                headline=headline,
+                html_string=html_string
+            )
+        )
+        print("success")
