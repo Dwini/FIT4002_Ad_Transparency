@@ -1,8 +1,4 @@
 from selenium.webdriver import Chrome
-from time import sleep
-
-webdriver = "chromedriver.exe"
-
 
 
 #given a selenium driver retrieves a list of google ads which appear on the page
@@ -16,7 +12,8 @@ def getGoogleAds(driver):
     i = 0
     for iframe in iframes:
         try:
-            screenshotName = 'adScreenshots/' + str(i) + '.png'
+            screenshotName = 'adScreenshots/google' + str(i) + '.png'
+
             iframe.screenshot(screenshotName)
             i = i + 1
 
@@ -24,7 +21,7 @@ def getGoogleAds(driver):
         except:
             print('one or more screenshots failed')
 
-    return()
+    return screenshots
 
 def getRevContentAds(driver):
 
@@ -38,19 +35,19 @@ def getRevContentAds(driver):
         image = item.find_element_by_class_name('rc-photo-container')
         text = item.text
 
-        screenshotName = 'adScreenshots/' + str(i) + '.png'
+        screenshotName = 'adScreenshots/rev' + str(i) + '.png'
         image.screenshot(screenshotName)
         print(image.screenshot_as_base64)
         i = i + 1
 
 
 
-driver = Chrome(webdriver)
-
-url = "https://www.washingtonexaminer.com/"
-driver.get(url)
-
-
-sleep(45)
-
-getGoogleAds(driver)
+#For testing purposes only
+# webdriver = "chromedriver.exe"
+# driver = Chrome(webdriver)
+#
+# url = "https://www.washingtonexaminer.com/"
+# driver.get(url)
+#
+# getGoogleAds(driver)
+# getRevContentAds(driver)
