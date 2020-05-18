@@ -4,9 +4,7 @@ import random
 from time import sleep
 from datetime import datetime
 
-from config import keys
-import constants
-
+from config import keys, constants
 
 def Ad(bot_id, link, headline, html_string):
     date_captured = datetime.now().strftime(constants.datetime_format)
@@ -16,7 +14,7 @@ def Ad(bot_id, link, headline, html_string):
         'bot_id': bot_id,
         'link': link,
         'headline': headline,
-        'html_string': html_string 
+        'html_string': html_string
     }
 
 def Log(bot_id, url, actions, search_term):
@@ -36,8 +34,8 @@ class Database:
     def __init__(self):
         # connect to database
         dynamodb = boto3.resource(
-            'dynamodb', 
-            aws_access_key_id=keys.AWS_ACCESS_KEY_ID, 
+            'dynamodb',
+            aws_access_key_id=keys.AWS_ACCESS_KEY_ID,
             aws_secret_access_key=keys.AWS_SECRET_ACCESS_KEY,
             region_name=keys.REGION_NAME
         )

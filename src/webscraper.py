@@ -1,7 +1,9 @@
 import pandas as pd
 import time
+import sys
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
@@ -24,10 +26,10 @@ def get_bots(db):
 
     for entry in response:
         bots.append(bot(
-            entry['id'], 
-            entry['name'], 
-            entry['username'], 
-            entry['password'], 
+            entry['id'],
+            entry['name'],
+            entry['username'],
+            entry['password'],
             entry['search_terms']
             ))
 
@@ -150,8 +152,22 @@ def scrape_google_ads(bot, webdriver, db):
         webdriver.save_screenshot('screenshots/'+str(index)+'.png')
         #webdriver.get_screenshot_as_file(str(index) + '.png')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    container_build = False
+
+    # if this is running in the container, import and create virtual display.
+    if len(sys.argv) > 1 and sys.argv[1] == '-c':
+        container_build = True
+        from pyvirtualdisplay import Display
+
+        # set xvfb display since there is no GUI in container.
+        display = Display(visible=0, size=(800, 600))
+        display.start()
+
+    print('connecting to database')
     db = Database()
+
+    print('retrieving bots')
     bots = get_bots(db)
 
     for bot in bots:
@@ -159,11 +175,26 @@ if __name__ == "__main__":
         if bot.username != "jw1083888":
             continue
 
-        # Open chrome
-        session = webdriver.Chrome(ChromeDriverManager().install())
+        # define options.
+        print('setting options')
+        chrome_options = Options()
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--disable-dev-shm-usage')
+
+        print('building session')
+        session = webdriver.Chrome(options=chrome_options)
+        print('session built succesfully')
 
         login(bot, session)
+
+        print('setup_profile section')
         setup_profile(bot, session, db)
+
+        print('scrape_google_ads section')
         scrape_google_ads(bot, session, db)
 
         session.quit()
+
+    # close display if in container.
+    if container_build == True:
+        display.stop()
