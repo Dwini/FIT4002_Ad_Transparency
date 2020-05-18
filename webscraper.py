@@ -2,7 +2,6 @@ import pandas as pd
 import time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
@@ -38,7 +37,7 @@ def login(bot, webdriver):
     # Login
     webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
     sleep(2)
-    webdriver.find_element_by_id('identifierId').send_keys(bot.username + "@gmail.com")
+    webdriver.find_element_by_id('identifierId').send_keys(bot.username)
     webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
     sleep(4)
     webdriver.find_element_by_css_selector("input[type=password]").send_keys(bot.password)
@@ -113,7 +112,7 @@ def scrape_google_ads(bot, webdriver, db):
 
     # Go through all keywords
     sleep(1)
-    for keyword in keywords.Keyword:
+    for keyword in keywords:
         webdriver.get('https://google.com/search?q=' + keyword)
         r = session.get('https://google.com/search?q=' + keyword)
         sleep(10)
@@ -157,8 +156,7 @@ if __name__ == "__main__":
 
     for bot in bots:
         # only use a specific bot (for testing purposes)
-        print(bot.username)
-        if bot.username != "burgersa68":
+        if bot.username != "jw1083888":
             continue
 
         # Open chrome
