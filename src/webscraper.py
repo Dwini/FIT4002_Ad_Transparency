@@ -1,7 +1,6 @@
 import pandas as pd
 import time
 import sys
-import os
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
@@ -9,46 +8,56 @@ from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
 
-class bot:
-    def __init__(self, name, email, password, status):
-        self.name = name
-        self.email = email
-        self.password = password
-        self.status = status
+from config import keys
+from database import Database
 
-def get_bots():
-    """ Code to get the bots from the database
+class bot:
+    def __init__(self, id, name, username, password, search_terms):
+        self.id = id
+        self.name = name
+        self.username = username
+        self.password = password
+        self.search_terms = search_terms
+
+def get_bots(db):
+    # Code to get the bots from the database
+    response = db.get_all_bots()
     bots = []
-    for entry in db:
-        bots.append(bot(entry.name, entry.email, entry.password, entry.status))
-    """
-    return
+
+    for entry in response:
+        bots.append(bot(
+            entry['id'],
+            entry['name'],
+            entry['username'],
+            entry['password'],
+            entry['search_terms']
+            ))
+
+    return bots
 
 def login(bot, webdriver):
     # Login
-    webdriver.get("http://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin")
-    print(webdriver.find_element_by_css_selector('body').get_attribute('innerHTML'))
+    webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
     sleep(2)
-    webdriver.find_element_by_id('identifierId').send_keys(bot.email)
+    webdriver.find_element_by_id('identifierId').send_keys(bot.username)
     webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-    print('provided username')
     sleep(4)
-    print(webdriver.find_element_by_css_selector('body').get_attribute('innerHTML'))
     webdriver.find_element_by_css_selector("input[type=password]").send_keys(bot.password)
     webdriver.find_element_by_id('passwordNext').click()
-    print('provided password.')
     sleep(2)
 
-def setup_profile(bot, webdriver):
+def setup_profile(bot, webdriver, db):
+    num_links_to_visit = 2
     # Get Keywords
-    path = os.path.dirname(os.path.realpath(__file__))
-    keywords = pd.read_csv(os.path.join(path, bot.status + '_keywords.csv'), index_col=None, header=0)
+    # keywords = pd.read_csv(bot.status + '_keywords.csv', index_col=None, header=0)
+    keywords = bot.search_terms
     # Go through all keywords
     sleep(1)
     links = []
-    for keyword in keywords.Keyword:
+    for keyword in keywords:
+        url = 'http://www.google.com/'
         # Search Keyword using text box
-        webdriver.get('http://www.google.com/')
+        webdriver.get(url)
         sleep(2)
         search_box = webdriver.find_element_by_xpath("//input[@name='q']")
         search_box.send_keys(keyword)
@@ -57,40 +66,59 @@ def setup_profile(bot, webdriver):
         sleep(6)
         # wait until shows result
         results = webdriver.find_elements_by_css_selector('div.g')
+
+        # save site visit to database
+        db.log_action(bot.id, url, ['search'], keyword)
+
         try:
-            for _ in range(10):
+            for _ in range(2):
                 new = True
                 link = results[_].find_element_by_tag_name("a")
                 href = link.get_attribute("href")
                 for link in links:
-                 if href == link:
-                     new = False
+                    if href == link:
+                        new = False
                 if new:
                     links.append(href)
         except:
             print()
+
+    count = 0
+
     for link in links:
+        count += 1
+
         try:
             webdriver.get(link)
+
+            # save site visit to database
+            db.log_action(bot.id, link, ['visit'])
+
             sleep(10)
         except:
             print()
 
+        # only visit some of the links
+        if count == num_links_to_visit:
+            break
 
-def scrape_google_ads(bot, webdriver):
+
+def scrape_google_ads(bot, webdriver, db):
     session = HTMLSession()
 
     ad_list = [] #empty list to store ad details
 
     # Get Keywords
-    path = os.path.dirname(os.path.realpath(__file__))
-    keywords = pd.read_csv(os.path.join(path, bot.status + '_keywords.csv'), index_col=None, header=0)
+    # keywords = pd.read_csv(bot.status + '_keywords.csv', index_col =None, header=0 )
+    keywords = bot.search_terms
+
     # Go through all keywords
     sleep(1)
-    for keyword in keywords.Keyword:
+    for keyword in keywords:
         webdriver.get('https://google.com/search?q=' + keyword)
         r = session.get('https://google.com/search?q=' + keyword)
         sleep(10)
+
         # Get the 4 ads at the top
         ads = r.html.find('.ads-ad')
 
@@ -101,10 +129,14 @@ def scrape_google_ads(bot, webdriver):
             ad_copy = ad.find('.ads-creative', first=True).text #ad copy
             ad_list.append([keyword, ad_link, ad_headline, ad_copy]) #append data row to list
 
+            # save ad to database
+            db.save_ad(bot.id, ad_link, ad_headline, ad_copy)
+
     df_ads = pd.DataFrame(ad_list, columns = ['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
 
     #timestamp so we dont overwrite old CSVs
     ts = time.time()
+
     #write out to CSV for reference
     df_ads.to_csv('top-ads-'+str(ts)+'.csv')
 
@@ -112,12 +144,13 @@ def scrape_google_ads(bot, webdriver):
     for index, row in df_ads.iterrows():
         print('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
         webdriver.get(row['ad_link'])
+
+        # save site visit to database
+        db.log_action(bot.id, row['ad_link'], ['visit'])
+
         sleep(2)
         webdriver.save_screenshot('screenshots/'+str(index)+'.png')
         #webdriver.get_screenshot_as_file(str(index) + '.png')
-
-    webdriver.quit()
-
 
 if __name__ == '__main__':
     container_build = False
@@ -131,12 +164,17 @@ if __name__ == '__main__':
         display = Display(visible=0, size=(800, 600))
         display.start()
 
-    # define accounts
-    bots = []
-    bots.append(bot('Alison', 'burgersa68@gmail.com', 'admin123!', 'democrat'))
-    bots.append(bot('Phill', 'phillfranco44@gmail.com', 'pF1234()', 'democrat'))
+    print('connecting to database')
+    db = Database()
+
+    print('retrieving bots')
+    bots = get_bots(db)
 
     for bot in bots:
+        # only use a specific bot (for testing purposes)
+        if bot.username != "jw1083888":
+            continue
+
         # define options.
         print('setting options')
         chrome_options = Options()
@@ -150,10 +188,12 @@ if __name__ == '__main__':
         login(bot, session)
 
         print('setup_profile section')
-        setup_profile(bot, session)
+        setup_profile(bot, session, db)
 
         print('scrape_google_ads section')
-        scrape_google_ads(bot, session)
+        scrape_google_ads(bot, session, db)
+
+        session.quit()
 
     # close display if in container.
     if container_build == True:

@@ -26,4 +26,5 @@ These proxy lists are supposedly updated every five minutes.
 TODO: Download new proxy list during build stage and choose random proxy.
 
 ### Helpfull commands in docker.
-* Once a container is built, we can navigate as root with `docker run -it <container_name> /bin/sh`.
+* Once a container is built, we can navigate as root with `docker run -it <container_name> /bin/sh`. WIll not work if container is build with `--rm` as a parameter.
+* Confirm that the proxy addresses are working by running `python app/ip_check.py`.
