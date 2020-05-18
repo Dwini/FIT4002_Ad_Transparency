@@ -1,5 +1,8 @@
+# import external libraries.
+import sys
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 
 if __name__ == '__main__':
     container_build = False
@@ -12,6 +15,12 @@ if __name__ == '__main__':
         # set xvfb display since there is no GUI in container.
         display = Display(visible=0, size=(800, 600))
         display.start()
+
+    chrome_options = Options()
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+
+    driver = webdriver.Chrome(options=chrome_options)
 
     # need to go to a web page so that bot can click on button to
     # use precise location

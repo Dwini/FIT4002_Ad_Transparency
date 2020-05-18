@@ -43,8 +43,8 @@ COPY src /app
 FROM builder
 
 # set the proxy addresses
-ENV HTTP_PROXY "http://64.227.126.52:3128"
-ENV HTTPS_PROXY "https://65.18.118.8:8080"
+ENV HTTP_PROXY "http://134.209.29.120:8080"
+ENV HTTPS_PROXY "https://45.77.71.140:9050"
 
 # default entry point.
 CMD ["python", "app/webscraper.py", "-c"]
