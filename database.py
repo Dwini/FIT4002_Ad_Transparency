@@ -48,24 +48,27 @@ class Database:
     def get_all_bots(self):
         # return a list of all bots in db
         print("Fetching all bots...", end="")
-        response = self.bots.scan()
-        print("success")
-        return response['Items']
+        response = self.bots.scan()['Items']
+
+        print("success\n%d bots fetched" % (len(response)))
+        return response
 
     def log_action(self, bot_id, url, actions, search_term='<n/a>'):
-        print("Logging bot action...", end="")
+        actions = ', '.join(actions)
+
+        print("Logging %s at %s ... " % (actions, url), end="")
         self.logs.put_item(
             Item=Log(
                 bot_id=bot_id,
                 url=url,
-                actions=', '.join(actions),
+                actions=actions,
                 search_term=search_term
             )
         )
         print("success")
 
     def save_ad(self, bot_id, link, headline, html_string):
-        print("Saving ad to database...", end='')
+        print("Saving ad with link %s ... " % (link), end='')
         self.ads.put_item(
             Item=Ad(
                 bot_id=bot_id,
