@@ -12,8 +12,7 @@ from config import keys
 from database import Database
 
 class bot:
-    def __init__(self, id, name, username, password, search_terms):
-        self.id = id
+    def __init__(self, name, username, password, search_terms):
         self.name = name
         self.username = username
         self.password = password
@@ -21,17 +20,16 @@ class bot:
 
 def get_bots(db):
     # Code to get the bots from the database
-    response = db.get_all_bots()
+    response = db.fetch_all_items(table_name='Bots')
     bots = []
 
     for entry in response:
         bots.append(bot(
-            entry['id'],
             entry['name'],
             entry['username'],
             entry['password'],
             entry['search_terms']
-            ))
+        ))
 
     return bots
 
@@ -68,7 +66,7 @@ def setup_profile(bot, webdriver, db):
         results = webdriver.find_elements_by_css_selector('div.g')
 
         # save site visit to database
-        db.log_action(bot.id, url, ['search'], keyword)
+        db.log_action(bot.username, url, ['search'], keyword)
 
         try:
             for _ in range(2):
@@ -92,7 +90,7 @@ def setup_profile(bot, webdriver, db):
             webdriver.get(link)
 
             # save site visit to database
-            db.log_action(bot.id, link, ['visit'])
+            db.log_action(bot.username, link, ['visit'])
 
             sleep(10)
         except:
@@ -130,7 +128,7 @@ def scrape_google_ads(bot, webdriver, db):
             ad_list.append([keyword, ad_link, ad_headline, ad_copy]) #append data row to list
 
             # save ad to database
-            db.save_ad(bot.id, ad_link, ad_headline, ad_copy)
+            db.save_ad(bot.username, ad_link, ad_headline, ad_copy)
 
     df_ads = pd.DataFrame(ad_list, columns = ['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
 
@@ -146,7 +144,7 @@ def scrape_google_ads(bot, webdriver, db):
         webdriver.get(row['ad_link'])
 
         # save site visit to database
-        db.log_action(bot.id, row['ad_link'], ['visit'])
+        db.log_action(bot.username, row['ad_link'], ['visit'])
 
         sleep(2)
         webdriver.save_screenshot('screenshots/'+str(index)+'.png')
@@ -171,6 +169,7 @@ if __name__ == '__main__':
     bots = get_bots(db)
 
     for bot in bots:
+        print(bot.username)
         # only use a specific bot (for testing purposes)
         if bot.username != "jw1083888":
             continue
