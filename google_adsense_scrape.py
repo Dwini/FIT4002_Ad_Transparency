@@ -4,6 +4,7 @@ from selenium.webdriver import Chrome
 #given a selenium driver retrieves a list of google ads which appear on the page
 def getGoogleAds(driver):
 
+    driver.switch_to.default_content()
 
     # google ads appear in iframes labelled as such
     iframes = driver.find_elements_by_xpath("//iframe[@data-google-container-id]")
@@ -11,9 +12,27 @@ def getGoogleAds(driver):
     screenshots = []
     i = 0
     for iframe in iframes:
-        try:
-            screenshotName = 'adScreenshots/google' + str(i) + '.png'
 
+        screenshotName = 'adScreenshots/google' + str(i) + '.png'
+
+        #Ad contents are dynamically loaded according to your cookie id
+        #so we need to switch to that context
+        driver.switch_to.frame(iframe)
+
+        try:
+
+            #go down to the first Div in the iframe
+            firstDiv = driver.find_element_by_xpath(".//div[@*]")
+
+            #find the link embedded in the iframe
+            linkElement = firstDiv.find_element_by_xpath(".//*[@href]")
+
+            print(linkElement.get_attribute('href'))
+        except:
+            print('Error in one or more links')
+
+
+        try:
             iframe.screenshot(screenshotName)
             i = i + 1
 
@@ -43,11 +62,11 @@ def getRevContentAds(driver):
 
 
 #For testing purposes only
-# webdriver = "chromedriver.exe"
-# driver = Chrome(webdriver)
-#
-# url = "https://www.washingtonexaminer.com/"
-# driver.get(url)
-#
-# getGoogleAds(driver)
-# getRevContentAds(driver)
+webdriver = "chromedriver.exe"
+driver = Chrome(webdriver)
+
+url = "https://www.washingtonexaminer.com/"
+driver.get(url)
+
+getGoogleAds(driver)
+getRevContentAds(driver)
