@@ -1,5 +1,5 @@
 from selenium.webdriver import Chrome
-
+import re
 
 #given a selenium driver retrieves a list of google ads which appear on the page
 def getGoogleAds(driver):
@@ -59,7 +59,22 @@ def getRevContentAds(driver):
         print(image.screenshot_as_base64)
         i = i + 1
 
+def extractEmbeddedUrl(compositeLink):
 
+    #ignore the start of the url
+    #We are looking for any urls within composite link
+    protocol = "https"
+    protocolLen = len(protocol)
+
+
+    searchExpression = protocol + '://' + '(.*)%'
+    #use inbuilt function
+    found = re.search(searchExpression, compositeLink[protocolLen:])
+
+    try:
+        return found.group(0)
+    except:
+        return 0
 
 #For testing purposes only
 webdriver = "chromedriver.exe"
