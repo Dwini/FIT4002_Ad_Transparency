@@ -13,20 +13,21 @@ def slow_typing(element, text):
       time.sleep(0.3)
 
 def tab_entry(browser):
-    actions = ActionChains(browser)
+    actions_create = ActionChains(browser)
     firstname = browser.find_element_by_id('firstName')
     firstname.click()
-    actions = actions.send_keys('John')
-    actions = actions.send_keys(Keys.TAB)
-    actions = actions.send_keys('Doed')
-    actions = actions.send_keys(Keys.TAB)
-    actions = actions.send_keys('John1234Doed')
-    actions = actions.send_keys(Keys.TAB)
-    actions = actions.send_keys(Keys.TAB)
-    actions = actions.send_keys('hi1234()')
-    actions = actions.send_keys(Keys.TAB)
-    actions = actions.send_keys('hi1234()')
-    actions.perform()
+    actions_create = actions_create.send_keys('John')
+    actions_create = actions_create.send_keys(Keys.TAB)
+    actions_create = actions_create.send_keys('Doed')
+    actions_create = actions_create.send_keys(Keys.TAB)
+    actions_create = actions_create.send_keys('John1234Doed')
+    actions_create = actions_create.send_keys(Keys.TAB)
+    actions_create = actions_create.send_keys(Keys.TAB)
+    actions_create = actions_create.send_keys('hi1234()')
+    actions_create = actions_create.send_keys(Keys.TAB)
+    actions_create = actions_create.send_keys('hi1234()')
+    actions_create.perform()
+
 
 def find_entry(browser):
     # Fill user's full name
@@ -55,6 +56,31 @@ def find_entry(browser):
 
     time.sleep(5)
 
+def account_next(browser):
+    # click on next
+    next = browser.find_element_by_id('accountDetailsNext')
+    next.click()
+
+def personal_next(broswer):
+    # click on next
+    next = browser.find_element_by_id('personalDetailsNext')
+    next.click()
+
+def finalise(browser):
+    actions_finalise = ActionChains(browser)
+    phone = browser.find_element_by_id('phoneNumberId')
+    phone.click()
+    actions_finalise = actions_finalise.send_keys(Keys.TAB)
+    actions_finalise = actions_finalise.send_keys(Keys.TAB)
+    actions_finalise = actions_finalise.send_keys('12')
+    actions_finalise = actions_finalise.send_keys(Keys.TAB)
+    actions_finalise = actions_finalise.send_keys('s')
+    actions_finalise = actions_finalise.send_keys(Keys.TAB)
+    actions_finalise = actions_finalise.send_keys('1997')
+    actions_finalise = actions_finalise.send_keys(Keys.TAB)
+    actions_finalise = actions_finalise.send_keys('m')
+    actions_finalise.perform()
+
 # Visit chrome://version/ and copy profile path in place of '<chrome user profile>'
 """options = ChromeOptions().add_argument("--user-data-dir=<chrome user profile>")
 
@@ -70,13 +96,10 @@ time.sleep(10)
 """cookie_cta = browser.find_element_by_id('accept-cookie-notification')
 cookie_cta.click()"""
 tab_entry(browser)
-time.sleep(10)
-# click on next
-next = browser.find_element_by_id('accountDetailsNext')
-next.click()
+account_next(browser)
+finalise(browser)
+personal_next(browser)
 
 time.sleep(20)
-
-
 
 browser.close()
