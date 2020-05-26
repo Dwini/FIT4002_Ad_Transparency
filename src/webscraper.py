@@ -169,7 +169,7 @@ if __name__ == '__main__':
     bots = get_bots(db)
 
     for bot in bots:
-        print(bot.username)
+        print('using bot: ' + bot.username)
         # only use a specific bot (for testing purposes)
         if bot.username != "jw1083888":
             continue
