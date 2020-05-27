@@ -9,12 +9,14 @@ from config import keys, constants
 class Database:
     def __init__(self):
         # connect to database
+        print('connecting to database...', end="")
         dynamodb = boto3.resource(
             'dynamodb',
             aws_access_key_id=keys.AWS_ACCESS_KEY_ID,
             aws_secret_access_key=keys.AWS_SECRET_ACCESS_KEY,
             region_name=keys.REGION_NAME
         )
+        print("success")
 
         # init tables
         self.ads =  dynamodb.Table('Ads')
@@ -25,7 +27,7 @@ class Database:
     Return all the items in a table given the table name
     """
     def fetch_all_items(self, table_name):
-        print("fetching items...", end="")
+        print("fetching items from %s table..." % table_name, end="")
 
         if table_name == 'Ads':
             response = self.ads.scan()['Items']
@@ -41,7 +43,7 @@ class Database:
     Create a bot given the bots info
     """
     def create_bot(self, username, password, date_created, name, gender, DOB, search_terms):
-        print("creating bot %s ... " % (username), end="")
+        print("creating bot %s..." % (username), end="")
         self.bots.put_item(Item={
             'username': username,
             'password': password,
@@ -60,7 +62,7 @@ class Database:
     def log_action(self, bot_username, url, actions, search_term=''):
         date_logged = datetime.now().strftime(constants.datetime_format)
 
-        print("logging %s at %s ... " % (actions, url), end="")
+        print("logging %s at '%s'..." % (actions, url), end="")
         self.logs.put_item(Item={
             'id': str(uuid.uuid4()),
             'date_logged': date_logged,
@@ -77,7 +79,7 @@ class Database:
     def save_ad(self, bot_username, link, headline, html_string):
         date_captured = datetime.now().strftime(constants.datetime_format)
 
-        print("saving ad with link %s ... " % (link), end='')
+        print("saving ad with link %s..." % (link), end='')
         self.ads.put_item(Item={
             'id': str(uuid.uuid4()),
             'date_captured': date_captured,
@@ -89,6 +91,9 @@ class Database:
         print("success")
 
 
+"""
+Export info for a particular table to csv file
+"""
 def export_to_csv(table_name, items):
     if len(items) == 0:
         print("no items in %s table" % table_name)
@@ -110,7 +115,7 @@ def export_to_csv(table_name, items):
     print("exported to %s" % filename)
 
 
-def main():
+if __name__ == '__main__':
     db = Database()
 
     choice = int(input(           \
@@ -150,7 +155,3 @@ def main():
         )
     else:
         print("Invalid option")
-
-
-if __name__ == '__main__':
-    main()
