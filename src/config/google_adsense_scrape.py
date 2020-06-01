@@ -1,19 +1,34 @@
 from selenium.webdriver import Chrome
 import re
+from selenium import webdriver
+from time import sleep
+from random import seed, randint
+
 
 #given a selenium driver retrieves a list of google ads which appear on the page
 def getGoogleAds(driver):
-
-    driver.switch_to.default_content()
+    seed(231)
 
     # google ads appear in iframes labelled as such
     iframes = driver.find_elements_by_xpath("//iframe[@data-google-container-id]")
 
+    # Writing to a file
+    adLinks = open('../../adLinks.txt', 'w')
+
+
     screenshots = []
-    i = 0
+
     for iframe in iframes:
 
-        screenshotName = 'adScreenshots/google' + str(i) + '.png'
+        screenshotName = 'adScreenshots/google' + str(randint(0, 10000)) + '.png'
+
+        driver.switch_to.default_content()
+        try:
+            iframe.screenshot(screenshotName)
+
+            screenshots.append(iframe.screenshot_as_base64)
+        except:
+            print('one or more screenshots failed')
 
         #Ad contents are dynamically loaded according to your cookie id
         #so we need to switch to that context
@@ -27,18 +42,14 @@ def getGoogleAds(driver):
             #find the link embedded in the iframe
             linkElement = firstDiv.find_element_by_xpath(".//*[@href]")
 
-            print(linkElement.get_attribute('href'))
+            adLinks.write(
+                (extractEmbeddedUrl(
+                    linkElement.get_attribute('href'))
+                )
+            )
         except:
             print('Error in one or more links')
 
-
-        try:
-            iframe.screenshot(screenshotName)
-            i = i + 1
-
-            screenshots.append(iframe.screenshot_as_base64)
-        except:
-            print('one or more screenshots failed')
 
     return screenshots
 
@@ -72,16 +83,7 @@ def extractEmbeddedUrl(compositeLink):
     found = re.search(searchExpression, compositeLink[protocolLen:])
 
     try:
-        return found.group(0)
+        return found.group(0)[0:len(found.group(0))-1]
     except:
         return 0
 
-#For testing purposes only
-webdriver = "chromedriver.exe"
-driver = Chrome(webdriver)
-
-url = "https://www.washingtonexaminer.com/"
-driver.get(url)
-
-getGoogleAds(driver)
-getRevContentAds(driver)
