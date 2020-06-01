@@ -4,6 +4,10 @@ env
 drivers
 geckodriver.log
 __pycache__
+/venv
+/adScreenshots
+chromedriver.exe
+.idea/
 # Docker project generated files to ignore
 #  if you want to ignore files created by your editor/tools,
 #  please consider a global .gitignore https://help.github.com/articles/ignoring-files
