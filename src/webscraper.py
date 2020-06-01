@@ -11,44 +11,29 @@ from time import sleep
 from config import keys
 from database import Database
 
-class bot:
-    def __init__(self, name, username, password, search_terms):
-        self.name = name
-        self.username = username
-        self.password = password
-        self.search_terms = search_terms
-
-def get_bots(db):
-    # Code to get the bots from the database
-    response = db.fetch_all_items(table_name='Bots')
-    bots = []
-
-    for entry in response:
-        bots.append(bot(
-            entry['name'],
-            entry['username'],
-            entry['password'],
-            entry['search_terms']
-        ))
-
-    return bots
-
 def login(bot, webdriver):
     # Login
+    print('logging into Google account...', end="")
+
     webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
     sleep(2)
-    webdriver.find_element_by_id('identifierId').send_keys(bot.username)
+    webdriver.find_element_by_id('identifierId').send_keys(bot['username'])
     webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
     sleep(4)
-    webdriver.find_element_by_css_selector("input[type=password]").send_keys(bot.password)
+    webdriver.find_element_by_css_selector("input[type=password]").send_keys(bot['password'])
     webdriver.find_element_by_id('passwordNext').click()
     sleep(2)
 
+    print("success")
+
 def setup_profile(bot, webdriver, db):
+    print('seting up profile')
     num_links_to_visit = 2
+
     # Get Keywords
     # keywords = pd.read_csv(bot.status + '_keywords.csv', index_col=None, header=0)
-    keywords = bot.search_terms
+    keywords = bot['search_terms']
+
     # Go through all keywords
     sleep(1)
     links = []
@@ -66,10 +51,10 @@ def setup_profile(bot, webdriver, db):
         results = webdriver.find_elements_by_css_selector('div.g')
 
         # save site visit to database
-        db.log_action(bot.username, url, ['search'], keyword)
+        db.log_action(bot['username'], url, ['search'], keyword)
 
         try:
-            for _ in range(2):
+            for _ in range(num_links_to_visit):
                 new = True
                 link = results[_].find_element_by_tag_name("a")
                 href = link.get_attribute("href")
@@ -81,34 +66,27 @@ def setup_profile(bot, webdriver, db):
         except:
             print()
 
-    count = 0
-
     for link in links:
-        count += 1
-
         try:
             webdriver.get(link)
 
             # save site visit to database
-            db.log_action(bot.username, link, ['visit'])
+            db.log_action(bot['username'], link, ['visit'])
 
             sleep(10)
         except:
             print()
 
-        # only visit some of the links
-        if count == num_links_to_visit:
-            break
-
 
 def scrape_google_ads(bot, webdriver, db):
+    print('scraping google ads')
     session = HTMLSession()
 
     ad_list = [] #empty list to store ad details
 
     # Get Keywords
     # keywords = pd.read_csv(bot.status + '_keywords.csv', index_col =None, header=0 )
-    keywords = bot.search_terms
+    keywords = bot['search_terms']
 
     # Go through all keywords
     sleep(1)
@@ -128,7 +106,7 @@ def scrape_google_ads(bot, webdriver, db):
             ad_list.append([keyword, ad_link, ad_headline, ad_copy]) #append data row to list
 
             # save ad to database
-            db.save_ad(bot.username, ad_link, ad_headline, ad_copy)
+            db.save_ad(bot['username'], ad_link, ad_headline, ad_copy)
 
     df_ads = pd.DataFrame(ad_list, columns = ['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
 
@@ -144,12 +122,13 @@ def scrape_google_ads(bot, webdriver, db):
         webdriver.get(row['ad_link'])
 
         # save site visit to database
-        db.log_action(bot.username, row['ad_link'], ['visit'])
+        db.log_action(bot['username'], row['ad_link'], ['visit'])
 
         sleep(2)
         webdriver.save_screenshot('screenshots/'+str(index)+'.png')
         #webdriver.get_screenshot_as_file(str(index) + '.png')
 
+# this is handled by app.py. can be removed?
 if __name__ == '__main__':
     container_build = False
 
@@ -166,16 +145,16 @@ if __name__ == '__main__':
     db = Database()
 
     print('retrieving bots')
-    bots = get_bots(db)
+    bots = db.fetch_all_items('Ads')
 
     for bot in bots:
-        print(bot.username)
+        print('using bot: ' + bot['username'])
         # only use a specific bot (for testing purposes)
-        if bot.username != "jw1083888":
+        if bot['username'] != "jw1083888":
             continue
 
         # define options.
-        print('setting options')
+        print('setting options for session')
         chrome_options = Options()
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')

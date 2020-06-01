@@ -47,5 +47,5 @@ ENV HTTP_PROXY "http://134.209.29.120:8080"
 ENV HTTPS_PROXY "https://45.77.71.140:9050"
 
 # default entry point.
-CMD ["python", "app/webscraper.py", "-c"]
+CMD ["python", "app/app.py", "-c"]
 ## end base stage.
