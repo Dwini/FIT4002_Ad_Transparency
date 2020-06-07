@@ -12,21 +12,26 @@ URL_STEM = "http://ip-api.com/json/" # followed by IP Address w/o port number.
 
 """
 Check if successfully connected to proxy server
+Returns true if working, else false
 """
 def ip_check(driver):
     print('checking ip')
+    
+    try:
+        # Connect to HTTP_IP_CHECK_URL and print URL to console.
+        print('connecting to '+HTTP_IP_CHECK_URL)
+        driver.get(HTTP_IP_CHECK_URL)
+        http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+        print("HTTP IP: "+http_ip_address)
 
-    # Connect to HTTP_IP_CHECK_URL and print URL to console.
-    print('connecting to '+HTTP_IP_CHECK_URL)
-    driver.get(HTTP_IP_CHECK_URL)
-    http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
-    print("HTTP IP: "+http_ip_address)
-
-    # Connect to HTTPS_IP_CHECK_URL and print URL to console.
-    print('connecting to '+HTTPS_IP_CHECK_URL)
-    driver.get(HTTPS_IP_CHECK_URL)
-    https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
-    print("HTTPS IP: "+https_ip_address)
+        # Connect to HTTPS_IP_CHECK_URL and print URL to console.
+        print('connecting to '+HTTPS_IP_CHECK_URL)
+        driver.get(HTTPS_IP_CHECK_URL)
+        https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+        print("HTTPS IP: "+https_ip_address)
+        return True
+    except:
+        return False
 
 
 
@@ -46,7 +51,11 @@ def ip_lookup(ip_address):
 
 """
 Given a postion, finds the closest proxy server.
-    position: dictionary in the form: { 'lat': ... , 'lon': ... } 
+todo: make this return a list of proxies sorted 
+    by distance from position. this is in case
+    the closest proxy is down
+
+position: dictionary in the form: { 'lat': ... , 'lon': ... } 
 """
 def get_closest_proxy(position):
     print('finding closest proxy...')

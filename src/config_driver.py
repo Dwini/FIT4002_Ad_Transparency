@@ -43,11 +43,12 @@ def set_location(driver, location):
     sleep(3)
 
     # click button to use precise location
-    # eqQYZc is the id for the button, but need to be aware that
-    # this may change at any time
-    driver.get('https://google.com/search?q=google')
-    driver.find_element_by_id('eqQYZc').click()
-    sleep(3)
+    # 'eqQYZc' is the id for the button, but need to be aware that
+    # this may change at any time.
+    # todo: uncommented as this does not work with proxies
+    # driver.get('https://google.com/search?q=google')
+    # driver.find_element_by_id('eqQYZc').click()
+    # sleep(3)
 
 """
 Set up selenium driver with given proxy
