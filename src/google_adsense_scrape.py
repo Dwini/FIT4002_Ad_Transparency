@@ -20,15 +20,7 @@ def getGoogleAds(driver):
 
     for iframe in iframes:
 
-        screenshotName = 'adScreenshots/google' + str(randint(0, 10000)) + '.png'
 
-        driver.switch_to.default_content()
-        try:
-            iframe.screenshot(screenshotName)
-
-            screenshots.append(iframe.screenshot_as_base64)
-        except:
-            print('one or more screenshots failed')
 
         #Ad contents are dynamically loaded according to your cookie id
         #so we need to switch to that context
@@ -50,6 +42,15 @@ def getGoogleAds(driver):
         except:
             print('Error in one or more links')
 
+        screenshotName = 'adScreenshots/google' + str(randint(0, 10000)) + '.png'
+
+        driver.switch_to.default_content()
+        try:
+            iframe.screenshot(screenshotName)
+
+            screenshots.append(iframe.screenshot_as_base64)
+        except:
+            print('one or more screenshots failed')
 
     return screenshots
 
@@ -77,13 +78,14 @@ def extractEmbeddedUrl(compositeLink):
     protocol = "https"
     protocolLen = len(protocol)
 
-
-    searchExpression = protocol + '://' + '(.*)%'
-    #use inbuilt function
+    endDilimiter = '%'
+    searchExpression = protocol + '://(.*?)' + endDilimiter
+    #use inbuilt function, ignore the protocol at the start of the string
     found = re.search(searchExpression, compositeLink[protocolLen:])
 
     try:
-        return found.group(0)[0:len(found.group(0))-1]
+        return found.group(1)
     except:
         return 0
+
 
