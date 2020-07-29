@@ -6,11 +6,10 @@ from selenium import webdriver
 
 
 # removes div such as notification or location requests
-# TODO check if location dialogs should be confirmed
-def clear_dialatogs(driver):
+# TODO check if location request dialogs should be confirmed
+def clear_dialogs(driver):
 
     #see if clicking main content will escape any popups
-
 
     dialogs = driver.find_elements_by_css_selector("[id*=dialog]")
     #TODO Can dialogs be encapsulated in classes?
@@ -23,6 +22,50 @@ def clear_dialatogs(driver):
             print('error in removing dialog')
 
 
+def click_local_links(driver):
+
+    local_links = driver.find_elements_by_xpath("// a[not(contains(href, 'http'))]")
+
+    for i in range(len(local_links)):
+        try:
+            if(isElementClickable):
+                i = randint(0, len(local_links) - 1)
+                print(local_links[i].location_once_scrolled_into_view)
+                local_links[i].click()
+                break
+        except:
+            print('Failed to click local link')
+
+def isElementClickable(element):
+
+
+    # is element visible by styles
+    if (not element.isDisplayed):
+        return False
+    return True
+    #
+    # # is the element behind another element
+    # boundingRect = element.getBoundingClientRect();
+    #
+    # // adjust coordinates to get more accurate results
+    # const left = boundingRect.left + 1;
+    # const right = boundingRect.right - 1;
+    # const top = boundingRect.top + 1;
+    # const bottom = boundingRect.bottom - 1;
+    #
+    # if (document.elementFromPoint(left, top) !== element ||
+    #     document.elementFromPoint(right, top) !== element ||
+    #     document.elementFromPoint(left, bottom) !== element ||
+    #     document.elementFromPoint(right, bottom) !== element) {
+    #     return false;
+    # }
+    #
+    # return true;
+    # `;
+    #
+    # return element.getDriver().executeScript(SCRIPT, element);
+
+
 webdriver = "chromedriver.exe"
 driver = Chrome(webdriver)
 #options = driver.ChromeOptions()
@@ -30,6 +73,15 @@ driver = Chrome(webdriver)
 #driver = Chrome(chrome_options=options)
 
 urls = open('urls.txt', 'r')
+
+
+def random_wait_and_scroll(driver):
+    # random wait and scroll action
+    for i in range(3):
+        sleep(randint(1, 3))
+        driver.execute_script("window.scrollTo(0," + str(randint(50, 2000)) + ")")
+        sleep(randint(1, 3))
+
 
 for url in urls:
 
@@ -39,11 +91,17 @@ for url in urls:
     sleep(randint(10, 15))
     clear_dialogs(driver)
 
-    for i in range(3):
-        sleep(randint(10, 15))
-        driver.execute_script("window.scrollTo(0," + str(randint(50, 2000)) + ")")
-        sleep(randint(1, 3))
+    random_wait_and_scroll(driver)
 
     getGoogleAds(driver)
-    sleep(2)
+
+    click_local_links(driver)
+
+    random_wait_and_scroll(driver)
+
+    #click local links
+    # for i in range(3):
+    #     sleep(randint(0, 2))
+    #     driver.find_element_by_xpath("//a[@href]")
+    #     sleep(randint(10, 15))
 
