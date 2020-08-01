@@ -9,7 +9,7 @@ def clear_dialogs(driver):
 
     # we want to be tracked
     # agree to any cookie requests
-    agree_buttons = driver.find_elements_by_xpath("//button[contains(string(), 'Agree')]")
+    agree_buttons = driver.find_elements_by_xpath("//button[contains(string(), 'Agree') or contains(string(), 'Allow') or contains(string(), 'Accept')] ")
 
     for button in agree_buttons:
         try:
@@ -95,7 +95,8 @@ def random_wait_and_scroll(driver):
 #prevent them from getting in the way of ads
 def remove_header(driver):
 
-    headers = driver.find_elements_by_xpath("//header[@class]" or "//div[contains(class, 'header']" )
+    headers = driver.find_elements_by_xpath("//div[contains(@class, 'header')] | //header[@class]")
+    #//header[@class]" or
     for header in headers:
         try:
             driver.execute_script("arguments[0].remove();", header)
