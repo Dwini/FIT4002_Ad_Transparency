@@ -1,17 +1,27 @@
 from google_adsense_scrape import getGoogleAds
-from random import seed, randint
+from random import random, randint
 from time import sleep
 from selenium.webdriver import Chrome
-from selenium import webdriver
 
 
-# removes div such as notification or location requests
-# TODO check if location request dialogs should be confirmed
+# removes div's that cause obstruction
 def clear_dialogs(driver):
 
-    #see if clicking main content will escape any popups
+    # we want to be tracked
+    # agree to any cookie requests
+    agree_buttons = driver.find_elements_by_xpath("//button[contains(string(), 'Agree')]")
+
+    for button in agree_buttons:
+        try:
+            button.click()
+            sleep(random.random())
+        except:
+            print('Failed to click a button')
+
+    # see if clicking main content will escape any popups
 
     dialogs = driver.find_elements_by_css_selector("[id*=dialog]")
+
     #TODO Can dialogs be encapsulated in classes?
     #dialogs_with_class = driver.find_elements_by_css_selector("[class*=dialog]")
 
@@ -45,7 +55,7 @@ def isElementClickable(element):
     return True
     #
     # # is the element behind another element
-    # boundingRect = element.getBoundingClientRect();
+    boundingRect = element.rect
     #
     # // adjust coordinates to get more accurate results
     # const left = boundingRect.left + 1;
@@ -82,14 +92,24 @@ def random_wait_and_scroll(driver):
         driver.execute_script("window.scrollTo(0," + str(randint(50, 2000)) + ")")
         sleep(randint(1, 3))
 
+#prevent them from getting in the way of ads
+def remove_header(driver):
+
+    headers = driver.find_elements_by_xpath("//header[@class]" or "//div[contains(class, 'header']" )
+    for header in headers:
+        try:
+            driver.execute_script("arguments[0].remove();", header)
+        except:
+            print('error in removing dialog')
 
 for url in urls:
 
     driver.get(url)
+    sleep(randint(10, 15))
 
     #dialogues can get in the way of ads and scrolling
-    sleep(randint(10, 15))
     clear_dialogs(driver)
+    remove_header(driver)
 
     random_wait_and_scroll(driver)
 
