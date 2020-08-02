@@ -9,16 +9,9 @@ def clear_dialogs(driver):
 
     # we want to be tracked
     # agree to any cookie requests
-    agree_buttons = driver.find_elements_by_xpath("//button[contains(string(), 'Agree') or contains(string(), 'Allow') or contains(string(), 'Accept')] ")
+    accept_cookies(driver)
 
-    for button in agree_buttons:
-        try:
-            button.click()
-            sleep(random.random())
-        except:
-            print('Failed to click a button')
-
-    # see if clicking main content will escape any popups
+    # TODO see if clicking main content will escape any popups
 
     dialogs = driver.find_elements_by_css_selector("[id*=dialog]")
 
@@ -30,6 +23,18 @@ def clear_dialogs(driver):
             driver.execute_script("arguments[0].remove();", dialog)
         except:
             print('error in removing dialog')
+
+
+def accept_cookies(driver):
+
+    agree_buttons = driver.find_elements_by_xpath(
+        "//button[contains(string(), 'Agree') or contains(string(), 'Allow') or contains(string(), 'Accept')] ")
+    for button in agree_buttons:
+        try:
+            button.click()
+            sleep(random.random())
+        except:
+            print('Failed to click a button')
 
 
 def click_local_links(driver):
@@ -53,6 +58,8 @@ def isElementClickable(element):
     if (not element.isDisplayed):
         return False
     return True
+
+    #TODO check if behind anything
     #
     # # is the element behind another element
     boundingRect = element.rect
@@ -120,9 +127,5 @@ for url in urls:
 
     random_wait_and_scroll(driver)
 
-    #click local links
-    # for i in range(3):
-    #     sleep(randint(0, 2))
-    #     driver.find_element_by_xpath("//a[@href]")
-    #     sleep(randint(10, 15))
+
 
