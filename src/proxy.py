@@ -7,7 +7,8 @@ import json
 # define constants.
 HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
 HTTPS_IP_CHECK_URL = 'https://httpbin.org/ip'
-HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=US&ssl=all&anonymity=elite"
+# HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=US&ssl=all&anonymity=elite"
+HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=1000&country=US&ssl=all&anonymity=elite"
 URL_STEM = "http://ip-api.com/json/" # followed by IP Address w/o port number.
 
 """
@@ -15,22 +16,23 @@ Check if successfully connected to proxy server
 Returns true if working, else false
 """
 def ip_check(driver):
-    print('checking ip')
+    print('checking ip...')
     
     try:
         # Connect to HTTP_IP_CHECK_URL and print URL to console.
-        print('connecting to '+HTTP_IP_CHECK_URL)
+        print('connecting to '+HTTP_IP_CHECK_URL+' ...')
         driver.get(HTTP_IP_CHECK_URL)
         http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
-        print("HTTP IP: "+http_ip_address)
 
         # Connect to HTTPS_IP_CHECK_URL and print URL to console.
-        print('connecting to '+HTTPS_IP_CHECK_URL)
+        print('connecting to '+HTTPS_IP_CHECK_URL+' ...')
         driver.get(HTTPS_IP_CHECK_URL)
         https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
-        print("HTTPS IP: "+https_ip_address)
+
+        print("connected to proxy")
         return True
     except:
+        print("could not connect to proxy")
         return False
 
 
@@ -51,16 +53,14 @@ def ip_lookup(ip_address):
 
 """
 Given a postion, finds the closest proxy server.
-todo: make this return a list of proxies sorted 
-    by distance from position. this is in case
-    the closest proxy is down
 
 position: dictionary in the form: { 'lat': ... , 'lon': ... } 
 """
-def get_closest_proxy(position):
+def get_closest_proxies(position):
     print('finding closest proxy...')
-    min_dist = None
-    min_proxy = None
+
+    # list of dictionaries that contain ip and distance info
+    results = []
 
     proxy_list = list(urllib.request.urlopen(HTTP_PROXIES))
     num_failed = 0
@@ -72,43 +72,24 @@ def get_closest_proxy(position):
         
         # get location and other info for proxy
         try:
-            print("querying info for proxy: %s (%s/%s)..." % (ip, i+1, num_proxies), end='')
+            print("querying info for proxy: %s (%s/%s) ..." % (ip, i+1, num_proxies), end='')
             ip_info = ip_lookup(ip)
         except:
-            print(" failed", end='\r')
+            print(" failed")
             num_failed += 1
             continue
 
-        print(" success", end='\r')
+        print(" success")
 
-        # very basic way to check distance between given point and proxy location
+        # very basic way to check distance between 2 points
         dist = (position['lat'] - ip_info['lat'])**2 + (position['lon'] - ip_info['lon'])**2
 
-        # update minimum proxy found
-        if min_dist == None or dist < min_dist:
-            min_dist = dist
-            min_proxy = ip
+        results.append({ 'ip': ip, 'dist': dist })
 
-    print("\ndone. %s proxies failed" % num_failed + \
-          "\nproxy with min distance: %s" % min_proxy)
+    print("\ndone. %s proxies failed" % num_failed)
+
+    # sort list of dicts
+    sorted_proxies = sorted(results, key=lambda k: k['dist'])
     
-    return min_proxy
-
-
-# test function.
-if __name__ == '__main__':
-    # test addresses.
-
-    # test_ip_addresses = ['12.139.101.100:80', '50.250.75.153', '69.65.65.178', \
-    #     '50.204.122.174:54321']
-
-    # iterate over each address and print the zip code.
-
-    # for ip in test_ip_addresses:
-    #     print(ip+': '+ip_location_lookup(ip)['zip'])
-
-    # define dummy position (somewhere in Georgia)
-    position = { 'lat': 30.7948526, 'lon': -86.6827337 }
-
-    # find the closest proxy server
-    proxy = get_closest_proxy(position)
+    # get ips, discard dists
+    return [ p['ip'] for p in sorted_proxies ]

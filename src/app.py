@@ -1,5 +1,6 @@
 import sys
 from random import uniform
+from time import sleep
 
 # local imports
 from database import Database
@@ -48,32 +49,21 @@ def main():
             # default pos to completely random position
             pos = { 'lat': uniform(-90, 90), 'lon': uniform(-180, 180) }
 
-        # use this to setup driver with proxy that is closest
-        # proxyIP = proxy.get_closest_proxy(pos)
-        # session = config_driver.setup_driver(proxyIP)
-        # proxy.ip_check(session)
+        # use this to setup driver with a list of possible proxies
+        # todo: move this into its own function somewhere?
+        for p in proxy.get_closest_proxies(pos):
+            print("trying proxy: %s..." % p, end='')
+            session = config_driver.setup_driver(p)
 
-        # ... or use this to setup driver with a list of possible proxies
-        # todo: move this into its own function somewhere
-        # for p in [
-        #     '209.190.32.28:3128', 
-        #     '12.139.101.102:80', 
-        #     '34.87.96.183:80', 
-        #     '72.252.4.149:80', 
-        #     '173.82.74.59:5836',
-        #     '161.35.64.215:3128',
-        #     '35.202.9.41:3128'
-        #     ]:
-        #     print("trying proxy: %s..." % p, end='')
-        #     session = config_driver.setup_driver(p)
-        #     if proxy.ip_check(session):
-        #         print("success")
-        #         break
-        #     print("failed")
-        #     session.quit()
+            if proxy.ip_check(session):
+                print("success")
+                break
+
+            print("failed")
+            session.quit()
 
         # ... or use this to setup without proxy
-        session = config_driver.setup_driver()
+        # session = config_driver.setup_driver()
         
         # change location
         config_driver.set_location(session, pos)
