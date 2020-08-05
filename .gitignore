@@ -1,5 +1,5 @@
 *.csv
-.vscode
+.vscode/
 drivers
 geckodriver.log
 /venv
