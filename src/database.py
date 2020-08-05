@@ -8,8 +8,7 @@ from config import keys, constants
 
 class Database:
     def __init__(self):
-        # connect to database
-        print('connecting to database...', end="")
+        print('connecting to DynamoDB...', end="")
         dynamodb = boto3.resource(
             'dynamodb',
             aws_access_key_id=keys.AWS_ACCESS_KEY_ID,
@@ -18,10 +17,21 @@ class Database:
         )
         print("success")
 
+        print('connecting to S3...', end="")
+        s3 = boto3.resource(
+            's3',
+            aws_access_key_id=keys.AWS_ACCESS_KEY_ID,
+            aws_secret_access_key=keys.AWS_SECRET_ACCESS_KEY
+        )
+        print("success")
+
         # init tables
         self.ads =  dynamodb.Table('Ads')
         self.bots = dynamodb.Table('Bots')
         self.logs = dynamodb.Table('Logs')
+
+        # init bucket
+        self.bucket = s3.Bucket(keys.BUCKET_NAME)
 
     """
     Return all the items in a table given the table name
@@ -38,6 +48,12 @@ class Database:
 
         print("success (%d items fetched)" % (len(response)))
         return response
+
+    def fetch_all_objects(self):
+        """
+        Get all the objects currently stored in the S3 bucket
+        """
+        return self.bucket.objects.all()
 
     """
     Create a bot given the bots info
@@ -73,10 +89,17 @@ class Database:
         })
         print("success")
 
-    """
-    Save an ad to the database. Currently just saves the html of the ad
-    """
-    def save_ad(self, bot_username, link, headline, html_string):
+    def save_ad(self, bot_username, link, headline, html_string, file_id=''):
+        """
+        Save an ad to the database along with any relevant metadata.
+
+        :param bot_username:    Username of the bot that logged this ad
+        :param link:            URL of the ad
+        :param headline:        Title/Headline of ad
+        :param html_string:     The HTML of the ad
+        :param file_id:         ID of file that was uploaded to S3 
+            related to this ad
+        """
         date_captured = datetime.now().strftime(constants.datetime_format)
 
         print("saving ad with link %s..." % (link), end='')
@@ -86,15 +109,37 @@ class Database:
             'bot_username': bot_username,
             'link': link,
             'headline': headline,
-            'html_string': html_string
+            'html_string': html_string,
+            'file_id': file_id
         })
         print("success")
 
+    def upload_file(self, path):
+        """
+        Save a file to S3.
 
-"""
-Export info for a particular table to csv file
-"""
+        :param path: Path to the file as a string. Path is relative
+            so for example if filename is 123.jpg under the adScreenshots
+            directory then path = 'adScreenshots/123.jpg'
+        :return: ID of the uploaded S3 file. This can then be used when
+            logging an ad to link the uploaded file to the new ad
+        """
+        date = datetime.now().strftime(constants.datetime_format)
+        id = str(uuid.uuid4())
+
+        print('uploading file to s3...', end='')
+        try:
+            self.bucket.upload_file(path, id)
+            print('done')
+            return id
+        except Exception as e:
+            print('\nError: %s' % str(e))
+            return None
+
 def export_to_csv(table_name, items):
+    """
+    Export info for a particular table to csv file
+    """
     if len(items) == 0:
         print("no items in %s table" % table_name)
         return
@@ -114,16 +159,16 @@ def export_to_csv(table_name, items):
 
     print("exported to %s" % filename)
 
-
-if __name__ == '__main__':
+def main():
     db = Database()
 
-    choice = int(input(           \
-        "(1) Export Bots\n"     + \
-        "(2) Export Ads\n"      + \
-        "(3) Export Logs\n"     + \
-        "(4) Create bot\n"      + \
-        "Enter number (1-4)> "    \
+    choice = int(input(                   \
+        "(1) Export Bots\n"             + \
+        "(2) Export Ads\n"              + \
+        "(3) Export Logs\n"             + \
+        "(4) Create Bot\n"              + \
+        "(5) List bucket objects\n"     + \
+        "Enter number (1-5)> "            \
     ))
     
     if choice == 1:
@@ -153,5 +198,16 @@ if __name__ == '__main__':
             DOB=DOB,
             search_terms=search_terms
         )
+    elif choice == 5:
+        total_size = 0
+        for o in db.fetch_all_objects():
+            print('%s\t%s\t%s bytes' % (o.key, o.last_modified, o.size))
+            total_size += o.size
+        print('Total size of all objects: %s bytes' % total_size)
     else:
         print("Invalid option")
+    
+    print("Exiting...")
+
+if __name__ == '__main__':
+    main()
