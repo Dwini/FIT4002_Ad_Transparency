@@ -20,13 +20,23 @@ def getGoogleAds(driver):
 
     for iframe in iframes:
 
+        try:
+            iframe.location_once_scrolled_into_view
+        except:
+            print('Element location not found')
 
 
-        #Ad contents are dynamically loaded according to your cookie id
-        #so we need to switch to that context
-        driver.switch_to.frame(iframe)
+        for i in range(0,2):
+            try:
+                # Ad contents are dynamically loaded according to your cookie id
+                # so we need to switch to that context
+                driver.switch_to.frame(iframe)
+                break
+            except:
+                print('Element access attempt: ' + str(i))
 
         try:
+
 
             #go down to the first Div in the iframe
             firstDiv = driver.find_element_by_xpath(".//div[@*]")
@@ -40,7 +50,7 @@ def getGoogleAds(driver):
                 )
             )
         except:
-            print('Error in one or more links')
+            print('Error in link')
 
         screenshotName = 'adScreenshots/google' + str(randint(0, 10000)) + '.png'
 
@@ -50,7 +60,7 @@ def getGoogleAds(driver):
 
             screenshots.append(iframe.screenshot_as_base64)
         except:
-            print('one or more screenshots failed')
+            print('Screenshot failed')
 
     return screenshots
 
