@@ -200,10 +200,15 @@ def main():
         )
     elif choice == 5:
         total_size = 0
+
         for o in db.fetch_all_objects():
             print('%s\t%s\t%s bytes' % (o.key, o.last_modified, o.size))
             total_size += o.size
-        print('Total size of all objects: %s bytes' % total_size)
+        
+        if total_size == 0:
+            print('No objects in bucket')
+        else:
+            print('Total size of all objects: %s bytes' % total_size)
     else:
         print("Invalid option")
     
