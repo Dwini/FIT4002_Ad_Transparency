@@ -1,11 +1,13 @@
 import sys
 from random import uniform
+from time import sleep
 
 # local imports
 from database import Database
 import proxy
 import webscraper
 import config_driver
+from youtube_scraper import youtube_scraper, yt_ad
 
 
 def main():
@@ -20,14 +22,19 @@ def main():
         display = Display(visible=0, size=(800, 600))
         display.start()
     
+    # initialise db
     db = Database()
 
+    # get bots
     bots = db.fetch_all_items('Bots')
 
     for bot in bots:
         # todo: remove to use all bots. this is only for testing
-        if bot['username'] != "jw1083888":
+        if bot['username'] != "mwest5078":
             continue
+
+        # todo: remove this as well. only for testing
+        bot['search_terms'] = ['domain names']
 
         print('using bot: ' + bot['username'])
 
@@ -39,24 +46,37 @@ def main():
                 'lon': float(bot['location']['longitude'])
             }
         else:
-            # default pos to random position
+            # default pos to completely random position
             pos = { 'lat': uniform(-90, 90), 'lon': uniform(-180, 180) }
 
-        # use this to setup driver with proxy that is closest
-        # proxyIP = proxy.get_closest_proxy(pos)
-        # session = config_driver.setup_driver(proxyIP)
-        # proxy.ip_check(session)
+        # use this to setup driver with a list of possible proxies
+        # todo: move this into its own function somewhere?
+        for p in proxy.get_closest_proxies(pos):
+            print("trying proxy: %s..." % p, end='')
+            session = config_driver.setup_driver(p)
 
-        # use this to setup driver without proxy
-        session = config_driver.setup_driver()
+            if proxy.ip_check(session):
+                print("success")
+                break
+
+            print("failed")
+            session.quit()
+
+        # ... or use this to setup without proxy
+        # session = config_driver.setup_driver()
         
         # change location
         config_driver.set_location(session, pos)
 
-        # start scraping
+        # start google scraping
         webscraper.login(bot, session)
         webscraper.setup_profile(bot, session, db)
         webscraper.scrape_google_ads(bot, session, db)
+
+        # start youtube scraping
+        yt_scraper = youtube_scraper(session, yt_ad.ALL)
+        yt_scraper.scrape_youtube_video_ads('reopen economy')
+
 
     # close display if in container.
     if container_build == True:
