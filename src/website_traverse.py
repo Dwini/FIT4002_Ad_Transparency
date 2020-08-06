@@ -110,6 +110,98 @@ def remove_header(driver):
         except:
             print('error in removing dialog')
 
+def search_keywords(self, webdriver, db, scrapping = False):
+    print('seting up profile')
+    num_links_to_visit = 2
+
+    # this sections is for collecting Ads
+    session = HTMLSession()
+    ad_list = []  # empty list to store ad details
+
+    # Get Keywords
+    keywords = bot.getSearchTerms()
+
+    # Go through all keywords
+    sleep(1)
+    links = []
+    for keyword in keywords:
+        url = 'http://www.google.com/'
+        # Search Keyword using text box
+        webdriver.get(url)
+        sleep(2)
+        search_box = webdriver.find_element_by_xpath("//input[@name='q']")
+        search_box.send_keys(keyword)
+        sleep(2)
+        search_box.send_keys(Keys.RETURN)
+        r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
+        sleep(10)
+
+        if scrapping:
+            # Get the 4 ads at the top
+            ads = r.html.find('.ads-ad')
+
+            for ad in ads:
+                ad_link = ad.find('.V0MxL', first=True).absolute_links  # link to landing page
+                ad_link = next(iter(ad_link))  # need this since the result from above is set
+                ad_headline = ad.find('h3.sA5rQ', first=True).text  # headline of the ad
+                ad_copy = ad.find('.ads-creative', first=True).text  # ad copy
+                ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
+
+                # save ad to database
+                db.save_ad(self.bot.getUsername(), ad_link, ad_headline, ad_copy)
+
+        # wait until shows result
+        results = webdriver.find_elements_by_css_selector('div.g')
+
+        # save site visit to database
+        db.log_action(self.bot.getUsername(), url, ['search'], keyword)
+
+        try:
+            for _ in range(num_links_to_visit):
+                new = True
+                link = results[_].find_element_by_tag_name("a")
+                href = link.get_attribute("href")
+                for link in links:
+                    if href == link:
+                        new = False
+                if new:
+                    links.append(href)
+        except:
+            print()
+
+    if scrapping:
+        df_ads = pd.DataFrame(ad_list, columns=['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
+
+        # timestamp so we dont overwrite old CSVs
+        ts = time.time()
+
+        # write out to CSV for reference
+        df_ads.to_csv('top-ads-' + str(ts) + '.csv')
+
+        # todo: save to database instead
+        # Selenium loop thru dataframe to save PNGs into "screenshots" folder
+        for index, row in df_ads.iterrows():
+            print('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
+            webdriver.get(row['ad_link'])
+
+            # save site visit to database
+            db.log_action(self.bot.getUsername(), row['ad_link'], ['visit'])
+
+            sleep(2)
+            webdriver.save_screenshot('screenshots/' + str(index) + '.png')
+            # webdriver.get_screenshot_as_file(str(index) + '.png')
+
+    for link in links:
+        try:
+            webdriver.get(link)
+
+            # save site visit to database
+            db.log_action(self.bot.getUsername(), link, ['visit'])
+
+            sleep(10)
+        except:
+            print()
+
 for url in urls:
 
     driver.get(url)
@@ -126,6 +218,8 @@ for url in urls:
     click_local_links(driver)
 
     random_wait_and_scroll(driver)
+
+
 
 
 
