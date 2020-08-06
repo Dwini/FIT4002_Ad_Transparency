@@ -11,168 +11,38 @@ from time import sleep
 from config import keys
 from database import Database
 
-def login(bot, webdriver):
-    # Login
-    print('logging into Google account...', end="")
+from website_traverse import website_traverse
+from youtube_scrapper import youtube_scrapper
 
-    webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
-    sleep(2)
-    webdriver.find_element_by_id('identifierId').send_keys(bot['username'])
-    webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-    sleep(4)
-    webdriver.find_element_by_css_selector("input[type=password]").send_keys(bot['password'])
-    webdriver.find_element_by_id('passwordNext').click()
-    sleep(2)
+class webscraper:
+    def __init__(self, bot, scrapping, webdriver):
+        self.bot = bot
+        self.scrapping = scrapping
+        self.login(webdriver)
+        self.task_decider(webdriver)
 
-    print("success")
+    def login(self, webdriver):
+        # Login
+        print('logging into Google account...', end="")
 
-def setup_profile(bot, webdriver, db):
-    print('seting up profile')
-    num_links_to_visit = 2
-
-    # Get Keywords
-    # keywords = pd.read_csv(bot.status + '_keywords.csv', index_col=None, header=0)
-    keywords = bot['search_terms']
-
-    # Go through all keywords
-    sleep(1)
-    links = []
-    for keyword in keywords:
-        url = 'http://www.google.com/'
-        # Search Keyword using text box
-        webdriver.get(url)
+        webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
         sleep(2)
-        search_box = webdriver.find_element_by_xpath("//input[@name='q']")
-        search_box.send_keys(keyword)
+        webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+        webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+        sleep(4)
+        webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+        webdriver.find_element_by_id('passwordNext').click()
         sleep(2)
-        search_box.send_keys(Keys.RETURN)
-        sleep(6)
-        # wait until shows result
-        results = webdriver.find_elements_by_css_selector('div.g')
 
-        # save site visit to database
-        db.log_action(bot['username'], url, ['search'], keyword)
+        print("success")
 
-        try:
-            for _ in range(num_links_to_visit):
-                new = True
-                link = results[_].find_element_by_tag_name("a")
-                href = link.get_attribute("href")
-                for link in links:
-                    if href == link:
-                        new = False
-                if new:
-                    links.append(href)
-        except:
-            print()
-
-    for link in links:
-        try:
-            webdriver.get(link)
-
-            # save site visit to database
-            db.log_action(bot['username'], link, ['visit'])
-
-            sleep(10)
-        except:
-            print()
+    def task_decider(self, webdriver):
+        choice = random.randint(0,2)
+        if choice == 0:
+            website_traverse.traverse(webdriver, bot)
+        elif choice == 1:
+            website_traverse.traverse(webdriver, bot)
+        else:
+            youtube_scrapper.traverse(webdriver, bot)
 
 
-def scrape_google_ads(bot, webdriver, db):
-    print('scraping google ads')
-    session = HTMLSession()
-
-    ad_list = [] #empty list to store ad details
-
-    # Get Keywords
-    # keywords = pd.read_csv(bot.status + '_keywords.csv', index_col =None, header=0 )
-    keywords = bot['search_terms']
-
-    # Go through all keywords
-    sleep(1)
-    for keyword in keywords:
-        webdriver.get('https://google.com/search?q=' + keyword)
-        r = session.get('https://google.com/search?q=' + keyword)
-        sleep(10)
-
-        # Get the 4 ads at the top
-        ads = r.html.find('.ads-ad')
-
-        for ad in ads:
-            ad_link = ad.find('.V0MxL', first=True).absolute_links #link to landing page
-            ad_link = next(iter(ad_link)) #need this since the result from above is set
-            ad_headline = ad.find('h3.sA5rQ', first=True).text #headline of the ad
-            ad_copy = ad.find('.ads-creative', first=True).text #ad copy
-            ad_list.append([keyword, ad_link, ad_headline, ad_copy]) #append data row to list
-
-            # save ad to database
-            db.save_ad(bot['username'], ad_link, ad_headline, ad_copy)
-
-    df_ads = pd.DataFrame(ad_list, columns = ['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
-
-    #timestamp so we dont overwrite old CSVs
-    ts = time.time()
-
-    #write out to CSV for reference
-    df_ads.to_csv('top-ads-'+str(ts)+'.csv')
-
-    #Selenium loop thru dataframe to save PNGs into "screenshots" folder
-    for index, row in df_ads.iterrows():
-        print('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
-        webdriver.get(row['ad_link'])
-
-        # save site visit to database
-        db.log_action(bot['username'], row['ad_link'], ['visit'])
-
-        sleep(2)
-        webdriver.save_screenshot('screenshots/'+str(index)+'.png')
-        #webdriver.get_screenshot_as_file(str(index) + '.png')
-
-# this is handled by app.py. can be removed?
-if __name__ == '__main__':
-    container_build = False
-
-    # if this is running in the container, import and create virtual display.
-    if len(sys.argv) > 1 and sys.argv[1] == '-c':
-        container_build = True
-        from pyvirtualdisplay import Display
-
-        # set xvfb display since there is no GUI in container.
-        display = Display(visible=0, size=(800, 600))
-        display.start()
-
-    print('connecting to database')
-    db = Database()
-
-    print('retrieving bots')
-    bots = db.fetch_all_items('Ads')
-
-    for bot in bots:
-        print('using bot: ' + bot['username'])
-        # only use a specific bot (for testing purposes)
-        if bot['username'] != "jw1083888":
-            continue
-
-        # define options.
-        print('setting options for session')
-        chrome_options = Options()
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--disable-dev-shm-usage')
-
-        print('building session')
-        session = webdriver.Chrome(options=chrome_options)
-        print('session built succesfully')
-
-        login(bot, session)
-
-        print('setup_profile section')
-        setup_profile(bot, session, db)
-
-        print('scrape_google_ads section')
-        scrape_google_ads(bot, session, db)
-
-        session.quit()
-
-    # close display if in container.
-    if container_build == True:
-        display.stop()
