@@ -60,7 +60,7 @@ def main():
             config_driver.set_location(session, pos)
 
             # start scraping
-            webscraper = websracper(webdriver, bot)
+            webscraper = webscraper(webdriver, bot)
 
     # close display if in container.
     if container_build == True:
