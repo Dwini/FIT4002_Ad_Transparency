@@ -168,12 +168,11 @@ class webTraverse:
         headers = driver.find_elements_by_xpath("//div[contains(@class, 'header')] | //header[@class]")
         #//header[@class]" or
         for header in headers:
-            if (header.is_displayed()):
                 try:
                     driver.execute_script("arguments[0].remove();", header)
-                    print('removed a dialog')
+                    print('removed a header')
                 except:
-                    print('error in removing dialog')
+                    print('error in removing header')
 
 
 if __name__ == '__main__':
