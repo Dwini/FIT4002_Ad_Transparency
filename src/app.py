@@ -44,28 +44,11 @@ def main():
                 'lon': float(bot['location']['longitude'])
             }
 
-        # todo: move this into its own function somewhere?
         session = None
         if os.environ['USE_PROXIES'] == "1":
-            # use this to setup driver with a list of possible proxies
-            i = 0
-            proxies = proxy.get_closest_proxies(pos)
-            while not session:
-                if i >= len(proxies):
-                    print(">> Error: No working proxies found")
-                    return
-
-                address = proxies[i]['address']
-                print("\n>> Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)))
-                session = config_driver.setup_driver(address)
-
-                if not proxy.ip_check(session):
-                    session.quit()
-                    session = None
-                    i += 1
-                else:
-                    print(">> Proxy change successful")
-                    print(">> Proxy location: %s" % proxies[i]['location'])
+            session = config_driver.setup_driver_with_proxy(pos)
+            if session is None:
+                print(">> Quitting")
         else:
             # ... or use this to setup without proxy
             session = config_driver.setup_driver()

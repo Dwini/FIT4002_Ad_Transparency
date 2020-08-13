@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from time import sleep
 import geopy
 from geopy.geocoders import Nominatim
+import proxy
 
 """
 Sets driver location to given lat/lon values.
@@ -50,7 +51,6 @@ def set_location(driver, location):
     # click button to use precise location
     # 'Wprf1b' is the id for the button, but need to be aware that
     # this may change at any time.
-    # todo: uncommented as this does not work with proxies
     try:
         driver.get('https://google.com/search?q=google')
         sleep(2)
@@ -62,8 +62,6 @@ def set_location(driver, location):
 Set up selenium driver with given proxy
 """
 def setup_driver(proxyIP=None):
-    print('>> Setting options for webdriver', end="")
-
     chrome_options = Options()
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
@@ -71,3 +69,28 @@ def setup_driver(proxyIP=None):
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
 
     return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+
+def setup_driver_with_proxy(pos):
+    """
+    Use this to setup driver with a list of possible proxies
+    """
+    i = 0
+    proxies = proxy.get_closest_proxies(pos)
+    session = None
+
+    while not session and i < len(proxies):
+        address = proxies[i]['address']
+        print("\n>> Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)))
+        session = setup_driver(address)
+
+        if not proxy.ip_check(session):
+            session.quit()
+            session = None
+            i += 1
+        
+    if session:
+        print(">> Proxy change successful (location: %s)" % proxies[i]['location'])
+    else:
+        print(">> Error: No working proxies found")
+    
+    return session
