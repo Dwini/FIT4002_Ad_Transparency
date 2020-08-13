@@ -34,3 +34,4 @@ w3lib==1.21.0
 webdriver-manager==2.4.0
 websockets==8.1
 pyvirtualdisplay
+geopy

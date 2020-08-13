@@ -43,9 +43,14 @@ COPY src /app
 FROM builder
 
 # set the proxy addresses
-ENV HTTP_PROXY "http://134.209.29.120:8080"
-ENV HTTPS_PROXY "https://45.77.71.140:9050"
+# ENV HTTP_PROXY "http://134.209.29.120:8080"
+# ENV HTTPS_PROXY "https://45.77.71.140:9050"
+ENV USE_PROXIES 1
 
 # default entry point.
 CMD ["python", "app/app.py", "-c"]
 ## end base stage.
+
+# for testing
+# WORKDIR /app
+# CMD [ "python", "database.py" ]

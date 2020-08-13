@@ -1,4 +1,4 @@
-*.csv
+/notes
 .vscode/
 drivers
 geckodriver.log
