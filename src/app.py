@@ -1,3 +1,5 @@
+# import external libraries.
+import os
 import sys
 from random import uniform
 from time import sleep
@@ -9,6 +11,8 @@ import webscraper
 import config_driver
 from youtube_scraper import youtube_scraper, yt_ad
 
+# get environment variable.
+AD_USERNAME = os.environ['AD_USERNAME']
 
 def main():
     container_build = False
@@ -21,7 +25,7 @@ def main():
         # set xvfb display since there is no GUI in container.
         display = Display(visible=0, size=(800, 600))
         display.start()
-    
+
     # initialise db
     db = Database()
 
@@ -30,7 +34,7 @@ def main():
 
     for bot in bots:
         # todo: remove to use all bots. this is only for testing
-        if bot['username'] != "mwest5078":
+        if bot['username'] != AD_USERNAME:
             continue
 
         # todo: remove this as well. only for testing
@@ -56,7 +60,7 @@ def main():
             session = config_driver.setup_driver(p)
 
             if proxy.ip_check(session):
-                print("success")
+                print("proxy is working")
                 break
 
             print("failed")
@@ -64,7 +68,7 @@ def main():
 
         # ... or use this to setup without proxy
         # session = config_driver.setup_driver()
-        
+
         # change location
         config_driver.set_location(session, pos)
 
@@ -82,6 +86,6 @@ def main():
     if container_build == True:
         display.stop()
 
-
 if __name__ == '__main__':
+    print(AD_USERNAME)
     main()

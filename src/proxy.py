@@ -17,7 +17,7 @@ Returns true if working, else false
 """
 def ip_check(driver):
     print('checking ip...')
-    
+
     try:
         # Connect to HTTP_IP_CHECK_URL and print URL to console.
         print('connecting to '+HTTP_IP_CHECK_URL+' ...')
@@ -25,9 +25,9 @@ def ip_check(driver):
         http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
 
         # Connect to HTTPS_IP_CHECK_URL and print URL to console.
-        print('connecting to '+HTTPS_IP_CHECK_URL+' ...')
-        driver.get(HTTPS_IP_CHECK_URL)
-        https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+        #print('connecting to '+HTTPS_IP_CHECK_URL+' ...')
+        #driver.get(HTTPS_IP_CHECK_URL)
+        #https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
 
         print("connected to proxy")
         return True
@@ -54,7 +54,7 @@ def ip_lookup(ip_address):
 """
 Given a postion, finds the closest proxy server.
 
-position: dictionary in the form: { 'lat': ... , 'lon': ... } 
+position: dictionary in the form: { 'lat': ... , 'lon': ... }
 """
 def get_closest_proxies(position):
     print('finding closest proxy...')
@@ -69,7 +69,7 @@ def get_closest_proxies(position):
     for i in range(num_proxies):
         # decode line in file
         ip = proxy_list[i].decode('utf-8').strip('\n').strip('\r')
-        
+
         # get location and other info for proxy
         try:
             print("querying info for proxy: %s (%s/%s) ..." % (ip, i+1, num_proxies), end='')
@@ -90,6 +90,6 @@ def get_closest_proxies(position):
 
     # sort list of dicts
     sorted_proxies = sorted(results, key=lambda k: k['dist'])
-    
+
     # get ips, discard dists
     return [ p['ip'] for p in sorted_proxies ]
