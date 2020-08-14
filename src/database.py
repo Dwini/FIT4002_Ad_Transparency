@@ -7,6 +7,32 @@ from datetime import datetime
 
 from config import keys, constants
 
+def create_valid_dict(old_dict, required, optional):
+    """
+    Creates a new dictionary from a given dictionary
+    removing unnecessary fields.
+    
+    :param old_dict:    (dict) Dictionary to prune
+    :param required:    (array of strings) Defines the required
+        fields. If any of these fields are not found in old_dict,
+        an error will be raised
+    :param optional     (array of strings) List of allowed optional
+        fields that can be kept from old_dict
+    :return new_dict:   (dict) New dictionary with required and optional
+        fields only
+    """
+    try:
+        # Check all required values exist
+        new_dict = { k: old_dict[k] for k in required }
+    except:
+        raise KeyError("Missing required value(s)")
+
+    for k in optional:
+        if k in old_dict:
+            new_dict[k] = old_dict[k]
+    
+    return new_dict
+
 class Database:
     def __init__(self):
         print('>> Connecting to DynamoDB...', end="")
@@ -52,7 +78,9 @@ class Database:
 
     def fetch_all_objects(self):
         """ Get all the objects currently stored in the S3 bucket """
-        return self.bucket.objects.all()
+        items = self.bucket.objects.all()
+        print(">> %d objects in bucket" % len(list(items)))
+        return items
 
     def create_bot(self, bot):
         """
@@ -83,19 +111,15 @@ class Database:
             - search_term:  (string, optional) if search was performed the terms that 
                             were queried
         """
-        # Check all required values exist
-        if "bot" not in action: 
-            raise KeyError(">> Error: Missing required value: 'bot'")
-        elif "url" not in action:
-            raise KeyError(">> Error: Missing required value: 'url'")
-        elif "actions" not in action:
-            raise KeyError(">> Error: Missing required value: 'actions'")
+        required_fields = ["bot", "url", "actions"]
+        optional_fields = ["search_term"]
+        new_action = create_valid_dict(action, required_fields, optional_fields)
 
-        action["id"] = str(uuid.uuid4())
-        action["datetime"] = datetime.now().strftime(constants.datetime_format)
+        new_action["id"] = str(uuid.uuid4())
+        new_action["datetime"] = datetime.now().strftime(constants.datetime_format)
 
-        print(">> Logging %s at '%s' ..." % (action["actions"], action["url"]), end="")
-        self.logs.put_item(Item=action)
+        print(">> Logging %s at '%s' ..." % (new_action["actions"], new_action["url"]), end="")
+        self.logs.put_item(Item=new_action)
         print("done")
 
     def save_ad(self, ad):
@@ -110,22 +134,17 @@ class Database:
             - file_id:      (string, optional) ID of file that was uploaded to S3 
                 related to this ad. This is given when uploading files (see 
                 upload_file below)
+            - base64        (string, optional) Base64 string of ad
         """
-        # Check all required values exist
-        if "bot" not in action: 
-            raise KeyError(">> Error: Missing required value: 'bot'")
-        elif "link" not in action:
-            raise KeyError(">> Error: Missing required value: 'link'")
-        elif "headline" not in action:
-            raise KeyError(">> Error: Missing required value: 'headline'")
-        elif "html" not in action:
-            raise KeyError(">> Error: Missing required value: 'html'")
+        required_fields = ["bot", "link", "headline", "html"]
+        optional_fields = ["file_id", "base64"]
+        new_ad = create_valid_dict(ad, required_fields, optional_fields)
             
-        ad["id"] = str(uuid.uuid4())
-        ad["datetime"] = datetime.now().strftime(constants.datetime_format)
+        new_ad["id"] = str(uuid.uuid4())
+        new_ad["datetime"] = datetime.now().strftime(constants.datetime_format)
 
-        print(">> Saving ad: %s ..." % (ad["headline"]), end="")
-        self.ads.put_item(Item=ad)
+        print(">> Saving ad: %s ..." % (new_ad["headline"]), end="")
+        self.ads.put_item(Item=new_ad)
         print("done")
 
     def upload_file(self, path):
@@ -138,13 +157,13 @@ class Database:
         :return:        ID of the uploaded S3 file. This can then be used when
             logging an ad to link the uploaded file to the new ad
         """
-        date = datetime.now().strftime(constants.datetime_format)
-        id = str(uuid.uuid4())
+        file_id = str(uuid.uuid4())
 
         print('>> Uploading file to S3...', end="")
-        self.bucket.upload_file(path, id)
+        self.bucket.upload_file(path, file_id)
         print("done")
-        return id
+
+        return file_id
 
 def export_table(db, table_name):
     """
@@ -155,9 +174,7 @@ def export_table(db, table_name):
         print(">> %s table is empty, no file will be created" % table_name)
         return
 
-    # get all atrribute names 
-    # (doesn't preserve proper ordering)
-    fieldnames = set().union(*items)
+    fieldnames = set().union(*items)    # Get all atrribute names
     filename = 'tmp/%s.csv' % table_name.lower()
 
     with open(filename, 'w+', newline='') as file:
