@@ -59,7 +59,12 @@ def setup_profile(bot, webdriver, db):
         results = webdriver.find_elements_by_css_selector('div.g')
 
         # save site visit to database
-        db.log_action(bot['username'], url, ['search'], keyword)
+        db.log_action({ 
+            "bot": bot['username'], 
+            "url": url, 
+            "actions": ['search'], 
+            "search_term": keyword 
+        })
 
         try:
             for _ in range(num_links_to_visit):
@@ -79,7 +84,11 @@ def setup_profile(bot, webdriver, db):
             webdriver.get(link)
 
             # save site visit to database
-            db.log_action(bot['username'], link, ['visit'])
+            db.log_action({ 
+                "bot": bot['username'], 
+                "url": link, 
+                "actions": ['visit']
+            })
 
             sleep(10)
         except:
@@ -111,17 +120,23 @@ def scrape_google_ads(bot, webdriver, db):
         sleep(10)
 
         # Get the 4 ads at the top
-        ads = r.html.find('.ads-ad')
+        ads = r.html.find('.ads-fr')
 
         for ad in ads:
-            ad_link = ad.find('.V0MxL', first=True).absolute_links #link to landing page
+            ad_link = ad.find('.Krnil', first=True).absolute_links #link to landing page
             ad_link = next(iter(ad_link)) #need this since the result from above is set
-            ad_headline = ad.find('h3.sA5rQ', first=True).text #headline of the ad
-            ad_copy = ad.find('.ads-creative', first=True).text #ad copy
+            ad_headline = ad.find('div.cfxYMc', first=True).text #headline of the ad
+            ad_copy = ad.find('.MUxGbd', first=True).text #ad copy
             ad_list.append([keyword, ad_link, ad_headline, ad_copy]) #append data row to list
 
+            print(ad.find('.MUxGbd'))
             # save ad to database
-            db.save_ad(bot['username'], ad_link, ad_headline, ad_copy)
+            db.save_ad({
+                "bot": bot['username'], 
+                "link": ad_link, 
+                "headline": ad_headline, 
+                "html": ad_copy
+            })
 
     df_ads = pd.DataFrame(ad_list, columns = ['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
 
@@ -137,7 +152,11 @@ def scrape_google_ads(bot, webdriver, db):
         webdriver.get(row['ad_link'])
 
         # save site visit to database
-        db.log_action(bot['username'], row['ad_link'], ['visit'])
+        db.log_action({ 
+            "bot": bot['username'], 
+            "url": row['ad_link'], 
+            "actions": ['visit']
+        })
 
         sleep(2)
         webdriver.save_screenshot('screenshots/'+str(index)+'.png')

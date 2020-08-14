@@ -1,6 +1,7 @@
 import sys
 from random import uniform
 from time import sleep
+import os
 
 # local imports
 from database import Database
@@ -33,37 +34,24 @@ def main():
         if bot['username'] != "mwest5078":
             continue
 
-        # todo: remove this as well. only for testing
-        bot['search_terms'] = ['domain names']
-
-        print('using bot: ' + bot['username'])
+        print('>> Using bot: ' + bot['username'])
 
         # define location of bot
-        pos = None
+        pos = { 'lat': uniform(-90, 90), 'lon': uniform(-180, 180) }
         if 'location' in bot:
             pos = {
                 'lat': float(bot['location']['latitude']),
                 'lon': float(bot['location']['longitude'])
             }
+
+        session = None
+        if os.environ['USE_PROXIES'] == "1":
+            session = config_driver.setup_driver_with_proxy(pos)
+            if session is None:
+                print(">> Quitting")
         else:
-            # default pos to completely random position
-            pos = { 'lat': uniform(-90, 90), 'lon': uniform(-180, 180) }
-
-        # use this to setup driver with a list of possible proxies
-        # todo: move this into its own function somewhere?
-        for p in proxy.get_closest_proxies(pos):
-            print("trying proxy: %s..." % p, end='')
-            session = config_driver.setup_driver(p)
-
-            if proxy.ip_check(session):
-                print("success")
-                break
-
-            print("failed")
-            session.quit()
-
-        # ... or use this to setup without proxy
-        # session = config_driver.setup_driver()
+            # ... or use this to setup without proxy
+            session = config_driver.setup_driver()
         
         # change location
         config_driver.set_location(session, pos)
