@@ -13,7 +13,7 @@ from config import keys
 from database import Database
 
 #from website_traverse import website_traverse
-from youtube_scrapper import youtube_scrapper
+from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
 
@@ -47,6 +47,6 @@ class webscraper:
         elif choice == 1:
             print('good')#website_traverse(webdriver, bot)
         else:
-            youtube_scrapper(self.webdriver, self.scrapping)
+            youtube_scraper(self.webdriver, self.scrapping)
 
 
