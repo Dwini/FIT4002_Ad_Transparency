@@ -7,42 +7,46 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
+import random
 
 from config import keys
 from database import Database
 
-from website_traverse import website_traverse
+#from website_traverse import website_traverse
 from youtube_scrapper import youtube_scrapper
+from googleSearch import googleSearch
+
 
 class webscraper:
-    def __init__(self, bot, scrapping, webdriver):
+    def __init__(self, webdriver, bot, scrapping = False):
+        self.webdriver = webdriver
         self.bot = bot
         self.scrapping = scrapping
-        self.login(webdriver)
-        self.task_decider(webdriver)
+        self.login()
+        self.task_decider()
 
-    def login(self, webdriver):
+    def login(self):
         # Login
         print('logging into Google account...', end="")
 
-        webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
+        self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
         sleep(2)
-        webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
-        webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+        self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+        self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
         sleep(4)
-        webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
-        webdriver.find_element_by_id('passwordNext').click()
+        self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+        self.webdriver.find_element_by_id('passwordNext').click()
         sleep(2)
 
         print("success")
 
-    def task_decider(self, webdriver):
+    def task_decider(self):
         choice = random.randint(0,2)
         if choice == 0:
-            website_traverse.traverse(webdriver, bot)
+            googleSearch(self.webdriver, self.bot, self.scrapping)
         elif choice == 1:
-            website_traverse.traverse(webdriver, bot)
+            print('good')#website_traverse(webdriver, bot)
         else:
-            youtube_scrapper.traverse(webdriver, bot)
+            youtube_scrapper(self.webdriver, self.scrapping)
 
 

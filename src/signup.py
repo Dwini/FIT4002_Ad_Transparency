@@ -10,18 +10,20 @@ import random
 import sys
 from bot import Bot
 
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
 class botCreator:
     def __init__(self):
         self.months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
         self.gender = 'female' if random.randint(0, 1) else 'male'
-        self.strFirstname = names.get_first_name(gender)
+        self.strFirstname = names.get_first_name(self.gender)
         self.strLastname = names.get_last_name()
-        self.strUsername = strFirstname + '.' + strLastname + "." + str(random.randint(1000, 999999))
+        self.strUsername = self.strFirstname + '.' + self.strLastname + "." + str(random.randint(1000, 999999))
         self.strPassword = "Hi1234()"
         self.strDay = str(random.randint(0, 28))
         self.strMonth = random.choice(months)
         self.strYear = str(random.randint(1940, 2004))
-        self.curBot = Bot(strFirstname, strLastname, strUsername, strPassword, gender)
+        self.curBot = Bot(self.strFirstname, self.strLastname, self.strUsername, self.strPassword, self.gender)
 
         # todo: move this to app python file v
         options = webdriver.ChromeOptions()
@@ -53,9 +55,7 @@ class botCreator:
         self.finalise(browser)
         self.personalNext(browser)
         time.sleep(20)
-
         browser.close()
-
         self.successful()
 
     def tabEntry(self, browser):

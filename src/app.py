@@ -4,10 +4,9 @@ from random import uniform
 # local imports
 from database import Database
 import proxy
-import webscraper
 import config_driver
-from bot import bot
-from webscraper import websracper
+from bot import Bot
+from webscraper import webscraper
 from signup import botCreator
 
 def main():
@@ -26,7 +25,7 @@ def main():
 
     creating = False
     if creating:
-        newBot = botcreator()
+        newBot = botCreator()
     else:
         bots = db.fetch_all_items('Bots')
 
@@ -60,7 +59,7 @@ def main():
             config_driver.set_location(session, pos)
 
             # start scraping
-            webscraper = webscraper(webdriver, bot)
+            webscraper(session, bot, db)
 
     # close display if in container.
     if container_build == True:
