@@ -82,6 +82,7 @@ class Database:
         print(">> %d objects in bucket" % len(list(items)))
         return items
 
+    # TODO: Remove this. Tedious when creating bots here.
     def create_bot(self, bot):
         """
         Creates a new bot
@@ -107,7 +108,7 @@ class Database:
         :param action: Dictionary that contains the following keys:
             - bot:          (string) Username of the bot that logged this action
             - url:          (string) Url that the action was logged at
-            - actions:      (array) Actions that were performed, e.g. 'search', 'visit'
+            - actions:      (array of strings) Actions that were performed, e.g. 'search', 'visit'
             - search_term:  (string, optional) if search was performed the terms that 
                             were queried
         """
@@ -151,10 +152,10 @@ class Database:
         """
         Save a file to S3.
 
-        :param path:    Path to the file as a string. Path is relative
+        :param path: Path to the file as a string. Path is relative
             so for example if filename is 123.jpg under the adScreenshots
             directory then path = 'adScreenshots/123.jpg'
-        :return:        ID of the uploaded S3 file. This can then be used when
+        :return: ID of the uploaded S3 file. This can then be used when
             logging an ad to link the uploaded file to the new ad
         """
         file_id = str(uuid.uuid4())
