@@ -70,8 +70,8 @@ def main():
             # webscraper.scrape_google_ads(bot, session, db)
 
             # start youtube scraping
-            yt_scraper = youtube_scraper(session, yt_ad.ALL)
-            yt_scraper.scrape_youtube_video_ads('reopen economy')
+            # yt_scraper = youtube_scraper(session, yt_ad.ALL)
+            # yt_scraper.scrape_youtube_video_ads('reopen economy')
 
 
     # close display if in container.
