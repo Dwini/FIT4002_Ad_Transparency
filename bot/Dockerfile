@@ -31,7 +31,7 @@ RUN pip install --upgrade --no-cache-dir -r /requirements.txt
 RUN rm /requirements.txt # remove requirements file from container.
 
 # copy the source code into /app and move into that directory.
-COPY src /app
+COPY . /app
 
 ## end builder stage.
 
@@ -42,6 +42,8 @@ COPY src /app
 # this is the image this is run.
 FROM builder
 
+WORKDIR /app
+
 # set the proxy addresses
 # ENV HTTP_PROXY "http://134.209.29.120:8080"
 # ENV HTTPS_PROXY "https://45.77.71.140:9050"
@@ -49,9 +51,5 @@ ENV USE_PROXIES 0
 ENV CHANGE_LOCATION 0
 
 # default entry point.
-CMD ["python", "app/app.py", "-c"]
+CMD ["python", "app.py", "-c"]
 ## end base stage.
-
-# for testing
-# WORKDIR /app
-# CMD [ "python", "database.py" ]

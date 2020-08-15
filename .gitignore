@@ -1,9 +1,8 @@
-/notes
 .vscode/
+
 drivers
 geckodriver.log
 /venv
-/adScreenshots
 chromedriver.exe
 .idea/
 # Docker project generated files to ignore
