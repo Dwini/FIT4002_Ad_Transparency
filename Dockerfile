@@ -49,7 +49,7 @@ FROM builder
 ENV USE_PROXIES 0
 ENV CHANGE_LOCATION 0
 
-# default entry point.
+# default entry point. "-c" to indicate this is running in a container.
 CMD ["python", "app/app.py", "-c"]
 
 ## end base stage.

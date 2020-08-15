@@ -38,11 +38,14 @@ def main():
     else:
         bots = db.fetch_all_items('Bots')
 
-    for bot in bots:
+    for b in bots:
         # todo: remove to use all bots. this is only for testing
-        if bot['username'] != AD_USERNAME:
+        print(b['username'])
+
+        if b['username'] != AD_USERNAME:
             continue
 
+        else:
             print('>> Using bot: ' + b['username'])
 
             # define location of bot
