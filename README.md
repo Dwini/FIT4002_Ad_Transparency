@@ -26,3 +26,4 @@ These proxy lists are supposedly updated every five minutes.
 ### Helpfull commands in docker.
 * Once a container is built, we can navigate as root with `docker run -it <container_name> /bin/sh`. Will not work if container is build with `--rm` as a parameter.
 * Confirm that the proxy addresses are working by running `python app/ip_check.py`.
+* For sharing files between container and host use `docker run --rm -it -v "<host_path>":<container_path> <container_name>`. This will attach the folder on the host at `<host_path>` to the folder inside the container at `<container_path>`. For windows `<host_path>` must be absolute, for example `C:\Users\<user>\VSCodeProjects\FIT4002_Ad_Transparency\src`

@@ -3,12 +3,15 @@ import os
 import sys
 from random import uniform
 from time import sleep
+import os
 
 # local imports
 from database import Database
 import proxy
-import webscraper
 import config_driver
+from bot import Bot
+from webscraper import webscraper
+from signup import botCreator
 from youtube_scraper import youtube_scraper, yt_ad
 
 # get environment variable.
@@ -29,57 +32,66 @@ def main():
     # initialise db
     db = Database()
 
-    # get bots
-    bots = db.fetch_all_items('Bots')
+    creating = False
+    if creating:
+        newBot = botCreator()
+    else:
+        bots = db.fetch_all_items('Bots')
 
     for bot in bots:
         # todo: remove to use all bots. this is only for testing
         if bot['username'] != AD_USERNAME:
             continue
 
-        # todo: remove this as well. only for testing
-        bot['search_terms'] = ['domain names']
+            print('>> Using bot: ' + b['username'])
 
-        print('using bot: ' + bot['username'])
-
-        # define location of bot
-        pos = None
-        if 'location' in bot:
-            pos = {
-                'lat': float(bot['location']['latitude']),
-                'lon': float(bot['location']['longitude'])
-            }
-        else:
-            # default pos to completely random position
+            # define location of bot
             pos = { 'lat': uniform(-90, 90), 'lon': uniform(-180, 180) }
+            if 'location' in b:
+                pos = {
+                    'lat': float(b['location']['latitude']),
+                    'lon': float(b['location']['longitude'])
+                }
 
-        # use this to setup driver with a list of possible proxies
-        # todo: move this into its own function somewhere?
-        for p in proxy.get_closest_proxies(pos):
-            print("trying proxy: %s..." % p, end='')
-            session = config_driver.setup_driver(p)
+            print(b)
+            bot = Bot(
+                firstname=b['name'][0],
+                lastname= b['name'][1],
+                username=b['username'],
+                password=b['password'],
+                gender=b['gender'],
+                birthDay=b['DOB'][:2],
+                birthMonth=b['DOB'][3:5],
+                birthYear=b['DOB'][6:],
+                politicalStance='republican',
+                profileBuilt=True
+            )
+            bot.setSearchTerms()
 
-            if proxy.ip_check(session):
-                print("proxy is working")
-                break
+            session = None
+            if os.environ['USE_PROXIES'] == "1":
+                session = config_driver.setup_driver_with_proxy(pos)
+                if session is None:
+                    print(">> Quitting")
+            else:
+                # ... or use this to setup without proxy
+                session = config_driver.setup_driver()
 
-            print("failed")
-            session.quit()
+            # change location
+            if os.environ['CHANGE_LOCATION'] == "1":
+                config_driver.set_location(session, pos)
 
-        # ... or use this to setup without proxy
-        # session = config_driver.setup_driver()
+            # start scraping
+            webscraper(session, bot, db)
 
-        # change location
-        config_driver.set_location(session, pos)
+            # start google scraping
+            # webscraper.login(bot, session)
+            # webscraper.setup_profile(bot, session, db)
+            # webscraper.scrape_google_ads(bot, session, db)
 
-        # start google scraping
-        webscraper.login(bot, session)
-        webscraper.setup_profile(bot, session, db)
-        webscraper.scrape_google_ads(bot, session, db)
-
-        # start youtube scraping
-        yt_scraper = youtube_scraper(session, yt_ad.ALL)
-        yt_scraper.scrape_youtube_video_ads('reopen economy')
+            # start youtube scraping
+            # yt_scraper = youtube_scraper(session, yt_ad.ALL)
+            # yt_scraper.scrape_youtube_video_ads('reopen economy')
 
 
     # close display if in container.

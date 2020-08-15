@@ -7,35 +7,32 @@ import json
 # define constants.
 HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
 HTTPS_IP_CHECK_URL = 'https://httpbin.org/ip'
-# HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=US&ssl=all&anonymity=elite"
-HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=1000&country=US&ssl=all&anonymity=elite"
+HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=US&ssl=all&anonymity=elite"
+# HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=1000&country=US&ssl=all&anonymity=elite"
 URL_STEM = "http://ip-api.com/json/" # followed by IP Address w/o port number.
 
 """
 Check if successfully connected to proxy server
 Returns true if working, else false
 """
-def ip_check(driver):
-    print('checking ip...')
-
+def ip_check(driver):    
     try:
         # Connect to HTTP_IP_CHECK_URL and print URL to console.
-        print('connecting to '+HTTP_IP_CHECK_URL+' ...')
+        print('>> Connecting to '+HTTP_IP_CHECK_URL+' ...', end="")
         driver.get(HTTP_IP_CHECK_URL)
         http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+        print("done. (response: %s)" % http_ip_address)
 
         # Connect to HTTPS_IP_CHECK_URL and print URL to console.
-        #print('connecting to '+HTTPS_IP_CHECK_URL+' ...')
-        #driver.get(HTTPS_IP_CHECK_URL)
-        #https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+        print('>> Connecting to '+HTTPS_IP_CHECK_URL+' ...', end="")
+        driver.get(HTTPS_IP_CHECK_URL)
+        https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+        print("done. (response: %s)" % https_ip_address)
 
-        print("connected to proxy")
         return True
     except:
-        print("could not connect to proxy")
+        print("failed")
         return False
-
-
 
 """
 Input an IP Address (can include the port number) and return an object with the
@@ -57,39 +54,41 @@ Given a postion, finds the closest proxy server.
 position: dictionary in the form: { 'lat': ... , 'lon': ... }
 """
 def get_closest_proxies(position):
-    print('finding closest proxy...')
+    print('>> Fetching list of proxies...')
 
     # list of dictionaries that contain ip and distance info
     results = []
 
-    proxy_list = list(urllib.request.urlopen(HTTP_PROXIES))
-    num_failed = 0
-    num_proxies = len(proxy_list)
+    proxy_list = list(urllib.request.urlopen("http://pubproxy.com/api/proxy?limit=20&format=txt&http=true&country=US&type=http&https=true"))
+    proxy_list = proxy_list + list(urllib.request.urlopen(HTTP_PROXIES))
 
-    for i in range(num_proxies):
+    num_total = len(proxy_list)
+    print(">> Found %d proxies" % num_total)
+
+    for line in proxy_list:
         # decode line in file
-        ip = proxy_list[i].decode('utf-8').strip('\n').strip('\r')
-
+        ip = line.decode('utf-8').strip('\n').strip('\r')
+        
         # get location and other info for proxy
         try:
-            print("querying info for proxy: %s (%s/%s) ..." % (ip, i+1, num_proxies), end='')
+            print(">> Querying proxy: %s ..." % ip, end='')
             ip_info = ip_lookup(ip)
         except:
-            print(" failed")
-            num_failed += 1
+            print("failed")
             continue
 
-        print(" success")
+        print("success")
 
         # very basic way to check distance between 2 points
         dist = (position['lat'] - ip_info['lat'])**2 + (position['lon'] - ip_info['lon'])**2
 
-        results.append({ 'ip': ip, 'dist': dist })
+        results.append({ 
+            'address': ip, 
+            'dist': dist, 
+            'location': '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country']) 
+        })
 
-    print("\ndone. %s proxies failed" % num_failed)
+    print(">> Proxy check complete. %s possible working proxies found" % len(results))
 
     # sort list of dicts
-    sorted_proxies = sorted(results, key=lambda k: k['dist'])
-
-    # get ips, discard dists
-    return [ p['ip'] for p in sorted_proxies ]
+    return sorted(results, key=lambda k: k['dist'])
