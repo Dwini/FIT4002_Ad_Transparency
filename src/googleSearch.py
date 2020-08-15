@@ -14,7 +14,7 @@ from database import Database
 from bot import Bot
 
 class googleSearch:
-    def __init__(self, webdriver, bot, scrapping):
+    def __init__(self, webdriver, bot, db, scrapping):
         """
         :param webdriver: the driver for the selenium project
         :param videoAds: enable saving of youtube video Ads, defaults to false
@@ -23,6 +23,7 @@ class googleSearch:
         """
         self.webdriver = webdriver
         self.bot = bot
+        self.db = db
         self.scrapping = scrapping
         self.ads = []  # can be refactored into dictionary, as right now only contains the html element
         self.search_keywords()
@@ -67,13 +68,23 @@ class googleSearch:
                     ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
 
                     # save ad to database
-                    self.db.save_ad(self.bot.getUsername(), ad_link, ad_headline, ad_copy)
+                    self.db.save_ad({
+                        "bot": self.bot.getUsername(), 
+                        "link": ad_link, 
+                        "headline": ad_headline, 
+                        "html": ad_copy
+                    })
 
             # wait until shows result
             results = self.webdriver.find_elements_by_css_selector('div.g')
 
             # save site visit to database
-            self.db.log_action(self.bot.getUsername(), url, ['search'], keyword)
+            self.db.log_action({
+                "bot": self.bot.getUsername(), 
+                "url": url, 
+                "actions": ['search'], 
+                "search_term": keyword
+            })
 
             try:
                 for _ in range(num_links_to_visit):
@@ -104,7 +115,11 @@ class googleSearch:
                 self.webdriver.get(row['ad_link'])
 
                 # save site visit to database
-                self.db.log_action(self.bot.getUsername(), row['ad_link'], ['visit'])
+                self.db.log_action({
+                    "bot": self.bot.getUsername(), 
+                    "url": row['ad_link'], 
+                    "actions": ['visit']
+                })
 
                 sleep(2)
                 self.webdriver.save_screenshot('screenshots/' + str(index) + '.png')
@@ -115,7 +130,11 @@ class googleSearch:
                 self.webdriver.get(link)
 
                 # save site visit to database
-                self.db.log_action(self.bot.getUsername(), link, ['visit'])
+                self.db.log_action({
+                    "bot": self.bot.getUsername(), 
+                    "url": link, 
+                    "actions": ['visit']
+                })
 
                 sleep(10)
             except:

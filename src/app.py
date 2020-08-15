@@ -34,20 +34,35 @@ def main():
     else:
         bots = db.fetch_all_items('Bots')
 
-        for bot in bots:
+        for b in bots:
             # todo: remove to use all bots. this is only for testing
-            if bot['username'] != "mwest5078":
+            if b['username'] != "mwest5078":
                 continue
 
-            print('>> Using bot: ' + bot['username'])
+            print('>> Using bot: ' + b['username'])
 
             # define location of bot
             pos = { 'lat': uniform(-90, 90), 'lon': uniform(-180, 180) }
-            if 'location' in bot:
+            if 'location' in b:
                 pos = {
-                    'lat': float(bot['location']['latitude']),
-                    'lon': float(bot['location']['longitude'])
+                    'lat': float(b['location']['latitude']),
+                    'lon': float(b['location']['longitude'])
                 }
+
+            print(b)
+            bot = Bot(
+                firstname=b['name'][0],
+                lastname= b['name'][1],
+                username=b['username'],
+                password=b['password'],
+                gender=b['gender'],
+                birthDay=b['DOB'][:2],
+                birthMonth=b['DOB'][3:5],
+                birthYear=b['DOB'][6:],
+                politicalStance='republican',
+                profileBuilt=True
+            )
+            bot.setSearchTerms()
 
             session = None
             if os.environ['USE_PROXIES'] == "1":
@@ -59,7 +74,8 @@ def main():
                 session = config_driver.setup_driver()
 
             # change location
-            config_driver.set_location(session, pos)
+            if os.environ['CHANGE_LOCATION'] == "1":
+                config_driver.set_location(session, pos)
 
             # start scraping
             webscraper(session, bot, db)

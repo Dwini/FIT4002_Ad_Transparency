@@ -18,9 +18,10 @@ from googleSearch import googleSearch
 
 
 class webscraper:
-    def __init__(self, webdriver, bot, scrapping = False):
+    def __init__(self, webdriver, bot, db, scrapping = False):
         self.webdriver = webdriver
         self.bot = bot
+        self.db = db
         self.scrapping = scrapping
         self.login()
         self.task_decider()
@@ -43,10 +44,10 @@ class webscraper:
     def task_decider(self):
         choice = random.randint(0,2)
         if choice == 0:
-            googleSearch(self.webdriver, self.bot, self.scrapping)
+            googleSearch(self.webdriver, self.bot, self.db, self.scrapping)
         elif choice == 1:
             print('good')#website_traverse(webdriver, bot)
         else:
-            youtube_scraper(self.webdriver, self.scrapping)
+            youtube_scraper(self.webdriver, self.db, self.scrapping)
 
 

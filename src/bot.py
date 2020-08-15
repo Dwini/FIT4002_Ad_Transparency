@@ -14,28 +14,28 @@ class Bot:
     self.profileBuilt = profileBuilt
 
   def getFirstname(self):
-    return bot.firstname
+    return self.firstname
 
   def getLastname(self):
-    return bot.lastname
+    return self.lastname
 
   def getUsername(self):
-    return bot.username
+    return self.username
 
   def getPassword(self):
-    return bot.password
+    return self.password
 
   def getGender(self):
-    return bot.gender
+    return self.gender
 
   def getBirthDay(self):
-    return bot.birthDay
+    return self.birthDay
 
   def getBirthMonth(self):
-    return bot.birthMonth
+    return self.birthMonth
 
   def getBirthYear(self):
-    return bot.birthYear
+    return self.birthYear
 
   def setSearchTerms(self):
     self.search_terms = 'Trump'
