@@ -1,9 +1,7 @@
-*.csv
-env
-.vscode
+/notes
+.vscode/
 drivers
 geckodriver.log
-__pycache__
 /venv
 /adScreenshots
 chromedriver.exe
