@@ -30,6 +30,6 @@ TODO: Download new proxy list during build stage and choose random proxy.
 * Confirm that the proxy addresses are working by running `python app/ip_check.py`.
 
 ### New Notes
-* Use `docker-compose up` to run the db and bot containers. You still use the command above to navigate as root in each container (run `docker images` to get list of built images, most likely has the name *fit4002_ad_transparency_db* or *fit4002_ad_transparency_bot*)
-* *USE_PROXIES* and *CHANGE_LOCATION* in bot/Dockerfile can be changed to enable proxies and location spoofing respectively (*0* for off, *1* for on)
-* When db container is up, visit *localhost:8080/<table_name>* to get list of items stored in a table (assuming db running on port 8080). For example *localhost:8080/ads* will retrieve a list of all items in 'Ads' table in DynamoDB as json. Then for an improved table view use: [json2table](http://json2table.com/)
+* Use `docker-compose up` to run the db and bot containers. You can still use the command above to navigate as root in each container (run `docker images` to get list of built images, most likely has the name *fit4002_ad_transparency_db* or *fit4002_ad_transparency_bot*)
+* *USE_PROXIES* and *CHANGE_LOCATION* in bot/Dockerfile can be changed to enable proxies and location spoofing respectively (0 for off, 1 for on)
+* When db container is up, visit *localhost:8080/<table_name>* to get list of items stored in a table (assuming db running on port 8080, db container is up if you see 'Running on http:// ...' in the console). For example *localhost:8080/ads* will retrieve a list of all items in 'Ads' table in DynamoDB as json. Then for an improved table view use: [json2table](http://json2table.com/)

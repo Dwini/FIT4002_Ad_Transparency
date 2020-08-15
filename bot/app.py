@@ -15,14 +15,17 @@ from youtube_scraper import youtube_scraper, yt_ad
 
 
 def main():
+
+    ### start example ###
+    # this is an exmaple of how to use db to create an ad
     try:
         data = { 'bot': 'test', 'link': 'test', 'headline': 'test' }
         r = requests.post('http://db:8080/ads', data=data)
         r.raise_for_status()
     except requests.exceptions.HTTPError as e:
         print(e.response.text)
-
     return
+    ### end example ###
 
     container_build = False
 
