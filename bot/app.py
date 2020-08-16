@@ -4,6 +4,7 @@ import sys
 from random import uniform
 from time import sleep
 import os
+import requests
 
 # local imports
 from database import Database
@@ -18,6 +19,18 @@ from youtube_scraper import youtube_scraper, yt_ad
 AD_USERNAME = os.environ['AD_USERNAME']
 
 def main():
+
+    ### start example ###
+    # this is an exmaple of how to use db to create an ad
+    try:
+        data = { 'bot': 'test', 'link': 'test', 'headline': 'test' }
+        r = requests.post('http://db:8080/ads', data=data)
+        r.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        print(e.response.text)
+    return
+    ### end example ###
+
     container_build = False
 
     # if this is running in the container, import and create virtual display.

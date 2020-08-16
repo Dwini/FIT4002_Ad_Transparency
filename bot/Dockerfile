@@ -9,6 +9,9 @@ FROM python:3.7-slim-buster as base
 # it will install all requirements.
 FROM base as builder
 
+# upgrade pip.
+RUN python -m pip install --upgrade pip
+
 # install all packages for chromedriver: https://gist.github.com/varyonic/dea40abcf3dd891d204ef235c6e8dd79.
 RUN apt-get update && \
     apt-get install -y xvfb gnupg wget curl unzip --no-install-recommends && \
@@ -27,12 +30,11 @@ RUN mv /chromedriver/chromedriver /usr/bin/chromedriver
 
 # copy the python requirements file into the install directory and install all python requirements.
 COPY requirements.txt /requirements.txt
-RUN pip install --upgrade pip
 RUN pip install --upgrade --no-cache-dir -r /requirements.txt
 RUN rm /requirements.txt # remove requirements file from container.
 
 # copy the source code into /app and move into that directory.
-COPY src /app
+COPY . /app
 
 ## end builder stage.
 
@@ -43,17 +45,14 @@ COPY src /app
 # this is the image this is run.
 FROM builder
 
+WORKDIR /app
+
 # set the proxy addresses
 # ENV HTTP_PROXY "http://134.209.29.120:8080"
 # ENV HTTPS_PROXY "https://45.77.71.140:9050"
 ENV USE_PROXIES 0
 ENV CHANGE_LOCATION 0
 
-# default entry point. "-c" to indicate this is running in a container.
-CMD ["python", "app/app.py", "-c"]
-
+# default entry point.
+CMD ["python", "app.py", "-c"]
 ## end base stage.
-
-# for testing
-# WORKDIR /app
-# CMD [ "python", "database.py" ]
