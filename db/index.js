@@ -7,8 +7,11 @@ const HOST = '0.0.0.0';
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/', express.static('public'));
 
-require('./routes')(app);
+require('./routes/ads')(app);
+require('./routes/bots')(app);
+require('./routes/logs')(app);
 
 app.listen(PORT, HOST)
-console.log(`Running on http://${HOST}:${PORT}`);
+console.log(`Running at http://${HOST}:${PORT}`);

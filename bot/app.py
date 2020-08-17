@@ -18,10 +18,33 @@ from youtube_scraper import youtube_scraper, yt_ad
 # get environment variable.
 AD_USERNAME = os.environ['AD_USERNAME']
 
-def main():
+def examples():
+    ### start example1 ###
+    # this is an exmaple of how to create a log
+    try:
+        data = { 'bot': 'test', 'url': 'test', 'actions': ['test', 'test2'] }
+        r = requests.post('http://db:8080/logs', data=data)
+        r.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        print(e.response.text)
+    return
+    ### end example1 ###
 
-    ### start example ###
-    # this is an exmaple of how to use db to create an ad
+    ### start example2 ###
+    # this is an exmaple of how to create an ad with a 
+    # file (using adLinks.txt file in this folder)
+    try:
+        files = { 'file': open('adLinks.txt', 'rb') }
+        values = { 'bot': 'test', 'link': 'test', 'headline': 'test' }
+        r = requests.post('http://db:8080/ads', files=files, data=values)
+        r.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        print(e.response.text)
+    return
+    ### end example2 ###
+
+    ### start example3 ###
+    # this is an exmaple of how to create an ad without a file
     try:
         data = { 'bot': 'test', 'link': 'test', 'headline': 'test' }
         r = requests.post('http://db:8080/ads', data=data)
@@ -29,8 +52,10 @@ def main():
     except requests.exceptions.HTTPError as e:
         print(e.response.text)
     return
-    ### end example ###
+    ### end example3 ###
 
+
+def main():
     container_build = False
 
     # if this is running in the container, import and create virtual display.
