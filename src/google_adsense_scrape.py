@@ -36,10 +36,13 @@ def getGoogleAds(driver, database, bot):
         driver.switch_to.default_content()
         try:
             base64_screenshot = iframe.screenshot_as_base64
-            database.save_ad({'username': bot.username, 'link': adLink, 'headline': adLink, 'html': innerHTML, 'base64': base64_screenshot})
-            screenshots.append(iframe.screenshot_as_base64)
         except:
-            print('Screenshot failed')
+            print('Screenshot capture failed')
+        try:
+            database.save_ad({'username': bot.username, 'link': adLink, 'headline': adLink, 'html': innerHTML})
+        except:
+            print('Screenshot saving failed')
+
 
     return screenshots
 

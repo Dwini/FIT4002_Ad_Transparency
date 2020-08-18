@@ -36,6 +36,8 @@ class webTraverse:
             print('Waiting...')
             sleep(randint(10, 15))
 
+            self.database.log_action({bot:'username', 'url': url, 'actions': ['visit']})
+            
             # dialogues can get in the way of ads and scrolling
             self.clear_dialogs()
 
@@ -186,7 +188,9 @@ if __name__ == '__main__':
     driver = Chrome(webdriver, chrome_options=chrome_options)
 
     db = Database()
-    trav = webTraverse(driver, db, None, True)
+
+    bot = Bot('Mr', 'West', 'mwest5078', 'password', 'gender', 'birthDay', 'birthMonth', 'birthYear', 'politicalStance', 'profileBuilt')
+    trav = webTraverse(driver, db, bot, True)
     trav.traverse()
 
 
