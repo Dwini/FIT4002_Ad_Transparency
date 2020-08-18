@@ -36,8 +36,11 @@ class webTraverse:
             print('Waiting...')
             sleep(randint(10, 15))
 
-            self.database.log_action({bot:'username', 'url': url, 'actions': ['visit']})
-            
+            try:
+                self.database.log_action({bot:'username', 'url': url, 'actions': ['visit']})
+            except:
+                print('Log action failed for database')
+                
             # dialogues can get in the way of ads and scrolling
             self.clear_dialogs()
 
