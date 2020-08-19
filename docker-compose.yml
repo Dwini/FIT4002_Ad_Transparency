@@ -5,12 +5,13 @@ services:
         depends_on:
             - db
         environment:
-          - AD_USERNAME="${AD_USERNAME:-mwest5078}"
-          - USE_PROXIES="${USE_PROXIES:-0}"
-          - CHANGE_LOCATION="${CHANGE_LOCATION:-0}"
+          - AD_USERNAME=${AD_USERNAME:-mwest5078}
+          - USE_PROXIES=${USE_PROXIES:-0}
+          - CHANGE_LOCATION=${CHANGE_LOCATION:-0}
     db:
         build: ./db
         ports:
             - 8080:8080
         volumes:
             - /usr/src/app/node_modules
+        

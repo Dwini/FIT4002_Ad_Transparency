@@ -9,19 +9,15 @@ from requests_html import HTMLSession
 from time import sleep
 import random
 
-from config import keys
-from database import Database
-
 from website_traverse import webTraverse
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
 
 class webscraper:
-    def __init__(self, webdriver, bot, db, scrapping = False):
+    def __init__(self, webdriver, bot, scrapping = False):
         self.webdriver = webdriver
         self.bot = bot
-        self.db = db
         self.scrapping = scrapping
         self.login()
         self.task_decider()
@@ -44,13 +40,13 @@ class webscraper:
     def task_decider(self):
         choice = random.randint(0,2)
         if choice == 0:
-            googleSearch(self.webdriver, self.bot, self.db, self.scrapping)
+            googleSearch(self.webdriver, self.bot, self.scrapping)
         elif choice == 1:
             print('good')
-            wt = webTraverse(self.webdriver, self.db, self.bot, self.scrapping)
+            wt = webTraverse(self.webdriver, self.bot, self.scrapping)
             wt.traverse()
 
         else:
-            youtube_scraper(self.webdriver, self.db, self.scrapping)
+            youtube_scraper(self.webdriver, self.scrapping)
 
 
