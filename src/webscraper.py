@@ -12,7 +12,7 @@ import random
 from config import keys
 from database import Database
 
-#from website_traverse import website_traverse
+from website_traverse import webTraverse
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
@@ -46,7 +46,10 @@ class webscraper:
         if choice == 0:
             googleSearch(self.webdriver, self.bot, self.db, self.scrapping)
         elif choice == 1:
-            print('good')#website_traverse(webdriver, bot)
+            print('good')
+            wt = webTraverse(self.webdriver, self.db, self.bot, self.scrapping)
+            wt.traverse()
+
         else:
             youtube_scraper(self.webdriver, self.db, self.scrapping)
 
