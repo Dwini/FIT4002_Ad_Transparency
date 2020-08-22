@@ -3,17 +3,18 @@ import re
 from selenium import webdriver
 from time import sleep
 from random import seed, randint
+import requests
 
 
 #given a selenium driver retrieves a list of google ads which appear on the page
-def getGoogleAds(driver):
+def getGoogleAds(driver, bot):
     seed(231)
 
     # google ads appear in iframes labelled as such
     iframes = driver.find_elements_by_xpath("//iframe[@data-google-container-id]")
 
     # Writing to a file
-    adLinks = open('../../adLinks.txt', 'w')
+    #adLinks = open('../../adLinks.txt', 'w')
 
 
     screenshots = []
@@ -23,46 +24,89 @@ def getGoogleAds(driver):
         try:
             iframe.location_once_scrolled_into_view
         except:
-            print('Element location not found')
+            print('Element location not found or not visible')
 
+        iframeID = switch_to_frame_context(driver, iframe)
 
-        for i in range(0,2):
-            try:
-                # Ad contents are dynamically loaded according to your cookie id
-                # so we need to switch to that context
-                driver.switch_to.frame(iframe)
-                break
-            except:
-                print('Element access attempt: ' + str(i))
+        innerHTML = get_ad_html(driver, iframeID)
 
-        try:
-
-
-            #go down to the first Div in the iframe
-            firstDiv = driver.find_element_by_xpath(".//div[@*]")
-
-            #find the link embedded in the iframe
-            linkElement = firstDiv.find_element_by_xpath(".//*[@href]")
-
-            adLinks.write(
-                (extractEmbeddedUrl(
-                    linkElement.get_attribute('href'))
-                )
-            )
-        except:
-            print('Error in link')
+        adLink = find_ad_redirect(driver, iframeID)
 
         screenshotName = 'adScreenshots/google' + str(randint(0, 10000)) + '.png'
 
         driver.switch_to.default_content()
         try:
-            iframe.screenshot(screenshotName)
-
-            screenshots.append(iframe.screenshot_as_base64)
+            base64_screenshot = iframe.screenshot_as_base64
         except:
-            print('Screenshot failed')
+            print('Screenshot capture failed')
+
+        try:
+            r = requests.post('http://db:8080/ads', data={
+                "bot": bot.username, 
+                "link": adLink, 
+                "headline": adLink, 
+                "html": innerHTML
+            })
+            r.raise_for_status()
+        except requests.exceptions.HTTPError as e:
+            print('Screenshot saving failed')
+            print(e.response.text)
+
 
     return screenshots
+
+
+def find_ad_redirect(driver, iframeID):
+
+
+    try:
+        #adElem = driver.find_element_by_id(iframeID)
+
+        # find the link embedded in the iframe
+        linkElements = driver.find_elements_by_xpath(".//a[@href]")
+    except:
+        print('Cannot find internal link, check correct context is set')
+        return None
+
+    adLink = None
+    # find the ad-redirect link with the required payload
+    for linkElement in linkElements:
+        adLink = extractEmbeddedUrl(linkElement.get_attribute('href'))
+        if adLink is not None:
+            break
+
+        # adLinks.write(
+        #    (extractEmbeddedUrl(
+        #        linkElement.get_attribute('href'))
+        #    )
+        # )
+
+    return adLink
+
+
+def get_ad_html(driver, iframeID):
+    innerHTML = None
+    # Get ad html
+    try:
+        # innerHTML = driver.find_element_by_xpath(".//html[@*]").get_attribute('innerHTML')
+        #adElem = driver.find_element_by_id(iframeID)
+        innerHTML = driver.find_element_by_xpath(".//html[@*]").get_attribute('innerHTML')
+    except:
+        print("Ad HTML retrieval failed")
+    return innerHTML
+
+
+def switch_to_frame_context(driver, iframe):
+    # switch to iframe context
+    for i in range(0, 3):
+        try:
+            iframeID = iframe.get_attribute('id')
+            driver.switch_to.frame(iframeID)
+            break
+        except:
+            print('Element access attempt: ' + str(i))
+    return iframeID
+
 
 def getRevContentAds(driver):
 
@@ -96,6 +140,6 @@ def extractEmbeddedUrl(compositeLink):
     try:
         return found.group(1)
     except:
-        return 0
+        return None
 
 

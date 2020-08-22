@@ -1,5 +1,5 @@
 class Bot:
-  def __init__(self, firstname, lastname, username, password, gender, birthDay, birthMonth, birthYear, politicalStance, profileBuilt):
+  def __init__(self, firstname, lastname, username, password, gender, birthDay, birthMonth, birthYear, politicalStance, search_terms, profileBuilt):
     self.firstname = firstname
     self.lastname = lastname
     self.username = username
@@ -10,7 +10,7 @@ class Bot:
     self.birthYear = birthYear
     # TODO create db of political terms and then when creating bots set a political stance
     self.politcalStance = politicalStance
-    self.search_terms = ''
+    self.search_terms = search_terms
     self.profileBuilt = profileBuilt
 
   def getFirstname(self):

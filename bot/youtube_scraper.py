@@ -12,7 +12,7 @@ class yt_ad(Enum):
     PROMO_VIDEO = 4
 
 class youtube_scraper:
-    def __init__(self, webdriver, db, adType):
+    def __init__(self, webdriver, adType):
         """
         :param webdriver: the driver for the selenium project
         :param videoAds: enable saving of youtube video Ads, defaults to false
@@ -20,7 +20,6 @@ class youtube_scraper:
         :param videoAds: enable saving of youtube video Ads, defaults to false
         """
         self.webdriver = webdriver
-        self.db = db
         self.ads = []  # can be refactored into dictionary, as right now only contains the html element
 
         self.enableVideoAds = False

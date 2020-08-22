@@ -22,7 +22,7 @@ Repository for a final year project at Monash University around ad transparency
 3. Confirm docker is working by typing the command: `docker run hello-world`
 
 ### Running the project
-1. run `docker-compose up --build`
+1. Run `docker-compose up --build`
 
 ### Running the DB container individually.
 1. With docker toolbox cmd still open. Open terminal in `/db` directory`.
@@ -36,11 +36,11 @@ Repository for a final year project at Monash University around ad transparency
 
 ### Helpfull commands in docker.
 * Once a container is built, we can navigate as root with `docker run -it <container_name> /bin/sh`. Will not work if container is build with `--rm` as a parameter.
+* List all docker images with `docker images`
 * Clear all old containers with `docker container prune`
 * Confirm that the proxy addresses are working by running `python bot/ip_check.py`.
 
-### New Notes
-* Use `docker-compose up` to run the db and bot containers. You can still use the command above to navigate as root in each container (run `docker images` to get list of built images, most likely has the name *fit4002_ad_transparency_db* or *fit4002_ad_transparency_bot*)
-* *USE_PROXIES* and *CHANGE_LOCATION* in bot/Dockerfile can be changed to enable proxies and location spoofing respectively (0 for off, 1 for on)
-* When db container is up, visit *localhost:8080/<table_name>* to get list of items stored in a table (assuming db running on port 8080, db container is up if you see 'Running on http:// ...' in the console). For example *localhost:8080/ads* will retrieve a list of all items in 'Ads' table in DynamoDB as json. Then for an improved table view use: [json2table](http://json2table.com/)
-* For sharing files between container and host use `docker run --rm -it -v "<host_path>":<container_path> <container_name>`. This will attach the folder on the host at `<host_path>` to the folder inside the container at `<container_path>`. For windows `<host_path>` must be absolute, for example `C:\Users\<user>\VSCodeProjects\FIT4002_Ad_Transparency\src`
+### Notes
+* *USE_PROXIES* and *CHANGE_LOCATION* in *docker-compose.yml* can be changed to enable proxies and location spoofing respectively (0 for off, 1 for on)
+* When db container is up, visit *localhost:8080* to get database contents as json. Then for an improved table view use: [json2table](http://json2table.com/). If you just want to view db contents and have bot running, use `docker-compose up --build db`
+* For sharing files between container and host use `docker run --rm -it -v <host_path>:<container_path> <container_name>`. This will attach the folder on the host at `<host_path>` to the folder inside the container at `<container_path>`. For windows, you can `%cd%` as the `<host_path>` for the current directory and for UNIX, use ``` `pwd` ``` (with backticks)

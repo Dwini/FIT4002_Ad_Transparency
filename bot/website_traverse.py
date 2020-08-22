@@ -1,10 +1,12 @@
 from google_adsense_scrape import getGoogleAds
+from bot import Bot
 from random import random, randint
 from time import sleep
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 import base64
 import math
+import requests
 
 
 class webTraverse:
@@ -17,9 +19,10 @@ class webTraverse:
             scrape (Bool): Whether sraping is required .
 
         """
-    def __init__(self, driver, scrape = False):
+    def __init__(self, driver, bot, scrape=False):
         self.driver = driver
         self.toScrape = scrape
+        self.bot = bot
 
     def traverse(self):
 
@@ -32,6 +35,13 @@ class webTraverse:
             print('Waiting...')
             sleep(randint(10, 15))
 
+            r = requests.post('http://db:8080/logs', data={
+                "bot": self.bot.getUsername(), 
+                "url": url, 
+                "actions": ['visit']
+            })
+            r.raise_for_status()
+                
             # dialogues can get in the way of ads and scrolling
             self.clear_dialogs()
 
@@ -41,9 +51,7 @@ class webTraverse:
 
             if self.toScrape:
                 self.full_page_screenshot(url)
-
-            if self.toScrape:
-                getGoogleAds(self.driver)
+                getGoogleAds(self.driver, self.bot)
 
             self.click_local_links()
 
@@ -179,11 +187,12 @@ if __name__ == '__main__':
 
     webdriver = "chromedriver.exe"
     chrome_options = Options()
-    chrome_options.add_argument('--headless')
+    #chrome_options.add_argument('--headless')
     chrome_options.add_argument('--start-maximized')
     driver = Chrome(webdriver, chrome_options=chrome_options)
 
-    trav = webTraverse(driver, True)
+    bot = Bot('Mr', 'West', 'mwest5078', 'password', 'gender', 'birthDay', 'birthMonth', 'birthYear', 'politicalStance', 'search_terms', 'profileBuilt')
+    trav = webTraverse(driver, bot, True)
     trav.traverse()
 
 

@@ -50,8 +50,6 @@ WORKDIR /app
 # set the proxy addresses
 # ENV HTTP_PROXY "http://134.209.29.120:8080"
 # ENV HTTPS_PROXY "https://45.77.71.140:9050"
-ENV USE_PROXIES 0
-ENV CHANGE_LOCATION 0
 
 # default entry point.
 CMD ["python", "app.py", "-c"]
