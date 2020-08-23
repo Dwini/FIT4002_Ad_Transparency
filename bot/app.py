@@ -14,21 +14,41 @@ from webscraper import webscraper
 from signup import botCreator
 from youtube_scraper import youtube_scraper, yt_ad
 
-# get environment variable.
-AD_USERNAME = os.environ['AD_USERNAME']
+# get environment variables.
+USE_PROXIES = os.getenv('USE_PROXIES') or "0"
+CHANGE_LOCATION = os.getenv('CHANGE_LOCATION') or "0"
+AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
+DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 
 def examples():
     ### start example ###
-    # this is an exmaple of how to create an ad with a 
+    # this is an exmaple of how to create an ad with a
     # file (using adLinks.txt file in this folder)
     files = { 'file': open('adLinks.txt', 'rb') }
     values = { 'bot': 'test', 'link': 'test', 'headline': 'test' }
-    r = requests.post('http://db:8080/ads', files=files, data=values)
+    r = requests.post(DB_URL+'/ads', files=files, data=values)
     r.raise_for_status()
     ### end example ###
 
 
 def main():
+    # Do not execute until db container has been started.
+    response = None
+    attempts = 0
+    while response is None and attempts < 10:
+        attempts += 1
+        try:
+            response = requests.get(DB_URL+'/heartbeat')
+            print('found db container...')
+        except:
+            print('no response from container. attempt: '+str(attempts))
+            sleep(10)
+            pass
+
+    # if no response. break.
+    if attempts >= 10:
+        return
+
     container_build = False
 
     # if this is running in the container, import and create virtual display.
@@ -45,14 +65,14 @@ def main():
     if creating:
         newBot = botCreator()
     else:
-        r = requests.get('http://db:8080/bots')
+        r = requests.get(DB_URL+'/bots')
         r.raise_for_status()
         bots = r.json()
 
     for b in bots:
         if b['username'] != AD_USERNAME:
             continue
-        
+
         print('>> Using bot: ' + b['username'])
 
         # define location of bot
@@ -65,7 +85,7 @@ def main():
 
         search_terms = ['trump']
         if 'political_ranking' in b:
-            r = requests.get('http://db:8080/search_terms')
+            r = requests.get(DB_URL+'/search_terms')
             r.raise_for_status()
             search_terms = r.json()[b['political_ranking']]
 
@@ -84,7 +104,7 @@ def main():
         )
 
         session = None
-        if os.environ['USE_PROXIES'] == "1":
+        if USE_PROXIES == "1":
             session = config_driver.setup_driver_with_proxy(pos)
             if session is None:
                 print(">> Quitting")
@@ -93,7 +113,7 @@ def main():
             session = config_driver.setup_driver()
 
         # change location
-        if os.environ['CHANGE_LOCATION'] == "1":
+        if CHANGE_LOCATION == "1":
             config_driver.set_location(session, pos)
 
         # start scraping

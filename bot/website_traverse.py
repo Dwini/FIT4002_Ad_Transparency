@@ -1,3 +1,5 @@
+# import exteral libraries.
+import os
 from google_adsense_scrape import getGoogleAds
 from bot import Bot
 from random import random, randint
@@ -8,6 +10,8 @@ import base64
 import math
 import requests
 
+# define constants
+DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 
 class webTraverse:
     """Methodical traversal or set of websites with scraping if required.
@@ -35,13 +39,13 @@ class webTraverse:
             print('Waiting...')
             sleep(randint(10, 15))
 
-            r = requests.post('http://db:8080/logs', data={
-                "bot": self.bot.getUsername(), 
-                "url": url, 
+            r = requests.post(DB_URL+'/logs', data={
+                "bot": self.bot.getUsername(),
+                "url": url,
                 "actions": ['visit']
             })
             r.raise_for_status()
-                
+
             # dialogues can get in the way of ads and scrolling
             self.clear_dialogs()
 
@@ -194,8 +198,3 @@ if __name__ == '__main__':
     bot = Bot('Mr', 'West', 'mwest5078', 'password', 'gender', 'birthDay', 'birthMonth', 'birthYear', 'politicalStance', 'search_terms', 'profileBuilt')
     trav = webTraverse(driver, bot, True)
     trav.traverse()
-
-
-
-
-

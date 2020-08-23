@@ -22,7 +22,8 @@ Repository for a final year project at Monash University around ad transparency
 3. Confirm docker is working by typing the command: `docker run hello-world`
 
 ### Running the project
-1. Run `docker-compose up --build`
+1. Ensure node dependencies are up to date by running `npm install` in `/db` directory.
+2. Run `docker-compose up --build`. If node import error occurs, update the module locally and retry.
 
 ### Running the DB container individually.
 1. With docker toolbox cmd still open. Open terminal in `/db` directory`.
@@ -35,10 +36,22 @@ Repository for a final year project at Monash University around ad transparency
 3. Run docker image in a container by running `docker run --rm --env AD_USERNAME=<username> --env USE_PROXIES=<1/0> --env CHANGE_LOCATION=<1/0> <image_name>`. Where <username> is the username of the google profile to run in this container. This container will be deleted once exited.
 
 ### Helpfull commands in docker.
-* Once a container is built, we can navigate as root with `docker run -it <container_name> /bin/sh`. Will not work if container is build with `--rm` as a parameter.
+* Once a container is built, we can navigate as root with `docker run -it -rm <image_name> /bin/sh`.
 * List all docker images with `docker images`
 * Clear all old containers with `docker container prune`
 * Confirm that the proxy addresses are working by running `python bot/ip_check.py`.
+
+## Instructions for updating the project in AWS (ony Matt at the moment)
+1. Install AWS CLI.
+2. Get updated AWS credentials from [here](https://labs.vocareum.com/main/main.php).
+3. Locally build bot and db images separately and push to docker hub.
+  * bot image: `mattbertoncello/ad_transparency_bot`.
+  * db image: `mattbertoncello/ad_transparency_db`.
+4. Update the `task-definition.json` file to include the bot usernames in this batch. The db container must be specified.
+5. Run the following command in root directory to define new task `aws ecs register-task-definition --cli-input-json file://task-definition.json`.
+6. Login to AWS console and run the newly defined task.
+
+TODO: Automate the process of generating `task-definition.json` file. Automate the running of tasks. Automate the stopping of tasks.
 
 ### Notes
 * *USE_PROXIES* and *CHANGE_LOCATION* in *docker-compose.yml* can be changed to enable proxies and location spoofing respectively (0 for off, 1 for on)

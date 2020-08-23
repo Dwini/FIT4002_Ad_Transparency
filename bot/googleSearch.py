@@ -1,3 +1,5 @@
+# import external libraries.
+import os
 import pandas as pd
 import time
 import sys
@@ -9,7 +11,11 @@ from requests_html import HTMLSession
 from time import sleep
 import requests
 
+# import local modules.
 from bot import Bot
+
+# define constants
+DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 
 class googleSearch:
     def __init__(self, webdriver, bot, scrapping):
@@ -65,10 +71,10 @@ class googleSearch:
                     ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
 
                     # save ad to database
-                    r = requests.post('http://db:8080/ads', data={
-                        "bot": self.bot.getUsername(), 
-                        "link": ad_link, 
-                        "headline": ad_headline, 
+                    r = requests.post(DB_URL+'/ads', data={
+                        "bot": self.bot.getUsername(),
+                        "link": ad_link,
+                        "headline": ad_headline,
                         "html": ad_copy
                     })
                     r.raise_for_status()
@@ -77,10 +83,10 @@ class googleSearch:
             results = self.webdriver.find_elements_by_css_selector('div.g')
 
             # save site visit to database
-            r = requests.post('http://db:8080/logs', data={
-                "bot": self.bot.getUsername(), 
-                "url": url, 
-                "actions": ['search'], 
+            r = requests.post(DB_URL+'/logs', data={
+                "bot": self.bot.getUsername(),
+                "url": url,
+                "actions": ['search'],
                 "search_term": keyword
             })
             r.raise_for_status()
@@ -114,9 +120,9 @@ class googleSearch:
                 self.webdriver.get(row['ad_link'])
 
                 # save site visit to database
-                r = requests.post('http://db:8080/logs', data={
-                    "bot": self.bot.getUsername(), 
-                    "url": row['ad_link'], 
+                r = requests.post(DB_URL+'/logs', data={
+                    "bot": self.bot.getUsername(),
+                    "url": row['ad_link'],
                     "actions": ['visit']
                 })
                 r.raise_for_status()
@@ -130,9 +136,9 @@ class googleSearch:
                 self.webdriver.get(link)
 
                 # save site visit to database
-                r = requests.post('http://db:8080/logs', data={
-                    "bot": self.bot.getUsername(), 
-                    "url": link, 
+                r = requests.post(DB_URL+'/logs', data={
+                    "bot": self.bot.getUsername(),
+                    "url": link,
                     "actions": ['visit']
                 })
                 r.raise_for_status()
