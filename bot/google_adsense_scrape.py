@@ -3,10 +3,11 @@ import re
 from selenium import webdriver
 from time import sleep
 from random import seed, randint
+import requests
 
 
 #given a selenium driver retrieves a list of google ads which appear on the page
-def getGoogleAds(driver, database, bot):
+def getGoogleAds(driver, bot):
     seed(231)
 
     # google ads appear in iframes labelled as such
@@ -38,10 +39,18 @@ def getGoogleAds(driver, database, bot):
             base64_screenshot = iframe.screenshot_as_base64
         except:
             print('Screenshot capture failed')
+
         try:
-            database.save_ad({'username': bot.username, 'link': adLink, 'headline': adLink, 'html': innerHTML})
-        except:
+            r = requests.post('http://db:8080/ads', data={
+                "bot": bot.username, 
+                "link": adLink, 
+                "headline": adLink, 
+                "html": innerHTML
+            })
+            r.raise_for_status()
+        except requests.exceptions.HTTPError as e:
             print('Screenshot saving failed')
+            print(e.response.text)
 
 
     return screenshots

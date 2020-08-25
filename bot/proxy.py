@@ -8,14 +8,14 @@ import json
 HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
 HTTPS_IP_CHECK_URL = 'https://httpbin.org/ip'
 HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=US&ssl=all&anonymity=elite"
-# HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=1000&country=US&ssl=all&anonymity=elite"
+HTTPS_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=https&timeout=1000&country=US&ssl=all&anonymity=elite"
 URL_STEM = "http://ip-api.com/json/" # followed by IP Address w/o port number.
 
 """
 Check if successfully connected to proxy server
 Returns true if working, else false
 """
-def ip_check(driver):    
+def ip_check(driver):
     try:
         # Connect to HTTP_IP_CHECK_URL and print URL to console.
         print('>> Connecting to '+HTTP_IP_CHECK_URL+' ...', end="")
@@ -23,11 +23,12 @@ def ip_check(driver):
         http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
         print("done. (response: %s)" % http_ip_address)
 
+        # TTODO - have both HTTP and HTTPS proxies... currently only have HTTP.
         # Connect to HTTPS_IP_CHECK_URL and print URL to console.
-        print('>> Connecting to '+HTTPS_IP_CHECK_URL+' ...', end="")
-        driver.get(HTTPS_IP_CHECK_URL)
-        https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
-        print("done. (response: %s)" % https_ip_address)
+        # print('>> Connecting to '+HTTPS_IP_CHECK_URL+' ...', end="")
+        # driver.get(HTTPS_IP_CHECK_URL)
+        # https_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
+        # print("done. (response: %s)" % https_ip_address)
 
         return True
     except:
@@ -51,7 +52,7 @@ def ip_lookup(ip_address):
 """
 Given a postion, finds the closest proxy server.
 
-position: dictionary in the form: { 'lat': ... , 'lon': ... } 
+position: dictionary in the form: { 'lat': ... , 'lon': ... }
 """
 def get_closest_proxies(position):
     print('>> Fetching list of proxies...')
@@ -68,7 +69,7 @@ def get_closest_proxies(position):
     for line in proxy_list:
         # decode line in file
         ip = line.decode('utf-8').strip('\n').strip('\r')
-        
+
         # get location and other info for proxy
         try:
             print(">> Querying proxy: %s ..." % ip, end='')
@@ -82,10 +83,10 @@ def get_closest_proxies(position):
         # very basic way to check distance between 2 points
         dist = (position['lat'] - ip_info['lat'])**2 + (position['lon'] - ip_info['lon'])**2
 
-        results.append({ 
-            'address': ip, 
-            'dist': dist, 
-            'location': '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country']) 
+        results.append({
+            'address': ip,
+            'dist': dist,
+            'location': '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
         })
 
     print(">> Proxy check complete. %s possible working proxies found" % len(results))
