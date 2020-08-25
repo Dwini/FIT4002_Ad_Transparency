@@ -1,3 +1,5 @@
+# import external libraries.
+import os
 from selenium.webdriver import Chrome
 import re
 from selenium import webdriver
@@ -5,6 +7,8 @@ from time import sleep
 from random import seed, randint
 import requests
 
+# define constants
+DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 
 #given a selenium driver retrieves a list of google ads which appear on the page
 def getGoogleAds(driver, bot):
@@ -41,10 +45,10 @@ def getGoogleAds(driver, bot):
             print('Screenshot capture failed')
 
         try:
-            r = requests.post('http://db:8080/ads', data={
-                "bot": bot.username, 
-                "link": adLink, 
-                "headline": adLink, 
+            r = requests.post(DB_URL+'/ads', data={
+                "bot": bot.username,
+                "link": adLink,
+                "headline": adLink,
                 "html": innerHTML
             })
             r.raise_for_status()
@@ -141,5 +145,3 @@ def extractEmbeddedUrl(compositeLink):
         return found.group(1)
     except:
         return None
-
-

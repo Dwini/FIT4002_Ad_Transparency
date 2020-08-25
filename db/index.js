@@ -13,6 +13,7 @@ require('./routes/ads')(app);
 require('./routes/bots')(app);
 require('./routes/logs')(app);
 require('./routes/search_terms')(app);
+require('./routes/heartbeat')(app);
 
 app.listen(PORT, HOST)
 console.log(`Running at http://${HOST}:${PORT}`);
