@@ -4,10 +4,11 @@ const multer = require('multer');
 const fs = require('fs');
 
 const uuidv4 = require('./_uuid');
-const { accessKeyId, secretAccessKey, region, bucket,
-    DATETIME_FORMAT } = require('../config');
+const { DATETIME_FORMAT } = require('../config')
+const { accessKeyId, secretAccessKey, region, 
+    bucket } = require('../config').aws;
 
-AWS.config.update({ accessKeyId, secretAccessKey, region, bucket });
+AWS.config.update({ accessKeyId, secretAccessKey, region });
 var docClient = new AWS.DynamoDB.DocumentClient();
 var s3 = new AWS.S3();
 
@@ -15,7 +16,10 @@ const upload = multer({ dest: '/tmp/' });
 
 module.exports = app => {
     app.route('/ads')
-        .get(function(req, res, next) {     // Fetch all Ads from db
+        .get(function(req, res, next) {
+            /** 
+             * Fetch all Ads from db 
+             */
             const params = { TableName: 'Ads' };
 
             docClient.scan(params, function(err, data) {
@@ -23,13 +27,23 @@ module.exports = app => {
                 res.send(data.Items);
             });
         })
-        .post(upload.single('file'), function(req, res, next) {     // Creates a new Ad
+        .post(upload.single('file'), function(req, res, next) {
+            /**
+             * Creates a new Ad
+             * @param bot       - username of bot that captured ad
+             * @param link      - URL of ad
+             * @param headline  - Title of ad
+             * @param html      - OPTIONAL. HTML string of ad
+             * @param base64    - OPTIONAL. Base64 string of picture of ad
+             * @param file      - OPTIONAL. Picture or any other file
+             *                    associated with the ad
+             */
             const { file } = req;
 
-            // These are all allowed fields
+            // Allowed fields
             const { bot, link, headline, html, base64 } = req.body;
 
-            // These are required fields
+            // Required fields
             if (!bot || !link || !headline) {
                 return res.status(400).send('Missing required field(s)');
             }
@@ -41,29 +55,32 @@ module.exports = app => {
                 });
             };
 
-            var item = { bot, link, headline, html, base64 };
             var dbParams = { TableName: 'Ads' };
-
-            item.id = uuidv4();
-            item.datetime = moment(new Date()).format(DATETIME_FORMAT);
+            var Item = { 
+                bot, link, headline, html, base64,
+                id: uuidv4(),
+                datetime: moment(new Date()).format(DATETIME_FORMAT)
+            };
 
             if (!file) {
-                return saveAd({ ...dbParams, Item: item });
+                dbParams.Item = Item
+                return saveAd(dbParams);
             }
 
-            const filePath = file.path,
-                s3Params = {
-                    Bucket: bucket,
-                    Body: fs.createReadStream(filePath),
-                    Key: Date.now() + '_' + file.originalname
-                };
+            const filePath = file.path;
+            const s3Params = {
+                Bucket: bucket,
+                Body: fs.createReadStream(filePath),
+                Key: Date.now() + '_' + file.originalname
+            };
             
             s3.upload(s3Params, function(err, data) {
                 fs.unlink(filePath, () => {});
                 if (err) return next(err);
                 
-                item.file = data.Location;
-                saveAd({ ...dbParams, Item: item });
-            })
+                Item.file = data.Location;
+                dbParams.Item = Item
+                saveAd(dbParams);
+            });
         });
 }

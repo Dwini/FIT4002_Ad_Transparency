@@ -1,12 +1,16 @@
 const AWS = require('aws-sdk');
 const moment = require('moment');
 
-const { accessKeyId, secretAccessKey, region } = require('../config');
+const { accessKeyId, secretAccessKey, 
+    region } = require('../config').aws;
 
 AWS.config.update({ accessKeyId, secretAccessKey, region });
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 module.exports = app => {
+    /**
+     * Get all bots in db
+     */
     app.get('/bots', function(req, res, next) {
         const params = { TableName: 'Bots' };
 

@@ -54,6 +54,6 @@ Repository for a final year project at Monash University around ad transparency
 TODO: Automate the process of generating `task-definition.json` file. Automate the running of tasks. Automate the stopping of tasks.
 
 ### Notes
-* *USE_PROXIES* and *CHANGE_LOCATION* in *docker-compose.yml* can be changed to enable proxies and location spoofing respectively (0 for off, 1 for on)
-* When db container is up, visit *localhost:8080* to get database contents as json. Then for an improved table view use: [json2table](http://json2table.com/). If you just want to view db contents and have bot running, use `docker-compose up --build db`
+* *USE_PROXIES* and *CHANGE_LOCATION* in `docker-compose.yml` can be changed to enable proxies and location spoofing respectively (0 for off, 1 for on)
+* When db container is up, visit http://localhost:8080 to get database contents as JSON. Then for an improved table view use: [json2table](http://json2table.com/) or [JSON to CSV](https://json-csv.com/). If you just want to view db contents and not have bots running, use `docker-compose up --build db`
 * For sharing files between container and host use `docker run --rm -it -v <host_path>:<container_path> <container_name>`. This will attach the folder on the host at `<host_path>` to the folder inside the container at `<container_path>`. For windows, you can `%cd%` as the `<host_path>` for the current directory and for UNIX, use ``` `pwd` ``` (with backticks)

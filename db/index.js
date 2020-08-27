@@ -16,4 +16,4 @@ require('./routes/search_terms')(app);
 require('./routes/heartbeat')(app);
 
 app.listen(PORT, HOST)
-console.log(`Running at http://${HOST}:${PORT}`);
+console.log(`Running at http://localhost:${PORT}`);

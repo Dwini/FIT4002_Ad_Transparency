@@ -1,16 +1,20 @@
 const AWS = require('aws-sdk');
 const moment = require('moment');
-const uuidv4 = require('./_uuid');
 
-const { accessKeyId, secretAccessKey, region, bucket, 
-    DATETIME_FORMAT } = require('../config');
+const uuidv4 = require('./_uuid');
+const { DATETIME_FORMAT } = require('../config');
+const { accessKeyId, secretAccessKey, 
+    region } = require('../config').aws;
 
 AWS.config.update({ accessKeyId, secretAccessKey, region });
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 module.exports = app => {
     app.route('/logs')
-        .get(function(req, res, next) {     // Fetch all Logs from db
+        .get(function(req, res, next) {
+            /**
+             * Fetch all Logs from db
+             */
             const params = { TableName: 'Logs' };
 
             docClient.scan(params, function(err, data) {
@@ -19,19 +23,29 @@ module.exports = app => {
             });
         })
         .post(function(req, res, next) {    // Creates a new Log of bots actions
-            // These are all allowed fields
-            const { bot, url, actions, search_term } = req.body;
+            /**
+             * Creates a new Log of bots actions
+             * @param bot           - Username of bot that performed action
+             * @param url           - URL of action
+             * @param actions       - Actions that were performed, e.g. 'visit', 'search'
+             * @param search_term   - OPTIONAL. If search performed this stores
+             *                      the term that was searched
+             */
 
-            // These are required fields
-            if (!bot || !url || !actions) {
+            // Allowed fileds
+            const { bot, url, actions, search_term } = req.body; 
+
+            // Required fields
+            if (!bot || !url || !actions) { 
                 return res.status(400).send('Missing required field(s)');
             }
 
-            const item = { bot, url, actions, search_term };
-            item.id = uuidv4();
-            item.datetime = moment(new Date()).format(DATETIME_FORMAT);
-
-            const params = { TableName: 'Logs', Item: item };
+            const Item = { 
+                bot, url, actions, search_term,
+                id: uuidv4(),
+                datetime: moment(new Date()).format(DATETIME_FORMAT)
+            };
+            const params = { TableName: 'Logs', Item };
 
             docClient.put(params, function(err) {
                 if (err) return next(err);

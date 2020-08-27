@@ -75,12 +75,18 @@ def setup_driver_with_proxy(pos):
     Use this to setup driver with a list of possible proxies
     """
     i = 0
-    proxies = proxy.get_closest_proxies(pos)
+
+    proxies = proxy.get_proxy_list()
+
+    # uncomment to sort proxies by distance from pos
+    # TODO: Switch this on an environment variable?
+    # proxies = proxy.sort_by_location(proxies, pos)
+    
     session = None
 
     while not session and i < len(proxies):
-        address = proxies[i]['address']
-        print("\n>> Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)))
+        address = proxies[i]
+        print("\n>> Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)), end='')
         session = setup_driver(address)
 
         if not proxy.ip_check(session):
@@ -89,7 +95,9 @@ def setup_driver_with_proxy(pos):
             i += 1
         
     if session:
-        print(">> Proxy change successful (location: %s)" % proxies[i]['location'])
+        ip_info = proxy.ip_lookup(address)
+        location = '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
+        print(">> Proxy change successful (location: %s)" % location)
     else:
         print(">> Error: No working proxies found")
     
