@@ -6,8 +6,10 @@ services:
             - db
         environment:
           - AD_USERNAME=${AD_USERNAME:-mwest5078}
-          - USE_PROXIES=${USE_PROXIES:-0}
-          - CHANGE_LOCATION=${CHANGE_LOCATION:-0}
+          - USE_PROXIES=${USE_PROXIES:-1}
+          - CHANGE_LOCATION=${CHANGE_LOCATION:-1}
+        volumes: 
+            - ./temp:/tmp/out
     db:
         build: ./db
         ports:

@@ -65,7 +65,10 @@ def get_proxy_list():
 
     for i, url in enumerate(PROXY_REQUESL_URLS):
         print('\t>> Querying proxy list (%d/%d)' % (i+1, len(PROXY_REQUESL_URLS)))
-        proxy_list += list(urllib.request.urlopen(url))
+        try:
+            proxy_list += list(urllib.request.urlopen(url))
+        except:
+            pass
     
     print(">> %d proxies found" % len(proxy_list))
 

@@ -22,20 +22,35 @@ class webscraper:
         self.login()
         self.task_decider()
 
+    def handle_captcha(self):
+        self.webdriver.find_element_by_xpath('//img[@id="captchaimg"]').screenshot('/tmp/out/captcha.png')
+
+        text = input('>> Captcha encountered. Enter captcha text> ')
+        self.webdriver.find_element_by_xpath('//input[@aria-label="Type the text you hear or see"]').send_keys(text)
+        self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+
+        sleep(3)
+        
+        self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+
     def login(self):
-        # Login
-        print('logging into Google account...', end="")
+        print('>> Logging into Google account...')
 
         self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
         sleep(2)
         self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
         sleep(4)
-        self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+
+        try:
+            self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+        except:
+            self.handle_captcha()
+
         self.webdriver.find_element_by_id('passwordNext').click()
         sleep(2)
 
-        print("success")
+        print(">> Login successful")
 
     def task_decider(self):
         choice = random.randint(0,2)
@@ -45,7 +60,6 @@ class webscraper:
             print('good')
             wt = webTraverse(self.webdriver, self.bot, self.scrapping)
             wt.traverse()
-
         else:
             youtube_scraper(self.webdriver, self.scrapping)
 
