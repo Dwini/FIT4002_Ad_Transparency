@@ -14,7 +14,7 @@ RUN python -m pip install --upgrade pip
 
 # install all packages for chromedriver: https://gist.github.com/varyonic/dea40abcf3dd891d204ef235c6e8dd79.
 RUN apt-get update && \
-    apt-get install -y xvfb gnupg wget curl unzip tesseract-ocr --no-install-recommends && \
+    apt-get install -y xvfb gnupg wget curl unzip --no-install-recommends && \
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
     echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list && \
     apt-get update -y && \
