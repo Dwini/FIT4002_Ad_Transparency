@@ -3,12 +3,16 @@ import requests
 import urllib.request
 import math
 import json
+from time import sleep
 
 # define constants.
 HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
 HTTPS_IP_CHECK_URL = 'https://httpbin.org/ip'
 PROXY_REQUESL_URLS = [
     "https://api.proxyscrape.com/?request=getproxies&timeout=100&country=US&anonymity=elite",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=200&country=US&anonymity=elite",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=300&country=US&anonymity=elite",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=400&country=US&anonymity=elite",
     "https://api.proxyscrape.com/?request=getproxies&timeout=500&country=US&anonymity=elite",
     "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=1",
     "https://api.proxyscrape.com/?request=getproxies&timeout=1000&country=US&anonymity=elite"
@@ -64,15 +68,19 @@ def get_proxy_list():
     proxy_list = []
 
     for i, url in enumerate(PROXY_REQUESL_URLS):
-        print('\t>> Querying proxy list (%d/%d)' % (i+1, len(PROXY_REQUESL_URLS)))
+        print('\t>> (%d/%d) Querying proxy list...' % (i+1, len(PROXY_REQUESL_URLS)), end='')
         try:
             proxy_list += list(urllib.request.urlopen(url))
+            print('success')
         except:
+            print('failed')
             pass
-    
-    print(">> %d proxies found" % len(proxy_list))
 
-    return [line.decode('utf-8').strip('\n').strip('\r') for line in proxy_list]
+    result = [line.decode('utf-8').strip('\n').strip('\r') for line in proxy_list]
+    result = list(set(result))
+    print(">> %d proxies found" % len(result))
+
+    return result
 
 """
 Given a list of proxies and a position, sorts the proxies by distance.
@@ -84,22 +92,19 @@ def sort_by_location(proxy_list, position):
 
     print('>> Starting proxy check (this might also take a while)')
 
-    for i, line in enumerate(proxy_list):
-        print('\t>> Fetching proxy info (%d/%d)\r' % (i+1, len(proxy_list)))
+    for i, ip in enumerate(proxy_list):
+        print('\t>> (%d/%d) Fetching proxy info...' % (i+1, len(proxy_list)), end='')
         try:
-            # decode line in file
-            ip = line.decode('utf-8').strip('\n').strip('\r')
             ip_info = ip_lookup(ip)
 
             # basic way to check distance between 2 points
             dist = (position['lat'] - ip_info['lat'])**2 + (position['lon'] - ip_info['lon'])**2
 
-            results.append({
-                'address': ip,
-                'dist': dist,
-                # 'location': '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
-            })
+            results.append({ 'address': ip, 'dist': dist })
+            print('success')
         except:
+            print('failed')
+            sleep(5)
             pass
 
     print('%s possible working proxies found' % len(results))
