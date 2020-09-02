@@ -54,12 +54,5 @@ Repository for a final year project at Monash University around ad transparency
 TODO: Automate the process of generating `task-definition.json` file. Automate the running of tasks. Automate the stopping of tasks.
 
 ### Notes
-* *USE_PROXIES* and *CHANGE_LOCATION* in `docker-compose.yml` can be changed to enable proxies and location spoofing respectively (0 for off, 1 for on)
 * When db container is up, visit http://localhost:8080 to get database contents as JSON. Then for an improved table view use: [json2table](http://json2table.com/) or [JSON to CSV](https://json-csv.com/). If you just want to view db contents and not have bots running, use `docker-compose up --build db`
-* For bypassing login captcha the above `docker-compose` commands won't work as there are problems with capturing input from the console. Follow these instructions instead:
-  - Create an empty `temp` folder inside this directory
-  - Make sure the *volumes* section is uncommented in `docker-compose.yml`
-  - Build: `docker-compose build`
-  - Spin up db container if not currently running: `docker-compose up db`
-  - Run bot container: `docker-compose run bot`
-  - If captcha is encountered a screenshot that includes the captcha image will be saved under `temp/captcha.png`. Enter the captcha text into the console and continue
+* Captcha input is now deprecated

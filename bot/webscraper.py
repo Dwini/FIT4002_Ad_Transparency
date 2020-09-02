@@ -22,31 +22,23 @@ class webscraper:
         self.login()
         self.task_decider()
 
-    def handle_captcha(self):
-        self.webdriver.find_element_by_xpath('//img[@id="captchaimg"]').screenshot('/tmp/out/captcha.png')
-
-        text = input('>> Captcha encountered. Enter captcha text> ')
-        self.webdriver.find_element_by_xpath('//input[@aria-label="Type the text you hear or see"]').send_keys(text)
-        self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-
-        sleep(3)
-        
-        self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
-
     def login(self):
         print('>> Logging into Google account...')
 
         self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
         sleep(2)
-        self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+
+        try:
+            self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+        except:
+            print('\t>> Could not find username field. Assuming already logged in')
+            self.webdriver.save_screenshot('/tmp/out/login_proof.png')
+            return
+
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
         sleep(4)
 
-        try:
-            self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
-        except:
-            self.handle_captcha()
-
+        self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
         self.webdriver.find_element_by_id('passwordNext').click()
         sleep(2)
 

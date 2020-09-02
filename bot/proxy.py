@@ -9,16 +9,16 @@ from time import sleep
 HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
 HTTPS_IP_CHECK_URL = 'https://httpbin.org/ip'
 PROXY_REQUESL_URLS = [
-    "https://api.proxyscrape.com/?request=getproxies&timeout=100&country=US&anonymity=elite",
-    "https://api.proxyscrape.com/?request=getproxies&timeout=200&country=US&anonymity=elite",
-    "https://api.proxyscrape.com/?request=getproxies&timeout=300&country=US&anonymity=elite",
-    "https://api.proxyscrape.com/?request=getproxies&timeout=400&country=US&anonymity=elite",
-    "https://api.proxyscrape.com/?request=getproxies&timeout=500&country=US&anonymity=elite",
-    "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=1",
-    "https://api.proxyscrape.com/?request=getproxies&timeout=1000&country=US&anonymity=elite"
-    # "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=5",
-    # "https://api.proxyscrape.com/?request=getproxies&timeout=5000&country=US&anonymity=elite",
-    # "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=10"
+    "https://api.proxyscrape.com/?request=getproxies&timeout=100&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=200&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=300&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=400&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=500&country=US&anonymity=elite&proxytype=http",
+    "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=1&type=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=1000&country=US&anonymity=elite&proxytype=http"
+    # "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=5&type=http",
+    # "https://api.proxyscrape.com/?request=getproxies&timeout=5000&country=US&anonymity=elite&proxytype=http",
+    # "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=10&type=http"
 ]
 URL_STEM = "http://ip-api.com/json/" # followed by IP Address w/o port number.
 

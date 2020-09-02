@@ -7,6 +7,9 @@ from time import sleep
 import geopy
 from geopy.geocoders import Nominatim
 import proxy
+import os
+
+LOAD_SESSION = os.getenv('LOAD_SESSION') == "1"
 
 """
 Sets driver location to given lat/lon values.
@@ -17,8 +20,8 @@ def set_location(driver, location):
     locator = Nominatim(user_agent="google")
     coordinates = "%f, %f" % (location['lat'], location['lon'])
     loc_info = locator.reverse(coordinates)
-    print('>> Attempting to change browser location to: %s' % loc_info.raw['display_name'])
-    print("\t>> (this will take a while)")
+    print('>> Attempting to change browser location')
+    print('\t>> Spoofing location: %s' % loc_info.raw['display_name'])
     # need to go to a web page so that bot can click on button to
     # use precise location
     driver.get("https://www.google.com/maps")
@@ -48,9 +51,9 @@ def set_location(driver, location):
     try:
         driver.get('https://google.com/search?q=google')
         sleep(2)
-        print('>> Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
+        print('\t>> Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
     except:
-        print('>> Could not confirm new location. Assuming location changed successfully')
+        print('\t>> Could not confirm new location. Assuming location changed successfully')
 
 """
 Set up selenium driver with given proxy
@@ -62,6 +65,17 @@ def setup_driver(proxyIP=None):
     if proxyIP is not None:
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
 
+    if LOAD_SESSION:
+        print('>> Attempting to load previous session')
+        chrome_options.add_argument('--user-data-dir=/tmp/profile')
+        try:
+            driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+            print('\t>> Successfully loaded session')
+            return driver
+        except:
+            print('\t>> Failed. Clearing old session data')
+            os.system('rm -rf /tmp/profile/*')
+    
     return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
 def setup_driver_with_proxy(pos):

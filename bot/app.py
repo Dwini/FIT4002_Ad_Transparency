@@ -108,6 +108,7 @@ def main():
             session = config_driver.setup_driver_with_proxy(pos)
             if session is None:
                 print(">> Quitting")
+                return
         else:
             # ... or use this to setup without proxy
             session = config_driver.setup_driver()
