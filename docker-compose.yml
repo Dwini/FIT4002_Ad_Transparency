@@ -8,9 +8,9 @@ services:
           - AD_USERNAME=${AD_USERNAME:-mwest5078}
           - USE_PROXIES=${USE_PROXIES:-0}               # For enabling proxies
           - CHANGE_LOCATION=${CHANGE_LOCATION:-1}       # Spoofing location
-          - LOAD_SESSION=${LOAD_SESSION:-1}             # Loading session data
+          - LOAD_SESSION=${LOAD_SESSION:-1}             # Loading previous session data
         volumes: 
-            # - ./out:/tmp/out
+            - ./out:/tmp/out
             - profile:/tmp/profile
     db:
         build: ./db

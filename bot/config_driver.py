@@ -22,35 +22,29 @@ def set_location(driver, location):
     loc_info = locator.reverse(coordinates)
     print('>> Attempting to change browser location')
     print('\t>> Spoofing location: %s' % loc_info.raw['display_name'])
-    # need to go to a web page so that bot can click on button to
-    # use precise location
-    driver.get("https://www.google.com/maps")
 
-    # set location in selenium
-    print('\t>> Trying method 1 of 2')
-    sleep(10)
+    # These are three different methods to spoof location
     driver.execute_cdp_cmd("Page.setGeolocationOverride", {
         "latitude": location['lat'],            # 32.585,       lat/lon for Warner Robins, 
         "longitude": location['lon'],           # -83.611,      Georgia, USA
         "accuracy": 100
     })
-
-    driver.get("https://www.google.com/maps")
-
-    print('\t>> Trying method 2 of 2')
-    sleep(10)
     driver.execute_script("window.navigator.geolocation.getCurrentPosition=function(success) {" +
         "var position = {\"coords\" : {\"latitude\": \"%s\",\"longitude\": \"%s\"}};" % (location['lat'], location['lon']) +
         "success(position);}")
-
     driver.execute_script("var positionStr=\"\";" +
         "window.navigator.geolocation.getCurrentPosition(function(pos){positionStr=pos.coords.latitude+\":\"+pos.coords.longitude});"+
         "return positionStr;")
 
-    # try to confirm location change
-    try:
-        driver.get('https://google.com/search?q=google')
-        sleep(2)
+    # Click button to use precise location
+    driver.get('https://google.com/search?q=google')
+    sleep(2)
+    location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
+    location_btn.click()
+    sleep(2)
+    
+    # Attempt to confirm location change
+    try: 
         print('\t>> Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
     except:
         print('\t>> Could not confirm new location. Assuming location changed successfully')

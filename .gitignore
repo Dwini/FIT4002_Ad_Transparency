@@ -1,6 +1,5 @@
 .vscode/
 /out/
-/profile/
 
 drivers
 geckodriver.log
