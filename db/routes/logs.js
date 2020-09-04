@@ -2,7 +2,8 @@ const AWS = require('aws-sdk');
 const moment = require('moment-timezone');
 
 const uuidv4 = require('./_uuid');
-const dateSort = require('./_sort');
+const sorter = require('./_sorter');
+const filterOptions = require('./_filterOptions');
 const { DATETIME_FORMAT } = require('../config');
 const { accessKeyId, secretAccessKey, 
     region } = require('../config').aws;
@@ -18,18 +19,14 @@ module.exports = app => {
              */
             var params = { TableName: 'Logs' };
 
-            if (req.query.bot) {
-                params = {
-                    ...params,
-                    FilterExpression: '#b = :b',
-                    ExpressionAttributeNames: { '#b': 'bot' },
-                    ExpressionAttributeValues: { ':b': req.query.bot }
-                }
+            const { bot } = req.query;
+            if (bot) {
+                params = { ...params, ...filterOptions(bot) };
             };
 
             docClient.scan(params, function(err, data) {
                 if (err) return next(err);
-                res.send(data.Items.sort(dateSort));
+                res.send(data.Items.sort(sorter));
             });
         })
         .post(function(req, res, next) {    // Creates a new Log of bots actions
@@ -44,8 +41,6 @@ module.exports = app => {
 
             // Allowed fileds
             const { bot, url, actions, search_term } = req.body; 
-
-            console.log(req.body)
 
             // Required fields
             if (!bot || !url || !actions) { 

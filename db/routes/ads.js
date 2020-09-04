@@ -4,7 +4,8 @@ const multer = require('multer');
 const fs = require('fs');
 
 const uuidv4 = require('./_uuid');
-const dateSort = require('./_sort');
+const sorter = require('./_sorter');
+const filterOptions = require('./_filterOptions');
 const { DATETIME_FORMAT } = require('../config')
 const { accessKeyId, secretAccessKey, region, 
     bucket } = require('../config').aws;
@@ -21,11 +22,16 @@ module.exports = app => {
             /** 
              * Fetch all Ads from db 
              */
-            const params = { TableName: 'Ads' };
+            var params = { TableName: 'Ads' };
+
+            const { bot } = req.query;
+            if (bot) {
+                params = { ...params, ...filterOptions(bot) };
+            };
 
             docClient.scan(params, function(err, data) {
                 if (err) return next(err);
-                res.send(data.Items.sort(dateSort));
+                res.send(data.Items.sort(sorter));
             });
         })
         .post(upload.single('file'), function(req, res, next) {
