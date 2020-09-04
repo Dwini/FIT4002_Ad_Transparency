@@ -2,6 +2,7 @@ const AWS = require('aws-sdk');
 const moment = require('moment');
 
 const uuidv4 = require('./_uuid');
+const dateSort = require('./_sort');
 const { DATETIME_FORMAT } = require('../config');
 const { accessKeyId, secretAccessKey, 
     region } = require('../config').aws;
@@ -13,13 +14,13 @@ module.exports = app => {
     app.route('/logs')
         .get(function(req, res, next) {
             /**
-             * Fetch all Logs from db
+             * Fetch all Logs from db ordered by latest to oldest
              */
             const params = { TableName: 'Logs' };
 
             docClient.scan(params, function(err, data) {
                 if (err) return next(err);
-                res.send(data.Items);
+                res.send(data.Items.sort(dateSort));
             });
         })
         .post(function(req, res, next) {    // Creates a new Log of bots actions

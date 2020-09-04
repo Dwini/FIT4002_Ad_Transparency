@@ -4,6 +4,7 @@ const multer = require('multer');
 const fs = require('fs');
 
 const uuidv4 = require('./_uuid');
+const dateSort = require('./_sort');
 const { DATETIME_FORMAT } = require('../config')
 const { accessKeyId, secretAccessKey, region, 
     bucket } = require('../config').aws;
@@ -24,7 +25,7 @@ module.exports = app => {
 
             docClient.scan(params, function(err, data) {
                 if (err) return next(err);
-                res.send(data.Items);
+                res.send(data.Items.sort(dateSort));
             });
         })
         .post(upload.single('file'), function(req, res, next) {
