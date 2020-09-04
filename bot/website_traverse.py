@@ -23,7 +23,8 @@ class webTraverse:
             scrape (Bool): Whether sraping is required .
 
         """
-    def __init__(self, driver, bot, scrape=False):
+    def __init__(self, driver, bot, scrape=True):
+
         self.driver = driver
         self.toScrape = scrape
         self.bot = bot
@@ -39,12 +40,16 @@ class webTraverse:
             print('Waiting...')
             sleep(randint(10, 15))
 
-            r = requests.post(DB_URL+'/logs', data={
-                "bot": self.bot.getUsername(),
-                "url": url,
-                "actions": ['visit']
-            })
-            r.raise_for_status()
+            try:
+                r = requests.post(DB_URL+'/logs', data={
+                    "bot": self.bot.getUsername(),
+                    "url": url,
+                    "actions": ['visit']
+                })
+                r.raise_for_status()
+            #except ConnectionRefusedError:
+            except:
+                print("Couldn't log activity. Connection Error")
 
             # dialogues can get in the way of ads and scrolling
             self.clear_dialogs()
@@ -70,14 +75,14 @@ class webTraverse:
 
         # TODO see if clicking main content will escape any popups
 
-        dialogs = driver.find_elements_by_css_selector("[id*=dialog]")
+        dialogs = self.driver.find_elements_by_css_selector("[id*=dialog]")
 
         #TODO Can dialogs be encapsulated in classes?
         #dialogs_with_class = driver.find_elements_by_css_selector("[class*=dialog]")
 
         for dialog in dialogs:
             try:
-                driver.execute_script("arguments[0].remove();", dialog)
+                self.driver.execute_script("arguments[0].remove();", dialog)
                 print('Removed a dialog')
             except:
                 print('error in removing dialog')
@@ -85,7 +90,7 @@ class webTraverse:
 
     def accept_cookies(self):
 
-        agree_buttons = driver.find_elements_by_xpath(
+        agree_buttons = self.driver.find_elements_by_xpath(
             "//button[contains(string(), 'Agree') or contains(string(), 'Allow') or contains(string(), 'Accept')] ")
         for button in agree_buttons:
             try:
@@ -98,7 +103,7 @@ class webTraverse:
 
     def click_local_links(self):
 
-        local_links = driver.find_elements_by_xpath("//a[not(contains(href, 'http'))]")
+        local_links = self.driver.find_elements_by_xpath("//a[not(contains(href, 'http'))]")
 
         #favour middle half
         start_range = math.ceil(len(local_links) / 4)
@@ -149,39 +154,39 @@ class webTraverse:
 
     def full_page_screenshot(self, url):
 
-        original_size = driver.get_window_size()
-        required_width = driver.execute_script('return document.body.parentNode.scrollWidth')
-        required_height = driver.execute_script('return document.body.parentNode.scrollHeight')
-        driver.set_window_size(required_width, required_height)
+        original_size = self.driver.get_window_size()
+        required_width = self.driver.execute_script('return document.body.parentNode.scrollWidth')
+        required_height = self.driver.execute_script('return document.body.parentNode.scrollHeight')
+        self.driver.set_window_size(required_width, required_height)
         # elem.screenshot('/pageScreenshot/' + url + '.png')  # avoids scrollbar
 
         try:
 
             with open('pageScreenshots/' + str(randint(0, 10000)) + '.png', 'wb+') as fh:
-                fh.write(base64.b64decode(driver.get_screenshot_as_base64()))
+                fh.write(base64.b64decode(self.driver.get_screenshot_as_base64()))
 
             print('printed full page')
         except:
             print('Full page screenshot failed')
 
-        driver.set_window_size(original_size['width'], original_size['height'])
+        self.driver.set_window_size(original_size['width'], original_size['height'])
 
     def random_wait_and_scroll(self):
         # random wait and scroll action
         print('Waiting...')
         for i in range(3):
             sleep(randint(1, 3))
-            driver.execute_script("window.scrollTo(0," + str(randint(50, 2000)) + ")")
+            self.driver.execute_script("window.scrollTo(0," + str(randint(50, 2000)) + ")")
             sleep(randint(1, 3))
 
     #prevent them from getting in the way of ads
     def remove_header(self):
 
-        headers = driver.find_elements_by_xpath("//div[contains(@class, 'header')] | //header[@class]")
+        headers = self.driver.find_elements_by_xpath("//div[contains(@class, 'header')] | //header[@class]")
         #//header[@class]" or
         for header in headers:
                 try:
-                    driver.execute_script("arguments[0].remove();", header)
+                    self.driver.execute_script("arguments[0].remove();", header)
                     print('removed a header')
                 except:
                     print('error in removing header')
