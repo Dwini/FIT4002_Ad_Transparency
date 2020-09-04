@@ -169,7 +169,8 @@ def imageProcessing(png):
     img.save(buf2, "png", quality=50, optimize=True)
 
     # retrieve back from buffer
-    img_str = base64.b64encode(buf2.getvalue())
-
-    return img_str.decode('utf-8')
+    #img_str = base64.b64encode(buf2.getvalue())
+    # img_str.decode('utf-8')
+    
+    return buf2.getvalue()
 
