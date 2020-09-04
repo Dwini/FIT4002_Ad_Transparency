@@ -164,9 +164,9 @@ def imageProcessing(png):
 
     # downsize
     x, y = img.size
-    x2, y2 = math.floor(x * 0.8), math.floor(y * 0.8)
+    x2, y2 = math.floor(x * 0.7), math.floor(y * 0.7)
 
-    img.save(buf2, "png", quality=65, optimize=True)
+    img.save(buf2, "png", quality=50, optimize=True)
 
     # retrieve back from buffer
     img_str = base64.b64encode(buf2.getvalue())
