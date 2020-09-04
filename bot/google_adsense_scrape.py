@@ -1,11 +1,12 @@
 # import external libraries.
 import os
-from selenium.webdriver import Chrome
 import re
-from selenium import webdriver
-from time import sleep
 from random import seed, randint
 import requests
+from PIL import Image
+import base64
+import io
+import math
 
 # define constants
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
@@ -30,37 +31,43 @@ def getGoogleAds(driver, bot):
         except:
             print('Element location not found or not visible')
 
-        iframeID = switch_to_frame_context(driver, iframe)
+        switch_to_frame_context(driver, iframe)
 
-        innerHTML = get_ad_html(driver, iframeID)
+        innerHTML = get_ad_html(driver)
 
-        adLink = find_ad_redirect(driver, iframeID)
-
-        screenshotName = 'adScreenshots/google' + str(randint(0, 10000)) + '.png'
+        adLink = find_ad_redirect(driver)
 
         driver.switch_to.default_content()
+        base64_screenshot = ""
         try:
-            base64_screenshot = iframe.screenshot_as_base64
+            #base64_screenshot = iframe.screenshot_as_base64
+            png = iframe.screenshot_as_png
+            image = imageProcessing(png)
         except:
             print('Screenshot capture failed')
 
         try:
-            r = requests.post(DB_URL+'/ads', data={
+            r = requests.post(DB_URL+'/ads', files={'file': image}, data={
                 "bot": bot.username,
                 "link": adLink,
                 "headline": adLink,
-                "html": innerHTML
+                "html": "innerHTML",
+                "base64": base64_screenshot
             })
             r.raise_for_status()
-        except requests.exceptions.HTTPError as e:
-            print('Screenshot saving failed')
-            print(e.response.text)
+        # except requests.exceptions.HTTPError as e:
+        #     print('Screenshot saving failed')
+        #     print(e.response.text)
+
+        #testing purposes:
+        except:
+            print("Connection for Screenshot failed")
 
 
     return screenshots
 
 
-def find_ad_redirect(driver, iframeID):
+def find_ad_redirect(driver):
 
 
     try:
@@ -88,7 +95,7 @@ def find_ad_redirect(driver, iframeID):
     return adLink
 
 
-def get_ad_html(driver, iframeID):
+def get_ad_html(driver):
     innerHTML = None
     # Get ad html
     try:
@@ -109,7 +116,7 @@ def switch_to_frame_context(driver, iframe):
             break
         except:
             print('Element access attempt: ' + str(i))
-    return iframeID
+
 
 
 def getRevContentAds(driver):
@@ -145,3 +152,24 @@ def extractEmbeddedUrl(compositeLink):
         return found.group(1)
     except:
         return None
+
+# Convert png string to Image Object for file upload and saving
+def imageProcessing(png):
+    buffer = io.BytesIO(png)
+    # PIL image
+    img = Image.open(buffer)
+
+    # second buffer
+    buf2 = io.BytesIO()
+
+    # downsize
+    x, y = img.size
+    x2, y2 = math.floor(x * 0.7), math.floor(y * 0.7)
+
+    img.save(buf2, "png", quality=50, optimize=True)
+
+    # retrieve back from buffer
+    img_str = base64.b64encode(buf2.getvalue())
+
+    return img_str.decode('utf-8')
+
