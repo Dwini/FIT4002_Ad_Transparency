@@ -20,7 +20,8 @@ module.exports = app => {
     app.route('/ads')
         .get(function(req, res, next) {
             /** 
-             * Fetch all Ads from db 
+             * Fetch all Ads from db.
+             * @param query.bot - Username of bot to filter by
              */
             var params = { TableName: 'Ads' };
 
@@ -37,12 +38,12 @@ module.exports = app => {
         .post(upload.single('file'), function(req, res, next) {
             /**
              * Creates a new Ad
-             * @param bot       - username of bot that captured ad
-             * @param link      - URL of ad
-             * @param headline  - Title of ad
-             * @param html      - OPTIONAL. HTML string of ad
-             * @param base64    - OPTIONAL. Base64 string of picture of ad
-             * @param file      - OPTIONAL. Picture or any other file
+             * @param body.bot       - username of bot that captured ad
+             * @param body.link      - URL of ad
+             * @param body.headline  - Title of ad
+             * @param body.html      - OPTIONAL. HTML string of ad
+             * @param body.base64    - OPTIONAL. Base64 string of picture of ad
+             * @param body.file      - OPTIONAL. Picture or any other file
              *                    associated with the ad
              */
             const { file } = req;

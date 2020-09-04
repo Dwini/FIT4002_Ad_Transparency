@@ -16,6 +16,7 @@ module.exports = app => {
         .get(function(req, res, next) {
             /**
              * Fetch all Logs from db ordered by latest to oldest
+             * @param query.bot - Username of bot to filter by
              */
             var params = { TableName: 'Logs' };
 
@@ -32,10 +33,10 @@ module.exports = app => {
         .post(function(req, res, next) {    // Creates a new Log of bots actions
             /**
              * Creates a new Log of bots actions
-             * @param bot           - Username of bot that performed action
-             * @param url           - URL of action
-             * @param actions       - Actions that were performed, e.g. 'visit', 'search'
-             * @param search_term   - OPTIONAL. If search performed this stores
+             * @param body.bot           - Username of bot that performed action
+             * @param body.url           - URL of action
+             * @param body.actions       - Actions that were performed, e.g. 'visit', 'search'
+             * @param body.search_term   - OPTIONAL. If search performed this stores
              *                      the term that was searched
              */
 
