@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const moment = require('moment');
+const moment = require('moment-timezone');
 const multer = require('multer');
 const fs = require('fs');
 

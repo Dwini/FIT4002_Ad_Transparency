@@ -1,8 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+const moment = require('moment-timezone');
 
 const PORT = 8080;
 const HOST = '0.0.0.0';
+
+moment.tz.setDefault("Australia/Melbourne");
 
 const app = express();
 

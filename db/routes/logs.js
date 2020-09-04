@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
-const moment = require('moment');
+const moment = require('moment-timezone');
 
 const uuidv4 = require('./_uuid');
 const dateSort = require('./_sort');
@@ -16,7 +16,16 @@ module.exports = app => {
             /**
              * Fetch all Logs from db ordered by latest to oldest
              */
-            const params = { TableName: 'Logs' };
+            var params = { TableName: 'Logs' };
+
+            if (req.query.bot) {
+                params = {
+                    ...params,
+                    FilterExpression: '#b = :b',
+                    ExpressionAttributeNames: { '#b': 'bot' },
+                    ExpressionAttributeValues: { ':b': req.query.bot }
+                }
+            };
 
             docClient.scan(params, function(err, data) {
                 if (err) return next(err);
@@ -35,6 +44,8 @@ module.exports = app => {
 
             // Allowed fileds
             const { bot, url, actions, search_term } = req.body; 
+
+            console.log(req.body)
 
             // Required fields
             if (!bot || !url || !actions) { 
