@@ -51,11 +51,12 @@ module.exports = app => {
                 return saveAd({ ...dbParams, Item: item });
             }
 
+            var fileExtension = 'png'
             const filePath = file.path,
                 s3Params = {
                     Bucket: bucket,
                     Body: fs.createReadStream(filePath),
-                    Key: Date.now() + '_' + file.originalname
+                    Key: Date.now() + '_' + file.originalname + '.' + fileExtension
                 };
             
             s3.upload(s3Params, function(err, data) {
