@@ -85,9 +85,10 @@ def main():
 
         search_terms = ['trump']
         if 'political_ranking' in b:
-            r = requests.get(DB_URL+'/search_terms')
+            url = DB_URL + '/search_terms/political/%d' % b['political_ranking']
+            r = requests.get(url)
             r.raise_for_status()
-            search_terms = r.json()[b['political_ranking']]
+            search_terms = r.json()
 
         bot = Bot(
             firstname=b['name'][0],
