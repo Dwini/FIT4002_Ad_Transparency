@@ -3,12 +3,23 @@ import requests
 import urllib.request
 import math
 import json
+from time import sleep
 
 # define constants.
 HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
 HTTPS_IP_CHECK_URL = 'https://httpbin.org/ip'
-HTTP_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=US&ssl=all&anonymity=elite"
-HTTPS_PROXIES = "https://api.proxyscrape.com/?request=getproxies&proxytype=https&timeout=1000&country=US&ssl=all&anonymity=elite"
+PROXY_REQUESL_URLS = [
+    "https://api.proxyscrape.com/?request=getproxies&timeout=100&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=200&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=300&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=400&country=US&anonymity=elite&proxytype=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=500&country=US&anonymity=elite&proxytype=http",
+    "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=1&type=http",
+    "https://api.proxyscrape.com/?request=getproxies&timeout=1000&country=US&anonymity=elite&proxytype=http"
+    # "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=5&type=http",
+    # "https://api.proxyscrape.com/?request=getproxies&timeout=5000&country=US&anonymity=elite&proxytype=http",
+    # "http://pubproxy.com/api/proxy?limit=5&format=txt&country=US&speed=10&type=http"
+]
 URL_STEM = "http://ip-api.com/json/" # followed by IP Address w/o port number.
 
 """
@@ -50,46 +61,53 @@ def ip_lookup(ip_address):
     return r.json()
 
 """
-Given a postion, finds the closest proxy server.
+Get list of proxies. These *should* be sorted fastest to slowest
+"""
+def get_proxy_list():
+    print('>> Fetching list of proxies (this might take a while)')
+    proxy_list = []
 
+    for i, url in enumerate(PROXY_REQUESL_URLS):
+        print('\t>> (%d/%d) Querying proxy list...' % (i+1, len(PROXY_REQUESL_URLS)), end='')
+        try:
+            proxy_list += list(urllib.request.urlopen(url))
+            print('success')
+        except:
+            print('failed')
+            pass
+
+    result = [line.decode('utf-8').strip('\n').strip('\r') for line in proxy_list]
+    result = list(set(result))
+    print(">> %d proxies found" % len(result))
+
+    return result
+
+"""
+Given a list of proxies and a position, sorts the proxies by distance.
 position: dictionary in the form: { 'lat': ... , 'lon': ... }
 """
-def get_closest_proxies(position):
-    print('>> Fetching list of proxies...')
-
+def sort_by_location(proxy_list, position):
     # list of dictionaries that contain ip and distance info
     results = []
 
-    proxy_list = list(urllib.request.urlopen("http://pubproxy.com/api/proxy?limit=20&format=txt&http=true&country=US&type=http&https=true"))
-    proxy_list = proxy_list + list(urllib.request.urlopen(HTTP_PROXIES))
+    print('>> Starting proxy check (this might also take a while)')
 
-    num_total = len(proxy_list)
-    print(">> Found %d proxies" % num_total)
-
-    for line in proxy_list:
-        # decode line in file
-        ip = line.decode('utf-8').strip('\n').strip('\r')
-
-        # get location and other info for proxy
+    for i, ip in enumerate(proxy_list):
+        print('\t>> (%d/%d) Fetching proxy info...' % (i+1, len(proxy_list)), end='')
         try:
-            print(">> Querying proxy: %s ..." % ip, end='')
             ip_info = ip_lookup(ip)
+
+            # basic way to check distance between 2 points
+            dist = (position['lat'] - ip_info['lat'])**2 + (position['lon'] - ip_info['lon'])**2
+
+            results.append({ 'address': ip, 'dist': dist })
+            print('success')
         except:
-            print("failed")
-            continue
+            print('failed')
+            sleep(5)
+            pass
 
-        print("success")
+    print('%s possible working proxies found' % len(results))
 
-        # very basic way to check distance between 2 points
-        dist = (position['lat'] - ip_info['lat'])**2 + (position['lon'] - ip_info['lon'])**2
-
-        results.append({
-            'address': ip,
-            'dist': dist,
-            'location': '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
-        })
-
-    print(">> Proxy check complete. %s possible working proxies found" % len(results))
-
-    # sort list of dicts
-    return sorted(results, key=lambda k: k['dist'])
+    # sort proxies by distance
+    return [p['address'] for p in sorted(results, key=lambda k: k['dist'])]

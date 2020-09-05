@@ -1,13 +1,16 @@
 const AWS = require('aws-sdk');
-const moment = require('moment');
+const moment = require('moment-timezone');
 const multer = require('multer');
 const fs = require('fs');
 
 const uuidv4 = require('./_uuid');
-const { accessKeyId, secretAccessKey, region, bucket,
-    DATETIME_FORMAT } = require('../config');
+const sorter = require('./_sorter');
+const filterOptions = require('./_filterOptions');
+const { DATETIME_FORMAT } = require('../config')
+const { accessKeyId, secretAccessKey, region, 
+    bucket } = require('../config').aws;
 
-AWS.config.update({ accessKeyId, secretAccessKey, region, bucket });
+AWS.config.update({ accessKeyId, secretAccessKey, region });
 var docClient = new AWS.DynamoDB.DocumentClient();
 var s3 = new AWS.S3();
 
@@ -15,21 +18,40 @@ const upload = multer({ dest: '/tmp/' });
 
 module.exports = app => {
     app.route('/ads')
-        .get(function(req, res, next) {     // Fetch all Ads from db
-            const params = { TableName: 'Ads' };
+        .get(function(req, res, next) {
+            /** 
+             * Fetch all Ads from db.
+             * @param query.bot - Username of bot to filter by
+             */
+            var params = { TableName: 'Ads' };
+
+            const { bot } = req.query;
+            if (bot) {
+                params = { ...params, ...filterOptions(bot) };
+            };
 
             docClient.scan(params, function(err, data) {
                 if (err) return next(err);
-                res.send(data.Items);
+                res.send(data.Items.sort(sorter));
             });
         })
-        .post(upload.single('file'), function(req, res, next) {     // Creates a new Ad
+        .post(upload.single('file'), function(req, res, next) {
+            /**
+             * Creates a new Ad
+             * @param body.bot       - username of bot that captured ad
+             * @param body.link      - URL of ad
+             * @param body.headline  - Title of ad
+             * @param body.html      - OPTIONAL. HTML string of ad
+             * @param body.base64    - OPTIONAL. Base64 string of picture of ad
+             * @param body.file      - OPTIONAL. Picture or any other file
+             *                    associated with the ad
+             */
             const { file } = req;
 
-            // These are all allowed fields
+            // Allowed fields
             const { bot, link, headline, html, base64 } = req.body;
 
-            // These are required fields
+            // Required fields
             if (!bot || !link || !headline) {
                 return res.status(400).send('Missing required field(s)');
             }
@@ -41,29 +63,32 @@ module.exports = app => {
                 });
             };
 
-            var item = { bot, link, headline, html, base64 };
             var dbParams = { TableName: 'Ads' };
-
-            item.id = uuidv4();
-            item.datetime = moment(new Date()).format(DATETIME_FORMAT);
+            var Item = { 
+                bot, link, headline, html, base64,
+                id: uuidv4(),
+                datetime: moment(new Date()).format(DATETIME_FORMAT)
+            };
 
             if (!file) {
-                return saveAd({ ...dbParams, Item: item });
+                dbParams.Item = Item
+                return saveAd(dbParams);
             }
 
-            const filePath = file.path,
-                s3Params = {
-                    Bucket: bucket,
-                    Body: fs.createReadStream(filePath),
-                    Key: Date.now() + '_' + file.originalname
-                };
+            const filePath = file.path;
+            const s3Params = {
+                Bucket: bucket,
+                Body: fs.createReadStream(filePath),
+                Key: Date.now() + '_' + file.originalname
+            };
             
             s3.upload(s3Params, function(err, data) {
                 fs.unlink(filePath, () => {});
                 if (err) return next(err);
                 
-                item.file = data.Location;
-                saveAd({ ...dbParams, Item: item });
-            })
+                Item.file = data.Location;
+                dbParams.Item = Item
+                saveAd(dbParams);
+            });
         });
 }
