@@ -6,7 +6,7 @@
   ],
   "memory": "512",
   "cpu": "256",
-  "executionRoleArn": "arn:aws:iam::763081640569:role/ecsTaskExecutionRole",
+  "executionRoleArn": "ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "db",
@@ -15,7 +15,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/ad-transparency-batch1",
+          "awslogs-group": "/ecs/ad-transparency",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
@@ -32,7 +32,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/ad-transparency-batch1",
+          "awslogs-group": "/ecs/ad-transparency",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
@@ -62,7 +62,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/ad-transparency-batch1",
+          "awslogs-group": "/ecs/ad-transparency",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }

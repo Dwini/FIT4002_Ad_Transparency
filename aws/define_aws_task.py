@@ -41,7 +41,7 @@ def create_task_definition(batch_name, username_list, use_proxies='1', change_lo
     obj['requiresCompatibilities'] = [ 'FARGATE' ]
     obj['memory'] = '512'
     obj['cpu'] = '256'
-    obj['executionRoleArn'] = 'arn:aws:iam::763081640569:role/ecsTaskExecutionRole'
+    obj['executionRoleArn'] = 'ecsTaskExecutionRole'
 
     # configure the db container and append it to the container_list.
     container_list.append({
@@ -51,7 +51,7 @@ def create_task_definition(batch_name, username_list, use_proxies='1', change_lo
         'logConfiguration': {
             'logDriver': 'awslogs',
             'options': {
-              'awslogs-group': '/ecs/%s' % batch_name,
+              'awslogs-group': '/ecs/ad-transparency',
               'awslogs-region': 'us-east-1',
               'awslogs-stream-prefix': 'ecs'
             }
@@ -68,7 +68,7 @@ def create_task_definition(batch_name, username_list, use_proxies='1', change_lo
             'logConfiguration': {
                 'logDriver': 'awslogs',
                 'options': {
-                  'awslogs-group': '/ecs/%s' % batch_name,
+                  'awslogs-group': '/ecs/ad-transparency',
                   'awslogs-region': 'us-east-1',
                   'awslogs-stream-prefix': 'ecs'
                 }
