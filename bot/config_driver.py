@@ -56,6 +56,7 @@ def setup_driver(proxyIP=None):
     chrome_options = Options()
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.517 Safari/537.36"')
     if proxyIP is not None:
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
 
@@ -67,7 +68,7 @@ def setup_driver(proxyIP=None):
             print('\t>> Successfully loaded session')
             return driver
         except:
-            print('\t>> Failed. Clearing old session data')
+            print('\t>> Failed. Clearing old session data', end='')
             os.system('rm -rf /tmp/profile/*')
     
     return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)

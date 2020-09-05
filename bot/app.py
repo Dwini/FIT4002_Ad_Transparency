@@ -83,12 +83,17 @@ def main():
                 'lon': float(b['location']['longitude'])
             }
 
-        search_terms = ['trump']
-        if 'political_ranking' in b:
-            url = DB_URL + '/search_terms/political/%d' % b['political_ranking']
-            r = requests.get(url)
-            r.raise_for_status()
-            search_terms = r.json()
+        # Get political search terms
+        url = DB_URL + '/search_terms/political/%d' % b['political_ranking']
+        r = requests.get(url)
+        r.raise_for_status()
+        search_terms = r.json()
+
+        # Get other search terms
+        url = DB_URL + '/search_terms/other/%d' % b['other_terms_category']
+        r = requests.get(url)
+        r.raise_for_status()
+        search_terms = search_terms + r.json()
 
         bot = Bot(
             firstname=b['name'][0],

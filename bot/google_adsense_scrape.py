@@ -3,7 +3,6 @@ import os
 import re
 from random import seed, randint
 import requests
-from PIL import Image
 import base64
 import io
 import math
