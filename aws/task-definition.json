@@ -27,17 +27,17 @@
       ]
     },
     {
-     "name": "mwest5078",
-     "image": "mattbertoncello/ad_transparency_bot",
-     "logConfiguration": {
-       "logDriver": "awslogs",
-       "options": {
-         "awslogs-group": "/ecs/ad-transparency-batch1",
-         "awslogs-region": "us-east-1",
-         "awslogs-stream-prefix": "ecs"
-       }
-     },
-     "environment": [
+      "name": "mwest5078",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency-batch1",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
         {
           "name": "AD_USERNAME",
           "value": "mwest5078"
@@ -55,36 +55,36 @@
           "value": "http://127.0.0.1:8080"
         }
       ]
-   },
-   {
-    "name": "burgersa68",
-    "image": "mattbertoncello/ad_transparency_bot",
-    "logConfiguration": {
-      "logDriver": "awslogs",
-      "options": {
-        "awslogs-group": "/ecs/ad-transparency-batch1",
-        "awslogs-region": "us-east-1",
-        "awslogs-stream-prefix": "ecs"
-      }
     },
-    "environment": [
-       {
-         "name": "AD_USERNAME",
-         "value": "burgersa68"
-       },
-       {
-         "name": "USE_PROXIES",
-         "value": "1"
-       },
-       {
-         "name": "CHANGE_LOCATION",
-         "value": "1"
-       },
-       {
-         "name": "DB_URL",
-         "value": "http://127.0.0.1:8080"
-       }
-     ]
-  }
- ]
+    {
+      "name": "burgersa68",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency-batch1",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "burgersa68"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "1"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://127.0.0.1:8080"
+        }
+      ]
+    }
+  ]
 }
