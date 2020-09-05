@@ -39,9 +39,9 @@ def main():
         attempts += 1
         try:
             response = requests.get(DB_URL+'/heartbeat')
-            print('found db container...')
+            print('found db project...')
         except:
-            print('no response from container. attempt: '+str(attempts))
+            print('no response from db project. attempt: '+str(attempts))
             sleep(10)
             pass
 
@@ -117,12 +117,7 @@ def main():
             config_driver.set_location(session, pos)
 
         # start scraping
-        webscraper(session, bot)
-
-        # start google scraping
-        # webscraper.login(bot, session)
-        # webscraper.setup_profile(bot, session)
-        # webscraper.scrape_google_ads(bot, session)
+        ws = webscraper(session, bot)
 
         # start youtube scraping
         # yt_scraper = youtube_scraper(session, yt_ad.ALL)
@@ -136,5 +131,5 @@ def main():
         display.stop()
 
 if __name__ == '__main__':
-    print(AD_USERNAME)
+    print('Environment Vars: username='+str(AD_USERNAME)+' proxies='+str(USE_PROXIES)+' location='+str(CHANGE_LOCATION))
     main()

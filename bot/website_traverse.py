@@ -78,7 +78,7 @@ class webTraverse:
         dialogs = self.driver.find_elements_by_css_selector("[id*=dialog]")
 
         #TODO Can dialogs be encapsulated in classes?
-        #dialogs_with_class = driver.find_elements_by_css_selector("[class*=dialog]")
+        #dialogs_with_class = self.driver.find_elements_by_css_selector("[class*=dialog]")
 
         for dialog in dialogs:
             try:
