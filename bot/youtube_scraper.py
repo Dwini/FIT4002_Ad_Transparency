@@ -19,12 +19,10 @@ class yt_ad(Enum):
 
 
 class youtube_scraper:
-    def __init__(self, webdriver, adType, bot):
+    def __init__(self, webdriver, bot, adType=yt_ad.ALL):
         """
         :param webdriver: the driver for the selenium project
-        :param videoAds: enable saving of youtube video Ads, defaults to false
-        :param sidebarAds: enable saving of youtube sidebar Ads, defaults to false
-        :param videoAds: enable saving of youtube video Ads, defaults to false
+        :param adType: enable saving of different adTypes, defaults to ALL. Use enum to switch between ALL, VIDEO, SIDEBAR, PROMO_VIDEO. Used for debugging.
         """
         self.webdriver = webdriver
         self.ads = []  # can be refactored into dictionary, as right now only contains the html element
@@ -51,8 +49,7 @@ class youtube_scraper:
     def search_video(self, search_param):
         self.webdriver.get(
             'https://www.youtube.com/results?search_query=' + str(search_param))
-        log_search_to_db(self.bot.getUsername(
-        ), 'https://www.youtube.com/results?search_query=' + str(search_param), str(search_param))
+        # self.log_search_to_db(self.bot.getUsername(), 'https://www.youtube.com/results?search_query=' + str(search_param), str(search_param))
         sleep(3)
         self.webdriver.find_element_by_id(
             'video-title').click()  # click first result
@@ -91,14 +88,13 @@ class youtube_scraper:
 
             if self.enableVideoAds and not foundVideoAd:
                 try:
-                    panel_ad = self.find_panel_ad(self.webdriver)
+                    panel_ad = self.find_video_ad(self.webdriver)
                     foundVideoAd = True
 
-                    video_ad_name = find_video_ad_name(panel_ad)
-                    video_ad_url = find_video_ad_url(panel_ad)
+                    video_ad_name = self.find_video_ad_name(panel_ad)
+                    video_ad_url = self.find_video_ad_url(panel_ad)
 
-                    save_ad(self.bot.getUsername(),
-                            video_ad_url, video_ad_url, panel_ad)
+                    save_ad(self.bot.getUsername(), video_ad_url, video_ad_url, panel_ad)
                     print('Attempt ' + str(attempt) +
                           ' Found - video/panel advertisement')
                 except NoSuchElementException:
@@ -109,11 +105,19 @@ class youtube_scraper:
                     sidebar_ad = self.find_sidebar_ad(self.webdriver)
                     foundSidebarAd = True
 
-                    sidebar_ad_name = find_sidebar_ad_name(sidebar_ad)
-                    sidebar_ad_url = find_sidebar_ad_url(sidebar_ad)
+                    sidebar_ad_name = self.find_sidebar_ad_name(sidebar_ad)
+                    sidebar_ad_url = self.find_sidebar_ad_url(sidebar_ad)
 
-                    save_ad(self.bot.getUsername(), 'sidebar ad url',
-                            'sidebar ad', sidebar_ad)
+                    save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_name, sidebar_ad)
+
+                    sidebar_ad = self.find_secondary_sidebar_ad(self.webdriver)
+                    print(sidebar_ad)
+                    foundSidebarAd = True
+
+                    sidebar_ad_name = self.find_secondary_sidebar_ad_name(sidebar_ad)
+                    sidebar_ad_url = self.find_secondary_sidebar_ad_url(sidebar_ad)
+
+                    save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_name, sidebar_ad)
                     print('Attempt ' + str(attempt) +
                           ' Found - sidebar advertisement')
                 except NoSuchElementException:
@@ -123,8 +127,7 @@ class youtube_scraper:
                 try:
                     promo_video_ad = self.find_promo_video_ad(self.webdriver)
                     foundPromoVideoAd = True
-                    save_ad(self.bot.getUsername(), 'promo vid url',
-                            'promo vid ad', promo_video_ad)
+                    save_ad(self.bot.getUsername(), 'promo vid url', 'promo vid ad', promo_video_ad)
                     print('Attempt ' + str(attempt) +
                           ' Found - promoted video advertisement')
                 except NoSuchElementException:
@@ -135,9 +138,10 @@ class youtube_scraper:
 
         return foundPromoVideoAd or foundSidebarAd or foundVideoAd
 
-    def find_panel_ad(self, webdriver):
-        # todo: this is flaky, and will often miss video advertisements,
+    def find_video_ad(self, webdriver):
+        # todo: this is flaky, and will sometimes miss video advertisements, if no banner is set on the ad
         try:
+            # this can find ads for ads like ubereats and grammarly, that have a banner on the left.
             panel_ad = webdriver.find_element_by_class_name(
                 "ytp-flyout-cta-body")
         except:
@@ -165,16 +169,25 @@ class youtube_scraper:
         try:
             sidebar_ad_title = webdriver.find_element_by_class_name(
                 'yt-simple-endpoint style-scope ytd-action-companion-ad-renderer')
+            self.screenshot_ad(sidebar_ad_title)
         except NoSuchElementException:
             try:
                 sidebar_ad_title = webdriver.find_element_by_class_name(
                     'style-scope ytd-action-companion-ad-renderer')
             except NoSuchElementException:
-                try:
-                    sidebar_ad_title = webdriver.find_element_by_class_name(
-                        'style-scope ytd-promoted-sparkles-web-renderer')
-                except NoSuchElementException:
-                    raise NoSuchElementException('No sidebar ad found')
+                raise NoSuchElementException('No sidebar ad found')
+
+        return sidebar_ad_title.get_attribute('outerHTML')
+
+    def find_secondary_sidebar_ad(self, webdriver):
+        try:
+            sidebar_ad_title = webdriver.find_element_by_class_name(
+                'style-scope ytd-promoted-sparkles-web-renderer')
+            self.screenshot_ad(sidebar_ad_title)
+
+        except NoSuchElementException:
+            raise NoSuchElementException('No secondary sidebar ad found')
+
         return sidebar_ad_title.get_attribute('outerHTML')
 
     def get_video_length(self):
@@ -251,16 +264,31 @@ class youtube_scraper:
             sidebar_ad_url = 'sidebar_ad_url'
         return sidebar_ad_url
 
+    def screenshot_ad(self, html_element, base64=True):
+        try:
+            html_element.location_once_scrolled_into_view
+            try:
+                if base64:
+                    screenshot = html_element.screenshot_as_base64
+                # print(base64_screenshot)
+                # might include the db call, or in actual save ad function
+                else:
+                    screenshot = html_element.save_screenshot("current_Ad.png")
+            except:
+                print('Screenshot capture failed')
+        except Exception:
+            pass
 
-def get_sec(self, time_string):
-    """
-    :param time_string: string in the form HH:MM:SS
-    :return: returns int converted from string to time in seconds
-    """
-    if len(time_string.split(':')) == 2:
-        m, s = time_string.split(':')
-        return int(m) * 60 + int(s)
+    def get_sec(self, time_string):
+        """
+        :param time_string: string in the form HH:MM:SS
+        :return: returns int converted from string to time in seconds
+        """
 
-    elif len(time_string.split(':')) == 3:
-        h, m, s = time_string.split(':')
-        return int(h) * 3600 + int(m) * 60 + int(s)
+        if len(time_string.split(':')) == 2:
+            m, s = time_string.split(':')
+            return int(m) * 60 + int(s)
+
+        elif len(time_string.split(':')) == 3:
+            h, m, s = time_string.split(':')
+            return int(h) * 3600 + int(m) * 60 + int(s)
