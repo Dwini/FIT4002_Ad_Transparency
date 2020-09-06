@@ -14,10 +14,10 @@ class youtube_elements:
         # this function finds in-stream video ads based on HTMl elements.
         try:
             # try to find ad:
-            panel_ad = self.webdriver.find_element_by_xpath("//*[starts-with(@id, 'visit-advertiser:')]")
+            video_ad = self.webdriver.find_element_by_xpath("//*[starts-with(@id, 'visit-advertiser:')]")
         except NoSuchElementException:
             try:
-                panel_ad = self.webdriver.find_element_by_class_name("ytp-flyout-cta-body")
+                video_ad = self.webdriver.find_element_by_class_name("ytp-flyout-cta-body")
             except NoSuchElementException:
                 raise NoSuchElementException('Unable to locate Video ad - No video ad found')
             ### CLEANUP: Marking the rest of these irrelevant for now. ###
@@ -34,7 +34,7 @@ class youtube_elements:
                 #                 ".ytp-ad-button-text")
                 #         except NoSuchElementException:
                 #             raise NoSuchElementException('No video ad found')
-        return panel_ad.get_attribute('outerHTML')
+        return video_ad.get_attribute('outerHTML')
 
     def find_video_ad_url(self, html_string):
         """
@@ -78,32 +78,26 @@ class youtube_elements:
             promo_search_video_ad_url = 'promo_search_video_ad_url'
         return promo_search_video_ad_url
 
-    # def find_sidebar_ad(self):
-    #     try:
-    #         sidebar_ad_title = webdriver.find_element_by_class_name(
-    #             'yt-simple-endpoint style-scope ytd-action-companion-ad-renderer')
-    #         self.screenshot_ad(sidebar_ad_title)
-    #     except NoSuchElementException:
-    #         try:
-    #             sidebar_ad_title = webdriver.find_element_by_class_name(
-    #                 'style-scope ytd-action-companion-ad-renderer')
-    #         except NoSuchElementException:
-    #             raise NoSuchElementException('No sidebar ad found')
+    def find_sidebar_ad(self):
+        try:
+            sidebar_ad = self.webdriver.find_element_by_id('player-ads')
+            # self.screenshot_ad(sidebar_ad)
+        except NoSuchElementException:
+            raise NoSuchElementException('No sidebar ad found')
 
-    #     return sidebar_ad_title.get_attribute('outerHTML')
-
-    # def find_secondary_sidebar_ad(self):
-    #     try:
-    #         sidebar_ad_title = webdriver.find_element_by_class_name(
-    #             'style-scope ytd-promoted-sparkles-web-renderer')
-    #         self.screenshot_ad(sidebar_ad_title)
-
-    #     except NoSuchElementException:
-    #         raise NoSuchElementException('No secondary sidebar ad found')
-
-    #     return sidebar_ad_title.get_attribute('outerHTML')
+        return sidebar_ad
+    
+    def find_sidebar_ad_url(self, html_string):
+        try:
+            ad_html = html.fromstring(html_string)
+            sidebar_ad_url = ad_html.xpath('//span[@id="domain"]')[0].text
+        except Exception:
+            print('HTML parse - Unable to find sidebar_ad url, setting default name')
+            sidebar_ad_url = 'sidebar_ad_url'
+        return sidebar_ad_url
 
     # def find_masthead_ad(self):
+    # # this will only need to run when we load the youtube home page.
     #     try:
     #         masthead_ad = webdriver.find_element_by_class_name('masthead_ad')
     #         self.screenshot_ad(masthead_ad)
@@ -112,22 +106,3 @@ class youtube_elements:
     #         raise NoSuchElementException('No masthead ad found')
 
     #     return masthead_ad.get_attribute('outerHTML')
-
-
-    # def find_sidebar_ad_name(self, html_string):
-    #     try:
-    #         ad_html = html.fromstring(html_string)
-    #         sidebar_ad_name = ad_html.xpath('//div[@id = "header"]')[0].text
-    #     except Exception:
-    #         print('HTML parse - Unable to find ad name, setting default name')
-    #         sidebar_ad_name = 'sidebar_ad_name'
-    #     return sidebar_ad_name
-
-    # def find_sidebar_ad_url(self, html_string):
-    #     try:
-    #         ad_html = html.fromstring(html_string)
-    #         sidebar_ad_url = ad_html.xpath('//span[@id = "domain"]')[0].text
-    #     except Exception:
-    #         print('HTML parse - Unable to find ad url, setting default name')
-    #         sidebar_ad_url = 'sidebar_ad_url'
-    #     return sidebar_ad_url

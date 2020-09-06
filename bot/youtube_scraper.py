@@ -57,7 +57,7 @@ class youtube_scraper:
         # wait until the title of the video is loaded onto the page
         v_title = wait.until(EC.presence_of_element_located(
             (By.CSS_SELECTOR, "h1.title yt-formatted-string"))).text
-        # self.log_to_db(self.bot.getUsername(), self.webdriver.current_url, 'visit')
+        self.log_to_db(self.bot.getUsername(), self.webdriver.current_url, 'visit')
 
         foundVideoAd = False
         foundSidebarAd = False
@@ -87,26 +87,32 @@ class youtube_scraper:
                 except NoSuchElementException:
                     pass
 
-            # if self.enableSidebarAds and not foundSidebarAd:
-            #     try:
-            #         sidebar_ad = self.yt_element_search.find_sidebar_ad()
-            #         foundSidebarAd = True
+            if self.enableSidebarAds and not foundSidebarAd:
+                try:
+                    sidebar_ad = self.yt_element_search.find_sidebar_ad()
+                    foundSidebarAd = True
 
-            #         sidebar_ad_url = self.yt_element_search.find_sidebar_ad_url(sidebar_ad)
+                    # print(sidebar_ad)
 
-            #         self.screenshot_ad(sidebar_ad, False, 'sidebar_ad.png', True)
+                    sidebar_ad_url = self.yt_element_search.find_sidebar_ad_url(sidebar_ad.get_attribute('innerHTML'))
 
-            #         save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_url, sidebar_ad, 'sidebar_ad.png')
-            #         print('Attempt ' + str(attempt) +
-            #               ' Found - sidebar advertisement')
-            #     except NoSuchElementException:
-            #         pass
+                    print(sidebar_ad_url)
+
+                    coordinates = sidebar_ad.location_once_scrolled_into_view
+                    self.webdriver.execute_script('window.scrollTo({}, {});'.format(coordinates['x'], coordinates['y']))
+
+                    # this will only take a proper screenshot, when running in a larger window or headlessly
+                    self.screenshot_ad(sidebar_ad, False, 'sidebar_ad.png', True)
+
+                    self.save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_url, sidebar_ad.get_attribute('innerHTML'), 'sidebar_ad.png')
+                    print('Attempt ' + str(attempt) + ' Found - sidebar advertisement')
+                except NoSuchElementException:
+                    pass
 
         if (foundSidebarAd or foundVideoAd) is False:
             print('No ads found')
 
         return foundSidebarAd or foundVideoAd
-        return
 
 ### HELPER FUNCTIONS ###
 
@@ -123,7 +129,7 @@ class youtube_scraper:
     def search_video(self, search_param):
         self.webdriver.get(
             'https://www.youtube.com/results?search_query=' + str(search_param))
-        # self.log_to_db(self.bot.getUsername(), 'https://www.youtube.com/results?search_query=' + str(search_param), 'search', str(search_param))
+        self.log_to_db(self.bot.getUsername(), 'https://www.youtube.com/results?search_query=' + str(search_param), 'search', str(search_param))
         sleep(3)
 
         try:
@@ -135,7 +141,7 @@ class youtube_scraper:
 
                     self.screenshot_ad(ad, False, 'promo_video_ad.png', True)
 
-                    #self.save_ad(self.bot.getUsername(), promo_video_ad_url, promo_video_ad_url, ad.get_attribute('innerHTML'), 'promo_video_ad.png')
+                    self.save_ad(self.bot.getUsername(), promo_video_ad_url, promo_video_ad_url, ad.get_attribute('innerHTML'), 'promo_video_ad.png')
 
         except NoSuchElementException:
             print('No promo vid ads found')
@@ -194,8 +200,6 @@ class youtube_scraper:
         r.raise_for_status()
 
     def screenshot_ad(self, html_element, base64=True, name="current_Ad.png", crop=False):
-        # html_element.location_once_scrolled_into_view
-
         if crop:
             location = html_element.location
             size = html_element.size
@@ -220,18 +224,6 @@ class youtube_scraper:
                     screenshot = html_element.save_screenshot(name)
             except:
                 print('Screenshot capture failed')
-
-    # def screenshot_ad_old(self, html_element, base64=True, name = "current_Ad.png"):
-    #     html_element.location_once_scrolled_into_view
-    #     try:
-    #         if base64:
-    #             screenshot = html_element.screenshot_as_base64
-    #         # print(base64_screenshot)
-    #         # might include the db call, or in actual save ad function
-    #         else:
-    #             screenshot = html_element.save_screenshot(name)
-    #     except:
-    #         print('Screenshot capture failed')
 
     def get_sec(self, time_string):
         """
