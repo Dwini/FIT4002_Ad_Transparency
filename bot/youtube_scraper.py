@@ -90,16 +90,17 @@ class youtube_scraper:
             if self.enableSidebarAds and not foundSidebarAd:
                 try:
                     sidebar_ad = self.yt_element_search.find_sidebar_ad()
+
+                    # as the elements for sidebar ads can exist on the page, but are 0x0 check for this.
+                    dimensions = sidebar_ad.size
+                    if (dimensions['width'] == 0 or dimensions['height'] == 0):
+                        return NoSuchElementException
+
                     foundSidebarAd = True
-
-                    # print(sidebar_ad)
-
                     sidebar_ad_url = self.yt_element_search.find_sidebar_ad_url(sidebar_ad.get_attribute('innerHTML'))
 
-                    print(sidebar_ad_url)
-
                     coordinates = sidebar_ad.location_once_scrolled_into_view
-                    self.webdriver.execute_script('window.scrollTo({}, {});'.format(coordinates['x'], coordinates['y']))
+                    # self.webdriver.execute_script('window.scrollTo({}, {});'.format(coordinates['x'], coordinates['y']))
 
                     # this will only take a proper screenshot, when running in a larger window or headlessly
                     self.screenshot_ad(sidebar_ad, False, 'sidebar_ad.png', True)
@@ -194,9 +195,9 @@ class youtube_scraper:
             "actions": [action]
         }
         if search_term is not None:
-            r['search_term'] = search_term
-        else:
-            r = requests.post(DB_URL+'/logs', data=data)
+            data['search_term'] = search_term
+        
+        r = requests.post(DB_URL+'/logs', data=data)
         r.raise_for_status()
 
     def screenshot_ad(self, html_element, base64=True, name="current_Ad.png", crop=False):
