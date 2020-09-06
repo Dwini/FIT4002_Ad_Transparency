@@ -7,6 +7,9 @@ from time import sleep
 import geopy
 from geopy.geocoders import Nominatim
 import proxy
+import os
+
+LOAD_SESSION = os.getenv('LOAD_SESSION') == "1"
 
 """
 Sets driver location to given lat/lon values.
@@ -17,46 +20,34 @@ def set_location(driver, location):
     locator = Nominatim(user_agent="google")
     coordinates = "%f, %f" % (location['lat'], location['lon'])
     loc_info = locator.reverse(coordinates)
-    print('>> Attempting to change browser location to: %s' % loc_info.raw['display_name'])
-    print(">> (this will take a while)")
-    # need to go to a web page so that bot can click on button to
-    # use precise location
-    driver.get("https://www.google.com/maps")
+    print('>> Attempting to change browser location')
+    print('\t>> Spoofing location: %s' % loc_info.raw['display_name'])
 
-    # set location in selenium
-    print('>> Trying method 1 of 2')
-    sleep(10)
+    # These are three different methods to spoof location
     driver.execute_cdp_cmd("Page.setGeolocationOverride", {
         "latitude": location['lat'],            # 32.585,       lat/lon for Warner Robins, 
         "longitude": location['lon'],           # -83.611,      Georgia, USA
         "accuracy": 100
     })
-
-    driver.get("https://www.google.com/maps")
-
-    print('>> Trying method 2 of 2')
-    sleep(10)
     driver.execute_script("window.navigator.geolocation.getCurrentPosition=function(success) {" +
         "var position = {\"coords\" : {\"latitude\": \"%s\",\"longitude\": \"%s\"}};" % (location['lat'], location['lon']) +
         "success(position);}")
-
     driver.execute_script("var positionStr=\"\";" +
         "window.navigator.geolocation.getCurrentPosition(function(pos){positionStr=pos.coords.latitude+\":\"+pos.coords.longitude});"+
         "return positionStr;")
 
-    print('>> Finalising browser location change (almost done)')
-    driver.get("https://www.google.com/maps")
-    sleep(3)
-
-    # click button to use precise location
-    # 'Wprf1b' is the id for the button, but need to be aware that
-    # this may change at any time.
-    try:
-        driver.get('https://google.com/search?q=google')
-        sleep(2)
-        print('>> Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
+    # Click button to use precise location
+    driver.get('https://google.com/search?q=google')
+    sleep(2)
+    location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
+    location_btn.click()
+    sleep(2)
+    
+    # Attempt to confirm location change
+    try: 
+        print('\t>> Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
     except:
-        print('>> Could not confirm new location. Assuming location changed successfully')
+        print('\t>> Could not confirm new location. Assuming location changed successfully')
 
 """
 Set up selenium driver with given proxy
@@ -68,6 +59,17 @@ def setup_driver(proxyIP=None):
     if proxyIP is not None:
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
 
+    if LOAD_SESSION:
+        print('>> Attempting to load previous session')
+        chrome_options.add_argument('--user-data-dir=/tmp/profile')
+        try:
+            driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+            print('\t>> Successfully loaded session')
+            return driver
+        except:
+            print('\t>> Failed. Clearing old session data')
+            os.system('rm -rf /tmp/profile/*')
+    
     return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
 def setup_driver_with_proxy(pos):
@@ -75,12 +77,18 @@ def setup_driver_with_proxy(pos):
     Use this to setup driver with a list of possible proxies
     """
     i = 0
-    proxies = proxy.get_closest_proxies(pos)
+
+    proxies = proxy.get_proxy_list()
+
+    # uncomment to sort proxies by distance from pos
+    # TODO: Switch this on an environment variable?
+    # proxies = proxy.sort_by_location(proxies, pos)
+    
     session = None
 
     while not session and i < len(proxies):
-        address = proxies[i]['address']
-        print("\n>> Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)))
+        address = proxies[i]
+        print("\n>> Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)), end='')
         session = setup_driver(address)
 
         if not proxy.ip_check(session):
@@ -89,7 +97,9 @@ def setup_driver_with_proxy(pos):
             i += 1
         
     if session:
-        print(">> Proxy change successful (location: %s)" % proxies[i]['location'])
+        ip_info = proxy.ip_lookup(address)
+        location = '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
+        print(">> Proxy change successful (location: %s)" % location)
     else:
         print(">> Error: No working proxies found")
     

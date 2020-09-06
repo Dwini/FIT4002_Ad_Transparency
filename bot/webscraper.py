@@ -24,20 +24,44 @@ class webscraper:
         print('deciding task...')
         self.task_decider()
 
+    def handle_captcha(self):
+        self.webdriver.save_screenshot('/tmp/out/captcha.png')
+        sleep(20)
+
+        with open('/tmp/out/captcha', 'r') as f:
+            self.webdriver.find_element_by_xpath("//input[@aria-label='Type the text you hear or see']").send_keys(f.read())
+        
+        self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
+        sleep(4)
+
+        self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+
     def login(self):
-        # Login
-        print('logging into Google account...', end="")
+        print('>> Logging into Google account')
 
         self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
-        sleep(20)   # large wait time as proxies are slow...
-        self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+        sleep(2)
+
+        try:
+            self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+        except:
+            print('\t>> Could not find username field. Assuming already logged in')
+            self.webdriver.save_screenshot('/tmp/out/login_proof.png')
+            return
+
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-        sleep(20)   # large wait time as proxies are slow...
-        self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+        sleep(4)
+
+        try:
+            self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+        except:
+            print("\t>> Captcha encountered!")
+            self.handle_captcha()
+        
         self.webdriver.find_element_by_id('passwordNext').click()
         sleep(20)   # large wait time as proxies are slow...
 
-        print("success")
+        print("\t>> Login successful")
 
     def task_decider(self):
         choice = random.randint(0,2)
@@ -48,7 +72,6 @@ class webscraper:
             print('web traversing...')
             wt = webTraverse(self.webdriver, self.bot, self.scrapping)
             wt.traverse()
-
         else:
             print('youtube searching')
             youtube_scraper(self.webdriver, self.scrapping)

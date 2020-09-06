@@ -1,8 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+const moment = require('moment-timezone');
 
 const PORT = 8080;
 const HOST = '0.0.0.0';
+
+moment.tz.setDefault("Australia/Melbourne");
 
 const app = express();
 
@@ -16,10 +19,10 @@ require('./routes/search_terms')(app);
 require('./routes/heartbeat')(app);
 
 app.listen(PORT, HOST)
-console.log(`Running at http://${HOST}:${PORT}`);
+console.log(`Running at http://localhost:${PORT}`);
 
 // run the 'exit' function after 2 minutes.
-setTimeout(exit, 1000*60*3);
+setTimeout(exit, 1000*60*2);
 
 // This function will kill the db project.
 function exit() {

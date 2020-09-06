@@ -85,9 +85,10 @@ def main():
 
         search_terms = ['trump']
         if 'political_ranking' in b:
-            r = requests.get(DB_URL+'/search_terms')
+            url = DB_URL + '/search_terms/political/%d' % b['political_ranking']
+            r = requests.get(url)
             r.raise_for_status()
-            search_terms = r.json()[b['political_ranking']]
+            search_terms = r.json()
 
         bot = Bot(
             firstname=b['name'][0],
@@ -108,6 +109,7 @@ def main():
             session = config_driver.setup_driver_with_proxy(pos)
             if session is None:
                 print(">> Quitting")
+                return
         else:
             # ... or use this to setup without proxy
             session = config_driver.setup_driver()
