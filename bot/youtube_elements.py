@@ -12,7 +12,6 @@ class youtube_elements:
 
     def find_video_ad(self):
         # this function finds in-stream video ads based on HTMl elements.
-        # todo: this is flaky, and will sometimes miss video advertisements
         try:
             # try to find ad:
             panel_ad = self.webdriver.find_element_by_xpath("//*[starts-with(@id, 'visit-advertiser:')]")
@@ -21,7 +20,7 @@ class youtube_elements:
                 panel_ad = self.webdriver.find_element_by_class_name("ytp-flyout-cta-body")
             except NoSuchElementException:
                 raise NoSuchElementException('Unable to locate Video ad - No video ad found')
-            ### Marking the rest of these irrelevant for now. ###
+            ### CLEANUP: Marking the rest of these irrelevant for now. ###
                 # try:
                 #     panel_ad = self.webdriver.find_element_by_class_name(
                 #         "ytp-flyout-cta-headline-container")
@@ -37,18 +36,47 @@ class youtube_elements:
                 #             raise NoSuchElementException('No video ad found')
         return panel_ad.get_attribute('outerHTML')
 
-    def find_promo_search_video_ad(self):
+    def find_video_ad_url(self, html_string):
+        """
+        this currently attempts to try parse the html for the current lines of code:
+        
+        self.webdriver.find_element_by_xpath("//*[starts-with(@id, 'visit-advertiser:')]")
+        
+        self.webdriver.find_element_by_class_name("ytp-flyout-cta-body")
+        """
         try:
-            ads = webdriver.find_element_by_class_name('ytd-promoted-sparkles-text-search-renderer')
-            print(ads[0])
+            ad_html = html.fromstring(html_string)
+            video_ad_url = ad_html.xpath('//span[@class="ytp-ad-button-text"][1]')[0].text
+        except Exception:
+            try:
+                video_ad_url = ad_html.xpath('//div[@class="ytp-ad-text ytp-flyout-cta-description"]')[0].text
+            except Exception:
+                print('HTML parse - Unable to find ad url, setting default name')
+                video_ad_url = 'video_ad_url'
+        return video_ad_url
+
+    def find_promo_search_video_ad(self):
+        """
+        this function should be called during a youtube search result, to check for promoted videos.
+        """
+        try:
+            ads = self.webdriver.find_elements_by_xpath('//*[@id="contents"]/ytd-item-section-renderer')
+            #self.webdriver.save_screenshot('during_search.png')
+            return ads
+            
         except NoSuchElementException:
-                raise NoSuchElementException('Unable to locate promo vid ads - No promo ads found')
+            raise NoSuchElementException('Unable to locate promo vid ads - No promo ads found')
+            pass
+            return None
 
-
-    # def find_promo_video_ad(self):
-    #     promo_video_ad = webdriver.find_element_by_class_name(
-    #         'style-scope ytd-compact-promoted-video-renderer')
-    #     return promo_video_ad.get_attribute('outerHTML')
+    def find_promo_search_video_ad_url(self, html_string):
+        try:
+            ad_html = html.fromstring(html_string)
+            promo_search_video_ad_url = ad_html.xpath('//span[@class="style-scope yt-formatted-string"][1]')[0].text
+        except Exception:
+            print('HTML parse - Unable to find ad url, setting default name')
+            promo_search_video_ad_url = 'promo_search_video_ad_url'
+        return promo_search_video_ad_url
 
     # def find_sidebar_ad(self):
     #     try:
@@ -85,24 +113,6 @@ class youtube_elements:
 
     #     return masthead_ad.get_attribute('outerHTML')
 
-    def find_video_ad_url(self, html_string):
-        """
-        this currently attempts to try parse the html for the current lines of code:
-        
-        self.webdriver.find_element_by_xpath("//*[starts-with(@id, 'visit-advertiser:')]")
-        
-        self.webdriver.find_element_by_class_name("ytp-flyout-cta-body")
-        """
-        try:
-            ad_html = html.fromstring(html_string)
-            video_ad_url = ad_html.xpath('//span[@class="ytp-ad-button-text"][1]')[0].text
-        except Exception:
-            try:
-                video_ad_url = ad_html.xpath('//div[@class="ytp-ad-text ytp-flyout-cta-description"]')[0].text
-            except Exception:
-                print('HTML parse - Unable to find ad url, setting default name')
-                video_ad_url = 'video_ad_url'
-        return video_ad_url
 
     # def find_sidebar_ad_name(self, html_string):
     #     try:
@@ -121,6 +131,3 @@ class youtube_elements:
     #         print('HTML parse - Unable to find ad url, setting default name')
     #         sidebar_ad_url = 'sidebar_ad_url'
     #     return sidebar_ad_url
-
-    # def screenshot_ad(self, html_element):
-    #     element = 'html5-video-player'
