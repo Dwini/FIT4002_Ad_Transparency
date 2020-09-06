@@ -23,7 +23,7 @@
   * db image: `mattbertoncello/ad_transparency_db`.
   a. `docker build -t <image_name> .`.
   b. `docker tag <image_id> mattbertoncello/ad_transparency_bot:latest` or ad_transparency_db.
-  c `docker push mattbertoncello/ad_transparency_bot:latest` or ad_transparency_db.
+  c `docker push mattbertoncello/ad_transparency_bot:latest` or ad_transparency_db. (Ensure you have logged in to Docker in the CLI).
 3. Any task run from AWS will use the new containers.
 
 ## Defining new bot clusters.

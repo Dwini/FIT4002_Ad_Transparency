@@ -20,12 +20,3 @@ require('./routes/heartbeat')(app);
 
 app.listen(PORT, HOST)
 console.log(`Running at http://localhost:${PORT}`);
-
-// run the 'exit' function after 2 minutes.
-setTimeout(exit, 1000*60*2);
-
-// This function will kill the db project.
-function exit() {
-  console.log('closing after timeout...')
-  process.exit(0)
-}
