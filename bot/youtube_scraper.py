@@ -116,6 +116,9 @@ class youtube_scraper:
         return foundSidebarAd or foundVideoAd
 
 ### HELPER FUNCTIONS ###
+    def change_bot(self, bot):
+        # helper function so that we dont need to re instantiate the class if we want to use a different bot to scrape
+        self.bot = bot
 
     def check_ad_type(self, adType):
 

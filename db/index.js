@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const moment = require('moment-timezone');
 
 const PORT = 8080;
-const HOST = '0.0.0.0';
+const HOST = '127.0.0.1';
 
 moment.tz.setDefault("Australia/Melbourne");
 
