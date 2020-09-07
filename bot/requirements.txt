@@ -21,6 +21,7 @@ names==0.3.0
 numpy==1.18.4
 pandas==1.0.3
 parse==1.15.0
+Pillow==7.2.0
 pyee==7.0.1
 pyppeteer==0.0.25
 pyquery==1.4.1

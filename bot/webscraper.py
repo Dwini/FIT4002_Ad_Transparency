@@ -23,6 +23,10 @@ class webscraper:
         self.task_decider()
 
     def handle_captcha(self):
+        """
+        Saves a screenshot of the captcha (out/captcha.png) and reads from
+        file (out/captcha) the captcha text to input
+        """
         self.webdriver.save_screenshot('/tmp/out/captcha.png')
         sleep(20)
 

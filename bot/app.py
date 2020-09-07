@@ -1,7 +1,7 @@
 # import external libraries.
 import os
 import sys
-from random import uniform
+import random
 from time import sleep
 import os
 import requests
@@ -19,6 +19,7 @@ USE_PROXIES = os.getenv('USE_PROXIES') or "0"
 CHANGE_LOCATION = os.getenv('CHANGE_LOCATION') or "0"
 AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
+NUM_TERMS = 3               # number of terms to search
 
 def examples():
     ### start example ###
@@ -76,7 +77,7 @@ def main():
         print('>> Using bot: ' + b['username'])
 
         # define location of bot
-        pos = { 'lat': uniform(-90, 90), 'lon': uniform(-180, 180) }
+        pos = { 'lat': random.uniform(-90, 90), 'lon': random.uniform(-180, 180) }
         if 'location' in b:
             pos = {
                 'lat': float(b['location']['latitude']),
@@ -95,6 +96,11 @@ def main():
         r.raise_for_status()
         search_terms = search_terms + r.json()
 
+        random.shuffle(search_terms)
+        random.shuffle(search_terms)
+        random.shuffle(search_terms)
+        search_terms = search_terms[:NUM_TERMS]
+
         bot = Bot(
             firstname=b['name'][0],
             lastname= b['name'][1],
@@ -109,33 +115,33 @@ def main():
             profileBuilt=True
         )
 
+        # MAIN SESSION/BROWSING START
+
         session = None
-        if USE_PROXIES == "1":
-            session = config_driver.setup_driver_with_proxy(pos)
-            if session is None:
-                print(">> Quitting")
-                return
-        else:
-            # ... or use this to setup without proxy
-            session = config_driver.setup_driver()
+        try:
+            if USE_PROXIES == "1":
+                session = config_driver.setup_driver_with_proxy(pos)
+                if session is None:
+                    print(">> Quitting")
+                    return
+            else:
+                # ... or use this to setup without proxy
+                session = config_driver.setup_driver()
 
-        # change location
-        if CHANGE_LOCATION == "1":
-            config_driver.set_location(session, pos)
+            # change location
+            if CHANGE_LOCATION == "1":
+                config_driver.set_location(session, pos)
 
-        # start scraping
-        webscraper(session, bot)
-
-        # start google scraping
-        # webscraper.login(bot, session)
-        # webscraper.setup_profile(bot, session)
-        # webscraper.scrape_google_ads(bot, session)
-
-        # start youtube scraping
-        # yt_scraper = youtube_scraper(session, yt_ad.ALL)
-        # yt_scraper.scrape_youtube_video_ads('reopen economy')
-
-        print(">> Session complete")
+            # start scraping
+            webscraper(session, bot)
+        except:
+            if session:
+                print(">> Session complete")
+                session.quit()
+        finally:
+            if session:
+                print(">> Session complete")
+                session.quit()
 
 
     # close display if in container.
@@ -143,5 +149,4 @@ def main():
         display.stop()
 
 if __name__ == '__main__':
-    print(AD_USERNAME)
     main()

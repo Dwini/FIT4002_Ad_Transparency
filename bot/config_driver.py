@@ -6,8 +6,9 @@ from selenium.webdriver.chrome.options import Options
 from time import sleep
 import geopy
 from geopy.geocoders import Nominatim
-import proxy
 import os
+
+import proxy
 
 LOAD_SESSION = os.getenv('LOAD_SESSION') == "1"
 
