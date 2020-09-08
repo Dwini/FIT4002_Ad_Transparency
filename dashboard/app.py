@@ -8,8 +8,11 @@ Last updated: MB 8/09/2020 - copied boilerplate flask code.
 import os, sys, json
 from flask import Flask, request, abort
 
+# import local modules.
+from src import bot_controller, ad_controller
+
 # import routes.
-from routes import index, bots
+from routes import index, bots, ads
 
 # define constants.
 FILENAME = os.path.basename(__file__)
@@ -20,6 +23,14 @@ app = Flask(__name__, template_folder='public/templates', static_folder='public/
 # initialise routes.
 index.init(app)
 bots.init(app)
+ads.init(app)
+
+# populate the bot and ad caches.
+print('loading data into cache...')
+bot_controller.update_bot_cache()
+print('finished loading bot cache...')
+ad_controller.update_ad_cache()
+print('finished loading ad cache...')
 
 # called on startup.
 if __name__ == "__main__":

@@ -274,14 +274,13 @@ html {
 
 .card {
   display: inline-block;
-  margin: 15px;
+  margin: 0px 15px;
   background-color: var(--main-white);
   border-radius: var(--border-radius-default);
 }
 
 .card-title {
-  padding: 15px;
-  font-weight: 800;
+  padding: 0px 15px;
 }
 
 .card-body {
@@ -333,7 +332,8 @@ html {
   color: var(--main-white);
   background-color: var(--main-theme-colour);
   border-radius: 10px;
-  margin-top:5px
+  margin-top: 5px;
+  display: inline-block;
 }
 
 .card-link-inverted:hover {

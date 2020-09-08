@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "partials/header.html" %}
+    <title>transparency - ads</title>
+  </head>
+
+  <body>
+    {% include "partials/nav.html" %}
+
+    <div class='page-section-home'>
+      <div class='anchor' id='states'></div>
+      <div class='content page-height'>
+        <div class='column-container'>
+          <div class='column'>
+            <div class='card bordered shadowed'>
+              <h1 class='card-title'>Ad Dashboard</h1>
+              <div class='card-body'>
+                <a class='card-link-inverted bordered' href='/ads?refresh=True' type='button'>refresh ad data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='column-container'>
+          <div class='column'>
+            <table class='table-bots shadowed'>
+              <tr>
+                <th>Bot</th>
+                <th>Political Ranking</th>
+                <th>Link</th>
+                <th>Datetime</th>
+                <th>Thumbnail</th>
+              </tr>
+              {% for ad in data['ads'] %}
+              <tr class='ad-table-row' onclick="location.href=&apos;/ad/{{ ad['id'] }}&apos;">
+                <td>{{ ad['bot'] }}</td>
+                <td>{{ data['bots'][ad['bot']]['political_ranking'] if ad['bot'] in data['bots'] else '-' }}</td>
+                {% if ad['link']|length > 32 %}
+                  <td><a href="//{{ ad['link'] }}">{{ ad['link'][:32] }}...</a></td>
+                {% else %}
+                  <td><a href="//{{ ad['link'] }}">{{ ad['link'] }}</a></td>
+                {% endif %}
+                <td>{{ ad['datetime'] }}</td>
+                <td><img rel='prefetch' class='ad-table-thumbnail' src="{{ ad['file'] }}"></td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

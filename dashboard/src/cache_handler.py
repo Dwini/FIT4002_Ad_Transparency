@@ -16,3 +16,30 @@ merge another dictionary with this one using the following notation:
 render_dict = {
     'build_time': datetime.now(tz=pytz.timezone('Australia/Melbourne')),
 }
+
+"""
+This is a dictionary with the username of the bot as a key, and an object
+containing the bots attributes.
+username = {
+    password: str,
+    dbo: str,
+    gender: str,
+    political_ranking: int,
+    name: str,
+    latitude: float,
+    longitude: float,
+}
+"""
+bot_dict = dict()
+
+"""
+This holds a list of advertisement objects.
+ad = {
+    bot: str (username of bot),
+    link: str,
+    file: str,
+    datetime: datetime,
+    id: str,
+}
+"""
+ad_list = []
