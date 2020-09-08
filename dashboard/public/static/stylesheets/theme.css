@@ -1,0 +1,364 @@
+/* define variables */
+:root {
+  --main-theme-colour: #331e54;
+  --main-nav-text-colour: #ffffff;
+  --com-nav-colour: #ffffff30;
+  --main-bg-colour: #ffffff;
+  --main-black: #000000;
+  --main-white: #ffffff;
+  --main-text-colour: #000000;
+  --header-height: 50px;
+  --border-radius-default: 12px;
+}
+
+/* css from theme file */
+body {
+  background-color: var(--main-bg-colour);
+  text-align: center;
+  color: var(--main-text-colour);
+  font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+html {
+  scroll-behavior: smooth;  /* smooth scrolling */
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: calc(0px - var(--header-height));
+  visibility: hidden;
+}
+
+#button-scroll-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  mix-blend-mode: darken;
+  border: thick solid var(--main-black);
+  width: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+#mobile-header-title {
+  position: fixed;
+  top:5px;
+  height: 40px;
+  z-index: 1001;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+#collapse-button {
+  position: fixed;
+  top:10px;
+  right: 10px;
+  z-index: 1000;
+  border: 1px solid #000000;
+  border-radius: 100%;
+  width: 30px;
+  padding: 5px;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.page-height {
+  min-height: calc(100vh - var(--header-height));
+  height: 100%;
+  display: flex;
+}
+
+.column-container {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.column {
+  margin: auto;
+}
+
+.content-container {
+  text-align: center;
+  padding: 15px;
+}
+
+.content-centered {
+  display: inline-table;
+  text-align: left;
+}
+
+.content {
+  padding-top: 0px;
+  margin: auto;
+  display: inline-block;
+}
+
+.nav-buffer {
+  height: var(--header-height);
+}
+
+.container {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.navbar {
+  background-color: var(--main-theme-colour);
+  border: none;
+  width: 100%;
+  position: fixed;
+  margin-bottom: 0px;
+  color: var(--main-nav-text-colour);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar li {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+
+.nav-soften a:hover,
+.nav-soften a:focus {
+  transition-duration: 0.5s;
+  background-color: var(--com-nav-colour) !important;
+}
+
+.navbar-nav>li>span,
+.navbar-nav>li>a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--main-nav-text-colour)
+}
+
+.nav-text-mobile {
+  padding: 10px 15px;
+  line-height: 20px;
+  font-size: 14px;
+  color: var(--main-nav-text-colour);
+}
+
+.nav-text-mobile a {
+  text-decoration: none;
+  padding: 15px;
+  color: var(--main-nav-text-colour);
+}
+
+.nav-text-bordered {
+  border: 1px solid var(--main-nav-text-colour);
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+.nav-close-btn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-close-btn:hover {
+  color: black;
+}
+
+.home-link {
+  padding: 5px 0px!important;
+  height: 44px;
+  margin: auto;
+  color: var(--main-text-colour);
+  font-family: Puzzled;
+}
+
+.home-link:hover {
+  background-color: inherit !important;
+  filter:invert();
+  color: var(--main-text-colour-hover-inverted);
+  text-decoration: none;
+}
+
+.home-link > span {
+  vertical-align: middle;
+}
+
+.main-fill {
+  background-color: var(--main-theme-colour);
+  color: var(--main-text-colour);
+}
+
+.sec-fill {
+  background-color: var(--sec-nav-colour);
+  color: var(--main-text-colour);
+}
+
+.error {
+  color: red;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.success {
+  color: green;
+}
+
+.unselectable { /* https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: unset;
+  pointer-events: none;
+  filter: contrast(0.7);
+}
+
+.no-padding {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.text-input {
+  border: 0.5px solid var(--main-theme-colour);
+  margin-bottom: 10px;
+  padding: 0px 5px;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.pointer-mouse {
+  cursor: pointer;
+}
+
+.flip-image {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.card {
+  display: inline-block;
+  margin: 15px;
+  background-color: var(--main-white);
+  border-radius: var(--border-radius-default);
+}
+
+.card-title {
+  padding: 15px;
+  font-weight: 800;
+}
+
+.card-body {
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+}
+
+.card-body-title {
+  margin: 10px 0px 0px 0px;
+}
+
+.card-header {
+  width: 100%;
+}
+
+.card-header-element {
+  padding: 0px 10px;
+}
+
+.card-footer {
+  display: inline-grid;
+  float: right;
+  padding-top: 10px;
+}
+
+.card-footer-element {
+  float: right;
+}
+
+.card-link {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  transition-duration: 0.2s;
+}
+
+.card-link:hover {
+  background-color: var(--main-theme-colour);
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+.card-link-inverted {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  transition-duration: 0.2s;
+  color: var(--main-white);
+  background-color: var(--main-theme-colour);
+  border-radius: 10px;
+  margin-top:5px
+}
+
+.card-link-inverted:hover {
+  background-color: var(--main-white);
+  text-decoration: none;
+  color: var(--main-theme-colour);
+}
+
+.bordered {
+  border: 1px solid var(--main-theme-colour);
+}
+
+.noborder {
+  border: unset !important;
+}
+
+.shadowed {
+  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.chart {
+  width: 100%;
+  min-height: 450px;
+}

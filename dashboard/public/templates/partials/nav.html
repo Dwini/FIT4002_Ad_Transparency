@@ -1,0 +1,25 @@
+<div id='mobile-header-title' class='nav-soften nav-text-mobile hide-desktop-nav'>
+  <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+</div>
+<nav class="navbar navbar-static-top">
+  <div id='nav-container' class="container hide-mobile-nav">
+    <ul class="nav navbar-nav nav-soften">
+      <li class="active">
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right nav-soften">
+        <li>
+          <span>build time: {{ data['build_time'].strftime('%d/%m/%Y %H:%M:%S') }}</span>
+        </li>
+    </ul>
+  </div>
+</nav>
+<div class="nav-buffer"></div>
+<img id='collapse-button' class='hide-desktop-nav' src="{{ url_for('static',filename='images/collapse-arrow.svg') }}">
+<a href='#'><img id='button-scroll-to-top' class='flip-image' src="{{ url_for('static',filename='images/collapse-arrow.svg') }}"></a>
+
+<script>
+var header_collapse = new CollapseManager('nav-container', 'mobile-header-title');
+header_collapse.setTrigger('collapse-button');
+</script>
