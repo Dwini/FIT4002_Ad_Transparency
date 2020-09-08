@@ -11,7 +11,7 @@ from datetime import datetime
 """
 This dictionary is sent to each web page. To add additional data to the webpage,
 merge another dictionary with this one using the following notation:
-    `data={**cache_handler.render_dict, **dict2} `
+    `data={**cache_handler.render_dict, **dict2}`
 """
 render_dict = {
     'build_time': datetime.now(tz=pytz.timezone('Australia/Melbourne')),

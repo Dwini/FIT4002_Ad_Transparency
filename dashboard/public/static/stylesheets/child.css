@@ -1,0 +1,8 @@
+/* CSS specific to this project */
+
+.table-bots th, .table-bots td {
+  padding: 2px 10px;
+  border: 1px black solid;
+  text-align: center;
+  background-color: var(--main-white);
+}

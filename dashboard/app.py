@@ -9,7 +9,7 @@ import os, sys, json
 from flask import Flask, request, abort
 
 # import routes.
-import routes.index
+from routes import index, bots
 
 # define constants.
 FILENAME = os.path.basename(__file__)
@@ -18,7 +18,8 @@ FILENAME = os.path.basename(__file__)
 app = Flask(__name__, template_folder='public/templates', static_folder='public/static')
 
 # initialise routes.
-routes.index.init(app)
+index.init(app)
+bots.init(app)
 
 # called on startup.
 if __name__ == "__main__":

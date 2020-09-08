@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "partials/header.html" %}
+    <title>transparency - home</title>
+  </head>
+
+  <body>
+    {% include "partials/nav.html" %}
+
+    <div class='page-section-home'>
+      <div class='anchor' id='states'></div>
+      <div class='content page-height'>
+        <div class='column-container'>
+          <div class='column'>
+            <h1>Bots Dashboard</h1>
+          </div>
+        </div>
+
+        <div class='column-container'>
+          <div class='column'>
+            <table class='table-bots'>
+              <tr>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Political Ranking</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Password</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+              {% for bot in data['bots'] %}
+              <tr>
+                <td>{{ bot['username'] }}</td>
+                <td>{{ bot['name'] }}</td>
+                <td>{{ bot['political_ranking'] }}</td>
+                <td>{{ bot['dob'] }}</td>
+                <td>{{ bot['gender'] }}</td>
+                <td>{{ bot['password'] }}</td>
+                <td>{{ bot['latitude'] }}</td>
+                <td>{{ bot['longitude'] }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
