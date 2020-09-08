@@ -13,19 +13,19 @@ object holding advertisement information.
 """
 def update_ad_cache():
     # clear the currently cached list of ads.
-    cache_handler.ad_list.clear()
+    cache_handler.ad_dict.clear()
 
     # retrieve all raw data from 'Ads' table in AWS DynamoDB.
     raw_data = db_controller.get_full_table('Ads')
 
     # iterate over each item in the raw data and append the information to the
-    # the ad_list.
+    # the ad_dict.
     for item in raw_data['Items']:
-        # parse data and add to ad_list.
-        cache_handler.ad_list.append({
+        # parse data and add to ad_dict. set id as the key and create an
+        # object as the value.
+        cache_handler.ad_dict[item['id']['S']] = {
             'bot': item['bot']['S'] if 'bot' in item else '-',
             'datetime': item['datetime']['S'] if 'datetime' in item else '-',
             'file': item['file']['S'] if 'file' in item else '-',
             'link': item['link']['S'] if 'link' in item else '-',
-            'id': item['id']['S'],
-        })
+        }

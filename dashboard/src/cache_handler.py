@@ -33,13 +33,13 @@ username = {
 bot_dict = dict()
 
 """
-This holds a list of advertisement objects.
-ad = {
+This is a dictionary with the id of the advertisement as a key, and an object
+containing the ads attributes.
+id = {
     bot: str (username of bot),
     link: str,
     file: str,
     datetime: datetime,
-    id: str,
 }
 """
-ad_list = []
+ad_dict = dict()

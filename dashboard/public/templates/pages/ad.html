@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "partials/header.html" %}
+    <title>transparency - ad {{ data[id] }}</title>
+  </head>
+
+  <body>
+    {% include "partials/pre-nav.html" %}
+    <li>
+      <a href="/ads">Ad Dashboard</a>
+    </li>
+    {% include "partials/post-nav.html" %}
+
+    <div class='page-section-home'>
+      <div class='anchor' id='states'></div>
+      <div class='content page-height'>
+        <div class='column-container'>
+          <div class='column'>
+            <div class='card bordered shadowed'>
+              <h1 class='card-title'>{{ data['id'] }}</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class='column-container'>
+          <div class='column'>
+            <table class='table-bots shadowed'>
+              <tr>
+                <th>Link</th>
+                <th>Datetime</th>
+              </tr>
+              <tr>
+                <td><a href="//{{ data['ad']['link'] }}">{{ data['ad']['link'] }}</a></td>
+                <td>{{ data['ad']['datetime'] }}</td>
+              </tr>
+            </table>
+
+            <table class='table-bots shadowed'>
+              <tr>
+                <th>Username</th>
+                <th>Name</th>
+                <th>Political Ranking</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Password</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+              <tr>
+                <td>{{ data['ad']['bot'] }}</td>
+                <td>{{ data['bot']['name'] }}</td>
+                <td>{{ data['bot']['political_ranking'] }}</td>
+                <td>{{ data['bot']['dob'] }}</td>
+                <td>{{ data['bot']['gender'] }}</td>
+                <td>{{ data['bot']['password'] }}</td>
+                <td>{{ data['bot']['latitude'] }}</td>
+                <td>{{ data['bot']['longitude'] }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class='column-container'>
+          <div class='column'>
+            <img rel='prefetch' src="{{ data['ad']['file'] }}">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

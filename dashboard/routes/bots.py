@@ -20,7 +20,7 @@ def init(app):
     parameter is True. Otherwise use the currently cached bot data.
     """
     @app.route("/bots", methods=['GET'])
-    def bots():
+    def botDashboard():
         # check for refresh argument.
         refresh = request.args.get('refresh', default=False, type=bool)
 

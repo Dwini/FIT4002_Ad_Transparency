@@ -6,7 +6,8 @@
   </head>
 
   <body>
-    {% include "partials/nav.html" %}
+    {% include "partials/pre-nav.html" %}
+    {% include "partials/post-nav.html" %}
 
     <div class='page-section-home'>
       <div class='anchor' id='states'></div>
@@ -32,8 +33,8 @@
                 <th>Datetime</th>
                 <th>Thumbnail</th>
               </tr>
-              {% for ad in data['ads'] %}
-              <tr class='ad-table-row' onclick="location.href=&apos;/ad/{{ ad['id'] }}&apos;">
+              {% for id, ad in data['ads'].items() %}
+              <tr class='ad-table-row' onclick="location.href='/ad/{{ id }}'">
                 <td>{{ ad['bot'] }}</td>
                 <td>{{ data['bots'][ad['bot']]['political_ranking'] if ad['bot'] in data['bots'] else '-' }}</td>
                 {% if ad['link']|length > 32 %}
