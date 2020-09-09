@@ -1,0 +1,23 @@
+/* CSS specific to this project */
+.table-bots {
+  margin: 15px auto
+}
+
+.table-bots th, .table-bots td {
+  padding: 2px 10px;
+  border: 1px black solid;
+  text-align: center;
+}
+
+.ad-table-thumbnail {
+  height: 50px;
+  width: 50px;
+}
+
+.ad-table-row {
+  cursor: pointer;
+}
+
+.ad-table-row:hover {
+  background-color: lightgrey;
+}

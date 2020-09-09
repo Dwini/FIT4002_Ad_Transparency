@@ -19,7 +19,9 @@ class webscraper:
         self.webdriver = webdriver
         self.bot = bot
         self.scrapping = scrapping
+        print('logging in...')
         self.login()
+        print('deciding task...')
         self.task_decider()
 
     def handle_captcha(self):
@@ -61,19 +63,19 @@ class webscraper:
             self.handle_captcha()
         
         self.webdriver.find_element_by_id('passwordNext').click()
-        sleep(2)
+        sleep(20)   # large wait time as proxies are slow...
 
         print("\t>> Login successful")
 
     def task_decider(self):
         choice = random.randint(0,2)
         if choice == 0:
+            print('google searching...')
             googleSearch(self.webdriver, self.bot, self.scrapping)
         elif choice == 1:
-            print('good')
+            print('web traversing...')
             wt = webTraverse(self.webdriver, self.bot, self.scrapping)
             wt.traverse()
         else:
+            print('youtube searching')
             youtube_scraper(self.webdriver, self.scrapping)
-
-

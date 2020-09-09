@@ -47,13 +47,9 @@ FROM builder
 
 WORKDIR /app
 
-# set the proxy addresses
-# ENV HTTP_PROXY "http://134.209.29.120:8080"
-# ENV HTTPS_PROXY "https://45.77.71.140:9050"
-
 # URL for the database.
 ENV DB_URL "http://db:8080"
 
-# default entry point.
-CMD ["python", "app.py", "-c"]
+# default entry point. Container will force close after 1 minute.
+CMD ["timeout", "15m", "python", "app.py", "-c"]
 ## end base stage.

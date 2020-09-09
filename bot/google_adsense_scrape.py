@@ -50,10 +50,10 @@ def getGoogleAds(driver, bot):
                 "bot": bot.username,
                 "link": adLink,
                 "headline": adLink,
-                "html": "innerHTML",
-                "base64": base64_screenshot
+                "html": "innerHTML"
             })
             r.raise_for_status()
+
         # except requests.exceptions.HTTPError as e:
         #     print('Screenshot saving failed')
         #     print(e.response.text)
@@ -155,20 +155,29 @@ def extractEmbeddedUrl(compositeLink):
 # Convert png string to Image Object for file upload and saving
 def imageProcessing(png):
     buffer = io.BytesIO(png)
-    # PIL image
+    # PIL image creation
     img = Image.open(buffer)
+
+    #dimensions (width, height)
+    w1, h1 = img.size
+    w2, h2= math.floor(w1 * 0.7), math.floor(h1 * 0.7)
+
+    ratio = h1 / w1
+
+    # resize height proportion to new width
+    newWidth = w2
+    hsize = math.floor(newWidth * ratio)
+    img = img.resize((newWidth, hsize), Image.ANTIALIAS)
 
     # second buffer
     buf2 = io.BytesIO()
 
-    # downsize
-    x, y = img.size
-    x2, y2 = math.floor(x * 0.7), math.floor(y * 0.7)
-
+    #write to buffer
     img.save(buf2, "png", quality=50, optimize=True)
 
     # retrieve back from buffer
-    img_str = base64.b64encode(buf2.getvalue())
+    #img_str = base64.b64encode(buf2.getvalue())
+    # img_str.decode('utf-8')
 
-    return img_str.decode('utf-8')
+    return buf2.getvalue()
 

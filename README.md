@@ -41,15 +41,8 @@ Repository for a final year project at Monash University around ad transparency
 * Clear all old containers with `docker container prune`
 * Confirm that the proxy addresses are working by running `python bot/ip_check.py`.
 
-## Instructions for updating the project in AWS (ony Matt at the moment)
-1. Install AWS CLI.
-2. Get updated AWS credentials from [here](https://labs.vocareum.com/main/main.php).
-3. Locally build bot and db images separately and push to docker hub.
-  * bot image: `mattbertoncello/ad_transparency_bot`.
-  * db image: `mattbertoncello/ad_transparency_db`.
-4. Update the `task-definition.json` file to include the bot usernames in this batch. The db container must be specified.
-5. Run the following command in root directory to define new task `aws ecs register-task-definition --cli-input-json file://task-definition.json`.
-6. Login to AWS console and run the newly defined task.
+## Instructions for running project in AWS.
+* See README.md in `/aws` directory.
 
 TODO: Automate the process of generating `task-definition.json` file. Automate the running of tasks. Automate the stopping of tasks.
 

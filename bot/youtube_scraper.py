@@ -1,167 +1,244 @@
+import os
 from time import sleep
 from selenium.common.exceptions import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from enum import Enum
+import requests
+from youtube_elements import youtube_elements
+from PIL import Image
+import io
+import math
+import base64
+
+DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
+
 
 class yt_ad(Enum):
     ALL = 1
     VIDEO = 2
     SIDEBAR = 3
-    PROMO_VIDEO = 4
+
 
 class youtube_scraper:
-    def __init__(self, webdriver, adType):
+    def __init__(self, webdriver, bot, adType=yt_ad.ALL):
         """
         :param webdriver: the driver for the selenium project
-        :param videoAds: enable saving of youtube video Ads, defaults to false
-        :param sidebarAds: enable saving of youtube sidebar Ads, defaults to false
-        :param videoAds: enable saving of youtube video Ads, defaults to false
+        :param adType: enable saving of different adTypes, defaults to ALL. Use enum to switch between ALL, VIDEO, SIDEBAR, PROMO_VIDEO. Used for debugging.
         """
         self.webdriver = webdriver
-        self.ads = []  # can be refactored into dictionary, as right now only contains the html element
+        self.bot = bot
 
         self.enableVideoAds = False
         self.enableSidebarAds = False
-        self.enablePromoVideoAds = False
 
-        if adType == yt_ad.ALL:
-            self.enableVideoAds = True
-            self.enableSidebarAds = True
-            self.enablePromoVideoAds = True
-        elif adType == yt_ad.VIDEO:
-            self.enableVideoAds = True
-        elif adType == yt_ad.SIDEBAR:
-            self.enableSidebarAds = True
-        elif adType == yt_ad.PROMO_VIDEO:
-            self.enablePromoVideoAds = True
+        self.check_ad_type(adType)
 
-    def search_video(self, search_param):
-        self.webdriver.get('https://www.youtube.com/results?search_query=' + str(search_param))
-        sleep(3)
-        self.webdriver.find_element_by_id('video-title').click()  # click first result
+        # Get Keywords
+        self.keywords = bot.getSearchTerms()
 
-    def scrape_youtube_video_ads(self, search_param = None, timeout = 10):
+        self.yt_element_search = youtube_elements(webdriver)
+
+    def scrape_youtube_video_ads(self, search_param=None, timeout=10):
         """
-        :param search_param: search parameters for the youtube video that you want to find
-        :param watch: if you want to set the bot to actually stay on the youtube video for longer
+        :param search_param: string - search parameters for the youtube video that you want to find
         :param timeout: time in seconds that you want to keep checking the page for a ad
         :return: returns true if ad is found, otherwise returns False.
-        # todo: db queries can be put in here or webscraper class.
         """
         wait = WebDriverWait(self.webdriver, 5)
         if search_param is not None:
             self.search_video(search_param)
         else:
             self.webdriver.get('https://www.youtube.com/')
-            self.webdriver.find_element_by_id('video-title').click()  # click first result
+            self.webdriver.find_element_by_id(
+                'video-title').click()  # click first result
 
-        v_title = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1.title yt-formatted-string"))).text
-        # todo: probably save the video title that we're watching somewhere
+        # wait until the title of the video is loaded onto the page
+        v_title = wait.until(EC.presence_of_element_located(
+            (By.CSS_SELECTOR, "h1.title yt-formatted-string"))).text
+        self.log_to_db(self.bot.getUsername(), self.webdriver.current_url, 'visit')
 
         foundVideoAd = False
         foundSidebarAd = False
-        foundPromoVideoAd = False
 
         attempt = 0
-        sleep(3)
-        self.webdriver.save_screenshot('base_Attempt.png')
+        sleep(2)  # hard coded sleep to bypass some ad load times.
 
-        while (attempt < timeout) or (foundPromoVideoAd and foundSidebarAd and foundVideoAd):
+        # save baseline screenshot of current page usually for debugging
+        self.webdriver.save_screenshot('current_webpage.png')
+
+        while (attempt < timeout) or (foundVideoAd and foundSidebarAd):
             sleep(1)
-            # ideally all of these print statements should be redirected to out to a log file
             attempt += 1
 
             if self.enableVideoAds and not foundVideoAd:
                 try:
-                    panel_ad = self.find_panel_ad(self.webdriver)
-                    self.ads.append(panel_ad)
+                    video_ad = self.yt_element_search.find_video_ad()
                     foundVideoAd = True
+
+                    video_ad_url = self.yt_element_search.find_video_ad_url(video_ad)
+                    video_element = self.webdriver.find_element_by_class_name('html5-video-player')
+
+                    self.screenshot_ad(video_element, False, 'video_ad.png', True)
+
+                    self.save_ad(self.bot.getUsername(), video_ad_url, video_ad_url, video_ad, 'video_ad.png')
                     print('Attempt ' + str(attempt) + ' Found - video/panel advertisement')
                 except NoSuchElementException:
                     pass
 
             if self.enableSidebarAds and not foundSidebarAd:
                 try:
-                    sidebar_ad = self.find_sidebar_ad(self.webdriver)
+                    sidebar_ad = self.yt_element_search.find_sidebar_ad()
 
-                    self.ads.append(sidebar_ad)
+                    # as the elements for sidebar ads can exist on the page, but are 0x0 check for this.
+                    dimensions = sidebar_ad.size
+                    if (dimensions['width'] == 0 or dimensions['height'] == 0):
+                        return NoSuchElementException
+
                     foundSidebarAd = True
+                    sidebar_ad_url = self.yt_element_search.find_sidebar_ad_url(sidebar_ad.get_attribute('innerHTML'))
+
+                    coordinates = sidebar_ad.location_once_scrolled_into_view
+                    # self.webdriver.execute_script('window.scrollTo({}, {});'.format(coordinates['x'], coordinates['y']))
+
+                    # this will only take a proper screenshot, when running in a larger window or headlessly
+                    self.screenshot_ad(sidebar_ad, False, 'sidebar_ad.png', True)
+
+                    self.save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_url, sidebar_ad.get_attribute('innerHTML'), 'sidebar_ad.png')
                     print('Attempt ' + str(attempt) + ' Found - sidebar advertisement')
                 except NoSuchElementException:
                     pass
 
-            if self.enablePromoVideoAds and not foundPromoVideoAd:
-                try:
-                    promo_video_ad = self.find_promo_video_ad(self.webdriver)
-                    self.ads.append(promo_video_ad)
-                    foundPromoVideoAd = True
-                    print('Attempt ' + str(attempt) + ' Found - promoted video advertisement')
-                except NoSuchElementException:
-                    pass
-
-        if (foundPromoVideoAd or foundSidebarAd or foundVideoAd) is False:
+        if (foundSidebarAd or foundVideoAd) is False:
             print('No ads found')
 
-        return foundPromoVideoAd or foundSidebarAd or foundVideoAd
+        return foundSidebarAd or foundVideoAd
 
-    def find_panel_ad(self, webdriver):
-        # todo: this is flaky, and will often miss video advertisements,
+### HELPER FUNCTIONS ###
+    def change_bot(self, bot):
+        # helper function so that we dont need to re instantiate the class if we want to use a different bot to scrape
+        self.bot = bot
+
+    def check_ad_type(self, adType):
+
+        if adType == yt_ad.ALL:
+            self.enableVideoAds = True
+            self.enableSidebarAds = True
+        elif adType == yt_ad.VIDEO:
+            self.enableVideoAds = True
+        elif adType == yt_ad.SIDEBAR:
+            self.enableSidebarAds = True
+
+    def search_video(self, search_param):
+        self.webdriver.get(
+            'https://www.youtube.com/results?search_query=' + str(search_param))
+        self.log_to_db(self.bot.getUsername(), 'https://www.youtube.com/results?search_query=' + str(search_param), 'search', str(search_param))
+        sleep(3)
+
         try:
-            panel_ad = webdriver.find_element_by_class_name("ytp-flyout-cta-headline")
-        except NoSuchElementException:
-            try:
-                panel_ad = webdriver.find_element_by_css_selector(".ytp-ad-button.ytp-ad-visit-advertiser-button.ytp-ad-button-link")
-            except NoSuchElementException:
-                try:
-                    panel_ad = webdriver.find_element_by_css_selector(".ytp-ad-button-text")
-                except NoSuchElementException:
-                    raise NoSuchElementException('No video ad found')
-        return panel_ad.get_attribute('outerHTML')
+            promo_video_ads = self.yt_element_search.find_promo_search_video_ad()
+            if promo_video_ads is not None:
+                for ad in promo_video_ads[:-1]:
+                    print('Found - promoted video advertisement')
+                    promo_video_ad_url = self.yt_element_search.find_promo_search_video_ad_url(ad.get_attribute('innerHTML'))
 
-    def find_promo_video_ad(self, webdriver):
-        promo_video_ad = webdriver.find_element_by_class_name(
-            'style-scope ytd-compact-promoted-video-renderer')
-        return promo_video_ad.get_attribute('outerHTML')
+                    self.screenshot_ad(ad, False, 'promo_video_ad.png', True)
 
-    def find_sidebar_ad(self, webdriver):
-        try:
-            sidebar_ad_title = webdriver.find_element_by_class_name('style-scope ytd-action-companion-ad-renderer')
+                    self.save_ad(self.bot.getUsername(), promo_video_ad_url, promo_video_ad_url, ad.get_attribute('innerHTML'), 'promo_video_ad.png')
+
         except NoSuchElementException:
-            try:
-                sidebar_ad_title = webdriver.find_element_by_class_name(
-                    'style-scope ytd-promoted-sparkles-web-renderer')
-            except NoSuchElementException:
-                raise NoSuchElementException('No sidebar ad found')
-        return sidebar_ad_title.get_attribute('outerHTML')
+            print('No promo vid ads found')
+            pass
+
+        self.webdriver.find_element_by_id('video-title').click()  # click first result
 
     def get_video_length(self):
         """
         :return: returns an int for the amount of seconds in the youtube video
         """
         wait = WebDriverWait(self.webdriver, 10)
-        # todo also frequently does not get the timestamp if lower sleep/webdriverwait
+        # todo: also frequently does not get the timestamp if lower sleep/webdriverwait
 
         try:
             duration = wait.until(EC.presence_of_element_located(
-                           (By.CLASS_NAME, 'ytp-time-duration')))
+                (By.CLASS_NAME, 'ytp-time-duration')))
             sleep(5)
             date_time = get_sec(duration.text)
             return date_time
         except ValueError:
             raise NoSuchElementException('Could not find time on Webpage')
 
-def get_sec(time_string):
-    """
-    :param time_string: string in the form HH:MM:SS
-    :return: returns int converted from string to time in seconds
-    """
-    if len(time_string.split(':')) == 2:
-        m, s = time_string.split(':')
-        return int(m) * 60 + int(s)
+    def save_ad(self, bot, ad_link, ad_headline, ad_html, image=None):
+        # save ad to database with attached image
+        data = {
+            "bot": bot,
+            "link": ad_link,
+            "headline": ad_headline,
+            "html": ad_html,
+        }
 
-    elif len(time_string.split(':')) == 3:
-        h, m, s = time_string.split(':')
-        return int(h) * 3600 + int(m) * 60 + int(s)
+        # todo: add base64 conversion for attached ads
 
+        # if image is not None:
+        #     with open(image, "rb") as f:
+        #         #convert image to base64
+        #         a = encoded_string= base64.b64encode(f.read())
+        #         data['base64'] = a
+        print('saving ad... ' + str(data['headline']))
+        file = {'file': open(image, 'rb')}
+        r = requests.post(DB_URL+'/ads', files=file, data=data)
+        r.raise_for_status()
+
+    def log_to_db(self, bot_id, url, action, search_term=None):
+        # save site visit or search to database
+        data = {
+            "bot": bot_id,
+            "url": url,
+            "actions": [action]
+        }
+        if search_term is not None:
+            data['search_term'] = search_term
+        
+        r = requests.post(DB_URL+'/logs', data=data)
+        r.raise_for_status()
+
+    def screenshot_ad(self, html_element, base64=True, name="current_Ad.png", crop=False):
+        if crop:
+            location = html_element.location
+            size = html_element.size
+            self.webdriver.save_screenshot(name)
+
+            # crop image
+            x = location['x']
+            y = location['y']
+            width = location['x']+size['width']
+            height = location['y']+size['height']
+            im = Image.open(name)
+            im = im.crop((int(x), int(y), int(width), int(height)))
+            im.save(name)
+
+        else:
+            try:
+                if base64:
+                    screenshot = html_element.screenshot_as_base64
+                # print(base64_screenshot)
+                # might include the db call, or in actual save ad function
+                else:
+                    screenshot = html_element.save_screenshot(name)
+            except:
+                print('Screenshot capture failed')
+
+    def get_sec(self, time_string):
+        """
+        :param time_string: string in the form HH:MM:SS
+        :return: returns int converted from string to time in seconds
+        """
+
+        if len(time_string.split(':')) == 2:
+            m, s = time_string.split(':')
+            return int(m) * 60 + int(s)
+
+        elif len(time_string.split(':')) == 3:
+            h, m, s = time_string.split(':')
+            return int(h) * 3600 + int(m) * 60 + int(s)
