@@ -1,0 +1,90 @@
+{
+  "family": "ad-transparency-batch1",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "memory": "512",
+  "cpu": "256",
+  "executionRoleArn": "ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "db",
+      "image": "mattbertoncello/ad_transparency_db",
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "containerPort": 8080
+        }
+      ]
+    },
+    {
+      "name": "mwest5078",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "mwest5078"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "1"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://127.0.0.1:8080"
+        }
+      ]
+    },
+    {
+      "name": "burgersa68",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "burgersa68"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "1"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://127.0.0.1:8080"
+        }
+      ]
+    }
+  ]
+}

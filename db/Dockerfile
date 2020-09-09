@@ -8,4 +8,6 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "npm", "start" ]
+
+# container will force close after 1 minute.
+CMD [ "timeout", "15m", "npm", "start" ]
