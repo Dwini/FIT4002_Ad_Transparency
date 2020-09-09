@@ -121,9 +121,11 @@ def main():
         # start scraping
         ws = webscraper(session, bot)
 
-        # start youtube scraping
-        # yt_scraper = youtube_scraper(session, yt_ad.ALL)
-        # yt_scraper.scrape_youtube_video_ads('reopen economy')
+        # Example youtube scraping
+        # yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
+        # lista = ['dropshipping ','free money how']
+        # for items in lista:
+        #     yt_scraper.scrape_youtube_video_ads(items)
 
         print(">> Session complete")
 
