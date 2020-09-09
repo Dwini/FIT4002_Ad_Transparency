@@ -117,7 +117,6 @@ def main():
 
         # MAIN SESSION/BROWSING START
 
-<<<<<<< HEAD
         session = None
         try:
             if USE_PROXIES == "1":
@@ -134,7 +133,13 @@ def main():
                 config_driver.set_location(session, pos)
 
             # start scraping
-            webscraper(session, bot)
+            ws = webscraper(session, bot)
+
+            # Example youtube scraping
+            # yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
+            # lista = ['dropshipping ','free money how']
+            # for items in lista:
+            #     yt_scraper.scrape_youtube_video_ads(items)
         except:
             if session:
                 print(">> Session complete")
@@ -143,18 +148,6 @@ def main():
             if session:
                 print(">> Session complete")
                 session.quit()
-=======
-        # start scraping
-        ws = webscraper(session, bot)
-
-        # Example youtube scraping
-        # yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
-        # lista = ['dropshipping ','free money how']
-        # for items in lista:
-        #     yt_scraper.scrape_youtube_video_ads(items)
-
-        print(">> Session complete")
->>>>>>> origin/master
 
 
     # close display if in container.
@@ -162,9 +155,5 @@ def main():
         display.stop()
 
 if __name__ == '__main__':
-<<<<<<< HEAD
-    main()
-=======
     print('Environment Vars: username='+str(AD_USERNAME)+' proxies='+str(USE_PROXIES)+' location='+str(CHANGE_LOCATION))
     main()
->>>>>>> origin/master
