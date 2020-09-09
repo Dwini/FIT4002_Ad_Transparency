@@ -21,17 +21,6 @@ AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 NUM_TERMS = 3               # number of terms to search
 
-def examples():
-    ### start example ###
-    # this is an exmaple of how to create an ad with a
-    # file (using adLinks.txt file in this folder)
-    files = { 'file': open('adLinks.txt', 'rb') }
-    values = { 'bot': 'test', 'link': 'test', 'headline': 'test' }
-    r = requests.post(DB_URL+'/ads', files=files, data=values)
-    r.raise_for_status()
-    ### end example ###
-
-
 def main():
     # Do not execute until db container has been started.
     response = None
@@ -49,6 +38,9 @@ def main():
     # if no response. break.
     if attempts >= 10:
         return
+
+        
+    print("---START SESSION---")
 
     container_build = False
 
@@ -101,8 +93,7 @@ def main():
         random.shuffle(search_terms)
         search_terms = search_terms[:NUM_TERMS]
 
-        bot = Bot(
-            firstname=b['name'][0],
+        bot = Bot(firstname=b['name'][0],
             lastname= b['name'][1],
             username=b['username'],
             password=b['password'],
@@ -118,37 +109,32 @@ def main():
         # MAIN SESSION/BROWSING START
 
         session = None
-        try:
-            if USE_PROXIES == "1":
-                session = config_driver.setup_driver_with_proxy(pos)
-                if session is None:
-                    print(">> Quitting")
-                    return
-            else:
-                # ... or use this to setup without proxy
-                session = config_driver.setup_driver()
+        if USE_PROXIES == "1":
+            session = config_driver.setup_driver_with_proxy(pos)
+            if session is None:
+                print(">> Quitting")
+                return
+        else:
+            # ... or use this to setup without proxy
+            session = config_driver.setup_driver()
 
-            # change location
-            if CHANGE_LOCATION == "1":
-                config_driver.set_location(session, pos)
+        # change location
+        if CHANGE_LOCATION == "1":
+            config_driver.set_location(session, pos)
 
-            # start scraping
-            ws = webscraper(session, bot)
+        # start scraping
+        ws = webscraper(session, bot)
 
-            # Example youtube scraping
-            # yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
-            # lista = ['dropshipping ','free money how']
-            # for items in lista:
-            #     yt_scraper.scrape_youtube_video_ads(items)
-        except:
-            if session:
-                print(">> Session complete")
-                session.quit()
-        finally:
-            if session:
-                print(">> Session complete")
-                session.quit()
+        # Example youtube scraping
+        yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
+        lista = ['dropshipping ','free money how']
+        for items in lista:
+            yt_scraper.scrape_youtube_video_ads(items)
+        
+        if session:
+            session.quit()
 
+    print("---END SESSION---")
 
     # close display if in container.
     if container_build == True:

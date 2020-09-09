@@ -78,4 +78,4 @@ class webscraper:
             wt.traverse()
         else:
             print('youtube searching')
-            youtube_scraper(self.webdriver, self.scrapping)
+            youtube_scraper(self.webdriver, self.bot, self.scrapping)
