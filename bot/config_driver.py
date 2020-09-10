@@ -63,14 +63,13 @@ def setup_driver(proxyIP=None):
 
     if LOAD_SESSION:
         print('>> Attempting to load previous session')
-        chrome_options.add_argument('--user-data-dir=/tmp/profile')
-        try:
-            driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
-            print('\t>> Successfully loaded session')
-            return driver
-        except:
-            print('\t>> Failed. Clearing old session data', end='')
-            os.system('rm -rf /tmp/profile/*')
+        
+        chrome_options.add_argument('--user-data-dir=/home/bot/profile')
+        chrome_options.add_experimental_option('useAutomationExtension', False)
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+        
+        print('\t>> Successfully loaded session')
+        return driver
     
     return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
