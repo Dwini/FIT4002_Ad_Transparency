@@ -9,33 +9,50 @@ from selenium.webdriver.chrome.options import Options
 import base64
 import math
 import requests
+import multiprocessing
 
 # define constants
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 
+"""Methodical traversal or set of websites with scraping if required.
+
+  Use traverse to being traversal
+
+      Attributes:
+          driver (obj: WebDriver): To traverse with. MUST be headless for full page screenshots to work
+          scrape (Bool): Whether sraping is required .
+
+      """
 class webTraverse:
-    """Methodical traversal or set of websites with scraping if required.
 
-    Use traverse to being traversal
-
-        Attributes:
-            driver (obj: WebDriver): To traverse with. MUST be headless for full page screenshots to work
-            scrape (Bool): Whether sraping is required .
-
-        """
     def __init__(self, driver, bot, scrape=True):
 
         self.driver = driver
         self.toScrape = scrape
         self.bot = bot
 
-    def traverse(self):
+    """Begin traversal or set of websites with scraping if required.
 
-        urls = open('urls.txt', 'r')
+
+        Attributes:
+            urls (List of strings): To traverse with. MUST be headless for full page screenshots to work
+            timeout (Int Seconds): When to stop activity. Will complete current direct action.
+
+                """
+    def traverse(self, urls, traverseDepth=2):
+
+        if not(urls):
+            urls = open('urls.txt', 'r')
+
 
         for url in urls:
+
             print('Opening ' + url)
-            self.driver.get(url)
+            try:
+                self.driver.get(url)
+            except:
+                print("Broken link: %s" % url)
+                continue
 
             print('Waiting...')
             sleep(randint(10, 15))
@@ -62,7 +79,9 @@ class webTraverse:
                 self.full_page_screenshot(url)
                 getGoogleAds(self.driver, self.bot)
 
-            self.click_local_links()
+            if traverseDepth > 0:
+                self.click_local_links()
+                traverseDepth = traverseDepth - 1
 
             self.random_wait_and_scroll()
 
@@ -96,7 +115,7 @@ class webTraverse:
             try:
                 button.click()
                 print('Clicked a button')
-                sleep(random.random())
+                sleep(randint(1, 2))
             except:
                 print('Failed to click a button')
 
@@ -115,7 +134,7 @@ class webTraverse:
             random_pos = randint(start_range, end_range)
             if (self.isElementClickable(local_links[random_pos])):
                 try:
-                    print(local_links[random_pos].location_once_scrolled_into_view)
+                    local_links[random_pos].location_once_scrolled_into_view
                     local_links[random_pos].click()
                     print('Clicked a local link')
                     break
@@ -191,6 +210,9 @@ class webTraverse:
                 except:
                     print('error in removing header')
 
+def timer():
+    for i in range(15):
+        sleep(1)
 
 if __name__ == '__main__':
 

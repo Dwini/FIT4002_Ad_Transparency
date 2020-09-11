@@ -10,6 +10,9 @@ from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
 import requests
+from website_traverse import webTraverse
+from traversal_functions import random_wait_and_scroll
+from random import randint
 
 # import local modules.
 from bot import Bot
@@ -52,33 +55,23 @@ class googleSearch:
             self.webdriver.get(url)
             self.webdriver.get(url)
             sleep(2)
-            search_box = self.webdriver.find_element_by_xpath("//input[@name='q']")
-            search_box.send_keys(keyword)
-            sleep(2)
-            search_box.send_keys(Keys.RETURN)
-            r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
-            sleep(10)
+            try:
+                search_box = self.webdriver.find_element_by_xpath("//input[@name='q']")
+                search_box.send_keys(keyword)
+                sleep(2)
+                search_box.send_keys(Keys.RETURN)
+            except:
+                print("Couldn't find google search box, skipping... ")
+
+            try:
+                r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
+            except:
+                print("Could not connect to Google, trying again... ")
+
+            sleep(randint(8, 10))
 
             if self.scrapping:
-                # Get the 4 ads at the top
-                ads = r.html.find('.ads-ad')
-
-                for ad in ads:
-                    ad_link = ad.find('.V0MxL', first=True).absolute_links  # link to landing page
-                    ad_link = next(iter(ad_link))  # need this since the result from above is set
-                    ad_headline = ad.find('h3.sA5rQ', first=True).text  # headline of the ad
-                    ad_copy = ad.find('.ads-creative', first=True).text  # ad copy
-                    ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
-
-                    # save ad to database
-                    r = requests.post(DB_URL+'/ads', data={
-                        "bot": self.bot.getUsername(),
-                        "link": ad_link,
-                        "headline": ad_headline,
-                        "html": ad_copy
-                    })
-                    r.raise_for_status()
-
+                self.scrape(self, ad_list, keyword, r)
             # wait until shows result
             results = self.webdriver.find_elements_by_css_selector('div.g')
 
@@ -91,18 +84,28 @@ class googleSearch:
             })
             r.raise_for_status()
 
+            newLinks = []
+            #gather new links
             try:
                 for _ in range(num_links_to_visit):
                     new = True
                     link = results[_].find_element_by_tag_name("a")
                     href = link.get_attribute("href")
+                    newLinks.append(href,)
                     for link in links:
                         if href == link:
                             new = False
                     if new:
                         links.append(href)
             except:
-                print()
+                print("Could not access links on google search page, skipping... ")
+
+            random_wait_and_scroll(self.webdriver)
+
+            #pick random link
+            link_to_visit = random.randint(0,len(newLinks)-1)
+
+            self.visit_website(newLinks[link_to_visit])
 
         if self.scrapping:
             df_ads = pd.DataFrame(ad_list, columns=['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
@@ -131,18 +134,31 @@ class googleSearch:
                 self.webdriver.save_screenshot('screenshots/' + str(index) + '.png')
                 # webdriver.get_screenshot_as_file(str(index) + '.png')
 
-        for link in links:
-            try:
-                self.webdriver.get(link)
 
-                # save site visit to database
-                r = requests.post(DB_URL+'/logs', data={
-                    "bot": self.bot.getUsername(),
-                    "url": link,
-                    "actions": ['visit']
-                })
-                r.raise_for_status()
+    def visit_website(self, link):
 
-                sleep(10)
-            except:
-                print()
+        try:
+            print('Clicked a search result...')
+            wt = webTraverse(self.webdriver, self.bot, True)
+            wt.traverse(urls=[link])
+        except:
+            print("Failed to vist: %s" % link)
+
+    def scrape(self, ad_list, keyword, r):
+        # Get the 4 ads at the top
+        ads = r.html.find('.ads-ad')
+        for ad in ads:
+            ad_link = ad.find('.V0MxL', first=True).absolute_links  # link to landing page
+            ad_link = next(iter(ad_link))  # need this since the result from above is set
+            ad_headline = ad.find('h3.sA5rQ', first=True).text  # headline of the ad
+            ad_copy = ad.find('.ads-creative', first=True).text  # ad copy
+            ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
+
+            # save ad to database
+            r = requests.post(DB_URL + '/ads', data={
+                "bot": self.bot.getUsername(),
+                "link": ad_link,
+                "headline": ad_headline,
+                "html": ad_copy
+            })
+            r.raise_for_status()

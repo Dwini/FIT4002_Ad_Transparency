@@ -9,7 +9,7 @@ from requests_html import HTMLSession
 from time import sleep
 import random
 
-from website_traverse import webTraverse
+
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
@@ -20,7 +20,7 @@ class webscraper:
         self.bot = bot
         self.scrapping = scrapping
         print('logging in...')
-        self.login()
+        #self.login()
         print('deciding task...')
         self.task_decider()
 
@@ -68,14 +68,10 @@ class webscraper:
         print("\t>> Login successful")
 
     def task_decider(self):
-        choice = random.randint(0,2)
+        choice = random.randint(0,0)
         if choice == 0:
             print('google searching...')
             googleSearch(self.webdriver, self.bot, self.scrapping)
-        elif choice == 1:
-            print('web traversing...')
-            wt = webTraverse(self.webdriver, self.bot, self.scrapping)
-            wt.traverse()
         else:
             print('youtube searching')
             youtube_scraper(self.webdriver, self.bot, self.scrapping)
