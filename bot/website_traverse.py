@@ -76,11 +76,11 @@ class webTraverse:
             self.random_wait_and_scroll()
 
             if self.toScrape:
-                self.full_page_screenshot(url)
+                #self.full_page_screenshot(url)
                 getGoogleAds(self.driver, self.bot)
 
             if traverseDepth > 0:
-                self.click_local_links()
+                self.click_local_links(traverseDepth)
                 traverseDepth = traverseDepth - 1
 
             self.random_wait_and_scroll()
@@ -120,7 +120,7 @@ class webTraverse:
                 print('Failed to click a button')
 
 
-    def click_local_links(self):
+    def click_local_links(self, current_depth):
 
         local_links = self.driver.find_elements_by_xpath("//a[not(contains(href, 'http'))]")
 
@@ -135,7 +135,9 @@ class webTraverse:
             if (self.isElementClickable(local_links[random_pos])):
                 try:
                     local_links[random_pos].location_once_scrolled_into_view
-                    local_links[random_pos].click()
+                    #local_links[random_pos].click()
+                    linkURL = local_links[random_pos].get_attribute('href')
+                    self.traverse([linkURL], current_depth-1)
                     print('Clicked a local link')
                     break
                 except:

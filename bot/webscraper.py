@@ -19,10 +19,10 @@ class webscraper:
         self.webdriver = webdriver
         self.bot = bot
         self.scrapping = scrapping
-        print('logging in...')
+
         #self.login()
-        print('deciding task...')
-        self.task_decider()
+
+        #self.activate_bot()
 
     def handle_captcha(self):
         """
@@ -67,11 +67,15 @@ class webscraper:
 
         print("\t>> Login successful")
 
-    def task_decider(self):
-        choice = random.randint(0,0)
+    def activate_bot(self):
+
+        #self.login()
+
+        choice = random.randint(0,1)
         if choice == 0:
             print('google searching...')
-            googleSearch(self.webdriver, self.bot, self.scrapping)
+            gs = googleSearch(self.webdriver, self.bot, self.scrapping)
+            gs.search_keywords(num_links_to_visit=1)
         else:
             print('youtube searching')
             youtube_scraper(self.webdriver, self.bot, self.scrapping)

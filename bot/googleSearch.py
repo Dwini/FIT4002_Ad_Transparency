@@ -32,12 +32,11 @@ class googleSearch:
         self.bot = bot
         self.scrapping = scrapping
         self.ads = []  # can be refactored into dictionary, as right now only contains the html element
-        self.search_keywords()
 
 
-    def search_keywords(self):
-        print('seting up profile')
-        num_links_to_visit = 2
+
+    def search_keywords(self, num_links_to_visit=2):
+        #print('seting up profile')
 
         # this sections is for collecting Ads
         session = HTMLSession()
@@ -103,7 +102,7 @@ class googleSearch:
             random_wait_and_scroll(self.webdriver)
 
             #pick random link
-            link_to_visit = random.randint(0,len(newLinks)-1)
+            link_to_visit = randint(0,len(newLinks)-1)
 
             self.visit_website(newLinks[link_to_visit])
 
@@ -140,7 +139,8 @@ class googleSearch:
         try:
             print('Clicked a search result...')
             wt = webTraverse(self.webdriver, self.bot, True)
-            wt.traverse(urls=[link])
+            randDepth = randint(1,3)
+            wt.traverse(urls=[link], traverseDepth=randDepth)
         except:
             print("Failed to vist: %s" % link)
 

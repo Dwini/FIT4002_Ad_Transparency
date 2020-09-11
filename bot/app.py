@@ -124,6 +124,7 @@ def main():
 
         # start scraping
         ws = webscraper(session, bot)
+        ws.activate_bot()
 
         # Example youtube scraping
         yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
