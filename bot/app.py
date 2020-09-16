@@ -7,16 +7,14 @@ import os
 import requests
 
 # local imports
-import proxy
-import config_driver
+from driver_config import configure
 from bot import Bot
 from webscraper import webscraper
 from signup import botCreator
 from youtube_scraper import youtube_scraper, yt_ad
 
 # get environment variables.
-USE_PROXIES = os.getenv('USE_PROXIES') or "0"
-CHANGE_LOCATION = os.getenv('CHANGE_LOCATION') or "0"
+CHANGE_LOCATION = os.getenv('CHANGE_LOCATION') == "1"
 AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 NUM_TERMS = 3               # number of terms to search
@@ -108,23 +106,26 @@ def main():
 
         # MAIN SESSION/BROWSING START
 
-        session = None
-        if USE_PROXIES == "1":
-            session = config_driver.setup_driver_with_proxy(pos)
-            if session is None:
-                print(">> Quitting")
-                return
-        else:
-            # ... or use this to setup without proxy
-            session = config_driver.setup_driver()
+        session = configure.setup()
+
+        if session is None:
+            print(">> Quitting")
+            return
 
         # change location
-        if CHANGE_LOCATION == "1":
-            config_driver.set_location(session, pos)
+        if CHANGE_LOCATION:
+            configure.set_location(session, pos)
 
         # start scraping
         ws = webscraper(session, bot)
-        ws.activate_bot()
+
+        try:
+            # ws.activate_bot()
+            print(">> Initial searching skipped")
+        except:
+            print('>> ERROR: Initial searching failed')
+
+        ws.login()
 
         # Example youtube scraping
         yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
@@ -142,5 +143,5 @@ def main():
         display.stop()
 
 if __name__ == '__main__':
-    print('Environment Vars: username='+str(AD_USERNAME)+' proxies='+str(USE_PROXIES)+' location='+str(CHANGE_LOCATION))
+    # print('Environment Vars: username='+str(AD_USERNAME)+' proxies='+str(USE_PROXIES)+' location='+str(CHANGE_LOCATION))
     main()
