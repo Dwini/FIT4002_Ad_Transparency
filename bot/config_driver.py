@@ -40,8 +40,11 @@ def set_location(driver, location):
     # Click button to use precise location
     driver.get('https://google.com/search?q=google')
     sleep(2)
-    location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
-    location_btn.click()
+    try:
+        location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
+        location_btn.click()
+    except:
+        pass
     sleep(2)
     
     # Attempt to confirm location change
