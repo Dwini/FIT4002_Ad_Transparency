@@ -6,6 +6,7 @@ import requests
 import base64
 import io
 import math
+from PIL import Image
 
 # define constants
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
@@ -132,7 +133,7 @@ def getRevContentAds(driver):
 
         screenshotName = 'adScreenshots/rev' + str(i) + '.png'
         image.screenshot(screenshotName)
-        print(image.screenshot_as_base64)
+
         i = i + 1
 
 def extractEmbeddedUrl(compositeLink):
@@ -175,9 +176,12 @@ def imageProcessing(png):
     #write to buffer
     img.save(buf2, "png", quality=50, optimize=True)
 
+    #attach name to object
+    buf2.name = 'ad.png'
+
     # retrieve back from buffer
     #img_str = base64.b64encode(buf2.getvalue())
     # img_str.decode('utf-8')
 
-    return buf2.getvalue()
+    return buf2
 
