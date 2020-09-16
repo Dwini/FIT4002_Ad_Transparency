@@ -63,6 +63,7 @@ def create_driver(proxyIP=None):
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.517 Safari/537.36"')
+
     if proxyIP is not None:
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
 
@@ -71,12 +72,12 @@ def create_driver(proxyIP=None):
         
         chrome_options.add_argument('--user-data-dir=/home/bot/profiles/'+AD_USERNAME)
         chrome_options.add_experimental_option('useAutomationExtension', False)
-        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+        driver = webdriver.Chrome('./chromedriver', options=chrome_options)
         
         print('\t>> Successfully loaded session')
         return driver
     
-    return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+    return webdriver.Chrome('./chromedriver', options=chrome_options)
 
 def setup(pos=None):
     if not USE_PROXIES:
