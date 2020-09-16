@@ -120,8 +120,7 @@ def main():
         ws = webscraper(session, bot)
 
         try:
-            # ws.activate_bot()
-            print(">> Initial searching skipped")
+            ws.activate_bot()
         except:
             print('>> ERROR: Initial searching failed')
 
