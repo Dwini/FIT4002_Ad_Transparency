@@ -11,7 +11,7 @@ services:
           - LOAD_SESSION=${LOAD_SESSION:-1}             # Loading previous session data
         volumes: 
             - ./out:/tmp/out
-            - profile:/tmp/profile
+            - ./profiles:/home/bot/profiles
     db:
         build: ./db
         ports:

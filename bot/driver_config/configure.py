@@ -8,9 +8,11 @@ import geopy
 from geopy.geocoders import Nominatim
 import os
 
-import proxy
+from driver_config import proxy
 
+USE_PROXIES = os.getenv('USE_PROXIES') == "1"
 LOAD_SESSION = os.getenv('LOAD_SESSION') == "1"
+AD_USERNAME = os.getenv('AD_USERNAME')
 
 """
 Sets driver location to given lat/lon values.
@@ -40,8 +42,11 @@ def set_location(driver, location):
     # Click button to use precise location
     driver.get('https://google.com/search?q=google')
     sleep(2)
-    location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
-    location_btn.click()
+    try:
+        location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
+        location_btn.click()
+    except:
+        pass
     sleep(2)
     
     # Attempt to confirm location change
@@ -50,10 +55,10 @@ def set_location(driver, location):
     except:
         print('\t>> Could not confirm new location. Assuming location changed successfully')
 
-"""
-Set up selenium driver with given proxy
-"""
-def setup_driver(proxyIP=None):
+def create_driver(proxyIP=None):
+    """
+    Set up selenium driver with given proxy
+    """
     chrome_options = Options()
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
@@ -63,21 +68,20 @@ def setup_driver(proxyIP=None):
 
     if LOAD_SESSION:
         print('>> Attempting to load previous session')
-        chrome_options.add_argument('--user-data-dir=/tmp/profile')
-        try:
-            driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
-            print('\t>> Successfully loaded session')
-            return driver
-        except:
-            print('\t>> Failed. Clearing old session data', end='')
-            os.system('rm -rf /tmp/profile/*')
+        
+        chrome_options.add_argument('--user-data-dir=/home/bot/profiles/'+AD_USERNAME)
+        chrome_options.add_experimental_option('useAutomationExtension', False)
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+        
+        print('\t>> Successfully loaded session')
+        return driver
     
     return webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
 
-def setup_driver_with_proxy(pos):
-    """
-    Use this to setup driver with a list of possible proxies
-    """
+def setup(pos=None):
+    if not USE_PROXIES:
+        return create_driver()
+    
     i = 0
 
     proxies = proxy.get_proxy_list()
@@ -91,7 +95,7 @@ def setup_driver_with_proxy(pos):
     while not session and i < len(proxies):
         address = proxies[i]
         print("\n>> Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)), end='')
-        session = setup_driver(address)
+        session = create_driver(address)
 
         if not proxy.ip_check(session):
             session.quit()
@@ -106,3 +110,4 @@ def setup_driver_with_proxy(pos):
         print(">> Error: No working proxies found")
     
     return session
+    
