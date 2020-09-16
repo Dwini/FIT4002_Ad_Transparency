@@ -171,17 +171,26 @@ def imageProcessing(png):
     img = img.resize((newWidth, hsize), Image.ANTIALIAS)
 
     # second buffer
-    buf2 = io.BytesIO()
+    #buf2 = io.BytesIO()
 
     #write to buffer
-    img.save(buf2, "png", quality=50, optimize=True)
+    #img.save(buf2, "png", quality=50, optimize=True)
 
     #attach name to object
-    buf2.name = 'ad.png'
+    #buf2.name = 'ad.png'
 
-    # retrieve back from buffer
-    #img_str = base64.b64encode(buf2.getvalue())
-    # img_str.decode('utf-8')
+    try:
+        img.save('ad.png', quality=50, optimize=True)
+    except IOError:
+        print("could not access local disk for screenshot write")
+        return
 
-    return buf2
+    try:
+        # create file stream
+        f = open("ad.png", "rb")
+    except IOError:
+        print("could not access local disk for screenshot read")
+        return
+
+    return f
 
