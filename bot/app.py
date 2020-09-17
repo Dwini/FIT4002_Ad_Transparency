@@ -117,7 +117,9 @@ def main():
         birthYear=b['DOB'][6:],
         politicalStance=b['political_ranking'],
         search_terms=search_terms,
-        profileBuilt=True
+        profileBuilt=True,
+        # TODO add zipcode to db
+        zipcode=91210
     )
 
     # MAIN SESSION/BROWSING START
@@ -155,6 +157,5 @@ def main():
         display.stop()
 
 if __name__ == '__main__':
-    # print('Environment Vars: username='+str(AD_USERNAME)+' proxies='+str(USE_PROXIES)+' location='+str(CHANGE_LOCATION))
     # print('Environment Vars: username='+str(AD_USERNAME)+' proxies='+str(USE_PROXIES)+' location='+str(CHANGE_LOCATION))
     main()
