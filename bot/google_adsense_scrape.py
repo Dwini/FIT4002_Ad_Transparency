@@ -7,9 +7,12 @@ import base64
 import io
 import math
 from PIL import Image
+import logging
 
 # define constants
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
+
+LOGGER = logging.getLogger()
 
 #given a selenium driver retrieves a list of google ads which appear on the page
 def getGoogleAds(driver, bot):
@@ -29,7 +32,7 @@ def getGoogleAds(driver, bot):
         try:
             iframe.location_once_scrolled_into_view
         except:
-            print('Element location not found or not visible')
+            LOGGER.warning('Element location not found or not visible')
 
         switch_to_frame_context(driver, iframe)
 
@@ -44,7 +47,7 @@ def getGoogleAds(driver, bot):
             png = iframe.screenshot_as_png
             image = imageProcessing(png)
         except:
-            print('Screenshot capture failed')
+            LOGGER.error('Screenshot capture failed')
 
         try:
             r = requests.post(DB_URL+'/ads', files={'file': image}, data={
@@ -61,7 +64,7 @@ def getGoogleAds(driver, bot):
 
         #testing purposes:
         except:
-            print("Connection for Screenshot failed")
+            LOGGER.error("Connection for Screenshot failed")
 
 
     return screenshots
@@ -76,7 +79,7 @@ def find_ad_redirect(driver):
         # find the link embedded in the iframe
         linkElements = driver.find_elements_by_xpath(".//a[@href]")
     except:
-        print('Cannot find internal link, check correct context is set')
+        LOGGER.error('Cannot find internal link, check correct context is set')
         return None
 
     adLink = None
@@ -103,7 +106,7 @@ def get_ad_html(driver):
         #adElem = driver.find_element_by_id(iframeID)
         innerHTML = driver.find_element_by_xpath(".//html[@*]").get_attribute('innerHTML')
     except:
-        print("Ad HTML retrieval failed")
+        LOGGER.error("Ad HTML retrieval failed")
     return innerHTML
 
 
@@ -115,7 +118,7 @@ def switch_to_frame_context(driver, iframe):
             driver.switch_to.frame(iframeID)
             break
         except:
-            print('Element access attempt: ' + str(i))
+            LOGGER.warning('Element access attempt: ' + str(i))
 
 
 

@@ -13,12 +13,15 @@ import requests
 from website_traverse import webTraverse
 from traversal_functions import random_wait_and_scroll
 from random import randint
+import logging
 
 # import local modules.
 from bot import Bot
 
 # define constants
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
+
+LOGGER = logging.getLogger()
 
 class googleSearch:
     def __init__(self, webdriver, bot, scrapping):
@@ -60,12 +63,12 @@ class googleSearch:
                 sleep(2)
                 search_box.send_keys(Keys.RETURN)
             except:
-                print("Couldn't find google search box, skipping... ")
+                LOGGER.warning("Couldn't find google search box, skipping... ")
 
             try:
                 r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
             except:
-                print("Could not connect to Google, trying again... ")
+                LOGGER.warning("Could not connect to Google, trying again... ")
 
             sleep(randint(8, 10))
 
@@ -97,7 +100,7 @@ class googleSearch:
                     if new:
                         links.append(href)
             except:
-                print("Could not access links on google search page, skipping... ")
+                LOGGER.warning("Could not access links on google search page, skipping... ")
 
             random_wait_and_scroll(self.webdriver)
 
@@ -118,7 +121,7 @@ class googleSearch:
             # todo: save to database instead
             # Selenium loop thru dataframe to save PNGs into "screenshots" folder
             for index, row in df_ads.iterrows():
-                print('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
+                LOGGER.info('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
                 self.webdriver.get(row['ad_link'])
 
                 # save site visit to database
@@ -137,12 +140,12 @@ class googleSearch:
     def visit_website(self, link):
 
         try:
-            print('Clicked a search result...')
+            LOGGER.info('Clicked a search result...')
             wt = webTraverse(self.webdriver, self.bot, True)
             randDepth = randint(1,3)
             wt.traverse(urls=[link], traverseDepth=randDepth)
         except:
-            print("Failed to vist: %s" % link)
+            LOGGER.warning("Failed to vist: %s" % link)
 
     def scrape(self, ad_list, keyword, r):
         # Get the 4 ads at the top

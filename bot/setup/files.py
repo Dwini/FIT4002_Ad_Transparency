@@ -1,6 +1,12 @@
 from pathlib import Path
+import logging
+
+LOGGER = logging.getLogger()
 
 def create_output_dirs():
-    # Create output directories
+    LOGGER.info('Creating output directories')
+    
     Path('./out').mkdir(exist_ok=True)
+
     Path('./out/profiles').mkdir(exist_ok=True)
+    Path('./out/logs').mkdir(exist_ok=True)

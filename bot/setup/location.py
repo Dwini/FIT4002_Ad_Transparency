@@ -1,5 +1,8 @@
 from geopy.geocoders import Nominatim
 from time import sleep
+import logging
+
+LOGGER = logging.getLogger()
 
 def set_location(driver, location):
     """
@@ -10,8 +13,8 @@ def set_location(driver, location):
     locator = Nominatim(user_agent="google")
     coordinates = "%f, %f" % (location['lat'], location['lon'])
     loc_info = locator.reverse(coordinates)
-    print('>> Attempting to change browser location')
-    print('\t>> Spoofing location: %s' % loc_info.raw['display_name'])
+    LOGGER.info('Attempting to change browser location')
+    LOGGER.info('Spoofing location: %s' % loc_info.raw['display_name'])
 
     # These are three different methods to spoof location
     driver.execute_cdp_cmd("Page.setGeolocationOverride", {
@@ -38,6 +41,6 @@ def set_location(driver, location):
     
     # Attempt to confirm location change
     try: 
-        print('\t>> Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
+        LOGGER.info('Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
     except:
-        print('\t>> Could not confirm new location. Assuming location changed successfully')
+        LOGGER.warning('Could not confirm new location. Assuming location changed successfully')

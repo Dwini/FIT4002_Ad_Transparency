@@ -5,23 +5,27 @@ import random
 from time import sleep
 import os
 import requests
+import logging
 
 # local imports
 import setup.driver as setup_driver
 import setup.files as setup_files
 import setup.location as setup_location
+import setup.logger as setup_logger
 from bot import Bot
 from webscraper import webscraper
 from signup import botCreator
 from youtube_scraper import youtube_scraper, yt_ad
 
 # get environment variables.
-CHANGE_LOCATION = os.getenv('CHANGE_LOCATION') == "1"
 AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 NUM_TERMS = 3               # number of terms to search
 
 def main():
+    setup_logger.configure()
+    LOGGER = logging.getLogger()
+
     # Do not execute until db container has been started.
     response = None
     attempts = 0
@@ -29,18 +33,16 @@ def main():
         attempts += 1
         try:
             response = requests.get(DB_URL+'/heartbeat')
-            print('found db project...')
+            LOGGER.info('Found db project...')
         except:
-            print('no response from db project. attempt: '+str(attempts))
+            LOGGER.warning('No response from db project. attempt: '+str(attempts))
             sleep(10)
             pass
 
     # if no response. break.
     if attempts >= 10:
+        LOGGER.error('Could not connect to db project')
         return
-
-        
-    print("---START SESSION---")
 
     setup_files.create_output_dirs()
 
@@ -64,82 +66,89 @@ def main():
         r.raise_for_status()
         bots = r.json()
 
-    for b in bots:
-        if b['username'] != AD_USERNAME:
-            continue
+    # FIXME: not a great way to extract required bot
+    # TODO: make a route in db to do this better (/bot/:username)
+    b = None
+    for bot in bots:
+        if bot['username'] == AD_USERNAME:
+            b = bot
 
-        print('>> Using bot: ' + b['username'])
+    if b == None:
+        LOGGER.error('Could not get bot details')
+        return
 
-        # define location of bot
-        pos = { 'lat': random.uniform(-90, 90), 'lon': random.uniform(-180, 180) }
-        if 'location' in b:
-            pos = {
-                'lat': float(b['location']['latitude']),
-                'lon': float(b['location']['longitude'])
-            }
+    LOGGER.info('Using bot: ' + b['username'])
 
-        # Get political search terms
-        url = DB_URL + '/search_terms/political/%d' % b['political_ranking']
-        r = requests.get(url)
-        r.raise_for_status()
-        search_terms = r.json()
+    # define location of bot
+    pos = { 'lat': random.uniform(-90, 90), 'lon': random.uniform(-180, 180) }
+    if 'location' in b:
+        pos = {
+            'lat': float(b['location']['latitude']),
+            'lon': float(b['location']['longitude'])
+        }
 
-        # Get other search terms
-        url = DB_URL + '/search_terms/other/%d' % b['other_terms_category']
-        r = requests.get(url)
-        r.raise_for_status()
-        search_terms = search_terms + r.json()
+    # TODO: Should move these two requests and shuffling.
+    #       Maybe to bot.py?
 
-        random.shuffle(search_terms)
-        random.shuffle(search_terms)
-        random.shuffle(search_terms)
-        search_terms = search_terms[:NUM_TERMS]
+    # Get political search terms
+    url = DB_URL + '/search_terms/political/%d' % b['political_ranking']
+    r = requests.get(url)
+    r.raise_for_status()
+    search_terms = r.json()
 
-        bot = Bot(firstname=b['name'][0],
-            lastname= b['name'][1],
-            username=b['username'],
-            password=b['password'],
-            gender=b['gender'],
-            birthDay=b['DOB'][:2],
-            birthMonth=b['DOB'][3:5],
-            birthYear=b['DOB'][6:],
-            politicalStance=b['political_ranking'],
-            search_terms=search_terms,
-            profileBuilt=True
-        )
+    # Get other search terms
+    url = DB_URL + '/search_terms/other/%d' % b['other_terms_category']
+    r = requests.get(url)
+    r.raise_for_status()
+    search_terms = search_terms + r.json()
 
-        # MAIN SESSION/BROWSING START
+    random.shuffle(search_terms)
+    random.shuffle(search_terms)
+    random.shuffle(search_terms)
+    search_terms = search_terms[:NUM_TERMS]
 
-        session = setup_driver.get_driver()
+    bot = Bot(firstname=b['name'][0],
+        lastname= b['name'][1],
+        username=b['username'],
+        password=b['password'],
+        gender=b['gender'],
+        birthDay=b['DOB'][:2],
+        birthMonth=b['DOB'][3:5],
+        birthYear=b['DOB'][6:],
+        politicalStance=b['political_ranking'],
+        search_terms=search_terms,
+        profileBuilt=True
+    )
 
-        if session is None:
-            print(">> Quitting")
-            return
+    # MAIN SESSION/BROWSING START
+    session = setup_driver.get_driver()
 
-        # change location
-        if CHANGE_LOCATION:
-            setup_location.set_location(session, pos)
+    if session is None:
+        LOGGER.error('Could not initialise driver')
+        return
 
-        # start scraping
-        ws = webscraper(session, bot)
+    # change location
+    setup_location.set_location(session, pos)
 
-        try:
-            ws.activate_bot()
-        except:
-            print('>> ERROR: Initial searching failed')
+    # start scraping
+    ws = webscraper(session, bot)
 
-        ws.login()
+    try:
+        ws.activate_bot()
+    except:
+        LOGGER.exception('Pre-login searching failed')
+        raise
 
-        # Example youtube scraping
-        yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
-        lista = ['dropshipping ','free money how']
-        for items in lista:
-            yt_scraper.scrape_youtube_video_ads(items)
-        
-        if session:
-            session.quit()
+    ws.login()
 
-    print("---END SESSION---")
+    # Example youtube scraping
+    yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
+    lista = ['dropshipping ','free money how']
+    for items in lista:
+        yt_scraper.scrape_youtube_video_ads(items)
+    
+    LOGGER.info('Quitting')
+    session.quit()
 
     # close display if in container.
     if container_build == True:

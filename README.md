@@ -52,3 +52,6 @@ TODO: Automate the process of generating `task-definition.json` file. Automate t
 - Create file `bot/out/captcha`, this is where you should enter the text for the captcha
 - Wait until "Captcha encountered!" shows up in console output
 - Open `bot/out/captcha.png` and edit `bot/out/captcha` with the captcha text (single line, no spaces). You are only given 20 seconds to enter captcha so better to have these files already open.
+* For persistent session data:
+- Each bots session data is saved under `bot/out/profiles/<BOT_USERNAME>`
+- Copy a bots session data directory to `bot/out/profiles` and make set env vars to use that particular bot

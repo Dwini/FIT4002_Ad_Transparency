@@ -8,11 +8,12 @@ from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
 import random
-
+import logging
 
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
+LOGGER = logging.getLogger()
 
 class webscraper:
     def __init__(self, webdriver, bot, scrapping = False):
@@ -21,7 +22,6 @@ class webscraper:
         self.scrapping = scrapping
 
         #self.login()
-
         #self.activate_bot()
 
     def handle_captcha(self):
@@ -41,7 +41,7 @@ class webscraper:
         self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
 
     def login(self):
-        print('>> Logging into Google account')
+        LOGGER.info('Logging into Google account')
 
         self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
         sleep(2)
@@ -49,7 +49,7 @@ class webscraper:
         try:
             self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
         except:
-            print('\t>> Could not find username field. Assuming already logged in')
+            LOGGER.warning('Could not find username field. Assuming already logged in')
             self.webdriver.save_screenshot('./out/login_proof.png')
             return
 
@@ -59,13 +59,13 @@ class webscraper:
         try:
             self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
         except:
-            print("\t>> Captcha encountered!")
+            LOGGER.critical("Captcha encountered!")
             self.handle_captcha()
         
         self.webdriver.find_element_by_id('passwordNext').click()
         sleep(20)   # large wait time as proxies are slow...
 
-        print("\t>> Login successful")
+        LOGGER.info("Login successful")
 
     def activate_bot(self):
 
@@ -73,9 +73,9 @@ class webscraper:
 
         choice = random.randint(0,1)
         if choice == 0:
-            print('google searching...')
+            LOGGER.info('google searching...')
             gs = googleSearch(self.webdriver, self.bot, self.scrapping)
             gs.search_keywords(num_links_to_visit=1)
         else:
-            print('youtube searching')
+            LOGGER.info('youtube searching')
             youtube_scraper(self.webdriver, self.bot, self.scrapping)

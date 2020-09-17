@@ -54,7 +54,6 @@ ENV DB_URL "http://db:8080"
 # TODO: Clean this up. Add to RUN command above?
 RUN useradd -ms /bin/bash bot
 USER bot
-RUN mkdir /home/bot/profile
 
 # default entry point. Container will force close after 1 minute.
 CMD ["timeout", "15m", "python", "app.py", "-c"]

@@ -7,10 +7,8 @@ services:
         environment:
           - AD_USERNAME=${AD_USERNAME:-mwest5078}
           - USE_PROXIES=${USE_PROXIES:-0}               # For enabling proxies
-          - CHANGE_LOCATION=${CHANGE_LOCATION:-1}       # Spoofing location
-          - LOAD_SESSION=${LOAD_SESSION:-1}             # Loading previous session data
         volumes: 
-            - ./bot/out:/app/out                                # TODO: change this to ...:/app/out
+            - ./bot/out:/app/out
     db:
         build: ./db
         ports:
