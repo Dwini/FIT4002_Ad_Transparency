@@ -29,10 +29,10 @@ class webscraper:
         Saves a screenshot of the captcha (out/captcha.png) and reads from
         file (out/captcha) the captcha text to input
         """
-        self.webdriver.save_screenshot('/tmp/out/captcha.png')
+        self.webdriver.save_screenshot('./out/captcha.png')
         sleep(20)
 
-        with open('/tmp/out/captcha', 'r') as f:
+        with open('./out/captcha', 'r') as f:
             self.webdriver.find_element_by_xpath("//input[@aria-label='Type the text you hear or see']").send_keys(f.read())
         
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
@@ -50,7 +50,7 @@ class webscraper:
             self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
         except:
             print('\t>> Could not find username field. Assuming already logged in')
-            self.webdriver.save_screenshot('/tmp/out/login_proof.png')
+            self.webdriver.save_screenshot('./out/login_proof.png')
             return
 
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()

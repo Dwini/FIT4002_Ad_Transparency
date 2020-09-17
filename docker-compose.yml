@@ -10,14 +10,10 @@ services:
           - CHANGE_LOCATION=${CHANGE_LOCATION:-1}       # Spoofing location
           - LOAD_SESSION=${LOAD_SESSION:-1}             # Loading previous session data
         volumes: 
-            - ./out:/tmp/out
-            - ./profiles:/home/bot/profiles
+            - ./bot/out:/app/out                                # TODO: change this to ...:/app/out
     db:
         build: ./db
         ports:
             - 8080:8080
         volumes:
             - /usr/src/app/node_modules
-
-volumes: 
-    profile:

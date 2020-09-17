@@ -70,9 +70,9 @@ def create_driver(proxyIP=None):
     if LOAD_SESSION:
         print('>> Attempting to load previous session')
         
-        chrome_options.add_argument('--user-data-dir=/home/bot/profiles/'+AD_USERNAME)
+        chrome_options.add_argument('--user-data-dir=/app/out/profiles/'+AD_USERNAME)
         chrome_options.add_experimental_option('useAutomationExtension', False)
-        driver = webdriver.Chrome('./chromedriver', options=chrome_options)
+        driver = webdriver.Chrome('./driver_config/chromedriver', options=chrome_options)
         
         print('\t>> Successfully loaded session')
         return driver

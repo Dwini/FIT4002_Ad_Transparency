@@ -5,6 +5,7 @@ import random
 from time import sleep
 import os
 import requests
+from pathlib import Path
 
 # local imports
 from driver_config import configure
@@ -39,6 +40,10 @@ def main():
 
         
     print("---START SESSION---")
+
+    # Create output directories
+    Path('./out').mkdir(exist_ok=True)
+    Path('./out/profiles').mkdir(exist_ok=True)
 
     container_build = False
 

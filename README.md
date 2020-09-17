@@ -49,6 +49,6 @@ TODO: Automate the process of generating `task-definition.json` file. Automate t
 ### Notes
 * When db container is up, visit http://localhost:8080 to get database contents as JSON. Then for an improved table view use: [json2table](http://json2table.com/) or [JSON to CSV](https://json-csv.com/). If you just want to view db contents and not have bots running, use `docker-compose up --build db`
 * To handle captcha:
-- Make sure `./out` volume is enabled in `docker-compose.yml` and `out` folder is created in this directory
+- Create file `bot/out/captcha`, this is where you should enter the text for the captcha
 - Wait until "Captcha encountered!" shows up in console output
-- Open `out/captcha.png` and create file `out/captcha` with the captcha text (single line, no spaces). Better to have this file ready, only 20 seconds to enter captcha.
+- Open `bot/out/captcha.png` and edit `bot/out/captcha` with the captcha text (single line, no spaces). You are only given 20 seconds to enter captcha so better to have these files already open.
