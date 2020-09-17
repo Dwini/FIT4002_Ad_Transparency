@@ -3,6 +3,7 @@ import os
 import pandas as pd
 import time
 import sys
+from math import floor
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
@@ -105,7 +106,7 @@ class googleSearch:
             random_wait_and_scroll(self.webdriver)
 
             #pick random link
-            link_to_visit = randint(0,len(newLinks)-1)
+            link_to_visit = randint(floor(len(newLinks)-1/4),len(newLinks)-1)
 
             self.visit_website(newLinks[link_to_visit])
 
