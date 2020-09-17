@@ -59,13 +59,14 @@ def get_driver(pos=None):
             session.quit()
             session = None
             i += 1
-        
-    if session:
-        ip_info = proxy.ip_lookup(address)
-        location = '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
-        LOGGER.info("Proxy change successful (location: %s)" % location)
-    else:
+
+    if session == None:
         LOGGER.error("No working proxies found")
-    
+        raise RuntimeError('No working proxies found')
+        return
+        
+    ip_info = proxy.ip_lookup(address)
+    location = '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
+    LOGGER.info("Proxy change successful (location: %s)" % location)    
     return session
     

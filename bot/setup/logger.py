@@ -6,7 +6,7 @@ import sys
 LOG_FILE = './out/logs/' + datetime.now().strftime("%H.%M.%S_%d.%m.%Y") + \
     '_' + os.getenv('AD_USERNAME') + '.log'
 
-def configure():
+def configure_logger():
     """
     Setup logger to output to file and console
     """

@@ -3,7 +3,7 @@ import logging
 
 LOGGER = logging.getLogger()
 
-def create_output_dirs():
+def create_dirs():
     LOGGER.info('Creating output directories')
     
     Path('./out').mkdir(exist_ok=True)
