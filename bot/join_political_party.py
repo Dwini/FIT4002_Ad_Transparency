@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from requests_html import HTMLSession
 from time import sleep
 from selenium.webdriver.common.action_chains import ActionChains
+import logging
 
 
 # import local modules.
@@ -11,6 +12,8 @@ from bot import Bot
 
 # define constants
 DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
+
+LOGGER = logging.getLogger()
 
 class joinPoliticalParty:
     def __init__(self, webdriver, bot, scrapping):
@@ -37,7 +40,7 @@ class joinPoliticalParty:
             email_btn = self.webdriver.find_element_by_xpath('//*[@id="wrapper"]/main/section/div[1]/div[1]/div/ul/li[2]/a')
             email_btn.click()
         except:
-            print("Couldn't find join page, trying direct url... ")
+            LOGGER.warning("Couldn't find join page, trying direct url... ")
             url = 'https://www.donaldjtrump.com/get-involved/email'
             self.webdriver.get(url)
         sleep(2)
@@ -53,11 +56,11 @@ class joinPoliticalParty:
             actions_create.perform()
 
         except:
-            print("Couldn't join Trump, skipping... ")
+            LOGGER.warning("Couldn't join Trump, skipping... ")
 
         # TODO work around hCaptcha
 
-        print("\t>> Join Trump successful")
+        LOGGER.info("Join Trump successful")
 
 
     def join_biden(self):
@@ -69,7 +72,7 @@ class joinPoliticalParty:
             popup.click()
 
         except:
-            print("Couldn't close popup, skipping... ")
+            LOGGER.warning("Couldn't close popup, skipping... ")
         sleep(4)
 
         try:
@@ -85,6 +88,6 @@ class joinPoliticalParty:
             actions_create.perform()
 
         except:
-            print("Couldn't join Biden, skipping... ")
+            LOGGER.warning("Couldn't join Biden, skipping... ")
 
-        print("\t>> Join Biden successful")
+        LOGGER.info("Join Biden successful")

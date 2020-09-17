@@ -185,14 +185,14 @@ def imageProcessing(png):
     try:
         img.save('ad.png', quality=50, optimize=True)
     except IOError:
-        print("could not access local disk for screenshot write")
+        LOGGER.error("could not access local disk for screenshot write")
         return
 
     try:
         # create file stream
         f = open("ad.png", "rb")
     except IOError:
-        print("could not access local disk for screenshot read")
+        LOGGER.error("could not access local disk for screenshot read")
         return
 
     return f

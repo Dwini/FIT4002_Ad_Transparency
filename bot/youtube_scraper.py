@@ -228,7 +228,7 @@ class youtube_scraper:
                 else:
                     screenshot = html_element.save_screenshot(name)
             except:
-                print('Screenshot capture failed')
+                LOGGER.warning('Screenshot capture failed')
 
     def get_sec(self, time_string):
         """
