@@ -5,10 +5,11 @@ import random
 from time import sleep
 import os
 import requests
-from pathlib import Path
 
 # local imports
-from driver_config import configure
+import setup.driver as setup_driver
+import setup.files as setup_files
+import setup.location as setup_location
 from bot import Bot
 from webscraper import webscraper
 from signup import botCreator
@@ -41,9 +42,7 @@ def main():
         
     print("---START SESSION---")
 
-    # Create output directories
-    Path('./out').mkdir(exist_ok=True)
-    Path('./out/profiles').mkdir(exist_ok=True)
+    setup_files.create_output_dirs()
 
     container_build = False
 
@@ -111,7 +110,7 @@ def main():
 
         # MAIN SESSION/BROWSING START
 
-        session = configure.setup()
+        session = setup_driver.get_driver()
 
         if session is None:
             print(">> Quitting")
@@ -119,7 +118,7 @@ def main():
 
         # change location
         if CHANGE_LOCATION:
-            configure.set_location(session, pos)
+            setup_location.set_location(session, pos)
 
         # start scraping
         ws = webscraper(session, bot)
