@@ -37,7 +37,7 @@ module.exports = app => {
              * @param body.url           - URL of action
              * @param body.actions       - Actions that were performed, e.g. 'visit', 'search'
              * @param body.search_term   - OPTIONAL. If search performed this stores
-             *                      the term that was searched
+             *      the term that was searched
              */
 
             // Allowed fileds

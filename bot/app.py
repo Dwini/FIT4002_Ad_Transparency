@@ -33,7 +33,7 @@ def main():
         attempts += 1
         try:
             response = requests.get(DB_URL+'/heartbeat')
-            LOGGER.info('Found db project...')
+            LOGGER.info('Found db project')
         except:
             LOGGER.warning('No response from db project. attempt: '+str(attempts))
             sleep(10)
@@ -57,27 +57,17 @@ def main():
         display = Display(visible=0, size=(800, 600))
         display.start()
 
+    LOGGER.info('Using bot: ' + AD_USERNAME)
+
     bots = []
     creating = False
     if creating:
         newBot = botCreator()
     else:
-        r = requests.get(DB_URL+'/bots')
+        LOGGER.info('Fetching bot details')
+        r = requests.get(DB_URL+'/bot/'+AD_USERNAME)
         r.raise_for_status()
-        bots = r.json()
-
-    # FIXME: not a great way to extract required bot
-    # TODO: make a route in db to do this better (/bot/:username)
-    b = None
-    for bot in bots:
-        if bot['username'] == AD_USERNAME:
-            b = bot
-
-    if b == None:
-        LOGGER.error('Could not get bot details')
-        return
-
-    LOGGER.info('Using bot: ' + b['username'])
+        b = r.json()
 
     # define location of bot
     pos = { 'lat': random.uniform(-90, 90), 'lon': random.uniform(-180, 180) }
@@ -90,13 +80,13 @@ def main():
     # TODO: Should move these two requests and shuffling.
     #       Maybe to bot.py?
 
-    # Get political search terms
+    LOGGER.info('Fetching political search terms')
     url = DB_URL + '/search_terms/political/%d' % b['political_ranking']
     r = requests.get(url)
     r.raise_for_status()
     search_terms = r.json()
 
-    # Get other search terms
+    LOGGER.info('Fetching other search terms')
     url = DB_URL + '/search_terms/other/%d' % b['other_terms_category']
     r = requests.get(url)
     r.raise_for_status()
@@ -106,6 +96,8 @@ def main():
     random.shuffle(search_terms)
     random.shuffle(search_terms)
     search_terms = search_terms[:NUM_TERMS]
+
+    LOGGER.info('Using search terms: ' + str(search_terms))
 
     bot = Bot(firstname=b['name'][0],
         lastname= b['name'][1],
@@ -149,7 +141,7 @@ def main():
     for items in lista:
         yt_scraper.scrape_youtube_video_ads(items)
     
-    LOGGER.info('Quitting')
+    LOGGER.info('Session complete. Quitting...')
     session.quit()
 
     # close display if in container.

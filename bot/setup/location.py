@@ -13,7 +13,7 @@ def set_location(driver, location):
     locator = Nominatim(user_agent="google")
     coordinates = "%f, %f" % (location['lat'], location['lon'])
     loc_info = locator.reverse(coordinates)
-    LOGGER.info('Attempting to change browser location')
+    LOGGER.info('Changing browser location...')
     LOGGER.info('Spoofing location: %s' % loc_info.raw['display_name'])
 
     # These are three different methods to spoof location
@@ -29,13 +29,17 @@ def set_location(driver, location):
         "window.navigator.geolocation.getCurrentPosition(function(pos){positionStr=pos.coords.latitude+\":\"+pos.coords.longitude});"+
         "return positionStr;")
 
-    # Click button to use precise location
-    driver.get('https://google.com/search?q=google')
+    url = 'https://google.com/search?q=google'
+    LOGGER.info('Opening: ' + url)
+    driver.get(url)
     sleep(2)
+
+    LOGGER.info('Clicking button to use precise location')
     try:
         location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
         location_btn.click()
     except:
+        LOGGER.warning('Could not click button')
         pass
     sleep(2)
     
@@ -43,4 +47,5 @@ def set_location(driver, location):
     try: 
         LOGGER.info('Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
     except:
-        LOGGER.warning('Could not confirm new location. Assuming location changed successfully')
+        LOGGER.warning('Could not confirm new location')
+        LOGGER.warning('Assuming location changed successfully')

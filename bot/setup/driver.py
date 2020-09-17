@@ -28,11 +28,11 @@ def create_driver(proxyIP=None):
     if proxyIP is not None:
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
     
-    LOGGER.info('Loading previous session...')
+    LOGGER.info('Creating driver')
     try:
         driver = webdriver.Chrome('./setup/chromedriver', options=chrome_options)
     except:
-        LOGGER.exception('Failed to load previous session data')
+        LOGGER.error('Failed to create driver')
         raise
 
     return driver
@@ -42,7 +42,6 @@ def get_driver(pos=None):
         return create_driver()
     
     i = 0
-
     proxies = proxy.get_proxy_list()
 
     # uncomment to sort proxies by distance from pos

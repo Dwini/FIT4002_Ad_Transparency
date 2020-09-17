@@ -8,7 +8,7 @@ LOG_FILE = './out/logs/' + datetime.now().strftime("%H.%M.%S_%d.%m.%Y") + \
 
 def configure():
     """
-    Setup the logger to output to file and console
+    Setup logger to output to file and console
     """
     logFormatter = logging.Formatter("%(asctime)s [%(levelname)s]  %(message)s")
     rootLogger = logging.getLogger()

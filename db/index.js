@@ -10,7 +10,6 @@ moment.tz.setDefault("Australia/Melbourne");
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use('/', express.static('public'));
 
 require('./routes/ads')(app);
 require('./routes/bots')(app);

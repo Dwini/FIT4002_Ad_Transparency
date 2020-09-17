@@ -33,7 +33,11 @@ class webscraper:
         sleep(20)
 
         with open('./out/captcha', 'r') as f:
-            self.webdriver.find_element_by_xpath("//input[@aria-label='Type the text you hear or see']").send_keys(f.read())
+            try:
+                self.webdriver.find_element_by_xpath("//input[@aria-label='Type the text you hear or see']").send_keys(f.read())
+            except:
+                LOGGER.error('Captcha input failed. Possibly incorrect captcha?')
+                raise
         
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
         sleep(4)
@@ -43,7 +47,9 @@ class webscraper:
     def login(self):
         LOGGER.info('Logging into Google account')
 
-        self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
+        url = 'https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/'
+        LOGGER.info('Opening: ' + url)
+        self.webdriver.get(url)
         sleep(2)
 
         try:
@@ -59,11 +65,12 @@ class webscraper:
         try:
             self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
         except:
-            LOGGER.critical("Captcha encountered!")
+            LOGGER.critical('Captcha encountered!')
+            LOGGER.info('Waiting for user input')
             self.handle_captcha()
         
         self.webdriver.find_element_by_id('passwordNext').click()
-        sleep(20)   # large wait time as proxies are slow...
+        sleep(3)
 
         LOGGER.info("Login successful")
 

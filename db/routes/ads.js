@@ -38,13 +38,13 @@ module.exports = app => {
         .post(upload.single('file'), function(req, res, next) {
             /**
              * Creates a new Ad
-             * @param body.bot       - username of bot that captured ad
+             * @param body.bot       - Username of bot that captured ad
              * @param body.link      - URL of ad
              * @param body.headline  - Title of ad
              * @param body.html      - OPTIONAL. HTML string of ad
              * @param body.base64    - OPTIONAL. Base64 string of picture of ad
              * @param body.file      - OPTIONAL. Picture or any other file
-             *                    associated with the ad
+             *      associated with the ad
              */
             const { file } = req;
 
