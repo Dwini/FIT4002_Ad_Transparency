@@ -1,5 +1,5 @@
 class Bot:
-  def __init__(self, firstname, lastname, username, password, gender, birthDay, birthMonth, birthYear, politicalStance, search_terms, profileBuilt):
+  def __init__(self, firstname, lastname, username, password, gender, birthDay, birthMonth, birthYear, politicalStance, search_terms, profileBuilt, zipcode):
     self.firstname = firstname
     self.lastname = lastname
     self.username = username
@@ -12,6 +12,8 @@ class Bot:
     self.politcalStance = politicalStance
     self.search_terms = search_terms
     self.profileBuilt = profileBuilt
+    # TODO add zipcode to db
+    self.zipcode = zipcode
 
   def getFirstname(self):
     return self.firstname
