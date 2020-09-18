@@ -10,9 +10,6 @@ import logging
 # import local modules.
 from bot import Bot
 
-# define constants
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
-
 LOGGER = logging.getLogger()
 
 class joinPoliticalParty:

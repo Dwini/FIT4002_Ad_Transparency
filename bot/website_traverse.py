@@ -12,9 +12,6 @@ import requests
 import multiprocessing
 import logging
 
-# define constants
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
-
 LOGGER = logging.getLogger()
 
 """Methodical traversal or set of websites with scraping if required.
@@ -61,7 +58,7 @@ class webTraverse:
             sleep(randint(10, 15))
 
             try:
-                r = requests.post(DB_URL+'/logs', data={
+                r = requests.post(os.getenv('DB_URL')+'/logs', data={
                     "bot": self.bot.getUsername(),
                     "url": url,
                     "actions": ['visit']

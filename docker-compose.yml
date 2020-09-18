@@ -6,7 +6,6 @@ services:
             - db
         environment:
           - AD_USERNAME=${AD_USERNAME:-mwest5078}
-          - USE_PROXIES=${USE_PROXIES:-0}               # For enabling proxies
         volumes: 
             - ./bot/out:/app/out
     db:

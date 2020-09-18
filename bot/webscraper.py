@@ -21,9 +21,6 @@ class webscraper:
         self.bot = bot
         self.scrapping = scrapping
 
-        #self.login()
-        #self.activate_bot()
-
     def handle_captcha(self):
         """
         Saves a screenshot of the captcha (out/captcha.png) and reads from
@@ -75,14 +72,11 @@ class webscraper:
         LOGGER.info("Login successful")
 
     def activate_bot(self):
-
-        #self.login()
-
         choice = random.randint(0,1)
         if choice == 0:
-            LOGGER.info('google searching...')
+            LOGGER.info('Pre-login Google searching')
             gs = googleSearch(self.webdriver, self.bot, self.scrapping)
             gs.search_keywords(num_links_to_visit=1)
         else:
-            LOGGER.info('youtube searching')
+            LOGGER.info('Pre-login Youtube searching')
             youtube_scraper(self.webdriver, self.bot, self.scrapping)

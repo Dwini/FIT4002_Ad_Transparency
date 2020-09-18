@@ -3,8 +3,8 @@ from datetime import datetime
 import os
 import sys
 
-LOG_FILE = './out/logs/' + datetime.now().strftime("%H.%M.%S_%d.%m.%Y") + \
-    '_' + os.getenv('AD_USERNAME') + '.log'
+LOG_FILE = './out/logs/' + datetime.now().strftime("%Y.%m.%d_%H.%M.%S_") + \
+    os.getenv('AD_USERNAME') + '.log'
 
 def configure_logger():
     """

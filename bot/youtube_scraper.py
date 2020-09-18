@@ -13,7 +13,6 @@ import math
 import base64
 import logging
 
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
 LOGGER = logging.getLogger()
 
 class yt_ad(Enum):
@@ -188,21 +187,28 @@ class youtube_scraper:
         #         data['base64'] = a
         LOGGER.info('saving ad... ' + str(data['headline']))
         file = {'file': open(image, 'rb')}
-        r = requests.post(DB_URL+'/ads', files=file, data=data)
+        url = os.getenv('DB_URL') + '/ads'
+        r = requests.post(url, files=file, data=data)
         r.raise_for_status()
 
     def log_to_db(self, bot_id, url, action, search_term=None):
         # save site visit or search to database
-        data = {
-            "bot": bot_id,
-            "url": url,
-            "actions": [action]
-        }
-        if search_term is not None:
-            data['search_term'] = search_term
+        # data = {
+        #     "bot": bot_id,
+        #     "url": url,
+        #     "actions": [action]
+        # }
+        # if search_term is not None:
+        #     data['search_term'] = search_term
         
-        r = requests.post(DB_URL+'/logs', data=data)
-        r.raise_for_status()
+        # r = requests.post(DB_URL+'/logs', data=data)
+        # r.raise_for_status()
+
+        # Logs table deprecated. Just need to send to LOGGER
+        if search_term is not None:
+            LOGGER.info('Searching for "' + search_term + '" at ' + url)
+        else:
+            LOGGER.info(action + ' at ' + url)
 
     def screenshot_ad(self, html_element, base64=True, name="current_Ad.png", crop=False):
         if crop:

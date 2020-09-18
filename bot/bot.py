@@ -3,9 +3,6 @@ import logging
 import random
 import os
 
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
-NUM_TERMS = 3               # number of terms to search
-
 LOGGER = logging.getLogger()
 
 def fetch_details(username):
@@ -14,7 +11,8 @@ def fetch_details(username):
   :param username: Username of bot
   """
   LOGGER.info('Fetching bot details')
-  r = requests.get(DB_URL+'/bot/'+username)
+  url = os.getenv('DB_URL') + '/bot/' + username
+  r = requests.get(url)
   r.raise_for_status()
   return r.json()
 
@@ -25,13 +23,13 @@ def get_search_terms(political_ranking, other_terms_category):
   :param other_terms_category: Demographic of bot
   """
   LOGGER.info('Fetching political search terms')
-  url = DB_URL + '/search_terms/political/%d' % political_ranking
+  url = os.getenv('DB_URL') + '/search_terms/political/' + str(political_ranking)
   r = requests.get(url)
   r.raise_for_status()
   search_terms = r.json()
 
   LOGGER.info('Fetching other search terms')
-  url = DB_URL + '/search_terms/other/%d' % other_terms_category
+  url = os.getenv('DB_URL') + '/search_terms/other/' + str(other_terms_category)
   r = requests.get(url)
   r.raise_for_status()
   search_terms = search_terms + r.json()
@@ -40,10 +38,11 @@ def get_search_terms(political_ranking, other_terms_category):
   random.shuffle(search_terms)
   random.shuffle(search_terms)
   random.shuffle(search_terms)
-  return search_terms[:NUM_TERMS]
+  return search_terms[:int(os.getenv('NUM_TERMS'))]
 
 class Bot:
   def __init__(self, username):
+    LOGGER.info('Initialising bot ' + username)
     details = fetch_details(username)
 
     self.firstname = details['name'][0]
@@ -61,7 +60,6 @@ class Bot:
       'lat': float(details['location']['latitude']),
       'lon': float(details['location']['longitude'])
     }
-    
     self.search_terms = get_search_terms(details['political_ranking'], details['other_terms_category'])
 
   def getFirstname(self):

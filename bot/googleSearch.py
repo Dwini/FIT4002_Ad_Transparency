@@ -19,9 +19,6 @@ import logging
 # import local modules.
 from bot import Bot
 
-# define constants
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
-
 LOGGER = logging.getLogger()
 
 class googleSearch:
@@ -54,10 +51,12 @@ class googleSearch:
         links = []
         for keyword in keywords:
             url = 'http://www.google.com/'
+            LOGGER.info('Opening: ' + url)
             # Search Keyword using text box
             self.webdriver.get(url)
             self.webdriver.get(url)
             sleep(2)
+            LOGGER.info('Searching for "' + keyword + '"')
             try:
                 search_box = self.webdriver.find_element_by_xpath("//input[@name='q']")
                 search_box.send_keys(keyword)
@@ -77,15 +76,6 @@ class googleSearch:
                 self.scrape(self, ad_list, keyword, r)
             # wait until shows result
             results = self.webdriver.find_elements_by_css_selector('div.g')
-
-            # save site visit to database
-            r = requests.post(DB_URL+'/logs', data={
-                "bot": self.bot.getUsername(),
-                "url": url,
-                "actions": ['search'],
-                "search_term": keyword
-            })
-            r.raise_for_status()
 
             newLinks = []
             #gather new links
@@ -123,16 +113,8 @@ class googleSearch:
             # Selenium loop thru dataframe to save PNGs into "screenshots" folder
             for index, row in df_ads.iterrows():
                 LOGGER.info('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
+                LOGGER.info('Opening: ' + row['ad_link'])
                 self.webdriver.get(row['ad_link'])
-
-                # save site visit to database
-                r = requests.post(DB_URL+'/logs', data={
-                    "bot": self.bot.getUsername(),
-                    "url": row['ad_link'],
-                    "actions": ['visit']
-                })
-                r.raise_for_status()
-
                 sleep(2)
                 self.webdriver.save_screenshot('screenshots/' + str(index) + '.png')
                 # webdriver.get_screenshot_as_file(str(index) + '.png')
@@ -159,7 +141,8 @@ class googleSearch:
             ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
 
             # save ad to database
-            r = requests.post(DB_URL + '/ads', data={
+            url = os.getenv('DB_URL') + '/ads'
+            r = requests.post(url, data={
                 "bot": self.bot.getUsername(),
                 "link": ad_link,
                 "headline": ad_headline,

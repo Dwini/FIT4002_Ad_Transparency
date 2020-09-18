@@ -9,9 +9,6 @@ import math
 from PIL import Image
 import logging
 
-# define constants
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
-
 LOGGER = logging.getLogger()
 
 #given a selenium driver retrieves a list of google ads which appear on the page
@@ -50,7 +47,8 @@ def getGoogleAds(driver, bot):
             LOGGER.error('Screenshot capture failed')
 
         try:
-            r = requests.post(DB_URL+'/ads', files={'file': image}, data={
+            url = os.getenv('DB_URL') + '/ads'
+            r = requests.post(url, files={'file': image}, data={
                 "bot": bot.username,
                 "link": adLink,
                 "headline": adLink,
