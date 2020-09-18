@@ -25,6 +25,11 @@ def get_session():
         LOGGER.info('Session data already exists. No need to extract')
         return
 
+    if not os.path.isfile(INITIAL_SESSION_PATH):
+        LOGGER.warning('No inital session data found, new session data will be created')
+        LOGGER.warning('This will most likely raise a captcha on login')
+        return
+
     LOGGER.info('Extracting session data')
     zipfile.ZipFile(INITIAL_SESSION_PATH, 'r').extractall(ALL_SESSIONS_PATH)
 
