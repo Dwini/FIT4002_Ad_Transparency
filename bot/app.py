@@ -21,13 +21,13 @@ load_dotenv()
 AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 
 def main():
+    setup.create_dirs()
     setup.configure_logger()
     LOGGER = logging.getLogger()
     session = None
     display = None          # For container builds
 
     try:
-        setup.create_dirs()
         setup.ping_db()
 
         # For container builds
