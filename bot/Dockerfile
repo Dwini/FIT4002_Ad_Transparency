@@ -53,6 +53,8 @@ ENV DB_URL "http://db:8080"
 
 # TODO: Clean this up. Add to RUN command above?
 RUN useradd -ms /bin/bash bot
+RUN chown -R bot:bot /app
+RUN chmod 755 /app
 USER bot
 
 # default entry point. Container will force close after 1 minute.

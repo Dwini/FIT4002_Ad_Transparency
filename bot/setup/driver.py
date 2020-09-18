@@ -13,40 +13,20 @@ import zipfile
 import setup.proxy as proxy
 
 LOGGER = logging.getLogger()
-BASE_URL = 'https://fit4002.s3-ap-southeast-2.amazonaws.com/session/'
 
-CHROMEDRIVER_URL = BASE_URL + 'chromedriver'
-CHROMEDRIVER_PATH = './out/chromedriver'
+CHROMEDRIVER_PATH = './setup/chromedriver'
 
-SESSION_URL = BASE_URL + os.getenv('AD_USERNAME') + '.zip'
-PROFILES_PATH = './out/profiles/'
-SESSION_PATH = PROFILES_PATH + os.getenv('AD_USERNAME')
+ALL_SESSIONS_PATH = './out/sessions/'
+SESSION_PATH = ALL_SESSIONS_PATH + os.getenv('AD_USERNAME')
+INITIAL_SESSION_PATH = './setup/initial_sessions/' + os.getenv('AD_USERNAME') + '.zip'
 
 def get_session():
     if os.path.isdir(SESSION_PATH):
-        LOGGER.info('Session data already exists. No need to download')
+        LOGGER.info('Session data already exists. No need to extract')
         return
-
-    LOGGER.info('Downloading session data')
-    r = requests.get(SESSION_URL, allow_redirects=True)
-    r.raise_for_status()
-    open(SESSION_PATH + '.zip', 'wb').write(r.content)
 
     LOGGER.info('Extracting session data')
-    zipfile.ZipFile(SESSION_PATH + '.zip', 'r').extractall(PROFILES_PATH)
-
-def download_chromedriver():
-    if os.path.isfile(CHROMEDRIVER_PATH):
-        LOGGER.info('"chromedriver" already exists. No need to download')
-        return
-
-    LOGGER.info('Downloading "chromedriver"')
-    r = requests.get(CHROMEDRIVER_URL, allow_redirects=True)
-    r.raise_for_status()
-    open(CHROMEDRIVER_PATH, 'wb').write(r.content)
-
-    st = os.stat(CHROMEDRIVER_PATH)
-    os.chmod(CHROMEDRIVER_PATH, st.st_mode | stat.S_IEXEC)
+    zipfile.ZipFile(INITIAL_SESSION_PATH, 'r').extractall(ALL_SESSIONS_PATH)
 
 def create_driver(proxyIP=None):
     """
@@ -72,7 +52,6 @@ def create_driver(proxyIP=None):
     return driver
 
 def get_driver(pos=None):
-    download_chromedriver()
     get_session()
 
     if os.getenv('USE_PROXIES') != "1":
