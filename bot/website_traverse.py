@@ -57,16 +57,19 @@ class webTraverse:
             LOGGER.info('Waiting...')
             sleep(randint(10, 15))
 
-            try:
-                r = requests.post(os.getenv('DB_URL')+'/logs', data={
-                    "bot": self.bot.getUsername(),
-                    "url": url,
-                    "actions": ['visit']
-                })
-                r.raise_for_status()
-            #except ConnectionRefusedError:
-            except:
-                LOGGER.error("Couldn't log activity. Connection Error")
+            LOGGER.info('Opening ' + url)
+
+            # Logs route deprecated
+            # try:
+            #     r = requests.post(os.getenv('DB_URL')+'/logs', data={
+            #         "bot": self.bot.getUsername(),
+            #         "url": url,
+            #         "actions": ['visit']
+            #     })
+            #     r.raise_for_status()
+            # #except ConnectionRefusedError:
+            # except:
+            #     LOGGER.error("Couldn't log activity. Connection Error")
 
             # dialogues can get in the way of ads and scrolling
             self.clear_dialogs()

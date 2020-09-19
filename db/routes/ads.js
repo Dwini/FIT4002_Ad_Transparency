@@ -3,9 +3,6 @@ const moment = require('moment-timezone');
 const multer = require('multer');
 const fs = require('fs');
 
-const uuidv4 = require('./_uuid');
-const sorter = require('./_sorter');
-const filterOptions = require('./_filterOptions');
 const { DATETIME_FORMAT } = require('../config')
 const { accessKeyId, secretAccessKey, region, 
     bucket } = require('../config').aws;
@@ -15,6 +12,17 @@ var docClient = new AWS.DynamoDB.DocumentClient();
 var s3 = new AWS.S3();
 
 const upload = multer({ dest: '/tmp/' });
+
+function uuidv4() {
+    /**
+     * Creates a version 4 UUID
+     * Credits: https://stackoverflow.com/a/2117523
+     */
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
 
 module.exports = app => {
     app.route('/ads')
@@ -27,11 +35,23 @@ module.exports = app => {
 
             const { bot } = req.query;
             if (bot) {
-                params = { ...params, ...filterOptions(bot) };
+                params = { 
+                    ...params, 
+                    FilterExpression: '#b = :b',
+                    ExpressionAttributeNames: { '#b': 'bot' },
+                    ExpressionAttributeValues: { ':b': bot } 
+                };
             };
 
             docClient.scan(params, function(err, data) {
                 if (err) return next(err);
+
+                // Sort in order of date (newest first)
+                const resp = data.Items.sort((a, b) => {
+                    const aDate = moment(a.datetime, DATETIME_FORMAT).valueOf();
+                    const bDate = moment(b.datetime, DATETIME_FORMAT).valueOf();
+                    return aDate < bDate ? 1 : -1;
+                })
                 res.send(data.Items.sort(sorter));
             });
         })

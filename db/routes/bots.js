@@ -1,5 +1,4 @@
 const AWS = require('aws-sdk');
-const moment = require('moment-timezone');
 
 const { accessKeyId, secretAccessKey, 
     region } = require('../config').aws;
