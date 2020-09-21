@@ -16,19 +16,19 @@ def update_bot_cache():
     cache_handler.bot_dict.clear()
 
     # retrieve all raw data from 'Bots' table in AWS DynamoDB.
-    raw_data = db_controller.get_full_table('Bots')
+    data = db_controller.get_bot_table()
 
     # iterate over each item in the raw data and append the information to the
     # the bot_list.
-    for item in raw_data['Items']:
+    for bot in data:
         # parse data and add to bot_dict. set username as the key and create an
         # object as the value.
-        cache_handler.bot_dict[item['username']['S']] = {
-            'password': item['password']['S'],
-            'name': item['name']['L'][0]['S']+" "+item['name']['L'][1]['S'],
-            'gender': item['gender']['S'] if 'gender' in item else '-',
-            'political_ranking': int(item['political_ranking']['N']),
-            'dob': item['DOB']['S'] if 'DOB' in item else '-',
-            'latitude': float(item['location']['M']['latitude']['N']) if 'location' in item else '-',
-            'longitude': float(item['location']['M']['longitude']['N']) if 'location' in item else '-',
+        cache_handler.bot_dict[bot['username']] = {
+            'password': bot['password'],
+            'name': bot['name'][0]+" "+bot['name'][1],
+            'gender': bot['gender'] if 'gender' in bot else '-',
+            'political_ranking': int(bot['political_ranking']),
+            'dob': bot['DOB'] if 'DOB' in bot else '-',
+            'latitude': float(bot['location']['latitude']) if 'location' in bot else '-',
+            'longitude': float(bot['location']['longitude']) if 'location' in bot else '-',
         }
