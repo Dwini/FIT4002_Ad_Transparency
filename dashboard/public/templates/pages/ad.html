@@ -41,6 +41,7 @@
                 <th>Username</th>
                 <th>Name</th>
                 <th>Political Ranking</th>
+                <th>Other Category</th>
                 <th>DOB</th>
                 <th>Gender</th>
                 <th>Password</th>
@@ -50,7 +51,8 @@
               <tr>
                 <td>{{ data['ad']['bot'] }}</td>
                 <td>{{ data['bot']['name'] }}</td>
-                <td>{{ data['bot']['political_ranking'] }}</td>
+                <td><a href="/political/{{ data['bot']['political_ranking'] }}">{{ data['bot']['political_ranking'] }}</td>
+                <td><a href="/other/{{ data['bot']['other_terms_category'] }}">{{ data['bot']['other_terms_category'] }}</td>
                 <td>{{ data['bot']['dob'] }}</td>
                 <td>{{ data['bot']['gender'] }}</td>
                 <td>{{ data['bot']['password'] }}</td>

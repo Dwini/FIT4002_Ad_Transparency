@@ -5,7 +5,7 @@ DynamoDB. This information is in a structured format to be rendered in HTML.
 Last updated: MB 8/09/2020 - create module.
 """
 # import local modules.
-from src import db_controller, cache_handler
+from src import db_controller, cache_handler, search_term_controller
 
 """
 This function will update the cached bot dictionary. Each key in the dictionary
@@ -28,7 +28,12 @@ def update_bot_cache():
             'name': bot['name'][0]+" "+bot['name'][1],
             'gender': bot['gender'] if 'gender' in bot else '-',
             'political_ranking': int(bot['political_ranking']),
+            'other_terms_category': int(bot['other_terms_category']) if 'other_terms_category' in bot else '-',
             'dob': bot['DOB'] if 'DOB' in bot else '-',
             'latitude': float(bot['location']['latitude']) if 'location' in bot else '-',
             'longitude': float(bot['location']['longitude']) if 'location' in bot else '-',
         }
+
+    # once bot data has been saved, load search terms.
+    search_term_controller.update_political_cache()
+    search_term_controller.update_other_cache()

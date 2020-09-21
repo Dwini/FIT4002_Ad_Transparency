@@ -17,7 +17,7 @@
             <div class='card bordered shadowed'>
               <h1 class='card-title'>Bot Dashboard</h1>
               <div class='card-body'>
-                <a class='card-link-inverted bordered' href='/bots?refresh=True' type='button'>refresh bot data</a>
+                <a class='card-link-inverted bordered' href='{{ request.path }}?refresh=True' type='button'>refresh bot data</a>
               </div>
             </div>
           </div>
@@ -30,6 +30,7 @@
                 <th>Username</th>
                 <th>Name</th>
                 <th>Political Ranking</th>
+                <th>Other Category</th>
                 <th>DOB</th>
                 <th>Gender</th>
                 <th>Password</th>
@@ -40,7 +41,8 @@
               <tr>
                 <td>{{ username }}</td>
                 <td>{{ values['name'] }}</td>
-                <td>{{ values['political_ranking'] }}</td>
+                <td><a href="/political/{{ values['political_ranking'] }}">{{ values['political_ranking'] }}</a></td>
+                <td><a href="/other/{{ values['other_terms_category'] }}">{{ values['other_terms_category'] }}</a></td>
                 <td>{{ values['dob'] }}</td>
                 <td>{{ values['gender'] }}</td>
                 <td>{{ values['password'] }}</td>

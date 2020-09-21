@@ -9,6 +9,9 @@ Last updated: MB 21/09/2020 - connect to NodeJS DB project instead of making con
 import os, dotenv, requests, time
 dotenv.load_dotenv()
 
+# import local modules.
+from src import cache_handler
+
 # load constants.
 DB_URI = os.getenv('DB_URI') or 'http://localhost:8080'  # default db project endpoint.
 
@@ -31,6 +34,44 @@ def get_ad_table():
 
     # return the json data.
     return r.json()
+
+"""
+Save a json list of political search terms for this other ranking into cache.
+"""
+def save_political_search_terms(ranking):
+    # connect to the db project and return the political searchterms.
+    r = requests.get(DB_URI+'/search_terms/political/'+str(ranking))
+
+    # try and parse the data.
+    try:
+        # parse into json.
+        data = r.json()
+
+        # override the old list with the new list.
+        cache_handler.political_search_term_dict[ranking] = data
+
+    # if error, do nothing.
+    except:
+        pass
+
+"""
+Save a json list of other search terms for this other ranking into cache.
+"""
+def save_other_search_terms(ranking):
+    # connect to the db project and return the other searchterms.
+    r = requests.get(DB_URI+'/search_terms/other/'+str(ranking))
+
+    # try and parse the data.
+    try:
+        # parse into json.
+        data = r.json()
+
+        # override the old list with the new list.
+        cache_handler.other_search_term_dict[ranking] = data
+
+    # if error, do nothing.
+    except:
+        pass
 
 """
 Block execution of this thread until the DB Project has been found.
