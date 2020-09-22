@@ -8,12 +8,13 @@ Repository for a final year project at Monash University around ad transparency
 ### DB Project
 1. Install Node and npm.
 2. Move to the `/db` directory and run `npm install` to install all dependencies.
-3. Run project with `node index.js`.
+3. Run project with `npm start`.
 
 ### Bot Project
-1. Install all python requirements by running `pip install --upgrade -r /requirements.txt`.
+1. Move to the `/bot` directory and install all python requirements by running `pip install --upgrade -r requirements.txt`.
+2. Make sure the correct `chromedriver` is being used. See `bot/setup/driver.py` and look for `CHROMEDRIVER_PATH`
 2. Ensure the DB Project is running.
-3. run `set "AD_USERNAME=<username>" && python bot/app.py`. Where <username> is the username of the google profile to run.
+3. run `set "AD_USERNAME=<username>" && python app.py`. Where <username> is the username of the google profile to run.
 
 ## Instructions for running the project in a docker container
 ### Installing Docker

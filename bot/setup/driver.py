@@ -16,6 +16,9 @@ LOGGER = logging.getLogger()
 
 CHROMEDRIVER_PATH = './setup/chromedriver'
 
+# If running in Windows use this chromedriver instead
+# CHROMEDRIVER_PATH = './setup/chromedriver.exe'
+
 ALL_SESSIONS_PATH = './out/sessions/'
 SESSION_PATH = ALL_SESSIONS_PATH + os.getenv('AD_USERNAME')
 INITIAL_SESSION_PATH = './setup/initial_sessions/' + os.getenv('AD_USERNAME') + '.zip'
