@@ -9,10 +9,10 @@ import os, sys, json
 from flask import Flask, request, abort
 
 # import local modules.
-from src import bot_controller, ad_controller
+from src import bot_controller, ad_controller, db_controller
 
 # import routes.
-from routes import index, bots, ads
+from routes import index, bots, ads, search_terms
 
 # define constants.
 FILENAME = os.path.basename(__file__)
@@ -24,6 +24,10 @@ app = Flask(__name__, template_folder='public/templates', static_folder='public/
 index.init(app)
 bots.init(app)
 ads.init(app)
+search_terms.init(app)
+
+# Do not execute until db container has been started.
+db_controller.wait_for_heartbeat()
 
 # populate the bot and ad caches.
 print('loading data into cache...')

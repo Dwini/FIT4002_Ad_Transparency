@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "partials/header.html" %}
+    <title>transparency - political search terms</title>
+  </head>
+
+  <body>
+    {% include "partials/pre-nav.html" %}
+    {% include "partials/post-nav.html" %}
+
+    <div class='page-section-home'>
+      <div class='anchor' id='states'></div>
+      <div class='content page-height'>
+        <div class='column-container'>
+          <div class='column'>
+            <div class='card bordered shadowed'>
+              <h1 class='card-title'>Political Search Terms</h1>
+              <div class='card-body'>
+                <a class='card-link-inverted bordered' href='{{ request.path }}?refresh=True' type='button'>refresh data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='column-container'>
+          <div class='column'>
+            <table class='table-bots shadowed'>
+              <tr>
+                <th>Search Terms</th>
+              </tr>
+              {% for search_term in data['political_search_terms'] %}
+              <tr>
+                <td>{{ search_term }}</td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

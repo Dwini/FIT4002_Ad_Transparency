@@ -5,7 +5,7 @@ dashboard project.
 Last updated: MB 8/09/2020 - copy boilerplate code from previous flask project.
 """
 # import external libraries.
-import pytz, signal
+import pytz
 from datetime import datetime
 
 """
@@ -43,3 +43,15 @@ id = {
 }
 """
 ad_dict = dict()
+
+"""
+This is a dictionary with the id of the political ranking as a key, and a list
+of political search terms as the value.
+"""
+political_search_term_dict = dict()
+
+"""
+This is a dictionary with the id of the other ranking as a key, and a list
+of other search terms as the value.
+"""
+other_search_term_dict = dict()

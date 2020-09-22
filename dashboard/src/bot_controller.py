@@ -5,7 +5,7 @@ DynamoDB. This information is in a structured format to be rendered in HTML.
 Last updated: MB 8/09/2020 - create module.
 """
 # import local modules.
-from src import db_controller, cache_handler
+from src import db_controller, cache_handler, search_term_controller
 
 """
 This function will update the cached bot dictionary. Each key in the dictionary
@@ -16,19 +16,24 @@ def update_bot_cache():
     cache_handler.bot_dict.clear()
 
     # retrieve all raw data from 'Bots' table in AWS DynamoDB.
-    raw_data = db_controller.get_full_table('Bots')
+    data = db_controller.get_bot_table()
 
     # iterate over each item in the raw data and append the information to the
     # the bot_list.
-    for item in raw_data['Items']:
+    for bot in data:
         # parse data and add to bot_dict. set username as the key and create an
         # object as the value.
-        cache_handler.bot_dict[item['username']['S']] = {
-            'password': item['password']['S'],
-            'name': item['name']['L'][0]['S']+" "+item['name']['L'][1]['S'],
-            'gender': item['gender']['S'] if 'gender' in item else '-',
-            'political_ranking': int(item['political_ranking']['N']),
-            'dob': item['DOB']['S'] if 'DOB' in item else '-',
-            'latitude': float(item['location']['M']['latitude']['N']) if 'location' in item else '-',
-            'longitude': float(item['location']['M']['longitude']['N']) if 'location' in item else '-',
+        cache_handler.bot_dict[bot['username']] = {
+            'password': bot['password'],
+            'name': bot['name'][0]+" "+bot['name'][1],
+            'gender': bot['gender'] if 'gender' in bot else '-',
+            'political_ranking': int(bot['political_ranking']),
+            'other_terms_category': int(bot['other_terms_category']) if 'other_terms_category' in bot else '-',
+            'dob': bot['DOB'] if 'DOB' in bot else '-',
+            'latitude': float(bot['location']['latitude']) if 'location' in bot else '-',
+            'longitude': float(bot['location']['longitude']) if 'location' in bot else '-',
         }
+
+    # once bot data has been saved, load search terms.
+    search_term_controller.update_political_cache()
+    search_term_controller.update_other_cache()
