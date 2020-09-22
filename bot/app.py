@@ -58,8 +58,7 @@ def main():
         for items in bot.search_terms:
             yt_scraper.scrape_youtube_video_ads(items)
     except:
-        LOGGER.exception('Something went wrong. Possible bug')
-        raise
+        LOGGER.error("Exception occurred", exc_info=True)
     else:
         LOGGER.info('Session completed successfully')
     finally:
