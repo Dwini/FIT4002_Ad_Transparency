@@ -5,6 +5,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 from requests_html import HTMLSession
 from time import sleep
 import random
@@ -43,26 +44,35 @@ class webscraper:
     def login(self):
         print('>> Logging into Google account')
 
+        actions_email = ActionChains(webdriver)
+        actions_password = ActionChains(webdriver)
+        actions_enter = ActionChains(webdriver)
+
         self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
         sleep(2)
 
         try:
-            self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+            actions_email = actions_email.send_keys('Joel.Trump.3546@gmail.com')
+            actions_email.perform()
+            sleep(5)
         except:
             print('\t>> Could not find username field. Assuming already logged in')
             self.webdriver.save_screenshot('/tmp/out/login_proof.png')
             return
 
-        self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-        sleep(4)
+        actions_enter = actions_enter.send_keys(Keys.ENTER)
+        actions_enter.perform()
+        sleep(7)
 
         try:
-            self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+            actions_password = actions_password.send_keys('hi1234()')
+            actions_password.perform()
+            sleep(4)
         except:
             print("\t>> Captcha encountered!")
             self.handle_captcha()
         
-        self.webdriver.find_element_by_id('passwordNext').click()
+        actions_enter.perform()
         sleep(20)   # large wait time as proxies are slow...
 
         print("\t>> Login successful")
