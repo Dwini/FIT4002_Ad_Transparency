@@ -52,7 +52,7 @@ class webscraper:
         sleep(2)
 
         try:
-            actions_email = actions_email.send_keys('Joel.Trump.3546@gmail.com')
+            actions_email = actions_email.send_keys(self.bot.getUsername())
             actions_email.perform()
             sleep(5)
         except:
@@ -65,7 +65,7 @@ class webscraper:
         sleep(7)
 
         try:
-            actions_password = actions_password.send_keys('hi1234()')
+            actions_password = actions_password.send_keys(self.bot.getPassword())
             actions_password.perform()
             sleep(4)
         except:
