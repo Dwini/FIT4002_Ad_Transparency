@@ -52,7 +52,7 @@ module.exports = app => {
                     const bDate = moment(b.datetime, DATETIME_FORMAT).valueOf();
                     return aDate < bDate ? 1 : -1;
                 })
-                res.send(data.Items.sort(sorter));
+                res.send(resp);
             });
         })
         .post(upload.single('file'), function(req, res, next) {
