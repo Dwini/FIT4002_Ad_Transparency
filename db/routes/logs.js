@@ -15,7 +15,7 @@ module.exports = app => {
         .get(function(req, res, next) {
             /**
              * Fetch list of log files from S3
-             * @param query.bot - Username of bot to filter by
+             * @param query.bot - Username of bot to filter by TODO
              */
 
             var params = {
@@ -28,7 +28,7 @@ module.exports = app => {
                 if (err) return next(err);
 
                 var resp = data.Contents;
-                resp.shift();
+                resp.shift();       // First item is just logs directory
                 resp = resp.map(elem => {
                     const filename = elem.Key.replace('logs/', '');
                     return {

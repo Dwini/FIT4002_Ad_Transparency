@@ -8,6 +8,8 @@ import requests
 import logging
 from dotenv import load_dotenv
 
+load_dotenv()
+
 # local imports
 import setup
 from teardown import teardown
@@ -17,7 +19,6 @@ from signup import botCreator
 from youtube_scraper import youtube_scraper, yt_ad
 
 # get environment variables.
-load_dotenv()
 AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 
 def main():
