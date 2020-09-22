@@ -34,37 +34,52 @@ class botCreator:
         self.successful()
 
     def tabEntry(self):
-        actions_create = ActionChains(self.webdriver)
-        actions_create = actions_create.send_keys(self.bot.getFirstname())
-        actions_create = actions_create.send_keys(Keys.TAB)
-        actions_create = actions_create.send_keys(self.bot.getLastname())
-        actions_create = actions_create.send_keys(Keys.TAB)
-        actions_create = actions_create.send_keys(self.bot.getUsername())
-        actions_create = actions_create.send_keys(Keys.TAB)
-        actions_create = actions_create.send_keys(Keys.TAB)
-        actions_create = actions_create.send_keys(self.bot.getPassword())
-        actions_create = actions_create.send_keys(Keys.TAB)
-        actions_create = actions_create.send_keys(self.bot.getPassword)
-        actions_create.perform()
+        try:
+            actions_create = ActionChains(self.webdriver)
+            actions_create = actions_create.send_keys(self.bot.getFirstname())
+            actions_create = actions_create.send_keys(Keys.TAB)
+            actions_create = actions_create.send_keys(self.bot.getLastname())
+            actions_create = actions_create.send_keys(Keys.TAB)
+            actions_create = actions_create.send_keys(self.bot.getUsername())
+            actions_create = actions_create.send_keys(Keys.TAB)
+            actions_create = actions_create.send_keys(Keys.TAB)
+            actions_create = actions_create.send_keys(self.bot.getPassword())
+            actions_create = actions_create.send_keys(Keys.TAB)
+            actions_create = actions_create.send_keys(self.bot.getPassword)
+            actions_create.perform()
+        except:
+            print('\t>> Could not enter details into first signup page')
+            self.webdriver.save_screenshot('/tmp/out/signup_initial_proof.png')
+            return
 
     def next(self):
-        actions_next = ActionChains(self.webdriver)
-        actions_next = actions_next.send_keys(Keys.TAB)
-        actions_next = actions_next.send_keys(Keys.TAB)
-        actions_next.perform()
+        try:
+            actions_next = ActionChains(self.webdriver)
+            actions_next = actions_next.send_keys(Keys.TAB)
+            actions_next = actions_next.send_keys(Keys.TAB)
+            actions_next.perform()
+        except:
+            print('\t>> Could not continue signup')
+            self.webdriver.save_screenshot('/tmp/out/signup_continue_proof.png')
+            return
 
     def finalise(self):
-        actions_finalise = ActionChains(self.webdriver)
-        actions_finalise = actions_finalise.send_keys(Keys.TAB)
-        actions_finalise = actions_finalise.send_keys(Keys.TAB)
-        actions_finalise = actions_finalise.send_keys(self.bot.getBirthDay())
-        actions_finalise = actions_finalise.send_keys(Keys.TAB)
-        actions_finalise = actions_finalise.send_keys(self.bot.getBirthMonth())
-        actions_finalise = actions_finalise.send_keys(Keys.TAB)
-        actions_finalise = actions_finalise.send_keys(self.bot.getBirthYear())
-        actions_finalise = actions_finalise.send_keys(Keys.TAB)
-        actions_finalise = actions_finalise.send_keys(self.bot.getGender())
-        actions_finalise.perform()
+        try:
+            actions_finalise = ActionChains(self.webdriver)
+            actions_finalise = actions_finalise.send_keys(Keys.TAB)
+            actions_finalise = actions_finalise.send_keys(Keys.TAB)
+            actions_finalise = actions_finalise.send_keys(self.bot.getBirthDay())
+            actions_finalise = actions_finalise.send_keys(Keys.TAB)
+            actions_finalise = actions_finalise.send_keys(self.bot.getBirthMonth())
+            actions_finalise = actions_finalise.send_keys(Keys.TAB)
+            actions_finalise = actions_finalise.send_keys(self.bot.getBirthYear())
+            actions_finalise = actions_finalise.send_keys(Keys.TAB)
+            actions_finalise = actions_finalise.send_keys(self.bot.getGender())
+            actions_finalise.perform()
+        except:
+            print('\t>> Could not enter details into final signup page')
+            self.webdriver.save_screenshot('/tmp/out/signup_final_proof.png')
+            return
 
     def successful(self):
         #Need to finish adding new bots into the database
