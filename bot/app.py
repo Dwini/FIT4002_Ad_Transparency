@@ -12,6 +12,8 @@ load_dotenv()
 
 # local imports
 import setup
+from driver import get_driver
+from errors import handle_error
 from teardown import teardown
 from bot import Bot
 from webscraper import webscraper
@@ -22,8 +24,8 @@ from youtube_scraper import youtube_scraper, yt_ad
 AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 
 def main():
-    setup.create_dirs()
-    setup.configure_logger()
+    setup.initial_setup()
+
     LOGGER = logging.getLogger()
     session = None
     display = None          # For container builds
@@ -35,6 +37,7 @@ def main():
         if len(sys.argv) > 1 and sys.argv[1] == '-c':
             display = setup.start_display()
 
+        # Init bot
         bot = None
         creating = False
         if creating:
@@ -42,23 +45,21 @@ def main():
         else:
             bot = Bot(AD_USERNAME)
 
-        session = setup.get_driver()
-
-        if os.getenv('CHANGE_LOCATION') == "1":
-            setup.set_location(session, bot.position)
+        # Driver setup
+        session = get_driver(bot.position)
 
         # Google scraping
         ws = webscraper(session, bot)
-
         ws.activate_bot()
+
         ws.login()
 
         # Youtube scraping
         yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
         for items in bot.search_terms:
             yt_scraper.scrape_youtube_video_ads(items)
-    except:
-        LOGGER.error("Exception occurred", exc_info=True)
+    except Exception as e:
+        handle_error(e)
     else:
         LOGGER.info('Session completed successfully')
     finally:

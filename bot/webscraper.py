@@ -60,7 +60,6 @@ class webscraper:
             sleep(5)
         except:
             LOGGER.warning('Could not find username field. Assuming already logged in')
-            self.webdriver.save_screenshot('./out/login_proof.png')
             return
 
         actions_enter = actions_enter.send_keys(Keys.ENTER)
@@ -80,6 +79,11 @@ class webscraper:
         sleep(20)   # large wait time as proxies are slow...
 
         LOGGER.info("Login successful")
+
+        url = 'https://www.google.com'
+        self.webdriver.get(url)
+        sleep(2)
+        self.webdriver.save_screenshot('./out/login_proof.png')
 
     def activate_bot(self):
         choice = random.randint(0,1)

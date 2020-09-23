@@ -51,7 +51,7 @@ module.exports = app => {
                     const aDate = moment(a.datetime, DATETIME_FORMAT).valueOf();
                     const bDate = moment(b.datetime, DATETIME_FORMAT).valueOf();
                     return aDate < bDate ? 1 : -1;
-                })
+                });
                 res.send(resp);
             });
         })

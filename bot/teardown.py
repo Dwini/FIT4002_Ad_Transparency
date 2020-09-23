@@ -5,7 +5,7 @@ import requests
 LOGGER = logging.getLogger()
 
 def teardown(session, display):
-    LOGGER.info('Performing teardown')
+    print('>> Performing teardown')
 
     if session is not None:
         session.quit()
@@ -13,10 +13,14 @@ def teardown(session, display):
     if display is not None:
         display.stop()
 
+    logfile_path = LOGGER.handlers[0].baseFilename
+    print('>> Log file saved to: ' + logfile_path)
+
     # Upload log file
-    print('Uploading log file')
     if os.getenv('UPLOAD_LOGS') == "1":
+        print('>> Uploading log file')
+
         url = os.getenv('DB_URL') + '/logs'
-        log_file = open(LOGGER.handlers[0].baseFilename, 'rb')
-        r = requests.post(url, files={ 'file':  log_file })
+        logfile = open(logfile_path, 'rb')
+        r = requests.post(url, files={ 'file':  logfile })
         r.raise_for_status()

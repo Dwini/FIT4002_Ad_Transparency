@@ -1,6 +1,7 @@
 from geopy.geocoders import Nominatim
 from time import sleep
 import logging
+import os
 
 LOGGER = logging.getLogger()
 
@@ -10,6 +11,9 @@ def set_location(driver, location):
         driver: Selenium driver
         location: Dictionary of the form { 'lat': ..., 'lon': ... }
     """
+    if os.getenv('CHANGE_LOCATION') != "1":
+        return
+
     locator = Nominatim(user_agent="google")
     coordinates = "%f, %f" % (location['lat'], location['lon'])
     loc_info = locator.reverse(coordinates)

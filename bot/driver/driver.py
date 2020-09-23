@@ -1,40 +1,18 @@
 # import external libraries.
-import sys
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
-import geopy
 import os
 import logging
-import stat
-import requests
-import zipfile
 
-import setup.proxy as proxy
+import driver.proxy as proxy
 
 LOGGER = logging.getLogger()
 
-CHROMEDRIVER_PATH = './setup/chromedriver'
-
+CHROMEDRIVER_PATH = './driver/chromedriver'
 # If running in Windows use this chromedriver instead
-# CHROMEDRIVER_PATH = './setup/chromedriver.exe'
+# CHROMEDRIVER_PATH = './driver/chromedriver.exe'
 
-ALL_SESSIONS_PATH = './out/sessions/'
-SESSION_PATH = ALL_SESSIONS_PATH + os.getenv('AD_USERNAME')
-INITIAL_SESSION_PATH = './setup/initial_sessions/' + os.getenv('AD_USERNAME') + '.zip'
-
-def get_session():
-    if os.path.isdir(SESSION_PATH):
-        LOGGER.info('Session data already exists. No need to extract')
-        return
-
-    if not os.path.isfile(INITIAL_SESSION_PATH):
-        LOGGER.warning('No inital session data found, new session data will be created')
-        LOGGER.warning('This will most likely raise a captcha on login')
-        return
-
-    LOGGER.info('Extracting session data')
-    zipfile.ZipFile(INITIAL_SESSION_PATH, 'r').extractall(ALL_SESSIONS_PATH)
+SESSION_PATH = './out/sessions/' + os.getenv('AD_USERNAME')
 
 def create_driver(proxyIP=None):
     """
@@ -59,12 +37,7 @@ def create_driver(proxyIP=None):
 
     return driver
 
-def get_driver(pos=None):
-    get_session()
-
-    if os.getenv('USE_PROXIES') != "1":
-        return create_driver()
-    
+def create_driver_with_proxy(pos):
     i = 0
     proxies = proxy.get_proxy_list()
 
@@ -85,12 +58,12 @@ def get_driver(pos=None):
             i += 1
 
     if session == None:
-        LOGGER.error("No working proxies found")
         raise RuntimeError('No working proxies found')
         return
         
     ip_info = proxy.ip_lookup(address)
     location = '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
     LOGGER.info("Proxy change successful (location: %s)" % location)    
+
     return session
     

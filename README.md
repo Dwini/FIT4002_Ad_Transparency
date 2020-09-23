@@ -12,7 +12,7 @@ Repository for a final year project at Monash University around ad transparency
 
 ### Bot Project
 1. Move to the `/bot` directory and install all python requirements by running `pip install --upgrade -r requirements.txt`.
-2. Make sure the correct `chromedriver` is being used. See `bot/setup/driver.py` and look for `CHROMEDRIVER_PATH`
+2. Make sure the correct `chromedriver` is being used. See `bot/driver/driver.py` and look for `CHROMEDRIVER_PATH`
 2. Ensure the DB Project is running.
 3. run `set "AD_USERNAME=<username>" && python app.py`. Where <username> is the username of the google profile to run.
 
