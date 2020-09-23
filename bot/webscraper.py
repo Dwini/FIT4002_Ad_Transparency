@@ -44,9 +44,9 @@ class webscraper:
     def login(self):
         print('>> Logging into Google account')
 
-        actions_email = ActionChains(webdriver)
-        actions_password = ActionChains(webdriver)
-        actions_enter = ActionChains(webdriver)
+        actions_email = ActionChains(self.webdriver)
+        actions_password = ActionChains(self.webdriver)
+        actions_enter = ActionChains(self.webdriver)
 
         self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
         sleep(2)
