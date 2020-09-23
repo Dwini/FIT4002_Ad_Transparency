@@ -47,9 +47,9 @@ class webscraper:
 
         url = 'https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/'
         LOGGER.info('Opening: ' + url)
-        actions_email = ActionChains(webdriver)
-        actions_password = ActionChains(webdriver)
-        actions_enter = ActionChains(webdriver)
+        actions_email = ActionChains(self.webdriver)
+        actions_password = ActionChains(self.webdriver)
+        actions_enter = ActionChains(self.webdriver)
 
         self.webdriver.get(url)
         sleep(2)
