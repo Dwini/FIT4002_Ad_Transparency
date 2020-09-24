@@ -39,6 +39,7 @@ def timeout_action(_signo, _stack_frame):
     """
     global TIMED_OUT
     TIMED_OUT = True
+    log.error('Program timed out')
     raise TimeoutError()
 
 def start_display():

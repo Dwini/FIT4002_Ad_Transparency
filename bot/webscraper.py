@@ -46,15 +46,17 @@ class webscraper:
         log.info('Logging into Google account')
 
         url = 'https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/'
-        log.info('Opening: ' + url)
+        log.info('Opening ' + url)
         actions_email = ActionChains(self.webdriver)
         actions_password = ActionChains(self.webdriver)
         actions_enter = ActionChains(self.webdriver)
 
         self.webdriver.get(url)
         sleep(2)
+        self.webdriver.save_screenshot('./out/login0.png')
 
         try:
+            log.info('Entering username')
             actions_email = actions_email.send_keys(self.bot.getUsername())
             actions_email.perform()
             sleep(5)
@@ -68,6 +70,7 @@ class webscraper:
         self.webdriver.save_screenshot('./out/login1.png')
 
         try:
+            log.info('Entering password')
             actions_password = actions_password.send_keys(self.bot.getPassword())
             actions_password.perform()
             sleep(4)
@@ -82,7 +85,7 @@ class webscraper:
 
         log.info("Login successful")
 
-        url = 'https://www.google.com'
+        url = 'https://mail.google.com/mail/u/0/#inbox'
         self.webdriver.get(url)
         sleep(2)
         self.webdriver.save_screenshot('./out/login_proof.png')
