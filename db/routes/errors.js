@@ -53,7 +53,9 @@ module.exports = app => {
     app.delete('/error/:log_file', function(req, res, next) {
         /**
          * Delete an error
-         * @param param.log_file    - Log file of associated error
+         * @param param.log_file    - Log file of associated error.
+         *      You can get a list of errors and their log files using
+         *      the above get route.
          */
         const { log_file } = req.params;
         const params = { TableName: 'Errors', Key: { log_file } };
