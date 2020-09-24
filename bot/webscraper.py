@@ -14,7 +14,7 @@ import logging
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 class webscraper:
     def __init__(self, webdriver, bot, scrapping = False):
@@ -34,7 +34,7 @@ class webscraper:
             try:
                 self.webdriver.find_element_by_xpath("//input[@aria-label='Type the text you hear or see']").send_keys(f.read())
             except:
-                LOGGER.error('Captcha input failed. Possibly incorrect captcha?')
+                log.error('Captcha input failed. Possibly incorrect captcha?')
                 raise
         
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
@@ -43,10 +43,10 @@ class webscraper:
         self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
 
     def login(self):
-        LOGGER.info('Logging into Google account')
+        log.info('Logging into Google account')
 
         url = 'https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/'
-        LOGGER.info('Opening: ' + url)
+        log.info('Opening: ' + url)
         actions_email = ActionChains(self.webdriver)
         actions_password = ActionChains(self.webdriver)
         actions_enter = ActionChains(self.webdriver)
@@ -59,26 +59,28 @@ class webscraper:
             actions_email.perform()
             sleep(5)
         except:
-            LOGGER.warning('Could not find username field. Assuming already logged in')
+            log.warning('Could not find username field. Assuming already logged in')
             return
 
         actions_enter = actions_enter.send_keys(Keys.ENTER)
         actions_enter.perform()
         sleep(7)
+        self.webdriver.save_screenshot('./out/login1.png')
 
         try:
             actions_password = actions_password.send_keys(self.bot.getPassword())
             actions_password.perform()
             sleep(4)
         except:
-            LOGGER.critical('Captcha encountered!')
-            LOGGER.info('Waiting for user input')
+            log.critical('Captcha encountered!')
+            log.info('Waiting for user input')
             self.handle_captcha()
         
         actions_enter.perform()
-        sleep(20)   # large wait time as proxies are slow...
+        self.webdriver.save_screenshot('./out/login2.png')
+        sleep(5)   # large wait time as proxies are slow...
 
-        LOGGER.info("Login successful")
+        log.info("Login successful")
 
         url = 'https://www.google.com'
         self.webdriver.get(url)
@@ -88,9 +90,9 @@ class webscraper:
     def activate_bot(self):
         choice = random.randint(0,1)
         if choice == 0:
-            LOGGER.info('Pre-login Google searching')
+            log.info('Pre-login Google searching')
             gs = googleSearch(self.webdriver, self.bot, self.scrapping)
             gs.search_keywords(num_links_to_visit=1)
         else:
-            LOGGER.info('Pre-login Youtube searching')
+            log.info('Pre-login Youtube searching')
             youtube_scraper(self.webdriver, self.bot, self.scrapping)

@@ -26,7 +26,7 @@ AD_USERNAME = os.getenv('AD_USERNAME') or "mwest5078"   # arbitrary default bot.
 def main():
     setup.initial_setup()
 
-    LOGGER = logging.getLogger()
+    log = logging.getLogger()
     session = None
     display = None          # For container builds
 
@@ -61,7 +61,7 @@ def main():
     except Exception as e:
         handle_error(e)
     else:
-        LOGGER.info('Session completed successfully')
+        log.info('Session completed successfully')
     finally:
         teardown(session, display)
 

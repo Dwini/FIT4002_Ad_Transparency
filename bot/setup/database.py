@@ -3,7 +3,7 @@ from time import sleep
 import requests
 import os
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 def ping_db():
     # Do not execute until db container has been started.
@@ -14,9 +14,9 @@ def ping_db():
         attempts += 1
         try:
             response = requests.get(os.getenv('DB_URL')+'/heartbeat')
-            LOGGER.info('Found db project')
+            log.info('Found db project')
         except:
-            LOGGER.warning('No response from db project. attempt: '+str(attempts))
+            log.warning('No response from db project. attempt: '+str(attempts))
             sleep(10)
             pass
 

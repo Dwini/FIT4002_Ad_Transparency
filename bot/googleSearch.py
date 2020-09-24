@@ -19,7 +19,7 @@ import logging
 # import local modules.
 from bot import Bot
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 class googleSearch:
     def __init__(self, webdriver, bot, scrapping):
@@ -51,24 +51,24 @@ class googleSearch:
         links = []
         for keyword in keywords:
             url = 'http://www.google.com/'
-            LOGGER.info('Opening: ' + url)
+            log.info('Opening: ' + url)
             # Search Keyword using text box
             self.webdriver.get(url)
             self.webdriver.get(url)
             sleep(2)
-            LOGGER.info('Searching for "' + keyword + '"')
+            log.info('Searching for "' + keyword + '"')
             try:
                 search_box = self.webdriver.find_element_by_xpath("//input[@name='q']")
                 search_box.send_keys(keyword)
                 sleep(2)
                 search_box.send_keys(Keys.RETURN)
             except:
-                LOGGER.warning("Couldn't find google search box, skipping... ")
+                log.warning("Couldn't find google search box, skipping... ")
 
             try:
                 r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
             except:
-                LOGGER.warning("Could not connect to Google, trying again... ")
+                log.warning("Could not connect to Google, trying again... ")
 
             sleep(randint(8, 10))
 
@@ -91,7 +91,7 @@ class googleSearch:
                     if new:
                         links.append(href)
             except:
-                LOGGER.warning("Could not access links on google search page, skipping... ")
+                log.warning("Could not access links on google search page, skipping... ")
 
             random_wait_and_scroll(self.webdriver)
 
@@ -112,8 +112,8 @@ class googleSearch:
             # todo: save to database instead
             # Selenium loop thru dataframe to save PNGs into "screenshots" folder
             for index, row in df_ads.iterrows():
-                LOGGER.info('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
-                LOGGER.info('Opening: ' + row['ad_link'])
+                log.info('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
+                log.info('Opening: ' + row['ad_link'])
                 self.webdriver.get(row['ad_link'])
                 sleep(2)
                 self.webdriver.save_screenshot('screenshots/' + str(index) + '.png')
@@ -123,12 +123,12 @@ class googleSearch:
     def visit_website(self, link):
 
         try:
-            LOGGER.info('Clicked a search result...')
+            log.info('Clicked a search result...')
             wt = webTraverse(self.webdriver, self.bot, True)
             randDepth = randint(1,3)
             wt.traverse(urls=[link], traverseDepth=randDepth)
         except:
-            LOGGER.warning("Failed to vist: %s" % link)
+            log.warning("Failed to vist: %s" % link)
 
     def scrape(self, ad_list, keyword, r):
         # Get the 4 ads at the top

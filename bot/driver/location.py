@@ -3,7 +3,7 @@ from time import sleep
 import logging
 import os
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 def set_location(driver, location):
     """
@@ -17,8 +17,8 @@ def set_location(driver, location):
     locator = Nominatim(user_agent="google")
     coordinates = "%f, %f" % (location['lat'], location['lon'])
     loc_info = locator.reverse(coordinates)
-    LOGGER.info('Changing browser location...')
-    LOGGER.info('Spoofing location: %s' % loc_info.raw['display_name'])
+    log.info('Changing browser location...')
+    log.info('Spoofing location: %s' % loc_info.raw['display_name'])
 
     # These are three different methods to spoof location
     driver.execute_cdp_cmd("Page.setGeolocationOverride", {
@@ -34,22 +34,22 @@ def set_location(driver, location):
         "return positionStr;")
 
     url = 'https://google.com/search?q=google'
-    LOGGER.info('Opening: ' + url)
+    log.info('Opening: ' + url)
     driver.get(url)
     sleep(2)
 
-    LOGGER.info('Clicking button to use precise location')
+    log.info('Clicking button to use precise location')
     try:
         location_btn = driver.find_elements_by_xpath('//a[@id="eqQYZc"]')[0]    # TODO: change how this works. id could change
         location_btn.click()
     except:
-        LOGGER.warning('Could not click button')
+        log.warning('Could not click button')
         pass
     sleep(2)
     
     # Attempt to confirm location change
     try: 
-        LOGGER.info('Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
+        log.info('Location as seen by Google: %s' % driver.find_elements_by_xpath('//span[@id="Wprf1b"]')[0].text)
     except:
-        LOGGER.warning('Could not confirm new location')
-        LOGGER.warning('Assuming location changed successfully')
+        log.warning('Could not confirm new location')
+        log.warning('Assuming location changed successfully')

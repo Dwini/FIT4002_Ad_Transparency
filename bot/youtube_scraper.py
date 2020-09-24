@@ -13,7 +13,7 @@ import math
 import base64
 import logging
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 class yt_ad(Enum):
     ALL = 1
@@ -83,7 +83,7 @@ class youtube_scraper:
                     self.screenshot_ad(video_element, False, 'video_ad.png', True)
 
                     self.save_ad(self.bot.getUsername(), video_ad_url, video_ad_url, video_ad, 'video_ad.png')
-                    LOGGER.info('Attempt ' + str(attempt) + ' Found - video/panel advertisement')
+                    log.info('Attempt ' + str(attempt) + ' Found - video/panel advertisement')
                 except NoSuchElementException:
                     pass
 
@@ -106,12 +106,12 @@ class youtube_scraper:
                     self.screenshot_ad(sidebar_ad, False, 'sidebar_ad.png', True)
 
                     self.save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_url, sidebar_ad.get_attribute('innerHTML'), 'sidebar_ad.png')
-                    LOGGER.info('Attempt ' + str(attempt) + ' Found - sidebar advertisement')
+                    log.info('Attempt ' + str(attempt) + ' Found - sidebar advertisement')
                 except NoSuchElementException:
                     pass
 
         if (foundSidebarAd or foundVideoAd) is False:
-            LOGGER.warning('No ads found')
+            log.warning('No ads found')
 
         return foundSidebarAd or foundVideoAd
 
@@ -140,7 +140,7 @@ class youtube_scraper:
             promo_video_ads = self.yt_element_search.find_promo_search_video_ad()
             if promo_video_ads is not None:
                 for ad in promo_video_ads[:-1]:
-                    LOGGER.info('Found - promoted video advertisement')
+                    log.info('Found - promoted video advertisement')
                     promo_video_ad_url = self.yt_element_search.find_promo_search_video_ad_url(ad.get_attribute('innerHTML'))
 
                     self.screenshot_ad(ad, False, 'promo_video_ad.png', True)
@@ -148,7 +148,7 @@ class youtube_scraper:
                     self.save_ad(self.bot.getUsername(), promo_video_ad_url, promo_video_ad_url, ad.get_attribute('innerHTML'), 'promo_video_ad.png')
 
         except NoSuchElementException:
-            LOGGER.warning('No promo vid ads found')
+            log.warning('No promo vid ads found')
             pass
 
         self.webdriver.find_element_by_id('video-title').click()  # click first result
@@ -185,7 +185,7 @@ class youtube_scraper:
         #         #convert image to base64
         #         a = encoded_string= base64.b64encode(f.read())
         #         data['base64'] = a
-        LOGGER.info('saving ad... ' + str(data['headline']))
+        log.info('saving ad... ' + str(data['headline']))
         file = {'file': open(image, 'rb')}
         url = os.getenv('DB_URL') + '/ads'
         r = requests.post(url, files=file, data=data)
@@ -204,11 +204,11 @@ class youtube_scraper:
         # r = requests.post(DB_URL+'/logs', data=data)
         # r.raise_for_status()
 
-        # Logs table deprecated. Just need to send to LOGGER
+        # Logs table deprecated. Just need to send to log
         if search_term is not None:
-            LOGGER.info('Searching for "' + search_term + '" at ' + url)
+            log.info('Searching for "' + search_term + '" at ' + url)
         else:
-            LOGGER.info(action + ' at ' + url)
+            log.info(action + ' at ' + url)
 
     def screenshot_ad(self, html_element, base64=True, name="current_Ad.png", crop=False):
         if crop:
@@ -234,7 +234,7 @@ class youtube_scraper:
                 else:
                     screenshot = html_element.save_screenshot(name)
             except:
-                LOGGER.warning('Screenshot capture failed')
+                log.warning('Screenshot capture failed')
 
     def get_sec(self, time_string):
         """

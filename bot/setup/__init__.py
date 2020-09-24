@@ -8,7 +8,7 @@ import sys
 from setup.logger import configure_logger
 from setup.database import ping_db
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 TIMED_OUT = False
 
 def check_env():

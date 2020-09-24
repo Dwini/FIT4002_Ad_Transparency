@@ -9,7 +9,7 @@ import math
 from PIL import Image
 import logging
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 #given a selenium driver retrieves a list of google ads which appear on the page
 def getGoogleAds(driver, bot):
@@ -29,7 +29,7 @@ def getGoogleAds(driver, bot):
         try:
             iframe.location_once_scrolled_into_view
         except:
-            LOGGER.warning('Element location not found or not visible')
+            log.warning('Element location not found or not visible')
 
         switch_to_frame_context(driver, iframe)
 
@@ -44,7 +44,7 @@ def getGoogleAds(driver, bot):
             png = iframe.screenshot_as_png
             image = imageProcessing(png)
         except:
-            LOGGER.error('Screenshot capture failed')
+            log.error('Screenshot capture failed')
 
         try:
             url = os.getenv('DB_URL') + '/ads'
@@ -62,7 +62,7 @@ def getGoogleAds(driver, bot):
 
         #testing purposes:
         except:
-            LOGGER.error("Connection for Screenshot failed")
+            log.error("Connection for Screenshot failed")
 
 
     return screenshots
@@ -77,7 +77,7 @@ def find_ad_redirect(driver):
         # find the link embedded in the iframe
         linkElements = driver.find_elements_by_xpath(".//a[@href]")
     except:
-        LOGGER.error('Cannot find internal link, check correct context is set')
+        log.error('Cannot find internal link, check correct context is set')
         return None
 
     adLink = None
@@ -104,7 +104,7 @@ def get_ad_html(driver):
         #adElem = driver.find_element_by_id(iframeID)
         innerHTML = driver.find_element_by_xpath(".//html[@*]").get_attribute('innerHTML')
     except:
-        LOGGER.error("Ad HTML retrieval failed")
+        log.error("Ad HTML retrieval failed")
     return innerHTML
 
 
@@ -116,7 +116,7 @@ def switch_to_frame_context(driver, iframe):
             driver.switch_to.frame(iframeID)
             break
         except:
-            LOGGER.warning('Element access attempt: ' + str(i))
+            log.warning('Element access attempt: ' + str(i))
 
 
 
@@ -183,14 +183,14 @@ def imageProcessing(png):
     try:
         img.save('ad.png', quality=50, optimize=True)
     except IOError:
-        LOGGER.error("could not access local disk for screenshot write")
+        log.error("could not access local disk for screenshot write")
         return
 
     try:
         # create file stream
         f = open("ad.png", "rb")
     except IOError:
-        LOGGER.error("could not access local disk for screenshot read")
+        log.error("could not access local disk for screenshot read")
         return
 
     return f

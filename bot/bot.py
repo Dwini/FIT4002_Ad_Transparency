@@ -3,14 +3,14 @@ import logging
 import random
 import os
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 def fetch_details(username):
   """
   Query db for bot details
   :param username: Username of bot
   """
-  LOGGER.info('Fetching bot details')
+  log.info('Fetching bot details')
   url = os.getenv('DB_URL') + '/bot/' + username
   r = requests.get(url)
   r.raise_for_status()
@@ -22,19 +22,19 @@ def get_search_terms(political_ranking, other_terms_category):
   :param political_ranking: Stance of bot to get political terms
   :param other_terms_category: Demographic of bot
   """
-  LOGGER.info('Fetching political search terms')
+  log.info('Fetching political search terms')
   url = os.getenv('DB_URL') + '/search_terms/political/' + str(political_ranking)
   r = requests.get(url)
   r.raise_for_status()
   search_terms = r.json()
 
-  LOGGER.info('Fetching other search terms')
+  log.info('Fetching other search terms')
   url = os.getenv('DB_URL') + '/search_terms/other/' + str(other_terms_category)
   r = requests.get(url)
   r.raise_for_status()
   search_terms = search_terms + r.json()
 
-  LOGGER.info('Shuffling terms')
+  log.info('Shuffling terms')
   random.shuffle(search_terms)
   random.shuffle(search_terms)
   random.shuffle(search_terms)
@@ -42,7 +42,7 @@ def get_search_terms(political_ranking, other_terms_category):
 
 class Bot:
   def __init__(self, username):
-    LOGGER.info('Initialising bot ' + username)
+    log.info('Initialising bot ' + username)
     details = fetch_details(username)
 
     self.firstname = details['name'][0]

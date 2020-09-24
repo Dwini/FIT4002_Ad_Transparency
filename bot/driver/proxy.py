@@ -6,7 +6,7 @@ import json
 from time import sleep
 import logging
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 # define constants.
 HTTP_IP_CHECK_URL = 'http://httpbin.org/ip'
@@ -32,7 +32,7 @@ Returns true if working, else false
 def ip_check(driver):
     try:
         # Connect to HTTP_IP_CHECK_URL and print URL to console.
-        LOGGER.info('Connecting to '+HTTP_IP_CHECK_URL+' ...')
+        log.info('Connecting to '+HTTP_IP_CHECK_URL+' ...')
         driver.get(HTTP_IP_CHECK_URL)
         http_ip_address = json.loads(driver.find_element_by_tag_name("body").text)["origin"]
 
@@ -45,7 +45,7 @@ def ip_check(driver):
 
         return True
     except:
-        LOGGER.warning("IP check failed")
+        log.warning("IP check failed")
         return False
 
 """
@@ -66,11 +66,11 @@ def ip_lookup(ip_address):
 Get list of proxies. These *should* be sorted fastest to slowest
 """
 def get_proxy_list():
-    LOGGER.info('Fetching list of proxies (this might take a while)')
+    log.info('Fetching list of proxies (this might take a while)')
     proxy_list = []
 
     for i, url in enumerate(PROXY_REQUESL_URLS):
-        LOGGER.info('(%d/%d) Querying proxy list...' % (i+1, len(PROXY_REQUESL_URLS)))
+        log.info('(%d/%d) Querying proxy list...' % (i+1, len(PROXY_REQUESL_URLS)))
         try:
             proxy_list += list(urllib.request.urlopen(url))
         except:
@@ -78,7 +78,7 @@ def get_proxy_list():
 
     result = [line.decode('utf-8').strip('\n').strip('\r') for line in proxy_list]
     result = list(set(result))
-    LOGGER.info("%d proxies found" % len(result))
+    log.info("%d proxies found" % len(result))
 
     return result
 
@@ -90,10 +90,10 @@ def sort_by_location(proxy_list, position):
     # list of dictionaries that contain ip and distance info
     results = []
 
-    LOGGER.info('Starting proxy check (this might also take a while)')
+    log.info('Starting proxy check (this might also take a while)')
 
     for i, ip in enumerate(proxy_list):
-        LOGGER.info('\t>> (%d/%d) Fetching proxy info...' % (i+1, len(proxy_list)))
+        log.info('\t>> (%d/%d) Fetching proxy info...' % (i+1, len(proxy_list)))
         try:
             ip_info = ip_lookup(ip)
 
@@ -102,11 +102,11 @@ def sort_by_location(proxy_list, position):
 
             results.append({ 'address': ip, 'dist': dist })
         except:
-            LOGGER.warning('Could not fetch proxy info')
+            log.warning('Could not fetch proxy info')
             sleep(5)
             pass
 
-    LOGGER.info('%s possible working proxies found' % len(results))
+    log.info('%s possible working proxies found' % len(results))
 
     # sort proxies by distance
     return [p['address'] for p in sorted(results, key=lambda k: k['dist'])]

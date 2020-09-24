@@ -2,7 +2,7 @@ import os
 import logging
 import requests
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 def teardown(session, display):
     print('>> Performing teardown')
@@ -13,7 +13,7 @@ def teardown(session, display):
     if display is not None:
         display.stop()
 
-    logfile_path = LOGGER.handlers[0].baseFilename
+    logfile_path = log.handlers[0].baseFilename
     print('>> Log file saved to: ' + logfile_path)
 
     # Upload log file

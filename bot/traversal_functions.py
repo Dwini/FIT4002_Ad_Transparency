@@ -3,7 +3,7 @@ import random
 import base64
 import logging
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 def isElementClickable(self, element):
     # is element visible by styles
@@ -47,16 +47,16 @@ def full_page_screenshot(driver, url):
         with open('pageScreenshots/' + str(random.randint(0, 10000)) + '.png', 'wb+') as fh:
             fh.write(base64.b64decode(driver.get_screenshot_as_base64()))
 
-        LOGGER.info('printed full page')
+        log.info('printed full page')
     except:
-        LOGGER.error('Full page screenshot failed')
+        log.error('Full page screenshot failed')
 
     driver.set_window_size(original_size['width'], original_size['height'])
 
 
 def random_wait_and_scroll(driver):
     # random wait and scroll action
-    LOGGER.info('Waiting for page to load...')
+    log.info('Waiting for page to load...')
     for i in range(3):
         sleep(random.randint(1, 3))
         driver.execute_script("window.scrollTo(0," + str(random.randint(50, 2000)) + ")")

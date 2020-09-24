@@ -6,7 +6,7 @@ import logging
 
 import driver.proxy as proxy
 
-LOGGER = logging.getLogger()
+log = logging.getLogger()
 
 CHROMEDRIVER_PATH = './driver/chromedriver'
 # If running in Windows use this chromedriver instead
@@ -28,11 +28,11 @@ def create_driver(proxyIP=None):
     if proxyIP is not None:
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
     
-    LOGGER.info('Creating driver')
+    log.info('Creating driver')
     try:
         driver = webdriver.Chrome(CHROMEDRIVER_PATH, options=chrome_options)
     except:
-        LOGGER.error('Failed to create driver')
+        log.error('Failed to create driver')
         raise
 
     return driver
@@ -49,7 +49,7 @@ def create_driver_with_proxy(pos):
 
     while not session and i < len(proxies):
         address = proxies[i]
-        LOGGER.info("Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)))
+        log.info("Trying IP: %s (%d/%d)" % (address, i+1, len(proxies)))
         session = create_driver(address)
 
         if not proxy.ip_check(session):
@@ -63,7 +63,7 @@ def create_driver_with_proxy(pos):
         
     ip_info = proxy.ip_lookup(address)
     location = '%s, %s, %s' % (ip_info['city'], ip_info['region'], ip_info['country'])
-    LOGGER.info("Proxy change successful (location: %s)" % location)    
+    log.info("Proxy change successful (location: %s)" % location)    
 
     return session
     
