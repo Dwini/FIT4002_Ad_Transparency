@@ -16,4 +16,4 @@ EXPOSE 5000
 ENV DB_URI "http://127.0.0.1:8080"
 
 # run flask server in gunicorn as it is a secure wsgi server.
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "--workers=1", "--threads=256", "app:app"]
