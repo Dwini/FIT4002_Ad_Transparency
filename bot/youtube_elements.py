@@ -3,7 +3,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from lxml import html
+import logging
 
+log = logging.getLogger()
 
 class youtube_elements:
 
@@ -51,7 +53,7 @@ class youtube_elements:
             try:
                 video_ad_url = ad_html.xpath('//div[@class="ytp-ad-text ytp-flyout-cta-description"]')[0].text
             except Exception:
-                print('HTML parse - Unable to find ad url, setting default name')
+                log.warning('HTML parse - Unable to find ad url, setting default name')
                 video_ad_url = 'video_ad_url'
         return video_ad_url
 
@@ -74,7 +76,7 @@ class youtube_elements:
             ad_html = html.fromstring(html_string)
             promo_search_video_ad_url = ad_html.xpath('//span[@class="style-scope yt-formatted-string"][1]')[0].text
         except Exception:
-            print('HTML parse - Unable to find ad url, setting default name')
+            log.warning('HTML parse - Unable to find ad url, setting default name')
             promo_search_video_ad_url = 'promo_search_video_ad_url'
         return promo_search_video_ad_url
 
@@ -92,7 +94,7 @@ class youtube_elements:
             ad_html = html.fromstring(html_string)
             sidebar_ad_url = ad_html.xpath('//span[@id="domain"]')[0].text
         except Exception:
-            print('HTML parse - Unable to find sidebar_ad url, setting default name')
+            log.warning('HTML parse - Unable to find sidebar_ad url, setting default name')
             sidebar_ad_url = 'sidebar_ad_url'
         return sidebar_ad_url
 

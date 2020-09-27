@@ -11,7 +11,6 @@ const typeIndexes = {
 };
 
 module.exports = app => {
-    // TODO: Pass political ideology as number so that we don't have to get full sheet contents
     app.get('/search_terms/:type/:category', async function(req, res, next) {
         /**
          * Fetches all search terms from Google Sheet

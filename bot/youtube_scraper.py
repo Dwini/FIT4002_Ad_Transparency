@@ -11,9 +11,9 @@ from PIL import Image
 import io
 import math
 import base64
+import logging
 
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
-
+log = logging.getLogger()
 
 class yt_ad(Enum):
     ALL = 1
@@ -83,7 +83,7 @@ class youtube_scraper:
                     self.screenshot_ad(video_element, False, 'video_ad.png', True)
 
                     self.save_ad(self.bot.getUsername(), video_ad_url, video_ad_url, video_ad, 'video_ad.png')
-                    print('Attempt ' + str(attempt) + ' Found - video/panel advertisement')
+                    log.info('Attempt ' + str(attempt) + ' Found - video/panel advertisement')
                 except NoSuchElementException:
                     pass
 
@@ -106,12 +106,12 @@ class youtube_scraper:
                     self.screenshot_ad(sidebar_ad, False, 'sidebar_ad.png', True)
 
                     self.save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_url, sidebar_ad.get_attribute('innerHTML'), 'sidebar_ad.png')
-                    print('Attempt ' + str(attempt) + ' Found - sidebar advertisement')
+                    log.info('Attempt ' + str(attempt) + ' Found - sidebar advertisement')
                 except NoSuchElementException:
                     pass
 
         if (foundSidebarAd or foundVideoAd) is False:
-            print('No ads found')
+            log.warning('No ads found')
 
         return foundSidebarAd or foundVideoAd
 
@@ -140,7 +140,7 @@ class youtube_scraper:
             promo_video_ads = self.yt_element_search.find_promo_search_video_ad()
             if promo_video_ads is not None:
                 for ad in promo_video_ads[:-1]:
-                    print('Found - promoted video advertisement')
+                    log.info('Found - promoted video advertisement')
                     promo_video_ad_url = self.yt_element_search.find_promo_search_video_ad_url(ad.get_attribute('innerHTML'))
 
                     self.screenshot_ad(ad, False, 'promo_video_ad.png', True)
@@ -148,7 +148,7 @@ class youtube_scraper:
                     self.save_ad(self.bot.getUsername(), promo_video_ad_url, promo_video_ad_url, ad.get_attribute('innerHTML'), 'promo_video_ad.png')
 
         except NoSuchElementException:
-            print('No promo vid ads found')
+            log.warning('No promo vid ads found')
             pass
 
         self.webdriver.find_element_by_id('video-title').click()  # click first result
@@ -185,23 +185,30 @@ class youtube_scraper:
         #         #convert image to base64
         #         a = encoded_string= base64.b64encode(f.read())
         #         data['base64'] = a
-        print('saving ad... ' + str(data['headline']))
+        log.info('saving ad... ' + str(data['headline']))
         file = {'file': open(image, 'rb')}
-        r = requests.post(DB_URL+'/ads', files=file, data=data)
+        url = os.getenv('DB_URL') + '/ads'
+        r = requests.post(url, files=file, data=data)
         r.raise_for_status()
 
     def log_to_db(self, bot_id, url, action, search_term=None):
         # save site visit or search to database
-        data = {
-            "bot": bot_id,
-            "url": url,
-            "actions": [action]
-        }
-        if search_term is not None:
-            data['search_term'] = search_term
+        # data = {
+        #     "bot": bot_id,
+        #     "url": url,
+        #     "actions": [action]
+        # }
+        # if search_term is not None:
+        #     data['search_term'] = search_term
         
-        r = requests.post(DB_URL+'/logs', data=data)
-        r.raise_for_status()
+        # r = requests.post(DB_URL+'/logs', data=data)
+        # r.raise_for_status()
+
+        # Logs table deprecated. Just need to send to log
+        if search_term is not None:
+            log.info('Searching for "' + search_term + '" at ' + url)
+        else:
+            log.info(action + ' at ' + url)
 
     def screenshot_ad(self, html_element, base64=True, name="current_Ad.png", crop=False):
         if crop:
@@ -227,7 +234,7 @@ class youtube_scraper:
                 else:
                     screenshot = html_element.save_screenshot(name)
             except:
-                print('Screenshot capture failed')
+                log.warning('Screenshot capture failed')
 
     def get_sec(self, time_string):
         """

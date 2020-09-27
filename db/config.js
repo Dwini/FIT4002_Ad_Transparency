@@ -4,6 +4,7 @@ module.exports = {
         secretAccessKey: 'UVi/ipHOYIuvtlI6M0G7QQxW1ay+xHCm3PiQEjK+',
         region: 'us-east-2',
         bucket: 'fit4002',
+        logs_base_url: 'https://fit4002.s3-ap-southeast-2.amazonaws.com/logs/'
     },
     google: {
         sheetId: '1mzVmGBMSQYE7QRp5Yk39_1_ApSxLWGjgCpiM0pnyPjE',
