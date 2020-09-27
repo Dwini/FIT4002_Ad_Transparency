@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "partials/header.html" %}
+    <title>transparency - errors</title>
+  </head>
+
+  <body>
+    {% include "partials/pre-nav.html" %}
+    {% include "partials/post-nav.html" %}
+
+    <div class='page-section-home'>
+      <div class='anchor' id='states'></div>
+      <div class='content page-height'>
+        <div class='column-container'>
+          <div class='column'>
+            <div class='card bordered shadowed'>
+              <h1 class='card-title'>Error Dashboard</h1>
+              <div class='card-body'>
+                <a class='card-link-inverted bordered' href='{{ request.path }}?refresh=True' type='button'>refresh error data</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='column-container'>
+          <div class='column'>
+            <table class='table-bots shadowed'>
+              <tr>
+                <th>Filename</th>
+                <th>Error Type</th>
+                <th>Log File</th>
+              </tr>
+              {% for id, error in data['errors'].items() %}
+              <tr>
+                <td>{{ id }}</td>
+                <td>{{ error['message'] }}</td>
+                <td><a href="{{ error['link'] }}">{{ error['link'] }}</a></td>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

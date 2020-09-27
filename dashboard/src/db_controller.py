@@ -36,6 +36,16 @@ def get_ad_table():
     return r.json()
 
 """
+Return a full dump of the error table. This will need to be parsed by the caller.
+"""
+def get_error_table():
+    # connect to db project and return the db data.
+    r = requests.get(DB_URI+'/errors')
+
+    # return the json data.
+    return r.json()
+
+"""
 Save a json list of political search terms for this other ranking into cache.
 """
 def save_political_search_terms(ranking):

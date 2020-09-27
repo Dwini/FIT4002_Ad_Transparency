@@ -55,3 +55,9 @@ This is a dictionary with the id of the other ranking as a key, and a list
 of other search terms as the value.
 """
 other_search_term_dict = dict()
+
+"""
+This is a dictionary with the id of the error entry as a key, and a dictionary
+of error attributes as the value.
+"""
+error_dict = dict()
