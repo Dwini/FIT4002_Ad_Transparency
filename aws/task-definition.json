@@ -1,16 +1,16 @@
 {
-  "family": "ad-transparency-batch1",
+  "family": "ad-transparency-batch2",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "memory": "512",
-  "cpu": "256",
+  "memory": "4096",
+  "cpu": "2048",
   "executionRoleArn": "ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "db",
-      "image": "mattbertoncello/ad_transparency_db",
+      "name": "JoelTrump3546",
+      "image": "mattbertoncello/ad_transparency_bot",
       "essential": true,
       "logConfiguration": {
         "logDriver": "awslogs",
@@ -20,15 +20,37 @@
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "portMappings": [
+      "environment": [
         {
-          "containerPort": 8080
+          "name": "AD_USERNAME",
+          "value": "Joel.Trump.3546"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "0"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://18.210.23.37:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "2"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "0"
         }
       ]
     },
     {
-      "name": "mwest5078",
+      "name": "jw1083888",
       "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -40,25 +62,34 @@
       "environment": [
         {
           "name": "AD_USERNAME",
-          "value": "mwest5078"
+          "value": "jw1083888"
         },
         {
           "name": "USE_PROXIES",
-          "value": "1"
+          "value": "0"
         },
         {
           "name": "CHANGE_LOCATION",
-          "value": "1"
+          "value": "0"
         },
         {
           "name": "DB_URL",
-          "value": "http://127.0.0.1:8080"
+          "value": "http://18.210.23.37:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "2"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "0"
         }
       ]
     },
     {
-      "name": "burgersa68",
+      "name": "Phillipfranko44",
       "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -70,19 +101,183 @@
       "environment": [
         {
           "name": "AD_USERNAME",
-          "value": "burgersa68"
+          "value": "Phillipfranko44"
         },
         {
           "name": "USE_PROXIES",
-          "value": "1"
+          "value": "0"
         },
         {
           "name": "CHANGE_LOCATION",
-          "value": "1"
+          "value": "0"
         },
         {
           "name": "DB_URL",
-          "value": "http://127.0.0.1:8080"
+          "value": "http://18.210.23.37:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "2"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "goodwillpeter834",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "goodwill.peter.8.3.4"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "0"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://18.210.23.37:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "2"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "jf0895694",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "jf0895694"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "0"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://18.210.23.37:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "2"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "ewaters213",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "ewaters213"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "0"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://18.210.23.37:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "2"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "MelPhillips2454",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "Mel.Phillips.2454"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "0"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://18.210.23.37:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "2"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "0"
         }
       ]
     }
