@@ -5,7 +5,7 @@ services:
         depends_on:
             - db
         environment:
-          - AD_USERNAME=${AD_USERNAME:-Mel.Phillips.2454}
+          - AD_USERNAME=${AD_USERNAME:-Joel.Trump.3546}
         volumes: 
             - ./bot/out:/app/out
     db:
