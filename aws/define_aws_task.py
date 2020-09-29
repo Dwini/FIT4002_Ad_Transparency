@@ -16,7 +16,7 @@ provided in the username_list. When this file is issued to AWS CLI it will creat
 a new task on AWS ECS. View README.md in the `\aws` directory for deployment
 instructions.
 """
-def create_task_definition(batch_name, username_list, use_proxies='1', change_location='1'):
+def create_task_definition(batch_name, username_list, use_proxies='0', change_location='0'):
     # throw error if username_list is empty.
     if len(username_list) == 0:
         raise Exception("[INPUT ERROR] username_list cannot be empty")
@@ -39,32 +39,17 @@ def create_task_definition(batch_name, username_list, use_proxies='1', change_lo
     obj['family'] = batch_name
     obj['networkMode'] = 'awsvpc'
     obj['requiresCompatibilities'] = [ 'FARGATE' ]
-    obj['memory'] = '512'
-    obj['cpu'] = '256'
+    obj['memory'] = '4096'
+    obj['cpu'] = '2048'
     obj['executionRoleArn'] = 'ecsTaskExecutionRole'
-
-    # configure the db container and append it to the container_list.
-    container_list.append({
-        'name': 'db',
-        'image': 'mattbertoncello/ad_transparency_db',
-        'essential': True,
-        'logConfiguration': {
-            'logDriver': 'awslogs',
-            'options': {
-              'awslogs-group': '/ecs/ad-transparency',
-              'awslogs-region': 'us-east-1',
-              'awslogs-stream-prefix': 'ecs'
-            }
-        },
-        'portMappings': [ { 'containerPort': 8080 } ],
-    })
 
     # for each profile included in the username_list, configure a bot container
     # and append it to the container_list.
     for username in username_list:
         container_list.append({
-            'name': username,
+            'name': username.replace('.', ''),
             'image': 'mattbertoncello/ad_transparency_bot',
+            'essential': False,
             'logConfiguration': {
                 'logDriver': 'awslogs',
                 'options': {
@@ -77,7 +62,9 @@ def create_task_definition(batch_name, username_list, use_proxies='1', change_lo
                 { 'name': 'AD_USERNAME', 'value': username },
                 { 'name': 'USE_PROXIES', 'value': use_proxies },
                 { 'name': 'CHANGE_LOCATION', 'value': change_location },
-                { 'name': 'DB_URL', 'value': 'http://127.0.0.1:8080' }
+                { 'name': 'DB_URL', 'value': 'http://18.210.23.37:8080' },
+                { 'name': 'NUM_TERMS', 'value': '2' },
+                { 'name': 'UPLOAD_LOGS', 'value': '0' }
             ]
         })
 
@@ -90,8 +77,9 @@ def create_task_definition(batch_name, username_list, use_proxies='1', change_lo
 
 if __name__ == '__main__':
     # provide google profiles to run in this task.
-    username_list = ['mwest5078', 'burgersa68']
-    batch_name = 'ad-transparency-batch1'
+    username_list = ['Joel.Trump.3546', 'jw1083888', 'Phillipfranko44', 'goodwill.peter.8.3.4', \
+        'jf0895694', 'ewaters213', 'Mel.Phillips.2454']
+    batch_name = 'ad-transparency-batch2'
 
     # run the tast creation function.
     create_task_definition(batch_name, username_list)

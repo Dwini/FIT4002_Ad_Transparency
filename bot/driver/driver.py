@@ -20,9 +20,15 @@ def create_driver(proxyIP=None):
     """
     chrome_options = Options()
     chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--window-size=1920,1080')
+    chrome_options.add_argument('--disable-gpu') # necessary for docker container.
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.517 Safari/537.36"')
     chrome_options.add_argument('--user-data-dir=' + SESSION_PATH)
+
+    # https://stackoverflow.com/questions/62889739/selenium-gives-timed-out-receiving-message-from-renderer-for-all-websites-afte
+    chrome_options.add_argument('enable-automation')
+    chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     chrome_options.add_experimental_option('useAutomationExtension', False)
 
     if proxyIP is not None:

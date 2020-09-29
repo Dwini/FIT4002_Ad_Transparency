@@ -52,11 +52,16 @@ FROM builder
 WORKDIR /app
 
 # URL for the database.
-ENV DB_URL "http://db:8080"
+ENV DB_URL "http://18.210.23.37:8080"
+ENV NUM_TERMS "2"
+ENV USE_PROXIES "0"
+ENV CHANGE_LOCATION "0"
+ENV UPLOAD_LOGS "1"
+ENV AD_USERNAME "jf0895694"
 
 RUN useradd -ms /bin/bash bot && \
-    chown bot:bot /app && \
-    chmod 755 /app
+  chown -R bot:bot /app && \
+  chmod 755 /app
 USER bot
 
 # default entry point. Container will force close after 1 minute.
