@@ -6,6 +6,7 @@ Last updated: MB 30/09/2020 - refactor to handle db retrieval.
 """
 # import external libraries.
 import requests
+from datetime import datetime
 
 # import local modules.
 from src import cache_handler, search_term_controller
@@ -29,7 +30,9 @@ def update_error_cache():
         # create an object as the value.
         cache_handler.error_dict[error['log_file']] = {
             'message': error['message'],
-            'link': error['link']
+            'link': error['link'],
+            'time': datetime.strptime(error['log_file'][:19], '%Y.%m.%d_%H.%M.%S'),
+            'bot': error['log_file'][20:].replace('.log', '')
         }
 
 """
