@@ -33,6 +33,27 @@ def update_error_cache():
         }
 
 """
+This function will remove the error from the cache dictionary and remove it from
+the db by sending a post request to the db project.
+"""
+def remove_error(log_file):
+    # if this log_file is not in the error_dict, returnwithout doing anything.
+    if log_file not in cache_handler.error_dict:
+        return
+
+    # delete the file from the error_dict.
+    del cache_handler.error_dict[log_file]
+
+    # send a delete request to the db.
+    r = requests.delete(cache_handler.db_uri+'/error/'+log_file)
+
+    # check if successful.
+    if r.status_code == 200:
+        print('deleted error successfully: '+log_file)
+    else:
+        print('delete error failed: '+log_file)
+
+"""
 Return a full dump of the error table. This will need to be parsed by the caller.
 """
 def get_error_table():

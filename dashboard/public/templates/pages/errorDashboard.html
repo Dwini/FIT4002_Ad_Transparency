@@ -30,12 +30,14 @@
                 <th>Filename</th>
                 <th>Error Type</th>
                 <th>Log File</th>
+                <th>Delete</th>
               </tr>
               {% for id, error in data['errors'].items() %}
               <tr>
                 <td>{{ id }}</td>
                 <td>{{ error['message'] }}</td>
                 <td><a href="{{ error['link'] }}">{{ error['link'] }}</a></td>
+                <td><form action="/error/del" method="POST"><input type="submit" name="{{ id }}" value="delete"/></form></td>
               {% endfor %}
             </table>
           </div>
