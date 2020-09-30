@@ -5,11 +5,11 @@ link routes files and provide an entrypoint for gunicorn.
 Last updated: MB 27/09/2020 - load errors from DynamoDB into a cache on startup.
 """
 # import external libraries.
-import os, sys, json
+import os, sys, json, requests, time
 from flask import Flask, request, abort
 
 # import local modules.
-from src import bot_controller, ad_controller, db_controller, error_controller
+from src import bot_controller, ad_controller, error_controller, cache_handler
 
 # import routes.
 from routes import index, bots, ads, search_terms, errors
@@ -28,7 +28,19 @@ search_terms.init(app)
 errors.init(app)
 
 # Do not execute until db container has been started.
-db_controller.wait_for_heartbeat()
+response = None
+attempts = 0
+while response is None and attempts < 10:
+    attempts += 1
+    # attempt to connect.
+    try:
+        response = requests.get(cache_handler.db_uri+'/heartbeat')
+        print('found db project...')
+
+    # if no connection, wait 10 seconds and try again.
+    except:
+        print('no response from db project. attempt: '+str(attempts))
+        time.sleep(10)
 
 # populate the bot and ad caches.
 print('loading data into cache...')
