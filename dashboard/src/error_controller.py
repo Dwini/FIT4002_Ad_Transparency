@@ -9,7 +9,7 @@ import requests
 from datetime import datetime
 
 # import local modules.
-from src import cache_handler, search_term_controller
+from src import cache_handler
 
 """
 This function will update the cached error dictionary. Each key in the dictionary

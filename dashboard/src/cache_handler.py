@@ -67,3 +67,9 @@ This is a dictionary with the id of the error entry as a key, and a dictionary
 of error attributes as the value.
 """
 error_dict = dict()
+
+"""
+This is a dictionary with the id of the log entry as a key, and a dictionary
+of log attributes as the value.
+"""
+log_dict = dict()

@@ -9,10 +9,10 @@ import os, sys, json, requests, time
 from flask import Flask, request, abort
 
 # import local modules.
-from src import bot_controller, ad_controller, error_controller, cache_handler
+from src import bot_controller, ad_controller, error_controller, cache_handler, log_controller
 
 # import routes.
-from routes import index, bots, ads, search_terms, errors
+from routes import index, bots, ads, search_terms, errors, logs
 
 # define constants.
 FILENAME = os.path.basename(__file__)
@@ -26,6 +26,7 @@ bots.init(app)
 ads.init(app)
 search_terms.init(app)
 errors.init(app)
+logs.init(app)
 
 # Do not execute until db container has been started.
 response = None
@@ -49,6 +50,9 @@ print('finished loading bot cache...')
 ad_controller.update_ad_cache()
 print('finished loading ad cache...')
 error_controller.update_error_cache()
+print('finished loading error cache...')
+log_controller.update_log_cache()
+print('finished loading log cache...')
 
 # called on startup.
 if __name__ == "__main__":
