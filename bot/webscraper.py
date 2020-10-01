@@ -54,7 +54,7 @@ class webscraper:
         if ('myaccount' in self.webdriver.current_url):
             log.info('Login successful')
         else:
-            log.warning('Login may have failed')
+            log.warning('Login has most likely have failed')
 
     def login(self):
         log.info('Logging into Google account')
