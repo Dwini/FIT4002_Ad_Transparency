@@ -42,6 +42,20 @@ class webscraper:
 
         self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
 
+    def check_login(self):
+        log.info('Checking whether login was successful')
+        
+        url = 'https://accounts.google.com/login'
+        log.info('Opening ' + url)
+        self.webdriver.get(url)
+        sleep(3)
+        self.webdriver.save_screenshot('./out/login_proof.png')
+
+        if ('myaccount' in self.webdriver.current_url):
+            log.info('Login successful')
+        else:
+            log.warning('Login may have failed')
+
     def login(self):
         log.info('Logging into Google account')
 
@@ -83,12 +97,7 @@ class webscraper:
         self.webdriver.save_screenshot('./out/login2.png')
         sleep(5)   # large wait time as proxies are slow...
 
-        log.info("Login successful")
-
-        url = 'https://mail.google.com/mail/u/0/#inbox'
-        self.webdriver.get(url)
-        sleep(2)
-        self.webdriver.save_screenshot('./out/login_proof.png')
+        self.check_login()
 
     def activate_bot(self):
         choice = random.randint(0,1)
