@@ -14,12 +14,12 @@ import requests
 from website_traverse import webTraverse
 from traversal_functions import random_wait_and_scroll
 from random import randint
+import logging
 
 # import local modules.
 from bot import Bot
 
-# define constants
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
+log = logging.getLogger()
 
 class googleSearch:
     def __init__(self, webdriver, bot, scrapping):
@@ -51,22 +51,24 @@ class googleSearch:
         links = []
         for keyword in keywords:
             url = 'http://www.google.com/'
+            log.info('Opening: ' + url)
             # Search Keyword using text box
             self.webdriver.get(url)
             self.webdriver.get(url)
             sleep(2)
+            log.info('Searching for "' + keyword + '"')
             try:
                 search_box = self.webdriver.find_element_by_xpath("//input[@name='q']")
                 search_box.send_keys(keyword)
                 sleep(2)
                 search_box.send_keys(Keys.RETURN)
             except:
-                print("Couldn't find google search box, skipping... ")
+                log.warning("Couldn't find google search box, skipping... ")
 
             try:
                 r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
             except:
-                print("Could not connect to Google, trying again... ")
+                log.warning("Could not connect to Google, trying again... ")
 
             sleep(randint(8, 10))
 
@@ -74,15 +76,6 @@ class googleSearch:
                 self.scrape(self, ad_list, keyword, r)
             # wait until shows result
             results = self.webdriver.find_elements_by_css_selector('div.g')
-
-            # save site visit to database
-            r = requests.post(DB_URL+'/logs', data={
-                "bot": self.bot.getUsername(),
-                "url": url,
-                "actions": ['search'],
-                "search_term": keyword
-            })
-            r.raise_for_status()
 
             newLinks = []
             #gather new links
@@ -98,7 +91,7 @@ class googleSearch:
                     if new:
                         links.append(href)
             except:
-                print("Could not access links on google search page, skipping... ")
+                log.warning("Could not access links on google search page, skipping... ")
 
             random_wait_and_scroll(self.webdriver)
 
@@ -119,17 +112,9 @@ class googleSearch:
             # todo: save to database instead
             # Selenium loop thru dataframe to save PNGs into "screenshots" folder
             for index, row in df_ads.iterrows():
-                print('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
+                log.info('Index: ' + str(index) + ', Ad Link: ' + row['ad_link'])
+                log.info('Opening: ' + row['ad_link'])
                 self.webdriver.get(row['ad_link'])
-
-                # save site visit to database
-                r = requests.post(DB_URL+'/logs', data={
-                    "bot": self.bot.getUsername(),
-                    "url": row['ad_link'],
-                    "actions": ['visit']
-                })
-                r.raise_for_status()
-
                 sleep(2)
                 self.webdriver.save_screenshot('screenshots/' + str(index) + '.png')
                 # webdriver.get_screenshot_as_file(str(index) + '.png')
@@ -138,12 +123,12 @@ class googleSearch:
     def visit_website(self, link):
 
         try:
-            print('Clicked a search result...')
+            log.info('Clicked a search result...')
             wt = webTraverse(self.webdriver, self.bot, True)
             randDepth = randint(1,3)
             wt.traverse(urls=[link], traverseDepth=randDepth)
         except:
-            print("Failed to vist: %s" % link)
+            log.warning("Failed to vist: %s" % link)
 
     def scrape(self, ad_list, keyword, r):
         # Get the 4 ads at the top
@@ -156,7 +141,8 @@ class googleSearch:
             ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
 
             # save ad to database
-            r = requests.post(DB_URL + '/ads', data={
+            url = os.getenv('DB_URL') + '/ads'
+            r = requests.post(url, data={
                 "bot": self.bot.getUsername(),
                 "link": ad_link,
                 "headline": ad_headline,

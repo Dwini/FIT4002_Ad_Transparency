@@ -1,61 +1,60 @@
 const AWS = require('aws-sdk');
-const moment = require('moment-timezone');
+const multer = require('multer');
+const fs = require('fs');
 
-const uuidv4 = require('./_uuid');
-const sorter = require('./_sorter');
-const filterOptions = require('./_filterOptions');
-const { DATETIME_FORMAT } = require('../config');
-const { accessKeyId, secretAccessKey, 
-    region } = require('../config').aws;
+const { accessKeyId, secretAccessKey, region, 
+    bucket, logs_base_url } = require('../config').aws;
 
 AWS.config.update({ accessKeyId, secretAccessKey, region });
-var docClient = new AWS.DynamoDB.DocumentClient();
+var s3 = new AWS.S3();
+
+const upload = multer({ dest: '/tmp/' });
 
 module.exports = app => {
     app.route('/logs')
         .get(function(req, res, next) {
             /**
-             * Fetch all Logs from db ordered by latest to oldest
-             * @param query.bot - Username of bot to filter by
+             * Fetch list of log files from S3
+             * @param query.bot - Username of bot to filter by TODO
              */
-            var params = { TableName: 'Logs' };
 
-            const { bot } = req.query;
-            if (bot) {
-                params = { ...params, ...filterOptions(bot) };
+            var params = {
+                Bucket: bucket,
+                Delimiter: '/',
+                Prefix: 'logs/'
             };
 
-            docClient.scan(params, function(err, data) {
+            s3.listObjects(params, function(err, data) {
                 if (err) return next(err);
-                res.send(data.Items.sort(sorter));
+
+                var resp = data.Contents;
+                resp.shift();       // First item is just logs directory
+                resp = resp.map(elem => {
+                    const filename = elem.Key.replace('logs/', '');
+                    return {
+                        filename,
+                        link: logs_base_url + filename
+                    };
+                });
+
+                res.send(resp);
             });
         })
-        .post(function(req, res, next) {    // Creates a new Log of bots actions
+        .post(upload.single('file'), function(req, res, next) {
             /**
-             * Creates a new Log of bots actions
-             * @param body.bot           - Username of bot that performed action
-             * @param body.url           - URL of action
-             * @param body.actions       - Actions that were performed, e.g. 'visit', 'search'
-             * @param body.search_term   - OPTIONAL. If search performed this stores
-             *                      the term that was searched
+             * Upload log file to S3
              */
 
-            // Allowed fileds
-            const { bot, url, actions, search_term } = req.body; 
+            const { file } = req,
+                filePath = file.path,
+                params = {
+                    Bucket: bucket,
+                    Body: fs.createReadStream(filePath),
+                    Key: 'logs/' + file.originalname
+                };
 
-            // Required fields
-            if (!bot || !url || !actions) { 
-                return res.status(400).send('Missing required field(s)');
-            }
-
-            const Item = { 
-                bot, url, actions, search_term,
-                id: uuidv4(),
-                datetime: moment(new Date()).format(DATETIME_FORMAT)
-            };
-            const params = { TableName: 'Logs', Item };
-
-            docClient.put(params, function(err) {
+            s3.upload(params, function(err, data) {
+                fs.unlink(filePath, () => {});
                 if (err) return next(err);
                 res.sendStatus(200);
             });

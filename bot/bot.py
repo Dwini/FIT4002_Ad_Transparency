@@ -1,17 +1,66 @@
+import requests
+import logging
+import random
+import os
+
+log = logging.getLogger()
+
+def fetch_details(username):
+  """
+  Query db for bot details
+  :param username: Username of bot
+  """
+  log.info('Fetching bot details')
+  url = os.getenv('DB_URL') + '/bot/' + username
+  r = requests.get(url)
+  r.raise_for_status()
+  return r.json()
+
+def get_search_terms(political_ranking, other_terms_category):
+  """
+  Query db for search terms
+  :param political_ranking: Stance of bot to get political terms
+  :param other_terms_category: Demographic of bot
+  """
+  log.info('Fetching political search terms')
+  url = os.getenv('DB_URL') + '/search_terms/political/' + str(political_ranking)
+  r = requests.get(url)
+  r.raise_for_status()
+  search_terms = r.json()
+
+  log.info('Fetching other search terms')
+  url = os.getenv('DB_URL') + '/search_terms/other/' + str(other_terms_category)
+  r = requests.get(url)
+  r.raise_for_status()
+  search_terms = search_terms + r.json()
+
+  log.info('Shuffling terms')
+  random.shuffle(search_terms)
+  random.shuffle(search_terms)
+  random.shuffle(search_terms)
+  return search_terms[:int(os.getenv('NUM_TERMS'))]
+
 class Bot:
-  def __init__(self, firstname, lastname, username, password, gender, birthDay, birthMonth, birthYear, politicalStance, search_terms, profileBuilt):
-    self.firstname = firstname
-    self.lastname = lastname
-    self.username = username
-    self.password = password
-    self.gender = gender
-    self.birthDay = birthDay
-    self.birthMonth = birthMonth
-    self.birthYear = birthYear
-    # TODO create db of political terms and then when creating bots set a political stance
-    self.politcalStance = politicalStance
-    self.search_terms = search_terms
-    self.profileBuilt = profileBuilt
+  def __init__(self, username):
+    log.info('Initialising bot ' + username)
+    details = fetch_details(username)
+
+    self.firstname = details['name'][0]
+    self.lastname = details['name'][1]
+    self.username = details['username']
+    self.password = details['password']
+    self.gender = details['gender']
+    self.birthDay = details['DOB'][:2]
+    self.birthMonth = details['DOB'][3:5]
+    self.birthYear = details['DOB'][6:]
+    self.politcalStance = details['political_ranking']
+    self.profileBuilt = True
+    self.zipcode = 91210    # TODO add zipcode to db
+    self.position = {
+      'lat': float(details['location']['latitude']),
+      'lon': float(details['location']['longitude'])
+    }
+    self.search_terms = get_search_terms(details['political_ranking'], details['other_terms_category'])
 
   def getFirstname(self):
     return self.firstname
@@ -36,9 +85,6 @@ class Bot:
 
   def getBirthYear(self):
     return self.birthYear
-
-  def setSearchTerms(self):
-    self.search_terms = 'Trump'
 
   def getSearchTerms(self):
     return self.search_terms

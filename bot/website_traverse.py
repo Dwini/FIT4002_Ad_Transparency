@@ -10,9 +10,9 @@ import base64
 import math
 import requests
 import multiprocessing
+import logging
 
-# define constants
-DB_URL = os.getenv('DB_URL') or "http://localhost:8080"
+log = logging.getLogger()
 
 """Methodical traversal or set of websites with scraping if required.
 
@@ -47,26 +47,29 @@ class webTraverse:
 
         for url in urls:
 
-            print('Opening ' + url)
+            log.info('Opening ' + url)
             try:
                 self.driver.get(url)
             except:
-                print("Broken link: %s" % url)
+                log.error("Broken link: %s" % url)
                 continue
 
-            print('Waiting...')
+            log.info('Waiting...')
             sleep(randint(10, 15))
 
-            try:
-                r = requests.post(DB_URL+'/logs', data={
-                    "bot": self.bot.getUsername(),
-                    "url": url,
-                    "actions": ['visit']
-                })
-                r.raise_for_status()
-            #except ConnectionRefusedError:
-            except:
-                print("Couldn't log activity. Connection Error")
+            log.info('Opening ' + url)
+
+            # Logs route deprecated
+            # try:
+            #     r = requests.post(os.getenv('DB_URL')+'/logs', data={
+            #         "bot": self.bot.getUsername(),
+            #         "url": url,
+            #         "actions": ['visit']
+            #     })
+            #     r.raise_for_status()
+            # #except ConnectionRefusedError:
+            # except:
+            #     log.error("Couldn't log activity. Connection Error")
 
             # dialogues can get in the way of ads and scrolling
             self.clear_dialogs()
@@ -102,9 +105,9 @@ class webTraverse:
         for dialog in dialogs:
             try:
                 self.driver.execute_script("arguments[0].remove();", dialog)
-                print('Removed a dialog')
+                log.info('Removed a dialog')
             except:
-                print('error in removing dialog')
+                log.error('error in removing dialog')
 
 
     def accept_cookies(self):
@@ -114,10 +117,10 @@ class webTraverse:
         for button in agree_buttons:
             try:
                 button.click()
-                print('Clicked a button')
+                log.info('Clicked a button')
                 sleep(randint(1, 2))
             except:
-                print('Failed to click a button')
+                log.error('Failed to click a button')
 
 
     def click_local_links(self, current_depth):
@@ -138,10 +141,10 @@ class webTraverse:
                     #local_links[random_pos].click()
                     linkURL = local_links[random_pos].get_attribute('href')
                     self.traverse([linkURL], current_depth-1)
-                    print('Clicked a local link')
+                    log.info('Clicked a local link')
                     break
                 except:
-                    print('Failed to click local link')
+                    log.error('Failed to click local link')
 
     def isElementClickable(self, element):
 
@@ -186,15 +189,15 @@ class webTraverse:
             with open('pageScreenshots/' + str(randint(0, 10000)) + '.png', 'wb+') as fh:
                 fh.write(base64.b64decode(self.driver.get_screenshot_as_base64()))
 
-            print('printed full page')
+            log.info('printed full page')
         except:
-            print('Full page screenshot failed')
+            log.error('Full page screenshot failed')
 
         self.driver.set_window_size(original_size['width'], original_size['height'])
 
     def random_wait_and_scroll(self):
         # random wait and scroll action
-        print('Waiting...')
+        log.info('Waiting...')
         for i in range(3):
             sleep(randint(1, 3))
             self.driver.execute_script("window.scrollTo(0," + str(randint(50, 2000)) + ")")
@@ -208,9 +211,9 @@ class webTraverse:
         for header in headers:
                 try:
                     self.driver.execute_script("arguments[0].remove();", header)
-                    print('removed a header')
+                    log.info('removed a header')
                 except:
-                    print('error in removing header')
+                    log.error('error in removing header')
 
 def timer():
     for i in range(15):

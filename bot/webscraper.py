@@ -5,14 +5,16 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 from requests_html import HTMLSession
 from time import sleep
 import random
-
+import logging
 
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
+log = logging.getLogger()
 
 class webscraper:
     def __init__(self, webdriver, bot, scrapping = False):
@@ -20,20 +22,20 @@ class webscraper:
         self.bot = bot
         self.scrapping = scrapping
 
-        #self.login()
-
-        #self.activate_bot()
-
     def handle_captcha(self):
         """
         Saves a screenshot of the captcha (out/captcha.png) and reads from
         file (out/captcha) the captcha text to input
         """
-        self.webdriver.save_screenshot('/tmp/out/captcha.png')
+        self.webdriver.save_screenshot('./out/captcha.png')
         sleep(20)
 
-        with open('/tmp/out/captcha', 'r') as f:
-            self.webdriver.find_element_by_xpath("//input[@aria-label='Type the text you hear or see']").send_keys(f.read())
+        with open('./out/captcha', 'r') as f:
+            try:
+                self.webdriver.find_element_by_xpath("//input[@aria-label='Type the text you hear or see']").send_keys(f.read())
+            except:
+                log.error('Captcha input failed. Possibly incorrect captcha?')
+                raise
         
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
         sleep(4)
@@ -41,41 +43,59 @@ class webscraper:
         self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
 
     def login(self):
-        print('>> Logging into Google account')
+        log.info('Logging into Google account')
 
-        self.webdriver.get('https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/')
+        url = 'https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/'
+        log.info('Opening ' + url)
+        actions_email = ActionChains(self.webdriver)
+        actions_password = ActionChains(self.webdriver)
+        actions_enter = ActionChains(self.webdriver)
+
+        self.webdriver.get(url)
         sleep(2)
+        self.webdriver.save_screenshot('./out/login0.png')
 
         try:
-            self.webdriver.find_element_by_id('identifierId').send_keys(self.bot.getUsername())
+            log.info('Entering username')
+            actions_email = actions_email.send_keys(self.bot.getUsername())
+            actions_email.perform()
+            sleep(5)
         except:
-            print('\t>> Could not find username field. Assuming already logged in')
-            self.webdriver.save_screenshot('/tmp/out/login_proof.png')
+            log.warning('Could not find username field. Assuming already logged in')
             return
 
-        self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-        sleep(4)
+        actions_enter = actions_enter.send_keys(Keys.ENTER)
+        actions_enter.perform()
+        sleep(7)
+        self.webdriver.save_screenshot('./out/login1.png')
 
         try:
-            self.webdriver.find_element_by_css_selector("input[type=password]").send_keys(self.bot.getPassword())
+            log.info('Entering password')
+            actions_password = actions_password.send_keys(self.bot.getPassword())
+            actions_password.perform()
+            sleep(4)
         except:
-            print("\t>> Captcha encountered!")
+            log.critical('Captcha encountered!')
+            log.info('Waiting for user input')
             self.handle_captcha()
         
-        self.webdriver.find_element_by_id('passwordNext').click()
-        sleep(20)   # large wait time as proxies are slow...
+        actions_enter.perform()
+        self.webdriver.save_screenshot('./out/login2.png')
+        sleep(5)   # large wait time as proxies are slow...
 
-        print("\t>> Login successful")
+        log.info("Login successful")
+
+        url = 'https://mail.google.com/mail/u/0/#inbox'
+        self.webdriver.get(url)
+        sleep(2)
+        self.webdriver.save_screenshot('./out/login_proof.png')
 
     def activate_bot(self):
-
-        #self.login()
-
         choice = random.randint(0,1)
         if choice == 0:
-            print('google searching...')
+            log.info('Pre-login Google searching')
             gs = googleSearch(self.webdriver, self.bot, self.scrapping)
             gs.search_keywords(num_links_to_visit=1)
         else:
-            print('youtube searching')
+            log.info('Pre-login Youtube searching')
             youtube_scraper(self.webdriver, self.bot, self.scrapping)
