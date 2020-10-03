@@ -2,11 +2,17 @@
 This module handles the cached global values for the Ad Transparency
 dashboard project.
 
-Last updated: MB 8/09/2020 - copy boilerplate code from previous flask project.
+Last updated: MB 30/09/2020 - add db_uri to cache.
 """
 # import external libraries.
-import pytz
+import pytz, os, dotenv
 from datetime import datetime
+dotenv.load_dotenv()
+
+"""
+Set the address of the db endpoint.
+"""
+db_uri = os.getenv('DB_URI') or 'http://localhost:8080'  # default db project endpoint.
 
 """
 This dictionary is sent to each web page. To add additional data to the webpage,
@@ -55,3 +61,15 @@ This is a dictionary with the id of the other ranking as a key, and a list
 of other search terms as the value.
 """
 other_search_term_dict = dict()
+
+"""
+This is a dictionary with the id of the error entry as a key, and a dictionary
+of error attributes as the value.
+"""
+error_dict = dict()
+
+"""
+This is a dictionary with the id of the log entry as a key, and a dictionary
+of log attributes as the value.
+"""
+log_dict = dict()

@@ -2,10 +2,13 @@
 This module handles the downloading and parsing of ad information from the
 DynamoDB. This information is in a structured format to be rendered in HTML.
 
-Last updated: MB 8/09/2020 - copied module from 'bot_controller' as a template.
+Last updated: MB 30/09/2020 - refactor to handle db retrieval.
 """
+# import external libraries.
+import requests
+
 # import local modules.
-from src import db_controller, cache_handler
+from src import cache_handler
 
 """
 This function will update the cached ad list. Each element in the list is an
@@ -16,7 +19,7 @@ def update_ad_cache():
     cache_handler.ad_dict.clear()
 
     # retrieve all raw data from 'Ads' table in AWS DynamoDB.
-    data = db_controller.get_ad_table()
+    data = get_ad_table()
 
     # iterate over each item in the raw data and append the information to the
     # the ad_dict.
@@ -29,3 +32,13 @@ def update_ad_cache():
             'file': ad['file'] if 'file' in ad else '-',
             'link': ad['link'] if 'link' in ad else '-',
         }
+
+"""
+Return a full dump of the bot table. This will need to be parsed by the caller.
+"""
+def get_ad_table():
+    # connect to db project and return the db data.
+    r = requests.get(cache_handler.db_uri+'/ads')
+
+    # return the json data.
+    return r.json()
