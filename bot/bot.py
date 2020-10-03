@@ -91,3 +91,11 @@ class Bot:
 
   def getProfileBuilt(self):
     return self.profileBuilt
+
+  def updateStatus(self, status):
+    url = os.getenv('DB_URL') + '/bot_scheduler/update_status'
+    r = requests.post(url, data={
+      'username': self.username,
+      'status': status
+    })
+    r.raise_for_status()

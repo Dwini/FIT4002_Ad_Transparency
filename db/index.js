@@ -16,6 +16,7 @@ require('./routes/bots')(app);
 require('./routes/logs')(app);
 require('./routes/errors')(app);
 require('./routes/search_terms')(app);
+require('./routes/bot_scheduler')(app);
 require('./routes/heartbeat')(app);
 
 app.listen(PORT, HOST)
