@@ -20,7 +20,9 @@ module.exports = app => {
 
     app.post('/bot_scheduler/update_status', function(req, res, next) {
         /**
-         * Inform that a bot is running
+         * Update a bot's status
+         * @param body.username - Username of bot
+         * @param body.status - Status to set
          */
 
         // TODO: Validation that status is valid
