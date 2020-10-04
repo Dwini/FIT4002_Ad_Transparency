@@ -2,6 +2,7 @@ const AWS = require('aws-sdk');
 
 const { accessKeyId, secretAccessKey, 
     region } = require('../config').aws;
+const { getAllBots } = require('./_shared');
 
 AWS.config.update({ accessKeyId, secretAccessKey, region });
 var docClient = new AWS.DynamoDB.DocumentClient();
@@ -9,12 +10,11 @@ var docClient = new AWS.DynamoDB.DocumentClient();
 module.exports = app => {
     app.get('/bots', function(req, res, next) {
         /** Get all bots in db */
-        const params = { TableName: 'Bots' };
-
-        docClient.scan(params, function(err, data) {
+        const callback = function(err, data) {
             if (err) return next(err);
             res.send(data.Items);
-        });
+        };
+        getAllBots(callback);
     });
 
     app.get('/bot/:username', function(req, res, next) { 

@@ -48,6 +48,9 @@ def main():
         # Driver setup
         session = get_driver(bot.position)
 
+        # Mark bot as running
+        bot.updateStatus('Running')
+        
         # Google scraping
         ws = webscraper(session, bot)
         ws.activate_bot()
@@ -60,8 +63,10 @@ def main():
             yt_scraper.scrape_youtube_video_ads(items)
     except Exception as e:
         handle_error(e)
+        bot.updateStatus('Crashed')
     else:
         log.info('Session completed successfully')
+        bot.updateStatus('Idle')
     finally:
         teardown(session, display)
 

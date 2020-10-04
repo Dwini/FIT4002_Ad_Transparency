@@ -5,8 +5,6 @@ from driver.session import get_session
 from driver.location import set_location
 
 def get_driver(position=None):
-    get_session()
-
     driver = None
     if os.getenv('USE_PROXIES') != "1":
         driver = create_driver()

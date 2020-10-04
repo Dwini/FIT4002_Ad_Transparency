@@ -5,6 +5,7 @@ import os
 import logging
 
 import driver.proxy as proxy
+from driver.session import get_session
 
 log = logging.getLogger()
 
@@ -33,15 +34,23 @@ def create_driver(proxyIP=None):
 
     if proxyIP is not None:
         chrome_options.add_argument('--proxy-server=%s' % proxyIP)
-    
+
+    get_session()
     log.info('Creating driver')
     try:
         driver = webdriver.Chrome(CHROMEDRIVER_PATH, options=chrome_options)
+        return driver
+    except:
+        log.warning('Failed to create driver. Trying again')
+    
+    get_session(delete_old=True)
+    log.info('Creating driver - Attempt 2')
+    try:
+        driver = webdriver.Chrome(CHROMEDRIVER_PATH, options=chrome_options)
+        return driver
     except:
         log.error('Failed to create driver')
         raise
-
-    return driver
 
 def create_driver_with_proxy(pos):
     i = 0
