@@ -89,5 +89,4 @@ def example_create_bot():
     r.raise_for_status()
 
 if __name__ == '__main__':
-    example_create_bot()
-    # main()
+    main()
