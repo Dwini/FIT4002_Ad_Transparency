@@ -24,8 +24,9 @@ class webscraper:
 
     def handle_captcha(self):
         """
+        DEVELOPMENT ONLY
         Saves a screenshot of the captcha (out/captcha.png) and reads from
-        file (out/captcha) the captcha text to input
+        file (out/captcha) the captcha text to input.
         """
         self.webdriver.save_screenshot('./out/captcha.png')
         sleep(20)
@@ -49,12 +50,14 @@ class webscraper:
         log.info('Opening ' + url)
         self.webdriver.get(url)
         sleep(3)
-        self.webdriver.save_screenshot('./out/login_proof.png')
+
+        # TODO: REMOVE
+        self.webdriver.save_screenshot('./out/login2.png')
 
         if ('myaccount' in self.webdriver.current_url):
             log.info('Login successful')
         else:
-            log.warning('Login has most likely have failed')
+            log.warning('Login most likely failed')
 
     def login(self):
         log.info('Logging into Google account')
@@ -67,35 +70,29 @@ class webscraper:
 
         self.webdriver.get(url)
         sleep(2)
-        self.webdriver.save_screenshot('./out/login0.png')
 
-        try:
-            log.info('Entering username')
-            actions_email = actions_email.send_keys(self.bot.getUsername())
-            actions_email.perform()
-            sleep(5)
-        except:
-            log.warning('Could not find username field. Assuming already logged in')
-            return
+        log.info('Entering username')
+        actions_email = actions_email.send_keys(self.bot.getUsername())
+        actions_email.perform()
+        sleep(5)
 
         actions_enter = actions_enter.send_keys(Keys.ENTER)
         actions_enter.perform()
         sleep(7)
-        self.webdriver.save_screenshot('./out/login1.png')
 
-        try:
-            log.info('Entering password')
-            actions_password = actions_password.send_keys(self.bot.getPassword())
-            actions_password.perform()
-            sleep(4)
-        except:
-            log.critical('Captcha encountered!')
-            log.info('Waiting for user input')
-            self.handle_captcha()
+        # TODO: REMOVE
+        self.webdriver.save_screenshot('./out/login0.png')
+
+        log.info('Entering password')
+        actions_password = actions_password.send_keys(self.bot.getPassword())
+        actions_password.perform()
+        sleep(4)
         
         actions_enter.perform()
-        self.webdriver.save_screenshot('./out/login2.png')
         sleep(5)   # large wait time as proxies are slow...
+
+        # TODO: REMOVE
+        self.webdriver.save_screenshot('./out/login1.png')
 
         self.check_login()
 

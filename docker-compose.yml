@@ -4,13 +4,6 @@ services:
         build: ./bot
         depends_on:
             - db
-        environment:
-          - AD_USERNAME=${AD_USERNAME:-mwest5078}
-          - NUM_TERMS=${NUM_TERMS:-2}
-          - USE_PROXIES=${USE_PROXIES:-0}
-          - CHANGE_LOCATION=${CHANGE_LOCATION:-0}
-          - UPLOAD_LOGS=${UPLOAD_LOGS:-0}
-          - DB_URL=${DB_URL:-http://db:8080}
         volumes:
             - ./bot/out:/app/out
     db:
