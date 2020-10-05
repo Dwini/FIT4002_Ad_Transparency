@@ -4,6 +4,7 @@ from selenium.common.exceptions import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver import ActionChains
 from enum import Enum
 import requests
 from youtube_elements import youtube_elements
@@ -80,10 +81,16 @@ class youtube_scraper:
                     video_ad_url = self.yt_element_search.find_video_ad_url(video_ad)
                     video_element = self.webdriver.find_element_by_class_name('html5-video-player')
 
+                    log.info('Attempt ' + str(attempt) + ' Screenshotting video/panel advertisement')
                     self.screenshot_ad(video_element, False, 'video_ad.png', True)
 
+                    # find the video id for the advertisment
+                    ad_id = get_ad_id()
+                    print(ad_id)
+                    log.info('ad video id: ' + str(ad_id))
+
                     self.save_ad(self.bot.getUsername(), video_ad_url, video_ad_url, video_ad, 'video_ad.png')
-                    log.info('Attempt ' + str(attempt) + ' Found - video/panel advertisement')
+                    log.info('Attempt ' + str(attempt) + ' SAVED - video/panel advertisement')
                 except NoSuchElementException:
                     pass
 
@@ -106,9 +113,12 @@ class youtube_scraper:
                     self.screenshot_ad(sidebar_ad, False, 'sidebar_ad.png', True)
 
                     self.save_ad(self.bot.getUsername(), sidebar_ad_url, sidebar_ad_url, sidebar_ad.get_attribute('innerHTML'), 'sidebar_ad.png')
-                    log.info('Attempt ' + str(attempt) + ' Found - sidebar advertisement')
+                    log.info('Attempt ' + str(attempt) + ' SAVED - sidebar advertisement')
+                    break
                 except NoSuchElementException:
                     pass
+
+        log.info('finalizing youtube search for: ' + str(search_param))
 
         if (foundSidebarAd or foundVideoAd) is False:
             log.warning('No ads found')
@@ -177,14 +187,6 @@ class youtube_scraper:
             "headline": ad_headline,
             "html": ad_html,
         }
-
-        # todo: add base64 conversion for attached ads
-
-        # if image is not None:
-        #     with open(image, "rb") as f:
-        #         #convert image to base64
-        #         a = encoded_string= base64.b64encode(f.read())
-        #         data['base64'] = a
         log.info('saving ad... ' + str(data['headline']))
         file = {'file': open(image, 'rb')}
         url = os.getenv('DB_URL') + '/ads'
@@ -192,18 +194,6 @@ class youtube_scraper:
         r.raise_for_status()
 
     def log_to_db(self, bot_id, url, action, search_term=None):
-        # save site visit or search to database
-        # data = {
-        #     "bot": bot_id,
-        #     "url": url,
-        #     "actions": [action]
-        # }
-        # if search_term is not None:
-        #     data['search_term'] = search_term
-        
-        # r = requests.post(DB_URL+'/logs', data=data)
-        # r.raise_for_status()
-
         # Logs table deprecated. Just need to send to log
         if search_term is not None:
             log.info('Searching for "' + search_term + '" at ' + url)
@@ -229,8 +219,6 @@ class youtube_scraper:
             try:
                 if base64:
                     screenshot = html_element.screenshot_as_base64
-                # print(base64_screenshot)
-                # might include the db call, or in actual save ad function
                 else:
                     screenshot = html_element.save_screenshot(name)
             except:
@@ -249,3 +237,18 @@ class youtube_scraper:
         elif len(time_string.split(':')) == 3:
             h, m, s = time_string.split(':')
             return int(h) * 3600 + int(m) * 60 + int(s)
+
+    def get_ad_id(self):
+        try:
+            # right click on the video player to open stats for nerds
+            player = self.webdriver.find_element_by_class_name('html5-video-player')
+            actionChains = ActionChains(self.webdriver)
+            actionChains.context_click(player).perform()
+
+            self.webdriver.find_element_by_xpath("//div[@class='ytp-menuitem'][6]/div[@class='ytp-menuitem-label'][1]").click()
+            value = self.webdriver.find_element_by_xpath("//*[@id='movie_player']/div[18]/div/div[1]/span")
+            ad_id = value[0:11]
+        except NoSuchElementException:
+            log.warn('Unable to find video ad ID')
+            pass
+        return ad_id
