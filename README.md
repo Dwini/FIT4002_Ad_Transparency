@@ -12,9 +12,10 @@ Repository for a final year project at Monash University around ad transparency
 3. Run project with `npm start`.
 
 ### Bot Project
-1. Move to the `/bot` directory and install all python requirements by running `pip install --upgrade -r requirements.txt`.
-2. Ensure the DB Project is running.
-3. run `set "AD_USERNAME=<username>" && set "USE_PROXIES=0" && set "CHANGE_LOCATION=1" && set "NUM_TERMS=2" && set "DB_URL=http://localhost:8080" && set "UPLOAD_LOGS=0" && python app.py`. Where <username> is the username of the google profile to run.
+1. Make sure you have the correct browser installed, depending on the driver you want to use. Currently Chrome and Firefox supported
+2. Move to the `/bot` directory and install all python requirements by running `pip install --upgrade -r requirements.txt`.
+3. Ensure the DB Project is running.
+4. run `set "AD_USERNAME=<username>" && set "USE_PROXIES=0" && set "CHANGE_LOCATION=1" && set "NUM_TERMS=2" && set "DB_URL=http://localhost:8080" && set "UPLOAD_LOGS=0" && python app.py`. Where <username> is the username of the google profile to run.
 
 ## Instructions for running the project in a docker container
 ### Installing Docker
