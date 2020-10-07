@@ -30,7 +30,7 @@ module.exports = app => {
             /** 
              * Fetch all Ads from db.
              * @param query.bot - Username of bot to filter by
-             * TODO: Pagnitate this
+             * TODO: Pagnitate this 
              */
             var params = { TableName: 'Ads' };
 
