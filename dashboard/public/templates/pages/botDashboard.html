@@ -36,6 +36,7 @@
                 <th>Password</th>
                 <th>Latitude</th>
                 <th>Longitude</th>
+                <th>Status</th>
               </tr>
               {% for username, values in data['bots'].items() %}
               <tr>
@@ -48,6 +49,7 @@
                 <td>{{ values['password'] }}</td>
                 <td>{{ values['latitude'] }}</td>
                 <td>{{ values['longitude'] }}</td>
+                <td>{{ values['status'] }}</td>
               </tr>
               {% endfor %}
             </table>

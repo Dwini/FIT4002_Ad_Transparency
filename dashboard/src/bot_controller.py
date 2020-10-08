@@ -19,11 +19,14 @@ def update_bot_cache():
     cache_handler.bot_dict.clear()
 
     # retrieve all raw data from 'Bots' table in AWS DynamoDB.
-    data = get_bot_table()
+    bot_data = get_bot_table()
+
+    # retrieve all raw data from 'Status' table in AWS DynamoDB.
+    status_data = get_bot_status_table()
 
     # iterate over each item in the raw data and append the information to the
     # the bot_list.
-    for bot in data:
+    for bot in bot_data:
         # parse data and add to bot_dict. set username as the key and create an
         # object as the value.
         cache_handler.bot_dict[bot['username']] = {
@@ -35,6 +38,7 @@ def update_bot_cache():
             'dob': bot['DOB'] if 'DOB' in bot else '-',
             'latitude': float(bot['location']['latitude']) if 'location' in bot else '-',
             'longitude': float(bot['location']['longitude']) if 'location' in bot else '-',
+            'status': status_data[bot['username']] if bot['username'] in status_data else 'Unknown',
         }
 
     # once bot data has been saved, load search terms.
@@ -47,6 +51,16 @@ Return a full dump of the bot table. This will need to be parsed by the caller.
 def get_bot_table():
     # connect to db project and return the db data.
     r = requests.get(cache_handler.db_uri+'/bots')
+
+    # return the json data.
+    return r.json()
+
+"""
+Return a full dump of the bot table. This will need to be parsed by the caller.
+"""
+def get_bot_status_table():
+    # connect to db project and return the db data.
+    r = requests.get(cache_handler.db_uri+'/bot_scheduler/statuses')
 
     # return the json data.
     return r.json()
