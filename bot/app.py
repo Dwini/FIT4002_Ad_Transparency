@@ -70,6 +70,23 @@ def main():
     finally:
         teardown(session, display)
 
+def example_create_bot():
+    import requests, json
+    url = os.getenv('DB_URL') + '/bot/test'     # 'test' is bots username. Don't need to send with data
+    data = { 
+        'password':  'test123123',
+        'name': 'test',
+        'DOB': 'test',
+        'gender': 'test',
+        'political_ranking': 0,
+        'other_terms_category': 0,
+        'location': {
+            'latitude': 0,
+            'longitude': 0
+        }
+    }
+    r = requests.post(url, json=data)       # Need to send as json or won't work
+    r.raise_for_status()
+
 if __name__ == '__main__':
-    # print('Environment Vars: username='+str(AD_USERNAME)+' proxies='+str(USE_PROXIES)+' location='+str(CHANGE_LOCATION))
     main()

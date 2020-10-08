@@ -12,24 +12,24 @@ FROM base as builder
 # upgrade pip.
 RUN python -m pip install --upgrade pip
 
-# install all packages for chromedriver: https://gist.github.com/varyonic/dea40abcf3dd891d204ef235c6e8dd79.
+# Install Firefox dependencies
 RUN apt-get update && \
-    apt-get install -y xvfb gnupg wget curl unzip --no-install-recommends && \
-    wget --no-verbose -O /tmp/chrome.deb http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_85.0.4183.121-1_amd64.deb && \
-    apt install -y /tmp/chrome.deb && \
-    rm /tmp/chrome.deb
-    # wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-    # echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list && \
-    # apt-get update -y && \
-    # apt-get install -y google-chrome-stable
-    # CHROMEVER=$(google-chrome --product-version | grep -o "[^\.]*\.[^\.]*\.[^\.]*") && \
-    # DRIVERVER=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROMEVER") && \
-    # wget -q --continue -P /chromedriver "http://chromedriver.storage.googleapis.com/$DRIVERVER/chromedriver_linux64.zip" && \
-    # unzip /chromedriver/chromedriver* -d /chromedriver
+  apt-get install -y --no-install-recommends --no-install-suggests libgtk-3.0 libdbus-glib-1-2 libx11-xcb1 libxt6 wget bzip2 gcc g++ xvfb curl
 
-# make the chromedriver executable and move it to default selenium path.
-# RUN chmod +x /chromedriver/chromedriver
-# RUN mv /chromedriver/chromedriver /usr/bin/chromedriver
+# Install Firefox
+ARG FIREFOX_VERSION=81.0.1
+RUN wget -q -O - "https://download.mozilla.org/?product=firefox-$FIREFOX_VERSION&os=linux64"  | tar -xj -C /opt && \
+  ln -s /opt/firefox/firefox /usr/bin/
+
+# Install Geckodriver
+# ARG GECKODRIVER_VERSION=v0.27.0
+# RUN wget https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-$GECKODRIVER_VERSION-linux64.tar.gz && \
+#   tar -zxf geckodriver-$GECKODRIVER_VERSION-linux64.tar.gz -C /usr/local/bin && \
+#   chmod +x /usr/local/bin/geckodriver && \
+#   rm geckodriver-$GECKODRIVER_VERSION-linux64.tar.gz
+
+# Clean up Firefox dependencies
+RUN apt-get purge -y --auto-remove bzip2 gcc g++
 
 # copy the python requirements file into the install directory and install all python requirements.
 COPY requirements.txt /requirements.txt
@@ -51,14 +51,7 @@ FROM builder
 
 WORKDIR /app
 
-# URL for the database.
-ENV DB_URL "http://18.210.23.37:8080"
-ENV NUM_TERMS "2"
-ENV USE_PROXIES "0"
-ENV CHANGE_LOCATION "0"
-ENV UPLOAD_LOGS "1"
-ENV AD_USERNAME "jf0895694"
-
+# Create non-root user (for driver execution)
 RUN useradd -ms /bin/bash bot && \
   chown -R bot:bot /app && \
   chmod 755 /app
