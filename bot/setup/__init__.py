@@ -1,6 +1,5 @@
-import signal 
+import signal
 import logging
-from pyvirtualdisplay import Display
 from pathlib import Path
 import os
 import sys
@@ -23,7 +22,7 @@ def check_env():
         'CHANGE_LOCATION',
         'UPLOAD_LOGS'
     ]
-    
+
     for v in env_vars:
         if os.getenv(v) is None:
             raise NameError('%s environment variable has not been set' % v)
@@ -43,20 +42,7 @@ def timeout_action(_signo, _stack_frame):
     log.error('Program timed out')
     raise TimeoutError()
 
-"""
-Setup for container builds.
-If this is running in a container, import and create a virtual display
-"""
-def start_display():
-    display = Display(visible=0, size=(800, 600))
-    display.start()
-    return display
-
 def initial_setup():
     check_env()
     create_dirs()
     configure_logger()
-
-    # For container builds
-    if len(sys.argv) > 1 and sys.argv[1] == '-c':
-        signal.signal(signal.SIGALRM, timeout_action)

@@ -33,8 +33,6 @@ def getGoogleAds(driver, bot):
 
         switch_to_frame_context(driver, iframe)
 
-        innerHTML = get_ad_html(driver)
-
         adLink = find_ad_redirect(driver)
 
         driver.switch_to.default_content()
@@ -47,6 +45,7 @@ def getGoogleAds(driver, bot):
             log.error('Screenshot capture failed')
 
         try:
+            log.info('attempting to upload ad to db: '+adLink)
             url = os.getenv('DB_URL') + '/ads'
             r = requests.post(url, files={'file': image}, data={
                 "bot": bot.username,
@@ -61,7 +60,8 @@ def getGoogleAds(driver, bot):
         #     print(e.response.text)
 
         #testing purposes:
-        except:
+        except Exception as e:
+            log.error(str(e))
             log.error("Connection for Screenshot failed")
 
 
@@ -104,7 +104,7 @@ def get_ad_html(driver):
         #adElem = driver.find_element_by_id(iframeID)
         innerHTML = driver.find_element_by_xpath(".//html[@*]").get_attribute('innerHTML')
     except:
-        log.error("Ad HTML retrieval failed")
+        log.error("Ad HTML retrieval failed: "+str(e))
     return innerHTML
 
 
@@ -194,4 +194,3 @@ def imageProcessing(png):
         return
 
     return f
-

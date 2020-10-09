@@ -73,7 +73,7 @@ class googleSearch:
             sleep(randint(8, 10))
 
             if self.scrapping:
-                self.scrape(self, ad_list, keyword, r)
+                self.scrape(ad_list, keyword, r)
             # wait until shows result
             results = self.webdriver.find_elements_by_css_selector('div.g')
 
@@ -141,6 +141,7 @@ class googleSearch:
             ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
 
             # save ad to database
+            log.info('attempting to upload ad to db: '+ad_link)
             url = os.getenv('DB_URL') + '/ads'
             r = requests.post(url, data={
                 "bot": self.bot.getUsername(),

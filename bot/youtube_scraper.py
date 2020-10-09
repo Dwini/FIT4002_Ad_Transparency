@@ -64,10 +64,13 @@ class youtube_scraper:
         foundSidebarAd = False
 
         attempt = 0
-        sleep(2)  # hard coded sleep to bypass some ad load times.
+        sleep(10)  # hard coded sleep to bypass some ad load times.
 
         # save baseline screenshot of current page usually for debugging
-        self.webdriver.save_screenshot('current_webpage.png')
+        try:
+            self.webdriver.save_screenshot('current_webpage.png')
+        except Exception as e:
+            log.error(str(e))
 
         while (attempt < timeout) or not (foundVideoAd and foundSidebarAd):
             sleep(1)
@@ -160,7 +163,7 @@ class youtube_scraper:
                     log.info('Found - promoted video advertisement')
                     promo_video_ad_url = self.yt_element_search.find_promo_search_video_ad_url(ad.get_attribute('innerHTML'))
 
-                    self.screenshot_ad(ad, False, 'promo_video_ad.png', True)   
+                    self.screenshot_ad(ad, False, 'promo_video_ad.png', True)
 
                     self.save_ad(self.bot.getUsername(), promo_video_ad_url, promo_video_ad_url, ad.get_attribute('innerHTML'), 'promo_video_ad.png')
 
@@ -211,7 +214,15 @@ class youtube_scraper:
         if crop:
             location = html_element.location
             size = html_element.size
-            self.webdriver.save_screenshot(name)
+            # debug to catch any NS_ERROR_LOSS_OF_SIGNIFICANT_DATA errors
+            # if image is too big.
+            try:
+                self.webdriver.save_screenshot(name)
+            except Exception as e:
+                log.error(str(e))
+                log.error('window size: '+str(self.webdriver.get_window_size()))
+                log.error('image size: '+str(size))
+                log.error('location: '+str(location))
 
             # crop image
             x = location['x']
@@ -227,7 +238,14 @@ class youtube_scraper:
                 if base64:
                     screenshot = html_element.screenshot_as_base64
                 else:
-                    screenshot = html_element.save_screenshot(name)
+                    # debug to catch any NS_ERROR_LOSS_OF_SIGNIFICANT_DATA errors
+                    # if image is too big.
+                    try:
+                        self.webdriver.save_screenshot(name)
+                    except Exception as e:
+                        log.error(str(e))
+                        log.error('window size: '+str(self.webdriver.get_window_size()))
+                        log.error('image size: '+str(size))
             except:
                 log.warning('Screenshot capture failed')
 
@@ -247,7 +265,7 @@ class youtube_scraper:
 
     def get_ad_id(self):
         try:
-            # right click on the video player 
+            # right click on the video player
             player = self.webdriver.find_element_by_class_name('html5-video-player')
             actionChains = ActionChains(self.webdriver)
             actionChains.context_click(player).perform()

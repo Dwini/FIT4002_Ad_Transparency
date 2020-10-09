@@ -37,7 +37,7 @@ class webscraper:
             except:
                 log.error('Captcha input failed. Possibly incorrect captcha?')
                 raise
-        
+
         self.webdriver.find_element_by_xpath('//*[@id="identifierNext"]').click()
         sleep(4)
 
@@ -45,7 +45,7 @@ class webscraper:
 
     def check_login(self):
         log.info('Checking whether login was successful')
-        
+
         url = 'https://accounts.google.com/login'
         log.info('Opening ' + url)
         self.webdriver.get(url)
@@ -87,7 +87,7 @@ class webscraper:
         actions_password = actions_password.send_keys(self.bot.getPassword())
         actions_password.perform()
         sleep(4)
-        
+
         actions_enter.perform()
         sleep(5)   # large wait time as proxies are slow...
 
@@ -99,9 +99,13 @@ class webscraper:
     def activate_bot(self):
         choice = random.randint(0,1)
         if choice == 0:
-            log.info('Pre-login Google searching')
+            log.info('Google searching')
             gs = googleSearch(self.webdriver, self.bot, self.scrapping)
             gs.search_keywords(num_links_to_visit=1)
         else:
-            log.info('Pre-login Youtube searching')
-            youtube_scraper(self.webdriver, self.bot, self.scrapping)
+            log.info('Youtube searching')
+            yt_scraper = youtube_scraper(self.webdriver, self.bot, self.scrapping)
+
+            # perform a youtube search for each keyword.
+            for item in self.bot.search_terms:
+                yt_scraper.scrape_youtube_video_ads(item)

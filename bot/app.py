@@ -33,10 +33,6 @@ def main():
     try:
         setup.ping_db()
 
-        # For container builds
-        if len(sys.argv) > 1 and sys.argv[1] == '-c':
-            display = setup.start_display()
-
         # Init bot
         bot = None
         creating = False
@@ -50,17 +46,16 @@ def main():
 
         # Mark bot as running
         bot.updateStatus('Running')
-        
-        # Google scraping
-        ws = webscraper(session, bot)
-        ws.activate_bot()
 
+        # Setup the webscraber object to scrape ads.
+        ws = webscraper(session, bot, yt_ad.ALL)
+
+        # perform google login.
         ws.login()
 
-        # Youtube scraping
-        yt_scraper = youtube_scraper(session, bot, yt_ad.ALL)
-        for items in bot.search_terms:
-            yt_scraper.scrape_youtube_video_ads(items)
+        # randomly choose to youtube search or google search.
+        ws.activate_bot()
+
     except Exception as e:
         handle_error(e)
         bot.updateStatus('Crashed')
@@ -73,7 +68,7 @@ def main():
 def example_create_bot():
     import requests, json
     url = os.getenv('DB_URL') + '/bot/test'     # 'test' is bots username. Don't need to send with data
-    data = { 
+    data = {
         'password':  'test123123',
         'name': 'test',
         'DOB': 'test',

@@ -34,11 +34,15 @@ RUN apt-get purge -y --auto-remove bzip2 gcc g++
 # copy the python requirements file into the install directory and install all python requirements.
 COPY requirements.txt /requirements.txt
 RUN pip install --upgrade --no-cache-dir -r /requirements.txt
-RUN rm /requirements.txt 
+RUN rm /requirements.txt
 # remove requirements file from container.
 
 # copy the source code into /app and move into that directory.
 COPY . /app
+
+# remove the windows executable driver files, and local .env file.
+RUN rm app/driver/geckodriver.exe
+RUN rm app/.env
 
 ## end builder stage.
 
@@ -50,6 +54,14 @@ COPY . /app
 FROM builder
 
 WORKDIR /app
+
+# set default container evironment variables.
+ENV NUM_TERMS "3"
+ENV AD_USERNAME "mwest5078"
+ENV USE_PROXIES "0"
+ENV CHANGE_LOCATION "1"
+ENV UPLOAD_LOGS "1"
+ENV DB_URL "http://3.233.234.157:8080"
 
 # Create non-root user (for driver execution)
 RUN useradd -ms /bin/bash bot && \
