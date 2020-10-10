@@ -54,13 +54,35 @@ def full_page_screenshot(driver, url):
     driver.set_window_size(original_size['width'], original_size['height'])
 
 
+
 def random_wait_and_scroll(driver):
     # random wait and scroll action
     log.info('Waiting for page to load...')
     for i in range(3):
+        ranInt = random.randint(1, 3)
+        sleep(ranInt)
+        down_scroll = False
+        if ranInt < 2:
+            down_scroll = True
+
+        smoooth_scroll(driver, dst=random.randint(500, 1000), down_scroll=down_scroll)
+        sleep(0.2)
+        smoooth_scroll(driver, dst=random.randint(500, 1000), down_scroll=down_scroll)
         sleep(random.randint(1, 3))
-        driver.execute_script("window.scrollTo(0," + str(random.randint(50, 2000)) + ")")
-        sleep(random.randint(1, 3))
+
+
+def smoooth_scroll(driver, dst, down_scroll):
+    i = 0
+    #scroll down
+    if down_scroll:
+        while i < dst:
+            driver.execute_script("window.scrollBy(0,1)")
+            i += 1
+    #scroll up
+    else:
+        while i < dst:
+            driver.execute_script("window.scrollBy(0,-1)")
+            i += 1
 
 if __name__ == '__main__':
     print('test')
