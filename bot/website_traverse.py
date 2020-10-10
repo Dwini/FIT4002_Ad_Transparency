@@ -137,7 +137,6 @@ class webTraverse:
             random_pos = randint(start_range, end_range)
             if (self.isElementClickable(local_links[random_pos])):
                 try:
-                    local_links[random_pos].location_once_scrolled_into_view
                     #local_links[random_pos].click()
                     linkURL = local_links[random_pos].get_attribute('href')
                     self.traverse([linkURL], current_depth-1)
