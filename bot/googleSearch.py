@@ -80,7 +80,8 @@ class googleSearch:
             newLinks = []
             #gather new links
             try:
-                for _ in range(num_links_to_visit):
+                #top 10 results
+                for _ in range(10):
                     new = True
                     link = results[_].find_element_by_tag_name("a")
                     href = link.get_attribute("href")
