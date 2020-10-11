@@ -35,6 +35,9 @@ def getGoogleAds(driver, bot):
 
         adLink = find_ad_redirect(driver)
 
+        # if adlink is None, set to arbitrary string.
+        adLink = adLink if adLink is not None else '-'
+
         driver.switch_to.default_content()
         base64_screenshot = ""
         try:
