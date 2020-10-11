@@ -80,7 +80,8 @@ class googleSearch:
             newLinks = []
             #gather new links
             try:
-                for _ in range(num_links_to_visit):
+                #top 10 results
+                for _ in range(10):
                     new = True
                     link = results[_].find_element_by_tag_name("a")
                     href = link.get_attribute("href")
@@ -125,9 +126,9 @@ class googleSearch:
         try:
             log.info('Clicked a search result...')
             wt = webTraverse(self.webdriver, self.bot, True)
-            randDepth = randint(1,3)
+            randDepth = randint(1,2)
             wt.traverse(urls=[link], traverseDepth=randDepth)
-        except:
+        except: 
             log.warning("Failed to vist: %s" % link)
 
     def scrape(self, ad_list, keyword, r):

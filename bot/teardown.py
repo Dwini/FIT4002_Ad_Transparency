@@ -1,26 +1,25 @@
-import os
-import logging
-import requests
+# import external libraries.
+import os, logging, requests
+from dotenv import load_dotenv
+load_dotenv()   # load env variables.
 
 log = logging.getLogger()
 
-def teardown(session, display):
-    print('>> Performing teardown')
+def teardown(session=None):
+    log.info('>> Performing teardown')
 
     if session is not None:
         session.quit()
 
-    if display is not None:
-        display.stop()
-
     logfile_path = log.handlers[0].baseFilename
-    print('>> Log file saved to: ' + logfile_path)
+    log.info('>> Log file saved to: ' + logfile_path)
 
     # Upload log file
     if os.getenv('UPLOAD_LOGS') == "1":
-        print('>> Uploading log file')
+        log.info('>> Uploading log file')
 
         url = os.getenv('DB_URL') + '/logs'
-        logfile = open(logfile_path, 'rb')
-        r = requests.post(url, files={ 'file':  logfile })
+        with open(logfile_path, 'rb') as logfile:
+            r = requests.post(url, files={ 'file':  logfile })
+
         r.raise_for_status()
