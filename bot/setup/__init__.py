@@ -39,8 +39,8 @@ Action to be performed when timeout is detected
 def timeout_action(_signo, _stack_frame):
     global TIMED_OUT
     TIMED_OUT = True
-    log.error('Program timed out')
-    raise TimeoutError()
+    # raise custom exception.
+    raise Exception('MaximumContainerRuntime')
 
 def initial_setup():
     check_env()

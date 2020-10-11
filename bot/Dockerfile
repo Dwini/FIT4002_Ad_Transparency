@@ -70,5 +70,5 @@ RUN useradd -ms /bin/bash bot && \
 USER bot
 
 # default entry point. Container will force close after 1 minute.
-CMD ["timeout", "--signal=SIGALRM", "15m", "python", "app.py", "-c"]
+CMD ["timeout", "--signal=SIGTERM", "15m", "python", "app.py", "-c"]
 ## end base stage.

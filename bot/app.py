@@ -7,6 +7,7 @@ import os
 import requests
 import logging
 from dotenv import load_dotenv
+import signal
 
 load_dotenv()
 
@@ -28,7 +29,6 @@ def main():
 
     log = logging.getLogger()
     session = None
-    display = None          # For container builds
 
     try:
         setup.ping_db()
@@ -44,6 +44,10 @@ def main():
         # Driver setup
         session = get_driver(bot.position)
 
+        # setup a listener for the SIGALRM signal sent when maximum container
+        # runtime has been reached. Issue controlled teardown.
+        signal.signal(signal.SIGTERM, setup.timeout_action)
+
         # Mark bot as running
         bot.updateStatus('Running')
 
@@ -57,13 +61,21 @@ def main():
         ws.activate_bot()
 
     except Exception as e:
-        handle_error(e)
-        bot.updateStatus('Crashed')
+        # if the is a MaximumContainerRuntime exception, update bot status to
+        # idle.
+        if str(e) == 'MaximumContainerRuntime':
+            log.info('Session completed successfully: maximum container runtime reached...')
+            bot.updateStatus('Idle')
+
+        # otherwise this is a genuine error.
+        else:
+            handle_error(e)
+            bot.updateStatus('Crashed')
     else:
-        log.info('Session completed successfully')
+        log.info('Session completed successfully: all searches completed...')
         bot.updateStatus('Idle')
     finally:
-        teardown(session, display)
+        teardown(session)
 
 def example_create_bot():
     import requests, json
