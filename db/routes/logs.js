@@ -18,18 +18,20 @@ module.exports = app => {
              * @param query.prefix - Prefix of logs to fetch. Currently logs are prefixed with 
              *      name: YYYY.MM.DD_HH.MM.SS. So to find logs from 12/10/2020 set
              *      prefix = 2020.10.12
-             * TODO: Only return logs for the given day. 
-             * Use ListObjectsV2 with prefix: https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html
              * 
              */
+
+            const { prefix } = req.query;
+
+            if (!prefix) return res.status(400).send('Missing prefix field');
 
             var params = {
                 Bucket: bucket,
                 Delimiter: '/',
-                Prefix: 'logs/'
+                Prefix: 'logs/' + prefix
             };
 
-            s3.listObjects(params, function(err, data) {
+            s3.listObjectsV2(params, function(err, data) {
                 if (err) return next(err);
 
                 var resp = data.Contents;
