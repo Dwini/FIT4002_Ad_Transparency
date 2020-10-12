@@ -38,8 +38,11 @@ def update_log_cache():
 Return a full dump of the log table. This will need to be parsed by the caller.
 """
 def get_log_table():
+    # format current date for to pass to endpoint.
+    date_string = datetime.now().strftime('%Y.%m.%d')
+
     # connect to db project and return the db data.
-    r = requests.get(cache_handler.db_uri+'/logs')
+    r = requests.get(cache_handler.db_uri+'/logs?prefix='+date_string)
 
     # return the json data.
     return r.json()
