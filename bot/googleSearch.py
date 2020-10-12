@@ -18,6 +18,7 @@ import logging
 
 # import local modules.
 from bot import Bot
+import webscraper
 
 log = logging.getLogger()
 
@@ -141,6 +142,10 @@ class googleSearch:
             ad_copy = ad.find('.ads-creative', first=True).text  # ad copy
             ad_list.append([keyword, ad_link, ad_headline, ad_copy])  # append data row to list
 
+            # attempt to get the current url.
+            try: current_url = self.webdriver.current_url
+            except: current_url = None
+
             # save ad to database
             log.info('attempting to upload ad to db: '+ad_link)
             url = os.getenv('DB_URL') + '/ads'
@@ -148,6 +153,8 @@ class googleSearch:
                 "bot": self.bot.getUsername(),
                 "link": ad_link,
                 "headline": ad_headline,
+                "logged_in": webscraper.successful_login,
+                "current_page": current_url,
                 "html": ad_copy
             })
             r.raise_for_status()

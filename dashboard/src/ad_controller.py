@@ -32,6 +32,8 @@ def update_ad_cache():
             'datetime': ad['datetime'] if 'datetime' in ad else '-',
             'file': ad['file'] if 'file' in ad else '-',
             'link': ad['link'] if 'link' in ad else '-',
+            'logged_in': ad['logged_in'] if 'logged_in' in ad else '-',
+            'current_page': ad['current_page'] if 'current_page' in ad else '-',
         }
 
 """

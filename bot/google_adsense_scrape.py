@@ -9,6 +9,9 @@ import math
 from PIL import Image
 import logging
 
+# import local modules.
+import webscraper
+
 log = logging.getLogger()
 
 #given a selenium driver retrieves a list of google ads which appear on the page
@@ -47,6 +50,10 @@ def getGoogleAds(driver, bot):
         except:
             log.error('Screenshot capture failed')
 
+        # attempt to get the current url.
+        try: current_url = self.webdriver.current_url
+        except: current_url = None
+
         try:
             log.info('attempting to upload ad to db: '+adLink)
             url = os.getenv('DB_URL') + '/ads'
@@ -54,6 +61,8 @@ def getGoogleAds(driver, bot):
                 "bot": bot.username,
                 "link": adLink,
                 "headline": adLink,
+                "logged_in": webscraper.successful_login,
+                "current_page": current_url,
                 "html": "innerHTML"
             })
             r.raise_for_status()

@@ -85,12 +85,14 @@ module.exports = app => {
              * @param body.base64    - OPTIONAL. Base64 string of picture of ad
              * @param body.file      - OPTIONAL. Picture or any other file
              *      associated with the ad
+             * @param body.current_page      - OPTIONAL. page where add was found
+             * @param body.logged_in      - OPTIONAL. True if the user was logged in.
              * TODO: Env var that disables sending to Dynamodb
              */
             const { file } = req;
 
             // Allowed fields
-            const { bot, link, headline, html, base64 } = req.body;
+            const { bot, link, headline, html, base64, current_page, logged_in } = req.body;
 
             console.log(req.body);
 
@@ -100,7 +102,7 @@ module.exports = app => {
             }
 
             var Item = { 
-                bot, link, headline, base64,
+                bot, link, headline, base64, current_page, logged_in,
                 id: uuidv4(),
                 datetime: moment(new Date()).format(DATETIME_FORMAT)
             };

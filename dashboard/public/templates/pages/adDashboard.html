@@ -31,6 +31,8 @@
                 <th>Political Ranking</th>
                 <th>Other Category</th>
                 <th>Link</th>
+                <th>Original Page</th>
+                <th>Logged In</th>
                 <th>Datetime</th>
                 <th>Thumbnail</th>
               </tr>
@@ -47,11 +49,17 @@
                     {{ data['bots'][ad['bot']]['other_terms_category'] if ad['bot'] in data['bots'] else '-' }}
                   </a>
                 </td>
-                {% if ad['link']|length > 32 %}
-                  <td><a href="//{{ ad['link'] }}">{{ ad['link'][:32] }}...</a></td>
+                {% if ad['link']|length > 20 %}
+                  <td><a href="//{{ ad['link'] }}">{{ ad['link'][:20] }}...</a></td>
                 {% else %}
                   <td><a href="//{{ ad['link'] }}">{{ ad['link'] }}</a></td>
                 {% endif %}
+                {% if ad['current_page']|length > 20 %}
+                  <td><a href="//{{ ad['current_page'] }}">{{ ad['current_page'][:20] }}...</a></td>
+                {% else %}
+                  <td><a href="//{{ ad['current_page'] }}">{{ ad['current_page'] }}</a></td>
+                {% endif %}
+                <td>{{ ad['logged_in'] }}</td>
                 <td>{{ ad['datetime'] }}</td>
                 <td><img rel='prefetch' class='ad-table-thumbnail' src="{{ ad['file'] }}"></td>
               </tr>

@@ -14,6 +14,9 @@ import math
 import base64
 import logging
 
+# import local modules.
+import webscraper
+
 log = logging.getLogger()
 
 class yt_ad(Enum):
@@ -196,6 +199,8 @@ class youtube_scraper:
             "link": ad_link,
             "headline": ad_headline,
             "html": ad_html,
+            "logged_in": webscraper.successful_login,
+            "current_page": self.webdriver.current_url,
         }
         log.info('saving ad... ' + str(data['headline']))
         file = {'file': open(image, 'rb')}

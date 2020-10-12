@@ -14,6 +14,10 @@ import logging
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
+# this is a public variable that is True if login was confirmed as successful
+# and false if it was not confirmed as successful
+successful_login = False
+
 log = logging.getLogger()
 
 class webscraper:
@@ -56,8 +60,12 @@ class webscraper:
 
         if ('myaccount' in self.webdriver.current_url):
             log.info('Login successful')
+
+            # update shared variable that we will provide with the ads.
+            successful_login = True
         else:
             log.warning('Login most likely failed')
+            successful_login = False
 
     def login(self):
         log.info('Logging into Google account')
