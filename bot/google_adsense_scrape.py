@@ -49,6 +49,7 @@ def getGoogleAds(driver, bot):
             image = imageProcessing(png)
         except:
             log.error('Screenshot capture failed')
+            image = None
 
         # attempt to get the current url.
         try: current_url = self.webdriver.current_url

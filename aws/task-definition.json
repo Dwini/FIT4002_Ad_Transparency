@@ -4,13 +4,13 @@
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "memory": "512",
-  "cpu": "256",
+  "memory": "8192",
+  "cpu": "4096",
   "executionRoleArn": "ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "db",
-      "image": "mattbertoncello/ad_transparency_db",
+      "name": "piasmith984",
+      "image": "mattbertoncello/ad_transparency_bot",
       "essential": true,
       "logConfiguration": {
         "logDriver": "awslogs",
@@ -20,15 +20,115 @@
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "portMappings": [
+      "environment": [
         {
-          "containerPort": 8080
+          "name": "AD_USERNAME",
+          "value": "piasmith984"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "20"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "m3428615",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "m3428615"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "lasquishadavis",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "lasquishadavis"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
         }
       ]
     },
     {
       "name": "mwest5078",
       "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -44,7 +144,7 @@
         },
         {
           "name": "USE_PROXIES",
-          "value": "1"
+          "value": "0"
         },
         {
           "name": "CHANGE_LOCATION",
@@ -52,13 +152,217 @@
         },
         {
           "name": "DB_URL",
-          "value": "http://127.0.0.1:8080"
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "awhite2627",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "awhite2627"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "georgjerome934",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "georgjerome934"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "stevensagnes677",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "stevensagnes677"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "tj8021671",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "tj8021671"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "elizakane3",
+      "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/ad-transparency",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "AD_USERNAME",
+          "value": "eliza.kane.3"
+        },
+        {
+          "name": "USE_PROXIES",
+          "value": "0"
+        },
+        {
+          "name": "CHANGE_LOCATION",
+          "value": "1"
+        },
+        {
+          "name": "DB_URL",
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
         }
       ]
     },
     {
       "name": "burgersa68",
       "image": "mattbertoncello/ad_transparency_bot",
+      "essential": false,
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -74,7 +378,7 @@
         },
         {
           "name": "USE_PROXIES",
-          "value": "1"
+          "value": "0"
         },
         {
           "name": "CHANGE_LOCATION",
@@ -82,7 +386,15 @@
         },
         {
           "name": "DB_URL",
-          "value": "http://127.0.0.1:8080"
+          "value": "http://35.173.250.122:8080"
+        },
+        {
+          "name": "NUM_TERMS",
+          "value": "10"
+        },
+        {
+          "name": "UPLOAD_LOGS",
+          "value": "1"
         }
       ]
     }
