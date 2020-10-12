@@ -15,7 +15,9 @@ module.exports = app => {
         .get(function(req, res, next) {
             /**
              * Fetch list of log files from S3
-             * @param query.bot - Username of bot to filter by TODO
+             * @param query.prefix - Prefix of logs to fetch. Currently logs are prefixed with 
+             *      name: YYYY.MM.DD_HH.MM.SS. So to find logs from 12/10/2020 set
+             *      prefix = 2020.10.12
              * TODO: Only return logs for the given day. 
              * Use ListObjectsV2 with prefix: https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html
              * 

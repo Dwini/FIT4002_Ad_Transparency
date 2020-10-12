@@ -33,10 +33,8 @@ module.exports = app => {
             * Fetch all Ads from db.
             * @param query.date - Date of ads to retrieve. This should be a substring
             *      the format specified as DATETIME_FORMAT in config.js. For example to get
-            *      ads for a specific set to: MM-YY or for a specific day use: DD-MM-YYYY
+            *      ads for 12/10/2020 set date = 12-10-2020
             * @param query.bot - (optional) Username of bot to filter by
-            * TODO: Return ads for the given day only.
-            * See: https://stackoverflow.com/questions/43793888/how-to-make-search-using-contains-with-dynamodb
             */
             const { bot, date } = req.query;
             
