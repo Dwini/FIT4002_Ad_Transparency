@@ -6,6 +6,7 @@ Last updated: MB 30/09/2020 - refactor to handle db retrieval.
 """
 # import external libraries.
 import requests
+from datetime import datetime
 
 # import local modules.
 from src import cache_handler
@@ -37,8 +38,11 @@ def update_ad_cache():
 Return a full dump of the bot table. This will need to be parsed by the caller.
 """
 def get_ad_table():
+    # format current date for to pass to endpoint.
+    date_string = datetime.now().strftime('%d-%m-%Y')
+
     # connect to db project and return the db data.
-    r = requests.get(cache_handler.db_uri+'/ads')
+    r = requests.get(cache_handler.db_uri+'/ads?date='+date_string)
 
     # return the json data.
     return r.json()
