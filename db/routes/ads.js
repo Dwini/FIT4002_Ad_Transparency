@@ -30,7 +30,8 @@ module.exports = app => {
             /** 
              * Fetch all Ads from db.
              * @param query.bot - Username of bot to filter by
-             * TODO: Pagnitate this 
+             * TODO: Return ads for the given day only.
+             * See: https://stackoverflow.com/questions/43793888/how-to-make-search-using-contains-with-dynamodb
              */
             var params = { TableName: 'Ads' };
 
@@ -66,6 +67,7 @@ module.exports = app => {
              * @param body.base64    - OPTIONAL. Base64 string of picture of ad
              * @param body.file      - OPTIONAL. Picture or any other file
              *      associated with the ad
+             * TODO: Env var that disables sending to Dynamodb
              */
             const { file } = req;
 

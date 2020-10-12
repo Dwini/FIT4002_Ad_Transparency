@@ -16,7 +16,9 @@ module.exports = app => {
             /**
              * Fetch list of log files from S3
              * @param query.bot - Username of bot to filter by TODO
-             * TODO: Pagnitate this (atm only returns 1000 logs) see: https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html
+             * TODO: Only return logs for the given day. 
+             * Use ListObjectsV2 with prefix: https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html
+             * 
              */
 
             var params = {
