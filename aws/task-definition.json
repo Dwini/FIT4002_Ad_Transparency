@@ -1,5 +1,5 @@
 {
-  "family": "ad-transparency-batch1",
+  "family": "ad-transparency-batch3",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
     "FARGATE"
@@ -9,7 +9,7 @@
   "executionRoleArn": "ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "piasmith984",
+      "name": "damiandarsey",
       "image": "mattbertoncello/ad_transparency_bot",
       "essential": true,
       "logConfiguration": {
@@ -23,7 +23,7 @@
       "environment": [
         {
           "name": "AD_USERNAME",
-          "value": "piasmith984"
+          "value": "damiandarsey"
         },
         {
           "name": "USE_PROXIES",
@@ -35,7 +35,7 @@
         },
         {
           "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
+          "value": "http://3.234.242.222:8080"
         },
         {
           "name": "NUM_TERMS",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "name": "m3428615",
+      "name": "kanderso922",
       "image": "mattbertoncello/ad_transparency_bot",
       "essential": false,
       "logConfiguration": {
@@ -62,7 +62,7 @@
       "environment": [
         {
           "name": "AD_USERNAME",
-          "value": "m3428615"
+          "value": "kanderso922"
         },
         {
           "name": "USE_PROXIES",
@@ -74,7 +74,7 @@
         },
         {
           "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
+          "value": "http://3.234.242.222:8080"
         },
         {
           "name": "NUM_TERMS",
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "name": "lasquishadavis",
+      "name": "amydivers407",
       "image": "mattbertoncello/ad_transparency_bot",
       "essential": false,
       "logConfiguration": {
@@ -101,7 +101,7 @@
       "environment": [
         {
           "name": "AD_USERNAME",
-          "value": "lasquishadavis"
+          "value": "amydivers407"
         },
         {
           "name": "USE_PROXIES",
@@ -113,280 +113,7 @@
         },
         {
           "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
-        },
-        {
-          "name": "NUM_TERMS",
-          "value": "10"
-        },
-        {
-          "name": "UPLOAD_LOGS",
-          "value": "1"
-        }
-      ]
-    },
-    {
-      "name": "mwest5078",
-      "image": "mattbertoncello/ad_transparency_bot",
-      "essential": false,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ad-transparency",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "environment": [
-        {
-          "name": "AD_USERNAME",
-          "value": "mwest5078"
-        },
-        {
-          "name": "USE_PROXIES",
-          "value": "0"
-        },
-        {
-          "name": "CHANGE_LOCATION",
-          "value": "1"
-        },
-        {
-          "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
-        },
-        {
-          "name": "NUM_TERMS",
-          "value": "10"
-        },
-        {
-          "name": "UPLOAD_LOGS",
-          "value": "1"
-        }
-      ]
-    },
-    {
-      "name": "awhite2627",
-      "image": "mattbertoncello/ad_transparency_bot",
-      "essential": false,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ad-transparency",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "environment": [
-        {
-          "name": "AD_USERNAME",
-          "value": "awhite2627"
-        },
-        {
-          "name": "USE_PROXIES",
-          "value": "0"
-        },
-        {
-          "name": "CHANGE_LOCATION",
-          "value": "1"
-        },
-        {
-          "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
-        },
-        {
-          "name": "NUM_TERMS",
-          "value": "10"
-        },
-        {
-          "name": "UPLOAD_LOGS",
-          "value": "1"
-        }
-      ]
-    },
-    {
-      "name": "georgjerome934",
-      "image": "mattbertoncello/ad_transparency_bot",
-      "essential": false,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ad-transparency",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "environment": [
-        {
-          "name": "AD_USERNAME",
-          "value": "georgjerome934"
-        },
-        {
-          "name": "USE_PROXIES",
-          "value": "0"
-        },
-        {
-          "name": "CHANGE_LOCATION",
-          "value": "1"
-        },
-        {
-          "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
-        },
-        {
-          "name": "NUM_TERMS",
-          "value": "10"
-        },
-        {
-          "name": "UPLOAD_LOGS",
-          "value": "1"
-        }
-      ]
-    },
-    {
-      "name": "stevensagnes677",
-      "image": "mattbertoncello/ad_transparency_bot",
-      "essential": false,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ad-transparency",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "environment": [
-        {
-          "name": "AD_USERNAME",
-          "value": "stevensagnes677"
-        },
-        {
-          "name": "USE_PROXIES",
-          "value": "0"
-        },
-        {
-          "name": "CHANGE_LOCATION",
-          "value": "1"
-        },
-        {
-          "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
-        },
-        {
-          "name": "NUM_TERMS",
-          "value": "10"
-        },
-        {
-          "name": "UPLOAD_LOGS",
-          "value": "1"
-        }
-      ]
-    },
-    {
-      "name": "tj8021671",
-      "image": "mattbertoncello/ad_transparency_bot",
-      "essential": false,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ad-transparency",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "environment": [
-        {
-          "name": "AD_USERNAME",
-          "value": "tj8021671"
-        },
-        {
-          "name": "USE_PROXIES",
-          "value": "0"
-        },
-        {
-          "name": "CHANGE_LOCATION",
-          "value": "1"
-        },
-        {
-          "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
-        },
-        {
-          "name": "NUM_TERMS",
-          "value": "10"
-        },
-        {
-          "name": "UPLOAD_LOGS",
-          "value": "1"
-        }
-      ]
-    },
-    {
-      "name": "elizakane3",
-      "image": "mattbertoncello/ad_transparency_bot",
-      "essential": false,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ad-transparency",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "environment": [
-        {
-          "name": "AD_USERNAME",
-          "value": "eliza.kane.3"
-        },
-        {
-          "name": "USE_PROXIES",
-          "value": "0"
-        },
-        {
-          "name": "CHANGE_LOCATION",
-          "value": "1"
-        },
-        {
-          "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
-        },
-        {
-          "name": "NUM_TERMS",
-          "value": "10"
-        },
-        {
-          "name": "UPLOAD_LOGS",
-          "value": "1"
-        }
-      ]
-    },
-    {
-      "name": "burgersa68",
-      "image": "mattbertoncello/ad_transparency_bot",
-      "essential": false,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ad-transparency",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "environment": [
-        {
-          "name": "AD_USERNAME",
-          "value": "burgersa68"
-        },
-        {
-          "name": "USE_PROXIES",
-          "value": "0"
-        },
-        {
-          "name": "CHANGE_LOCATION",
-          "value": "1"
-        },
-        {
-          "name": "DB_URL",
-          "value": "http://35.173.250.122:8080"
+          "value": "http://3.234.242.222:8080"
         },
         {
           "name": "NUM_TERMS",

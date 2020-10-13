@@ -35,13 +35,16 @@ def create_task_definition(batch_name, username_list):
     obj['cpu'] = '4096'
     obj['executionRoleArn'] = 'ecsTaskExecutionRole'
 
+    # this value is true for the first bot and false for the remaining bots.
+    is_first_bot = True
+
     # for each profile included in the username_list, configure a bot container
     # and append it to the container_list.
     for username in username_list:
         container_list.append({
             'name': username.replace('.', ''),
             'image': 'mattbertoncello/ad_transparency_bot',
-            'essential': False,
+            'essential': is_first_bot,
             'logConfiguration': {
                 'logDriver': 'awslogs',
                 'options': {
@@ -54,11 +57,14 @@ def create_task_definition(batch_name, username_list):
                 { 'name': 'AD_USERNAME', 'value': username },
                 { 'name': 'USE_PROXIES', 'value': '0' },
                 { 'name': 'CHANGE_LOCATION', 'value': '1' },
-                { 'name': 'DB_URL', 'value': 'http://35.173.250.122:8080' },
-                { 'name': 'NUM_TERMS', 'value': '10' },
+                { 'name': 'DB_URL', 'value': 'http://3.234.242.222:8080' },
+                { 'name': 'NUM_TERMS', 'value': '20' if is_first_bot is True else '10' },
                 { 'name': 'UPLOAD_LOGS', 'value': '1' }
             ]
         })
+
+        # update value to indicate the remaining bots are not the first bot.
+        is_first_bot = False
 
     # add all containers to the json object.
     obj['containerDefinitions'] = container_list
@@ -69,10 +75,8 @@ def create_task_definition(batch_name, username_list):
 
 if __name__ == '__main__':
     # provide google profiles to run in this task.
-    username_list = ['piasmith984', 'm3428615', 'lasquishadavis', 'mwest5078', \
-        'awhite2627', 'georgjerome934', 'stevensagnes677', 'tj8021671', \
-        'eliza.kane.3', 'burgersa68']
-    batch_name = 'ad-transparency-batch1'
+    username_list = ['damiandarsey', 'kanderso922', 'amydivers407']
+    batch_name = 'ad-transparency-batch3'
 
     # run the tast creation function.
     create_task_definition(batch_name, username_list)
