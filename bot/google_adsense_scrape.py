@@ -62,7 +62,7 @@ def getGoogleAds(driver, bot):
                 "bot": bot.username,
                 "link": adLink,
                 "headline": adLink,
-                "logged_in": webscraper.successful_login,
+                "logged_in": bot.logged_in,
                 "current_page": current_url,
                 "html": "innerHTML"
             })

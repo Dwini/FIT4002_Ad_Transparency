@@ -62,6 +62,10 @@ class Bot:
     }
     self.search_terms = get_search_terms(details['political_ranking'], details['other_terms_category'])
 
+    # this is a public variable that is True if login was confirmed as successful
+    # and false if it was not confirmed as successful
+    self.logged_in = False
+
   def getFirstname(self):
     return self.firstname
 

@@ -199,7 +199,7 @@ class youtube_scraper:
             "link": ad_link,
             "headline": ad_headline,
             "html": ad_html,
-            "logged_in": webscraper.successful_login,
+            "logged_in": self.bot.logged_in,
             "current_page": self.webdriver.current_url,
         }
         log.info('saving ad... ' + str(data['headline']))

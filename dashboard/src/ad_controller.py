@@ -6,7 +6,7 @@ Last updated: MB 30/09/2020 - refactor to handle db retrieval.
 """
 # import external libraries.
 import requests
-from datetime import datetime
+from datetime import date, timedelta
 
 # import local modules.
 from src import cache_handler
@@ -19,8 +19,13 @@ def update_ad_cache():
     # clear the currently cached list of ads.
     cache_handler.ad_dict.clear()
 
+    # format dates to pass db to endpoint.
+    today = date.today()
+    yesterday = today - timedelta(days=1)
+
     # retrieve all raw data from 'Ads' table in AWS DynamoDB.
-    data = get_ad_table()
+    data = get_ad_table(today.strftime('%d-%m-%Y'))
+    data = data + get_ad_table(yesterday.strftime('%d-%m-%Y'))
 
     # iterate over each item in the raw data and append the information to the
     # the ad_dict.
@@ -39,10 +44,7 @@ def update_ad_cache():
 """
 Return a full dump of the bot table. This will need to be parsed by the caller.
 """
-def get_ad_table():
-    # format current date for to pass to endpoint.
-    date_string = datetime.now().strftime('%d-%m-%Y')
-
+def get_ad_table(date_string):
     # connect to db project and return the db data.
     r = requests.get(cache_handler.db_uri+'/ads?date='+date_string)
 

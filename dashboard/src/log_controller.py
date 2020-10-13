@@ -6,7 +6,7 @@ Last updated: MB 30/09/2020 - create module from error_controller.py as a templa
 """
 # import external libraries.
 import requests
-from datetime import datetime
+from datetime import datetime, date, timedelta
 
 # import local modules.
 from src import cache_handler
@@ -20,8 +20,13 @@ def update_log_cache():
     # clear the currently cached list of bots.
     cache_handler.log_dict.clear()
 
+    # format dates to pass db to endpoint.
+    today = date.today()
+    yesterday = today - timedelta(days=1)
+
     # retrieve all raw data from 'Errors' table in AWS DynamoDB.
-    data = get_log_table()
+    data = get_log_table(today.strftime('%Y.%m.%d'))
+    data = data + get_log_table(yesterday.strftime('%Y.%m.%d'))
 
     # iterate over each item in the raw data and append the information to the
     # the log_dict.
@@ -37,10 +42,7 @@ def update_log_cache():
 """
 Return a full dump of the log table. This will need to be parsed by the caller.
 """
-def get_log_table():
-    # format current date for to pass to endpoint.
-    date_string = datetime.now().strftime('%Y.%m.%d')
-
+def get_log_table(date_string):
     # connect to db project and return the db data.
     r = requests.get(cache_handler.db_uri+'/logs?prefix='+date_string)
 

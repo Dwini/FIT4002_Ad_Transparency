@@ -129,7 +129,7 @@ class googleSearch:
             wt = webTraverse(self.webdriver, self.bot, True)
             randDepth = randint(1,2)
             wt.traverse(urls=[link], traverseDepth=randDepth)
-        except: 
+        except:
             log.warning("Failed to vist: %s" % link)
 
     def scrape(self, ad_list, keyword, r):
@@ -153,7 +153,7 @@ class googleSearch:
                 "bot": self.bot.getUsername(),
                 "link": ad_link,
                 "headline": ad_headline,
-                "logged_in": webscraper.successful_login,
+                "logged_in": self.bot.logged_in,
                 "current_page": current_url,
                 "html": ad_copy
             })
