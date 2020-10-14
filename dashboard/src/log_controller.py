@@ -23,10 +23,12 @@ def update_log_cache():
     # format dates to pass db to endpoint.
     today = date.today()
     yesterday = today - timedelta(days=1)
+    tomorrow = today + timedelta(days=1)
 
     # retrieve all raw data from 'Errors' table in AWS DynamoDB.
     data = get_log_table(today.strftime('%Y.%m.%d'))
     data = data + get_log_table(yesterday.strftime('%Y.%m.%d'))
+    data = data + get_log_table(tomorrow.strftime('%Y.%m.%d'))
 
     # iterate over each item in the raw data and append the information to the
     # the log_dict.

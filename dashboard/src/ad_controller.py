@@ -22,10 +22,12 @@ def update_ad_cache():
     # format dates to pass db to endpoint.
     today = date.today()
     yesterday = today - timedelta(days=1)
+    tomorrow = today + timedelta(days=1)
 
     # retrieve all raw data from 'Ads' table in AWS DynamoDB.
     data = get_ad_table(today.strftime('%d-%m-%Y'))
     data = data + get_ad_table(yesterday.strftime('%d-%m-%Y'))
+    data = data + get_ad_table(tomorrow.strftime('%d-%m-%Y'))
 
     # iterate over each item in the raw data and append the information to the
     # the ad_dict.
