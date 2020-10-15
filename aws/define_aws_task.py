@@ -57,7 +57,7 @@ def create_task_definition(batch_name, username_list):
                 { 'name': 'AD_USERNAME', 'value': username },
                 { 'name': 'USE_PROXIES', 'value': '0' },
                 { 'name': 'CHANGE_LOCATION', 'value': '1' },
-                { 'name': 'DB_URL', 'value': 'http://3.234.242.222:8080' },
+                { 'name': 'DB_URL', 'value': 'http://3.235.197.159:8080' },
                 { 'name': 'NUM_TERMS', 'value': '20' if is_first_bot is True else '10' },
                 { 'name': 'UPLOAD_LOGS', 'value': '1' }
             ]
@@ -75,7 +75,8 @@ def create_task_definition(batch_name, username_list):
 
 if __name__ == '__main__':
     # provide google profiles to run in this task.
-    username_list = ['damiandarsey', 'kanderso922', 'amydivers407']
+    username_list = ['damiandarsey', 'kanderso922', 'amydivers407', 'dansonmatthew', \
+        'stangrand804', 'hahnsursula', 'williamsonoliver63']
     batch_name = 'ad-transparency-batch3'
 
     # run the tast creation function.

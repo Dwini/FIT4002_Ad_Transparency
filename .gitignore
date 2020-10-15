@@ -1,5 +1,5 @@
 .vscode/
-
+*/task-definition.json
 drivers
 geckodriver.log
 /venv

@@ -24,7 +24,11 @@ def create_firefox_driver(ip=None, pos=None):
     profile = webdriver.FirefoxProfile()
     profile.set_preference('dom.webdriver.enabled', False)
     profile.set_preference('useAutomationExtension', False)
+
+    # list of privacy pretections to disable.
+    # https://wiki.mozilla.org/Security/Tracking_protection
     profile.set_preference('browser.private.browsing.autostart', False)
+    profile.set_preference('privacy.trackingprotection.enabled', False)
 
     # Location spoofing
     if os.getenv('CHANGE_LOCATION') == '1':

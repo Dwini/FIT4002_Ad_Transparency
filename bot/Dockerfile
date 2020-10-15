@@ -61,7 +61,7 @@ ENV AD_USERNAME "mwest5078"
 ENV USE_PROXIES "0"
 ENV CHANGE_LOCATION "1"
 ENV UPLOAD_LOGS "1"
-ENV DB_URL "http://35.173.250.122:8080"
+ENV DB_URL "http://3.235.197.159:8080"
 
 # Create non-root user (for driver execution)
 RUN useradd -ms /bin/bash bot && \
