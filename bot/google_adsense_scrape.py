@@ -15,7 +15,7 @@ import webscraper
 log = logging.getLogger()
 
 #given a selenium driver retrieves a list of google ads which appear on the page
-def getGoogleAds(driver, bot):
+def getGoogleAds(driver, bot, current_url):
     seed(231)
 
     # google ads appear in iframes labelled as such
@@ -50,10 +50,6 @@ def getGoogleAds(driver, bot):
         except:
             log.error('Screenshot capture failed')
             image = None
-
-        # attempt to get the current url.
-        try: current_url = self.webdriver.current_url
-        except: current_url = None
 
         try:
             log.info('attempting to upload ad to db: '+adLink)

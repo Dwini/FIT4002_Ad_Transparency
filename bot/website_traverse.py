@@ -80,7 +80,7 @@ class webTraverse:
 
             if self.toScrape:
                 #self.full_page_screenshot(url)
-                getGoogleAds(self.driver, self.bot)
+                getGoogleAds(self.driver, self.bot, url)
 
             if traverseDepth > 0:
                 self.click_local_links(traverseDepth)
