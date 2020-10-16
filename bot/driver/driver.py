@@ -24,6 +24,9 @@ def create_firefox_driver(ip=None, pos=None):
     profile = webdriver.FirefoxProfile()
     profile.set_preference('dom.webdriver.enabled', False)
     profile.set_preference('useAutomationExtension', False)
+    #profile.setPreference("browser.private.browsing.autostart", False)
+    #profile.setPreference("permissions.default.stylesheet", 2)
+    #profile.setPreference("permissions.default.image", 2)
 
     # Location spoofing
     if os.getenv('CHANGE_LOCATION') == '1':
@@ -32,17 +35,17 @@ def create_firefox_driver(ip=None, pos=None):
         profile.set_preference('geo.provider.testing', True)
         profile.set_preference('geo.provider.network.url', 'data:application/json,{"location":{"lat":%s,"lng":%s},"accuracy":100.0}' % (pos['lat'], pos['lon'] ))
 
-        # For container builds, set firefox options to allow container mode.
-        firefox_options = FirefoxOptions()
-        if len(sys.argv) > 1 and sys.argv[1] == '-c':
-            firefox_options.add_argument('-headless')
+    # For container builds, set firefox options to allow container mode.
+    firefox_options = FirefoxOptions()
+    if len(sys.argv) > 1 and sys.argv[1] == '-c':
+        firefox_options.add_argument('-headless')
 
     profile.update_preferences()
     driver = webdriver.Firefox(
         executable_path=GECKODRIVER_PATH,
         firefox_profile=profile,
         desired_capabilities=DesiredCapabilities.FIREFOX,
-        options=firefox_options,
+        options=firefox_options
     )
     driver.set_window_position(0, 0)
 
