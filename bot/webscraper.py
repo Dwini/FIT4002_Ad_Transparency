@@ -120,7 +120,7 @@ class webscraper:
 
     def activate_bot(self):
 
-        i = os.getenv('NUM_TERMS')
+        i = int(os.getenv('NUM_TERMS'))
         wt = webTraverse(self.webdriver, self.bot, self.scrapping)
 
 

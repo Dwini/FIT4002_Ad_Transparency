@@ -61,6 +61,7 @@ class Bot:
       'lon': float(details['location']['longitude'])
     }
     self.search_terms = get_search_terms(details['political_ranking'], details['other_terms_category'])
+    random.shuffle(self.search_terms)
 
   def getFirstname(self):
     return self.firstname
@@ -88,6 +89,9 @@ class Bot:
 
   def getSearchTerms(self):
     return self.search_terms
+
+  def getSearchTerm(self):
+    return self.search_terms.pop()
 
   def getProfileBuilt(self):
     return self.profileBuilt

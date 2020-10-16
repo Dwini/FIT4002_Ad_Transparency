@@ -44,62 +44,66 @@ class googleSearch:
         ad_list = []  # empty list to store ad details
 
         # Get Keywords
-        keywords = self.bot.getSearchTerms()
+        keyword = self.bot.getSearchTerm()
+
+        if keyword is None:
+            return
 
         # Go through all keywords
         sleep(1)
         links = []
-        for keyword in keywords:
-            url = 'http://www.google.com/'
-            log.info('Opening: ' + url)
-            # Search Keyword using text box
-            self.webdriver.get(url)
-            self.webdriver.get(url)
+
+
+        url = 'http://www.google.com/'
+        log.info('Opening: ' + url)
+        # Search Keyword using text box
+        self.webdriver.get(url)
+        self.webdriver.get(url)
+        sleep(2)
+        log.info('Searching for "' + keyword + '"')
+        try:
+            search_box = self.webdriver.find_element_by_xpath("//input[@name='q']")
+            search_box.send_keys(keyword)
             sleep(2)
-            log.info('Searching for "' + keyword + '"')
-            try:
-                search_box = self.webdriver.find_element_by_xpath("//input[@name='q']")
-                search_box.send_keys(keyword)
-                sleep(2)
-                search_box.send_keys(Keys.RETURN)
-            except:
-                log.warning("Couldn't find google search box, skipping... ")
+            search_box.send_keys(Keys.RETURN)
+        except:
+            log.warning("Couldn't find google search box, skipping... ")
 
-            try:
-                r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
-            except:
-                log.warning("Could not connect to Google, trying again... ")
+        try:
+            r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
+        except:
+            log.warning("Could not connect to Google, trying again... ")
 
-            sleep(randint(8, 10))
+        sleep(randint(8, 10))
 
-            if self.scrapping:
-                self.scrape(ad_list, keyword, r)
-            # wait until shows result
-            results = self.webdriver.find_elements_by_css_selector('div.g')
+        if self.scrapping:
+            self.scrape(ad_list, keyword, r)
+        # wait until shows result
+        results = self.webdriver.find_elements_by_css_selector('div.g')
 
-            newLinks = []
-            #gather new links
-            try:
-                #top 10 results
-                for _ in range(10):
-                    new = True
-                    link = results[_].find_element_by_tag_name("a")
-                    href = link.get_attribute("href")
-                    newLinks.append(href,)
-                    for link in links:
-                        if href == link:
+        newLinks = []
+        #gather new links
+        try:
+        #top 10 results
+            for _ in range(10):
+                new = True
+                link = results[_].find_element_by_tag_name("a")
+                href = link.get_attribute("href")
+                newLinks.append(href,)
+                for link in links:
+                    if href == link:
                             new = False
-                    if new:
-                        links.append(href)
-            except:
-                log.warning("Could not access links on google search page, skipping... ")
+                if new:
+                    links.append(href)
+        except:
+            log.warning("Could not access links on google search page, skipping... ")
 
-            random_wait_and_scroll(self.webdriver)
+        random_wait_and_scroll(self.webdriver)
 
-            #pick random link
-            link_to_visit = randint(floor(len(newLinks)-1/4),len(newLinks)-1)
+        #pick random link
+        link_to_visit = randint(floor(len(newLinks)-1/4),len(newLinks)-1)
 
-            self.visit_website(newLinks[link_to_visit])
+        self.visit_website(newLinks[link_to_visit])
 
         if self.scrapping:
             df_ads = pd.DataFrame(ad_list, columns=['keyword', 'ad_link', 'ad_headline', 'ad_copy'])
