@@ -41,10 +41,6 @@ class webTraverse:
                 """
     def traverse(self, urls, traverseDepth=2):
 
-        if not(urls):
-            urls = open('urls.txt', 'r')
-
-
         for url in urls:
 
             log.info('Opening ' + url)

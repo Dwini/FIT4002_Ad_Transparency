@@ -10,7 +10,8 @@ from requests_html import HTMLSession
 from time import sleep
 import random
 import logging
-
+import os
+from website_traverse import webTraverse
 from youtube_scraper import youtube_scraper
 from googleSearch import googleSearch
 
@@ -21,6 +22,27 @@ class webscraper:
         self.webdriver = webdriver
         self.bot = bot
         self.scrapping = scrapping
+        self.urls = self.getUrls()
+
+    def getUrls(self):
+        political_stance = self.bot.politcalStance
+
+        if political_stance == 0:
+            urlsFile = 'urls/left_wing.txt'
+        else:
+            urlsFile = 'urls/right_wing.txt'
+
+        urls = open(urlsFile, 'r')
+        returnUrls = []
+        for url in urls:
+            returnUrls.append(url)
+
+        random.shuffle(returnUrls)
+
+        return returnUrls
+
+    def nextUrl(self):
+        return self.urls.pop()
 
     def handle_captcha(self):
         """
@@ -97,15 +119,27 @@ class webscraper:
         self.check_login()
 
     def activate_bot(self):
-        choice = random.randint(0,1)
-        if choice == 0:
-            log.info('Google searching')
-            gs = googleSearch(self.webdriver, self.bot, self.scrapping)
-            gs.search_keywords(num_links_to_visit=1)
-        else:
-            log.info('Youtube searching')
-            yt_scraper = youtube_scraper(self.webdriver, self.bot, self.scrapping)
 
-            # perform a youtube search for each keyword.
-            for item in self.bot.search_terms:
-                yt_scraper.scrape_youtube_video_ads(item)
+        i = int(os.getenv('NUM_TERMS'))
+        wt = webTraverse(self.webdriver, self.bot, self.scrapping)
+
+
+        while i != 0:
+            choice = random.randint(0,2)
+
+            sleep(random.uniform(1, 2))
+            if choice == 0:
+                log.info('Google searching')
+                gs = googleSearch(self.webdriver, self.bot, self.scrapping)
+                gs.search_keywords(num_links_to_visit=1)
+                i -= 1
+            elif choice == 1:
+                log.info('Youtube searching')
+                yt_scraper = youtube_scraper(self.webdriver, self.bot, self.scrapping)
+
+                # perform a youtube search for each keyword.
+                for item in self.bot.search_terms:
+                    yt_scraper.scrape_youtube_video_ads(item)
+            else:
+                wt.traverse([self.nextUrl()])
+
