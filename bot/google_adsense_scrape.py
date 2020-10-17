@@ -31,44 +31,44 @@ def getGoogleAds(driver, bot):
         except:
             log.warning('Element location not found or not visible')
 
-        switch_to_frame_context(driver, iframe)
+        switched = switch_to_frame_context(driver, iframe)
 
-        adLink = find_ad_redirect(driver)
-
-        # if adlink is None, set to arbitrary string.
-        adLink = adLink if adLink is not None else '-'
-
-        driver.switch_to.default_content()
-        base64_screenshot = ""
-        try:
-            #base64_screenshot = iframe.screenshot_as_base64
-            png = iframe.screenshot_as_png
-            image = imageProcessing(png)
-        except:
-            log.error('Screenshot capture failed')
-
-        try:
-            log.info('attempting to upload ad to db: '+adLink)
-            url = os.getenv('DB_URL') + '/ads'
-            r = requests.post(url, files={'file': image}, data={
-                "bot": bot.username,
-                "link": adLink,
-                "headline": adLink,
-                "html": "innerHTML"
-            })
-            r.raise_for_status()
-
-        # except requests.exceptions.HTTPError as e:
-        #     print('Screenshot saving failed')
-        #     print(e.response.text)
-
-        #testing purposes:
-        except Exception as e:
-            log.error(str(e))
-            log.error("Connection for Screenshot failed")
+        if switched:
+            scrape_ad(bot, driver, iframe)
+        else:
+            log.warning('Failed to locate an ad in DOM')
 
 
     return screenshots
+
+
+def scrape_ad(bot, driver, iframe):
+    adLink = find_ad_redirect(driver)
+    # if adlink is None, set to arbitrary string.
+    adLink = adLink if adLink is not None else '-'
+    driver.switch_to.default_content()
+
+    try:
+        # base64_screenshot = iframe.screenshot_as_base64
+        png = iframe.screenshot_as_png
+        image = imageProcessing(png)
+    except:
+        log.error('Screenshot capture failed')
+        return
+
+    try:
+        log.info('attempting to upload ad to db: ' + adLink)
+        url = os.getenv('DB_URL') + '/ads'
+        r = requests.post(url, files={'file': image}, data={
+            "bot": bot.username,
+            "link": adLink,
+            "headline": adLink,
+            "html": "innerHTML"
+        }, timeout=10)
+        r.raise_for_status()
+
+    except:
+        log.error("Connection for Screenshot failed")
 
 
 def find_ad_redirect(driver):
@@ -117,10 +117,11 @@ def switch_to_frame_context(driver, iframe):
         try:
             iframeID = iframe.get_attribute('id')
             driver.switch_to.frame(iframeID)
-            break
+            return True
         except:
             log.warning('Element access attempt: ' + str(i))
 
+    return False
 
 
 def getRevContentAds(driver):
