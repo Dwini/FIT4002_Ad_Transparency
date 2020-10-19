@@ -55,7 +55,7 @@ def create_firefox_driver(ip=None, pos=None):
 
     profile.update_preferences()
     driver = webdriver.Firefox(
-        executable_path='./driver/geckodriver.exe',
+        executable_path=GECKODRIVER_PATH,
         firefox_profile=profile,
         desired_capabilities=capabilities,
         options=firefox_options
