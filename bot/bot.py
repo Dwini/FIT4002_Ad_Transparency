@@ -47,7 +47,7 @@ class Bot:
 
     self.firstname = details['name'][0]
     self.lastname = details['name'][1]
-    self.username = details['username']
+    self.username = os.getenv('AD_USERNAME')
     self.password = details['password']
     self.gender = details['gender']
     self.birthDay = details['DOB'][:2]
