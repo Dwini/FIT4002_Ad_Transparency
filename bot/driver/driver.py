@@ -7,6 +7,8 @@ import logging
 
 import driver.proxy as proxy
 from driver.session import get_session
+from driver.location import set_location_in_chrome
+
 
 log = logging.getLogger()
 
@@ -130,7 +132,9 @@ def create_chrome_driver(ip=None, pos=None):
 
     driver = webdriver.Chrome(executable_path="./driver/executables/chromedriver_86.exe", options=chromeOptions)
 
-    driver.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){" +
-                          "var position = {coords : {latitude:" + str(pos['lat']) + ", longitude:" + str(pos['lon']) + "}  }; success(position);}")
+    #driver.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){" +
+     #                     "var position = {coords : {latitude:" + str(pos['lat']) + ", longitude:" + str(pos['lon']) + "}  }; success(position);}")
+
+    set_location_in_chrome(driver, {'lat': 36.3833, 'lon': 145.400})
 
     return driver
