@@ -131,8 +131,8 @@ def create_chrome_driver(ip=None, pos=None):
         ])
 
 
-
-    driver = webdriver.Chrome(executable_path="./driver/executables/chromedriver_86.exe", options=chromeOptions)
+    DRIVER_PATH = os.getenv('DRIVER_PATH')
+    driver = webdriver.Chrome(executable_path=DRIVER_PATH, options=chromeOptions)
 
     #driver.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){" +
      #                     "var position = {coords : {latitude:" + str(pos['lat']) + ", longitude:" + str(pos['lon']) + "}  }; success(position);}")
