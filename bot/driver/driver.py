@@ -5,9 +5,6 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import os, sys
 import logging
 
-from driver.session import get_session
-from driver.location import set_location_in_chrome
-
 
 log = logging.getLogger()
 
