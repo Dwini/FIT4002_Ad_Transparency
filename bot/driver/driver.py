@@ -96,8 +96,10 @@ def create_chrome_driver(ip=None, pos=None):
     dirname = os.path.dirname(__file__)
     user_data = os.path.join(dirname + "/profile")
 
+
     chromeOptions.add_argument("--user-data-dir=" + user_data)
-    # chromeOptions.add_argument("--password-store=" + 'gnome')
+    if os.getenv('HEADLESS') == 1:
+        chromeOptions.add_argument("--headless")
 
     chromeOptions.add_experimental_option(
         'excludeSwitches',
@@ -135,6 +137,6 @@ def create_chrome_driver(ip=None, pos=None):
     #driver.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){" +
      #                     "var position = {coords : {latitude:" + str(pos['lat']) + ", longitude:" + str(pos['lon']) + "}  }; success(position);}")
 
-    set_location_in_chrome(driver, {'lat': 36.3833, 'lon': 145.400})
+    set_location_in_chrome(driver, pos)
 
     return driver
