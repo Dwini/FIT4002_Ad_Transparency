@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "Beheer online toegang voor uw gezin"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "Bescherm uw financiële gegevens"
+   },
+   "annotation_balloon_color_green": {
+      "message": "Deze koppeling is veilig"
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "Dagelijks getest"
+   },
+   "annotation_balloon_color_red": {
+      "message": "Deze koppeling is gevaarlijk"
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "Deze link is niet beoordeeld"
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "Deze koppeling is verdacht"
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "Siterapport weergeven"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "$ads_counter$ advertenties geblokkeerd",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "$ads_counter$ advertentie geblokkeerd",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "$tracker_counter$ trackers geblokkeerd",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "$tracker_counter$ tracker geblokkeerd",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "$download_scanning_counter$ downloads scannen",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "$download_scanning_counter$ download scannen",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "Ontdek meer recepten met betrekking tot $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "Ontdek meer artikelen met betrekking tot $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "Ontdek meer resultaten voor $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "Vergelijk verschillende prijzen voor $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "Ontdek meer met betrekking tot $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "Ontdek meer $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "Het risico accepteren"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "Download McAfee® Total Protection"
+   },
+   "block_page_go_back": {
+      "message": "Vorige"
+   },
+   "block_page_message": {
+      "message": "Ho! Weet u zeker dat u daarnaartoe wilt gaan?"
+   },
+   "block_page_notice_body": {
+      "message": "We beschermen u in uw browser. Breid bescherming uit naar al uw toestellen met McAfee® Total Protection. Profiteer van een VPN, identiteitsbescherming, Bestandsvergrendeling en meer"
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "We hebben tot dusver $pagesScanned$ pagina's voor u gescand.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "We hebben tot dusver $pagesScanned$ pagina voor u gescand.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "Bij ons bezoek aan deze website hebben wij riskant gedrag aangetroffen."
+   },
+   "block_page_popover_title": {
+      "message": "Waarom ziet u dit?"
+   },
+   "block_page_risky_url": {
+      "message": "kan riskant zijn."
+   },
+   "block_page_search_input": {
+      "message": "Zoeken met %PRODUCTNAME%"
+   },
+   "block_page_state_danger": {
+      "message": "Een groot risico"
+   },
+   "block_page_state_warning": {
+      "message": "Een klein risico"
+   },
+   "block_page_status_text": {
+      "message": "Websitestatus:"
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% - Veiligheidsbeoordelingen van websites"
+   },
+   "block_page_view_site_report": {
+      "message": "Siterapport weergeven"
+   },
+   "category_id_100_description": {
+      "message": "Webpagina's die virtuele kunstgalerieën, kunstenaarsites (waaronder beeldhouwwerk en fotografie), musea, etnische gewoontes en folklore bevatten."
+   },
+   "category_id_100_name": {
+      "message": "Kunst/cultuur/erfgoed"
+   },
+   "category_id_101_description": {
+      "message": "Webpagina's die voornamelijk alcohol verkopen of het nuttigen van alcohol promoten of voorstaan, zoals bier, wijn en sterke drank. Deze categorie omvat ook cocktailrecepten en instructies voor zelf brouwen."
+   },
+   "category_id_101_name": {
+      "message": "Alcohol"
+   },
+   "category_id_102_description": {
+      "message": "Webpagina's die zijn ontworpen om het voor gebruikers mogelijk te maken te internetten door hun IP-adres of andere persoonlijke identificatiegegevens te verbergen, om zo lokaal filterbeleid te omzeilen en toegang te krijgen tot elke webpagina. Webpagina's voor anoniem surfen blokkeren ook trackingtechnologieën, zoals cookies of browsergeschiedenis. Sommige methoden voorkomen ook dat de versie van het besturingssysteem en de webpaginageschiedenis naar de webpagina worden doorgestuurd. Deze categorie omvat pagina's die gratis proxy-IP-adressen bieden of beschrijven hoe filters omzeild kunnen worden."
+   },
+   "category_id_102_name": {
+      "message": "Anonymizers"
+   },
+   "category_id_103_name": {
+      "message": "Volwassen onderwerpen"
+   },
+   "category_id_104_description": {
+      "message": "Webpagina's die gebruikers anoniem laten internetten zonder de expliciete intentie om een dergelijke service te bieden. Deze categorie omvat URL-vertalers, webpagina-caching en andere hulpmiddelen voor anoniem surfen, maar zonder het uitdrukkelijke doel om filtersoftware te omzeilen."
+   },
+   "category_id_104_name": {
+      "message": "Anonimisatieprogramma's"
+   },
+   "category_id_105_description": {
+      "message": "Webpagina's die bedrijfsinformatie bieden, zoals bedrijfsoverzichten of bedrijfsplannen en -strategieën. Deze categorie kan ook informatie, services of producten omvatten die andere bedrijven helpen hun activiteiten te plannen, beheren en marketen. Deze categorie omvat marketingactiviteiten op meerdere niveaus waarbij de nadruk op bedrijfsactiviteiten ligt. Deze categorie omvat geen persoonlijke pagina's en webhosting-pagina's."
+   },
+   "category_id_105_name": {
+      "message": "Zakelijk"
+   },
+   "category_id_106_description": {
+      "message": "Webpagina's met online, realtime sociale berichtenservices in openbare en privéchatrooms. Deze categorie omvat IRC. Deze categorie omvat geen expresberichten. Risico's omvatten aanstootgevende inhoud, nadelige gevolgen voor de productiviteit en het lekken van vertrouwelijke informatie."
+   },
+   "category_id_106_name": {
+      "message": "Chat"
+   },
+   "category_id_108_description": {
+      "message": "Webpagina's met algemene referentie-informatie zoals openbare serviceproviders, regionale informatie, vervoerschema's, kaarten of weerberichten."
+   },
+   "category_id_108_name": {
+      "message": "Openbare gegevens"
+   },
+   "category_id_109_description": {
+      "message": "Webpagina's die volgens McAfee instructies bieden om illegale of criminele activiteiten uit te voeren. Instructies omvatten (zelf)moord plegen, sabotage, bommen maken, lockpicken, servicediefstal, ordehandhaving omzeilen of drugstests vervalsen. Deze categorie kan ook informatie omvatten over de distributie van illegale inhoud, het begaan van fraude of consumentenscams."
+   },
+   "category_id_109_name": {
+      "message": "Mogelijk criminele activiteiten"
+   },
+   "category_id_110_description": {
+      "message": "Websites die informatie verstrekken over de aankoop, productie en het gebruik van illegale of recreatieve drugs. Deze categorie omvat het weergeven, verkopen of beschrijven van het gebruik van drugstoebehoren, en tips over legale highs, zoals lijm snuiven, misbruik van voorgeschreven medicijnen of misbruik van andere legale drugs."
+   },
+   "category_id_110_name": {
+      "message": "Drugs"
+   },
+   "category_id_111_description": {
+      "message": "Webpagina's die zijn gewijd aan academische inhoud, zoals academische onderwerpen (wiskunde, geschiedenis), school- of universiteitspagina's en pagina's voor schooladministratie (lesprogramma's voor studenten en leraren)."
+   },
+   "category_id_111_name": {
+      "message": "Onderwijs/referentiemateriaal"
+   },
+   "category_id_112_description": {
+      "message": "Webpagina's die informatie verstrekken over bioscoop, schouwburg, muziek, televisie, infotainment, roddels uit de entertainmentindustrie, en sites over beroemdheden zoals acteurs en artiesten. Deze categorie omvat ook sites waarbij de inhoud is gewijd aan online entertainment, zoals horoscopen of fanclubs."
+   },
+   "category_id_112_name": {
+      "message": "Entertainment"
+   },
+   "category_id_113_description": {
+      "message": "Deze categorie wordt gebruikt in combinatie met de categorieën Schokkende inhoud, Discriminatie, Pornografie, Geweld of Geweld in games/tekenfilms, om URL's te identificeren die een extreme vorm in deze categorieën representeren. Een voorbeeld hiervan is illegale pornografie, die zich in de categorieën Pornografie, Mogelijk criminele activiteiten en Extreem bevindt."
+   },
+   "category_id_113_name": {
+      "message": "Extreem"
+   },
+   "category_id_114_description": {
+      "message": "Webpagina's die financiële informatie of toegang tot online financiële rekeningen bieden. Deze categorie omvat webpagina's die financiële informatie verstrekken, waaronder nieuws en services voor geldbeheer, maar die geen toegang bieden tot vertrouwelijke financiële gegevens, zoals financiële statistieken, of advies op het gebied van belastingen, hypotheken, verzekeringen, accreditatie of beleggen. Toegang tot online financiële rekeningen omvat persoonlijk of zakelijk bankieren, geldbeheer, belastingadvies, beleggingsfondsen, creditcards, kredietunies, verzekering, andere financiële publicaties en services. Deze categorie omvat informatie over aandelen (maar niet over aandelen verhandelen), persoonlijke financiën en financiële informatie van de overheid."
+   },
+   "category_id_114_name": {
+      "message": "Financieel/banken"
+   },
+   "category_id_115_description": {
+      "message": "Webpagina's waarmee gebruikers online kunnen wedden of weddenschappen kunnen plaatsen, of die goksoftware bieden waarmee online gokken mogelijk is, zoals casinospellen, gokspellen, sportweddenschappen en loterijen. Deze categorie bestaat uit loterijen als u de tickets kunt kopen of online kunt spelen."
+   },
+   "category_id_115_name": {
+      "message": "Gokken"
+   },
+   "category_id_116_description": {
+      "message": "Webpagina's die online games en gerelateerde informatie bieden, zoals cheats, codes, demo's, emulators, online wedstrijden of RPG's, clans, sites van gamesfabrikanten, virtuele of fantasiesportliga's en andere gamingsites waar geen winst wordt gemaakt. Deze categorie omvat gamingconsoles, zoals Microsoft Xbox® en Sony PlayStation®."
+   },
+   "category_id_116_name": {
+      "message": "Games"
+   },
+   "category_id_117_description": {
+      "message": "Webpagina's die inhoud bevatten die wordt onderhouden door militaire of overheidsorganisaties, zoals overheidsafdelingen of -instanties, politieafdelingen, brandweerkorpsen, civiele defensie, organisaties voor terrorismebestrijding of supranationale organisaties, zoals de Verenigde Naties of de Europese Unie. Deze categorie omvat medische faciliteiten voor militairen en veteranen."
+   },
+   "category_id_117_name": {
+      "message": "Overheid/leger"
+   },
+   "category_id_118_description": {
+      "message": "Webpagina's die volgens McAfee instructies bevatten, of anderszins fraude, misdaad of kwaadaardige computeractiviteiten aansporen. Deze categorie bestaat uit webpagina's met betrekking tot computermisdaad, waaronder schadelijke hackinginformatie of hulpmiddelen zodat personen niet-geautoriseerde toegang tot computers en netwerken krijgen (rootkits, scriptkiddies). Deze categorie bevat ook andere vormen van elektronische fraude, zoals dialerscams en illegale manipulatie van elektronische apparaten."
+   },
+   "category_id_118_name": {
+      "message": "Mogelijke vormen van hacken/computercriminaliteit"
+   },
+   "category_id_119_description": {
+      "message": "Webpagina's met uiteenlopende gezondheidsinformatie en gezondheidsdiensten. Gezondheidsinformatie bestaat uit onderwerpen om persoonlijk welzijn te verbeteren, zowel lichamelijk als geestelijk (dieet, voeding, fitness of opvoeding). Gezondheidsdiensten bestaan uit providers zoals gezondheidsverzekeringen, ziekenhuizen, klinieken en onafhankelijke artsen."
+   },
+   "category_id_119_name": {
+      "message": "Gezondheid"
+   },
+   "category_id_120_description": {
+      "message": "Webpagina's die grappige of komische inhoud bieden. Deze categorie bevat sites met grappen, schetsen, strips en satirepagina's. Deze categorie kan ook inhoud van beeldromans bevatten, vaak geassocieerd met stripverhalen."
+   },
+   "category_id_120_name": {
+      "message": "Humor/strips"
+   },
+   "category_id_121_description": {
+      "message": "Webpagina's die volgens McAfee informatie verstrekken waarmee de onderdrukking of discriminatie van een specifieke groep personen uitdrukkelijk wordt aangemoedigd. Deze categorie omvat promotie van een agenda tegen groepen op basis van ras, geloof, nationaliteit, geslacht, leeftijd, lichamelijke beperking of seksuele geaardheid. Deze categorie kan bestaan uit politieke partijen en organisaties met een specifieke haatdragende doelstelling, en extreme vormen van cyberpesten."
+   },
+   "category_id_121_name": {
+      "message": "Discriminatie"
+   },
+   "category_id_122_description": {
+      "message": "Webpagina's die software bieden voor realtime communicatie via een netwerk, exclusief voor gebruikers die lid zijn geworden van de contactlijst van een lid of een sessie voor expresberichten. De meeste software voor expresberichten bevat functies zoals bestandsoverdracht en pc-naar-pc-telefoongesprekken, en kan bijhouden wanneer andere mensen zich aan- en afmelden. Deze sites kunnen ook vragen oproepen over het lekken van vertrouwelijke informatie, aanstootgevende inhoud of het delen van bestanden."
+   },
+   "category_id_122_name": {
+      "message": "Expresberichten"
+   },
+   "category_id_123_description": {
+      "message": "Webpagina's die online aandelen kopen, verkopen of verhandelen. Deze categorie bevat ook tickertape-informatie die het mogelijk maakt om realtime aandelenkoersen en financiële spread-weddenschappen op de aandelenmarkt te bekijken. Andere weddenschappen vallen onder de categorie Gokken. Deze categorie omvat geen sites die informatie bieden over aandelen, maar geen aandelen kopen, verkopen of verhandelen."
+   },
+   "category_id_123_name": {
+      "message": "Aandelenhandel"
+   },
+   "category_id_124_description": {
+      "message": "Webpagina's met software of toegang tot continue audio- of video-uitzendingen, zoals internetradio, tv-programma's of podcasting."
+   },
+   "category_id_124_name": {
+      "message": "Internetradio/-tv"
+   },
+   "category_id_125_description": {
+      "message": "Webpagina's met betrekking tot het zoeken naar een baan, inclusief sites die zich bezighouden met het schrijven van CV's, sollicitatiegesprekken, carrièreswitch, rubrieksadvertenties en grote vacaturedatabanken. Deze categorie bevat ook bedrijfswebpagina's met vacatures, sites voor salarisvergelijking, tijdelijke dienstverbanden en vacaturesites voor bedrijven."
+   },
+   "category_id_125_name": {
+      "message": "Vacaturebanken"
+   },
+   "category_id_126_description": {
+      "message": "Webpagina's die legitiem informatie verschaffen over gegevensbescherming. Deze categorie bevat gedetailleerde informatie voor het beveiligen van zakelijke of persoonlijke gegevens, intellectueel eigendom, privacy en infrastructuur op internet, particuliere netwerken of andere bandbreedtediensten zoals telecommunicatie. Mogelijke risico's zijn potentiële vormen van hacken/computercriminaliteit. Sites met inhoud met een hoog risico en geen duidelijke onderscheiding tussen 'black hat' en 'white hat' valt mogelijk ook in deze categorie, en de categorie Mogelijke vormen van hacken/computercriminaliteit. Sommige inhoud kan worden misbruikt om beveiliging te schenden of onwettige handelingen uit te voeren."
+   },
+   "category_id_126_name": {
+      "message": "Informatiebeveiliging"
+   },
+   "category_id_127_description": {
+      "message": "Webpagina's die zich richten op sociale interactie, zoals online dating, vriendschap, schoolreünies, penvrienden, escortdiensten of introducties tot potentiële echtgenoten. Deze categorie omvat veel sites waar leden sociale interacties kunnen voeren door in real time berichten te posten. Websites in deze categorie kunnen ook contact mogelijk maken met ongewenste partijen en ledenprofielen die aanstootgevende informatie bevatten."
+   },
+   "category_id_127_name": {
+      "message": "Dating/sociale netwerken"
+   },
+   "category_id_128_description": {
+      "message": "Webpagina's die media, software of hulpprogramma's voor mobiele telefoons verkopen die op mobiele telefoons kunnen worden gedownload en geleverd. Voorbeelden hiervan zijn beltonen, logo's/skins, games, screensavers, op tekst gebaseerde melodieën en software voor sms-, mms-, WAP-protocollen en andere protocollen voor mobiele telefoons."
+   },
+   "category_id_128_name": {
+      "message": "Mobiele telefoon"
+   },
+   "category_id_129_description": {
+      "message": "Webpagina's die audio- of videobestanden bevatten om te downloaden, zoals MP3-, WAV-, AVI- en MPEG-indelingen. De bestanden worden opgeslagen op en afgespeeld vanaf de computer van de gebruiker."
+   },
+   "category_id_129_name": {
+      "message": "Mediadownloads"
+   },
+   "category_id_130_description": {
+      "message": "Webpagina's die code implementeren die specifiek is ontworpen om de instellingen of activiteit van uw computer te kapen. Deze categorie omvat zelfinstallatieprogramma's (genaamd 'drive-by'-downloads van uitvoerbare bestanden), Trojaanse paarden en virussen die beveiligingskwetsbaarheden misbruiken in browsers of andere toepassingen. Een webpagina kan later zijn schadelijke status verliezen en naar een andere categorie worden verplaatst. Schadelijke sites zijn bedoeld om actie te ondernemen op een andere computer om schade te veroorzaken."
+   },
+   "category_id_130_name": {
+      "message": "Schadelijke sites"
+   },
+   "category_id_131_description": {
+      "message": "Webpagina's die toegang bieden (http://) tot Usenet-nieuwsgroepen en archieven van bestanden die naar nieuwsgroepen zijn geüpload. Deze categorie bevat ook online groepen die soortgelijke community-gerichte inhoud aanbieden. URL's in deze categorie kunnen aanstootgevende inhoud bevatten."
+   },
+   "category_id_131_name": {
+      "message": "Usenet News"
+   },
+   "category_id_132_description": {
+      "message": "Webpagina's met niet-pornografische afbeeldingen van het naakte menselijke lichaam. Deze categorie omvat klassieke beeldhouwwerken en schilderijen, artistieke naaktfoto's, enkele naturistische afbeeldingen en gedetailleerde medische illustraties."
+   },
+   "category_id_132_name": {
+      "message": "Naaktheid"
+   },
+   "category_id_133_description": {
+      "message": "Webpagina's van liefdadigheids- of onderwijsgroepen die een doelstelling vervullen, ten voordele van de grotere gemeenschap, zoals clubs, lobby's, gemeenschappen, non-profitorganisaties, vakbonden en belangenbehartigingsgroepen. Voorbeelden zijn vrijmetselaars, besloten sociëteiten, de padvinderij of Big Brother-instanties."
+   },
+   "category_id_133_name": {
+      "message": "Non-profit/voorspraak/ngo's"
+   },
+   "category_id_134_description": {
+      "message": "Webpagina's met online nieuwsmedia, zoals internationale of regionale nieuwsuitzendingen en publicaties. Deze categorie omvat portalsites met nieuwsinhoud."
+   },
+   "category_id_134_name": {
+      "message": "Algemeen nieuws"
+   },
+   "category_id_136_description": {
+      "message": "Webpagina's die online producten of services verkopen. Webpagina's die een breed scala aan producten verkopen, kunnen een risico vormen voor gebruikers door toegang te bieden tot items die normaal in andere categorieën vallen, zoals Pornografie, Wapens, Naaktheid of Geweld. Sommige sites bieden mogelijk toegang tot items in andere categorieën, zoals Pornografie en Wapens."
+   },
+   "category_id_136_name": {
+      "message": "Online winkelen"
+   },
+   "category_id_137_description": {
+      "message": "Webpagina's met afbeeldingen die verleidelijke of onthullende kleding, lingerie en zwemkleding bevatten, of collecties van fotomodellen of beroemdheden, maar geen naaktheid."
+   },
+   "category_id_137_name": {
+      "message": "Uitdagende kleding"
+   },
+   "category_id_138_description": {
+      "message": "Webpagina's die het uitwisselen van bestanden tussen computers en gebruikers mogelijk maken voor zakelijk of persoonlijk gebruik, zoals downloadbare muziek. Met P2P-clients kunnen gebruikers bestanden zoeken en uitwisselen van een peer-user-netwerk. Ze bevatten vaak spyware of realtime chatmogelijkheden. Deze categorie bevat BitTorrent-webpagina's."
+   },
+   "category_id_138_name": {
+      "message": "P2P/bestanden delen"
+   },
+   "category_id_139_description": {
+      "message": "Webpagina's over politieke partijen, individuen in het politieke leven en meningen over verschillende onderwerpen. Deze categorie kan ook betrekking hebben op de wetten en de politieke mening over drugs. Deze categorie bevat URL's voor politieke partijen, politieke campagnes en opinies over verschillende onderwerpen, waaronder politieke debatten."
+   },
+   "category_id_139_name": {
+      "message": "Politiek/opinie"
+   },
+   "category_id_140_description": {
+      "message": "Persoonlijke startpagina's met een gemeenschappelijk domein, zoals degene die worden gehost door ISP's, universitaire/onderwijsservers of gratis webpaginahosts. Deze categorie bevat ook unieke domeinen die persoonlijke informatie bevatten, zoals een persoonlijke startpagina. Persoonlijke startpagina's kunnen aanstootgevende inhoud bevatten."
+   },
+   "category_id_140_name": {
+      "message": "Persoonlijke pagina's"
+   },
+   "category_id_141_description": {
+      "message": "Webpagina's die dienen als belangrijke gateways of directory's voor inhoud op internet. Veel portalsites bieden ook verschillende interne sitefuncties of -services, zoals zoekmachines, e-mail, nieuws en entertainment. Deze categorie bevat mailinglist-sites met een verscheidenheid aan inhoud."
+   },
+   "category_id_141_name": {
+      "message": "Portalsites"
+   },
+   "category_id_142_description": {
+      "message": "Webpagina's die externe toegang tot een programma, online service of een volledig computersysteem bieden. Hoewel externe toegang vaak legitiem wordt gebruikt om een computer vanaf een externe locatie te gebruiken, creëert dit een beveiligingsrisico, zoals backdoor-toegang. Met backdoor-toegang, geschreven door de originele programmeur, kan het systeem door een andere partij worden beheerd zonder medeweten van de gebruiker."
+   },
+   "category_id_142_name": {
+      "message": "Externe toegang"
+   },
+   "category_id_143_description": {
+      "message": "Webpagina's met inhoud die betrekking heeft op religieuze onderwerpen en overtuigingen in menselijke spiritualiteit die niet binnen de populaire godsdiensten vallen. Deze categorie omvat religieuze discussies, overtuigingen, artikelen en informatie voor lokale gemeenten of groepen, zoals de startpagina van een kerk, tenzij de site zich al in de categorie Belangrijke wereldwijde religies bevindt. Deze categorie omvat ook vergelijkende religie, of sites met religies en ideologieën."
+   },
+   "category_id_143_name": {
+      "message": "Religie/ideologie"
+   },
+   "category_id_144_description": {
+      "message": "Webpagina's die niet-actieve of ongebruikte computerresources gebruiken om zich te concentreren op een gemeenschappelijke taak. De taak kan op internationale of bedrijfsbasis zijn. Bekende voorbeelden zijn het SETI-programma en het Human Genome Project, dat de niet-actieve tijd van duizenden vrijwillige computers gebruikt om gegevens te analyseren."
+   },
+   "category_id_144_name": {
+      "message": "Bronnen delen"
+   },
+   "category_id_145_description": {
+      "message": "Webpagina's met zoekresultaten die gebruikers in staat stellen informatie op internet te vinden op basis van trefwoorden."
+   },
+   "category_id_145_name": {
+      "message": "Zoekmachines"
+   },
+   "category_id_146_description": {
+      "message": "Webpagina's met betrekking tot professionele of georganiseerde recreatieve sporten. Deze categorie bevat sportnieuws, evenementen en informatie, zoals speeltips, strategieën, gamescores of spelertransacties."
+   },
+   "category_id_146_name": {
+      "message": "Sport"
+   },
+   "category_id_147_description": {
+      "message": "Webpagina's die streamingmedia bieden, of software-invoegtoepassingen bevatten voor het weergeven van visuele en audiogegevens voordat het volledige bestand is verzonden."
+   },
+   "category_id_147_name": {
+      "message": "Streaming media"
+   },
+   "category_id_148_description": {
+      "message": "Webpagina's die opslagplaatsen zijn van downloadbare exemplaren van shareware en freeware. Shareware wordt gedistribueerd via een vertrouwenssysteem waarbij de shareware gratis wordt geleverd, maar de auteur een kleine vergoeding vraagt als het programma geschikt is en regelmatig wordt gebruikt. Freeware is software die zonder enige kosten beschikbaar is."
+   },
+   "category_id_148_name": {
+      "message": "Shareware/freeware"
+   },
+   "category_id_149_description": {
+      "message": "Webpagina's waarvan McAfee meent dat ze materiaal bevatten dat bedoeld is om seksueel opwindend of erotisch te zijn. Deze categorie bevat fetishpagina's, animaties, cartoons, verhalen en illegale pornografie."
+   },
+   "category_id_149_name": {
+      "message": "Pornografie"
+   },
+   "category_id_150_description": {
+      "message": "Webpagina's die persoonlijke of zakelijke privacy en veiligheid schenden. Deze categorie omvat:\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>URL's die software downloaden of programma's uitvoeren die gebruikersinformatie verzamelen en deze naar een derde partij verzenden zonder de expliciete kennis of toestemming van de gebruiker.\u003C/li>\u003Cli>Software die activiteit op de computer van anderen bewaakt of bijhoudt door de toetsaanslagen (Keyloggers) vast te leggen.\u003C/li>\u003Cli>Sites die software verspreiden waarvan bekend is dat deze spyware of adware bevat.\u003C/li>\u003C/ul>Deze categorie wijkt vanwege de opzet af van de categorie Schadelijke sites. Spyware en keyloggers verzamelen heimelijk informatie en verzenden deze naar een andere partij. Een kwaadwillende site is ontworpen om software te installeren of actie te ondernemen zonder goedkeuring of kennis van de gebruiker."
+   },
+   "category_id_150_name": {
+      "message": "Spyware/adware/keyloggers"
+   },
+   "category_id_151_description": {
+      "message": "Webpagina's die het gebruik van tabaksproducten, tabakstoebehoren, inclusief sigaretten, sigaren, pijpen, snuif- en pruimtabak verkopen, promoten of aanbevelen."
+   },
+   "category_id_151_name": {
+      "message": "Tabak"
+   },
+   "category_id_152_description": {
+      "message": "Webpagina's die persoonlijke of zakelijke reizen promoten, zoals hotels, resorts, luchtvaartmaatschappijen, vervoer over land, autoverhuur, reisbureaus en algemene toeristische en reisinformatie. Deze categorie bevat ook sites voor het kopen van tickets of accommodatie."
+   },
+   "category_id_152_name": {
+      "message": "Reizen"
+   },
+   "category_id_153_description": {
+      "message": "Webpagina's die echte of levensechte afbeeldingen of tekst bevatten die fysieke aanvallen op mensen, dieren of instellingen afbeelden, beschrijven of verdedigen, zoals afbeeldingen van oorlog, zelfmoord, verminking of amputatie."
+   },
+   "category_id_153_name": {
+      "message": "Geweld"
+   },
+   "category_id_154_description": {
+      "message": "Webpagina's die advertentiehosting aanbieden of programma's die advertenties maken. Voorbeelden hiervan zijn links, broncode of applets voor banners, pop-ups en andere soorten statische of dynamisch gegenereerde advertenties die op webpagina's worden weergegeven. Deze categorie is bedoeld om advertenties op webpagina's te blokkeren, niet de bedrijven die de advertenties of advertentieservices leveren."
+   },
+   "category_id_154_name": {
+      "message": "Webadvertenties"
+   },
+   "category_id_155_description": {
+      "message": "Webpagina's met informatie over het kopen, maken, wijzigen of gebruiken van wapens, zoals geweren, messen, zwaarden, paintball-wapens en munitie, explosieven en wapenaccessoires."
+   },
+   "category_id_155_name": {
+      "message": "Wapens"
+   },
+   "category_id_156_description": {
+      "message": "Webpagina's waarmee gebruikers e-mail kunnen verzenden of ontvangen via internet. Deze sites kunnen gebruikers blootstellen aan schadelijke inhoud via bestanden in e-mailbijlagen, of kunnen een beveiligingsrisico vormen zoals lekken of verlies van bedrijfseigen gegevens."
+   },
+   "category_id_156_name": {
+      "message": "Webmail"
+   },
+   "category_id_157_description": {
+      "message": "Webpagina's waarmee gebruikers via internet kunnen bellen of informatie of software voor dit doel kunnen verkrijgen. Webtelefoonservice wordt ook internettelefonie of VoIP genoemd. Webtelefoonservice omvat services voor pc-naar-pc, pc-naar-telefoon en telefoon-naar-telefoon die verbinding maken via TCP-/IP-netwerken."
+   },
+   "category_id_157_name": {
+      "message": "Webtelefoon"
+   },
+   "category_id_158_description": {
+      "message": "Webpagina's die online veilingen en de verkoop van artikelen of services bieden. Deze categorie omvat webpagina's die zijn gericht op veilingen en verkopen. Online veilingen worden vrijwel nooit gecontroleerd. Deze sites kunnen gebruikers blootstellen aan materiaal dat ook onder de categorieën Pornografie, Wapens, Naaktheid of Geweld valt."
+   },
+   "category_id_158_name": {
+      "message": "Veilingen/advertenties"
+   },
+   "category_id_159_description": {
+      "message": "Webpagina's die toegang bieden (http://) tot Usenet-nieuwsgroepen of discussies organiseren en door gebruikers gegenereerde inhoud posten, zoals realtime berichten voor een belangenorganisatie. Deze categorie omvat ook archieven van bestanden die naar nieuwsgroepen zijn geüpload."
+   },
+   "category_id_159_name": {
+      "message": "Forum/prikborden"
+   },
+   "category_id_160_description": {
+      "message": "Webpagina's die grove, vulgaire of obscene taal of gebaren bevatten."
+   },
+   "category_id_160_name": {
+      "message": "Vloeken"
+   },
+   "category_id_161_description": {
+      "message": "Webpagina's die plagiaat of fraude promoten door gratis of betaalde werkstukken, schriftelijke essays of examenantwoorden te bieden."
+   },
+   "category_id_161_name": {
+      "message": "Informatie over spieken"
+   },
+   "category_id_162_description": {
+      "message": "Webpagina's die seksuele handelingen beschrijven of weergeven, maar die niet opwindend of erotisch bedoeld zijn. Voorbeelden van seksueel materiaal zijn seksuele voorlichting, seksuele toespelingen, humor of seksgerelateerde producten."
+   },
+   "category_id_162_name": {
+      "message": "Seksueel materiaal"
+   },
+   "category_id_163_description": {
+      "message": "Webpagina's met inhoud die als smakeloos, vies, schokkend of gruwelijk kan worden beschouwd. Deze categorie omvat smakeloze humor, lichamelijke uitscheidingsfuncties, grafische foto's van medische scenario's of ongevallen (met bloed of wonden), extreme vormen van lichaamswijziging (snijden, branding of genitale piercings) of schokkende voorstellingen van onmenselijke dierenbehandeling."
+   },
+   "category_id_163_name": {
+      "message": "Schokkende inhoud"
+   },
+   "category_id_164_description": {
+      "message": "Webpagina's die afbeeldingsspecifieke zoekresultaten bieden, zoals miniatuurafbeeldingen."
+   },
+   "category_id_164_name": {
+      "message": "Visuele zoekmachine"
+   },
+   "category_id_165_description": {
+      "message": "Webpagina's met een technische of zakelijke focus die online berichten plaatsen of in real time chatten, zoals technische ondersteuning of interactieve zakelijke communicatie. Hoewel gebruikers elk type inhoud kunnen plaatsen, is er minder kans dat deze forums aanstootgevende inhoud bevatten. Sites die een verscheidenheid aan forums bieden met thema's, waaronder technische en zakelijke inhoud, bevinden zich alleen in de categorieën Forum/prikborden of Chat. Forums met een primaire technische of zakelijke focus bevinden zich alleen in de categorie Technische/zakelijke forums."
+   },
+   "category_id_165_name": {
+      "message": "Technische/zakelijke forums"
+   },
+   "category_id_166_description": {
+      "message": "Webpagina's die informatie bieden over gokken, zonder dat er kan worden gegokt. Deze categorie bestaat uit casinowebpagina's waarop geen online weddenschappen kunnen worden afgesloten, koppelingen voor gokken, goktips, tips voor sportweddenschappen, loterijresultaten, en paardenrennen of auto- of bootraces."
+   },
+   "category_id_166_name": {
+      "message": "Gerelateerd aan gokken"
+   },
+   "category_id_167_description": {
+      "message": "Webpagina's die sms-berichtservices bieden. Voorbeelden hiervan zijn sms-berichten naar mobiele telefoons, PDA's, faxmachines en interne website-messaging voor gebruiker-naar-gebruiker of site-to-site-berichtenuitwisseling."
+   },
+   "category_id_167_name": {
+      "message": "Berichtendiensten"
+   },
+   "category_id_168_description": {
+      "message": "Webpagina's die fantasie of fictieve voorstellingen van geweld bieden in de context van games, stripverhalen, cartoons of beeldromans. Deze categorie bevat afbeeldingen en tekstbeschrijvingen van fysieke mishandeling of gevechten, en ernstige verwondingen en verwoesting veroorzaakt door wapens of explosieven."
+   },
+   "category_id_168_name": {
+      "message": "Geweld in games/tekenfilms"
+   },
+   "category_id_169_description": {
+      "message": "Koppelingen naar webpagina's die meestal in frauduleuze e-mails aankomen, die zijn ontworpen om gebruikersaccountinformatie te stelen. Deze sites vertegenwoordigen zichzelf ten onrechte en verschijnen als legitieme bedrijfswebpagina's om gebruikersaccountinformatie te misleiden en verkrijgen met als doel fraude of diefstal te plegen."
+   },
+   "category_id_169_name": {
+      "message": "Phishing"
+   },
+   "category_id_170_description": {
+      "message": "Webpagina's waarmee gebruikers mappen en bestanden kunnen uploaden naar een online netwerkserver om bestanden of mappen te delen, bewerken of op te halen of er een back-up van te maken vanuit elke webbrowser."
+   },
+   "category_id_170_name": {
+      "message": "Persoonlijke netwerkopslag"
+   },
+   "category_id_171_description": {
+      "message": "Links naar webpagina's die binnenkomen via ongewenste spammail. De inhoud van spam-URL varieert van productmarketing tot potentieel aanstootgevende of frauduleuze sites. Deze categorie omvat sites die alleen zijn ontworpen voor spamming, zoals spamblogs of reactiespam."
+   },
+   "category_id_171_name": {
+      "message": "Spam-URL's"
+   },
+   "category_id_172_description": {
+      "message": "Webpagina's die toegang bieden tot live of interactieve webtoepassingen, zoals kantoorsuites voor gebruik in browsers en groupware. Deze categorie bevat sites met zakelijke, academische of individuele focus."
+   },
+   "category_id_172_name": {
+      "message": "Interactieve webtoepassingen"
+   },
+   "category_id_174_description": {
+      "message": "Webpagina's die kleding, cosmetica, sieraden en andere modeproducten, -accessoires of -services bieden. Deze categorie omvat ook productbeoordelingen, vergelijkingen en algemene consumenteninformatie, en services zoals kapsalons, zonnestudio's, tatoeage- en piercingstudio's."
+   },
+   "category_id_174_name": {
+      "message": "Mode/schoonheid"
+   },
+   "category_id_175_description": {
+      "message": "Webpagina's met betrekking tot computersoftware en -hardware, waaronder leveranciers, productmarketing en recensies, implementatie en onderhoud van software en hardware. en software-updates en add-ons, zoals scripts, invoegtoepassingen of stuurprogramma's. Hardware omvat computeronderdelen, accessoires en elektronische apparatuur die wordt gebruikt met computers en netwerken. Deze categorie omvat de marketing van software en hardware en tijdschriften gericht op productrecensies van software of hardware of trends in de branche."
+   },
+   "category_id_175_name": {
+      "message": "Software/hardware"
+   },
+   "category_id_176_description": {
+      "message": "Webpagina's waarvan McAfee gelooft dat ze informatie aanbieden om software of elektronische media op illegale wijze te distribueren, zoals auteursrechtelijk beschermde muziek of film, distributie van illegale licentiesleutelgenerators, softwarecracks en serienummers."
+   },
+   "category_id_176_name": {
+      "message": "Mogelijk illegale software"
+   },
+   "category_id_177_description": {
+      "message": "URL's voor servers die afbeeldingen, mediabestanden of JavaScript voor een of meer sites hosten en zijn bedoeld om het ophalen van inhoud voor bestaande webservers, zoals Apache, te versnellen. Op inhoudsservers is over het algemeen geen inhoud gepost of is geen navigatie door de site mogelijk voor websurfers. Op inhoudsservers die afbeeldingen hosten, kunnen gebruikers niet door de foto's navigeren."
+   },
+   "category_id_177_name": {
+      "message": "Inhoudsserver"
+   },
+   "category_id_178_description": {
+      "message": "Webpagina's met services voor publicatie en onderhoud van internetsites zoals webontwerp, domeinregistratie, internetserviceproviders en breedband- en telecommunicatiebedrijven die webservices leveren."
+   },
+   "category_id_178_name": {
+      "message": "Internetservices"
+   },
+   "category_id_179_description": {
+      "message": "Webpagina's waarmee gebruikers mediabestanden en foto's kunnen uploaden, zoeken en delen, zoals online fotoalbums. Deze categorie behandelt de algemene risico's van het delen van media, maar is niet gericht op specifieke inhoud. Sommige URL's bevatten mogelijk ook aanstootgevende inhoud."
+   },
+   "category_id_179_name": {
+      "message": "Media delen"
+   },
+   "category_id_180_description": {
+      "message": "Webpagina's met niet-pornografische afbeeldingen van het naakte menselijke lichaam, zoals in klassieke beeldhouwwerken en schilderijen, of medische afbeeldingen."
+   },
+   "category_id_180_name": {
+      "message": "Incidentele naaktheid"
+   },
+   "category_id_181_description": {
+      "message": "Webpagina's die individuele of zakelijke producten of services op internet promoten, maar die hun producten of services niet online verkopen. Deze categorie omvat websites die over het algemeen een bedrijfsoverzicht zijn en die services of producten beschrijven die niet rechtstreeks op deze sites kunnen worden gekocht. Voorbeelden hiervan zijn sites van autofabrikanten, services voor huwelijksreportages of grafisch ontwerp."
+   },
+   "category_id_181_name": {
+      "message": "Marketing/merchandising"
+   },
+   "category_id_183_description": {
+      "message": "Webpagina's die ooit inhoud hebben geleverd, maar waarvan de domeinen zijn verkocht of opgegeven en niet meer zijn geregistreerd. Geparkeerde domeinen hosten hun eigen inhoud niet, maar leiden gebruikers meestal om naar een algemene pagina die aangeeft dat de domeinnaam te koop is, of leiden gebruikers om naar een algemene zoekmachine en portalpagina, waarvan sommige geldige zoekresultaten bieden."
+   },
+   "category_id_183_name": {
+      "message": "Geparkeerd domein"
+   },
+   "category_id_184_description": {
+      "message": "Webpagina's die beoordelingen, beschrijvingen en geneesmiddelen op recept, zelfzorgmiddelen, anticonceptie of voedingssupplementen adverteren of verkopen."
+   },
+   "category_id_184_name": {
+      "message": "Apotheek"
+   },
+   "category_id_185_description": {
+      "message": "Webpagina's met informatie over restaurants, bars, catering, afhaal- en bezorgmaaltijden, inclusief online bestellingen. Deze categorie bevat sites met informatie over locatie, openingstijden, prijzen, menu's en gerelateerde voedingsinformatie. Deze categorie omvat ook restaurantgidsen en -recensies, en cafés en koffiebars."
+   },
+   "category_id_185_name": {
+      "message": "Restaurants"
+   },
+   "category_id_186_description": {
+      "message": "Webpagina's die commerciële of residentiële vastgoeddiensten en informatie aanbieden. Service en informatie omvat verkoop en verhuur van woon- of winkelruimte en handleidingen voor appartementen, woningen en vastgoed, en informatie over beoordeling en bemiddeling. Deze categorie bevat sites waarmee u modelwoningen kunt bekijken."
+   },
+   "category_id_186_name": {
+      "message": "Onroerend goed"
+   },
+   "category_id_187_description": {
+      "message": "Webpagina's voor recreatieve organisaties en faciliteiten die inhoud bevatten die is gewijd aan recreatieve activiteiten en hobby's. Deze categorie bevat informatie over openbare zwembaden, dierentuinen, beurzen, festivals, pretparken, recreatiegidsen, wandelen, vissen, vogelspotten of postzegels verzamelen."
+   },
+   "category_id_187_name": {
+      "message": "Vrije tijd/hobby's"
+   },
+   "category_id_188_description": {
+      "message": "Webpagina's met dynamische inhoud die vaak verandert omdat gebruikers op elk moment inhoud kunnen posten of bewerken. Deze categorie omvat de risico's met dynamische inhoud, die kan variëren van onschuldig tot aanstootgevend. Veel blogs en wiki's hebben een centraal thema of onderwerp. Deze categorie komt vaak voor in combinatie met andere, zoals Controversiële meningen, Onderwijs/referentiemateriaal, Sport, Politiek/opinie of Naaktheid, afhankelijk van de focus of het onderwerp van de site. Sommige inhoud is mogelijk aanstootgevend."
+   },
+   "category_id_188_name": {
+      "message": "Blogs/wiki"
+   },
+   "category_id_189_description": {
+      "message": "Webpagina's waarmee mensen digitale ansicht- en wenskaarten via het internet kunnen versturen en ontvangen. Digitale kaarten zijn bedoeld voor wensen of groeten, meestal bij speciale gelegenheden zoals verjaardagen en feestdagen. Sommige sites voor digitale kaarten hebben een specifieke categorie voor volwassen humor. Deze sites kunnen ook tot bezorgdheid leiden over het lekken van vertrouwelijke of eigendomsinformatie, aanstootgevende inhoud, malware of schadelijke bestandsbijlagen."
+   },
+   "category_id_189_name": {
+      "message": "Digitale ansichtkaarten"
+   },
+   "category_id_190_description": {
+      "message": "Webpagina's die belangrijke historische gebeurtenissen ontkennen of er een afwijkende interpretatie van bieden, zoals ontkenning van de Holocaust. Deze categorie omvat sites die een legitieme academische waarde kunnen hebben. Veel van deze sites bevatten echter illegale manipulatie van de geschiedenis voor politieke doeleinden. Sommige URL's in deze categorie bevatten mogelijk inhoud die in bepaalde landen illegaal of aanstootgevend kan zijn."
+   },
+   "category_id_190_name": {
+      "message": "Historisch revisionisme"
+   },
+   "category_id_191_description": {
+      "message": "Webpagina's die computerinformatie bieden met een educatieve focus op gebieden zoals informatietechnologie, computerprogrammering en certificering. Voorbeelden hiervan zijn Linux-gebruikersgroepen, UNIX-opdrachten, softwaretutorials of woordenboeken met technische termen. De meeste sites in deze categorie kunnen submappen van grotere domeinen zijn."
+   },
+   "category_id_191_name": {
+      "message": "Technische gegevens"
+   },
+   "category_id_192_description": {
+      "message": "Webpagina's met netwerken voor online dating, matchmaking, escortdiensten of introducties tot potentiële echtgenoten. Deze categorie omvat sites die persoonlijke of groepsprofielen bieden en hun leden in staat stellen om te communiceren door middel van realtime communicatie, het posten van berichten, openbare bulletins en het delen van media. Websites in deze categorie kunnen ook contact mogelijk maken met ongewenste partijen en ledenprofielen die aanstootgevende informatie bevatten."
+   },
+   "category_id_192_name": {
+      "message": "Dating/persoonlijke advertenties"
+   },
+   "category_id_193_description": {
+      "message": "Websites voor fabrikanten en dealers van voertuigen voor consumentenvervoer, zoals auto's, bestelwagens, vrachtwagens, SUV's, motorfietsen en scooters. Deze categorie omvat ook sites die productmarketing, beoordelingen, vergelijkingen, prijsinformatie, autobeurzen, auto-expo's en algemene consumenteninformatie over motorvoertuigen aanbieden."
+   },
+   "category_id_193_name": {
+      "message": "Motorvoertuigen"
+   },
+   "category_id_194_description": {
+      "message": "Webpagina's die uitsluitend sociale netwerken bieden voor professionele of zakelijke doeleinden. Deze categorie omvat sites die persoonlijke of groepsprofielen bieden en hun leden in staat stellen om te communiceren door middel van realtime communicatie, het posten van berichten, openbare bulletins en het delen van media. Deze categorie bevat ook alumnisites die een netwerkfunctie hebben."
+   },
+   "category_id_194_name": {
+      "message": "Professionele netwerken"
+   },
+   "category_id_195_description": {
+      "message": "Webpagina's die sociale netwerken mogelijk maken voor verschillende doeleinden, zoals vriendschap, dating, werk of vrije tijd. Deze sites bieden persoonlijke of groepsprofielen en maken interactie tussen hun leden mogelijk via realtime communicatie, het plaatsen van berichten, openbare bulletins en het delen van media. Websites in deze categorie kunnen ook contact mogelijk maken met ongewenste partijen en ledenprofielen die aanstootgevende informatie bevatten."
+   },
+   "category_id_195_name": {
+      "message": "Sociale netwerken"
+   },
+   "category_id_196_description": {
+      "message": "Webpagina's waarmee gebruikers zinnen of een tekstblok kunnen typen om deze te vertalen. Deze categorie bevat ook webpagina's met taal-ID's."
+   },
+   "category_id_196_name": {
+      "message": "Tekstvertalers"
+   },
+   "category_id_197_description": {
+      "message": "Webpagina's met livevergaderingen, videoconferenties en interactieve presentaties, voornamelijk voor bedrijven. Webvergaderingen omvatten over het algemeen audio- en videostreaming, en staan gegevensoverdracht of het zakelijk delen van toepassingen toe, zoals online presentaties. URL's in deze categorie kunnen bandbreedte- en beveiligingsrisico's bevatten, zoals verlies of het lekken van bedrijfseigen gegevens."
+   },
+   "category_id_197_name": {
+      "message": "Webvergaderingen"
+   },
+   "category_id_198_description": {
+      "message": "Webpagina's met opinies die politiek of sociaal aanstootgevend zijn en tot controverse aanzetten. Deze inhoud heeft betrekking op extreme publieke opinies. Voorbeelden hiervan zijn zelfmoordpacten, xenofobische, etnocentrische, fundamentalistische opinies, aanprijzing van anorexia, desinformatie of kritische beoordeling van een bepaalde groep mensen."
+   },
+   "category_id_198_name": {
+      "message": "Controversiële meningen"
+   },
+   "category_id_199_description": {
+      "message": "IP-adressen (en alle bijbehorende domeinen) die internettoegang hebben via DSL-modems of kabelmodems. Aangezien deze inhoud over het algemeen niet is bedoeld voor internettoegang via HTTP, kan toegang tot internet via deze IP-adressen op verdacht gedrag duiden. Dit gedrag kan te maken hebben met malware op de thuiscomputer of met eigen ontwikkelde gateways die zijn ingesteld om anonieme internettoegang mogelijk te maken."
+   },
+   "category_id_199_name": {
+      "message": "Particuliere IP-adressen"
+   },
+   "category_id_200_description": {
+      "message": "Een browserexploit is een stukje code dat een softwaredefect in een webbrowser gebruikt. Door deze code vertoont de browser onverwacht gedrag, zoals niet langer reageren, lokale bestanden lezen of schrijven, een virus doorvoeren of spyware installeren. Schadelijke code kan HTML, JavaScript, afbeeldingen, ActiveX, Java en andere webtechnologieën exploiteren. Exploits worden soms drive-by-downloads genoemd, en kunnen zichzelf vaak zonder medeweten van de gebruiker installeren op onbeschermde computers, waarbij de code keyloggers (om wachtwoorden te stelen) en Trojaanse paarden (om van een computer een 'bot' te maken) kan installeren. Deze categorie omvat URL's die browserexploits distribueren of uitvoeren."
+   },
+   "category_id_200_name": {
+      "message": "Browserexploits"
+   },
+   "category_id_201_description": {
+      "message": "Websites die consumenten proberen te beroven of bedriegen. Enkele voorbeelden van hun activiteiten zijn de verkoop van namaakproducten, de verkoop van producten die oorspronkelijk gratis werden aangeboden of verkeerd gebruik van het merk van een ander bedrijf. Deze categorie omvat websites die misbruik maken van vriendelijkheid of onwetendheid, zoals frauduleus geld inzamelen voor een goed doel of frauduleuze investeringsprogramma's uitvoeren. Deze categorie omvat ook sites waar veel consumenten hebben aangegeven dat ze bedrogen zijn of geen diensten hebben ontvangen."
+   },
+   "category_id_201_name": {
+      "message": "Consumentenbescherming"
+   },
+   "category_id_202_description": {
+      "message": "Webpagina's met inhoud van seksueel misbruik van kinderen die overal ter wereld wordt gehost, illegaal obscene inhoud en inhoud die aanzet tot rassenhaat, gehost in het Verenigd Koninkrijk."
+   },
+   "category_id_202_name": {
+      "message": "Illegaal in het Verenigd Koninkrijk"
+   },
+   "category_id_203_description": {
+      "message": "Webpagina's met inhoud over religieuze onderwerpen en informatie met betrekking tot populaire religies. Deze categorie bevat sites die betrekking hebben op religieuze inhoud, zoals discussie, overtuigingen, niet-controversiële commentaren, artikelen en informatie voor lokale gemeenten, zoals de startpagina van een kerk of synagoge. De religies in deze categorie zijn Baha'I, Boeddhisme, Traditioneel Chinees, Christendom, Hindoeïsme, Islam, Jaïnisme, Jodendom, Shinto, Sikhisme, Tenrikyo, Zoroastrianisme."
+   },
+   "category_id_203_name": {
+      "message": "Belangrijke wereldwijde religies"
+   },
+   "category_id_204_description": {
+      "message": "Webpagina's waarmee een gebruiker per ongeluk code kan downloaden die schadelijk of irritant is. Deze categorie bevat downloadbare bestanden zoals screensavers, werkbalken en programma's voor het delen van bestanden die adware, spyware, virussen en andere kwaadwillende computercode bevatten. Soms wordt de malware toegevoegd zonder medeweten van de gebruiker, zoals wanneer ze klikken op 'Ja' of 'Ik ga akkoord' zonder de volledige algemene voorwaarden te lezen. Mogelijke effecten zijn lagere computersnelheden, diefstal van wachtwoorden en verlies of beschadiging van waardevolle persoonlijke bestanden."
+   },
+   "category_id_204_name": {
+      "message": "Schadelijke downloads"
+   },
+   "category_id_205_description": {
+      "message": "Webpagina's die Potentially Unwanted Programs (PUP's) bevatten. PUP's worden vaak gemaakt voor een nuttig doel, maar ze wijzigen de veiligheid van een computer of de privacy van de computergebruiker. Computergebruikers die zich zorgen maken over beveiliging of privacy, willen mogelijk worden geïnformeerd over deze software en in sommige gevallen willen ze deze software van hun computer verwijderen."
+   },
+   "category_id_205_name": {
+      "message": "PUP's"
+   },
+   "category_id_600_description": {
+      "message": "Webpagina's die gezinsvriendelijk zijn, met name voor kinderen van 10 jaar en jonger."
+   },
+   "category_id_600_name": {
+      "message": "Voor kinderen"
+   },
+   "category_id_601_description": {
+      "message": "Webpagina's die inhoud over historische feiten bevatten. Deze categorie bevat inhoud die geschikt is voor voortgezet onderwijs, maar de categorie Onderwijs bevat inhoud voor basisonderwijs. Een site met Holocaustfoto's kan bijvoorbeeld aanstootgevend zijn, maar academische waarde hebben."
+   },
+   "category_id_601_name": {
+      "message": "Geschiedenis"
+   },
+   "category_id_602_description": {
+      "message": "Bulletinboards, chatrooms, zoekmachines of webmailsites waarop toezicht wordt gehouden door een persoon of groep die de bevoegdheid heeft om berichten of inhoud te blokkeren die als ongepast worden beschouwd."
+   },
+   "category_id_602_name": {
+      "message": "Onder toezicht"
+   },
+   "category_id_603_description": {
+      "message": "Inhoud die alleen uit tekst of audio bestaat en geen afbeeldingen bevat. Deze categorie kan als uitzondering worden gebruikt om expliciete tekst en opgenomen materiaal toegankelijk te maken wanneer u afbeeldingen wilt blokkeren met de categorieën Pornografie, Geweld of Seksueel materiaal. Bibliotheken of universiteiten kunnen deze categorie gebruiken om te voorkomen dat aanstootgevende afbeeldingen in hun openbare faciliteiten worden weergegeven."
+   },
+   "category_id_603_name": {
+      "message": "Alleen tekst/gesproken woord"
+   },
+   "crypto_allow_desc": {
+      "message": "Wanneer we cryptojacking blokkeren, kunt u ervoor kiezen dit toch toe te staan. We raden dit af, maar geven u wel de optie als u websites wilt steunen die geld verdienen via cryptojacking."
+   },
+   "crypto_allow_title": {
+      "message": "Wilt u cryptojacking toestaan?"
+   },
+   "crypto_footer_message1": {
+      "message": "McAfee en het McAfee-logo zijn handelsmerken of gedeponeerde handelsmerken van McAfee, LCC of haar dochterondernemingen in de Verenigde Staten en andere landen."
+   },
+   "crypto_footer_message2": {
+      "message": "Andere namen en merken kunnen eigendom van anderen zijn. Copyright ©2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "We houden cryptojackers tegen wanneer ze proberen het vermogen en de resources van uw computer te stelen."
+   },
+   "crypto_header_title": {
+      "message": "Blokkering van cryptojacking is ingeschakeld"
+   },
+   "crypto_own_desc": {
+      "message": "U hoeft geen cryptovaluta te hebben om slachtoffer te worden van cryptojacking. Cryptojackers krijgen toegang tot de resources van uw computer, niet tot eventuele cryptovaluta."
+   },
+   "crypto_own_title": {
+      "message": "Kan cryptojacking alleen voorkomen als ik cryptovaluta bezit?"
+   },
+   "crypto_protect_desc": {
+      "message": "Laat uw %PRODUCTNAME%-extensie aan staan zodat onze blokkering voor cryptojacking u tegen cryptojackers kan beschermen. We laten het u weten wanneer we pogingen tot cryptojacking tegenhouden."
+   },
+   "crypto_protect_title": {
+      "message": "Hoe kunt u zichzelf beschermen?"
+   },
+   "crypto_signs_desc1": {
+      "message": "Langzaam internet"
+   },
+   "crypto_signs_desc2": {
+      "message": "Batterij raakt te snel leeg"
+   },
+   "crypto_signs_desc3": {
+      "message": "Luide ventilator"
+   },
+   "crypto_signs_desc4": {
+      "message": "Toename in stroomverbruik"
+   },
+   "crypto_signs_title": {
+      "message": "Wat zijn de tekenen van cryptojacking?"
+   },
+   "crypto_title": {
+      "message": "McAfee-blokkering van cryptojacking"
+   },
+   "crypto_whatis_point1": {
+      "message": "Cryptojackers (hackers) krijgen toegang tot uw computer via websites wanneer u deze bezoekt."
+   },
+   "crypto_whatis_point2": {
+      "message": "Ze leggen beslag op het rekenvermogen van uw computer (de processor en het geheugen) waarmee ze complexe taken kunnen uitvoeren."
+   },
+   "crypto_whatis_point3": {
+      "message": "Ze verdienen cryptovaluta, ofwel online geld."
+   },
+   "crypto_whatis_title": {
+      "message": "Wat is cryptojacking?"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "Cryptojacking op deze site toestaan"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "Meer informatie"
+   },
+   "cryptojacking_banner_message": {
+      "message": "We hebben cryptojacking op deze site geblokkeerd. Uw computerbronnen zijn veilig en u kunt blijven internetten. $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "We hebben deze pagina getest en inhoud geblokkeerd die afkomstig is van potentieel gevaarlijke of verdachte sites. Sta deze inhoud alleen toe als u zeker weet dat deze van veilige sites afkomstig is."
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "Alle geblokkeerde inhoud weergeven"
+   },
+   "overlay_accept_ss": {
+      "message": "Geef toestemming om uw zoekmachine te wijzigen naar Beveiligd zoeken van McAfee®"
+   },
+   "overlay_add_ss": {
+      "message": "Voeg Beveiligd zoeken van McAfee® toe aan uw browser"
+   },
+   "overlay_ss_description": {
+      "message": "We markeren riskante websites in uw zoekresultaten zodat u weet welke websites veilig zijn, en welke niet."
+   },
+   "overlay_step_1": {
+      "message": "STAP 1"
+   },
+   "overlay_step_2": {
+      "message": "STAP 2"
+   },
+   "phishingdesc": {
+      "message": "Hackers proberen toegang te krijgen tot uw gegevens door u in de val te lokken met officieel uitziende phishing-mails en -websites. Wij zorgen ervoor dat ze u niet te pakken krijgen."
+   },
+   "phishingtitle": {
+      "message": "Bescherm uw persoonlijke gegevens"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "McAfee® WebAdvisor"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "Wilt u Beveiligd zoeken toevoegen om criminelen een stap voor te blijven?"
+   },
+   "search_toast_body_text_test": {
+      "message": "Wilt u Beveiligd zoeken toevoegen en weten welke websites u zonder zorgen kunt bezoeken?"
+   },
+   "search_toast_done": {
+      "message": "Gereed"
+   },
+   "search_toast_heading_compliant": {
+      "message": "U hebt Beveiligd zoeken niet: wees voorzichtig"
+   },
+   "search_toast_heading_test": {
+      "message": "Krijg veiligheidsadvies in uw zoekresultaten"
+   },
+   "search_toast_no_thanks": {
+      "message": "Nee, bedankt"
+   },
+   "search_toast_ok": {
+      "message": "OK"
+   },
+   "search_toast_option_compliant": {
+      "message": "Ja, voeg Beveiligd zoeken toe aan mijn browser en verander mijn standaard zoekmachine in $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "Ja, voeg Beveiligd zoeken toe en verander mijn standaard zoekmachine in $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "Met Beveiligd zoeken kunt u de riskante sites in uw zoekresultaten vermijden."
+   },
+   "search_toast_sub_heading_test": {
+      "message": "Beveiligd zoeken markeert riskante websites in uw zoekresultaten."
+   },
+   "search_toast_yes": {
+      "message": "Ja"
+   },
+   "securesearchdesc": {
+      "message": "Zorgeloos browsen dankzij kleurgecodeerde zoekresultaten — wij vertellen u welke websites veilig of verdacht zijn."
+   },
+   "securesearchtitle": {
+      "message": "Laat riskante zoekresultaten links liggen"
+   },
+   "settings_about_adblock": {
+      "message": "Blokkeer reclames en pop-ups die uw browser langzaam maken"
+   },
+   "settings_about_adblock_tracking": {
+      "message": "Cookies die u volgen en uw gegevens verzamelen, blokkeren"
+   },
+   "settings_about_block_download": {
+      "message": "Riskante downloads blokkeren"
+   },
+   "settings_about_cryptojackers": {
+      "message": "Poging van $settings_about_cryptojackers_link$ om uw computerbronnen te stelen, is geblokkeerd",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "cryptojackers"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "Ervoor zorgen dat uw firewall en antivirus ingeschakeld zijn"
+   },
+   "settings_about_flag_website": {
+      "message": "Gevaarlijke websites markeren"
+   },
+   "settings_about_help_link_message": {
+      "message": "Nu hulp krijgen"
+   },
+   "settings_about_help_message": {
+      "message": "Iedereen kan wel eens wat hulp gebruiken."
+   },
+   "settings_about_help_title": {
+      "message": "Hulp en technische ondersteuning krijgen"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "Lees de privacyverklaring"
+   },
+   "settings_about_privacy_message": {
+      "message": "McAfee neemt uw privacy serieus."
+   },
+   "settings_about_privacy_title": {
+      "message": "Privacyverklaring"
+   },
+   "settings_about_product_affid": {
+      "message": "Partner-id: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "Binaire versie: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "Versie van uitbreiding: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "Productversie"
+   },
+   "settings_about_share_title": {
+      "message": "%PRODUCTNAME% delen met vrienden"
+   },
+   "settings_about_subtitle": {
+      "message": "%PRODUCTNAME% helpt u betere beslissingen over uw online activiteiten te nemen."
+   },
+   "settings_about_title": {
+      "message": "INFO"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "Laat mij in elke zoekmachine weten of een zoekresultaat veilig is."
+   },
+   "settings_preference_annotation_none": {
+      "message": "Laat mij niets weten over zoekresultaten."
+   },
+   "settings_preference_annotation_ss": {
+      "message": "Laat mij alleen in Beveiligd zoeken weten of een zoekresultaat veilig is."
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "We geven uw zoekresultaten een kleurcodering zodat u weet welke websites veilig zijn."
+   },
+   "settings_preference_annotation_title": {
+      "message": "Beveiligd zoeken"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "Voorkomt dat vervelende advertenties en pop-ups uw browser vertragen"
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "Houdt cookies die u volgen en uw gegevens verzamelen buiten"
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "Reclame- en trackerblokkering"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "Toevoegen"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "Toestaan"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "U hebt geen Extra bescherming omdat de McAfee® Secure Search-extensie die hier deel van uitmaakt, niet is ingeschakeld. Schakel dit nu in en kies $settings_preference_ap_alert_allow$ wanneer u om toestemming wordt gevraagd.",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "Inschakelen"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "U hebt geen Extra bescherming omdat de McAfee® Secure Search-extensie die hier deel van uitmaakt, niet is geïnstalleerd. Voeg deze nu toe via de Chrome Web Store."
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "Maakt gebruik van onze bedreigingsinformatieservice in de cloud om bedreigingen te identificeren"
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "Geeft zoekresultaten een kleurcodering zodat u weet welke websites veilig zijn"
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "Markeert websites in uw zoekresulataten die niet veilig zijn"
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "Beveiligd zoeken van McAfee"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "Bescherm uw privacy en gegevens."
+   },
+   "settings_preference_ap_title": {
+      "message": "Extra bescherming"
+   },
+   "settings_preference_reset_button": {
+      "message": "Opnieuw instellen"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "Heeft u een melding van %PRODUCTNAME% genegeerd en heeft u hier spijt van? U kunt meldingen herstellen, zodat u elk type bericht van %PRODUCTNAME% opnieuw krijgt."
+   },
+   "settings_preference_reset_title": {
+      "message": "Instellingen opnieuw instellen"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "LinkedIn"
+   },
+   "settings_preference_sma_message": {
+      "message": "We bieden waarschuwingen in de volgende websites:"
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "We geven links in uw feeds op sociale media een kleurcodering zodat u weet welke veilig zijn."
+   },
+   "settings_preference_sma_title": {
+      "message": "Bescherming op sociale media"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "YouTube"
+   },
+   "settings_preference_title": {
+      "message": "AANVULLENDE SERVICES"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "vervelende advertenties geblokkeerd"
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "pogingen tot cryptojacking geblokkeerd"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "onveilige downloads geblokkeerd"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "downloads gescand"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "links gescand"
+   },
+   "settings_statistics_message": {
+      "message": "Onze activiteiten tot nu toe:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "gevaarlijke pagina's geblokkeerd"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "pagina's gescand"
+   },
+   "settings_statistics_subtitle": {
+      "message": "We staan klaar om u online te beschermen."
+   },
+   "settings_statistics_title": {
+      "message": "STATISTIEKEN"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "trackers geblokkeerd"
+   },
+   "settings_subtitle": {
+      "message": "Pas uw webbescherming aan."
+   },
+   "settings_tab_about": {
+      "message": "Info"
+   },
+   "settings_tab_preference": {
+      "message": "Voorkeuren"
+   },
+   "settings_tab_statistics": {
+      "message": "Statistieken"
+   },
+   "settings_tab_whitelist": {
+      "message": "Goedgekeurde lijst"
+   },
+   "settings_title": {
+      "message": "Webbescherming"
+   },
+   "settings_whitelist_input": {
+      "message": "Voer een webadres in..."
+   },
+   "settings_whitelist_title": {
+      "message": "SITES DIE U VERTROUWT"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "Pas uw $sidebar_action_panel_web_protection_preferences$ aan.",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "Webbeveiligingsvoorkeuren"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "We beschermen u nu als volgt:"
+   },
+   "sidebar_adblock_toggle": {
+      "message": "Advertenties op deze pagina alleen tijdens dit bezoek weergeven"
+   },
+   "sidebar_ads_blocked": {
+      "message": "vervelende advertenties geblokkeerd op deze pagina"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "High five!"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "We weten niet wat beter is, dat wij mogen helpen u te beschermen, of dat $sidebar_badge_collection_block_page_description_italic$ helpt u te beschermen...",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "u bent"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "Het is een win-winsituatie."
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "Deze site krijgt u niet te pakken"
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "Die bedreigingen maken geen schijn van kans"
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "Geblokkeerd: u kunt beter het zekere voor het onzekere nemen!"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "Bedankt voor het opruimen!"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "Bedankt dat wij deze inhoud voor u mochten blokkeren. Laten we nu weer kijken naar dingen waar u van houdt."
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "We houden dit schoon."
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "Als u ervoor kiest er toch heen te gaan, voegen we deze website toe aan uw lijst met vertrouwde websites."
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "Ik wil er toch heen"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "Geblokkeerd laten"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "Het lijkt op een phishingsite. Dit betekent dat het u e-mails kan verzenden, waarin het zich voordoet als een vertrouwde organisatie om u over te halen uw persoonlijke gegevens, zoals wachtwoorden en creditcards, te delen."
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "U trapt er niet in, dus het zal ergens anders moeten 'phishen' naar persoonlijke gegevens."
+   },
+   "sidebar_block_page_description_red": {
+      "message": "We willen dat u beschermd blijft. We houden u dus niet voor niets tegen."
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "Het ziet er zo riskant uit, dat we zelfs onze grootste vijand er niet naartoe zouden sturen (als we er een zouden hebben)."
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "We weten het niet 100% zeker, maar we hebben het toch maar geblokkeerd omdat er zich één van de volgende typen bedreigingen kan verschuilen:"
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "Het is net zoals rijden zonder riem om: u wilt het risico toch niet lopen?"
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "Meer informatie over de bedreigingen op deze website:"
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "Meer informatie over de bedreigingen op deze website:"
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "Deze website zit vol met dit soort bedreigingen:"
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "Dit soort bedreigingen staan u te wachten:"
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "Deze website zit vol met dit soort bedreigingen:"
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "Dit soort bedreigingen staan u te wachten:"
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "We hebben deze website geblokkeerd, zodat het uw persoonlijke gegevens niet kan stelen"
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "Deze phishingsite is geblokkeerd"
+   },
+   "sidebar_block_page_title_red": {
+      "message": "We hebben deze gevaarlijke website geblokkeerd"
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "Deze gevaarlijke website is geblokkeerd"
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "Het kan zijn dat deze website u in de val wil lokken"
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "Deze riskante website is geblokkeerd"
+   },
+   "sidebar_crypto_blocked": {
+      "message": "pogingen tot cryptojacking geblokkeerd"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "gevaarlijke pagina's geblokkeerd"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "Bedankt dat we dat bestand mochten vernietigen voordat het u in gevaar kon brengen. Samen zijn we een goed beveiligingsteam!"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "High five!"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "We hebben dat ene slechte bestand verwijderd"
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "Misschien lukt het wel als u ze handmatig probeert te verwijderen. Ga naar de locatie waarin het bestand is opgeslagen en probeer het daar te verwijderen."
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "Naam:"
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "OK"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "Locatie:"
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "Bron downloaden:"
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "Het werkt niet"
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "Verwijderen"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "Bron downloaden:"
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "Naam:"
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "Het lijkt erop dat het virussen, spyware of andere mogelijk ongewenste programma's bevat."
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "Ik wil het toch houden"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "Als we het nu verwijderen voordat u het opent, kunnen we ervoor zorgen dat u ongedeerd blijft."
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "Het bestand dat u heeft gedownload, is gevaarlijk"
+   },
+   "sidebar_everything_looks_good": {
+      "message": "Alles ziet er goed uit"
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "Uw webbescherming is ingeschakeld en houdt een oogje in het zeil voor u. Wilt u uw instellingen controleren of uw statistieken bekijken?"
+   },
+   "sidebar_get_help": {
+      "message": "Hulp verkrijgen"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "Ga naar Voorkeuren voor webbescherming"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "Ik wil het toch zien"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "Geblokkeerd laten"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "Het ziet er verdacht uit en het zou u kunnen schaden. Als u zeker weet dat deze inhoud veilig is en u het wilt bekijken, kunt u dit toestaan."
+   },
+   "sidebar_iframe_block_title": {
+      "message": "We hebben deze inhoud voor uw veiligheid geblokkeerd"
+   },
+   "sidebar_pages_scanned": {
+      "message": "pagina's gescand"
+   },
+   "sidebar_privacy": {
+      "message": "Privacyverklaring"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "OK"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "Software van deze website geeft andere mensen toegang tot uw pc. Scammers kunnen deze gebruiken om stiekem toegang tot uw persoonlijke gegevens te krijgen."
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "Als u wordt gevraagd software te downloaden of persoonlijke gegevens te verstrekken, wees er dan zeker van dat u dit wordt gevraagd door iemand die u vertrouwt."
+   },
+   "sidebar_rat_detection_title": {
+      "message": "Via deze website kunnen andere mensen uw pc beheren"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "Me niet meer waarschuwen op deze site"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "We hebben een scan uitgevoerd en er zijn geen bedreigingen gevonden."
+   },
+   "sidebar_site_report_description_red": {
+      "message": "We scannen websites regelmatig op verdachte en gevaarlijke activiteiten. Deze is niet veilig."
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "We duiken er dieper in en laten u de volgende keer dat we de website scannen weten of deze website veilig of riskant lijkt."
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "We hebben deze website gescand, en het is niet zo veilig als we zouden willen. Wees voorzichtig terwijl u de website bezoekt."
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "Het lijkt erop dat het een website van dit type is:"
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "Websitebedreigingen:"
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "Mogelijk type website of bedreiging:"
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "Websitebedreigingen:"
+   },
+   "sidebar_site_report_title_green": {
+      "message": "Deze website ziet er veilig uit"
+   },
+   "sidebar_site_report_title_red": {
+      "message": "Deze website is gevaarlijk"
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "De veiligheidsstatus van deze website is onbekend"
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "Deze website ziet er riskant uit"
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "OK"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "U heeft beveiligd zoeken ingeschakeld, dus nu kunnen we u laten zien welke websites er veilig of gevaarlijk uitzien voordat u ze bezoekt."
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "In uw zoekresultaten ziet u pictogrammen met een kleurcodering naast iedere website. Bezoek gerust groen gemarkeerde websites, en blijf weg van riskante geel of gevaarlijke rood gemarkeerde websites."
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "Nu weet u welke websites u moet vermijden"
+   },
+   "sidebar_subtitle": {
+      "message": "Onze activiteiten tot nu toe:"
+   },
+   "sidebar_terms": {
+      "message": "Algemene voorwaarden"
+   },
+   "sidebar_title": {
+      "message": "We staan klaar om u online te beschermen."
+   },
+   "sidebar_tracker_blocked": {
+      "message": "trackers geblokkeerd op deze pagina"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "onveilige items geblokkeerd"
+   },
+   "sidebar_version": {
+      "message": "Versie"
+   },
+   "sidebar_view_site_report": {
+      "message": "Siterapport weergeven"
+   },
+   "sidebar_view_stats": {
+      "message": "Bekijk alle manieren waarop wij u hebben beschermd"
+   },
+   "site_report_category_subtitle": {
+      "message": "Websitecategorie:"
+   },
+   "site_report_category_title": {
+      "message": "Over deze site"
+   },
+   "site_report_main_message_danger": {
+      "message": "We scannen sites geregeld op verdachte en schadelijke activiteiten. Deze site is niet veilig. Hieronder vindt u meer informatie."
+   },
+   "site_report_main_message_safe": {
+      "message": "We hebben deze site geanalyseerd en alles is in orde. Veel plezier."
+   },
+   "site_report_main_message_unknown": {
+      "message": "Er is nu niets te delen. We werken het bedreigingsniveau bij wanneer we de site de weer scannen."
+   },
+   "site_report_main_message_warning": {
+      "message": "We hebben deze website gescand, en het is niet zo veilig als we zouden willen. Wees voorzichtig als u er toch op klikt."
+   },
+   "site_report_main_title": {
+      "message": "Siterapport"
+   },
+   "site_report_main_url_danger": {
+      "message": "Dit is de reden waarom $url$ gevaarlijk is",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "$url$ lijkt veilig te zijn",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "We moeten er nog dieper induiken voordat we een beslissing nemen"
+   },
+   "site_report_main_url_warning": {
+      "message": "Dit is de reden waarom $url$ riskant kan zijn",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "Een groot risico"
+   },
+   "site_report_status_rating_safe": {
+      "message": "Veilig"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "Onbekend"
+   },
+   "site_report_status_rating_warning": {
+      "message": "Een klein risico"
+   },
+   "site_report_status_text": {
+      "message": "Websitestatus:"
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% - Veiligheidsbeoordelingen van websites"
+   },
+   "sma_personalize_button": {
+      "message": "Mijn bescherming personaliseren"
+   },
+   "sma_subtitle": {
+      "message": "Onze nieuwe kleurgecodeerde links voor Bescherming op sociale media op deze sociale-mediasites laten u zien welke veilig zijn. Uw digitale leven is weer een stukje veiliger geworden!"
+   },
+   "sma_title": {
+      "message": "Scroll met een gerust hart door uw feed"
+   },
+   "smadesc": {
+      "message": "Browse met gemoedsrust door uw feed dankzij kleurgecodeerde links die jou vertellen welke welke veilig zijn, en welke niet."
+   },
+   "smatitle": {
+      "message": "Kom te weten welke links op sociale media veilig of juist riskant zijn"
+   },
+   "ss_first_annotation_desc": {
+      "message": "Browse zonder zorgen met kleurgecodeerde zoekresultaten: wij laten u weten zeggen welke sites veilig zijn en welke verdacht."
+   },
+   "ss_first_annotation_title": {
+      "message": "Blijf ver van riskante zoekresultaten"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "Beveiligd zoeken inschakelen"
+   },
+   "summarydesc": {
+      "message": "We laten u een actueel overzicht zien van alle stappen die we hebben genomen om u te beschermen terwijl u aan het browsen, zoeken en online winkelen bent."
+   },
+   "summarytitle": {
+      "message": "Uw realtime beveiligingsdashboard"
+   },
+   "typodesc": {
+      "message": "Hackers maken sites met adressen die er bijna precies zo uitzien als de adressen voor de echte sites. Dit heet 'typosquatten'. We brengen u weer in veiligheid wanneer u door een typfout in de URL op de verkeerde site terecht bent gekomen. "
+   },
+   "typosquatting_action_accept": {
+      "message": "Het risico accepteren en doorgaan"
+   },
+   "typosquatting_action_back": {
+      "message": "Teruggaan"
+   },
+   "typosquatting_footer_description": {
+      "message": "Wanneer u een websiteadres verkeerd typt, kunt u op websites belanden waar u niet naartoe had willen gaan. Deze websites kunnen u bombarderen met scareware of malware, om persoonlijke gegevens vragen, uw wachtwoorden proberen te stelen en meer. Wij zorgen dat u deze sites vermijdt."
+   },
+   "typosquatting_footer_link": {
+      "message": "Meer informatie over typosquatten"
+   },
+   "typosquatting_footer_title": {
+      "message": "Hoe ben ik hier beland?"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "Download McAfee® Total Protection"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "Breng mij daarnaartoe"
+   },
+   "typosquatting_message_button_search": {
+      "message": "Zoeken"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "Laat %PRODUCTNAME% u naar de juiste website brengen."
+   },
+   "typosquatting_message_description_search": {
+      "message": "Het lijkt erop dat u een verkeerd webadres heeft getypt. Laat %PRODUCTNAME% u naar de juiste website leiden."
+   },
+   "typosquatting_message_title": {
+      "message": "Bedoelde u"
+   },
+   "typosquatting_notice_body": {
+      "message": "We beschermen u online. Breid bescherming uit naar al uw toestellen met McAfee® Total Protection."
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "We hebben tot dusver $pagesScanned$ pagina's voor u gescand.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "We hebben tot dusver $pagesScanned$ pagina voor u gescand.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME% - Typosquatten"
+   },
+   "typotitle": {
+      "message": "Ga schadelijke websites die zich als echte websites voordoen uit de weg"
+   }
+}

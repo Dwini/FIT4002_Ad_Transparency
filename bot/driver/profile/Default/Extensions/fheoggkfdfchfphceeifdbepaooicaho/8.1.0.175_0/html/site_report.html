@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="site_report_title" x-mclocalizedtext="true"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+  <link href=".././css/site_report.css" rel="stylesheet"></head>
+  <body>
+    <section class="container">
+      <img class="logo" src="../images/web_advisor/logo.png" alt="WebAdvisor logo" />
+      <div class="sr">
+        <!-- site status -->
+        <aside class="sr__status">
+          <img id="site_report_icon" src="" alt="site status icon" />
+          <div id="site_report_status_text" class="status__text" x-mclocalizedtext="true"></div>
+          <div id="site_report_status_rating" class="status__rating"></div>
+        </aside>
+        <!-- info about visited site -->
+        <section class="sr__content">
+          <div class="content__wrapper">
+            <!-- main info -->
+            <div class="content__main">
+              <h2 id="site_report_main_title" x-mclocalizedtext="true"></h2>
+              <p class="main__subtitle">
+                <span id="site_report_main_url"></span>
+              </p>
+              <p id="site_report_main_message" class="main__message"></p>
+            </div>
+            <!-- line break -->
+            <hr />
+          </div>
+          <!-- categories -->
+          <div class="content__category">
+            <h2 id="site_report_category_title" x-mclocalizedtext="true"></h2>
+            <p id="site_report_category_subtitle" class="category__subtitle" x-mclocalizedtext="true"></p>
+            <!-- category list -->
+            <ul id="site_report_categories" class="category__list"></ul>
+          </div>
+        </section>
+      </div>
+    </section>
+  <script type="text/javascript" src="../site_report.js"></script></body>
+</html>

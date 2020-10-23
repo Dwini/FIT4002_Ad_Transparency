@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "Spravujte přístup rodiny k internetu"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "Chraňte své finanční údaje"
+   },
+   "annotation_balloon_color_green": {
+      "message": "Tento odkaz je bezpečný."
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "Testováno každý den"
+   },
+   "annotation_balloon_color_red": {
+      "message": "Tento odkaz je nebezpečný."
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "Hodnocení tohoto odkazu nebylo provedeno."
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "Tento odkaz je podezřelý."
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "Zobrazit zprávu o stránkách"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "Počet zablokovaných reklam: $ads_counter$",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "Počet zablokovaných reklam: $ads_counter$",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "Počet zablokovaných sledování: $tracker_counter$",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "Počet zablokovaných sledování: $tracker_counter$",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "Skenování $download_scanning_counter$ stahování",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "Skenování $download_scanning_counter$ stahování",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "Objevte další užitečné věci týkající se $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "Objevte další články týkající se $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "Zjistěte další výsledky pro $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "Porovnejte různé ceny pro $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "Zjistěte další informace týkající se $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "Zjistěte více o $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "Přijmout riziko"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "Získat produkt McAfee® Total Protection"
+   },
+   "block_page_go_back": {
+      "message": "Zpět"
+   },
+   "block_page_message": {
+      "message": "Pozor! Opravdu chcete přejít na tento webový server?"
+   },
+   "block_page_notice_body": {
+      "message": "Zajišťujeme vám ochranu v prohlížeči – rozšiřte ochranu do všech svých zařízení pomocí produktu McAfee® Total Protection. Získejte síť VPN, ochranu identity, uzamčení souborů a další funkce."
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "Zatím jsme skenovali tento počet stránek: $pagesScanned$.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "Zatím jsme skenovali $pagesScanned$ stránku.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "Když jsme tento web navštívili, zjistili jsme, že vykazuje jedno nebo více nebezpečných chování."
+   },
+   "block_page_popover_title": {
+      "message": "Proč se toto upozornění zobrazuje?"
+   },
+   "block_page_risky_url": {
+      "message": "může být nebezpečná."
+   },
+   "block_page_search_input": {
+      "message": "Hledat pomocí aplikace %PRODUCTNAME%"
+   },
+   "block_page_state_danger": {
+      "message": "Velmi riziková"
+   },
+   "block_page_state_warning": {
+      "message": "Mírně riziková"
+   },
+   "block_page_status_text": {
+      "message": "Stav webové stránky:"
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% – hodnocení bezpečnosti webových stránek"
+   },
+   "block_page_view_site_report": {
+      "message": "Zobrazit zprávu o stránkách"
+   },
+   "category_id_100_description": {
+      "message": "Webové stránky, které obsahují virtuální umělecké galerie, stránky umělců (včetně sochařství a fotografie), muzea, etnické zvyky a zvyky zemí."
+   },
+   "category_id_100_name": {
+      "message": "Umění, kultura a kulturní dědictví"
+   },
+   "category_id_101_description": {
+      "message": "Webové stránky, které hlavně prodávají, propagují nebo prosazují užívání alkoholu, jako jsou pivo, víno a tvrdý alkohol. Tato kategorie rovněž zahrnuje recepty na koktejly a pokyny k domácímu vaření piva."
+   },
+   "category_id_101_name": {
+      "message": "Alkohol"
+   },
+   "category_id_102_description": {
+      "message": "Webové stránky, které úmyslně umožňují uživatelům prohlížet web skrytím jejich adresy IP nebo dalších osobních identifikačních údajů k obejití místních filtračních zásad a přístupu k jakékoli webové stránce. Anonymizační webové stránky rovněž blokují jakékoli sledovací technologie, jako jsou soubory cookie nebo historie prohlížeče. Některé metody rovněž zabraňují přeposlání verze OS a historie webové stránky webové stránce. Tato kategorie zahrnuje stránky, které poskytují volné proxy adresy IP nebo popisují, jak obejít filtrování."
+   },
+   "category_id_102_name": {
+      "message": "Anonymizátory"
+   },
+   "category_id_103_name": {
+      "message": "Témata pro dospělé"
+   },
+   "category_id_104_description": {
+      "message": "Webové stránky, jejichž důsledkem je anonymní prohlížení webu bez výslovného úmyslu poskytovat takovou službu. Tato kategorie zahrnuje překladače URL, uložení webové stránky do mezipaměti a další funkce, které mohou sloužit jako anonymizátory, ale bez výslovného účelu obejití filtračního softwaru."
+   },
+   "category_id_104_name": {
+      "message": "Anonymizační nástroje"
+   },
+   "category_id_105_description": {
+      "message": "Webové stránky, které poskytují informace spojené s podnikáním, jako jsou firemní přehledy nebo obchodní plánování a strategie. Tato kategorie rovněž zahrnuje informace, služby nebo produkty, které pomáhají dalším podnikům plánovat, řídit a propagovat jejich podnikání. Tato kategorie zahrnuje podniky víceúrovňového marketingu se zaměřením na provozování podniku. Tato kategorie nezahrnuje osobní stránky a webové stránky hostování webů."
+   },
+   "category_id_105_name": {
+      "message": "Komerční"
+   },
+   "category_id_106_description": {
+      "message": "Webové stránky, které poskytují zasílání webových sociálních zpráv v reálném čase ve veřejných a soukromých chatovacích místnostech. Tato kategorie zahrnuje IRC. Tato kategorie nezahrnuje rychlé zasílání zpráv. Mezi rizika patří urážlivý obsah, škodlivé účinky na produktivitu a únik citlivých informací."
+   },
+   "category_id_106_name": {
+      "message": "Chat"
+   },
+   "category_id_108_description": {
+      "message": "Webové stránky, které poskytují všeobecné referenční informace, jako jsou poskytovatelé veřejných služeb, regionální informace, jízdní řády, mapy nebo zprávy o počasí."
+   },
+   "category_id_108_name": {
+      "message": "Veřejné informace"
+   },
+   "category_id_109_description": {
+      "message": "Webové stránky, o kterých se společnost McAfee domnívá, že obsahují pokyny ke spáchání nezákonných či trestných činností. Pokyny zahrnují spáchání vraždy nebo sebevraždy, sabotáže, výroby bomb, odemykání zámků, krádež služeb, vyhýbání se vynucování práva nebo obelstění testů na drogy. Tato kategorie může rovněž zahrnovat informace o tom, jak šířit nelegální obsah, páchat podvody nebo podvádět spotřebitele."
+   },
+   "category_id_109_name": {
+      "message": "Potenciální trestná činnost"
+   },
+   "category_id_110_description": {
+      "message": "Webové stránky, které poskytují informace o nákupu, výrobě a použití nezákonných či rekreačních drog. Tato kategorie zahrnuje zobrazování, prodej nebo popis používání drogové výbavy a tipy na legální fetování, jako jsou čichání lepidla, zneužití léků na předpis či jiných zákonných látek."
+   },
+   "category_id_110_name": {
+      "message": "Drogy"
+   },
+   "category_id_111_description": {
+      "message": "Webové stránky věnující se akademickému obsahu, jako jsou akademické předměty (matematika, historie), školní či univerzitní webové stránky a vzdělávací administrativní stránky (školní rady, učební osnovy učitelů)."
+   },
+   "category_id_111_name": {
+      "message": "Vzdělání a zdroje informací"
+   },
+   "category_id_112_description": {
+      "message": "Webové stránky, které poskytují informace i kině, divadle, hudbě, televizi, infozábavě, zábavním průmyslu, bulváru a stránkách o celebritách, jako jsou herci a hudebníci. Tato kategorie rovněž zahrnuje stránky, kde je obsah věnován poskytování zábavy na webu, jako jsou horoskopy nebo fankluby."
+   },
+   "category_id_112_name": {
+      "message": "Zábava"
+   },
+   "category_id_113_description": {
+      "message": "Tato kategorie se používá s kategoriemi Odpudivý obsah, Diskriminace, Pornografie, Násilí nebo Násilné hry a komiksy k identifikaci odkazů URL, které jsou v extrémech těchto kategorií. Příkladem je nezákonná pornografie, která je v kategoriích Pornografie, Potenciální trestná činnost a Extrémy."
+   },
+   "category_id_113_name": {
+      "message": "Extrémy"
+   },
+   "category_id_114_description": {
+      "message": "Webové stránky, které poskytují finanční informace nebo přístup k online finančním účtům. Tato kategorie zahrnuje webové stránky, které poskytují finanční informace, včetně zpráv nebo služeb, které se zabývají správou financí, avšak neposkytují přístup k citlivým informacím o finančních účtech, jako jsou finanční statistiky nebo konzultace v oblastech, jako jsou daně, hypotéka, pojištění, akreditace nebo investování. Přístup k online finančním účtům zahrnuje osobní nebo firemní bankovnictví, správu financí, daňové konzultace, vzájemné fondy, kreditní karty, družstevní záložny, pojištění, další finanční publikace a služby. Tato kategorie zahrnuje informace o akciích (avšak ne obchodování s akciemi), domácí finance a finanční informace související s vládou."
+   },
+   "category_id_114_name": {
+      "message": "Finance a bankovnictví"
+   },
+   "category_id_115_description": {
+      "message": "Webové stránky, které uživatelům umožňují sázet online nebo poskytují herní software, který umožňuje online sázení, jako jsou kasinové hry, sázkové fondy, sportovní sázení a loterie. Tato kategorie zahrnuje loterie, pokud si můžete koupit sázenky nebo hrát online."
+   },
+   "category_id_115_name": {
+      "message": "Sázky a hazardní hry"
+   },
+   "category_id_116_description": {
+      "message": "Webové stránky, které nabízí online hry a související informace, jako jsou podfuky, kódy, demoverze, emulátory, online soutěže nebo hry hraní rolí, herní klany, stránky výrobců her, fantazijní či virtuální sportovní ligy a další herní stránky bez šancí na zisk. Tato kategorie zahrnuje herní konzole, jako jsou Microsoft Xbox® a Sony PlayStation®."
+   },
+   "category_id_116_name": {
+      "message": "Hry"
+   },
+   "category_id_117_description": {
+      "message": "Webové stránky, které obsahují obsah spravovaný vládními nebo armádními organizacemi, jako jsou vládní oblasti nebo orgány, policejní oddělení, hasičská oddělení, civilní obrana, organizace pro boj s terorismem nebo nadnárodní organizace, jako jsou Organizace spojených národů nebo Evropská unie. Tato kategorie zahrnuje armádní a veteránská zdravotnická zařízení."
+   },
+   "category_id_117_name": {
+      "message": "Státní správa a obrana"
+   },
+   "category_id_118_description": {
+      "message": "Webové stránky, o kterých se společnost McAfee domnívá, že poskytují pokyny nebo jinak umožňují podvod, zločin či škodlivou činnost, která je orientovaná na počítače. Tato kategorie zahrnuje webové stránky související s počítačovým zločinem, včetně škodlivých hackerských informací nebo nástrojů, které pomáhají jednotlivcům získat neoprávněný přístup k počítačům a sítím (rootkity, skripty kiddie). Tato kategorie rovněž zahrnuje další oblasti elektronického podvodu, jako jsou vytáčecí podvody a nezákonné manipulace s elektronickými zařízeními."
+   },
+   "category_id_118_name": {
+      "message": "Potenciální hacking a počítačová kriminalita"
+   },
+   "category_id_119_description": {
+      "message": "Webové stránky, které pokrývají informace související se zdravím a zdravotnické služby. Informace o zdraví zahrnují témata ke zlepšení pohody jednotlivce, ať už fyzického či duševního zdraví (strava, výživa, fitness nebo rodičovství). Zdravotnické služby zahrnují poskytovatele, jako jsou zdravotní pojištění, nemocnice, kliniky a nezávislí lékaři."
+   },
+   "category_id_119_name": {
+      "message": "Zdraví"
+   },
+   "category_id_120_description": {
+      "message": "Webové stránky, které poskytují komický či zábavný obsah. Tato kategorie zahrnuje stránky s vtipy, skicami, komiksy a satirické stránky. Tato kategorie může rovněž zahrnovat obsah grafických novel, který je často spojen s komiksy."
+   },
+   "category_id_120_name": {
+      "message": "Humor a vtipné komiksy"
+   },
+   "category_id_121_description": {
+      "message": "Webové stránky, o kterých se společnost McAfee domnívá, že poskytují informace, který výslovně povzbuzují utlačování či diskriminaci specifické skupiny osob. Tato kategorie zahrnuje propagaci programu proti skupinám na základě rasy, náboženství, národnosti, pohlaví, věku, invalidity či sexuální orientace. Tato kategorie může zahrnovat politické strany a organizace se specifickým programem založeným na nenávisti a kyberšikanu, kde je extrémní."
+   },
+   "category_id_121_name": {
+      "message": "Diskriminace"
+   },
+   "category_id_122_description": {
+      "message": "Webové stránky, které poskytují software pro komunikaci v reálném čase přes síť výhradně pro uživatele, kteří se připojili ke kontaktnímu seznamu členů či relaci rychlého zasílání zpráv. Většina softwaru pro rychlé zasílání zpráv zahrnuje funkce, jako jsou přenos souboru, telefonické hovory z počítače na počítač, a mohou sledovat, kdy se další lidé přihlásí a odhlásí. Tyto stránky mohou rovněž vzbuzovat obavy ohledně úniku citlivých informací, problematického obsahu nebo sdílení souborů."
+   },
+   "category_id_122_name": {
+      "message": "Rychlé zasílání zpráv"
+   },
+   "category_id_123_description": {
+      "message": "Webové stránky, které nabízí nákup, prodej nebo obchodování s akciemi online. Tato kategorie rovněž zahrnuje informace z papírových pásek, které umožňují sledování cen akcií v reálném čase a sázení na finanční spread na akciovém trhu. Jiné sázení je v kategorii Sázky a hazardní hry. Tato kategorie nezahrnuje stránky, které nabízí informace o akciích, ale nenabízí nákup, prodej nebo obchodování s akciemi."
+   },
+   "category_id_123_name": {
+      "message": "Obchodování na burze"
+   },
+   "category_id_124_description": {
+      "message": "Webové stránky, které poskytují software nebo přístup k trvalému audio nebo video vysílání, jako jsou internetové rádio, televizní program nebo podcasty."
+   },
+   "category_id_124_name": {
+      "message": "Internetová rádia a televize"
+   },
+   "category_id_125_description": {
+      "message": "Webové stránky související s hledáním práce, včetně stránek zabývajících se psaním životopisu, pohovory, změnou kariéry, utajenou inzercí a velkými databázemi prací. Tato kategorie rovněž zahrnuje firemní webové stránky, které uvádějí volná pracovní místa, stránky srovnávání platů, dočasné zaměstnání a firemní stránky pro vyvěšení pracovních pozic."
+   },
+   "category_id_125_name": {
+      "message": "Hledání zaměstnání"
+   },
+   "category_id_126_description": {
+      "message": "Webové stránky, které legitimně poskytují informace o ochraně dat. Tato kategorie zahrnuje detailní informace k ochraně obchodních či osobních údajů, duševnímu vlastnictví, ochraně osobních údajů a infrastruktuře na internetu, soukromých sítích či v dalších širokopásmových službách, jako jsou telekomunikace. Možná rizika zahrnují potenciální hacking a počítačovou kriminalitu. Stránky s vysoce rizikovým obsahem a nejasným odlišením mezi „nekalými“ a „povolenými technikami“ mohou být rovněž v této kategorii a kategorii Potenciální hacking a počítačová kriminalita. Některý obsah může být zneužit k porušení zabezpečení či spáchání nezákonných činů."
+   },
+   "category_id_126_name": {
+      "message": "Zabezpečení informací"
+   },
+   "category_id_127_description": {
+      "message": "Webové stránky, které se zaměřují na sociální interakci, jako je online rande, přátelství, setkání spolužáků, dopisování, eskortní služby nebo představení potenciálním partnerům. Tato kategorie zahrnuje mnoho stránek, které umožňují svým členům sociálně interagovat prostřednictvím vyvěšování zpráv v reálném čase. Stránky v této kategorii mohou rovněž umožňovat kontakt s nežádoucími stranami a členskými profily, které obsahují problematické informace."
+   },
+   "category_id_127_name": {
+      "message": "Seznamky a sociální sítě"
+   },
+   "category_id_128_description": {
+      "message": "Webové stránky, které prodávají média, software nebo utility pro mobilní telefony, které mohou být staženy a doručeny na mobilní telefony. Příklady zahrnují vyzváněcí tóny, loga/skiny, hry, spořiče obrazovky, textové melodie a software pro zprávy SMS, MMS, WAP a další protokoly mobilních telefonů."
+   },
+   "category_id_128_name": {
+      "message": "Mobilní telefony"
+   },
+   "category_id_129_description": {
+      "message": "Webové stránky, které poskytují audio nebo video soubory ke stažení, jako jsou formáty MP3, WAV, AVI a MPEG. Soubory jsou uloženy a přehrávány z počítače uživatele."
+   },
+   "category_id_129_name": {
+      "message": "Stahování médií"
+   },
+   "category_id_130_description": {
+      "message": "Webové stránky, které nasazují kód navržený specificky k napadení nastavení nebo činnosti vašeho počítače. Tato kategorie zahrnuje samostatně se instalující aplikace (nazývané stažení spustitelných souborů typu „drive-by“), trojské koně a viry, které zneužívají zranitelnosti zabezpečení v prohlížečích nebo dalších aplikacích. Webová stránka může později ztratit svůj stav škodlivé a být přesunuta do další kategorie. Účelem škodlivých stránek je podnikat akce na jiném počítači ke způsobení škody."
+   },
+   "category_id_130_name": {
+      "message": "Škodlivé stránky"
+   },
+   "category_id_131_description": {
+      "message": "Webové stránky, které poskytují přístup (http://) k diskuzním skupinám Usenet a archivům souborů nahraných do diskuzních skupin. Tato kategorie rovněž zahrnuje online skupiny, které nabízejí vyvěšování podobného obsahu orientovaného na komunitu. Odkazy URL v této kategorii mohou obsahovat urážlivý obsah."
+   },
+   "category_id_131_name": {
+      "message": "Zprávy služby Usenet"
+   },
+   "category_id_132_description": {
+      "message": "Webové stránky, které obsahují nepornografické obrázky nahého lidského těla. Tato kategorie zahrnuje klasické sochařství a malby, umělecké nahé fotografie, některé naturistické snímky a podrobné lékařské ilustrace."
+   },
+   "category_id_132_name": {
+      "message": "Nahota"
+   },
+   "category_id_133_description": {
+      "message": "Webové stránky od charitativních či vzdělávacích skupin, které naplňují stanovenou misi, prospívají větší komunitě, jako jsou kluby, lobby, komunity, neziskové organizace, odborové svazy a advokační skupiny. Příklady jsou zednáři, řád Elks, skauti a skautky nebo velcí bratři."
+   },
+   "category_id_133_name": {
+      "message": "Neziskové a nestátní organizace a spolky"
+   },
+   "category_id_134_description": {
+      "message": "Webové stránky, které poskytují online zpravodajská média, jako jsou mezinárodní nebo regionální zpravodajské vysílání a publikace. Tato kategorie zahrnuje stránky portálů, které poskytují zpravodajský obsah."
+   },
+   "category_id_134_name": {
+      "message": "Všeobecné zpravodajství"
+   },
+   "category_id_136_description": {
+      "message": "Webové stránky, které prodávají produkty nebo služby online. Webové stránky prodávající širokou řadu produktů mohou představovat riziko pro uživatele nabízením přístupu k položkám, které jsou normálně v jiných kategoriích, jako je Pornografie, Zbraně, Nahota nebo Násilí. Některé stránky mohou nabízet přístup k položkám v dalších kategoriích, jako jsou Pornografie a Zbraně."
+   },
+   "category_id_136_name": {
+      "message": "Nakupování online"
+   },
+   "category_id_137_description": {
+      "message": "Webové stránky s obrázky, které zahrnují vyzývavé či odhalující oblečení, spodní prádlo a plavky nebo sbírky fotografií supermodelek či celebrit, ale nezahrnují nahotu."
+   },
+   "category_id_137_name": {
+      "message": "Provokativní oblečení"
+   },
+   "category_id_138_description": {
+      "message": "Webové stránky, které umožňují výměnu souborů mezi počítači a uživateli k obchodnímu či osobnímu užití, jako je stažitelná hudba. P2P klienti umožňují uživatelům vyhledávat a vyměňovat soubory ze sítě peer-uživatel. Často zahrnují spyware nebo možnosti chatu v reálném čase. Tato kategorie zahrnuje webové stránky BitTorrent."
+   },
+   "category_id_138_name": {
+      "message": "Služby P2P a sdílení souborů"
+   },
+   "category_id_139_description": {
+      "message": "Webové stránky pokrývající politické strany, osoby v politickém životě a názory na různá témata. Tato kategorie může rovněž pokrývat zákony a politické názory na drogy. Tato kategorie zahrnuje odkazy URL pro politické strany, politické kampaně a názory na různá témata, včetně politických debat."
+   },
+   "category_id_139_name": {
+      "message": "Politika a názory"
+   },
+   "category_id_140_description": {
+      "message": "Osobní domovské stránky, které sdílejí společnou doménu, jako jsou ty hostované ISP, univerzitními/vzdělávacími servery nebo hostiteli bezplatných webových stránek. Tato kategorie rovněž zahrnuje jedinečné domény, které obsahují osobní údaje, jako je osobní domovská stránka. Osobní domovské stránky mohou obsahovat urážlivý obsah."
+   },
+   "category_id_140_name": {
+      "message": "Osobní stránky"
+   },
+   "category_id_141_description": {
+      "message": "Webové stránky, které slouží jako hlavní brány či adresáře k obsahu na webu. Mnoho portálových stránek rovněž poskytuje různé interní funkce nebo služby stránky, jako jsou vyhledávače. e-mail, zprávy a zábava. Stránky poštovních seznamů s různým obsahem se nacházejí v této kategorii."
+   },
+   "category_id_141_name": {
+      "message": "Webové portály"
+   },
+   "category_id_142_description": {
+      "message": "Webové stránky, které poskytují vzdálený přístup k programu, online službě nebo celému počítačovému systému. Přestože je vzdálený přístup často používán legitimně k chodu počítače ze vzdáleného umístění, vytváří bezpečnostní riziko, jako je přístup zadními vrátky. Přístup zadními vrátky napsaný původním programátorem umožňuje, aby byl systém kontrolován jinou stranou bez vědomí uživatele."
+   },
+   "category_id_142_name": {
+      "message": "Vzdálený přístup"
+   },
+   "category_id_143_description": {
+      "message": "Webové stránky vztahující se k náboženským tématům a přesvědčením v lidské spiritualitě, které nepatří k hlavním náboženstvím. Tato kategorie zahrnuje náboženské diskuze, přesvědčení, články a informace pro místní kongregace nebo skupiny, jako jsou domovská stránka kostela, pokud již stránka není v kategorii Hlavní celosvětová náboženství. Tato kategorie rovněž zahrnuje religionistiku nebo stránky, které zahrnují náboženství a ideologie."
+   },
+   "category_id_143_name": {
+      "message": "Náboženství a ideologie"
+   },
+   "category_id_144_description": {
+      "message": "Webové stránky, které spojují nečinné či nevyužívané počítačové zdroje k soustředění se na společný úkol. Úkol může být na firemním nebo mezinárodním základu. Dobrý známými příklady jsou program SETI a projekt lidského genomu, které využívají čas nečinnosti tisíců dobrovolných počítačů k analýze dat."
+   },
+   "category_id_144_name": {
+      "message": "Sdílení zdrojů"
+   },
+   "category_id_145_description": {
+      "message": "Webové stránky, které poskytují výsledky vyhledávání, které uživatelům umožňují najít informace na internetu na základě klíčových slov."
+   },
+   "category_id_145_name": {
+      "message": "Vyhledávače"
+   },
+   "category_id_146_description": {
+      "message": "Webové stránky související s profesionálními nebo organizovanými rekreačními sporty. Tato kategorie zahrnuje sportovní zprávy, události a informace, jako jsou herní tipy, strategie, herní skóre nebo obchody s hráči."
+   },
+   "category_id_146_name": {
+      "message": "Sport"
+   },
+   "category_id_147_description": {
+      "message": "Webové stránky, které poskytují streamování médií nebo obsahují softwarové plug-iny k zobrazení audio a vizuálních dat před přenosem celého souboru."
+   },
+   "category_id_147_name": {
+      "message": "Mediální datové proudy"
+   },
+   "category_id_148_description": {
+      "message": "Webové stránky, které jsou úložišti kopií sharewaru nebo freewaru ke stažení. Shareware je distribuován systémem cti, podle kterého je shareware dodáván bezplatně, ale autor požaduje drobný poplatek, pokud je program vhodný a pravidelně užívaný. Freeware je software, který je k dispozici bez jakýchkoli nákladů."
+   },
+   "category_id_148_name": {
+      "message": "Shareware a freeware"
+   },
+   "category_id_149_description": {
+      "message": "Webové stránky, o kterých se společnost McAfee domnívá, že obsahují materiály určené k sexuálnímu vzrušení či erotické. Tato kategorie zahrnuje fetišistické stránky, animace, kreslené filmy, příběhy a nezákonnou pornografii."
+   },
+   "category_id_149_name": {
+      "message": "Pornografie"
+   },
+   "category_id_150_description": {
+      "message": "Webové stránky, které porušují ochranu a zabezpečení osobních nebo firemních údajů. Tato kategorie zahrnuje:\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>odkazy URL, které stahují software nebo spouštějí programy, které sbírají informace o uživateli a odesílají je třetí straně bez výslovného vědomí či souhlasu uživatele.\u003C/li>\u003Cli>Software, který monitoruje nebo sleduje aktivitu na počítači jiných osob zaznamenáváním úhozů (zaznamenávání stisknutých kláves).\u003C/li>\u003Cli>Stránky, které rozšiřují software známý svým obsahem spywaru nebo adwaru.\u003C/li>\u003C/ul>Tato kategorie se liší od kategorie Škodlivé stránky kvůli svému záměru. Spyware nebo zaznamenávání stisknutých kláves skrytě sbírají a odesílají informace jiné straně. Škodlivá stránka zamýšlí instalovat software nebo provést akci bez schválení nebo vědomí uživatele."
+   },
+   "category_id_150_name": {
+      "message": "Spyware, adware a zaznamenávání stisknutých kláves"
+   },
+   "category_id_151_description": {
+      "message": "Webové stránky, které prodávají, propagují nebo podporují užívání tabákových výrobků, tabákové výbavy, včetně cigaret, doutníků, dýmek, šňupání a žvýkání tabáku."
+   },
+   "category_id_151_name": {
+      "message": "Tabákové výrobky"
+   },
+   "category_id_152_description": {
+      "message": "Webové stránky, které propagují osobní nebo obchodní cestování, jako jsou hotely, resorty, aerolinie, pozemní přeprava, pronájem automobilů, cestovní kanceláře a všeobecné turistické a cestovní informace. Tato kategorie zahrnuje stránky k nákupu lístků nebo ubytování."
+   },
+   "category_id_152_name": {
+      "message": "Cestování"
+   },
+   "category_id_153_description": {
+      "message": "Webové stránky, které obsahují skutečné nebo věrné obrázky nebo text, které zobrazují, popisují nebo propagují fyzické útoky proti lidem, zvířatům či institucím, jako jsou zobrazení války, sebevraždy, mrzačení nebo rozsekání."
+   },
+   "category_id_153_name": {
+      "message": "Násilí"
+   },
+   "category_id_154_description": {
+      "message": "Webové stránky, které poskytují hostování inzerce nebo programy, které vytvářejí inzerci. Příklady zahrnují odkazy, zdrojový kód a applety pro panely, automaticky otevíraná okna a další druhy statické a dynamicky generované inzerce, která se objevuje na webových stránkách. Tato kategorie je určena k blokování inzerce na webových stránkách, ne společností, které poskytují inzerci nebo inzertní služby."
+   },
+   "category_id_154_name": {
+      "message": "Webová reklama"
+   },
+   "category_id_155_description": {
+      "message": "Webové stránky, které poskytují informace o nákupu, výrobě, úpravě či používání zbraní, jak jsou pistole, nože, meče, paintballové pistole a náboje, výbušniny a příslušenství zbraní."
+   },
+   "category_id_155_name": {
+      "message": "Zbraně"
+   },
+   "category_id_156_description": {
+      "message": "Webové stránky, které uživatelům umožňují posílat nebo přijímat e-maily prostřednictvím internetu. Tyto stránky mohou uživatele vystavit škodlivému obsahu doručovanému přílohami souborů e-mailu nebo mohou představovat bezpečnostní riziko, jako jsou únik či ztráta chráněných dat."
+   },
+   "category_id_156_name": {
+      "message": "Webová pošta"
+   },
+   "category_id_157_description": {
+      "message": "Webové stránky, které uživatelům umožňují provádět telefonické hovory prostřednictvím internetu nebo získávat informace nebo software k tomuto účelu. Služba Webový telefon je rovněž nazývána internetová telefonie neboli VoIP. Služba webového telefonu zahrnuje služby počítač na počítač a telefon na telefon připojující se přes sítě TCP/IP."
+   },
+   "category_id_157_name": {
+      "message": "Webový telefon"
+   },
+   "category_id_158_description": {
+      "message": "Webové stránky, které poskytují online nabízení a prodávání položek nebo služeb. Tato kategorie zahrnuje webové stránky, které se zaměřují na nabízení a prodej. Online aukce jsou zřídkakdy sledovány. Tyto stránky mohou vystavit uživatele materiálu, který je rovněž v kategoriích, jako jsou Pornografie, Zbraně, Nahota nebo Násilí."
+   },
+   "category_id_158_name": {
+      "message": "Aukce a inzeráty"
+   },
+   "category_id_159_description": {
+      "message": "Webové stránky, které poskytují přístup (http://) k diskuzním skupinám Usenet nebo pořádají diskuze a vyvěšují uživatelsky generovaný obsah, jako je vyvěšování zpráv v reálném čase pro zájmovou skupinu. Tato kategorie rovněž zahrnuje archivy souborů nahrané do diskuzních skupin."
+   },
+   "category_id_159_name": {
+      "message": "Fóra a vývěsky"
+   },
+   "category_id_160_description": {
+      "message": "Webové stránky, které obsahují hrubý, vulgární či obscénní jazyk či gesta."
+   },
+   "category_id_160_name": {
+      "message": "Vulgární obsah"
+   },
+   "category_id_161_description": {
+      "message": "Webové stránky, které propagují plagiátorství či podvádění poskytováním bezplatných či placených seminárních prací, písemných esejí či odpovědí na zkoušky."
+   },
+   "category_id_161_name": {
+      "message": "Informace pro podvádění ve škole"
+   },
+   "category_id_162_description": {
+      "message": "Webové stránky, které popisují či zobrazují sexuální akty, ale nejsou určeny k tomu, aby byly vzrušující či erotické. Příklady sexuálních materiálů zahrnují sexuální vzdělávání, sexuální narážky, humor nebo zboží spojené se sexem."
+   },
+   "category_id_162_name": {
+      "message": "Sexuální materiály"
+   },
+   "category_id_163_description": {
+      "message": "Webové stránky s obsahem, který může být považován za nevkusný, sprostý, šokující nebo ohavný. Tato kategorie zahrnuje nevkusný humor, tělesné vyměšovací funkce, barvité zdravotnické fotografie či fotografie scény nehod (obsahující krev či zranění), extrémní formy úpravy těla (řezání, značkování či piercing genitálií) nebo šokující zobrazení nehumánního zacházení se zvířaty."
+   },
+   "category_id_163_name": {
+      "message": "Odpudivý obsah"
+   },
+   "category_id_164_description": {
+      "message": "Webové stránky, které poskytují výsledky vyhledávání specifické podle obrázků, jako jsou obrázky miniatur."
+   },
+   "category_id_164_name": {
+      "message": "Vizuální vyhledávač"
+   },
+   "category_id_165_description": {
+      "message": "Webové stránky s technickým či obchodním zaměřením, které poskytují online vyvěšování zpráv nebo chatování v reálném čase, jako jsou technická podpora nebo interaktivní obchodní komunikace. Přestože mohou uživatelé vyvěšovat jakýkoli typ obsahu, tato fóra mají tendenci představovat menší riziko obsažení urážlivého obsahu. Stránky, které nabízejí řadu fór s tématy, včetně technického a obchodního obsahu, jsou pouze v kategoriích Fóra a vývěsky nebo Chat. Fóra s primárním technickým nebo obchodním zaměřením jsou pouze v kategorii Technická a obchodní fóra."
+   },
+   "category_id_165_name": {
+      "message": "Technická a obchodní fóra"
+   },
+   "category_id_166_description": {
+      "message": "Webové stránky, které nabízejí informace o hazardu bez poskytnutí prostředků ke hraní. Tato kategorie rovněž zahrnuje webové stránky související s kasiny, které nenabízejí online hraní, odkazy na hraní, tipy, sportovní tipy, výsledky loterií a závodů koňů, aut nebo lodí."
+   },
+   "category_id_166_name": {
+      "message": "Stránky o sázkách a hazardních hrách"
+   },
+   "category_id_167_description": {
+      "message": "Webové stránky, které poskytují zasílání textových zpráv. Příklady zahrnují zasílání textových zpráv na mobilní telefony, PDA, faxová zařízení a interní zasílání zpráv na webových stránkách od uživatele uživateli nebo od stránky stránce."
+   },
+   "category_id_167_name": {
+      "message": "Odesílání zpráv"
+   },
+   "category_id_168_description": {
+      "message": "Webové stránky, které poskytují fantazijní či fiktivní představy násilí v kontextu her, komiksu, skic nebo grafických novel. Tato kategorie zahrnuje obrázky a textové popisy fyzických úkolů nebo pěstního boje a vážných zranění a destrukce způsobených zbraněmi a výbušninami."
+   },
+   "category_id_168_name": {
+      "message": "Násilné hry a komiksy"
+   },
+   "category_id_169_description": {
+      "message": "Odkazy na webové stránky, které typicky přicházejí v hoaxových e-mailech vytvořené ke krádeži údajů o uživatelském účtu. Tyto stránky se falešně představují a jeví se jako legitimní firemní webové stránky, aby podvedly uživatele a získali údaje o jeho účtu ke spáchání podvodu či krádeže."
+   },
+   "category_id_169_name": {
+      "message": "Podvodné zprávy"
+   },
+   "category_id_170_description": {
+      "message": "Webové stránky, které uživatelům umožňují nahrávat složky a soubory na online síťový server k zálohování, sdílení, úpravě nebo načtení souborů nebo složek z jakéhokoli internetového prohlížeče."
+   },
+   "category_id_170_name": {
+      "message": "Osobní síťová úložiště"
+   },
+   "category_id_171_description": {
+      "message": "Odkazy na webové stránky, které přicházejí v nevyžádané poště. Obsah odkazů URL z nevyžádané pošty sahá od produktového marketingu k potenciálně urážlivým či podvodným stránkám. Tato kategorie zahrnuje stránky vytvořené pouze k účelům zasílání nevyžádané pošty, jako jsou blogy nevyžádané pošty nebo komentářová nevyžádaná pošta."
+   },
+   "category_id_171_name": {
+      "message": "Adresy URL šířící nevyžádanou poštu"
+   },
+   "category_id_172_description": {
+      "message": "Webové stránky, které poskytují přístup k živým nebo interaktivním webovým aplikacím, jako jsou kancelářské sady založené na prohlížeči a groupwaru. Tato kategorie zahrnuje stránky s obchodním, akademickým či individuálním zaměřením."
+   },
+   "category_id_172_name": {
+      "message": "Interaktivní webové aplikace"
+   },
+   "category_id_174_description": {
+      "message": "Webové stránky, které propagují oblečení, kosmetiku, šperky a další na módu orientované produkty, doplňky či služby. Tato kategorie rovněž zahrnuje recenze produktů, srovnání a všeobecné spotřebitelské informace a služby, jako jsou kadeřnictví, solária, tetovací studia a piercingová studia."
+   },
+   "category_id_174_name": {
+      "message": "Móda a krása"
+   },
+   "category_id_175_description": {
+      "message": "Webové stránky související s výpočetním softwarem a hardwarem, včetně dodavatelů, produktového marketingu a recenzí, nasazení a údržby softwaru a hardwaru a aktualizací softwaru a dodatků, jako jsou skripty, plug-iny nebo ovladače. Hardware zahrnuje počítačové díly, příslušenství a elektronické vybavení používané s počítači a sítěmi. Tato kategorie zahrnuje marketing softwaru a hardwaru a časopisy zaměřené na produktové recenze softwaru nebo hardwaru nebo trendy v odvětví."
+   },
+   "category_id_175_name": {
+      "message": "Software a hardware"
+   },
+   "category_id_176_description": {
+      "message": "Webové stránky, o kterých se společnost McAfee domnívá, že nabízejí informace k potenciálně „pirátskému“ či nelegálně distribuovanému softwaru nebo elektronickým médiím, jako jsou hudba nebo film chráněné autorským právem, distribuce nezákonných generátorů licenčních klíčů, cracky softwaru a sériová čísla."
+   },
+   "category_id_176_name": {
+      "message": "Potenciální nezákonný software"
+   },
+   "category_id_177_description": {
+      "message": "Odkazy URL na servery, které hostují snímky, mediální soubory nebo JavaScript pro jednu nebo více stránek a jsou určeny ke zrychlení získávání obsahu pro existující webové servery, jako je Apache. Obsahové servery obvykle nemají vyvěšený obsah nebo navigaci stránkou pro osoby surfující na webu. Obsahové servery hostující snímky uživatelům neumožňují procházet fotografiemi."
+   },
+   "category_id_177_name": {
+      "message": "Servery s obsahem"
+   },
+   "category_id_178_description": {
+      "message": "Webové stránky, které poskytují služby ke zveřejňování a údržbě internetových stránek, jako jsou webový design, registrace domén, internetoví poskytovatelé služeb a širokopásmové a telekomunikační společnosti, které poskytují webové služby."
+   },
+   "category_id_178_name": {
+      "message": "Internetové služby"
+   },
+   "category_id_179_description": {
+      "message": "Webové stránky, které umožňují uživatelům nahrávat, vyhledávat a sdílet mediální soubory a fotografie, jako jsou online alba fotografií. Tato kategorie pokrývá všeobecná rizika sdílení médií, ale necílí na specifický obsah. Některé odkazy URL mohou rovněž obsahovat urážlivý obsah."
+   },
+   "category_id_179_name": {
+      "message": "Sdílení médií"
+   },
+   "category_id_180_description": {
+      "message": "Webové stránky, které obsahují nepornografické obrázky nahého lidského těla, jako jsou v klasickém sochařství a malbách nebo lékařské snímky."
+   },
+   "category_id_180_name": {
+      "message": "Náhodná nahota"
+   },
+   "category_id_181_description": {
+      "message": "Webové stránky, které propaguje produkty či služby jednotlivce nebo podniku na webu, ale neprodávají své produkty nebo služby online. Tato kategorie zahrnuje webové stránky, které jsou obecně přehledem společnosti popisujícím služby nebo produkty, které nemohou být nakoupeny přímo z těchto stránek. Příklady zahrnují stránky výrobců automobilů, služby svatebního fotografování nebo služby grafického designu."
+   },
+   "category_id_181_name": {
+      "message": "Marketing a prodej"
+   },
+   "category_id_183_description": {
+      "message": "Webové stránky, které dříve poskytovaly obsah, ale jejich domény byly prodány nebo opuštěny a již nejsou registrované. Zaparkované domény nehostují svůj vlastní obsah, ale často přesměrovávají uživatele na generickou stránku, která uvádí, že je název domény na prodej, nebo přesměrovávají uživatele na generický vyhledávač a stránku portály, z nichž některé poskytují platné výsledky vyhledávače."
+   },
+   "category_id_183_name": {
+      "message": "Zaparkovaná doména"
+   },
+   "category_id_184_description": {
+      "message": "Webové stránky, které poskytují recenze, popisy a uvádějí na trh nebo prodávají léky na předpis, léky bez předpisu, antikoncepci nebo potravinové doplňky."
+   },
+   "category_id_184_name": {
+      "message": "Lékárny"
+   },
+   "category_id_185_description": {
+      "message": "Webové stránky, které poskytují informace o restauracích, barech, cateringu, jídle s sebou a donášce, včetně online objednávání. Tato kategorie zahrnuje stránky, které poskytují informace o umístění, otvírací době, cenách, jídelních lístcích a související stravovací informace. Tato kategorie rovněž zahrnuje průvodce restauracemi a recenze a kavárny."
+   },
+   "category_id_185_name": {
+      "message": "Restaurace"
+   },
+   "category_id_186_description": {
+      "message": "Webové stránky, které poskytují komerční nebo rezidenční realitní služby a informace. Služby a informace zahrnují prodej a pronájem bytových či nebytových prostor a průvodce pro byty, ubytování a majetek a informace o ocenění a zprostředkování. Tato kategorie zahrnuje stránky, které vám umožňují procházet modelové domovy."
+   },
+   "category_id_186_name": {
+      "message": "Nemovitosti"
+   },
+   "category_id_187_description": {
+      "message": "Webové stránky pro rekreační organizace a zařízení, které zahrnují obsah věnovaný rekreačním aktivitám a koníčkům. Tato kategorie zahrnuje informace o veřejných plaveckých bazénech, zoologických zahradách, veletrzích, festivalech, zábavních parcích, rekreačních průvodcích, turistice, rybaření, pozorování ptáků či sbírání známek."
+   },
+   "category_id_187_name": {
+      "message": "Odpočinek a zájmy"
+   },
+   "category_id_188_description": {
+      "message": "Webové stránky obsahující dynamický obsah, který se často mění, protože uživatelé mohou vyvěšovat či upravovat obsah kdykoliv. Tato kategorie pokrývá rizika dynamického obsahu, který může sahat od neškodného po urážlivý. Mnoho blogů a stránek wiki se soustředí na téma nebo předmět. Tato kategorie se častou používá s ostatními, jako jsou Kontroverzní názory, Vzdělání a zdroje informací, Sport, Politika a názory nebo Nahota, v závislosti na zaměření či předmětu stránky. Některý obsah by mohl být urážlivý."
+   },
+   "category_id_188_name": {
+      "message": "Blogy a wiki"
+   },
+   "category_id_189_description": {
+      "message": "Webové stránky, které lidem umožňují posílat a dostávat digitální pohlednice a přání přes internet. Digitální pohlednice předávají pozdravy nebo pocity, obvykle při zvláštních příležitostech, jako jsou narozeniny a svátky. Některé stránky s digitálními pohlednicemi mají adresář se specifickým humorem pro dospělé. Tyto stránky mohou rovněž vzbuzovat obavy ohledně úniku citlivých nebo chráněných informací, problematického obsahu, malwaru nebo škodlivých příloh ve formě souborů."
+   },
+   "category_id_189_name": {
+      "message": "Digitální pohlednice"
+   },
+   "category_id_190_description": {
+      "message": "Webové stránky, které osočují či nabízejí odlišné interpretace významných historických skutečností, jako je odmítání holokaustu. Tato kategorie zahrnuje stránky, které mohou mít legitimní akademickou hodnotu, avšak mnoho z těchto stránek zahrnuje nelegitimní manipulaci historie k politickým účelům. Některé odkazy URL v této kategorii mohou mít obsah považovaný v některých zemích za nezákonný či urážlivý."
+   },
+   "category_id_190_name": {
+      "message": "Historický revizionizmus"
+   },
+   "category_id_191_description": {
+      "message": "Webové stránky, které poskytují výpočetní informace se vzdělávacím zaměřením v oblastech, jako jsou informační technologie, počítačové programování a certifikace. Příklady zahrnují linuxové uživatelské skupiny, příkazy UNIX, softwarové tutoriály nebo slovníky technických pojmů. Většina stránek v této kategorii může být podadresáři větších domén."
+   },
+   "category_id_191_name": {
+      "message": "Technické informace"
+   },
+   "category_id_192_description": {
+      "message": "Webové stránky, které poskytují vytváření kontaktů pro online rande, dohazování, eskortní služby nebo představení potenciálním partnerům. Tato kategorie zahrnuje stránky, které poskytují osobní nebo skupinové profily, a umožňují svým členům interagovat prostřednictvím komunikace v reálném čase, vyvěšováním zpráv, veřejných zpravodajů a sdílení médií. Stránky v této kategorii mohou rovněž umožňovat kontakt s nežádoucími stranami a členskými profily, které obsahují problematické informace."
+   },
+   "category_id_192_name": {
+      "message": "Seznamky a osobní profily"
+   },
+   "category_id_193_description": {
+      "message": "Webové stránky pro výrobce a obchodní zastoupení spotřebitelských přepravních vozidel, jako jsou automobily, dodávky, nákladní auta, SUV, motocykly a skútry. Tato kategorie rovněž zahrnuje stránky, které poskytují produktový marketing, recenze, srovnání, informace o cenách, automobilové veletrhy, automobilové výstavy a všeobecné spotřebitelské informace o motorových vozidlech."
+   },
+   "category_id_193_name": {
+      "message": "Motorová vozidla"
+   },
+   "category_id_194_description": {
+      "message": "Webové stránky, které poskytují sociální navazování kontaktů výhradně k profesním či obchodním účelům. Tato kategorie zahrnuje stránky, které poskytují osobní nebo skupinové profily, a umožňují svým členům interagovat prostřednictvím komunikace v reálném čase, vyvěšováním zpráv, veřejných zpravodajů a sdílení médií. Tato kategorie rovněž obsahuje stránky absolventů, které mají funkci navazování kontaktů."
+   },
+   "category_id_194_name": {
+      "message": "Sítě pro profesionály"
+   },
+   "category_id_195_description": {
+      "message": "Webové stránky, které umožňují sociální navazování kontaktů k různým účelům, jako jsou přátelství, rande, profesní či zájmová témata. Tyto stránky poskytují osobní nebo skupinové profily, a umožňují svým členům interakci prostřednictvím komunikace v reálném čase, vyvěšováním zpráv, veřejných zpravodajů a sdílení médií. Stránky v této kategorii mohou rovněž umožňovat kontakt s nežádoucími stranami a členskými profily, které obsahují problematické informace."
+   },
+   "category_id_195_name": {
+      "message": "Sociální sítě"
+   },
+   "category_id_196_description": {
+      "message": "Webové stránky, které uživatelům umožňují zadat fráze nebo bloky textu k překladu z jednoho jazyka do jiného. Tato kategorie rovněž zahrnuje webové stránky jazykových identifikátorů."
+   },
+   "category_id_196_name": {
+      "message": "Překladače textu"
+   },
+   "category_id_197_description": {
+      "message": "Webové stránky, které hostují živá setkání, videokonference a interaktivní prezentace zejména pro podniky. Webová setkání obecně zahrnují streamování audia a videa a umožňují přenos dat nebo sdílení kancelářsky orientovaných aplikací, jako jsou online prezentace. Odkazy URL v této kategorii mohou představovat širokopásmová rizika a bezpečnostní rizika, jako jsou ztráta nebo únik chráněných dat."
+   },
+   "category_id_197_name": {
+      "message": "Webové schůzky a konference"
+   },
+   "category_id_198_description": {
+      "message": "Webové stránky, které obsahují názory, které pravděpodobně urážejí politickou či sociální přecitlivělost a vyvolávají kontroverze. Mnoho tohoto obsahu patří k extremistickým veřejným názorům. Příklady zahrnují sebevražedné pakty, podporu anorexie, xenofobní, etnocentrické, fundamentalistické názory, dezinformace nebo kritické zkoumání jedné skupiny obyvatel."
+   },
+   "category_id_198_name": {
+      "message": "Kontroverzní názory"
+   },
+   "category_id_199_description": {
+      "message": "Adresy IP (a jakékoli domény s nimi spojené), které přistupují k internetu DSL modemy či kabelovými modemy. Protože tento obsah není obecně určen k internetovému přístupu přes HTTP, přístup k internetu prostřednictvím těchto adres IP může naznačovat podezřelé chování. Toto chování může být spojeno s malwarem umístěným na domácím počítači nebo domácími branami nastavenými k umožnění anonymního přístupu k internetu."
+   },
+   "category_id_199_name": {
+      "message": "Domácí adresy IP"
+   },
+   "category_id_200_description": {
+      "message": "Zneužití prohlížeče je kód, který zneužívá softwarovou chybu v internetovém prohlížeči, takže kód přiměje prohlížeč udělat něco neočekávaného, včetně zastavení chodu, přečtení nebo zapsání místních souborů, propagace viru nebo nainstalování spywaru. Škodlivý kód může zneužít HTML, JavaScript, Images, ActiveX, Java a další webové technologie. Zneužití, někdy nazývaná drive-by-download, se mohou nainstalovat na nechráněné počítače často bez vědomí spotřebitele, kdy kód může nainstalovat záznamníky úhozů (k odcizení hesel) a programy trojských koňů (k přeměně počítače na „robot“). Tato kategorie zahrnuje odkazy URL, které šíří nebo provádějí jakékoli zneužití prohlížeče."
+   },
+   "category_id_200_name": {
+      "message": "Útoky zneužívající prohlížeč"
+   },
+   "category_id_201_description": {
+      "message": "Webové stránky, které se pokoušejí okrást či podvést spotřebitele. Některé příklady jejich aktivit zahrnují prodávání padělků, prodávání produktů, které byly původně poskytnuty bezplatně nebo neoprávněné používání značky jiné společnosti. Tato kategorie zahrnuje webové stránky, které zneužívají laskavosti či ignorance, jako jsou podvodný výběr peněz na charitu nebo podvodná investiční schémata. Tato kategorie rovněž zahrnuje stránky, kde mnoho spotřebitelů ohlásilo, že byli podvedeni nebo neobdrželi služby."
+   },
+   "category_id_201_name": {
+      "message": "Ochrana spotřebitelů"
+   },
+   "category_id_202_description": {
+      "message": "Webové stránky, které obsahují obsah sexuálního zneužívání dětí kdekoli na světě a kriminálně obscénní obsah a obsah povzbuzující k rasové nenávisti ve Spojeném království."
+   },
+   "category_id_202_name": {
+      "message": "Obsah nezákonný ve Spojeném království"
+   },
+   "category_id_203_description": {
+      "message": "Webové stránky s obsahem o náboženských tématech a informacích spojených s hlavními náboženstvími. Tato kategorie zahrnuje stránky, které pokrývají náboženský obsah, jak jsou diskuze, přesvědčení, nekontroverzní komentáře, články a informace pro místní kongregace, jako jsou domovské stránky kostela či synagogy. Náboženství v této kategorii jsou bahaismus, buddhismus, čínské tradiční náboženství, křesťanství, hinduismus, islám, džinismus, židovství, šintoismus, sikhismus, tenrikjó, zoroastrismus."
+   },
+   "category_id_203_name": {
+      "message": "Hlavní celosvětová náboženství"
+   },
+   "category_id_204_description": {
+      "message": "Webové stránky, které uživateli umožňují neúmyslně stáhnout kód, který je škodlivý či obtěžující. Tato kategorie zahrnuje stažitelné soubory, jako jsou spořiče obrazovky, panely nástrojů a programy sdílení souborů, které obsahují adware, spyware, viry a další škodlivý počítačový kód. Někdy je malware přidaný bez vědomí uživatele, jako když klikne na „Ano“ nebo „Souhlasím“ bez přečtení úplných všeobecných podmínek. Účinky mohou zahrnovat pomalejší rychlosti počítače, krádež hesel a ztrátu nebo poškození cenných osobních souborů."
+   },
+   "category_id_204_name": {
+      "message": "Škodlivé soubory ke stažení"
+   },
+   "category_id_205_description": {
+      "message": "Webové stránky, které obsahují potenciálně nechtěné programy (PUP). PUP jsou často činěny k prospěšným účelům, ale mění zabezpečení počítače nebo ochranu osobních údajů uživatele počítače. Uživatelé počítače, kteří mají obavy ohledně zabezpečení nebo ochrany osobních údajů, mohou chtít být informování o tomto softwaru a v některých případech mohou chtít tento software odstranit ze svých počítačů."
+   },
+   "category_id_205_name": {
+      "message": "PUP"
+   },
+   "category_id_600_description": {
+      "message": "Webové stránky, které jsou bezpečné pro rodinu, zejména pro děti staré přibližně deset let a méně."
+   },
+   "category_id_600_name": {
+      "message": "Pro děti"
+   },
+   "category_id_601_description": {
+      "message": "Webové stránky, které poskytují obsah o historických skutečnostech. Tato kategorie zahrnuje obsah vhodný k vyššímu vzdělávání, ale vzdělávací kategorie obsahuje obsah pro primární vzdělávání. Například stránka s fotografiemi holokaustu může být urážlivá, ale mít akademickou hodnotu."
+   },
+   "category_id_601_name": {
+      "message": "Historie"
+   },
+   "category_id_602_description": {
+      "message": "Nástěnky, chatovací místnosti, vyhledávače nebo stránky webové pošty, které jsou sledovány jednotlivcem nebo skupinou, která má pravomoc blokovat zprávy nebo obsah považovaný za nevhodný."
+   },
+   "category_id_602_name": {
+      "message": "Moderované služby"
+   },
+   "category_id_603_description": {
+      "message": "Obsah, který je pouze textem nebo audiem a neobsahuje obrázky. Tato kategorie může být použita jako výjimka k umožnění přístupu k explicitnímu textovému a zaznamenanému materiálu, když chcete blokování obrázků za použití kategorií Pornografie, Násilí nebo Sexuální materiály. Knihovny nebo univerzity mohou použít tuto kategorii k zabránění zobrazení urážlivé grafiky ve svých veřejných prostorách."
+   },
+   "category_id_603_name": {
+      "message": "Pouze text nebo mluvené slovo"
+   },
+   "crypto_allow_desc": {
+      "message": "Pokud cryptojacking zablokujeme, máte možnost jej povolit. Sice to nedoporučujeme, ale pokud chcete, můžete webové stránky, které vydělávají peníze prostřednictvím cryptojackingu, podporovat."
+   },
+   "crypto_allow_title": {
+      "message": "Chcete cryptojacking povolit?"
+   },
+   "crypto_footer_message1": {
+      "message": "McAfee a logo McAfee jsou ochranné známky nebo registrované ochranné známky společnosti McAfee, LLC nebo jejích dceřiných společností v USA a dalších zemích."
+   },
+   "crypto_footer_message2": {
+      "message": "Další názvy a značky mohou být nárokovány jako vlastnictví jiných subjektů. Copyright ©2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "Zabráníme těm, kteří provádějí cryptojcking, aby k tomu využívali výkon a prostředky vašeho počítače."
+   },
+   "crypto_header_title": {
+      "message": "Blokátor cryptojackingu je zapnutý."
+   },
+   "crypto_own_desc": {
+      "message": "Obětí cryptojackingu se můžete stát i v případě, že nemáte žádnou vlastní kryptoměnu. Útočníci provádějící cryptojacing získávají přístup k prostředkům vašeho počítače, nikoli ke kryptoměně, kterou případně vlastníte."
+   },
+   "crypto_own_title": {
+      "message": "Je k tomu, abyste se stali obětí cryptojackingu, nutné, abyste vlastnili svou kryptoměnu?"
+   },
+   "crypto_protect_desc": {
+      "message": "Mějte rozšíření %PRODUCTNAME% stále zapnuté, aby vás funkce Blokátor cryptojackingu mohla před těmito útoky chránit. Pokud dojde k pokusu o cryptojacking, dáme vám vědět."
+   },
+   "crypto_protect_title": {
+      "message": "Jak se můžete chránit?"
+   },
+   "crypto_signs_desc1": {
+      "message": "Pomalé procházení"
+   },
+   "crypto_signs_desc2": {
+      "message": "Příliš rychlé vybíjení baterie"
+   },
+   "crypto_signs_desc3": {
+      "message": "Hlasitý ventilátor"
+   },
+   "crypto_signs_desc4": {
+      "message": "Zvýšená spotřeba elektrické energie"
+   },
+   "crypto_signs_title": {
+      "message": "Jak poznáte, že jste se stali obětí cryptojackingu?"
+   },
+   "crypto_title": {
+      "message": "Blokátor cryptojackingu McAfee"
+   },
+   "crypto_whatis_point1": {
+      "message": "Útočníci provádějící cryptojacking (hackeři) získávají přístup k vašemu počítači prostřednictvím webových stránek, které si prohlížíte."
+   },
+   "crypto_whatis_point2": {
+      "message": "Využijí výkon vašeho počítače (jeho procesor a paměť) k provádění složitých úloh."
+   },
+   "crypto_whatis_point3": {
+      "message": "Mohou těžit kryptoměnu, což jsou vlastně elektronické peníze."
+   },
+   "crypto_whatis_title": {
+      "message": "Co je cryptojacking"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "Povolit cryptojacking na této stránce"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "Další informace"
+   },
+   "cryptojacking_banner_message": {
+      "message": "Na této stránce jsme zablokovali cryptojacking. Prostředky vašeho počítače jsou v bezpečí a můžete pokračovat v procházení. $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "Tuto stránku jsme testovali a zablokovali jsme obsah, který pochází z potenciálně nebezpečných nebo podezřelých stránek. Tento obsah povolte pouze tehdy, pokud víte, že pochází z bezpečných stránek."
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "Zobrazit veškerý blokovaný obsah"
+   },
+   "overlay_accept_ss": {
+      "message": "Nyní vyjádřete souhlas se změnou vyhledávače na funkci Bezpečné hledání McAfee®."
+   },
+   "overlay_add_ss": {
+      "message": "Přidejte funkci Bezpečné hledání McAfee® do prohlížeče."
+   },
+   "overlay_ss_description": {
+      "message": "Označíme rizikové weby ve výsledcích hledání, takže budete vědět, které weby lze bezpečně navštívit a které ne."
+   },
+   "overlay_step_1": {
+      "message": "KROK 1"
+   },
+   "overlay_step_2": {
+      "message": "KROK 2"
+   },
+   "phishingdesc": {
+      "message": "Hackeři se pokoušejí získat vaše údaje tak, že vás zlákají pomocí oficiálně vypadajících podvodných e-mailů a webových stránek. Přerušíme spojení, aby vás hackeři nenapadli."
+   },
+   "phishingtitle": {
+      "message": "Chraňte své osobní údaje"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "McAfee® WebAdvisor"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "Chcete přidat službu Bezpečné hledání a být vždy o krok napřed před podvodníky?"
+   },
+   "search_toast_body_text_test": {
+      "message": "Chcete přidat službu Bezpečné hledání a zjistit, které stránky lze bezpečně navštívit?"
+   },
+   "search_toast_done": {
+      "message": "Hotovo"
+   },
+   "search_toast_heading_compliant": {
+      "message": "Nemáte službu Bezpečné hledání – buďte opatrní."
+   },
+   "search_toast_heading_test": {
+      "message": "Získejte ve výsledcích hledání rady ohledně bezpečnosti."
+   },
+   "search_toast_no_thanks": {
+      "message": "Ne"
+   },
+   "search_toast_ok": {
+      "message": "OK"
+   },
+   "search_toast_option_compliant": {
+      "message": "Ano, přidejte službu Bezpečné hledání do mého prohlížeče a nastavte vyhledávač $search_provider$ jako výchozí.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "Ano, přidejte službu Bezpečné hledání a nastavte vyhledávač $search_provider$ jako výchozí.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "Služba Bezpečné hledání vás ve výsledcích hledání upozorní na rizikové stránky."
+   },
+   "search_toast_sub_heading_test": {
+      "message": "Služba Bezpečné hledání označuje ve výsledcích hledání rizikové stránky."
+   },
+   "search_toast_yes": {
+      "message": "Ano"
+   },
+   "securesearchdesc": {
+      "message": "Procházejte web bez obav pomocí barevně odlišených výsledků vyhledávání – řekneme vám, které stránky jsou bezpečné a které jsou podezřelé."
+   },
+   "securesearchtitle": {
+      "message": "Vyhněte se rizikovým výsledků vyhledávání"
+   },
+   "settings_about_adblock": {
+      "message": "Zablokujte reklamy a automaticky otevíraná okna zpomalující počítač."
+   },
+   "settings_about_adblock_tracking": {
+      "message": "Blokování souborů cookie, které vás sledují a shromažďují vaše údaje"
+   },
+   "settings_about_block_download": {
+      "message": "Blokování nebezpečných stahování"
+   },
+   "settings_about_cryptojackers": {
+      "message": "Zabránění $settings_about_cryptojackers_link$ v krádeži zdrojů vašeho počítače",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "cryptojackeři"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "Ujistěte se, že je zapnutá brána firewall a ochrana proti virům."
+   },
+   "settings_about_flag_website": {
+      "message": "Označení nebezpečných webových stránek"
+   },
+   "settings_about_help_link_message": {
+      "message": "Získat nápovědu"
+   },
+   "settings_about_help_message": {
+      "message": "Všichni potřebujeme někdy pomoc."
+   },
+   "settings_about_help_title": {
+      "message": "Získat nápovědu a technickou podporu"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "Přečtěte si prohlášení o ochraně osobních údajů."
+   },
+   "settings_about_privacy_message": {
+      "message": "Společnost McAfee bere ochranu osobních údajů opravdu vážně."
+   },
+   "settings_about_privacy_title": {
+      "message": "Prohlášení o ochraně osobních údajů"
+   },
+   "settings_about_product_affid": {
+      "message": "ID přidružené společnosti: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "Binární verze: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "Verze rozšíření: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "Verze produktu"
+   },
+   "settings_about_share_title": {
+      "message": "Sdílejte aplikaci %PRODUCTNAME% s přáteli."
+   },
+   "settings_about_subtitle": {
+      "message": "Díky aplikaci %PRODUCTNAME% se můžete na internetu lépe rozhodovat."
+   },
+   "settings_about_title": {
+      "message": "O aplikaci"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "Informujte mě o bezpečnosti výsledků hledání ve všech vyhledávačích."
+   },
+   "settings_preference_annotation_none": {
+      "message": "Neinformujte mě o výsledcích hledání."
+   },
+   "settings_preference_annotation_ss": {
+      "message": "Informujte mě o bezpečnosti výsledků hledání pouze ve službě Bezpečné hledání."
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "Barevně odlišíme výsledky hledání, abychom vám ukázali, které stránky jsou bezpečné."
+   },
+   "settings_preference_annotation_title": {
+      "message": "Bezpečné hledání"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "Zabrání zpomalení vašeho prohlížeče rušivými reklamami a automaticky otevíranými okny."
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "Zablokuje soubory cookie, které vás sledují a shromažďují vaše údaje."
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "Blokování reklam a blokování sledování"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "Přidat"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "Povolit"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "Nemáte vyšší ochranu, protože není povoleno rozšíření Bezpečné hledání McAfee®, které je její součástí. Zapněte jej a při zobrazení žádosti o oprávnění vyberte možnost $settings_preference_ap_alert_allow$.",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "Zapnout"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "Nemáte vyšší ochranu, protože není nainstalováno rozšíření Bezpečné hledání McAfee®, které je její součástí. Přidejte jej nyní z internetového obchodu pro prohlížeč Chrome."
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "Používá naši cloudovou službu informací o hrozbách, aby identifikovala hrozby."
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "Barevně odliší výsledky hledání, aby vám ukázala, které stránky lze bezpečně navštívit."
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "Označí webové stránky ve výsledcích hledání, které jsou nebezpečné."
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "Funkce Bezpečné hledání McAfee"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "Chraňte své soukromí a data."
+   },
+   "settings_preference_ap_title": {
+      "message": "Vyšší ochrana"
+   },
+   "settings_preference_reset_button": {
+      "message": "Obnovit"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "Ignorovali jste oznámení aplikace %PRODUCTNAME% a ignorovat ho nechcete? Obnovte oznámení, abyste opět začali dostávat všechny typy zpráv aplikace %PRODUCTNAME%."
+   },
+   "settings_preference_reset_title": {
+      "message": "Obnovit nastavení"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "LinkedIn"
+   },
+   "settings_preference_sma_message": {
+      "message": "Toto jsou stránky, ke kterým přidáme poznámku."
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "Barevně odlišíme odkazy v informačních kanálech sociálních sítí, abychom vám ukázali, které z nich jsou bezpečné."
+   },
+   "settings_preference_sma_title": {
+      "message": "Ochrana na sociálních sítích"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "YouTube"
+   },
+   "settings_preference_title": {
+      "message": "ROZŠÍŘENÉ SLUŽBY"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "zablok. rušiv. rekl."
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "Blokované pokusy o cryptojacking"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "zablok. nebezp. stahování"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "sken. stahování"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "sken. odk."
+   },
+   "settings_statistics_message": {
+      "message": "Zatím jsme udělali toto:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "Blokované nebezpečné stránky"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "Skenované stránky"
+   },
+   "settings_statistics_subtitle": {
+      "message": "Naším cílem je zajistit vaši bezpečnost na internetu."
+   },
+   "settings_statistics_title": {
+      "message": "STATISTIKY"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "zablok. sledování"
+   },
+   "settings_subtitle": {
+      "message": "Přizpůsobte si ochranu při procházení internetu."
+   },
+   "settings_tab_about": {
+      "message": "O aplikaci"
+   },
+   "settings_tab_preference": {
+      "message": "Předvolba"
+   },
+   "settings_tab_statistics": {
+      "message": "Statistiky"
+   },
+   "settings_tab_whitelist": {
+      "message": "Seznam povolených položek"
+   },
+   "settings_title": {
+      "message": "Ochrana při procházení internetu"
+   },
+   "settings_whitelist_input": {
+      "message": "Zadejte adresu webu…"
+   },
+   "settings_whitelist_title": {
+      "message": "DŮVĚRYHODNÉ STRÁNKY"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "Přizpůsobte si $sidebar_action_panel_web_protection_preferences$.",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "Předvolby funkce Ochrana při procházení internetu"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "Nyní vás chráníme těmito způsoby."
+   },
+   "sidebar_adblock_toggle": {
+      "message": "Zobrazit reklamy na této stránce pouze při této návštěvě"
+   },
+   "sidebar_ads_blocked": {
+      "message": "Blokované rušivé reklamy na této stránce"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "Plácneme si!"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "Nevíme, co je lepší – že vás pomáháme chránit nebo že se chráníte $sidebar_badge_collection_block_page_description_italic$…",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "sami"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "Je to výhodné pro obě strany."
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "Tato stránka vás nemůže podvést."
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "Tyto hrozby nemají šanci."
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "Zablokováno – jistota je jistota!"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "Děkujeme, že jste vymazali data!"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "Děkujeme, že jste nám umožnili zablokovat tento obsah. Nyní se opět podíváme na věci, na kterých vám záleží."
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "Odstraňujeme z této stránky nepotřebná data!"
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "Pokud se rozhodnete tuto stránku přesto navštívit, přidáme ji do seznamu důvěryhodných stránek."
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "Přesto přejít na stránku"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "Nadále blokovat"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "Zřejmě jde o podvodnou stránku. To znamená, že by vám mohla odeslat e-maily, které vypadají jako od důvěryhodné organizace, aby vás podvodem přiměla sdílet osobní údaje, jako jsou hesla a údaje o kreditní kartě."
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "Bude muset zkusit podvodem získat osobní údaje někde jinde, protože vy se napálit nenecháte."
+   },
+   "sidebar_block_page_description_red": {
+      "message": "Naším cílem je chránit vás, takže jsme měli dobrý důvod vás zastavit."
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "Tato stránka vypadá příliš nebezpečně, a proto bychom ji nedoporučili ani největšímu nepříteli (naštěstí žádného nemáme)."
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "Nejsme si 100% jistí, ale zablokovali jsme ji, protože by vás mohla ohrozit prostřednictvím těchto typů hrozeb:"
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "Jako kdybyste řídili bez použití bezpečnostního pásu, proč riskovat?"
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "Další informace o hrozbách na této stránce:"
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "Další informace o hrozbách na této stránce:"
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "Tato stránka je plná těchto hrozeb:"
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "Číhají na vás tyto typy hrozeb:"
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "Tato stránka je plná těchto hrozeb:"
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "Číhají na vás tyto typy hrozeb:"
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "Zablokovali jsme tuto stránku, aby nemohla ukrást vaše osobní údaje."
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "Tato podvodná stránka je zablokována."
+   },
+   "sidebar_block_page_title_red": {
+      "message": "Zablokovali jsme tyto nebezpečné stránky."
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "Tyto nebezpečné stránky jsou zablokovány."
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "Tato stránka může představovat past."
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "Tato nebezpečná stránka je zablokována."
+   },
+   "sidebar_crypto_blocked": {
+      "message": "Blokované pokusy o cryptojacking"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "Blokované nebezpečné stránky"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "Děkujeme, že jste nám umožnili tento soubor přesunout do koše, dříve než vás mohl ohrozit. Jsme velmi dobrým bezpečnostním týmem!"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "Plácneme si!"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "Odstranili jsme tento nebezpečný soubor."
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "Možná se vám podaří odstranit je ručně. Přejděte do umístění, kde je soubor uložen, a zkuste ho z tohoto umístění odstranit."
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "Název:"
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "OK"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "Umístění:"
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "Zdroj stahování:"
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "Bohužel to nefunguje."
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "Odstranit"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "Zdroj stahování:"
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "Název:"
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "Zřejmě obsahuje viry, spyware nebo jiné potenciálně nežádoucí programy."
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "Chci ho přesto ponechat"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "Pokud ho odstraníme ještě předtím, než ho otevřete, zůstanete v bezpečí."
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "Soubor, který jste stáhli, je nebezpečný."
+   },
+   "sidebar_everything_looks_good": {
+      "message": "Vše vypadá v pořádku!"
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "Vaše ochrana při procházení internetu je zapnutá a je připravena. Chcete zkontrolovat nastavení nebo zobrazit statistiky?"
+   },
+   "sidebar_get_help": {
+      "message": "Získat nápovědu"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "Přejít k předvolbám funkce Ochrana při procházení internetu"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "Chci ho přesto zobrazit"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "Nadále blokovat"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "Vypadá podezřele a mohl by vám způsobit škodu. Pokud si jste jistí, zda je tento obsah bezpečný, a chcete ho zobrazit, můžete ho povolit."
+   },
+   "sidebar_iframe_block_title": {
+      "message": "Zablokovali jsme tento obsah, abychom vás ochránili."
+   },
+   "sidebar_pages_scanned": {
+      "message": "Skenované stránky"
+   },
+   "sidebar_privacy": {
+      "message": "Prohlášení o ochraně osobních údajů"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "OK"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "Software z těchto webových stránek poskytuje přístup k vašemu počítači jiným lidem – podvodníci mohou pomocí něj tajně získat přístup k vašim osobním údajům."
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "Pokud vás někdo vyzve ke stažení softwaru nebo zveřejnění osobních údajů, ujistěte se, že je to důvěryhodná osoba."
+   },
+   "sidebar_rat_detection_title": {
+      "message": "Tyto webové stránky umožňují jiným lidem ovládat váš počítač"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "Již mě znovu na tuto stránku neupozorňovat"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "Skenovali jsme ji a nenašli jsme žádné hrozby."
+   },
+   "sidebar_site_report_description_red": {
+      "message": "Pravidelně skenujeme stránky ohledně nebezpečné a škodlivé aktivity. Tato stránka není bezpečná."
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "Při příštím skenování této stránky budeme podrobněji hledat a dáme vám vědět, zda tato stránka vypadá bezpečně nebo zda je nebezpečná."
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "Skenovali jsme tuto stránku a zjistili, že není tak bezpečná, jak by měla být. Při její návštěvě buďte opatrní."
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "Zřejmě jde o tento typ webové stránky:"
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "Hrozby na webové stránce:"
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "Možný typ webové stránky nebo hrozby na ní:"
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "Hrozby na webové stránce:"
+   },
+   "sidebar_site_report_title_green": {
+      "message": "Tato stránka vypadá bezpečně."
+   },
+   "sidebar_site_report_title_red": {
+      "message": "Tato stránka je nebezpečná."
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "Stav zabezpečení této stránky je neznámý."
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "Tato stránka vypadá nebezpečně."
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "OK"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "Zapnuli jste funkci Bezpečné hledání, takže nyní vám můžeme před vaší návštěvou stránek ukázat, které z nich vypadají bezpečně a které jsou nebezpečné."
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "Ve výsledcích hledání uvidíte vedle každé webové stránky barevně odlišené ikony. Zeleně označené stránky můžete kdykoli navštívit. Rizikovým žlutě označeným a nebezpečným červeně označeným stránkám se vyhněte."
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "Nyní budete vědět, kterým stránkám se vyhnout."
+   },
+   "sidebar_subtitle": {
+      "message": "Zatím jsme udělali toto:"
+   },
+   "sidebar_terms": {
+      "message": "Podmínky"
+   },
+   "sidebar_title": {
+      "message": "Naším cílem je zajistit vaši bezpečnost na internetu."
+   },
+   "sidebar_tracker_blocked": {
+      "message": "Blokovaná sledování na této stránce"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "Blokované nebezpečné položky"
+   },
+   "sidebar_version": {
+      "message": "Verze"
+   },
+   "sidebar_view_site_report": {
+      "message": "Zobrazit zprávu o stránkách"
+   },
+   "sidebar_view_stats": {
+      "message": "Zobrazit všechny způsoby, kterými jsme vás chránili"
+   },
+   "site_report_category_subtitle": {
+      "message": "Kategorie webové stránky:"
+   },
+   "site_report_category_title": {
+      "message": "O této stránce"
+   },
+   "site_report_main_message_danger": {
+      "message": "Pravidelně skenujeme stránky ohledně nebezpečné a škodlivé aktivity – tahle právě není bezpečná. Více podrobností naleznete níže."
+   },
+   "site_report_main_message_safe": {
+      "message": "Pročesali jsme tuto stránku a vše je přezkoušeno. Ať se vám líbí."
+   },
+   "site_report_main_message_unknown": {
+      "message": "Momentálně nemáme nic ke sdílení. Příště, až budeme skenovat tuto stránku, aktualizujeme úroveň hrozby."
+   },
+   "site_report_main_message_warning": {
+      "message": "Skenovali jsme tuto stránku a zjistili, že není tak bezpečná, jak by měla být. Klikejte prosím s opatrností."
+   },
+   "site_report_main_title": {
+      "message": "Zpráva o stránkách"
+   },
+   "site_report_main_url_danger": {
+      "message": "Zde je důvod, proč je adresa $url$ nebezpečná.",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "Adresa $url$ je zřejmě bezpečná.",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "Před zavoláním potřebujeme hledat trochu podrobněji."
+   },
+   "site_report_main_url_warning": {
+      "message": "Zde je důvod, proč by adresa $url$ mohla být riziková.",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "Velmi riziková"
+   },
+   "site_report_status_rating_safe": {
+      "message": "Bezpečná"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "Neznámá"
+   },
+   "site_report_status_rating_warning": {
+      "message": "Mírně riziková"
+   },
+   "site_report_status_text": {
+      "message": "Stav webové stránky:"
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% – hodnocení bezpečnosti webových stránek"
+   },
+   "sma_personalize_button": {
+      "message": "Přizpůsobit moji ochranu"
+   },
+   "sma_subtitle": {
+      "message": "Naše nová ochrana na sociálních sítích barevně odliší odkazy na stránkách sociálních sítí, aby vám ukázala, které z nich jsou bezpečné – nyní se v digitálním prostředí budete cítit bezpečněji!"
+   },
+   "sma_title": {
+      "message": "Procházejte informační kanál s jistotou"
+   },
+   "smadesc": {
+      "message": "Bez obav procházejte svůj kanál pomocí barevně odlišených odkazů, které vás informují o tom, na které z nich můžete bezpečně kliknout."
+   },
+   "smatitle": {
+      "message": "Mějte přehled o tom, které odkazy sociálních sítí jsou bezpečné – a které jsou rizikové"
+   },
+   "ss_first_annotation_desc": {
+      "message": "Procházejte web bez obav pomocí barevně odlišených výsledků vyhledávání – řekneme vám, které stránky jsou bezpečné a které jsou podezřelé."
+   },
+   "ss_first_annotation_title": {
+      "message": "Vyhněte se rizikovým výsledkům vyhledávání"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "Zapnout funkci Bezpečné hledání"
+   },
+   "summarydesc": {
+      "message": "Zobrazíme vám aktuální souhrn všech kroků, které jsme provedli, abychom vás pomohli chránit při procházení webu, vyhledávání a nakupování online."
+   },
+   "summarytitle": {
+      "message": "Váš monitorovací panel zabezpečení v reálném čase"
+   },
+   "typodesc": {
+      "message": "Hackeři vytvoří stránky pomocí adres, které vypadají téměř stejně jako skutečné stránky – to se označuje jako „typosquatting“. Pokud se přepíšete v adrese URL a dostanete se na falešnou stránku, zavedeme vás zpět do bezpečí. "
+   },
+   "typosquatting_action_accept": {
+      "message": "Přijmout riziko a pokračovat"
+   },
+   "typosquatting_action_back": {
+      "message": "Zpět"
+   },
+   "typosquatting_footer_description": {
+      "message": "Když chybně zadáte adresu webové stránky, můžete se dostat na stránky, které jste nechtěli navštívit. Tyto stránky vás mohou zahltit škodlivým softwarem typu scareware nebo malwarem, požadovat vaše osobní údaje, pokusit se ukrást heslo a provádět další škodlivé činnosti. Pomůžeme zajistit, že se těmto stránkám vyhnete."
+   },
+   "typosquatting_footer_link": {
+      "message": "Více informací o typosquattingu"
+   },
+   "typosquatting_footer_title": {
+      "message": "Jak jsem se sem dostal/a?"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "Získat produkt McAfee® Total Protection"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "Přejít na stránku"
+   },
+   "typosquatting_message_button_search": {
+      "message": "Hledat"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "Umožněte aplikaci %PRODUCTNAME%, aby vás nasměrovala na správnou stránku."
+   },
+   "typosquatting_message_description_search": {
+      "message": "Zdá se, že jste zadali nesprávnou adresu. Umožněte aplikaci %PRODUCTNAME%, aby vás navedla na správnou stránku."
+   },
+   "typosquatting_message_title": {
+      "message": "Měli jste na mysli"
+   },
+   "typosquatting_notice_body": {
+      "message": "Zajišťujeme vám ochranu na internetu – rozšiřte ochranu do všech svých zařízení pomocí produktu McAfee® Total Protection."
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "Zatím jsme skenovali tento počet stránek: $pagesScanned$.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "Zatím jsme skenovali $pagesScanned$ stránku.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME% – typosquatting"
+   },
+   "typotitle": {
+      "message": "Vyhněte se nebezpečným stránkám, které se tváří jako skutečné stránky"
+   }
+}

@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "管理家庭的在线访问权限"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "保护您的财务信息"
+   },
+   "annotation_balloon_color_green": {
+      "message": "该链接安全"
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "每日测试"
+   },
+   "annotation_balloon_color_red": {
+      "message": "该链接有危险"
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "此链接未评级"
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "该链接很可疑"
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "查看站点报告"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "已阻止 $ads_counter$ 个广告",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "已阻止 $ads_counter$ 个广告",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "已阻止 $tracker_counter$ 个跟踪程序",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "已阻止 $tracker_counter$ 个跟踪程序",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "正在扫描 $download_scanning_counter$ 个下载项",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "正在扫描 $download_scanning_counter$ 个下载项",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "发现与 $search_text$ 相关的更多食谱",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "发现与 $search_text$ 相关的更多文章",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "发现 $search_text$ 的更多结果",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "对比 $search_text$ 的不同价格",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "发现与 $search_text$ 相关的更多信息",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "发现 $search_text$ 的更多信息",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "认可风险"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "获取迈克菲全面安全保护套装"
+   },
+   "block_page_go_back": {
+      "message": "上一步"
+   },
+   "block_page_message": {
+      "message": "哇哦! 是否确定要访问该网站?"
+   },
+   "block_page_notice_body": {
+      "message": "迈克菲全面安全保护套装可确保您的浏览器安全，并为您的所有设备提供安全保护。 获取 VPN、身份信息保护、文件锁定等更多功能。"
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "我们迄今已为您扫描了 $pagesScanned$ 个页面。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "我们迄今已为您扫描了 $pagesScanned$ 个页面。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "访问此站点时，我们发现了一项或多项存在风险的行为。"
+   },
+   "block_page_popover_title": {
+      "message": "为什么您会看到这条消息?"
+   },
+   "block_page_risky_url": {
+      "message": "可能存在访问风险。"
+   },
+   "block_page_search_input": {
+      "message": "使用 %PRODUCTNAME% 搜索"
+   },
+   "block_page_state_danger": {
+      "message": "非常危险"
+   },
+   "block_page_state_warning": {
+      "message": "稍有风险"
+   },
+   "block_page_status_text": {
+      "message": "网站状态："
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% - 网站安全评级"
+   },
+   "block_page_view_site_report": {
+      "message": "查看站点报告"
+   },
+   "category_id_100_description": {
+      "message": "此类网页的内容包括虚拟画廊、艺术家站点（包括雕塑和摄影）、博物馆、民族风情和乡俗。"
+   },
+   "category_id_100_name": {
+      "message": "艺术/文化/传承"
+   },
+   "category_id_101_description": {
+      "message": "这类网页主要用于销售、推广或提倡饮用酒类（例如啤酒、葡萄酒和烈酒等）。 该类网页还提供鸡尾酒配方和家酿酒说明。"
+   },
+   "category_id_101_name": {
+      "message": "酒类"
+   },
+   "category_id_102_description": {
+      "message": "此类网页允许用户在浏览网页时故意隐藏 IP 地址或其他个人身份信息，从而绕过当地的过滤政策，畅通无阻地访问各种网页。 匿名程序网页还可阻止各种跟踪技术（例如 Cookie 或浏览器历史记录等）。 某些方法还可阻止操作系统版本和网页浏览记录转发至该网页。 这类网页包括提供免费代理 IP 地址的网页或描述如何绕过过滤的页面。"
+   },
+   "category_id_102_name": {
+      "message": "匿名程序"
+   },
+   "category_id_103_name": {
+      "message": "成人主题"
+   },
+   "category_id_104_description": {
+      "message": "此类网页支持用户匿名浏览，但没有提供此类服务的明确意图。 此类别包括 URL 翻译、网页缓存等实用工具，这些工具可能具有匿名程序的功能，但未明确表示用于绕过过滤软件。"
+   },
+   "category_id_104_name": {
+      "message": "匿名实用工具"
+   },
+   "category_id_105_description": {
+      "message": "此类网页用于提供企业相关的信息，例如公司简介或者企业规划和战略等。 此类别还包括一些信息、服务或产品，用于帮助其他企业规划、管理和推销其企业产品。 如果重点在于企业经营，此类别网站包括多层次营销活动。 此类别不包括个人网页和网站托管网页。"
+   },
+   "category_id_105_name": {
+      "message": "企业"
+   },
+   "category_id_106_description": {
+      "message": "此类网页实现公共和私人聊天室中网页社交消息的实时收发。 此类别包括 IRC。 此类别不包括即时消息。 风险包括不良内容、影响工作效率及泄露敏感信息。"
+   },
+   "category_id_106_name": {
+      "message": "聊天"
+   },
+   "category_id_108_description": {
+      "message": "这类页面提供一般参考信息，例如公共服务提供商、区域信息、交通时刻表、地图或天气报告等。"
+   },
+   "category_id_108_name": {
+      "message": "公共信息"
+   },
+   "category_id_109_description": {
+      "message": "McAfee 认为其某种程度指导用户实施非法或犯罪活动的网页。 这些说明包括如何实施谋杀或自杀、破坏、制造炸弹、撬锁、服务盗窃、逃避执法或欺骗药物测试等。 此类网站可能还包含如何散布非法内容、实施欺诈或诈骗消费者等信息。"
+   },
+   "category_id_109_name": {
+      "message": "潜在犯罪活动"
+   },
+   "category_id_110_description": {
+      "message": "此类网站会提供购买、制造和使用非法药品或软性毒品的相关信息。 这类内容包括展示、销售吸毒工具或描述其用法、不当运用嗅胶等合法兴奋剂的技巧、滥用处方药或滥用其他合法药物等。"
+   },
+   "category_id_110_name": {
+      "message": "禁药/毒品"
+   },
+   "category_id_111_description": {
+      "message": "此类网页主要提供学术相关的内容，例如学科（数学、历史）、学校或大学网页、教育管理网页（地方教育委员会、教师课程）等。"
+   },
+   "category_id_111_name": {
+      "message": "教育/参考资料和工具书"
+   },
+   "category_id_112_description": {
+      "message": "此类网页会提供有关电影院、剧院、音乐、电视、信息娱乐节目、娱乐行业八卦新闻等方面的信息，以及演员和音乐家等名人的站点。 这类网站还包括通过种种内容进行网络娱乐活动的站点，例如星座或星迷俱乐部。"
+   },
+   "category_id_112_name": {
+      "message": "娱乐"
+   },
+   "category_id_113_description": {
+      "message": "这个类别会与恐怖内容、歧视、色情内容、暴力或游戏/卡通暴力等类别一同运用，目的是识别这些极端内容的 URL。 例如，非法色情内容同时属于色情、潜在犯罪活动和极端等类别。"
+   },
+   "category_id_113_name": {
+      "message": "极端"
+   },
+   "category_id_114_description": {
+      "message": "此类网页会显示财务信息，或作为访问网上银行账户的入口。 这类网页可显示财务信息（包括有关资金管理的新闻或服务），但无法用于访问敏感财务账户信息，例如财务统计信息，或者税收、抵押、保险、认证或投资等领域的咨询服务。 网上银行账户的访问操作包括个人银行业务或企业银行业务、资金管理、税务咨询、共同基金、信用卡、信用合作社、保险及其他金融出版物和服务等。 这类内容包括股票信息（但不包括股票交易）、家庭财务及政府相关的财务信息。"
+   },
+   "category_id_114_name": {
+      "message": "理财服务/金融/银行"
+   },
+   "category_id_115_description": {
+      "message": "此类网页允许用户在网上打赌或下注，或提供在线赌博（例如赌场游戏、运动彩券、体育博彩和彩票）所用的赌博软件。 这类内容包括彩票，前提是您可以在线购票或在线玩。"
+   },
+   "category_id_115_name": {
+      "message": "赌博"
+   },
+   "category_id_116_description": {
+      "message": "此类网页提供在线游戏及相关信息，如作弊、代码、演示、模拟器、在线竞赛或角色扮演游戏、游戏部落、游戏厂商站点、玄幻或虚拟体育联盟，以及其他无盈利性质的游戏站点， 例如 Microsoft Xbox® 和 Sony PlayStation® 等游戏机。"
+   },
+   "category_id_116_name": {
+      "message": "游戏"
+   },
+   "category_id_117_description": {
+      "message": "此类网页包含由政府或军事组织（例如政府部门或机构、警察部门、消防部门、民防、反恐组织等）或者由多国机构（例如联合国或欧盟等）维护的内容。 这些内容包括军队和退伍军人的医疗设施。"
+   },
+   "category_id_117_name": {
+      "message": "政府/军事"
+   },
+   "category_id_118_description": {
+      "message": "McAfee 认为此类网页可发出指令或以其他方式针对计算机发动欺诈、犯罪或者恶意活动。 这类网站包括计算机犯罪相关的网页，通过恶意的入侵信息或工具（例如 Root Kit、kiddy script）以帮助不法分子擅自访问他人计算机和网络。 这类内容还包括其他电子欺诈领域，例如拨号程序诈骗和非法操纵电子设备等。"
+   },
+   "category_id_118_name": {
+      "message": "潜在黑客入侵/计算机犯罪"
+   },
+   "category_id_119_description": {
+      "message": "这类网页涵盖所有与健康有关的信息和卫生保健服务。 健康信息包括改善个人福祉（无论是身体还是心理健康）的话题（饮食、营养、健身或育儿）。 卫生保健服务提供者包括健康保险公司、医院、诊所和独立医师等。"
+   },
+   "category_id_119_name": {
+      "message": "健康"
+   },
+   "category_id_120_description": {
+      "message": "此类网页主要提供滑稽或搞笑的内容。 例如，含笑话、滑稽短剧、漫画和讽刺页面的站点。 这类内容可能还包括连环画小说，这些内容通常与漫画有关。"
+   },
+   "category_id_120_name": {
+      "message": "幽默/漫画"
+   },
+   "category_id_121_description": {
+      "message": "McAfee 认为此类网页提供的信息明确鼓励压迫或歧视特定群体。 这类内容包括推进反对某些种族、宗教、国籍、性别、年龄、残疾或性取向的群体。 这类内容可能包括以特定仇视为目标的政党和组织，以及极端网络欺凌。"
+   },
+   "category_id_121_name": {
+      "message": "歧视"
+   },
+   "category_id_122_description": {
+      "message": "这类网页通过软件支持加入成员联系人列表或即时消息会话的用户通过网络进行实时通信。 大多数即时消息软件均具备文件传输、PC 到 PC 电话呼叫等功能，并且能够跟踪他人何时登录和注销。 这些站点可能也会让用户对敏感信息泄露、不良内容或文件共享忧心忡忡。"
+   },
+   "category_id_122_name": {
+      "message": "即时消息"
+   },
+   "category_id_123_description": {
+      "message": "此类网页用于在线购买、销售或交易股票。 此类别还包括纸带信息，用于查看股市的实时股价和金融点差交易。 其他赌博属于“赌博”类别。 这类网站不包含那些提供股票信息而不提供股票的购买、出售或交易服务的站点。"
+   },
+   "category_id_123_name": {
+      "message": "股票交易"
+   },
+   "category_id_124_description": {
+      "message": "这类网页提供软件或支持用户访问连续音频或视频广播，例如网络电台、电视节目或播客等。"
+   },
+   "category_id_124_name": {
+      "message": "网络电台/电视"
+   },
+   "category_id_125_description": {
+      "message": "此类网页与求职相关，其中的站点涉及简历撰写、面试、更换工作、分类广告和大型求职数据库等。 这类网站包括列出职位空缺、薪资比较站点、临时工作、公司职位发布站点等信息的公司网页。"
+   },
+   "category_id_125_name": {
+      "message": "求职"
+   },
+   "category_id_126_description": {
+      "message": "这类网页合法提供有关数据保护的信息。 这类内容包含如何在互联网、私人网络或电信等其他带宽服务中保护企业或个人数据、知识产权、隐私和基础设施安全的详细信息。 潜在风险包括潜在黑客入侵/计算机犯罪。 存在高风险内容且未明显区分“黑名单”和“白名单”的站点也可能属于此类别和“潜在黑客入侵/计算机犯罪”类别。 部分内容可能会被用来破坏安全或从事非法行为。"
+   },
+   "category_id_126_name": {
+      "message": "信息安全"
+   },
+   "category_id_127_description": {
+      "message": "此类网页专门用于社交互动，例如网络约会、交友、同学聚会、笔友交流、陪伴服务或介绍潜在配偶等。 很多这类站点都允许其成员通过实时发布消息进行社交互动。 这类网站可能还会让用户接触到异党和包含不良信息的成员资料。"
+   },
+   "category_id_127_name": {
+      "message": "约会/社交网络"
+   },
+   "category_id_128_description": {
+      "message": "此类网页会推广可下载并传输到手机的手机媒体内容、软件或实用工具。 例如，铃声、徽标/皮肤、游戏、屏保程序、基于文本的曲调、用于短信、彩信、WAP 及其他手机协议的软件等。"
+   },
+   "category_id_128_name": {
+      "message": "手机"
+   },
+   "category_id_129_description": {
+      "message": "此类网页会提供 MP3、WAV、AVI 和 MPEG 等格式的音频或视频文件供用户下载。 这些文件可保存到用户的计算机后播放。"
+   },
+   "category_id_129_name": {
+      "message": "媒体下载"
+   },
+   "category_id_130_description": {
+      "message": "这类网页会部署专门用来劫持计算机设置或活动的代码。 这类内容包括自安装应用程序（称作“偷渡式”可执行文件下载）、特洛伊木马以及利用浏览器或其他应用程序中安全漏洞的病毒。 网页可能之后不再是恶意状态并被转移到另一个类别。 恶意站点旨在在另一台计算机上采取行动以造成破坏。"
+   },
+   "category_id_130_name": {
+      "message": "恶意站点"
+   },
+   "category_id_131_description": {
+      "message": "此类网页可让用户访问 (http://) Usenet 新闻组和上传到新闻组的文件档案。 此类别还包括在线群组发布面向社区的类似内容。 此类别中的 URL 可能包含令人不快的内容。"
+   },
+   "category_id_131_name": {
+      "message": "新闻组/网络新闻"
+   },
+   "category_id_132_description": {
+      "message": "这类网页含有裸露人体的非色情图片。 例如经典雕塑和绘画、艺术裸体照片、一些裸体主义图片，以及详细的医学插图等。"
+   },
+   "category_id_132_name": {
+      "message": "裸露"
+   },
+   "category_id_133_description": {
+      "message": "拥有某项使命或造福大型社区为目的的慈善或教育团体的网页，例如俱乐部、游说团体、社区、非盈利组织、工会和倡导团体等。 例如 Masons、Elks、Boy and Girl Scouts 或 Big Brothers等。"
+   },
+   "category_id_133_name": {
+      "message": "非盈利组织/倡议组织/非政府组织"
+   },
+   "category_id_134_description": {
+      "message": "此类网页提供在线新闻媒体信息，例如国际或区域新闻广播和出版。 这类内容包括提供新闻内容的门户站点。"
+   },
+   "category_id_134_name": {
+      "message": "综合新闻"
+   },
+   "category_id_136_description": {
+      "message": "这类网页在线销售产品或服务。 销售各种各样产品的网页可能会给用户带来风险，因为通过其可访问通常属于色情、武器、裸露或暴力等其他类别的项目。 通过部分站点或许能访问属于色情和武器等其他类别的项目。"
+   },
+   "category_id_136_name": {
+      "message": "在线购物"
+   },
+   "category_id_137_description": {
+      "message": "这类网页中的一些图片含有诱人或暴露的服装、女式内衣和泳装，或者超模或名人相册，但不涉及裸露。"
+   },
+   "category_id_137_name": {
+      "message": "暴露服装"
+   },
+   "category_id_138_description": {
+      "message": "此类网页允许在计算机和用户之间交换的文件（例如可下载的音乐等）供企业或个人使用。 P2P 客户端允许用户通过对等的用户网络搜索和交换文件。 它们通常具有间谍软件或实时聊天功能。 此类别包括 BitTorrent 网页。"
+   },
+   "category_id_138_name": {
+      "message": "P2P/文件共享"
+   },
+   "category_id_139_description": {
+      "message": "这类网页内容涉及政党、政客的政治生涯以及有关各大主题的意见。 这类内容可能还包括关于毒品的法律和政治观点。 这类 URL 会指向政党活动、政治竞选及各大主题的意见（包括政治辩论）。"
+   },
+   "category_id_139_name": {
+      "message": "政治/意见"
+   },
+   "category_id_140_description": {
+      "message": "此类个人主页共享公共域，例如由 ISP、大学/教育服务器或免费网页主机托管的个人主页。 此类别还包括含有个人信息（例如个人主页）的唯一域。 个人主页中可能会包含不良内容。"
+   },
+   "category_id_140_name": {
+      "message": "个人页面"
+   },
+   "category_id_141_description": {
+      "message": "此类网页用作 Web 内容的主要网关或目录。 许多门户网站还提供各种内部站点功能或服务，例如搜索引擎、电子邮件、新闻和娱乐等。 含各种内容的邮件列表站点均属此列。"
+   },
+   "category_id_141_name": {
+      "message": "门户站点"
+   },
+   "category_id_142_description": {
+      "message": "此类网页远程访问程序、在线服务或整个计算机系统。 虽然远程访问通常用于合法地远程运行计算机，但也会造成安全风险，例如后门访问等。 后门访问由最初的程序员编写，但会造成用户不知情的情况下被其他方控制系统。"
+   },
+   "category_id_142_name": {
+      "message": "远程访问"
+   },
+   "category_id_143_description": {
+      "message": "此类网页包含宗教主题和人类精神信仰相关内容，此类内容不属于主要宗教范畴。 这类内容包括宗教讨论、信仰、文章，以及当地地方教会或团体的相关信息（例如教堂主页），除非该站点已划归“世界主要宗教”类别中。 此类别还包括比较宗教，或者包含宗教和意识形态的站点。"
+   },
+   "category_id_143_name": {
+      "message": "宗教/意识形态"
+   },
+   "category_id_144_description": {
+      "message": "此类网页将空闲或未使用的计算机资源用于处理常见任务。 此任务可以为公司任务，也可以为国际任务。 两个众所周知的例子就是 SETI 计划和人类基因组计划，它们利用成千上万台志愿者计算机的空闲时间来分析数据。"
+   },
+   "category_id_144_name": {
+      "message": "资源共享"
+   },
+   "category_id_145_description": {
+      "message": "这类网页会提供搜索结果，供用户通过关键词在互联网上查找信息。"
+   },
+   "category_id_145_name": {
+      "message": "搜索引擎"
+   },
+   "category_id_146_description": {
+      "message": "此类网页涉及专业体育运动或有组织的休闲运动。 这类内容包括体育新闻、事件和信息，例如参赛提示、策略、比赛得分或球员交易等。"
+   },
+   "category_id_146_name": {
+      "message": "体育"
+   },
+   "category_id_147_description": {
+      "message": "此类页面提供流媒体，或者包含可用于在整个文件传输完之前显示音频和可视数据的软件插件。"
+   },
+   "category_id_147_name": {
+      "message": "流媒体"
+   },
+   "category_id_148_description": {
+      "message": "这类网页用于存储共享软件和免费软件的可下载副本。 共享软件基于信用制度免费提供，但如果程序适用且经常使用，程序设计者会要求付少量费用。 免费软件是指可以免费使用的软件。"
+   },
+   "category_id_148_name": {
+      "message": "共享软件/免费软件"
+   },
+   "category_id_149_description": {
+      "message": "McAfee 认为此类网页包含旨在激起性欲的资料。 例如恋物癖页面、动画、卡通、故事和非法色情内容。"
+   },
+   "category_id_149_name": {
+      "message": "色情内容"
+   },
+   "category_id_150_description": {
+      "message": "此类网页侵犯了个人或公司的隐私和安全。 例如：\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>用于下载软件或执行程序的 URL，从而在用户未充分知情或在未得到用户明确同意的情况下收集用户信息并将其发送给第三方。\u003C/li>\u003Cli>用于通过记录击键来监控或跟踪他人计算机活动的软件（按键记录程序）。\u003C/li>\u003Cli>用于传播软件（已知的某些间谍软件或广告软件）的站点。\u003C/li>\u003C/ul>此类别不同于“恶意站点”类别，因为具有不同的意图。 间谍软件和按键记录程序会秘密收集并将其发送给另一方。 恶意站点旨在不经用户批准或在用户不知情的情况下安装软件或采取行动。"
+   },
+   "category_id_150_name": {
+      "message": "间谍软件/广告软件/按键记录程序"
+   },
+   "category_id_151_description": {
+      "message": "此类网页销售、推广或提倡使用烟草制品、烟草用具，包括香烟、雪茄、烟斗、鼻烟和嚼烟等。"
+   },
+   "category_id_151_name": {
+      "message": "烟草"
+   },
+   "category_id_152_description": {
+      "message": "此类网页推广个人或商务旅行，例如酒店、度假胜地、航空公司、地面交通、汽车租赁、旅行社，以及一般的旅游信息。 此类别还包括提供购票或住宿信息的站点。"
+   },
+   "category_id_152_name": {
+      "message": "旅行"
+   },
+   "category_id_153_description": {
+      "message": "此类网页中包含真实或逼真的图像或文字，生动描绘战争、自杀、残害或肢解，或或提倡对人、动物或机构进行攻击。"
+   },
+   "category_id_153_name": {
+      "message": "暴力"
+   },
+   "category_id_154_description": {
+      "message": "此类网页提供广告托管或创建广告的程序。 例如横幅、弹出窗的链接、源代码或小程序，以及网页上显示的静态或动态生成广告。 此类别旨在阻止网页上的广告，而非阻止提供广告或广告服务的公司。"
+   },
+   "category_id_154_name": {
+      "message": "网页广告"
+   },
+   "category_id_155_description": {
+      "message": "此类网页提供购买、制造、改装或使用武器的信息，武器包括枪支、刀、剑、彩弹枪、弹药、爆炸物和武器配件等。"
+   },
+   "category_id_155_name": {
+      "message": "武器"
+   },
+   "category_id_156_description": {
+      "message": "此类网页支持用户通过互联网发送或接收电子邮件。 这些站点可能会通过电子邮件文件附件传播有害内容，也可能存在泄露或损失专有数据的安全风险。"
+   },
+   "category_id_156_name": {
+      "message": "Web 邮件"
+   },
+   "category_id_157_description": {
+      "message": "此类网页支持用户通过互联网拨打电话或获取信息或软件以拨打互联网电话。 网络电话服务又称 Internet 电话或 VoIP。 网络电话服务包括 PC 到 PC、PC 到电话以及电话到电话（通过 TCP/IP 网络连接）服务。"
+   },
+   "category_id_157_name": {
+      "message": "网络电话"
+   },
+   "category_id_158_description": {
+      "message": "此类网页用于提供项目或服务的在线投标和销售。 此类别网站包括专门用于投标和销售的网页。 在线拍卖几乎不在监控范围内。 这些网站可能会向用户传播一些不当资料，例如色情、武器、裸露或暴力等。"
+   },
+   "category_id_158_name": {
+      "message": "拍卖/分类信息"
+   },
+   "category_id_159_description": {
+      "message": "此类网页可让用户访问 (http://) Usenet 新闻组或开展讨论并发布用户生成的内容，例如实时发布有关某个利益集团的消息等。 这类内容还包括上传到新闻组的文件档案。"
+   },
+   "category_id_159_name": {
+      "message": "论坛/公告栏"
+   },
+   "category_id_160_description": {
+      "message": "此类网页包含粗鲁、粗俗或淫秽的语言或姿势。"
+   },
+   "category_id_160_name": {
+      "message": "猥亵语言"
+   },
+   "category_id_161_description": {
+      "message": "此类网页提供免费或收费的学期论文、书面文章或考试答案，协助不法分子剽窃或作弊。"
+   },
+   "category_id_161_name": {
+      "message": "学校作弊信息"
+   },
+   "category_id_162_description": {
+      "message": "这类网页描写或描述性行为，但并非旨在激起性欲或色情。 性内容的例子包括性教育、性暗示、幽默或性相关商品。"
+   },
+   "category_id_162_name": {
+      "message": "性内容"
+   },
+   "category_id_163_description": {
+      "message": "此类网页中的内容可能看起来无味、粗俗、令人震惊或可怕。 例如蹩脚的幽默、身体排泄功能、医学图像或事故现场照片（带血或伤口）、极端的身体改造（切开、打烙印或生殖器穿刺）以及虐待动物的恐怖细节描述。"
+   },
+   "category_id_163_name": {
+      "message": "恐怖内容"
+   },
+   "category_id_164_description": {
+      "message": "此类网页提供图像专用搜索结果，例如缩略图。"
+   },
+   "category_id_164_name": {
+      "message": "可视搜索引擎"
+   },
+   "category_id_165_description": {
+      "message": "此类网页侧重于技术或商业内容，用户可在网页上在线消息发布或实时聊天，例如技术支持或互动业务通信等。 虽然用户可发布任何类型的内容，但这些论坛倾向于减少包含不良内容的风险。 提供各种（技术和商业内容等主题的）论坛的站点只属于“论坛/公告栏”或“聊天”类别。 仅重点关注技术或商业的论坛属于“技术/商业论坛”类别。"
+   },
+   "category_id_165_name": {
+      "message": "技术/商业论坛"
+   },
+   "category_id_166_description": {
+      "message": "这类网页提供赌博相关信息，而非赌博方法。 这类网页包括赌场相关的网页，但不提供在线赌博、赌博链接、技巧、体育选择、彩票结果，以及赛马、赛车或划船比赛。"
+   },
+   "category_id_166_name": {
+      "message": "赌博相关"
+   },
+   "category_id_167_description": {
+      "message": "此类网页会提供短信服务。 例如，向手机、PDA、传真机发短信，以及内部网站用户到用户消息传递或站点到站点消息传递等。"
+   },
+   "category_id_167_name": {
+      "message": "消息传递"
+   },
+   "category_id_168_description": {
+      "message": "此类网页提供游戏、漫画、卡通或连环画小说等场景中的相关虚幻或虚构信息。 这类内容包括身体攻击或肉搏战的图像和文本描述，以及武器或爆炸物造成的重伤和破坏。"
+   },
+   "category_id_168_name": {
+      "message": "游戏/卡通暴力"
+   },
+   "category_id_169_description": {
+      "message": "此类网页链接通常会通过恶作剧电子邮件发送，用于窃取用户的帐户信息。 这些站点会将自身伪装成合法的公司网页，从而欺骗和获取用户的帐户信息以实施欺诈或盗窃。"
+   },
+   "category_id_169_name": {
+      "message": "网络钓鱼"
+   },
+   "category_id_170_description": {
+      "message": "此类网页允许用户将文件夹和文件上传到在线网络服务器，以便通过任意网页浏览器备份、共享、编辑或检索文件或文件夹。"
+   },
+   "category_id_170_name": {
+      "message": "个人网络存储"
+   },
+   "category_id_171_description": {
+      "message": "此类网页链接会通过未经许可的垃圾邮件发送。 垃圾邮件 URL 的内容多种多样，涵盖产品营销及可能的不良或欺诈性站点。 此类别包括专门用于滥发（例如垃圾博客或垃圾评论）的站点。"
+   },
+   "category_id_171_name": {
+      "message": "垃圾邮件 URL"
+   },
+   "category_id_172_description": {
+      "message": "这类网页支持用户访问实时或交互式网络应用程序，例如基于浏览器的办公套件和组件。 这类内容包括企业、教育机构或个人专用的站点。"
+   },
+   "category_id_172_name": {
+      "message": "交互式网络应用程序"
+   },
+   "category_id_174_description": {
+      "message": "此类网页会推销服装、化妆品、珠宝和其他时尚产品、配饰或服务。 此类别还包括产品评论、比较和一般消费者信息，以及发廊、日光浴沙龙、纹身工作室和人体穿环工作室等服务。"
+   },
+   "category_id_174_name": {
+      "message": "时尚/美容"
+   },
+   "category_id_175_description": {
+      "message": "此类网页与计算软件和硬件相关，包括供应商、产品营销和评论、软硬件的部署和维护、软件更新和加载项（例如脚本、插件或驱动程序）等。 硬件包括计算机零件、附件，以及计算机和网络用的电子设备。 此类别包括营销软件和硬件，以及研究软件或硬件产品评论或行业趋势的杂志。"
+   },
+   "category_id_175_name": {
+      "message": "软件/硬件"
+   },
+   "category_id_176_description": {
+      "message": "McAfee 认为此类网页提供的信息可用于潜在“盗版”或非法传播软件或电子媒体，例如受版权保护的音乐或电影、传播非法许可证密钥生成器、软件破解和序列号。"
+   },
+   "category_id_176_name": {
+      "message": "潜在非法软件"
+   },
+   "category_id_177_description": {
+      "message": "这类 URL 的服务器托管一个或多个站点的图像、媒体文件或 JavaScript，或者加快 Apache 等现有网站服务器内容的检索速度。 内容服务器一般不会发布内容，网站浏览者也无法在上面进行全站点导航。 托管图像的内容服务器不允许用户浏览照片。"
+   },
+   "category_id_177_name": {
+      "message": "内容服务器"
+   },
+   "category_id_178_description": {
+      "message": "这类网页可为互联网站点的发布和维护（例如 Web 设计、域名注册等）、互联网服务提供商以及提供网络服务的宽带和电信公司提供服务。"
+   },
+   "category_id_178_name": {
+      "message": "互联网服务"
+   },
+   "category_id_179_description": {
+      "message": "此类网页允许用户上传、搜索及共享媒体文件和照片，例如在线相册等。 此类别涵盖媒体共享的一般风险，但不针对特定内容。 某些 URL 中还可能含有冒犯性内容。"
+   },
+   "category_id_179_name": {
+      "message": "媒体共享"
+   },
+   "category_id_180_description": {
+      "message": "这类网页含有经典雕塑、绘画或者医学图像等类似裸露人体的非色情图片。"
+   },
+   "category_id_180_name": {
+      "message": "非刻意裸露"
+   },
+   "category_id_181_description": {
+      "message": "此类网页会在网上推销个人或企业的产品或服务，但不在线销售其产品或服务。 此类别中的网站通常为公司概况，介绍无法通过这些站点直接购买的服务或产品。 例如汽车制造商站点、婚礼摄影服务或平面设计服务等。"
+   },
+   "category_id_181_name": {
+      "message": "市场销售/商品推销"
+   },
+   "category_id_183_description": {
+      "message": "此类网页曾经提供过内容，但其域名已被出售或弃用，并且不再注册。 绑定域并不托管其自身的内容，而是通常会将用户重定向到通用页面，该页面会声明域名正在出售或将用户重定向到通用搜索引擎和门户页面，其中的部分页面会提供有效的搜索引擎结果。"
+   },
+   "category_id_183_name": {
+      "message": "绑定域"
+   },
+   "category_id_184_description": {
+      "message": "此类网页兜售、推销、评论或说明处方药、非处方药、避孕或膳食补充剂。"
+   },
+   "category_id_184_name": {
+      "message": "药店"
+   },
+   "category_id_185_description": {
+      "message": "此类网页提供有关餐馆、酒吧、餐饮、外卖和外送的信息，包括在线订购。 这类站点提供地点、时间、价格、菜单和饮食相关的信息。 这类内容包括餐馆指南和评论，以及咖啡馆和咖啡店。"
+   },
+   "category_id_185_name": {
+      "message": "餐馆"
+   },
+   "category_id_186_description": {
+      "message": "此类网页提供商业房地产或住宅房地产服务和信息， 包括居住空间或零售空间的销售和租赁，公寓、住宅和房产指南，以及估价和经纪信息。 例如让用户浏览样板房的站点。"
+   },
+   "category_id_186_name": {
+      "message": "房地产"
+   },
+   "category_id_187_description": {
+      "message": "娱乐组织和设施的网页，包含网页娱乐活动和爱好方面的内容。 这类内容包含公共游泳池、动物园、博览会、节日、游乐园、娱乐指南、徒步旅行、钓鱼、观鸟或集邮等方面的信息。"
+   },
+   "category_id_187_name": {
+      "message": "休闲/爱好"
+   },
+   "category_id_188_description": {
+      "message": "此类网页包含一些动态内容，因为用户可随时发布或编辑，所以这些内容会经常变化。 这种类别网站包含的动态内容可能无害，也可能有攻击性，因此存在一定的风险。 博客和维基百科内容都有特定的主题。 该类别网站通常与其他类别一起使用，例如有争议的观点、教育/参考资料和工具书、体育运动、政治/意见或色情等类别，具体取决于网站的主题。 有些内容可能具有冒犯性。"
+   },
+   "category_id_188_name": {
+      "message": "博客/维基百科"
+   },
+   "category_id_189_description": {
+      "message": "此类网页支持人们通过互联网收发电子明信片和贺卡。 电子明信片用于传达问候或祝福信息，通常用于生日和节日等特殊场合。 部分电子明信片站点设有特定的成人幽默目录。 这些站点可能也会让人们担忧泄露自己的敏感信息或专有信息，或网站包含不适宜的内容、恶意软件或有害的附件。"
+   },
+   "category_id_189_name": {
+      "message": "电子贺卡"
+   },
+   "category_id_190_description": {
+      "message": "此类网页揭露或从其他角度阐释重要史实，例如否认大屠杀等。 这类网站内容部分存在学术价值，然而大多数内容都是出于政治目的而非法篡改历史。 此类别中的部分 URL 在某些国家可能会被认为存在非法或冒犯性内容。"
+   },
+   "category_id_190_name": {
+      "message": "历史修正主义"
+   },
+   "category_id_191_description": {
+      "message": "此类网页提供计算信息，主要关注信息技术、计算机编程和认证等领域的教育。 例如 Linux 用户组、UNIX 命令、软件教程或技术术语词典等。 此类别中的大多数站点均可能是更大域的子目录。"
+   },
+   "category_id_191_name": {
+      "message": "技术信息"
+   },
+   "category_id_192_description": {
+      "message": "此类网页可为网络约会、婚介、陪伴服务或介绍潜在配偶搭建交流平台。 这类站点可能会显示个人或群组资料，并允许其成员通过实时通信、消息发布、公告栏和媒体共享进行交流。 这类网站可能还会让用户接触到异党和包含不良信息的成员资料。"
+   },
+   "category_id_192_name": {
+      "message": "约会/交友广告"
+   },
+   "category_id_193_description": {
+      "message": "消费者运输工具制造商和特许经销商的网站，这些运输工具包括汽车、货车、卡车、SUV、摩托车和小型摩托车等。 这类网站提供产品营销、评论、比较、定价、汽车展览会、汽车博览会信息以及有关机动车辆的一般消费者信息。"
+   },
+   "category_id_193_name": {
+      "message": "机动车辆"
+   },
+   "category_id_194_description": {
+      "message": "此类网页提供专业或商业用途的社交网络。 这类网站内容包括个人或群组简介，并允许其成员通过实时通信、消息发布、公告栏和媒体共享进行交流。 例如具有社交功能的校友站点。"
+   },
+   "category_id_194_name": {
+      "message": "职业社交网络"
+   },
+   "category_id_195_description": {
+      "message": "这类网页用于各种目的（例如交友、约会、职业或感兴趣的话题等）的社交活动。 这些站点内容包含个人或群组简介，并允许其成员通过实时通信、消息发布、公告栏和媒体共享进行交流。 这类网站可能还会让用户接触到异党和包含不良信息的成员资料。"
+   },
+   "category_id_195_name": {
+      "message": "社交网络"
+   },
+   "category_id_196_description": {
+      "message": "此类页面允许用户键入短语或文本块来将其从一种语言翻译成另一种语言。 此类别还包括语言标识符网页。"
+   },
+   "category_id_196_name": {
+      "message": "文本翻译器"
+   },
+   "category_id_197_description": {
+      "message": "此类网页主要供企业召开实时会议、视频会议及进行交互式演示。 网络会议通常包括流音频和视频，并允许进行数据传输或办公应用程序共享，例如在线演示等。 此类 URL 可能存在带宽风险和安全风险，例如专有数据丢失或泄漏风险。"
+   },
+   "category_id_197_name": {
+      "message": "网络会议"
+   },
+   "category_id_198_description": {
+      "message": "此类网页中的观点可能会冒犯政治或社会情理并引发争议。 这些内容大多都是极端的舆论。 例如，自杀协定、支持控制饮食、仇外主义、种族中心主义、原教旨主义观点、虚假信息或批判性审视某个群体。"
+   },
+   "category_id_198_name": {
+      "message": "有争议的观点"
+   },
+   "category_id_199_description": {
+      "message": "此类 IP 地址（以及与其相关联的域）通过 DSL调制解调器或电缆调制解调器访问因特网。 由于这些内容通常并非用于通过 HTTP 访问互联网，因此通过这些 IP 地址访问互联网会显示可疑行为。 导致此类行为的原因可能在于家用电脑中存在恶意软件或国产网关设置为允许匿名访问互联网。"
+   },
+   "category_id_199_name": {
+      "message": "常驻 IP 地址"
+   },
+   "category_id_200_description": {
+      "message": "“浏览器漏洞”为一段代码，可利用网页浏览器中的软件错误让浏览器执行一些异常操作，包括停止运行、读取或写入本地文件、传播病毒或安装间谍软件。 恶意代码可能会利用 HTML、JavaScript、映像、ActiveX、Java 等网络技术。 “漏洞利用”有时称为“偷渡式下载”，通常可在消费者毫不知情的情况下自行安装到未受保护的计算机中，然后该代码便可安装按键记录程序（窃取密码）和特洛伊木马程序（将计算机变成“僵尸”）。 此类别网站包括分发或执行浏览器漏洞的 URL。"
+   },
+   "category_id_200_name": {
+      "message": "浏览器漏洞利用"
+   },
+   "category_id_201_description": {
+      "message": "此类网站试图打劫或欺骗消费者。 例如，销售假冒产品、销售原本免费提供的产品或滥用其他公司的品牌等。 这类网站包括利用人们善良或无知心里进行诈骗的网站，例如假借慈善为名由欺诈性地敛财，或者经营欺诈性投资方案等。 这种类别网站还包括被举报大量消费者受骗或未收到服务的站点。"
+   },
+   "category_id_201_name": {
+      "message": "消费者保护"
+   },
+   "category_id_202_description": {
+      "message": "这类网站包含来自世界各地的儿童性侵内容，以及英国淫秽以及煽动种族仇恨的内容。"
+   },
+   "category_id_202_name": {
+      "message": "非法英国网站"
+   },
+   "category_id_203_description": {
+      "message": "这类网页提供宗教主题的相关内容和几大宗教相关的信息。 这类网站含有宗教内容，例如讨论、信仰、不会引起争论的评论、文章和当地地方教会的信息（例如教堂或犹太会堂的主页）等。 这里宗教包括巴哈教、佛教、中国传统宗教、基督教、印度教、伊斯兰教、耆那教、犹太教、神道教、锡克教、天理教、拜火教等。"
+   },
+   "category_id_203_name": {
+      "message": "世界主要宗教"
+   },
+   "category_id_204_description": {
+      "message": "这类网页会使用户在不经意间下载有害或令人讨厌的代码。 这类内容包括可下载的文件，例如屏幕保护程序、工具栏和文件共享程序，这些程序包含广告软件、间谍软件、病毒和其他恶意计算机代码。 有时，用户在未阅读完整的条款和条件的情况下单击“是”或“我同意”后，便会在不知情的情况下添加恶意软件。 直接造成的后果包括计算机速度性能减慢、密码被盗以及重要个人文件丢失或损坏。"
+   },
+   "category_id_204_name": {
+      "message": "恶意下载内容"
+   },
+   "category_id_205_description": {
+      "message": "这类网页包含潜在有害程序 (PUP)， PUP 的编写初衷通常是便捷实用，但它们会更改计算机的安全状态或计算机用户的隐私策略。 对安全或隐私比较关心的计算机用户可能想了解此类软件，在某些情况下，他们可能想将此类软件从其计算机中移除。"
+   },
+   "category_id_205_name": {
+      "message": "PUP"
+   },
+   "category_id_600_description": {
+      "message": "这类网页可安全访问，面向家庭用户，专为 10 周岁以下的儿童设计。"
+   },
+   "category_id_600_name": {
+      "message": "适用于儿童"
+   },
+   "category_id_601_description": {
+      "message": "此类网页提供历史事实相关内容。 这类内容包含适用于高等教育的信息，而“教育”类别中包含适用于初等教育的信息。 例如，一个含有大屠杀照片的站点可能具有冒犯性，但却具有学术价值。"
+   },
+   "category_id_601_name": {
+      "message": "历史记录"
+   },
+   "category_id_602_description": {
+      "message": "个人或组监控下的公告栏、聊天室、搜索引擎或 Web 邮件站点，这些监控者有权阻止不良消息或内容。"
+   },
+   "category_id_602_name": {
+      "message": "论坛管理员"
+   },
+   "category_id_603_description": {
+      "message": "此类内容仅为文字或音频，不含照片。 通过“色情、暴力或性内容”类别禁止显示图片，可将此类别作为例外，以允许访问显式文本和录音材料。 图书馆或大学可使用此类别来防止在其公共设施中显示令人不快的图形。"
+   },
+   "category_id_603_name": {
+      "message": "仅文字/声音"
+   },
+   "crypto_allow_desc": {
+      "message": "阻止挖矿劫持时，您可选择允许。 我们不建议允许挖矿劫持，但您可选择支持通过挖矿劫持赚钱的网站。"
+   },
+   "crypto_allow_title": {
+      "message": "是否允许挖矿劫持?"
+   },
+   "crypto_footer_message1": {
+      "message": "McAfee 和 McAfee 徽标是 McAfee, LLC 或其子公司在美国及其他国家/地区的注册商标或商标。"
+   },
+   "crypto_footer_message2": {
+      "message": "其他名称和商标可能已声明为其他公司的财产。 版权所有 © 2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "我们会帮助您阻止挖矿劫持者窃取计算机电能和资源。"
+   },
+   "crypto_header_title": {
+      "message": "挖矿劫持阻止程序已开启"
+   },
+   "crypto_own_desc": {
+      "message": "即使没有加密货币也会遭受挖矿劫持。 挖矿劫持者访问您的计算机资源，而不是您可能持有的加密货币。"
+   },
+   "crypto_own_title": {
+      "message": "您是否持有可被挖矿劫持的加密货币?"
+   },
+   "crypto_protect_desc": {
+      "message": "保持 %PRODUCTNAME% 扩展处于开启状态，以便挖矿劫持阻止程序保护您免受攻击。 当我们阻止了挖矿劫持尝试时，我们将通知您。"
+   },
+   "crypto_protect_title": {
+      "message": "如何保护自身免受攻击?"
+   },
+   "crypto_signs_desc1": {
+      "message": "浏览速度慢"
+   },
+   "crypto_signs_desc2": {
+      "message": "电池耗电过快"
+   },
+   "crypto_signs_desc3": {
+      "message": "风扇声响过大"
+   },
+   "crypto_signs_desc4": {
+      "message": "用电量增加"
+   },
+   "crypto_signs_title": {
+      "message": "被挖矿劫持的迹象有哪些?"
+   },
+   "crypto_title": {
+      "message": "迈克菲挖矿劫持阻止程序"
+   },
+   "crypto_whatis_point1": {
+      "message": "挖矿劫持者(黑客)会在您浏览网站时通过网站访问您的计算机。"
+   },
+   "crypto_whatis_point2": {
+      "message": "他们劫持计算机电能(CPU 和内存) 来完成其复杂的任务。"
+   },
+   "crypto_whatis_point3": {
+      "message": "他们赚取加密货币，一种在线货币。"
+   },
+   "crypto_whatis_title": {
+      "message": "什么是挖矿劫持"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "在此站点允许挖矿劫持。"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "了解更多。"
+   },
+   "cryptojacking_banner_message": {
+      "message": "已在此站点阻止挖矿劫持。 您的计算机资源安全，可继续浏览。 $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "我们测试了此页面并阻止了来自潜在危险或可疑站点的内容。 仅在确定来自安全站点时允许此内容"
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "查看所有被阻止的内容"
+   },
+   "overlay_accept_ss": {
+      "message": "立即同意以将您的搜索引擎更改为迈克菲安全搜索"
+   },
+   "overlay_add_ss": {
+      "message": "将迈克菲安全搜索添加至浏览器"
+   },
+   "overlay_ss_description": {
+      "message": "我们将在搜索结果中标记有风险的网站，以便您知道哪些网站安全，哪些网站不安全。"
+   },
+   "overlay_step_1": {
+      "message": "步骤 1"
+   },
+   "overlay_step_2": {
+      "message": "步骤 2"
+   },
+   "phishingdesc": {
+      "message": "黑客会通过看似正规的“网络钓鱼”电子邮件和网站诱骗您上当，从而获取您的个人信息。 我们则会切断钓线，避免您上当受骗。"
+   },
+   "phishingtitle": {
+      "message": "确保您的个人信息安全"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "迈克菲® 联网顾问"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "是否要赶在恶意用户侵扰之前，早一步安装安全搜索?"
+   },
+   "search_toast_body_text_test": {
+      "message": "是否要添加安全搜索以了解哪些网站安全？"
+   },
+   "search_toast_done": {
+      "message": "完成"
+   },
+   "search_toast_heading_compliant": {
+      "message": "您并未安装安全搜索 — 请务必小心"
+   },
+   "search_toast_heading_test": {
+      "message": "在搜索结果中获取安全性方面的建议"
+   },
+   "search_toast_no_thanks": {
+      "message": "不，谢谢"
+   },
+   "search_toast_ok": {
+      "message": "确定"
+   },
+   "search_toast_option_compliant": {
+      "message": "是。将安全搜索添加到我的浏览器并将默认搜索引擎更改为 $search_provider$。",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "是。添加安全搜索并将默认搜索引擎更改为 $search_provider$。",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "安全搜索可帮助您远离搜索结果中有风险的站点。"
+   },
+   "search_toast_sub_heading_test": {
+      "message": "安全搜索会编辑搜索结果中有风险的站点。"
+   },
+   "search_toast_yes": {
+      "message": "是"
+   },
+   "securesearchdesc": {
+      "message": "通过对搜索结果进行颜色编码，提示您哪些是安全网站、哪些是可疑网站，从而确保您放心浏览。"
+   },
+   "securesearchtitle": {
+      "message": "避开有风险的搜索结果"
+   },
+   "settings_about_adblock": {
+      "message": "阻止降低浏览器速度的广告和弹出式窗口"
+   },
+   "settings_about_adblock_tracking": {
+      "message": "阻止 Cookie 跟踪并收集您的信息"
+   },
+   "settings_about_block_download": {
+      "message": "阻止存在风险的下载项"
+   },
+   "settings_about_cryptojackers": {
+      "message": "阻止 $settings_about_cryptojackers_link$ 窃取您计算机的资源",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "挖矿劫持者"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "确保您的防火墙和防病毒软件处于开启状态"
+   },
+   "settings_about_flag_website": {
+      "message": "标记危险网站"
+   },
+   "settings_about_help_link_message": {
+      "message": "立即获取帮助"
+   },
+   "settings_about_help_message": {
+      "message": "我们总有需要帮助的时候。"
+   },
+   "settings_about_help_title": {
+      "message": "获取帮助和技术支持"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "阅读隐私声明"
+   },
+   "settings_about_privacy_message": {
+      "message": "迈克菲非常重视您的个人隐私。"
+   },
+   "settings_about_privacy_title": {
+      "message": "隐私声明"
+   },
+   "settings_about_product_affid": {
+      "message": "关联 ID: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "二进制版本: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "扩展版本: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "产品版本"
+   },
+   "settings_about_share_title": {
+      "message": "与好友分享 %PRODUCTNAME%"
+   },
+   "settings_about_subtitle": {
+      "message": "%PRODUCTNAME% 可帮助您在上网时作出更加明智的决定。"
+   },
+   "settings_about_title": {
+      "message": "关于"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "我想了解搜索结果是否在所有搜索引擎中均安全。"
+   },
+   "settings_preference_annotation_none": {
+      "message": "我不想了解搜索结果。"
+   },
+   "settings_preference_annotation_ss": {
+      "message": "我想了解搜索结果是否仅在安全搜索中安全。"
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "我们将用颜色编码标示您的搜索结果，以向您显示哪些是安全站点。"
+   },
+   "settings_preference_annotation_title": {
+      "message": "安全搜索"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "阻止侵入式广告和弹出窗口降低浏览器的速度"
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "阻止 Cookie 跟踪并收集您的信息"
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "广告阻止程序和跟踪程序阻止程序"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "添加"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "允许"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "由于其中的迈克菲® 安全搜索扩展未启用，因此您没有“增强保护”。 立即启用并在询问权限时选择 $settings_preference_ap_alert_allow$。",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "启用"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "由于其中的迈克菲® 安全搜索扩展未安装，因此您没有“增强保护”。 立即从 Chrome Web Store 添加。"
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "使用我们基于云的威胁情报服务来识别威胁"
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "对搜索结果进行颜色编码，以显示可以安全访问的网站"
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "在搜索结果中标记不安全的网站"
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "迈克菲安全搜索"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "保护您的隐私和数据。"
+   },
+   "settings_preference_ap_title": {
+      "message": "增强保护"
+   },
+   "settings_preference_reset_button": {
+      "message": "重置"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "您是否忽略例如 %PRODUCTNAME% 通知并希望您没有忽略？ 重置通知以重新开始获取各种类型的 %PRODUCTNAME% 消息。"
+   },
+   "settings_preference_reset_title": {
+      "message": "重置设置"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "Linkedin"
+   },
+   "settings_preference_sma_message": {
+      "message": "以下是我们将标注的站点。"
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "我们将用颜色编码标示社交媒体订阅源中的链接，以向您显示哪些是安全链接。"
+   },
+   "settings_preference_sma_title": {
+      "message": "社交媒体保护"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "Youtube"
+   },
+   "settings_preference_title": {
+      "message": "其他服务"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "个侵入式广告被阻止"
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "次挖矿劫持被阻止"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "个不安全的下载项被扫描"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "个下载项被扫描"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "个链接被扫描"
+   },
+   "settings_statistics_message": {
+      "message": "这是我们当前的成果:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "个危险页面被阻止"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "个网页被扫描"
+   },
+   "settings_statistics_subtitle": {
+      "message": "我们致力于保护您在线安全。"
+   },
+   "settings_statistics_title": {
+      "message": "统计"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "已阻止的跟踪程序"
+   },
+   "settings_subtitle": {
+      "message": "自定义您的上网保护。"
+   },
+   "settings_tab_about": {
+      "message": "关于"
+   },
+   "settings_tab_preference": {
+      "message": "首选项"
+   },
+   "settings_tab_statistics": {
+      "message": "统计"
+   },
+   "settings_tab_whitelist": {
+      "message": "白名单"
+   },
+   "settings_title": {
+      "message": "上网保护"
+   },
+   "settings_whitelist_input": {
+      "message": "输入网页地址..."
+   },
+   "settings_whitelist_title": {
+      "message": "您信任的站点"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "自定义您的 $sidebar_action_panel_web_protection_preferences$。",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "“上网保护”首选项"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "以下是我们现在为您提供的保护。"
+   },
+   "sidebar_adblock_toggle": {
+      "message": "仅在本次访问期间显示此页面上的广告"
+   },
+   "sidebar_ads_blocked": {
+      "message": "个此页面上的侵入式广告被阻止"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "太棒了！"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "我们不知道哪一种会更好 - 是我们帮助保护您，还是 $[0]$ 帮助保护您...",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "您是"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "我们称之为双赢。"
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "该网站将不能引诱您上当"
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "这些威胁将完全没有机会"
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "威胁将会被阻止 - 事先保护安全总比事后说抱歉好！"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "感谢您进行清理！"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "感谢您让我们阻止该内容。 现在，让我们回到您关注的内容上。"
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "我们正在清理此站点！"
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "如果您选择继续访问，我们会将其添加到您信任的网站列表中。"
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "仍继续访问"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "始终阻止该内容"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "此网站像是一个钓鱼网站。 这意味着它可能会向您发送电子邮件，假装自己是可信组织，以欺骗您分享密码和信用卡详细信息等个人信息。"
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "由于您并不上当，它只能去窃取其他人的个人信息。"
+   },
+   "sidebar_block_page_description_red": {
+      "message": "我们将保护您的安全，因此我们有充分的理由阻止您访问此站点。"
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "此网站看起来非常危险，因此我们将阻止我们最可怕的敌人（如有）。"
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "虽然我们并不能 100% 确定，但是它可能让您遭受以下类型的威胁："
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "就像开车不系安全带一样，为什么要冒险呢？"
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "详细了解此站点存在的威胁："
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "详细了解此站点存在的威胁："
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "此站点存在以下威胁："
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "这些威胁正在伺机而动："
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "此站点存在以下威胁："
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "这些威胁正在伺机而动："
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "我们已阻止此站点，因此它将无法窃取您的个人信息"
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "此钓鱼网站已被阻止"
+   },
+   "sidebar_block_page_title_red": {
+      "message": "我们已阻止此危险站点"
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "此危险站点已被阻止"
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "此网站可能是陷阱"
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "此风险站点已被阻止"
+   },
+   "sidebar_crypto_blocked": {
+      "message": "次挖矿劫持被阻止"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "个危险页面被阻止"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "感谢您让我们在该文件对您造成损害之前将其删除。 我们是一个非常不错的安全团队！"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "太棒了！"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "我们已删除该恶意文件"
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "您可以试试手动删除他们。 导航到该文件的保存位置，然后尝试删除文件。"
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "名称："
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "明白了"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "位置："
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "下载项源："
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "抱歉，这并不起作用"
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "删除"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "下载源："
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "名称："
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "其中似乎带有病毒、间谍软件或其他潜在垃圾程序。"
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "我仍希望保留"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "如果我们在您打开之前删除该文件，将能够保护您免遭损害。"
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "您下载的文件很危险"
+   },
+   "sidebar_everything_looks_good": {
+      "message": "一切正常！"
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "您的“上网保护”已开启，正在为您提供保护。 您是否要查看设置或统计信息？"
+   },
+   "sidebar_get_help": {
+      "message": "获取帮助"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "前往“上网保护”首选项"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "我仍希望看到该内容"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "始终阻止该内容"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "该内容看上去很可疑，可能对您造成损害。 如果您确定该内容安全并且希望查看，您可以允许该内容。"
+   },
+   "sidebar_iframe_block_title": {
+      "message": "我们已阻该内容以保护您的安全"
+   },
+   "sidebar_pages_scanned": {
+      "message": "个网页被扫描"
+   },
+   "sidebar_privacy": {
+      "message": "隐私声明"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "明白了"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "该网站的软件允许他人控制您的 PC – 诈骗分子可能会利用这一点悄悄访问您的个人信息。"
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "如果要求您下载软件或提供个人信息，请确保对方是您信任的人。"
+   },
+   "sidebar_rat_detection_title": {
+      "message": "该网站允许他人控制您的 PC"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "请勿再提醒我"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "扫描此站点后，未发现任何威胁。"
+   },
+   "sidebar_site_report_description_red": {
+      "message": "我们会定期扫描站点上是否存在可疑和危险活动。 此网站不安全。"
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "我们将更深入地分析，并在下次扫描时告知您此站点是否安全。"
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "扫描此站点后，发现其未达到应有的安全级别。 请谨慎访问。"
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "此站点似乎是这种类型的网站："
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "网站威胁："
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "可能的网站类型或威胁："
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "网站威胁："
+   },
+   "sidebar_site_report_title_green": {
+      "message": "此网站看上去很安全"
+   },
+   "sidebar_site_report_title_red": {
+      "message": "此站点很危险"
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "此网站的安全状态未知。"
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "此站点看上去很危险"
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "明白了"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "您已打开安全搜索，因此我们现在可以在您访问站点之前显示站点是否安全。"
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "在搜索结果中，您将看到每个网站旁边会有颜色编码图标。 您可随意访问带绿色图标的网站，远离带黄色图标（有风险）和红色图标（危险）的网站。"
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "您现在将了解要避免访问哪些网站"
+   },
+   "sidebar_subtitle": {
+      "message": "这是我们当前的成果:"
+   },
+   "sidebar_terms": {
+      "message": "条款和条件"
+   },
+   "sidebar_title": {
+      "message": "我们致力于保护您在线安全。"
+   },
+   "sidebar_tracker_blocked": {
+      "message": "个此页面上的跟踪程序被阻止"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "个不安全的项目被阻止"
+   },
+   "sidebar_version": {
+      "message": "版本"
+   },
+   "sidebar_view_site_report": {
+      "message": "查看站点报告"
+   },
+   "sidebar_view_stats": {
+      "message": "查看我们为您提供的各种保护"
+   },
+   "site_report_category_subtitle": {
+      "message": "网站类别:"
+   },
+   "site_report_category_title": {
+      "message": "关于此站点"
+   },
+   "site_report_main_message_danger": {
+      "message": "我们定期扫描各个站点以检查可疑和恶意活动，发现该站点不安全。 详情如下。"
+   },
+   "site_report_main_message_safe": {
+      "message": "我们仔细检查了此站点的全部内容。 请尽情使用！"
+   },
+   "site_report_main_message_unknown": {
+      "message": "我们目前无可共享的内容。 下次扫描此站点后，我们将更新威胁级别。"
+   },
+   "site_report_main_message_warning": {
+      "message": "扫描该站点后，发现其未达到应有的安全级别。 请谨慎单击。"
+   },
+   "site_report_main_title": {
+      "message": "站点报告"
+   },
+   "site_report_main_url_danger": {
+      "message": "$url$ 存在危险的原因如下",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "$url$ 似乎是安全的",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "我们要深入调查才能做出最终决定"
+   },
+   "site_report_main_url_warning": {
+      "message": "$url$ 可能存在风险的原因如下",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "非常危险"
+   },
+   "site_report_status_rating_safe": {
+      "message": "安全"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "未知"
+   },
+   "site_report_status_rating_warning": {
+      "message": "稍有风险"
+   },
+   "site_report_status_text": {
+      "message": "网站状态："
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% - 网站安全评级"
+   },
+   "sma_personalize_button": {
+      "message": "个性化设置我的保护"
+   },
+   "sma_subtitle": {
+      "message": "我们位于社交媒体网站上的新社交媒体保护颜色代码链接可显示安全站点，提升您的数字生活安全性!"
+   },
+   "sma_title": {
+      "message": "安心浏览线上内容"
+   },
+   "smadesc": {
+      "message": "通过对链接进行颜色编码，提示您哪些是安全链接，从而确保您放心点击。"
+   },
+   "smatitle": {
+      "message": "了解哪些社交媒体链接是安全的，哪些存在风险"
+   },
+   "ss_first_annotation_desc": {
+      "message": "采用带颜色编码的搜索结果，让您放心浏览：我们会提示您哪些是安全网站，哪些是可疑网站。"
+   },
+   "ss_first_annotation_title": {
+      "message": "避开有风险的搜索结果"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "打开安全搜索"
+   },
+   "summarydesc": {
+      "message": "我们会在您上网浏览、搜索及购物时向您实时显示所采取的安全保护措施摘要。"
+   },
+   "summarytitle": {
+      "message": "您的实时安全信息显示板"
+   },
+   "typodesc": {
+      "message": "黑客会利用看似与真实网站几乎一样的地址创建站点，这就是“误植域名”。 我们会在您被拼写错误的 URL 引入他途时将您带回安全站点。 "
+   },
+   "typosquatting_action_accept": {
+      "message": "认可风险并继续"
+   },
+   "typosquatting_action_back": {
+      "message": "返回"
+   },
+   "typosquatting_footer_description": {
+      "message": "如果输错网站地址，最终可能就会进入非预期站点。 这些站点可能会用恐吓软件或恶意软件对您进行持续轰炸、索要个人信息、通过网络钓鱼获取密码以及做出其他恶意行为。 我们能够确保您避开这些站点。"
+   },
+   "typosquatting_footer_link": {
+      "message": "详细了解域名仿冒"
+   },
+   "typosquatting_footer_title": {
+      "message": "怎么进入了其他站点?"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "获取迈克菲全面安全保护套装"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "开始访问"
+   },
+   "typosquatting_message_button_search": {
+      "message": "搜索"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "让 %PRODUCTNAME% 带您进入正确的站点。"
+   },
+   "typosquatting_message_description_search": {
+      "message": "似乎您输错了地址。 让 %PRODUCTNAME% 带您进入正确的站点。"
+   },
+   "typosquatting_message_title": {
+      "message": "您要输入的是否是"
+   },
+   "typosquatting_notice_body": {
+      "message": "迈克菲全面安全保护套装可确保您的在线安全，并为您的所有设备提供安全保护。"
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "我们迄今已为您扫描了 $pagesScanned$ 个页面。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "我们迄今已为您扫描了 $pagesScanned$ 个页面。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME% - 误植域名"
+   },
+   "typotitle": {
+      "message": "回避假扮成真实网站的危险网站"
+   }
+}

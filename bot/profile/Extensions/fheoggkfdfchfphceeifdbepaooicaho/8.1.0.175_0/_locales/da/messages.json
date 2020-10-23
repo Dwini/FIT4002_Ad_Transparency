@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "Administrer familiens onlineadgang"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "Beskyt dine finansielle oplysninger"
+   },
+   "annotation_balloon_color_green": {
+      "message": "Dette link er sikkert"
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "Testes dagligt"
+   },
+   "annotation_balloon_color_red": {
+      "message": "Dette link er farligt"
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "Dette link er ikke blevet vurderet"
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "Dette link er mistænkeligt"
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "Vis webstedsrapport"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "$ads_counter$ reklamer blokeret",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "$ads_counter$ reklame blokeret",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "$tracker_counter$ sporingsfiler blokeret",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "$tracker_counter$ sporingsfil blokeret",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "Scanner $download_scanning_counter$ downloads",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "Scanner $download_scanning_counter$ download",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "Hent flere opskrifter på $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "Få flere artikler om $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "Får flere resultater for $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "Sammenlign priserne på $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "Se mere om $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "Mere om $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "Acceptér risikoen"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "Hent McAfee® Total Protection"
+   },
+   "block_page_go_back": {
+      "message": "Tilbage"
+   },
+   "block_page_message": {
+      "message": "Hov! Er du sikker på, at du vil gå ind på det?"
+   },
+   "block_page_notice_body": {
+      "message": "Vi sørger for, at du kan bruge din browser i sikkerhed – og med McAfee® Total Protection kan du også beskytte alle dine enheder. Du får VPN, identitetsbeskyttelse, fillås og meget mere."
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "Vi har foreløbig scannet $pagesScanned$ sider.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "Vi har foreløbig scannet $pagesScanned$ side.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "Da vi besøgte dette websted, fandt vi ud af, at det udviste en eller flere former for risikabel adfærd."
+   },
+   "block_page_popover_title": {
+      "message": "Hvorfor ser du dette?"
+   },
+   "block_page_risky_url": {
+      "message": "kan udgøre en sikkerhedsrisiko."
+   },
+   "block_page_search_input": {
+      "message": "Søg med %PRODUCTNAME%"
+   },
+   "block_page_state_danger": {
+      "message": "Meget risikabelt"
+   },
+   "block_page_state_warning": {
+      "message": "Lidt risikabelt"
+   },
+   "block_page_status_text": {
+      "message": "Status for websted:"
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% – Sikkerhedsvurdering af websteder"
+   },
+   "block_page_view_site_report": {
+      "message": "Vis webstedsrapport"
+   },
+   "category_id_100_description": {
+      "message": "Websider med virtuelle kunstgallerier, kunstneres websteder (herunder skulptur- og fotokunst), websider for museer samt websider, der behandler etniske og lokale skikke."
+   },
+   "category_id_100_name": {
+      "message": "Kunst/Kultur/Arv"
+   },
+   "category_id_101_description": {
+      "message": "Websider, der hovedsageligt anvendes til salg af, reklame for eller opfordring til brug af alkohol (f.eks. øl, vin og spiritus). Kategorien omfatter også cocktailopskrifter og vejledninger til hjemmebrygning."
+   },
+   "category_id_101_name": {
+      "message": "Alkohol"
+   },
+   "category_id_102_description": {
+      "message": "Websider, som giver brugerne mulighed for at surfe på internettet uden at afsløre deres IP-adresse eller andre personlige identifikationsoplysninger. På den måde kan de omgå lokale regler for filtrering og få adgang til alle websider. På websider med anonymiseringsfunktioner bliver der også blokeret for sporing, f.eks. ved hjælp af cookies eller browserhistorik. Nogle funktioner forhindrer også, at der videresendes oplysninger om OS-version og websidehistorik til websiden. Kategorien omfatter sider, som leverer gratis IP-adresser via proxy eller beskriver, hvordan man kan omgå filtrering."
+   },
+   "category_id_102_name": {
+      "message": "Anonymiseringsfunktioner"
+   },
+   "category_id_103_name": {
+      "message": "Voksenemner"
+   },
+   "category_id_104_description": {
+      "message": "Websider, som gør det muligt at surfe anonymt, selvom det ikke er hensigten at yde en sådan service. Kategorien omfatter URL-oversættere, cachelagring af websider og andre funktioner, der kan anonymisere brugerne, selvom det ikke er hensigten at omgå filtreringssoftware."
+   },
+   "category_id_104_name": {
+      "message": "Hjælpeprogrammer til anonymiseringsfunktioner"
+   },
+   "category_id_105_description": {
+      "message": "Websider, der leverer forretningsrelaterede oplysninger, f.eks. om virksomhedsoversigter eller forretningsplanlægning og -strategier. Kategorien omfatter også oplysninger, tjenesteydelser og produkter, der hjælper andre virksomheder med planlægning, administration og markedsføring. Kategorien omfatter markedsføringsaktiviteter på mange niveauer, når der fokuseres på driften af virksomheden. Kategorien omfatter ikke personlige sider og websteder, der fungerer som vært for andre."
+   },
+   "category_id_105_name": {
+      "message": "Virksomhed"
+   },
+   "category_id_106_description": {
+      "message": "Websider, der leverer webbaserede, sociale beskedtjenester i realtid via offentlige og private chatrum. Kategorien omfatter IRC. Kategorien omfatter ikke chat. Risiciene omfatter anstødeligt indhold, skadelig påvirkning af produktiviteten og afsløring af følsomme oplysninger."
+   },
+   "category_id_106_name": {
+      "message": "Chat"
+   },
+   "category_id_108_description": {
+      "message": "Websider, der indeholder generelle referenceoplysninger, f.eks. om offentlige tjenesteudbydere, regionale oplysninger, køreplaner, kort eller vejrudsigter."
+   },
+   "category_id_108_name": {
+      "message": "Offentlig information"
+   },
+   "category_id_109_description": {
+      "message": "Websider, som efter McAfees mening yder vejledning til ulovlige eller kriminelle aktiviteter. Det kan f.eks. være vejledning til mord eller selvmord, sabotage, bombefremstilling, opbrydning af låse, tyveri af tjenesteydelser, unddragelse af retsforfølgelse og forfalskning af narkotests. Denne kategori kan også indeholde oplysninger om, hvordan man distribuerer ulovligt indhold, begår bedrageri eller narrer forbrugere."
+   },
+   "category_id_109_name": {
+      "message": "Potentielt kriminelle aktiviteter"
+   },
+   "category_id_110_description": {
+      "message": "Websteder, der indeholder oplysninger om køb, fremstilling og brug af ulovlige stoffer. Kategorien omfatter visning, salg eller beskrivelser af brugen af stoftilbehør samt tip om lovlige stimulanser som f.eks. lim, der sniffes, misbrug af receptpligtige lægemidler eller misbrug af andre lovlige stoffer."
+   },
+   "category_id_110_name": {
+      "message": "Narkotika"
+   },
+   "category_id_111_description": {
+      "message": "Websider med akademisk indhold som fagrelaterede emner (matematik, historie), skole- eller universitetswebsider og administrationssider for uddannelsesinstitutioner (skolebestyrelser, lærerplaner)."
+   },
+   "category_id_111_name": {
+      "message": "Uddannelse/Reference"
+   },
+   "category_id_112_description": {
+      "message": "Websider, der indeholder oplysninger om film, teater, musik, tv og infotainment samt sladder fra underholdningsindustrien, og websteder om berømtheder som skuespillere og musikere. Kategorien omfatter også websteder med indhold, der er beregnet til underholdning på internettet, f.eks. horoskoper og fanklubber."
+   },
+   "category_id_112_name": {
+      "message": "Underholdning"
+   },
+   "category_id_113_description": {
+      "message": "Denne kategori bruges sammen med kategorierne Makabert indhold, Diskrimination, Pornografi, Vold eller Vold i spil/tegnefilm til at identificere URL-adresser, hvor der findes indhold, der betragtes som ekstremt inden for disse kategorier. Et eksempel er ulovlig pornografi, som er omfattet af kategorierne Pornografi, Potentielle kriminelle aktiviteter og Ekstremt."
+   },
+   "category_id_113_name": {
+      "message": "Ekstremt"
+   },
+   "category_id_114_description": {
+      "message": "Websider, der leverer finansielle oplysninger eller giver adgang til onlinekonti. Kategorien omfatter websider, der leverer finansielle oplysninger, herunder nyheder eller tjenesteydelser inden for formueforvaltning, men de giver ikke adgang til følsomme finansielle kontooplysninger som f.eks. finansiel statistik eller rådgivning vedrørende skat, realkreditlån, forsikring, akkreditering eller investering. Finansielle onlinekonti omfatter personlige eller forretningsrelaterede bankkonti, pengehåndtering, skatterådgivning, fonde, kreditkort, kreditforeninger, forsikring samt andre finansielle publikationer og tjenesteydelser. Kategorien omfatter oplysninger om værdipapirer (men ikke handel med værdipapirer), boligfinansiering og økonomiske oplysninger om offentlige myndigheder."
+   },
+   "category_id_114_name": {
+      "message": "Økonomi/Bank"
+   },
+   "category_id_115_description": {
+      "message": "Websider, der giver brugerne mulighed for at deltage i onlinespil med en indsats, eller leverer spilsoftware som f.eks. online-oddsspil, kasinospil, sportsspil og lotterier. Kategorien omfatter lotterier, hvis lodderne kan købes online, eller man kan spille online."
+   },
+   "category_id_115_name": {
+      "message": "Hasardspil"
+   },
+   "category_id_116_description": {
+      "message": "Websider, der indeholder onlinespil og relaterede oplysninger, f.eks. snydekoder, demoer, emulatorer, onlinekonkurrencer, rollespil eller klanspil samt websteder for spilproducenter, fiktive eller virtuelle sportsligaer og andre websteder med spil, hvor der ikke er mulighed for at opnå økonomiske gevinster. Kategorien omfatter spillekonsoller som f.eks. Microsoft Xbox® og Sony PlayStation®."
+   },
+   "category_id_116_name": {
+      "message": "Spil"
+   },
+   "category_id_117_description": {
+      "message": "Websider, hvor der findes indhold, som vedligeholdes af offentlige eller militære organisationer, f.eks. offentlige myndigheder eller agenturer, politi, brandvæsen, civilforsvar, antiterrororganisationer eller overstatslige organisationer som f.eks. FN eller EU. Kategorien omfatter hospitaler og medicinske faciliteter for militærpersoner og veteraner."
+   },
+   "category_id_117_name": {
+      "message": "Regering/Militær"
+   },
+   "category_id_118_description": {
+      "message": "Websider, som efter McAfees mening leverer anvisninger eller anden form for vejledning til, hvordan man kan udføre svindel, kriminalitet eller skadelige aktiviteter, der er relateret til computere. Kategorien omfatter websider med oplysninger om computerkriminalitet, herunder om skadelig hacking eller værktøjer, som hjælper kriminelle med at skaffe sig adgang til computere og netværk på ulovlig vis (vha. \"rootkits\" eller \"kiddy-scripts\"). Kategorien omfatter også andre former for elektronisk svindel, f.eks. med opkaldsprogrammer og ulovlig manipulation af elektroniske enheder."
+   },
+   "category_id_118_name": {
+      "message": "Potentiel hacking-/computerkriminalitet"
+   },
+   "category_id_119_description": {
+      "message": "Websider, der dækker sundhedsrelaterede oplysninger og sundhedsvæsenet. Sundhedsrelaterede oplysninger kan f.eks. være beskrivelser af, hvordan man forbedrer sit velbefindende både fysisk og mentalt (diæter, ernæring, fitness eller forældreskab). Sundhedsvæsenet omfatter udbydere som sygeforsikringsselskaber, hospitaler, klinikker og læger."
+   },
+   "category_id_119_name": {
+      "message": "Sundhed"
+   },
+   "category_id_120_description": {
+      "message": "Websider med komisk eller sjovt indhold. Kategorien omfatter websteder med vittigheder, sketches, tegninger og satire. Kategorien kan også omfatte indhold fra grafiske romaner, som ofte betragtes på linje med tegneserier."
+   },
+   "category_id_120_name": {
+      "message": "Humor/Tegneserier"
+   },
+   "category_id_121_description": {
+      "message": "Websider, som efter McAfees mening leverer oplysninger, som udtrykkeligt opfordrer til undertrykkelse eller diskrimination af en bestemt gruppe mennesker. Kategorien omfatter propaganda mod grupper på grundlag af race, religion, nationalitet, køn, alder, funktionsnedsættelse eller seksuel orientering. Kategorien kan omfatte politiske partier og organisationer med en hadbaseret agenda og cybermobning i den mest ekstreme form."
+   },
+   "category_id_121_name": {
+      "message": "Diskrimination"
+   },
+   "category_id_122_description": {
+      "message": "Websider, der leverer software til kommunikation i realtid via et netværk, som udelukkende kan anvendes af brugere, som står på et medlems liste over kontaktpersoner eller deltager i en chat. De fleste chatprogrammer indeholder funktioner som filoverførsel og opkald fra pc til pc og kan registrere, når andre personer logger af og på. Disse websteder kan også give anledning til bekymring, fordi de kan afsløre følsomme oplysninger, viderebringe anstødeligt indhold og anvendes til fildeling."
+   },
+   "category_id_122_name": {
+      "message": "Chat"
+   },
+   "category_id_123_description": {
+      "message": "Websider, der tilbyder køb, salg eller handel med aktier online. Kategorien omfatter også tickeroplysninger, som gør det muligt at se kurser, samt spekulation i finansielle spænd på aktiemarkedet. I kategorien Hasardspil foregår der en anden form for spil. Kategorien omfatter ikke websteder, der indeholder oplysninger om aktier, men ikke tilbyder køb, salg eller handel med aktier."
+   },
+   "category_id_123_name": {
+      "message": "Aktiehandel"
+   },
+   "category_id_124_description": {
+      "message": "Websider, der leverer software eller adgang til kontinuerlige lyd- eller videoudsendelser, f.eks. internetradio, tv-programmer eller podcasts."
+   },
+   "category_id_124_name": {
+      "message": "Internetradio/-tv"
+   },
+   "category_id_125_description": {
+      "message": "Websider relateret til jobsøgning, herunder websteder, hvor der fokuseres på udarbejdelse af cv'er, forberedelse til interviews, karriereskift, rubrikannoncer og store jobdatabaser. Kategorien omfatter også virksomheders websider, hvor der vises jobmuligheder, sider med lønsammenligninger, midlertidig ansættelse og jobannoncer fra firmaer."
+   },
+   "category_id_125_name": {
+      "message": "Jobsøgning"
+   },
+   "category_id_126_description": {
+      "message": "Websider, der helt legitimt leverer oplysninger om databeskyttelse. Kategorien omfatter detaljerede oplysninger om beskyttelse af forretnings- eller personoplysninger, intellektuel ejendomsret, personlige oplysninger og infrastruktur på internettet, private netværk eller andre former for telekommunikation. De mulige risici omfatter potentiel hacking-/computerkriminalitet. Websteder med meget risikabelt indhold, hvor der ikke skelnes mellem \"black hat\" og \"white hat\", kan også være i denne kategori og kategorien Potentiel hacking-/computerkriminalitet. Noget indhold kan udnyttes med henblik på at bryde sikkerheden eller begå ulovlige handlinger."
+   },
+   "category_id_126_name": {
+      "message": "Informationssikkerhed"
+   },
+   "category_id_127_description": {
+      "message": "Websider, der fokuserer på social interaktion som onlinedating, venskab, skolejubilæer, pennevenner, eskorttjenester eller søgning efter potentielle ægtefæller. Kategorien omfatter mange websteder, som giver medlemmerne mulighed for at kommunikere via beskeder i realtid. Websteder i denne kategori kan også gøre det muligt at få kontakt med uønskede parter og medlemsprofiler, der indeholder anstødelige oplysninger."
+   },
+   "category_id_127_name": {
+      "message": "Dating/Sociale netværk"
+   },
+   "category_id_128_description": {
+      "message": "Websider, hvor der sælges medier, software eller hjælpeprogrammer, som downloades og leveres til mobiltelefoner. Det kan f.eks. være ringetoner, logoer/temaer, spil, pauseskærme, tekstbaserede melodier og software til SMS, MMS, WAP og andre mobiltelefonprotokoller."
+   },
+   "category_id_128_name": {
+      "message": "Mobiltelefoni"
+   },
+   "category_id_129_description": {
+      "message": "Websider, der leverer lyd- eller videofiler til download, f.eks. MP3-, WAV-, AVI- og MPEG-filer. Filerne gemmes på og afspilles fra brugerens computer."
+   },
+   "category_id_129_name": {
+      "message": "Medieoverførsler"
+   },
+   "category_id_130_description": {
+      "message": "Websider, der installerer kode, som er designet specielt med henblik på at kapre computerens indstillinger eller aktivitet. Kategorien omfatter selvinstallerende apps, trojanske heste og virus, der udnytter sårbarheder i browsere og andre programmer. Status for en skadelig webside kan senere blive ændret, så den flyttes til en anden kategori. Målet med skadelige websteder er at forårsage skade på en anden computer."
+   },
+   "category_id_130_name": {
+      "message": "Skadelige websteder"
+   },
+   "category_id_131_description": {
+      "message": "Websider, som giver adgang (http://) til Usenet nyhedsgrupper og arkiver med filer, der er overført til nyhedsgrupper. Kategorien omfatter også onlinegrupper, der tilbyder lignende former for publicering af indhold i brugergrupper. URL-adresser i denne kategori kan give adgang til anstødeligt indhold."
+   },
+   "category_id_131_name": {
+      "message": "Usenet-nyheder"
+   },
+   "category_id_132_description": {
+      "message": "Websider med ikke-pornografiske billeder af nøgne mennesker. Kategorien omfatter klassiske skulpturer og malerier, kunstneriske nøgenfotografier, nogle nudistbilleder og detaljerede medicinske illustrationer."
+   },
+   "category_id_132_name": {
+      "message": "Nøgenhed"
+   },
+   "category_id_133_description": {
+      "message": "Websider for velgørende organisationer eller institutioner, der udfører en bestemt opgave til gavn for det omgivende samfund, f.eks. klubber, lobbyer, lokalsamfund, nonprofitorganisationer, fagforeninger og interessegrupper. Det kan f.eks. være loger eller spejderorganisationer."
+   },
+   "category_id_133_name": {
+      "message": "Almennyttig/Advokatur/NGO"
+   },
+   "category_id_134_description": {
+      "message": "Websider for onlinenyhedsmedier, f.eks. internationale eller regionale nyhedsmedier. Kategorien omfatter websteder med portaler, hvor der findes nyheder."
+   },
+   "category_id_134_name": {
+      "message": "Generelle nyheder"
+   },
+   "category_id_136_description": {
+      "message": "Websider, der anvendes til salg af produkter eller tjenester online. Websider, der anvendes til salg af en bred vifte af produkter, kan udgøre en risiko for brugerne, fordi de får adgang til varer, der normalt findes i andre kategorier som Pornografi, Våben, Nøgenhed eller Vold. Nogle websteder kan give adgang til varer i andre kategorier som Pornografi og Våben."
+   },
+   "category_id_136_name": {
+      "message": "Onlineshopping"
+   },
+   "category_id_137_description": {
+      "message": "Websider med billeder af vovet eller afslørende tøj, undertøj og badetøj eller fotografier af supermodeller eller berømtheder, men ikke billeder af nøgne mennesker."
+   },
+   "category_id_137_name": {
+      "message": "Provokerende påklædning"
+   },
+   "category_id_138_description": {
+      "message": "Websider, der gør det muligt at udveksle filer mellem computere og brugere til erhvervsmæssig eller personlig brug, f.eks. musik der downloades. Peer to peer-klienter gør det muligt for brugerne at søge efter og udveksle filer via et peer-netværk. De indeholder ofte spyware eller funktioner til chat i realtid. Kategorien omfatter BitTorrent-websider."
+   },
+   "category_id_138_name": {
+      "message": "Peer to peer/Fildeling"
+   },
+   "category_id_139_description": {
+      "message": "Websider, der dækker politiske partier, enkeltpersoner i det politiske liv og meninger om forskellige emner. Kategorien kan også omfatte love og politiske synspunkter mht. narkotika. Kategorien omfatter URL-adresser på politiske partier, politiske kampagner og meninger om forskellige emner, herunder politiske debatter."
+   },
+   "category_id_139_name": {
+      "message": "Politik/Mening"
+   },
+   "category_id_140_description": {
+      "message": "Personlige hjemmesider, der deler et fælles domæne, som f.eks. en server hos en internetudbyder, et universitet/en undervisningsinstitution eller en gratis webtjeneste er vært for. Kategorien omfatter også individuelle domæner, der indeholder personlige oplysninger, f.eks. på en personlig hjemmeside. Der kan være anstødeligt indhold på personlige hjemmesider."
+   },
+   "category_id_140_name": {
+      "message": "Personlige websider"
+   },
+   "category_id_141_description": {
+      "message": "Websider, der fungerer som vigtige adgangspunkter til mapper med indhold på internettet. På mange portalwebsteder findes der også en række interne funktioner eller tjenester som f.eks. søgeprogrammer, mail, nyheder og underholdning. Kategorien omfatter websteder med postlister for forskellige typer indhold."
+   },
+   "category_id_141_name": {
+      "message": "Portalwebsteder"
+   },
+   "category_id_142_description": {
+      "message": "Websider, der giver fjernadgang til et program, en onlinetjeneste eller et helt computersystem. Fjernadgang bruges ofte til lovlig betjening af en computer på en anden placering, men kan også udgøre en sikkerhedsrisiko, f.eks. fordi der er adgang via en bagdør. En bagdør, som er skrevet af den oprindelige programmør, gør det muligt at styre systemet uden brugerens viden."
+   },
+   "category_id_142_name": {
+      "message": "Fjernadgang"
+   },
+   "category_id_143_description": {
+      "message": "Websider med indhold relateret til religiøse emner, trosspørgsmål og åndelige emner, der ikke er inden for de store religioner. Kategorien omfatter religiøse diskussioner, tro, artikler og oplysninger til lokale menigheder eller grupper, f.eks. på hjemmesiden for en kirke, medmindre webstedet allerede er i kategorien Større verdensreligioner. Kategorien omfatter også sammenligninger af religioner eller websteder, som behandler religion og ideologi."
+   },
+   "category_id_143_name": {
+      "message": "Religion/Ideologi"
+   },
+   "category_id_144_description": {
+      "message": "Websider, der udnytter inaktive eller ledige computerressourcer til at udføre en fælles opgave. Opgaven kan være på firmabasis eller international basis. Kendte eksempler er SETI-programmet og Human Genome Project, der udnytter tusindvis af computeres ledige ressourcer til at analysere data."
+   },
+   "category_id_144_name": {
+      "message": "Ressourcedeling"
+   },
+   "category_id_145_description": {
+      "message": "Websider, der leverer søgeresultater, som gør det muligt for brugerne at finde oplysninger på internettet vha. nøgleord."
+   },
+   "category_id_145_name": {
+      "message": "Søgemaskiner"
+   },
+   "category_id_146_description": {
+      "message": "Websider relateret til professionelle eller organiserede sportsaktiviteter. Kategorien omfatter sportsnyheder, arrangementer og oplysninger om f.eks. tipsspil, strategier, resultater eller spillerhandler."
+   },
+   "category_id_146_name": {
+      "message": "Sport"
+   },
+   "category_id_147_description": {
+      "message": "Websider, der leverer mediestreaming eller indeholder plug-ins, som gør det muligt at afspille lyd- og videodata, før hele filen er overført."
+   },
+   "category_id_147_name": {
+      "message": "Streaming"
+   },
+   "category_id_148_description": {
+      "message": "Websider, der giver adgang til kopier af shareware og freeware, som kan downloades. Shareware distribueres via et system baseret på tillid, og den leveres gratis, men ophavsmanden beder om et mindre beløb, hvis programmet lever op til forventningerne og anvendes regelmæssigt. Freeware er software, der ikke skal betales for."
+   },
+   "category_id_148_name": {
+      "message": "Shareware/Freeware"
+   },
+   "category_id_149_description": {
+      "message": "Websider, som efter McAfees mening indeholder materiale af seksuel eller erotisk karakter. Kategorien omfatter fetishsider, animation, tegnefilm, historier og ulovlig pornografi."
+   },
+   "category_id_149_name": {
+      "message": "Pornografi"
+   },
+   "category_id_150_description": {
+      "message": "Websider, der er til fare for personlige oplysninger og virksomheders fortrolige oplysninger samt sikkerheden. Kategorien omfatter:\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>URL-adresser, som bruges til at downloade software eller køre programmer, som indsamler brugeroplysninger og sender dem til en tredjepart uden brugerens viden eller samtykke.\u003C/li>\u003Cli>Software, der overvåger eller sporer aktiviteter på andres computere ved at registrere tastetrykkene (såkaldte keyloggers).\u003C/li>\u003Cli>Websteder, som bruges til distribution af software, som indeholder spyware eller adware.\u003C/li>\u003C/ul>Kategorien adskiller sig fra kategorien Skadelige websteder pga. hensigten. Spyware og keyloggers indsamler og sender i hemmelighed oplysninger til andre. Hensigten med et skadeligt websted er at installere software eller udføre en handling uden brugernes godkendelse eller viden."
+   },
+   "category_id_150_name": {
+      "message": "Spyware/Adware/Keyloggere"
+   },
+   "category_id_151_description": {
+      "message": "Websider, der bruges til salg af, reklame for eller opfordringer til brug af tobaksprodukter, herunder cigaretter, cigarer, piber, snus og tobak samt tilbehør."
+   },
+   "category_id_151_name": {
+      "message": "Tobak"
+   },
+   "category_id_152_description": {
+      "message": "Websider med forskellige tjenester i forbindelse med private rejser eller forretningsrejser, f.eks. hoteller, resorts, flyselskaber, landtransport, biludlejning, rejsebureauer samt generel turist- og rejseinformation. Kategorien omfatter også websteder, hvor man kan købe billetter eller indkvartering."
+   },
+   "category_id_152_name": {
+      "message": "Rejser"
+   },
+   "category_id_153_description": {
+      "message": "Websider, der indeholder ægte eller livagtige billeder eller tekst, der viser, beskriver eller opfordrer til fysiske overgreb mod mennesker, dyr eller institutioner (det kan f.eks. være afbildninger af krig, selvmord eller lemlæstelse)."
+   },
+   "category_id_153_name": {
+      "message": "Vold"
+   },
+   "category_id_154_description": {
+      "message": "Websider, der er vært for reklamer eller programmer, der fungerer som reklamer. Det kan f.eks. være link, kildekode eller applets til bannere, pop op-reklamer og andre former for statiske eller dynamisk genererede reklamer, der vises på websider. Kategorien er beregnet til at blokere for reklamer på websider – ikke for de virksomheder, der leverer reklamerne eller reklametjenesterne."
+   },
+   "category_id_154_name": {
+      "message": "Webannoncer"
+   },
+   "category_id_155_description": {
+      "message": "Websider, der indeholder oplysninger om køb, fremstilling, ændring eller anvendelse af våben, f.eks. skydevåben, knive, sværd, paintballpistoler samt ammunition, sprængstoffer og våbentilbehør."
+   },
+   "category_id_155_name": {
+      "message": "Våben"
+   },
+   "category_id_156_description": {
+      "message": "Websider, der gør det muligt for brugerne at sende eller modtage mail via internettet. På disse websteder kan brugerne blive udsat for skadeligt indhold, der leveres via vedhæftede filer i mail. Der kan også være en risiko for, at fortrolige oplysninger bliver afsløret eller går tabt."
+   },
+   "category_id_156_name": {
+      "message": "Webmail"
+   },
+   "category_id_157_description": {
+      "message": "Websider, der gør det muligt for brugerne at foretage telefonopkald via internettet eller leverer oplysninger eller software til dette formål. Webtelefontjenesten kaldes også internettelefoni eller VoIP. Webtelefontjenester omfatter samtaler fra pc til pc, pc til telefon og telefon til telefon via TCP/IP-netværk."
+   },
+   "category_id_157_name": {
+      "message": "Internettelefoni"
+   },
+   "category_id_158_description": {
+      "message": "Websider, hvor brugerne kan byde på og sælge varer eller tjenester online. Kategorien omfatter websider, der fokuserer på auktionsvirksomhed. Onlineauktioner overvåges som regel ikke. På disse websteder kan brugerne blive udsat for materiale, der også findes i kategorierne Pornografi, Våben, Nøgenhed eller Vold."
+   },
+   "category_id_158_name": {
+      "message": "Auktioner/Rubrikannoncer"
+   },
+   "category_id_159_description": {
+      "message": "Websider, som giver adgang (http://) til Usenet-nyhedsgrupper, eller hvor der afholdes diskussioner og offentliggøres brugerindhold, f.eks. via realtidsmeddelelser i en interessegruppe. Kategorien omfatter også arkiver med filer, der er overført til nyhedsgrupper."
+   },
+   "category_id_159_name": {
+      "message": "Forum/BBS"
+   },
+   "category_id_160_description": {
+      "message": "Websider, hvor der anvendes uforskammet, vulgært eller uanstændigt sprog eller tilsvarende gestik."
+   },
+   "category_id_160_name": {
+      "message": "Blasfemi"
+   },
+   "category_id_161_description": {
+      "message": "Websider, der fremmer plagiering eller bedrageri ved at levere semesteropgaver, skriftlige essays eller svar på eksamensopgaver gratis eller mod betaling."
+   },
+   "category_id_161_name": {
+      "message": "Oplysninger om snyd i skolen"
+   },
+   "category_id_162_description": {
+      "message": "Websider med indhold, der beskriver eller afbilder seksuelle handlinger, men ikke skal virke seksuelt ophidsende eller erotisk. Eksempler på seksuelt materiale kan være seksualundervisning, seksuelle antydninger, humor eller sexlegetøj."
+   },
+   "category_id_162_name": {
+      "message": "Seksuelt indhold"
+   },
+   "category_id_163_description": {
+      "message": "Websider med indhold, der kan betragtes som smagløst, ulækkert, chokerende eller makabert. Kategorien omfatter smagløs humor, kropslige funktioner, fotografier af medicinsk art og fra ulykkessteder (med blod og skader), ekstreme former for kropsmodificering (cutting, branding eller genitaliepiercing) eller chokerende beskrivelser af dyrplageri."
+   },
+   "category_id_163_name": {
+      "message": "Makabert indhold"
+   },
+   "category_id_164_description": {
+      "message": "Websider, der indeholder billedspecifikke søgeresultater som f.eks. miniaturebilleder."
+   },
+   "category_id_164_name": {
+      "message": "Visuel søgemaskine"
+   },
+   "category_id_165_description": {
+      "message": "Websider med teknisk eller erhvervsmæssig fokus, hvor der leveres tjenester til onlinebeskeder eller chat, f.eks. i forbindelse med teknisk support eller interaktiv forretningskommunikation. Selvom brugerne kan skrive, hvad de vil, er der mindre risiko for at komme ud for anstødeligt indhold i disse fora. Websider, hvor der findes forskellige fora med specifikke temaer, f.eks. teknisk indhold og erhvervsindhold, findes kun i kategorierne Forum/BBS og Chat. Fora, som primært fokuserer på teknisk indhold eller erhvervsindhold, findes kun i kategorien Tekniske forummer/Virksomhedsforummer."
+   },
+   "category_id_165_name": {
+      "message": "Tekniske forummer/Virksomhedsforummer"
+   },
+   "category_id_166_description": {
+      "message": "Websider, der leverer oplysninger om spil uden at stille spillemidler til rådighed. Kategorien omfatter kasinorelaterede websider, som ikke tilbyder onlinespil, link til spil, tip, sportsspil, lotteriresultater eller spil på heste-, bil- og bådvæddeløb."
+   },
+   "category_id_166_name": {
+      "message": "Hasardspil"
+   },
+   "category_id_167_description": {
+      "message": "Websider, der leverer sms-tjenester. Det kan f.eks. være sms'er til mobiltelefoner, PDA'er, faxmaskiner og interne beskeder fra bruger til bruger på et websted eller beskeder fra et websted til et andet."
+   },
+   "category_id_167_name": {
+      "message": "Meddelelser"
+   },
+   "category_id_168_description": {
+      "message": "Websider, hvor der findes gengivelse af vold inden for rammerne af fantasi eller fiktion, f.eks. spil, tegnefilm, tegneserier eller grafiske romaner. Kategorien omfatter billeder og tekstlige beskrivelser af fysiske angreb eller slagsmål samt alvorlige legemsbeskadigelser og ødelæggelser, der skyldes brug af våben eller sprængstoffer."
+   },
+   "category_id_168_name": {
+      "message": "Vold i spil/tegnefilm"
+   },
+   "category_id_169_description": {
+      "message": "Link til websider, som er oprettet med henblik på at stjæle brugernes kontooplysninger. Linkene kommer som regel i svindelmail. Disse websteder ligner ægte websteder tilhørende kendte firmaer, og bagmændenes formål med dem er at bedrage brugerne og få fat i deres kontooplysninger med henblik på bedrageri eller tyveri."
+   },
+   "category_id_169_name": {
+      "message": "Phishing"
+   },
+   "category_id_170_description": {
+      "message": "Websider, der giver brugere mulighed for at uploade mapper og filer til en onlinenetværksserver med henblik på at sikkerhedskopiere, dele, redigere eller hente filer og mapper fra en webbrowser."
+   },
+   "category_id_170_name": {
+      "message": "Personligt netværkslager"
+   },
+   "category_id_171_description": {
+      "message": "Spammail med link til websider. URL-adresser med spamindhold spænder fra markedsføring af produkter til potentielt stødende eller bedrageriske websteder. Kategorien omfatter websteder, der udelukkende er udviklet med henblik på spamming, f.eks. via spamblogs eller spamkommentarer."
+   },
+   "category_id_171_name": {
+      "message": "Spam-URL-adresser"
+   },
+   "category_id_172_description": {
+      "message": "Websider, der giver adgang til interaktive webprogrammer som f.eks. browserbaserede kontorpakker og groupware-programmer. Kategorien omfatter websteder med fokus på erhvervsformål, akademiske formål eller individuel brug."
+   },
+   "category_id_172_name": {
+      "message": "Interaktive webprogrammer"
+   },
+   "category_id_174_description": {
+      "message": "Websider, der bruges til markedsføring af tøj, kosmetik, smykker og andre modeprodukter samt tilbehør og tjenesteydelser. Kategorien omfatter også produktanmeldelser, sammenligninger og generel forbrugerinformation om f.eks. frisørsaloner, solarier, tatovering og kropspiercing."
+   },
+   "category_id_174_name": {
+      "message": "Mode/Skønhed"
+   },
+   "category_id_175_description": {
+      "message": "Websider relateret til computersoftware og hardware, herunder forhandlere, markedsføring og anmeldelser, installation og vedligeholdelse af software og hardware samt softwareopdateringer og tilbehør som scripts, plug-ins og drivere. Hardware omfatter computerdele, tilbehør og elektronisk udstyr, der bruges sammen med computere og netværk. Kategorien omfatter markedsføring af software og hardware samt tidsskrifter, der fokuserer på produktanmeldelser af software og hardware samt udviklingen i branchen."
+   },
+   "category_id_175_name": {
+      "message": "Software/Hardware"
+   },
+   "category_id_176_description": {
+      "message": "Websider, som efter McAfees mening indeholder oplysninger om piratkopiering eller ulovlig distribution af software eller elektroniske medier, f.eks. musik eller film beskyttet af ophavsret, distribution af ulovlige licensnøgler, generatorer, softwarekoder og serienumre."
+   },
+   "category_id_176_name": {
+      "message": "Potentielt ulovlig software"
+   },
+   "category_id_177_description": {
+      "message": "URL-adresser på servere, der er vært for billeder, mediefiler eller JavaScript for et eller flere websteder og har til formål at gøre det hurtigere at hente indhold for eksisterende webservere som f.eks. Apache. På indholdsservere er der som regel ikke noget indhold, som er offentliggjort af brugere eller via surf på nettet. Brugerne kan ikke gennemse fotografierne på indholdsservere, der er vært for billeder."
+   },
+   "category_id_177_name": {
+      "message": "Indholdsserver"
+   },
+   "category_id_178_description": {
+      "message": "Websider, der leverer tjenester til offentliggørelse og vedligeholdelse af websteder, f.eks. webdesign, domæneregistrering, internetudbydere samt bredbånds- og teleselskaber, der leverer webtjenester."
+   },
+   "category_id_178_name": {
+      "message": "Internettjenester"
+   },
+   "category_id_179_description": {
+      "message": "Websider, der giver brugerne mulighed for at uploade, søge efter og dele mediefiler og fotografier, f.eks. onlinefotoalbummer. Kategorien omfatter de generelle risici ved mediedeling, men er ikke målrettet mod specifikt indhold. På nogle URL-adresser kan der også findes anstødeligt indhold."
+   },
+   "category_id_179_name": {
+      "message": "Mediedeling"
+   },
+   "category_id_180_description": {
+      "message": "Websider, der indeholder ikke-pornografiske billeder af nøgne mennesker, f.eks. klassiske skulpturer og malerier eller medicinske billeder."
+   },
+   "category_id_180_name": {
+      "message": "Utilsigtet nøgenhed"
+   },
+   "category_id_181_description": {
+      "message": "Websider, der bruges til markedsføring af produkter eller tjenester til enkeltpersoner eller virksomheder via internettet, men ikke til onlinesalg af produkterne og tjenesterne. Kategorien omfatter websteder, der som regel beskriver en virksomhed og dens tjenester eller produkter, som ikke kan købes direkte via disse websteder. Det kan f.eks. være websteder for bilfabrikanter, bryllupsfotografer eller grafiske designere."
+   },
+   "category_id_181_name": {
+      "message": "Marketing/Merchandising"
+   },
+   "category_id_183_description": {
+      "message": "Websider, hvor der tidligere var indhold, men hvis domæner er blevet solgt eller nedlagt og ikke længere er registreret. Parkerede domæner er ikke vært for deres eget indhold, men omdirigerer som regel brugerne til en generisk side, der angiver, at domænenavnet er til salg, eller til en generisk søgemaskine og portalside, hvor der i nogle tilfælde vises gyldige søgeresultater."
+   },
+   "category_id_183_name": {
+      "message": "Parkeret domæne"
+   },
+   "category_id_184_description": {
+      "message": "Websider med anmeldelser, beskrivelser og markedsføring eller salg af receptpligtige lægemidler, håndkøbsmedicin, præventionsmidler eller kosttilskud."
+   },
+   "category_id_184_name": {
+      "message": "Apotek"
+   },
+   "category_id_185_description": {
+      "message": "Websider, der indeholder oplysninger om restauranter, barer, catering, takeaway og udbringning af mad, herunder onlinebestilling. Kategorien omfatter websteder, der leverer oplysninger om placering, åbningstider, priser, menuer og relaterede kostoplysninger. Kategorien omfatter også restaurantguider og -anmeldelser samt oplysninger om caféer."
+   },
+   "category_id_185_name": {
+      "message": "Restauranter"
+   },
+   "category_id_186_description": {
+      "message": "Websider for ejendomsmæglere eller boligformidlingstjenester. Oplysninger om salg og udlejning af boliger eller butikslokaler og vejledninger vedrørende lejligheder, boliger og ejendomme samt oplysninger om vurdering og finansiering. Kategorien omfatter websteder, hvor det er muligt at gennemse mønsterhjem."
+   },
+   "category_id_186_name": {
+      "message": "Fast ejendom"
+   },
+   "category_id_187_description": {
+      "message": "Websider for rekreative organisationer og anlæg med indhold, der dækker fritids- og hobbyaktiviteter. Kategorien omfatter oplysninger om offentlige svømmebassiner, zoologiske haver, messer, festivaler, forlystelsesparker, fritidsguider, vandreture, fiskeri, ornitologi og frimærker."
+   },
+   "category_id_187_name": {
+      "message": "Fritidsinteresser/Hobbyer"
+   },
+   "category_id_188_description": {
+      "message": "Websider med dynamisk indhold, som ofte ændres, fordi brugere når som helst kan offentliggøre eller redigere indhold. Denne kategori dækker risiciene ved dynamisk indhold, som kan være alt fra uskadeligt til anstødeligt. Mange blogs og wikier fokuserer på et bestemt tema eller emne. Denne kategori bruges ofte sammen med andre kategorier, såsom Kontroversielle meninger, Uddannelse/Reference, Sport, Politik/Mening eller Nøgenhed, afhængigt af webstedets fokus eller emne. Noget indhold kan være anstødeligt."
+   },
+   "category_id_188_name": {
+      "message": "Blogge/Wiki"
+   },
+   "category_id_189_description": {
+      "message": "Websider, der giver brugerne mulighed for at sende og modtage digitale postkort og lykønskningskort via internettet. Digitale postkort formidler hilsener eller sindsstemninger, især i forbindelse med særlige lejligheder som f.eks. fødselsdage og højtider. På nogle websteder med digitale postkort findes der en særlig samling af voksenhumor. Disse websteder kan også give anledning til bekymring, fordi de kan afsløre følsomme eller hemmelige oplysninger og viderebringe anstødeligt indhold, malware eller skadelige vedhæftede filer."
+   },
+   "category_id_189_name": {
+      "message": "Digitale postkort"
+   },
+   "category_id_190_description": {
+      "message": "Websider, som benægter – eller leverer anderledes fortolkninger af – vigtige historiske kendsgerninger (f.eks. holocaustfornægtelse). Kategorien omfatter websteder, der muligvis har en vis akademisk værdi, men på mange af dem foretages der historieforfalskning med et politisk formål. På nogle URL-adresser i denne kategori findes der muligvis indhold, der betragtes som ulovligt eller anstødeligt i nogle lande."
+   },
+   "category_id_190_name": {
+      "message": "Historisk revisionisme"
+   },
+   "category_id_191_description": {
+      "message": "Websider, der leverer computerrelaterede oplysninger med uddannelsesfokus på områder som informationsteknologi, computerprogrammering og certificering. Det kan f.eks. være Linux-brugergrupper, UNIX-kommandoer, softwareøvelser eller ordbøger over tekniske termer. De fleste websteder i denne kategori kan være underbiblioteker på større domæner."
+   },
+   "category_id_191_name": {
+      "message": "Tekniske oplysninger"
+   },
+   "category_id_192_description": {
+      "message": "Websider, der leverer netværkskapacitet til onlinedating, matchmaking, eskorttjenester eller søgning efter potentielle ægtefæller. Kategorien omfatter websteder, der leverer personlige profiler eller gruppeprofiler, og giver medlemmerne mulighed for at interagere via kommunikation i realtid, meddelelser, offentlige opslag og mediedeling. Websteder i denne kategori kan også gøre det muligt at få kontakt med uønskede parter og medlemsprofiler, der indeholder anstødelige oplysninger."
+   },
+   "category_id_192_name": {
+      "message": "Dating/Kontaktannoncer"
+   },
+   "category_id_193_description": {
+      "message": "Websteder for producenter og forhandlere af transportmidler som f.eks. biler, varevogne, lastbiler, SUV'er, motorcykler og scootere. Kategorien omfatter også websteder, der anvendes til produktmarkedsføring, anmeldelser, prissammenligninger, bilmesser, biludstillinger og generel forbrugerinformation om motorkøretøjer."
+   },
+   "category_id_193_name": {
+      "message": "Motorkøretøjer"
+   },
+   "category_id_194_description": {
+      "message": "Websider, der udelukkende leverer sociale netværk til professionelle eller erhvervsmæssige formål. Kategorien omfatter websteder, der leverer oplysninger om personlige profiler eller gruppeprofiler og giver medlemmerne mulighed for at interagere via kommunikation i realtid, meddelelser, offentlige opslag og mediedeling. Kategorien omfatter også alumnewebsteder, der har en netværksfunktion."
+   },
+   "category_id_194_name": {
+      "message": "Professionelle netværk"
+   },
+   "category_id_195_description": {
+      "message": "Websider, der giver adgang til sociale netværk, som kan bruges til f.eks. venskab, dating, professionelle relationer eller interessefællesskaber. Disse websteder indeholder oplysninger om personlige profiler eller gruppeprofiler og gør det muligt for medlemmerne at kommunikere i realtid vha. meddelelser, offentlige opslag og mediedeling. Websteder i denne kategori kan også gøre det muligt at få kontakt med uønskede parter og medlemsprofiler, der indeholder anstødelige oplysninger."
+   },
+   "category_id_195_name": {
+      "message": "Sociale netværk"
+   },
+   "category_id_196_description": {
+      "message": "Websider, der giver brugerne mulighed for at skrive sætninger eller en tekstblok, som bliver oversat fra et sprog til et andet. Kategorien omfatter også websider med en sprogidentifikator."
+   },
+   "category_id_196_name": {
+      "message": "Tekstoversættere"
+   },
+   "category_id_197_description": {
+      "message": "Websider, der er vært for livemøder, videokonferencer og interaktive præsentationer – hovedsageligt for virksomheder. Webmøder omfatter generelt streaming af lyd og video og gør det muligt at overføre data eller dele kontor-apps, f.eks. i forbindelse med onlinepræsentationer. URL-adresser i denne kategori kan give anledning til båndbredde- og sikkerhedsrisici, som f.eks. at fortrolige oplysninger bliver afsløret eller går tabt."
+   },
+   "category_id_197_name": {
+      "message": "Webmøder"
+   },
+   "category_id_198_description": {
+      "message": "Websider, der indeholder udtalelser, som kan virke stødende politisk eller socialt og anspore til kontroverser. Meget af den slags indhold hører til på den offentlige opinions yderfløje. Som eksempler kan nævnes selvmordspagter, proanoreksi, fremmedfjendske, etnocentriske og fundamentalistiske synspunkter, misinformation samt kritiske undersøgelser af en bestemt gruppe mennesker."
+   },
+   "category_id_198_name": {
+      "message": "Kontroversielle meninger"
+   },
+   "category_id_199_description": {
+      "message": "IP-adresser (og eventuelle domæner, der er forbundet med dem), hvorfra der er adgang til internettet via DSL- eller kabelmodemmer. Dette indhold er generelt ikke beregnet til internetadgang via HTTP, så hvis der er adgang til internettet via disse IP-adresser, kan det være tegn på mistænkelig adfærd. Denne adfærd kan skyldes malware, der findes på hjemmecomputeren, eller hjemmelavede gateways, der er oprettet for at muliggøre anonym internetadgang."
+   },
+   "category_id_199_name": {
+      "message": "Lokale IP-adresser"
+   },
+   "category_id_200_description": {
+      "message": "En browserudnyttelse er et stykke kode, der udnytter en softwarefejl i en webbrowser, så browseren gør noget uventet. Den kan f.eks. holde op med at køre, læse eller skrive lokale filer, viderebringe en virus eller installere spyware. Skadelig kode kan udnytte HTML, JavaScript, billeder, ActiveX, Java og andre webteknologier. Udnyttelser, der også kaldes \"drive-by-downloads\", kan installeres automatisk på ubeskyttede computere, uden at brugerne opdager det. På den måde kan der blive installeret keyloggere (med henblik på at stjæle adgangskoder) og trojanske heste (med henblik på at gøre computeren til en robot). Kategorien omfatter URL-adresser, som bruges til distribution eller afvikling af browserudnyttelser."
+   },
+   "category_id_200_name": {
+      "message": "Browserudnyttelse"
+   },
+   "category_id_201_description": {
+      "message": "Websteder, der bruges til at bestjæle eller snyde forbrugere. Som eksempler på deres aktiviteter kan nævnes salg af forfalskede produkter, salg af produkter, der oprindeligt blev leveret gratis, eller ulovlig brug af et andet firma. Kategorien omfatter websteder, der udnytter venlighed eller uvidenhed, f.eks. til indsamling af penge til falsk velgørenhed eller til bedrageriske investeringsordninger. Kategorien omfatter også websteder, hvor mange forbrugere er blevet snydt eller ikke har modtaget de tjenesteydelser, de har bestilt."
+   },
+   "category_id_201_name": {
+      "message": "Forbrugerbeskyttelse"
+   },
+   "category_id_202_description": {
+      "message": "Websider, der viser seksuelt misbrug af børn (uanset hvor i verden værtsserverne er placeret), og indhold, der er anstødeligt og opmuntrer til racehad (via værtsservere i Storbritannien)."
+   },
+   "category_id_202_name": {
+      "message": "Ulovligt i Storbritannien"
+   },
+   "category_id_203_description": {
+      "message": "Websider med indhold, der behandler religiøse emner og oplysninger relateret til de store religioner. Kategorien omfatter websteder, der dækker religiøst indhold, f.eks. diskussioner, tro, ikke-kontroversielle kommentarer, artikler og oplysninger for lokale menigheder, f.eks. på hjemmesiden for en kirke eller synagoge. Religionerne i denne kategori er bahai, buddhisme, traditionel kinesisk religion, kristendom, hinduisme, islam, jainisme, jødedom, shinto, sikhisme, tenrikyo og zoroastrisme."
+   },
+   "category_id_203_name": {
+      "message": "Større verdensreligioner"
+   },
+   "category_id_204_description": {
+      "message": "Websider, hvor brugerne kan komme til at downloade skadelig eller irriterende kode uden at være klar over det. Kategorien omfatter filer, der kan downloades, f.eks. pauseskærme, værktøjslinjer og fildelingsprogrammer, som indeholder adware, spyware, virus og anden skadelig computerkode. Nogle gange tilføjes malwaren, uden at brugerne er klar over det, f.eks. når de klikker på \"Ja\" eller \"Acceptér\" uden at læse vilkårene og betingelserne. Det kan medføre, at computeren bliver langsommere, at adgangskoder kan stjæles, eller at værdifulde personlige filer går tabt eller bliver beskadiget."
+   },
+   "category_id_204_name": {
+      "message": "Skadelige filer"
+   },
+   "category_id_205_description": {
+      "message": "Websider, der indeholder potentielt uønskede programmer (PUP'er). Potentielt uønskede programmer er ofte udviklet med godgørenhed for øje, men de kan ændre computerens sikkerhedsfunktioner eller afsløre brugerens personlige oplysninger. Computerbrugere, der er bekymrede for sikkerheden eller deres personlige oplysninger, kan have gavn af at blive informeret om denne software, og i nogle tilfælde vil de måske fjerne softwaren fra deres computere."
+   },
+   "category_id_205_name": {
+      "message": "Potentielt uønskede programmer"
+   },
+   "category_id_600_description": {
+      "message": "Websider, som er sikre for familier – især for børn op til omkring ti år."
+   },
+   "category_id_600_name": {
+      "message": "For børn"
+   },
+   "category_id_601_description": {
+      "message": "Websider, som leverer indhold om historiske kendsgerninger. Kategorien omfatter indhold, der er egnet til brug på videregående uddannelser, men kategorien Uddannelse omfatter indhold til brug i før- og grundskole. Et websted med fotografisk materiale om holocaust kan virke stødende, men har alligevel akademisk værdi."
+   },
+   "category_id_601_name": {
+      "message": "Historie"
+   },
+   "category_id_602_description": {
+      "message": "BBS'er, chatrum, søgeprogrammer eller webmailsteder, der overvåges af en person eller gruppe med beføjelser til at blokere meddelelser eller indhold, der anses for upassende."
+   },
+   "category_id_602_name": {
+      "message": "Modereret"
+   },
+   "category_id_603_description": {
+      "message": "Indhold, der kun er tekst eller lyd og ikke indeholder billeder. Denne kategori kan bruges som en undtagelse med henblik på at tillade adgang til eksplicit tekst og optaget materiale, når du vil blokere billeder vha. kategorierne Pornografi, Vold eller Seksuelle materialer. Biblioteker og universiteter kan bruge denne kategori til at forhindre, at der vises anstødelige billeder i deres offentlige miljøer."
+   },
+   "category_id_603_name": {
+      "message": "Kun tekst/lyd"
+   },
+   "crypto_allow_desc": {
+      "message": "Selvom vi blokerer kryptojacking, kan du frit vælge, om du vil tillade det. Vi anbefaler ikke at gøre det, men hvis du vil støtte websteder, der tjener penge vha. kryptojacking, er det dit valg."
+   },
+   "crypto_allow_title": {
+      "message": "Vil du tillade kryptojacking?"
+   },
+   "crypto_footer_message1": {
+      "message": "McAfee og McAfee-logoet er registrerede varemærker eller varemærker tilhørende McAfee, LLC, eller dets datterselskaber i USA og andre lande."
+   },
+   "crypto_footer_message2": {
+      "message": "Andre navne og mærker kan tilhøre andre. Copyright ©2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "Vi kan hjælpe med at forhindre kryptojackere i at tappe din computers ressourcer."
+   },
+   "crypto_header_title": {
+      "message": "Blokering af kryptojacking er aktiveret"
+   },
+   "crypto_own_desc": {
+      "message": "Du behøver ikke at være i besiddelse af kryptovaluta for at blive udsat for kryptojacking. Kryptojackere stjæler din computers ressourcer, og ikke dine kryptopenge."
+   },
+   "crypto_own_title": {
+      "message": "Skal jeg have kryptovaluta for at blive udsat for kryptojacking?"
+   },
+   "crypto_protect_desc": {
+      "message": "Aktivér %PRODUCTNAME%-udvidelsen, så funktionen til blokering af kryptojacking kan beskytte dig mod kryptojackere. Du får besked, når forsøg på kryptojacking blokeres."
+   },
+   "crypto_protect_title": {
+      "message": "Hvad kan du gøre for at beskytte dig selv?"
+   },
+   "crypto_signs_desc1": {
+      "message": "Browseren virker langsom"
+   },
+   "crypto_signs_desc2": {
+      "message": "Batteriet løber tør for strøm for hurtigt"
+   },
+   "crypto_signs_desc3": {
+      "message": "Computerens ventilator kører hurtigt"
+   },
+   "crypto_signs_desc4": {
+      "message": "Større strømforbrug"
+   },
+   "crypto_signs_title": {
+      "message": "Hvad er symptomerne på, at du bliver udsat for kryptojacking?"
+   },
+   "crypto_title": {
+      "message": "McAfees blokering af kryptojacking"
+   },
+   "crypto_whatis_point1": {
+      "message": "Kryptojackere (hackere) kan få adgang til din computer, når du surfter på internettet."
+   },
+   "crypto_whatis_point2": {
+      "message": "De bruger din computers cpu-regnekraft og hukommelse til at hjælpe dem med at udføre komplekse funktioner."
+   },
+   "crypto_whatis_point3": {
+      "message": "De gør det for at tjene kryptovaluta, som er en slags onlinepenge."
+   },
+   "crypto_whatis_title": {
+      "message": "Hvad er kryptojacking"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "Tillad kryptojacking på dette websted"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "Flere oplysninger."
+   },
+   "cryptojacking_banner_message": {
+      "message": "Vi har blokeret kryptojacking på dette websted. Din computer er beskyttet, og du kan fortsætte med at surfe på internettet i sikkerhed. $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "Vi har kontrolleret denne side og blokeret det indhold, der kommer fra potentielt skadelige eller mistænkelige websteder. Du skal kun tillade dette indhold, hvis du er sikker på, at det kommer fra sikre websteder."
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "Vis alt blokeret indhold"
+   },
+   "overlay_accept_ss": {
+      "message": "Bekræft, at du bruge McAfee® Sikker søgning som din standardsøgemaskine"
+   },
+   "overlay_add_ss": {
+      "message": "Tilføj McAfee® Sikker søgning til din browser"
+   },
+   "overlay_ss_description": {
+      "message": "Vi markerer usikre websteder i dine søgeresultater, så du ved, hvilke steder det er sikkert at besøge, og hvilke er ikke."
+   },
+   "overlay_step_1": {
+      "message": "TRIN 1"
+   },
+   "overlay_step_2": {
+      "message": "TRIN 2"
+   },
+   "phishingdesc": {
+      "message": "Hackere forsøger at snyde dig til at udlevere dine personlige oplysninger ved at sende dig falske phishing-mails og lokke dig til at besøge falske websteder. Men der er ikke noget at fiske efter, for vi passer på dig."
+   },
+   "phishingtitle": {
+      "message": "Beskyt dine personlige oplysninger"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "McAfee® WebAdvisor"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "Vil du tilføje Sikker søgning, så du undgår at komme ind på grimme steder?"
+   },
+   "search_toast_body_text_test": {
+      "message": "Vil du prøve Sikker søgning nu, så du ved, hvilke websteder er sikre?"
+   },
+   "search_toast_done": {
+      "message": "Færdig"
+   },
+   "search_toast_heading_compliant": {
+      "message": "Du har ikke slået Sikker søgning til – så vær forsigtig!"
+   },
+   "search_toast_heading_test": {
+      "message": "Få sikkerhedstip i dine søgeresultater"
+   },
+   "search_toast_no_thanks": {
+      "message": "Nej tak"
+   },
+   "search_toast_ok": {
+      "message": "OK"
+   },
+   "search_toast_option_compliant": {
+      "message": "Ja, tilføj Sikker søgning til min browser, og søg som standard ved hjælp af $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "Ja, tilføj Sikker søgning, og søg som standard ved hjælp af $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "Sikker søgning leder dig væk fra risikofyldte websteder i søgeresultaterne."
+   },
+   "search_toast_sub_heading_test": {
+      "message": "Sikker søgning markerer de potentielt farlige websteder i søgeresultaterne."
+   },
+   "search_toast_yes": {
+      "message": "Ja"
+   },
+   "securesearchdesc": {
+      "message": "Brug internettet uden bekymringer. Vi markerer søgeresultaterne med farver, så du kan se, hvilke websteder der er sikre, og hvilke du bør holde dig fra."
+   },
+   "securesearchtitle": {
+      "message": "Pas på de usikre søgeresultater"
+   },
+   "settings_about_adblock": {
+      "message": "Bloker reklamer og pop op-meddelelser, der gør din browser langsom"
+   },
+   "settings_about_adblock_tracking": {
+      "message": "Bloker cookies, som sporer dig og indsamler oplysninger om dig"
+   },
+   "settings_about_block_download": {
+      "message": "Bloker risikable downloads"
+   },
+   "settings_about_cryptojackers": {
+      "message": "Blokerer $settings_about_cryptojackers_link$ fra at stjæle dine computerressourcer",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "kryptojackere"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "Sørg for, at din firewall og antivirus er slået til"
+   },
+   "settings_about_flag_website": {
+      "message": "Markér farlige websteder"
+   },
+   "settings_about_help_link_message": {
+      "message": "Få hjælp nu"
+   },
+   "settings_about_help_message": {
+      "message": "Vi har alle brug for lidt hjælp fra tid til anden."
+   },
+   "settings_about_help_title": {
+      "message": "Få hjælp og teknisk support"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "Læs meddelelsen om beskyttelse af personlige oplysninger"
+   },
+   "settings_about_privacy_message": {
+      "message": "McAfee tager beskyttelsen af dine personlige oplysninger alvorligt."
+   },
+   "settings_about_privacy_title": {
+      "message": "Meddelelse om beskyttelse af personlige oplysninger"
+   },
+   "settings_about_product_affid": {
+      "message": "Associeret id: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "Version af binær fil: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "Udvidelsesversion: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "Produktversion"
+   },
+   "settings_about_share_title": {
+      "message": "Del %PRODUCTNAME% med dine venner og bekendte"
+   },
+   "settings_about_subtitle": {
+      "message": "%PRODUCTNAME% hjælper dig med at træffe de rigtige beslutninger online."
+   },
+   "settings_about_title": {
+      "message": "Om"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "Markér sikre søgeresultater i alle søgemaskiner."
+   },
+   "settings_preference_annotation_none": {
+      "message": "Markér ikke søgeresultaterne."
+   },
+   "settings_preference_annotation_ss": {
+      "message": "Markér sikre søgeresultater kun i Sikker søgning."
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "Vi markerer søgeresultaterne med farver, så du ved, hvilke websteder der er sikre."
+   },
+   "settings_preference_annotation_title": {
+      "message": "Sikker søgning"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "Stopper uønskede reklamer og pop op-meddelelser, så de ikke gør din browser langsom"
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "Blokerer cookies, som sporer din færden og indsamler oplysninger om dig"
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "Blokering af reklamer og sporingsfiler"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "Tilføj"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "Tillad"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "Du har ikke ekstra beskyttelse, fordi udvidelsen til McAfee® sikker søgning, som er en del af pakken, ikke er aktiveret. Aktivér det nu, og vælg $settings_preference_ap_alert_allow$, når du bliver bedt om at give tilladelse.",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "Aktivér"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "Du har ikke ekstra beskyttelse, fordi udvidelsen til McAfee® sikker søgning, som er en del af pakken, ikke er installeret. Tilføj den nu fra Chrome-webshoppen."
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "Registrerer trusler vha. vores cloudbaserede trusselsefterretningstjeneste"
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "Markér søgeresultater med farver, så du ved, hvilke websteder det er sikkert at besøge"
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "Markerer de websteder i dine søgeresultater, som det er usikkert at besøge"
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "McAfee Sikker søgning"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "Beskyt dine personlige oplysninger og data."
+   },
+   "settings_preference_ap_title": {
+      "message": "Ekstra beskyttelse"
+   },
+   "settings_preference_reset_button": {
+      "message": "Nulstil"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "Har du ignoreret en %PRODUCTNAME%-advarsel og har fortrudt det? Advarsler kan nulstilles, så du kan begynde helt forfra med %PRODUCTNAME%-advarsler."
+   },
+   "settings_preference_reset_title": {
+      "message": "Nulstil indstillinger"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook-"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "Linkedin"
+   },
+   "settings_preference_sma_message": {
+      "message": "Funktionen fungerer på websteder til følgende tjenester."
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "Vi markerer links på de sociale medier med farver, så du ved, hvilke af dem det er sikkert at klikke på."
+   },
+   "settings_preference_sma_title": {
+      "message": "Beskyttelse på sociale medier"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "Youtube"
+   },
+   "settings_preference_title": {
+      "message": "YDERLIGERE TJENESTER"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "uønskede reklamer blokeret"
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "forsøg på kryptojacking blokeret"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "usikre downloads blokeret"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "downloads scannet"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "links scannet"
+   },
+   "settings_statistics_message": {
+      "message": "Her er, hvad vi har gjort indtil videre:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "farlige websteder blokeret"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "sider scannet"
+   },
+   "settings_statistics_subtitle": {
+      "message": "Vi er her for at beskytte dig online."
+   },
+   "settings_statistics_title": {
+      "message": "STATISTIK"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "sporingsfiler blokeret"
+   },
+   "settings_subtitle": {
+      "message": "Tilpas din webbeskyttelse."
+   },
+   "settings_tab_about": {
+      "message": "Om"
+   },
+   "settings_tab_preference": {
+      "message": "Indstilling"
+   },
+   "settings_tab_statistics": {
+      "message": "Statistik"
+   },
+   "settings_tab_whitelist": {
+      "message": "Hvidliste"
+   },
+   "settings_title": {
+      "message": "Webbeskyttelse"
+   },
+   "settings_whitelist_input": {
+      "message": "Indtast en webadresse ..."
+   },
+   "settings_whitelist_title": {
+      "message": "PÅLIDELIGE WEBSTEDER"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "Tilpas $sidebar_action_panel_web_protection_preferences$.",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "Indstillinger for webbeskyttelse"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "Sådan beskytter vi dig."
+   },
+   "sidebar_adblock_toggle": {
+      "message": "Vis reklamer på denne side kun ved det ene besøg"
+   },
+   "sidebar_ads_blocked": {
+      "message": "uønskede reklamer blokeret på denne side"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "Sådan!"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "Hvad er bedre – at vi beskytter dig, eller at $sidebar_badge_collection_block_page_description_italic$ beskytter dig selv?",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "du"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "Det er nok godt at have begge dele."
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "Dette websted kan ikke længere narre dig"
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "Vi får hurtigt bugt med disse trusler"
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "Det er blokeret. Ekstra sikkerhed kan aldrig skade!"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "Tak for oprydningen!"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "Så er det indhold blokeret. Nu kan du koncentrere dig om de vigtige ting."
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "Vi sørger for, at dette websted er pænt og ryddeligt."
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "Hvis du alligevel vælger at besøge webstedet, tilføjer vi det til listen over websteder, du har tillid til."
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "Lad mig besøge det alligevel"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "Fortsæt med at blokere det"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "Det her ligner et phishingwebsted. Det betyder, at det kunne finde på at sende dig mails, der ligner mails sendt fra en pålidelig virksomhed, og dermed forsøge at narre dig til at aflevere dine personlige oplysninger som dine adgangskoder og kreditkortoplysninger."
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "De skal vist fiske andre steder efter folks personlige oplysninger, for du bider ikke på krogen."
+   },
+   "sidebar_block_page_description_red": {
+      "message": "Vi er her for at beskytte dig, så der var en god grund til, at vi stoppede dig."
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "Det ser farligt ud, og vi ville ikke engang sende vores værste fjende dertil (ikke fordi vi har nogen)."
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "Selvom vi ikke var 100 % sikre, så har vi blokeret det alligevel for at forhindre disse potentielle risici:"
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "Det ville være som at køre bil uden sikkerhedssele – og det er ikke jo værd at løbe den risiko."
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "Læs mere om truslerne på dette websted:"
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "Læs mere om truslerne på dette websted:"
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "Dette websted indeholder følgende trusler:"
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "Her er der følgende trusler, der ligger på lur:"
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "Dette websted indeholder følgende trusler:"
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "Her er der følgende trusler, der ligger på lur:"
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "Vi har blokeret dette websted, så det ikke kan stjæle dine personlige oplysninger"
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "Dette phishingwebsted er blokeret"
+   },
+   "sidebar_block_page_title_red": {
+      "message": "Vi har blokeret dette farlige websted"
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "Dette farlige websted er blevet blokeret"
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "Dette websted kan være en fælde"
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "Dette risikable websted er blevet blokeret"
+   },
+   "sidebar_crypto_blocked": {
+      "message": "forsøg på kryptojacking blokeret"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "farlige websteder blokeret"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "Vi er glade for, at vi nåede at slette den, før den kunne gøre skade. Sammen med dig er vi jo et godt sikkerhedsteam!"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "Sådan!"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "Vi har slettet denne skadelige fil"
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "Prøv at slette dem manuelt. Find frem til den placering, hvor du har gemt filerne, og prøv at slette dem derfra."
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "Navn:"
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "Forstået"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "Placering:"
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "Downloadkilde:"
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "Beklager, men det fungerer ikke"
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "Slet den"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "Downloadkilde:"
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "Navn:"
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "Det ser ud til, at filen indeholder virus, spyware eller andre uønskede eller skadelige programmer."
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "Jeg vil beholde den alligevel"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "Hvis vi sletter filen, inden du åbner den, kan vi nå at forhindre, at den gør skade."
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "Den fil, du har hentet, er farlig"
+   },
+   "sidebar_everything_looks_good": {
+      "message": "Alt ser ud til at være i orden!"
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "Webbeskyttelsen er slået til og fungerer korrekt. Vil du gennemgå dine indstillinger eller se statistikken?"
+   },
+   "sidebar_get_help": {
+      "message": "Få hjælp"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "Åbn indstillinger for webbeskyttelse"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "Jeg vil se det alligevel"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "Fortsæt med at blokere det"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "Det ser mistænkeligt ud og kan være skadeligt. Hvis du er sikker på, at indholdet er sikkert, og du gerne vil se det, kan du angive, at du vil beholde det."
+   },
+   "sidebar_iframe_block_title": {
+      "message": "Vi har blokeret dette indhold for at beskytte dig"
+   },
+   "sidebar_pages_scanned": {
+      "message": "sider scannet"
+   },
+   "sidebar_privacy": {
+      "message": "Meddelelse om beskyttelse af personlige oplysninger"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "Forstået"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "Softwaren på dette websted gør det muligt for andre at få adgang til din computer, og hackere kan bruge den til at opsnappe dine personlige data."
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "Når du bliver spurgt, om du vil downloade noget software eller angive dine personlige oplysninger, skal du kun gøre det, når du stoler på den, der spørger."
+   },
+   "sidebar_rat_detection_title": {
+      "message": "Dette websted kan bruges af andre til at få kontrol over din computer"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "Advar mig ikke igen om dette websted"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "Vi har scannet det og fandt ingen trusler."
+   },
+   "sidebar_site_report_description_red": {
+      "message": "Vi scanner jævnligt websteder for mistænkelig opførsel og farlig aktivitet. Dette websted er ikke sikkert."
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "Vi undersøger det nærmere og giver dig besked, om webstedet er sikkert eller farligt, næste gang vi scanner det."
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "Vi har scannet webstedet og fundet ud af, at det ikke er helt sikkert. Vær forsigtig, hvis du vælger at besøge det alligevel."
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "Det ser ud til, at webstedet er af denne type:"
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "Trusler på webstedet:"
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "Mulig webstedstype eller mulige trusler på det:"
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "Trusler på webstedet:"
+   },
+   "sidebar_site_report_title_green": {
+      "message": "Dette websted ser ud til at være sikkert"
+   },
+   "sidebar_site_report_title_red": {
+      "message": "Dette websted er farligt"
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "Sikkerhedsstatus for dette websted er ukendt"
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "Dette websted ser risikabelt ud"
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "Forstået"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "Du har slået Sikker søgning til, så nu kan vi vise dig, om webstedet er sikkert eller farligt, før du besøger det."
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "Der vil være farveikoner ud for webstederne i søgeresultaterne. Det er sikkert at besøge websteder markeret med grønt, mens de risikable websteder er markeret med orange, og de farlige med rødt."
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "Så ved du, hvilke websteder du skal undgå"
+   },
+   "sidebar_subtitle": {
+      "message": "Her er, hvad vi har gjort indtil videre:"
+   },
+   "sidebar_terms": {
+      "message": "Vilkår og betingelser"
+   },
+   "sidebar_title": {
+      "message": "Vi er her for at hjælpe med at holde dig beskyttet online."
+   },
+   "sidebar_tracker_blocked": {
+      "message": "sporingsfiler blokeret på denne side"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "usikre elementer blokeret"
+   },
+   "sidebar_version": {
+      "message": "Version"
+   },
+   "sidebar_view_site_report": {
+      "message": "Vis webstedsrapport"
+   },
+   "sidebar_view_stats": {
+      "message": "Vis, hvordan vi har beskyttet dig"
+   },
+   "site_report_category_subtitle": {
+      "message": "Kategori for websted:"
+   },
+   "site_report_category_title": {
+      "message": "Om dette websted"
+   },
+   "site_report_main_message_danger": {
+      "message": "Vi scanner regelmæssigt websteder for mistænkelige og skadelige aktiviteter – og det her er bare ikke sikkert. Du kan se flere oplysninger nedenfor."
+   },
+   "site_report_main_message_safe": {
+      "message": "Vi har finkæmmet webstedet, og det ser fint ud. God fornøjelse."
+   },
+   "site_report_main_message_unknown": {
+      "message": "Vi har ikke noget at dele endnu. Vi opdaterer trusselsniveauet, næste gang vi scanner webstedet."
+   },
+   "site_report_main_message_warning": {
+      "message": "Vi har scannet webstedet og fundet ud af, at det ikke er helt sikkert. Tænk dig om, før du klikker."
+   },
+   "site_report_main_title": {
+      "message": "Webstedsrapport"
+   },
+   "site_report_main_url_danger": {
+      "message": "Derfor kan det være farligt at bruge $url$",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "Det ser ud til, at $url$ er sikkert",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "Vi skal undersøge sagen nærmere, før vi træffer en afgørelse"
+   },
+   "site_report_main_url_warning": {
+      "message": "Derfor kan det være risikabelt at bruge $url$",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "Meget risikabelt"
+   },
+   "site_report_status_rating_safe": {
+      "message": "Sikker"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "Ukendt"
+   },
+   "site_report_status_rating_warning": {
+      "message": "Lidt risikabelt"
+   },
+   "site_report_status_text": {
+      "message": "Status for websted:"
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% – Sikkerhedsvurdering af websteder"
+   },
+   "sma_personalize_button": {
+      "message": "Tilpas min beskyttelse"
+   },
+   "sma_subtitle": {
+      "message": "Vi markerer links på sociale medier med farver, så du ved med det samme, hvilke links der er sikre at klikke på – vi gør det for at beskytte dig i den digitale verden."
+   },
+   "sma_title": {
+      "message": "Scrol igennem dit feed i sikkerhed"
+   },
+   "smadesc": {
+      "message": "Læs dit feed uden bekymringer, takket være links, der er markeret med farver, så du ved, hvilke af dem der er sikre at klikke på."
+   },
+   "smatitle": {
+      "message": "Find ud at, hvilke links på de sociale medier der er sikre at klikke på, og hvilke du bør undgå"
+   },
+   "ss_first_annotation_desc": {
+      "message": "Surf uden bekymringer, takket være søgeresultater, der er markeret med farver – så du ved, hvilke websteder der er sikre, og hvilke du skal undgå."
+   },
+   "ss_first_annotation_title": {
+      "message": "Pas på de usikre søgeresultater"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "Slå sikker søgning til"
+   },
+   "summarydesc": {
+      "message": "Vi vil vise dig en detaljeret oversigt over de trin, vi har taget for at beskytte dig, mens du surfer, søger og shopper på internettet."
+   },
+   "summarytitle": {
+      "message": "Dit sikkerheds-dashboard i realtid"
+   },
+   "typodesc": {
+      "message": "Hackere opretter falske websteder, hvis adresser er stavet på næsten samme måde som adresser på kendte, legitime websteder. Dette fænomen kaldes \"typosquatting\". Vi fører dig tilbage til sikkerhed, hvis du laver en farlig slåfejl i URL-adressen og risikerer og havne på et af de falske websteder. "
+   },
+   "typosquatting_action_accept": {
+      "message": "Acceptér risikoen og fortsæt"
+   },
+   "typosquatting_action_back": {
+      "message": "Gå tilbage"
+   },
+   "typosquatting_footer_description": {
+      "message": "Hvis du skriver webadressen forkert, kan du ende på et forkert websted. På disse websteder kan du blive udsat for scareware eller malware, du kan blive bedt om at angive personlige oplysninger, og du kan blive udsat for phishing efter adgangskoder m.m. Vi sørger for, at du ikke kommer ind på disse websteder."
+   },
+   "typosquatting_footer_link": {
+      "message": "Læs mere om url-highjacking"
+   },
+   "typosquatting_footer_title": {
+      "message": "Hvordan kom jeg hertil?"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "Hent McAfee® Total Protection"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "Før mig dertil"
+   },
+   "typosquatting_message_button_search": {
+      "message": "Søg"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "Lad %PRODUCTNAME% sørge for, at du kommer ind på det rigtige websted."
+   },
+   "typosquatting_message_description_search": {
+      "message": "Det ser ud til, at du skrev en forkert adresse. Lad %PRODUCTNAME% sørge for, at du kommer ind på det rigtige websted."
+   },
+   "typosquatting_message_title": {
+      "message": "Mente du"
+   },
+   "typosquatting_notice_body": {
+      "message": "Vi sørger for din sikkerhed online – og med McAfee® Total Protection kan du også beskytte alle dine enheder."
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "Vi har foreløbig scannet $pagesScanned$ sider.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "Vi har foreløbig scannet $pagesScanned$ side.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME% – url-highjacking"
+   },
+   "typotitle": {
+      "message": "Undgå farlige websteder, der ved første blik ser pålidelige ud"
+   }
+}

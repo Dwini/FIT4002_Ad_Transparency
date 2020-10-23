@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="site_status_title" x-mclocalizedtext="true"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+  <link href=".././css/site_status_block_page.css" rel="stylesheet"></head>
+  <body>
+    <section class="container">
+      <img class="logo" src="../images/site_status/logo.svg" alt="WebAdvisor logo" />
+      <div class="site-status" x-mcwssupsell="false">
+        <div class="site-status__side-logo">
+          <img src="" alt="avatar"/>
+        </div>
+        <div class="site-status__content">
+          <div class="content__description">
+            <!-- site status title -->
+            <div class="description__header">
+              <p id="site_status_header_text" class="header__status--text" x-mclocalizedtext="true"></p>
+              <span>&nbsp &nbsp</span>
+              <p id="site_status_state"></p>
+              <span>&nbsp &nbsp</span>
+              <img id="site_status_header_icon" src="" alt="site status icon" />
+            </div>
+            <!-- site status url|suggested url-->
+            <div class="description__url">
+              <p id="site_status_url"></p>
+            </div>
+            <!-- body text -->
+            <div class="description__body">
+              <p id="site_status_body_text"></p>
+            </div>
+            <!-- Page categories -->
+            <div class="description__categories">
+              <ul>
+              </ul>
+            </div>
+            <!-- search bar -->
+            <div class="description__search-input">
+              <input id="search_suggest_input" x-inputplaceholder="true" type="text" placeholder="">
+              <img id="search-btn" src="../images/site_status/search_icon.svg" alt="search icon">
+            </div>
+            <!-- search suggestions -->
+            <div class="search__suggest">
+              <ul>
+              </ul>
+            </div>
+          </div>
+          <div class="description__actions">
+            <a id="site_status_block_page_accept_risk" class="actions__accept" x-mclocalizedtext="true"></a>
+            <a id="site_status_block_page_go_back" class="actions__decline" x-mclocalizedtext="true"></a>
+          </div>
+          <div class="content__footer">
+            <p id="site_status_footer_note" x-mclocalizedtext="true"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <img class="wave" src="" alt="bottom wave" />
+    <div class="site-status__submit_ticket">
+      <div class="submit_ticket__bubble">
+        <p id="site_status_submit_ticket_text"></p>
+      </div>
+    </div>
+  <script type="text/javascript" src="../site_status_block_page.js"></script></body>
+</html>

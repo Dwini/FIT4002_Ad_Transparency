@@ -1,0 +1,28 @@
+/*!
+ * 
+ * MCAFEE RESTRICTED CONFIDENTIAL
+ * Copyright (c) 2020 McAfee, LLC
+ * 
+ * The source code contained or described herein and all documents related
+ * to the source code ("Material") are owned by McAfee or its
+ * suppliers or licensors. Title to the Material remains with McAfee
+ * or its suppliers and licensors. The Material contains trade
+ * secrets and proprietary and confidential information of McAfee or its
+ * suppliers and licensors. The Material is protected by worldwide copyright
+ * and trade secret laws and treaty provisions. No part of the Material may
+ * be used, copied, reproduced, modified, published, uploaded, posted,
+ * transmitted, distributed, or disclosed in any way without McAfee's prior
+ * express written permission.
+ * 
+ * No license under any patent, copyright, trade secret or other intellectual
+ * property right is granted to or conferred upon you by disclosure or
+ * delivery of the Materials, either expressly, by implication, inducement,
+ * estoppel or otherwise. Any license under such intellectual property rights
+ * must be expressed and approved by McAfee in writing.
+ * 
+ * 
+ */
+.mc-launcher-apps-container{display:flex;flex-direction:column;width:330px;max-height:500px;background-color:#FFFFFF;border-radius:8px}.mc-apps-header-tab{flex:1;display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer;height:55px}.mc-apps-header-tab.mc-apps-launcher-active{background-color:#F5F6FA}.mc-apps-header-tab.mc-apps-launcher-active span{height:2px;width:110px;background-color:#1D0FBC;position:absolute;bottom:0px}.mc-apps-header-tab.mc-border-left{border-left:1px solid #E6E9F0}.mc-apps-header-tab.mc-bradius-topleft{border-radius:8px 0px 0px 0px}.mc-apps-header-tab.mc-bradius-topright{border-radius:0px 8px 0px 0px}.mc-launcher-apps-container-body{display:flex;flex:1;max-height:405px}.mc-launcher-apps-container-foorter{height:40px;display:flex;justify-content:flex-end;align-items:center;border-radius:0px 0px 8px 8px;border-top:1px solid #E6E9F0}.mc-launcher-app-inner-container{display:none;max-height:405px;padding-bottom:5px}.mc-launcher-app-inner-container.mc-apps-launcher-active{flex:1;justify-content:center;flex-wrap:wrap;overflow-y:auto;display:flex}.mc-launcher-app-inner-container::-webkit-scrollbar{width:8px}.mc-launcher-app-inner-container::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 6px #C1C7D2;background:#C1C7D2}.mc-launcher-app{display:flex;justify-content:center;align-items:center;flex-direction:column;width:105px;height:100px;background-color:#FFFFFF;text-decoration:none}.mc-launcher-app:visited,.mc-launcher-app:focus,.mc-launcher-app:active{text-decoration:none}.mc-launcher-app:hover{text-decoration:underline !important;color:#5A6175 !important}.mc-launcher-app .mc-item-name{margin-top:4px;color:#5A6175;font-weight:600}header.mc-launcher-apps-container-header{border-radius:8px 8px 0 0;display:flex;flex-direction:row;height:55px;border-bottom:1px solid #E6E9F0;background-color:#FFFFFF}
+
+
+/*# sourceMappingURL=../../sourceMap/chrome/app_launcher.map*/

@@ -24,9 +24,6 @@ def create_firefox_driver(ip=None, pos=None):
     profile = webdriver.FirefoxProfile()
     profile.set_preference('dom.webdriver.enabled', False)
     profile.set_preference('useAutomationExtension', False)
-    #profile.setPreference("browser.private.browsing.autostart", False)
-    #profile.setPreference("permissions.default.stylesheet", 2)
-    #profile.setPreference("permissions.default.image", 2)
 
     # Location spoofing
     if os.getenv('CHANGE_LOCATION') == '1':
@@ -42,7 +39,7 @@ def create_firefox_driver(ip=None, pos=None):
 
     profile.update_preferences()
     driver = webdriver.Firefox(
-        executable_path=GECKODRIVER_PATH,
+        executable_path='./driver/geckodriver.exe',
         firefox_profile=profile,
         desired_capabilities=DesiredCapabilities.FIREFOX,
         options=firefox_options
@@ -59,7 +56,8 @@ def create_firefox_driver(ip=None, pos=None):
     return driver
 
 def create_driver(ip=None, pos=None):
-    return create_firefox_driver(ip=ip, pos=pos)
+    #return create_firefox_driver(ip=ip, pos=pos)
+    return create_chrome_driver(ip=ip, pos=pos)
 
 def create_driver_with_proxy(pos):
     i = 0
@@ -90,3 +88,49 @@ def create_driver_with_proxy(pos):
     log.info("Proxy change successful (location: %s)" % location)
 
     return session
+
+def create_chrome_driver(ip=None, pos=None):
+    chromeOptions = webdriver.ChromeOptions()
+    dirname = os.path.dirname(__file__)
+    user_data = os.path.join(dirname + "/profile")
+
+    chromeOptions.add_argument("--user-data-dir=" + user_data)
+    # chromeOptions.add_argument("--password-store=" + 'gnome')
+
+    chromeOptions.add_experimental_option(
+        'excludeSwitches',
+        [
+            'disable-background-networking',
+            'disable-sync',
+            'disable-translate',
+            'disable-web-resources',
+            'disable-default-apps',
+            'disable-zero-browsers-open-for-tests',
+            'disable-popup-blocking',
+            'enable-automation',
+            'remote-debugging',
+            'remote-debugging-port',
+            'test-type',
+            'use-mock-keychain',
+            'enable-blink-features',
+            'no-first-run',
+            'disable-client-side-phishing-detection',
+            'disable-hang-monitor',
+            'disable-prompt-on-repost',
+            'enable-logging',
+            'password-store',
+            'remote-debugging-targets',
+            'password-store',
+            'remote-debugging',
+            'remote',
+            'debugging'
+        ])
+
+
+
+    driver = webdriver.Chrome(executable_path="./driver/executables/chromedriver_86.exe", options=chromeOptions)
+
+    driver.execute_script("window.navigator.geolocation.getCurrentPosition=function(success){" +
+                          "var position = {coords : {latitude:" + str(pos['lat']) + ", longitude:" + str(pos['lon']) + "}  }; success(position);}")
+
+    return driver

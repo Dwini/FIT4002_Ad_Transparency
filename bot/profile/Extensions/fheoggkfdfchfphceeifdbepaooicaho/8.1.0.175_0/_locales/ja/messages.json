@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "家族のオンライン アクセスを管理"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "財務情報を保護"
+   },
+   "annotation_balloon_color_green": {
+      "message": "このリンクは安全です"
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "毎日テストしています"
+   },
+   "annotation_balloon_color_red": {
+      "message": "このリンクは危険です"
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "このリンクは評価されていません"
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "これは不審なリンクです"
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "サイト レポートを表示"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "$ads_counter$ 件のブロックした広告",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "$ads_counter$ 件のブロックした広告",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "$tracker_counter$ 件のブロックしたトラッカー",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "$tracker_counter$ 件のブロックしたトラッカー",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "$download_scanning_counter$ 件のダウンロードのスキャンを実行しています",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "$download_scanning_counter$ 件のダウンロードのスキャンを実行しています",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "$search_text$ に関する追加のレシピを検出",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "$search_text$ に関する追加の記事を検出",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "$search_text$ の追加の検索結果を検出",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "$search_text$ の様々な価格を比較",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "$search_text$ に関する追加項目を検出",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "追加の $search_text$ を検出",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "リスクを容認する"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "マカフィー® トータル プロテクションを入手"
+   },
+   "block_page_go_back": {
+      "message": "戻る"
+   },
+   "block_page_message": {
+      "message": "注意！ 本当に移動しますか？"
+   },
+   "block_page_notice_body": {
+      "message": "ブラウザーは保護されています - マカフィー® トータル プロテクションですべてのデバイスを保護してください。 VPN、アイデンティティ プロテクション、ファイル ロックなどを入手することができます。"
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "これまでに $pagesScanned$ ページをスキャンしました。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "これまでに $pagesScanned$ ページをスキャンしました。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "このサイトを閲覧した結果、1 つ以上の危険な動作を確認しました。"
+   },
+   "block_page_popover_title": {
+      "message": "このメッセージが表示された理由"
+   },
+   "block_page_risky_url": {
+      "message": "このサイトの閲覧は危険な可能性があります。"
+   },
+   "block_page_search_input": {
+      "message": "%PRODUCTNAME% で検索"
+   },
+   "block_page_state_danger": {
+      "message": "非常に危険"
+   },
+   "block_page_state_warning": {
+      "message": "やや危険"
+   },
+   "block_page_status_text": {
+      "message": "Web サイトの状況:"
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% - Web サイトの安全度"
+   },
+   "block_page_view_site_report": {
+      "message": "サイト レポートを表示する"
+   },
+   "category_id_100_description": {
+      "message": "美術館、芸術家 (彫刻、写真など) のサイト、博物館、民族習慣、地域の風習などのコンテンツを含む Web ページ。"
+   },
+   "category_id_100_name": {
+      "message": "芸術/文化/歴史"
+   },
+   "category_id_101_description": {
+      "message": "ビール、ワイン、リキュールなどのアルコールをアルコールの販売、宣伝、飲用を推奨する Web ページ。 カクテルや自家製ビールの作り方もこのカテゴリに含まれます。"
+   },
+   "category_id_101_name": {
+      "message": "アルコール"
+   },
+   "category_id_102_description": {
+      "message": "自身の IP アドレスや識別情報を隠して閲覧することを意図的に許可する Web ページ。ローカルのフィルタリング ポリシーを回避して任意のページにアクセスするために使用されます。 覆面サイトの Web ページでは、Cookie や閲覧履歴などの追跡技術もブロックされます。 OS バージョンや Web ページの履歴の転送も阻止する場合があります。 無料のプロキシ IP アドレスを提供したり、フィルタリングの回避方法を説明するページがこのカテゴリに該当します。"
+   },
+   "category_id_102_name": {
+      "message": "覆面サイト"
+   },
+   "category_id_103_name": {
+      "message": "成人向けトピック"
+   },
+   "category_id_104_description": {
+      "message": "サービスを提供するために結果的に匿名の Web 閲覧を可能にする Web ページ。 URL 変換ツール、Web ページのキャッシング、覆面サイトとして機能するユーティリティなどがこのカテゴリに該当します。ただし、これらにはフィルタリング ソフトウェアを回避する意図はありません。"
+   },
+   "category_id_104_name": {
+      "message": "匿名ツール"
+   },
+   "category_id_105_description": {
+      "message": "企業概要や事業計画、戦略など、ビジネス関連の情報を提供する Web ページ。 このカテゴリには、他の事業計画、管理、企業宣伝に利用できる情報、サービス、製品も含まれます。 事業運営をテーマとしている場合はマルチ商法も含まれます。 このカテゴリには、個人のページや Web ホスティングの Web ページは含まれません。"
+   },
+   "category_id_105_name": {
+      "message": "ビジネス"
+   },
+   "category_id_106_description": {
+      "message": "公開または非公開のチャット ルームで Web ベースのリアルタイム メッセージングを提供する Web ページ。 このカテゴリには IRC が含まれます。 このカテゴリにインスタント メッセージは含まれません。 リスクとしては、不快なコンテンツ、生産性の阻害、機密情報の漏えいなどがあります。"
+   },
+   "category_id_106_name": {
+      "message": "チャット"
+   },
+   "category_id_108_description": {
+      "message": "公共サービスの提供会社、地域の情報、時刻表、地図、天気情報など、一般的な参照情報を提供する Web ページ。"
+   },
+   "category_id_108_name": {
+      "message": "公共情報"
+   },
+   "category_id_109_description": {
+      "message": "違法行為や犯罪の実行を指示するとマカフィーが判断した Web ページ。 このような指示には、殺人や自殺、破壊工作、爆弾製造、ピッキング、サービスの窃盗、逃亡、薬物検査の偽装などがあります。 このカテゴリには、不正なコンテンツの配布や詐欺行為の実行方法に関する情報も含まれます。"
+   },
+   "category_id_109_name": {
+      "message": "犯罪活動の可能性"
+   },
+   "category_id_110_description": {
+      "message": "違法ドラッグや娯楽用ドラッグの購入、製造、使用に関する情報を提供する Web サイト。 ドラッグに関連する道具の紹介、販売、使用方法などを掲載するサイトが含まれます。また、シンナーの吸引、処方薬の乱用、その他の薬物の不正使用など、合法ドラッグに関する情報を掲載するサイトも含まれます。"
+   },
+   "category_id_110_name": {
+      "message": "ドラッグ"
+   },
+   "category_id_111_description": {
+      "message": "数学や歴史など、学術関連のコンテンツを掲載している Web ページや、学校や大学の Web ページ、教育行政関連のページ (教育委員会、教師の研究機関など)。"
+   },
+   "category_id_111_name": {
+      "message": "教育/リファレンス"
+   },
+   "category_id_112_description": {
+      "message": "映画、音楽、テレビ、ドキュメンタリ、芸能界のゴシップ記事、俳優や音楽家などの有名人に関する情報を提供する Web ページ。 占星術やファン クラブなどのコンテンツを Web 上で提供するサイトも含まれます。"
+   },
+   "category_id_112_name": {
+      "message": "娯楽"
+   },
+   "category_id_113_description": {
+      "message": "このカテゴリと一緒にグロテスクな内容、差別的な表現、ポルノ、暴力、暴力的なゲーム/漫画に分類されるカテゴリが使用されている URL もあります。 たとえば、違法ポルノは、ポルノ、犯罪活動の可能性、過激な内容のカテゴリに分類されます。"
+   },
+   "category_id_113_name": {
+      "message": "過激"
+   },
+   "category_id_114_description": {
+      "message": "金融情報を提供したり、オンライン バンキングに関連する Web ページ。 資金運用を扱うニュースやサービスを提供する Web ページが含まれます。税金、住宅ローン、保険、与信、投資などの分野における金融統計やコンサルティングは含まれません。 オンライン アカウントへのアクセスには、個人または企業の銀行口座、資金管理、税に関する相談、投資信託、クレジットカード、信用組合、保険、その他の財務報告書やサービスが含まれます。 また、株式情報 (株式取引は除く)、住宅金融、政府関連の財務情報も含まれます。"
+   },
+   "category_id_114_name": {
+      "message": "金融/銀行"
+   },
+   "category_id_115_description": {
+      "message": "オンラインで賭けができるサイトや、カジノ ゲーム、賭博、スポーツくじなどをオンラインで利用できるギャンブル関連のソフトウェアを提供する Web ページ。 チケットを購入したり、オンラインで支払いができる場合には、宝くじもこのカテゴリに含まれます。"
+   },
+   "category_id_115_name": {
+      "message": "ギャンブル"
+   },
+   "category_id_116_description": {
+      "message": "オンライン ゲームと関連情報 (偽造品、コード、デモ、エミュレーター、オンライン コンテスト、ロールプレーイング ゲーム、ゲーム メーカーのサイト、バーチャル スポーツ ゲーム) を提供する Web ページ。ただし、金銭の受け渡しが発生するゲーム サイトは除きます。 このカテゴリには、Microsoft Xbox® や Sony PlayStation® などのゲーム機が含まれます。"
+   },
+   "category_id_116_name": {
+      "message": "ゲーム"
+   },
+   "category_id_117_description": {
+      "message": "政府または軍が管理するコンテンツを含む Web ページ。たとえば、政府機関、警察、消防署、民間の自衛団、テロ対策組織、国際組織 (国連、EU など) の Web ページ。 このカテゴリには、軍の施設や退役軍人の医療施設などが含まれます。"
+   },
+   "category_id_117_name": {
+      "message": "政府/軍事"
+   },
+   "category_id_118_description": {
+      "message": "コンピューターを利用した詐欺、犯罪、不正な行為に関連する指示を含むとマカフィーが判断した Web ページ。 コンピューター犯罪に関連する Web ページが含まれます。コンピューターやネットワークへの不正アクセスを可能にするハッキング情報やツール (ルートキット、キディ スクリプト) などの情報が該当します。 ダイアラーによる詐欺や電子機器の不正操作などの詐欺行為も含まれます。"
+   },
+   "category_id_118_name": {
+      "message": "ハッキング/コンピューター犯罪の可能性"
+   },
+   "category_id_119_description": {
+      "message": "健康に関する情報やヘルスケア サービスを提供する Web ページ。 健康に関する情報としては、肉体的または精神的に健康を維持するためのトピック (ダイエット、栄養、フィットネス、しつけなど) があります。 ヘルスケア サービスには、健康保険、病院、診療所、開業医などが含まれます。"
+   },
+   "category_id_119_name": {
+      "message": "健康"
+   },
+   "category_id_120_description": {
+      "message": "コミカルで面白いコンテンツを提供する Web ページ。 ジョーク、寸劇、コミック、風刺など含むサイトが該当します。 このカテゴリには劇画も含まれます。"
+   },
+   "category_id_120_name": {
+      "message": "ユーモア/コミック"
+   },
+   "category_id_121_description": {
+      "message": "特定の人々のグループの迫害につながる情報を掲載しているとマカフィーが判断した Web ページ。 人種、宗教、国籍、性別、年齢、身体障害、性的指向に基づくグループに対する議論を促進するサイトが含まれます。 憎しみが根底にある議論やネット上で迫害行為を行う政治団体や組織も含まれます。"
+   },
+   "category_id_121_name": {
+      "message": "差別的な表現"
+   },
+   "category_id_122_description": {
+      "message": "メンバーの連絡先リストまたはインスタント メッセージング セッションに参加しているユーザーだけでネットワークを介してリアルタイム通信を行うソフトウェアを提供する Web ページ。 大半のインスタント メッセージング ソフトウェアは、ファイル転送や PC 間の通話などの機能を搭載し、他のユーザーのログオンまたはログオフを追跡することができます。 機密情報や個人情報が盗まれたり、有害なコンテンツが含まれている可能性があります。また、ファイルが共有される可能性もあります。"
+   },
+   "category_id_122_name": {
+      "message": "インスタント メッセージ"
+   },
+   "category_id_123_description": {
+      "message": "オンラインで株式取引ができる Web ページ。 株価をリアルタイムに確認できるティッカーテープの情報や、株式市場の金融スプレッド ベッティングもこのカテゴリに含まれます。 他のベッティングはギャンブルに分類されます。 株価情報を提供するだけで、株式取引を行わないサイトはこのカテゴリに含まれません。"
+   },
+   "category_id_123_name": {
+      "message": "株式取引"
+   },
+   "category_id_124_description": {
+      "message": "オーディオや動画を再生するソフトウェア (インターネット ラジオ、TV、ポッドキャストなど) を提供する Web ページや、オーディオや動画の連続再生を行う Web ページ。"
+   },
+   "category_id_124_name": {
+      "message": "インターネット ラジオ/テレビ"
+   },
+   "category_id_125_description": {
+      "message": "履歴書の作成、面接、転職、求人広告、大規模なジョブ データベースなど、仕事の検索に関連する Web ページ。 求人リストを掲載している会社の Web ページ、給料の比較サイト、臨時雇用の募集サイトなども含まれます。"
+   },
+   "category_id_125_name": {
+      "message": "求人"
+   },
+   "category_id_126_description": {
+      "message": "正規の目的でデータ保護に関する情報を提供する Web ページ。 ビジネス データや個人データ、知的所有権、プライバシー、インターネット インフラ、プライベート ネットワーク、通信などの帯域幅サービスの保護に関する情報が含まれます。 潜在的なリスクには、ハッキング/コンピューター犯罪の可能性が含まれます。 危険度高のコンテンツを含み、ブラックハットとホワイトハットの明確な区別がないサイトは、このカテゴリとハッキング/コンピューター犯罪の可能性に分類される可能性があります。 コンテンツがセキュリティ侵害や違法行為に悪用される場合もあります。"
+   },
+   "category_id_126_name": {
+      "message": "情報セキュリティ"
+   },
+   "category_id_127_description": {
+      "message": "出会い系、友人との交流、同窓会、ペンパル、エスコート サービス、婚活など、人との交流を中心とした Web ページ。 このカテゴリのサイトの多くは、メンバーとリアルタイムでメッセージを交換できる機能を提供しています。 このカテゴリのサイトでは、好ましくないコンテンツを提供する団体やメンバーのプロフィールにアクセスしてしまう場合もあります。"
+   },
+   "category_id_127_name": {
+      "message": "出会い系/ソーシャル ネットワーキング"
+   },
+   "category_id_128_description": {
+      "message": "携帯電話にダウンロードするメディア、ソフトウェアまたはユーティリティを販売する Webサイト。 着信音、ロゴ/スキン、ゲーム、スクリーンセーバー、テキストベースの音楽などがあります。また、SMS、MMS、WAP、他の携帯電話用プロトコルのソフトウェアもこのカテゴリに入ります。"
+   },
+   "category_id_128_name": {
+      "message": "携帯電話"
+   },
+   "category_id_129_description": {
+      "message": "MP3、WAV、AVI、MPEG などのオーディオ ファイルまたは動画ファイルのダウンロードが可能な Web ページ。 ファイルはユーザーのコンピューターに保存され、再生されます。"
+   },
+   "category_id_129_name": {
+      "message": "メディアのダウンロード"
+   },
+   "category_id_130_description": {
+      "message": "コンピューターの設定やアクティビティを乗っ取るコードを配布する Web ページ。 このカテゴリには、ブラウザーや他のアプリケーションの脆弱性を悪用し、自動的にインストールされるアプリケーション (「ドライブバイ」の実行ファイルのダウンロード)、トロイの木馬、ウイルスなどが該当します。 この Web ページから不正なコードが除去されると、別のカテゴリに分類される場合があります。 悪意のあるサイトは、他のコンピューターで処理を実行し、被害をもたらします。"
+   },
+   "category_id_130_name": {
+      "message": "悪意のあるサイト"
+   },
+   "category_id_131_description": {
+      "message": "Usenet ニュース グループへのアクセスを提供する Web ページ (http://) や、 ニュースグループにアップロードされたファイルのアーカイブを含む Web ページ。 このカテゴリには、コミュニティでのコンテンツ投稿に類似した機能を提供するオンライン グループも含まれます。 このカテゴリの URL に、好ましくないコンテンツが含まれている場合もあります。"
+   },
+   "category_id_131_name": {
+      "message": "インターネット ニュース"
+   },
+   "category_id_132_description": {
+      "message": "ポルノではない、裸体の画像が表示される Web ページ。 このカテゴリには、古代の彫刻や絵画、芸術的なヌード写真、裸体主義者の写真、医療用の図解などが含まれます。"
+   },
+   "category_id_132_name": {
+      "message": "ヌード"
+   },
+   "category_id_133_description": {
+      "message": "クラブ、ロビー、コミュニティ、非営利団体、労働組合、権利擁護団体など、より大きい組織の利益を実現するために活動する慈善団体や教育団体の Web ページ。 メーソン、エルクス、ボーイスカウトやガールスカウト、ビック・ブラザーズなどがこのカテゴリに入ります。"
+   },
+   "category_id_133_name": {
+      "message": "非営利団体/権利擁護団体/NGO"
+   },
+   "category_id_134_description": {
+      "message": "海外または地域のニュース番組など、オンライン ニュース メディアの Web ページ。 このカテゴリには、ニュース コンテンツを提供するポータル サイトが含まれます。"
+   },
+   "category_id_134_name": {
+      "message": "一般ニュース"
+   },
+   "category_id_136_description": {
+      "message": "オンラインで製品やサービスを販売する Web ページ。 様々な商品を販売している Web ページは、ポルノ、武器、ヌード、暴力などのカテゴリに分類される項目に誘導する可能性があります。 ポルノや武器など、他のカテゴリの項目へのアクセスを提供しているサイトもあります。"
+   },
+   "category_id_136_name": {
+      "message": "オンライン ショッピング"
+   },
+   "category_id_137_description": {
+      "message": "誘惑的な服装または露出度の高い服装の写真、下着および水着の写真、有名人の写真集などを掲載する Web ページ。裸体の写真を掲載するサイトは含まれません。"
+   },
+   "category_id_137_name": {
+      "message": "挑発的な服装"
+   },
+   "category_id_138_description": {
+      "message": "コンピューターとユーザー間で仕事用または個人用のファイルを交換できる Web ページ。ダウンロード可能な音楽などが該当します。 P2P クライアントを使用すると、P2P ネットワークでファイルを検索し、ダウンロードすることができます。 ダウンロードされるファイルに、スパイウェアやリアルタイム チャット機能が含まれている場合があります。 このカテゴリには BitTorrent Web ページが含まれます。"
+   },
+   "category_id_138_name": {
+      "message": "P2P/ファイル共有"
+   },
+   "category_id_139_description": {
+      "message": "政党、政治に携わる個人、さまざまな話題に対する意見に関する Web ページ。 このカテゴリには、ドラッグに関する法的または政治的な見解が含まれる場合があります。 このカテゴリには、政党の URL、政治的なキャンペーン、政治的な討論など、様々なトピックに関する意見が含まれます。"
+   },
+   "category_id_139_name": {
+      "message": "政治/意見"
+   },
+   "category_id_140_description": {
+      "message": "個人のホーム ページ、ISP、教育研究機関のサーバー、無料の Web ページのホストなど、共通のドメインを共有しています。 個人のホーム ページなど、個人情報を含む固有のドメインも含まれます。 個人のホームページには、不適切なコンテンツが含まれている場合があります。"
+   },
+   "category_id_140_name": {
+      "message": "個人のページ"
+   },
+   "category_id_141_description": {
+      "message": "Web 上のコンテンツの主なゲートウェイまたはディレクトリとして機能する Web ページ。 多くのポータル サイトでは、検索エンジン、電子メール、ニュース、エンターテイメントなど、様々な機能やサービスを提供しています。 様々なコンテンツを含むメーリング リストのサイトがこのカテゴリに入ります。"
+   },
+   "category_id_141_name": {
+      "message": "ポータル サイト"
+   },
+   "category_id_142_description": {
+      "message": "プログラム、オンライン サービスまたはコンピューター システム全体にリモート アクセスを許可する Web ページ。 リモート アクセスは、正規の目的でリモートからコンピューターを操作するためによく利用されていますが、バックドア アクセスなどのセキュリティ リスクを伴います。 元のプログラマーが作成したバックドア アクセスが悪用され、知らないうちにシステムが操作される可能性があります。"
+   },
+   "category_id_142_name": {
+      "message": "リモート アクセス"
+   },
+   "category_id_143_description": {
+      "message": "宗教的なトピックや精神的な信仰に関連するコンテンツを含む Web ページ (主要な宗教を除く)。 「主な世界宗教」カテゴリに分類されていない宗教的な議論、信仰、記事、教会のホームページなどがこのカテゴリに入ります。 比較宗教学や、宗教的または思想的なコンテンツを含むサイトもこのカテゴリに入ります。"
+   },
+   "category_id_143_name": {
+      "message": "宗教/思想"
+   },
+   "category_id_144_description": {
+      "message": "共通のタスクを実行するためにアイドル状態または未使用状態になっているコンピューター リソースを利用する Web ページ。 これは、社内だけでなく、海外から実行される可能性もあります。 有名な例として、SETI プログラムやヒトゲノム プロジェクトなどが挙げられます。これらは何千という有志のコンピューターのアイドル時間を利用して、データの解析を行っています。"
+   },
+   "category_id_144_name": {
+      "message": "リソース共有"
+   },
+   "category_id_145_description": {
+      "message": "検索結果を表示するだけでなく、キーワードでインターネットの情報を検索できる Web ページ。"
+   },
+   "category_id_145_name": {
+      "message": "検索エンジン"
+   },
+   "category_id_146_description": {
+      "message": "プロスポーツまたはスポーツ団体に関連する Web ページ。 スポーツ ニュース、イベントなどが含まれます。また、上達のヒントや戦術、試合の結果、選手の移籍などの情報が該当します。"
+   },
+   "category_id_146_name": {
+      "message": "スポーツ"
+   },
+   "category_id_147_description": {
+      "message": "ストリーミング メディアを提供する Web ページ。または、オーディオや動画の再生用プラグインが存在し、ファイル全体の転送が完了する前に再生が開始する Web ページ。"
+   },
+   "category_id_147_name": {
+      "message": "ストリーミング メディア"
+   },
+   "category_id_148_description": {
+      "message": "ダウンロード可能なシェアウェアとフリーウェアが存在する Web ページ。 シェアウェアはシステムに無料でインストールできますが、プログラムを継続的に使用する場合には小額の使用料を作成者に支払う必要があります。 フリーウェアは、料金を一切支払わずに使用できるソフトウェアです。"
+   },
+   "category_id_148_name": {
+      "message": "シェアウェア/フリーウェア"
+   },
+   "category_id_149_description": {
+      "message": "性的な興奮を目的としたコンテンツを含むとマカフィーが判断した Web ページ。 フェティシズムのページ、動画、漫画、物語、違法ポルノなどが含まれます。"
+   },
+   "category_id_149_name": {
+      "message": "ポルノ"
+   },
+   "category_id_150_description": {
+      "message": "個人または会社のプライバシーとセキュリティを侵害する Web ページ。 このカテゴリには次のものが含まれます。\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>ユーザーの明示的な同意なしに、ユーザーの情報を収集して第三者に送信するソフトウェアや実行ファイルをダウンロードできる URL。\u003C/li>\u003Cli>他人のコンピューターで実行された処理を監視または記録するソフトウェア (キー ストロークを記録するキーロガーなど)。\u003C/li>\u003Cli>スパイウェアまたはアドウェアを含むソフトウェアを配布するサイト。\u003C/li>\u003C/ul>このカテゴリは「悪意のあるサイト」と目的が異なります。 スパイウェアとキーロガーは、密かに情報を収集し、第三者に送信します。 悪意のあるサイトは、ユーザーの同意なしにソフトウェアをインストールしたり、処理を実行します。"
+   },
+   "category_id_150_name": {
+      "message": "スパイウェア/アドウェア/キーロガー"
+   },
+   "category_id_151_description": {
+      "message": "タバコやタバコ道具 (巻きタバコ、葉巻、パイプ、かぎタバコ、かみタバコなど) の販売、奨励を行う Web ページ。"
+   },
+   "category_id_151_name": {
+      "message": "タバコ"
+   },
+   "category_id_152_description": {
+      "message": "ホテル、リゾート地、飛行機、陸上輸送、レンタカー、旅行会社、観光全般、旅行情報などを提供する Web ページ。 このカテゴリには、チケットの購入や宿泊予約を行うサイトも含まれます。"
+   },
+   "category_id_152_name": {
+      "message": "旅行"
+   },
+   "category_id_153_description": {
+      "message": "人間、動物、または団体に対する身体的暴行を描写、説明、擁護する実際の画像または実際に近い画像、またはテキストを含む Web ページ。戦争、自殺行為、割礼、切断などの描写も含まれます。"
+   },
+   "category_id_153_name": {
+      "message": "暴力"
+   },
+   "category_id_154_description": {
+      "message": "広告スペースや広告作成プログラムを提供する Web ページ。 リンク、バナーのソース コードまたはアプレット、ポップアップ広告、動的または静的に生成され Web ページ上に表示される広告などが該当します。 このカテゴリは、Web ページでの広告をブロックすることを目的としています。広告や広告サービスを提供する企業をブロックするものではありません。"
+   },
+   "category_id_154_name": {
+      "message": "Web 広告"
+   },
+   "category_id_155_description": {
+      "message": "銃、ナイフ、剣、ペイントガン、弾薬、火薬などの武器の購入、製造、改造、使用に関する情報を提供する Web ページ。"
+   },
+   "category_id_155_name": {
+      "message": "武器"
+   },
+   "category_id_156_description": {
+      "message": "インターネット経由で電子メールの送受信を行う Web ページ。 これらのサイトは、有害なコンテンツをメールの添付ファイルでユーザーに配信する可能性があります。また、機密データの流出や消失などのセキュリティ リスクを伴う可能性もあります。"
+   },
+   "category_id_156_name": {
+      "message": "Web メール"
+   },
+   "category_id_157_description": {
+      "message": "インターネットを介した通話、情報の取得、情報取得のためのソフトウェアの取得を可能にする Web ページ。 Web 電話サービスは、インターネット電話、VoIP ともいいます。 Web 電話サービスでは、TCP/IP ネットワークを介して PC 間、PC と電話、電話同士の接続を可能にします。"
+   },
+   "category_id_157_name": {
+      "message": "Web 電話"
+   },
+   "category_id_158_description": {
+      "message": "オンライン入札、サービスや物品のオンライン販売を行う Web ページ。 このカテゴリの Web ページでは入札と販売をメインに行っています。 まれに、オンライン オークションがモニタリングされる場合もあります。 これらのサイトは、ポルノ、武器、ヌード、暴力などのカテゴリに分類されるコンテンツを提供する場合があります。"
+   },
+   "category_id_158_name": {
+      "message": "オークション/求人広告"
+   },
+   "category_id_159_description": {
+      "message": "Usenet ニュース グループへのアクセスを提供する Web ページ (http://) や、 ユーザー同士の議論を行ったり、ユーザーが作成したコンテンツを投稿できる Web ページ。たとえば、グループ内でリアルタイムにメッセージを投稿できるページなど。 このカテゴリには、ニュースグループにアップロードされたファイルのアーカイブも含まれます。"
+   },
+   "category_id_159_name": {
+      "message": "フォーラム/掲示板"
+   },
+   "category_id_160_description": {
+      "message": "粗野、下品、非常識であると判断される言葉または意思表示を含む Web ページ。"
+   },
+   "category_id_160_name": {
+      "message": "冒涜"
+   },
+   "category_id_161_description": {
+      "message": "レポート、エッセイ、試験の解答を掲載し、盗作やカンニングを促す Web ページ。"
+   },
+   "category_id_161_name": {
+      "message": "カンニング情報"
+   },
+   "category_id_162_description": {
+      "message": "性行為について説明または描写している Web ページ (性的興奮を目的とするものは除きます)。 たとえば、性教育、性的なほのめかし、ユーモア、性関連の商品などがこのカテゴリに入ります。"
+   },
+   "category_id_162_name": {
+      "message": "性的な内容"
+   },
+   "category_id_163_description": {
+      "message": "悪趣味、気味の悪い、ショッキング、グロテスクな内容を含む Web ページ。 このカテゴリには、下品なユーモア、排泄場面、治療や事故現場の生々しい写真 (血液や外傷が写されているもの)、身体に対する過激な改変 (切断、焼印、性器ピアス)、動物虐待などのコンテンツが含まれます。"
+   },
+   "category_id_163_name": {
+      "message": "グロテスクな内容"
+   },
+   "category_id_164_description": {
+      "message": "サムネイル画像など、画像限定の検索結果を表示する Web ページ。"
+   },
+   "category_id_164_name": {
+      "message": "ビジュアル検索エンジン"
+   },
+   "category_id_165_description": {
+      "message": "テクニカル関連およびビジネス関連フォーラムの Web サイト。テクニカル サポートや対話型のビジネス コミュニケーションなど、オンライン メッセージの送信やリアルタイムのチャットを可能にする Web ページが含まれます。 ユーザーは任意のコンテンツを投稿できますが、これらのフォーラムに不適切なコンテンツが掲載されるリスクは高くありません。 様々なテーマのフォーラムを提供するサイト (技術的なコンテンツやビジネス コンテンツを含む) は、フォーラム/掲示板またはチャットに分類されます。 技術情報やビジネス情報を中心に扱うフォーラムは、テクニカル/ビジネス フォーラムに分類されます。"
+   },
+   "category_id_165_name": {
+      "message": "テクニカル/ビジネス フォーラム"
+   },
+   "category_id_166_description": {
+      "message": "ギャンブルに関連する情報 (ギャンブルの手段は除く) を提供する Web ページ。 このカテゴリには、オンライン ギャンブル、ギャンブル関連のリンク、ヒント、スポーツくじの候補、宝くじの結果、競馬、カーレース、ボートレースの結果を提供しないカジノ関連の Web ページが含まれます。"
+   },
+   "category_id_166_name": {
+      "message": "ギャンブル関連"
+   },
+   "category_id_167_description": {
+      "message": "テキスト メッセージングを提供する Web ページ。 携帯電話、PDA、FAX、社内サイトのユーザー間のメッセージング、サイト間のメッセージングなどがあります。"
+   },
+   "category_id_167_name": {
+      "message": "メッセージング"
+   },
+   "category_id_168_description": {
+      "message": "ゲーム、漫画、アニメ、劇画などの内容として、架空の暴力的な描写を含む Web ページ。 画像または文章による身体的暴行または格闘の描写、武器または爆発物による攻撃や破壊の描写を掲載するサイトが含まれます。"
+   },
+   "category_id_168_name": {
+      "message": "暴力的なゲーム/漫画"
+   },
+   "category_id_169_description": {
+      "message": "デマメールによく含まれている Web ページへのリンク。リンクに接続すると、ユーザーのアカウント情報が盗まれます。 ユーザーを騙してアカウント情報を盗み出すために、これらのサイトは正規の企業の Web ページを偽装します。"
+   },
+   "category_id_169_name": {
+      "message": "フィッシング詐欺"
+   },
+   "category_id_170_description": {
+      "message": "フォルダーとファイルをオンラインのネットワーク サーバー上にアップロードできる Web ページ。ファイルやフォルダーは、Web ブラウザーからバックアップ、共有、編集または取得できます。"
+   },
+   "category_id_170_name": {
+      "message": "個人用ネットワーク ストレージ"
+   },
+   "category_id_171_description": {
+      "message": "スパム メールを送信する Web ページへのリンク。 スパムの URL は、製品のマーケティング サイトもあれば、不適切なコンテンツを含むサイトや詐欺サイトもあります。 このカテゴリには、スパム ブログやコメント スパムなど、スパム配信を目的としたサイトのみが含まれます。"
+   },
+   "category_id_171_name": {
+      "message": "スパム URL"
+   },
+   "category_id_172_description": {
+      "message": "ライブまたは対話型の Web アプリケーション (ブラウザー ベースのオフィス製品やグループウェアなど) にアクセスを提供する Web ページ。 このカテゴリには、ビジネス、教育、個人利用を目的としたサイトが含まれます。"
+   },
+   "category_id_172_name": {
+      "message": "対話型 Web アプリケーション"
+   },
+   "category_id_174_description": {
+      "message": "市販の装飾品、化粧品、宝石、その他のファッション関連の商品、アクセサリ、サービスに関連する Web ページ。 商品の評価、比較、口コミ情報、美容院、日焼けサロン、タトゥー、ピアスなどのサービスに関する情報も含まれます。"
+   },
+   "category_id_174_name": {
+      "message": "ファッション/美容"
+   },
+   "category_id_175_description": {
+      "message": "コンピューターのソフトウェアとハードウェアに関連する Web サイト。ベンダー、製品のマーケティングと評価、ソフトウェアとハードウェアの配備と保守、ソフトウェアの更新、アドオン (スクリプトやプラグイン)、ドライバーに関連するページなどが含まれます。 ハードウェアには、コンピューターの部品、アクセサリ、コンピューターやネットワークに使用する電子機器があります。 このカテゴリには、ソフトウェアとハードウェアのマーケティング、ソフトウェアまたはハードウェアの製品レビューや業界の動向が掲載された雑誌が含まれます。"
+   },
+   "category_id_175_name": {
+      "message": "ソフトウェア/ハードウェア"
+   },
+   "category_id_176_description": {
+      "message": "海賊版ソフトウェアまたは違法に配布されたソフトウェアや電子メディア (著作権で保護された音楽や映画)、不正なライセンス キー生成ツール、ソフトウェア クラッキング、シリアル番号の配布に関する情報を提供しているとマカフィーが判断した Web サイト。"
+   },
+   "category_id_176_name": {
+      "message": "潜在的違法ソフトウェア"
+   },
+   "category_id_177_description": {
+      "message": "1 つ以上のサイトで使用される画像、メディア ファイル、JavaScript をホスティングしているサーバーの URL。Apache など、既存の Web サーバーのコンテンツ取得時間を短縮することを目的としています。 コンテンツ サーバーには通常、Web サイト ナビゲーションでコンテンツが投稿されることはありません。 画像をホスティングしているコンテンツ サーバーの場合、ユーザーに写真の閲覧を許可していません。"
+   },
+   "category_id_177_name": {
+      "message": "コンテンツ サーバー"
+   },
+   "category_id_178_description": {
+      "message": "Web デザインやドメイン登録、インターネット サービス プロバイダーなどインターネット サイトの公開と保守サービスを提供する Web ページ。または、ブロードバンド、Web サービスを提供する通信会社の Web ページ。"
+   },
+   "category_id_178_name": {
+      "message": "インターネット サービス"
+   },
+   "category_id_179_description": {
+      "message": "オンラインのアルバムなど、メディア ファイルや写真のアップロード、検索、共有をユーザーに許可する Web ページ。 このカテゴリは、メディア共有の一般的なリスクを表し、特定のコンテンツを対象にしたものではありません。 URL に不適切なコンテンツが含まれている場合もあります。"
+   },
+   "category_id_179_name": {
+      "message": "メディアの共有"
+   },
+   "category_id_180_description": {
+      "message": "古代の彫刻や絵画、医用画像などのように、ポルノ以外の裸体の画像を含む Web ページ。"
+   },
+   "category_id_180_name": {
+      "message": "偶発的に表示されたヌード"
+   },
+   "category_id_181_description": {
+      "message": "Web 上で個人または会社の商品やサービスの販促活動のみを行い、オンラインでの販売を行わない Web ページ。 このカテゴリには、会社概要のページや、サイトから直接購入できないサービスや製品を説明しているページが含まれます。 たとえば、自動車メーカーのサイトや、結婚式の写真撮影、グラフィック デザイン サービスなどが含まれます。"
+   },
+   "category_id_181_name": {
+      "message": "マーケティング/販売活動"
+   },
+   "category_id_183_description": {
+      "message": "コンテンツを提供していたが、ドメインが売却されたか、破棄されたため、現在登録されていない Web ページ。 保留ドメインには固有のコンテンツはありません。通常、ドメイン名が販売対象であることを通知するページにユーザーをリダイレクトします。あるいは、検索エンジンとポータル ページにリダイレクトし、その中の一つが検索エンジンで有効な検索結果を提供します。"
+   },
+   "category_id_183_name": {
+      "message": "保留ドメイン"
+   },
+   "category_id_184_description": {
+      "message": "薬に関する説明や評価を行ったり、処方箋が必要な薬、市販の薬、避妊薬、栄養補助製品の販売を行う Web ページ。"
+   },
+   "category_id_184_name": {
+      "message": "薬局"
+   },
+   "category_id_185_description": {
+      "message": "レストラン、バー、ケータリング、テイクアウトとデリバリに関連する情報を提供する Web ページ (オンライン注文を含む)。 このカテゴリには、場所、営業時間、価格、メニュー、カロリー情報などの情報を提供するサイトが含まれます。 また、レストラン ガイド、評判、カフェ、コーヒー ショップなどもこのカテゴリに入ります。"
+   },
+   "category_id_185_name": {
+      "message": "レストラン"
+   },
+   "category_id_186_description": {
+      "message": "不動産に関する情報を提供する Web ページ。 サービスと情報には、住宅や事務所の販売と賃貸、アパート、住宅、不動産の案内、査定や仲介に関する情報などがあります。 このカテゴリには、モデルハウスの閲覧が可能なサイトも含まれます。"
+   },
+   "category_id_186_name": {
+      "message": "不動産"
+   },
+   "category_id_187_description": {
+      "message": "レクレーション活動と趣味に特化したコンテンツを含むレクレーション団体や施設の Web ページ。 公共のプール施設、動物園、展示会、フェスティバル、遊園地、レクレーション ガイド、ハイキング、釣り、バードウォッチング、スタンプラリーなどの情報がこのカテゴリに入ります。"
+   },
+   "category_id_187_name": {
+      "message": "レクリエーション/趣味"
+   },
+   "category_id_188_description": {
+      "message": "動的なコンテンツを含む Web ページ。ユーザーがいつでもコンテンツを投稿したり、編集できるため、サイトのコンテンツが頻繁に変更されます。 このカテゴリには、有害かどうかにかかわらず、動的コンテンツに関するリスクが含まれます。 多くのブログや wiki にはテーマや主題があります。 このカテゴリのサイトには、サイトのテーマや主題によって、物議を醸す意見、教育/リファレンス、スポーツ、政治/意見、ヌードなど、他のカテゴリに分類されるコンテンツが含まれていることが少なくありません。 コンテンツの中には有害なものもあります。"
+   },
+   "category_id_188_name": {
+      "message": "ブログ/wiki"
+   },
+   "category_id_189_description": {
+      "message": "インターネット経由でデジタル ポストカードや挨拶状の送受信を許可している Web ページ。 デジタル ポスト カードを使用すると、挨拶状だけでなく、誕生日や休日など特別の日に合わせてメッセージを送信できます。 この中には、大人のユーモアを含むものもあります。 機密情報や個人情報が盗まれたり、有害なコンテンツやマルウェア、添付ファイルが含まれている可能性もあります。"
+   },
+   "category_id_189_name": {
+      "message": "デジタル ポストカード"
+   },
+   "category_id_190_description": {
+      "message": "ホロコースト否認など、重大な歴史的事実を否定したり、別の解釈を主張する Web ページ。 このカテゴリのサイトの中には、学術的な価値のあるサイトもありますが、政治的な動機から歴史の解釈をゆがめているものが大半です。 国によっては、このカテゴリの URL に含まれるコンテンツが違法または有害と見なされる場合があります。"
+   },
+   "category_id_190_name": {
+      "message": "歴史修正主義"
+   },
+   "category_id_191_description": {
+      "message": "教育目的で情報技術、コンピューター プログラミング、認証などの分野の情報を提供している Web ページ。 たとえば、Linux ユーザー グループ、UNIX コマンド、ソフトウェアのチュートリアル、専門用語の辞書などが該当します。 このカテゴリのサイトの大半は、より大きなドメインのサブディレクトリになります。"
+   },
+   "category_id_191_name": {
+      "message": "テクニカル情報"
+   },
+   "category_id_192_description": {
+      "message": "出会い系サイト、結婚仲介、交際相手の紹介などを行う Web ページ。 このカテゴリには、個人またはグループのプロフィールを提供し、メンバー同士がリアルタイムに会話やメッセージの交換を行うサイトが含まれます。また、掲示板を公開したり、メディアの共有サービスを提供するサイトも含まれます。 このカテゴリのサイトでは、好ましくないコンテンツを提供する団体やメンバーのプロフィールにアクセスしてしまう場合もあります。"
+   },
+   "category_id_192_name": {
+      "message": "出会い系/個人的なサイト"
+   },
+   "category_id_193_description": {
+      "message": "乗用車、バン、トラック、SUV、オートバイ、スクーターなど、消費者向け自動車のメーカーと販売特約店の Web サイト。 商品のマーケティング、評価、比較、価格情報、フェアー、展示会、自動車に関する諸費者向けの一般情報などを提供するサイトも含まれます。"
+   },
+   "category_id_193_name": {
+      "message": "自動車"
+   },
+   "category_id_194_description": {
+      "message": "専用の目的またはビジネス用途に限定されたソーシャル ネットワーキングの Web ページ。 このカテゴリには、個人またはグループのプロフィールを提供し、メンバー同士がリアルタイムに会話やメッセージの交換を行うサイトが含まれます。また、掲示板を公開したり、メディアの共有サービスを提供するサイトも含まれます。 このカテゴリには、ネットワーク機能がある同窓会サイトも含まれます。"
+   },
+   "category_id_194_name": {
+      "message": "プロフェッショナル ネットワーキング"
+   },
+   "category_id_195_description": {
+      "message": "ソーシャル ネットワーキングが可能な Web ページ。ソーシャル ネットワーキングは、友人との交流、出会い系、専門家の意見交換など、様々な目的で使用されています。 このようなサイトでは、個人またはグループのプロフィールが提供され、メンバー同士がリアルタイムに会話やメッセージの交換を行います。また、掲示板を公開したり、メディアの共有サービスを提供します。 このカテゴリのサイトでは、好ましくないコンテンツを提供する団体やメンバーのプロフィールにアクセスしてしまう場合もあります。"
+   },
+   "category_id_195_name": {
+      "message": "ソーシャル ネットワーキング"
+   },
+   "category_id_196_description": {
+      "message": "語句や文章を入力して他の言語に翻訳できる Web ページ。 このカテゴリには、言語識別子付きの Web ページも含まれます。"
+   },
+   "category_id_196_name": {
+      "message": "テキストの翻訳"
+   },
+   "category_id_197_description": {
+      "message": "オンライン会議、ビデオ会議、対話型のプレゼンテーションを行う Web ページ。主に、ビジネス目的で使用されます。 Web ミーティングには、ストリーミングで配信されるオーディオや動画が含まれます。また、データ転送が許可されたり、オンライン プレゼンテーションなどのオフィス アプリケーションの使用も許可されます。 このカテゴリの URL には帯域幅のリスクと、機密データの消失や漏えいなどのセキュリティ リスクが伴います。"
+   },
+   "category_id_197_name": {
+      "message": "Web ミーティング"
+   },
+   "category_id_198_description": {
+      "message": "政治的または社会的に反感を持たれ、物議を醸すような意見を含む Web ページ。 このコンテンツの大半は極端な世論です。 たとえば、自殺サイト、拒食症、外国人嫌い、原理主義者の主張、特定の集団における重大課題などが含まれます。"
+   },
+   "category_id_198_name": {
+      "message": "物議を醸す意見"
+   },
+   "category_id_199_description": {
+      "message": "DSL モデムまたはケーブル モデム経由でインターネットにアクセスする IP アドレスとその関連ドメイン。 このコンテンツは HTTP 経由でインターネットにアクセスするものではありません。これらの IP アドレスを介してインターネットにアクセスした場合、不正な処理が実行されている可能性があります。 自宅のコンピューターまたはインターネットへの匿名アクセスを許可したゲートウェイにマルウェアが感染すると、このような振る舞いが発生します。"
+   },
+   "category_id_199_name": {
+      "message": "住宅の IP アドレス"
+   },
+   "category_id_200_description": {
+      "message": "ブラウザー エクスプロイトは、Web ブラウザーに存在するソフトウェアのバグを攻撃するコードの一部です。これにより、ブラウザーで予期しない操作を実行させることができます。たとえば、ローカル ファイルの停止、実行、読み取りまたは書き込みを行ったり、ウイルスの散布やスパイウェアのインストールを実行します。 不正なコードは、HTML、JavaScript、画像、ActiveX、Java などの技術を攻撃します。 エクスプロイトはドライブバイ ダウンロードともいいます。ユーザーに気づかれずに、未保護のコンピューターに自身をインストールします。このコードにより、キー ロガーをインストールしてパスワードを盗み出したり、トロイの木馬をインストールしてコンピューターを乗っ取り、コンピューターをボット マシンに変えたりします。 このカテゴリには、ブラウザー エクスプロイトを配布または実行する URL も含まれます。"
+   },
+   "category_id_200_name": {
+      "message": "ブラウザー エクスプロイト"
+   },
+   "category_id_201_description": {
+      "message": "消費者を騙して金品を奪おうとする Web サイト。 たとえば、偽装品を販売したり、元々無料で提供されていたものを有料で販売したりします。また、他の企業のブランドを不正に利用します。 人の親切心や無知に付け込み、偽のチャリティで金銭を集めたり、偽の投資話を持ちかける Web サイトがこのカテゴリに分類されます。 また、多くの消費者が詐欺を報告したり、サービスの未提供を訴えているサイトもこのカテゴリに入ります。"
+   },
+   "category_id_201_name": {
+      "message": "消費者保護"
+   },
+   "category_id_202_description": {
+      "message": "子供に対する性的虐待に関するコンテンツを含む Web ページ。英国では、人種差別を扇動するコンテンツを含む Web ページ。"
+   },
+   "category_id_202_name": {
+      "message": "英国で違法の内容"
+   },
+   "category_id_203_description": {
+      "message": "宗教的なトピックや主な宗教に関連する情報を提供する Web サイト。 このカテゴリには、宗教的な議論、信念、教義、教会や礼拝堂に関する記事や情報などを掲載しているサイトが含まれます。 このカテゴリには、バハーイ教、仏教、中国の伝統宗教、キリスト教、ヒンドゥー教、イスラム教、ジャイナ教、ユダヤ教、神道、シーク教、天理教、ゾロアスター教などが含まれます。"
+   },
+   "category_id_203_name": {
+      "message": "主な世界宗教"
+   },
+   "category_id_204_description": {
+      "message": "操作を妨害する有害なコードのダウンロードを故意に許可する Web ページ。 このカテゴリには、スクリーン セーバー、ツールバー、ファイル共有プログラムのダウンロードを許可するサイトが含まれます。これらのプログラムは、アドウェア、スパイウェア、その他の不正なコンピューター コードに感染している可能性があります。 すべての条件を確認せずに [はい] や [いいえ] をクリックすると、知らないうちにマルウェアに感染している場合もあります。 コンピューターの処理速度が遅くなったり、パスワードが盗まれる場合もあります。さらに、重要な個人ファイルがなくなったり、壊れてしまう場合もあります。"
+   },
+   "category_id_204_name": {
+      "message": "不正なダウンロード"
+   },
+   "category_id_205_description": {
+      "message": "不審なプログラム (PUP) を含む Web ページ。 多くの場合、PUP は有益な目的のために作成されますが、コンピューターのセキュリティを改ざんしたり、ユーザーのプライバシーを侵害するものもあります。 セキュリティやプライバシーに関心の高いユーザーは、このようなソフトウェアの存在を確認し、存在する場合にはコンピューターから駆除したいと考えています。"
+   },
+   "category_id_205_name": {
+      "message": "不審なプログラム"
+   },
+   "category_id_600_description": {
+      "message": "子供 (およそ 10 歳未満) 向けに作成され、家族で安心して閲覧できる Web ページ。"
+   },
+   "category_id_600_name": {
+      "message": "子供向け"
+   },
+   "category_id_601_description": {
+      "message": "史実に関するコンテンツを提供する Web ページ。 このカテゴリには、高等教育に適したコンテンツが含まれますが、教育カテゴリには初等教育のコンテンツが含まれます。 たとえば、ホロコーストの写真を含むサイトに学術的な価値がある場合もあります。"
+   },
+   "category_id_601_name": {
+      "message": "履歴"
+   },
+   "category_id_602_description": {
+      "message": "不適切と見なされるメッセージやコンテンツのブロックを許可された個人またはグループによって監視されている掲示板、チャット ルーム、検索エンジンまたは Web メール サイト。"
+   },
+   "category_id_602_name": {
+      "message": "穏健"
+   },
+   "category_id_603_description": {
+      "message": "テキストまたは音声のみで、画像を含まないコンテンツが該当します。 「ポルノ」、「暴力」、「性的な内容」カテゴリでブロックされた画像が必要な場合、このカテゴリを例外として使用すると、特定のテキストや記録されたマテリアルへのアクセスを許可できます。 図書館や大学では、このカテゴリを使用して、公共施設での好ましくない画像の表示を防ぐことができます。"
+   },
+   "category_id_603_name": {
+      "message": "テキスト/音声のみ"
+   },
+   "crypto_allow_desc": {
+      "message": "クリプトジャッキングがブロックされたときに、許可することもできます。 クリプトジャッキングで暗号通貨を獲得する Web サイトを許可できますが、この選択はおすすめしません。"
+   },
+   "crypto_allow_title": {
+      "message": "クリプトジャッキングを許可できますか？"
+   },
+   "crypto_footer_message1": {
+      "message": "McAfee および McAfee のロゴは、米国法人 McAfee, LLC または米国またはその他の国の関係会社における登録商標または商標です。"
+   },
+   "crypto_footer_message2": {
+      "message": "その他の登録商標および商標はそれぞれその所有者に帰属します。 Copyright ©2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "コンピューターの能力とリソースを悪用するクリプトジャッキングを阻止します。"
+   },
+   "crypto_header_title": {
+      "message": "クリプトジャッキング ブロッカーは有効です"
+   },
+   "crypto_own_desc": {
+      "message": "暗号通貨を所有していなくても、クリプトジャッキングが発生します。 クリプトジャッキングを行うハッカーは、所有している暗号通貨ではなく、コンピューターのリソースを狙っています。"
+   },
+   "crypto_own_title": {
+      "message": "暗号通貨を所有しているとクリプトジャッキングで狙われますか？"
+   },
+   "crypto_protect_desc": {
+      "message": "%PRODUCTNAME% の拡張機能を有効にして、マカフィーのクリプトジャッキング ブロッカーを使用してください。これにより、クリプトジャッキングを防ぐことができます。 クリプトジャッキングをブロックしたらお知らせします。"
+   },
+   "crypto_protect_title": {
+      "message": "保護する方法を教えてください。"
+   },
+   "crypto_signs_desc1": {
+      "message": "閲覧速度が低下する"
+   },
+   "crypto_signs_desc2": {
+      "message": "バッテリーの消耗が非常に速い"
+   },
+   "crypto_signs_desc3": {
+      "message": "ファンの音が大きい"
+   },
+   "crypto_signs_desc4": {
+      "message": "電気使用量が増加する"
+   },
+   "crypto_signs_title": {
+      "message": "クリプトジャッキングされた場合、どのような兆候が見られますか？"
+   },
+   "crypto_title": {
+      "message": "マカフィー クリプトジャッキング ブロッカー"
+   },
+   "crypto_whatis_point1": {
+      "message": "クリプトジャッキングを行うハッカーは、ユーザーが閲覧している Web サイトからコンピューターにアクセスします。"
+   },
+   "crypto_whatis_point2": {
+      "message": "コンピューターを乗っ取り、その CPU とメモリーの能力を利用して複雑な処理を実行します。"
+   },
+   "crypto_whatis_point3": {
+      "message": "これにより、暗号通貨を獲得します。"
+   },
+   "crypto_whatis_title": {
+      "message": "クリプトジャッキングとは"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "このサイトでクリプトジャッキングを許可する"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "詳細を見る"
+   },
+   "cryptojacking_banner_message": {
+      "message": "このサイトでクリプトジャッキングをブロックしました。 コンピューターのリソースは安全です。閲覧を続けることができます。 $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "このサイトをテストし、危険なサイトや不審なサイトからのコンテンツをブロックしました。 安全なサイトから取得したことを確認した場合にのみ、このコンテンツを許可してください。"
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "ブロックされたコンテンツをすべて表示する"
+   },
+   "overlay_accept_ss": {
+      "message": "お使いの検索エンジンを マカフィー® セキュア サーチに変更することに同意してください"
+   },
+   "overlay_add_ss": {
+      "message": "マカフィー® セキュア サーチをブラウザーに追加しましょう"
+   },
+   "overlay_ss_description": {
+      "message": "検索結果で危険なサイトにフラグを追加するため、安全に閲覧できるサイトとそうでないサイトを把握することができます。"
+   },
+   "overlay_step_1": {
+      "message": "手順 1"
+   },
+   "overlay_step_2": {
+      "message": "手順 2"
+   },
+   "phishingdesc": {
+      "message": "ハッカーは、公式を装った「フィッシング詐欺」メールやウェブサイトを使って、お客様の個人情報を盗もうとします。 詐欺に騙されることがないよう、回線が切断されます。"
+   },
+   "phishingtitle": {
+      "message": "個人情報を保護する"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "マカフィー® ウェブアドバイザー"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "犯罪や攻撃を未然に防ぐため、セキュア サーチを追加しますか？"
+   },
+   "search_toast_body_text_test": {
+      "message": "セキュア サーチを追加して、閲覧するサイトの安全性を確認しますか？"
+   },
+   "search_toast_done": {
+      "message": "完了"
+   },
+   "search_toast_heading_compliant": {
+      "message": "セキュア サーチがインストールされていません。注意してください"
+   },
+   "search_toast_heading_test": {
+      "message": "検索結果でサイトの危険性を確認"
+   },
+   "search_toast_no_thanks": {
+      "message": "いいえ"
+   },
+   "search_toast_ok": {
+      "message": "OK"
+   },
+   "search_toast_option_compliant": {
+      "message": "はい、ブラウザーにセキュア サーチを追加して、デフォルトの検索を $search_provider$ に変更します。",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "はい、ブラウザーにセキュア サーチを追加して、デフォルトの検索を $search_provider$ に変更します。",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "セキュア サーチは、検索結果から危険なサイトを除外します。"
+   },
+   "search_toast_sub_heading_test": {
+      "message": "セキュア サーチでは、検索結果で危険なサイトにフラグを立てます。"
+   },
+   "search_toast_yes": {
+      "message": "はい"
+   },
+   "securesearchdesc": {
+      "message": "検索結果が色別で表示されるので、安心して閲覧できます − 安全なサイトと不審なサイトをお知らせします。"
+   },
+   "securesearchtitle": {
+      "message": "リスクの高い検索結果を回避する"
+   },
+   "settings_about_adblock": {
+      "message": "ブラウザーの速度低下につながる広告やポップアップをブロックする"
+   },
+   "settings_about_adblock_tracking": {
+      "message": "ユーザーを追跡し、個人情報を収集するクッキーをブロックする"
+   },
+   "settings_about_block_download": {
+      "message": "危険なダウンロードをブロックする"
+   },
+   "settings_about_cryptojackers": {
+      "message": "$settings_about_cryptojackers_link$ によるコンピューターのリソースの盗難を防止します",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "クリプトジャッカー"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "ファイアウォールとウイルス対策が有効になっているかどうか確認します"
+   },
+   "settings_about_flag_website": {
+      "message": "危険な Web サイトにフラグを立てる"
+   },
+   "settings_about_help_link_message": {
+      "message": "今すぐヘルプを利用する"
+   },
+   "settings_about_help_message": {
+      "message": "サポートが必要な場合もあります。"
+   },
+   "settings_about_help_title": {
+      "message": "ヘルプとテクニカル サポートを利用する"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "プライバシー通知を確認する"
+   },
+   "settings_about_privacy_message": {
+      "message": "マカフィーは、お客様のプライバシーを第一に考えています。"
+   },
+   "settings_about_privacy_title": {
+      "message": "プライバシー通知"
+   },
+   "settings_about_product_affid": {
+      "message": "アフィリエイト ID: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "バイナリ バージョン: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "拡張ファイルのバージョン: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "製品のバージョン"
+   },
+   "settings_about_share_title": {
+      "message": "%PRODUCTNAME% を友人と共有する"
+   },
+   "settings_about_subtitle": {
+      "message": "%PRODUCTNAME% は、サイトの危険性を事前に通知します。"
+   },
+   "settings_about_title": {
+      "message": "バージョン情報"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "すべての検索エンジンで検索結果が安全かどうか通知してください。"
+   },
+   "settings_preference_annotation_none": {
+      "message": "検索結果の安全性を通知しないでください。"
+   },
+   "settings_preference_annotation_ss": {
+      "message": "セキュア サーチでのみ検索結果が安全かどうか通知してください。"
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "検索結果が色別で表示されるので、安全なサイトがすぐに把握できます。"
+   },
+   "settings_preference_annotation_title": {
+      "message": "安全な検索"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "煩わしい広告やポップアップによりブラウザー速度が低下するのを防ぎます"
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "ユーザーを追跡し、個人情報を収集するクッキーを遮断します"
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "広告のブロックとトラッカーのブロック"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "追加"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "許可する"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "保護の強化に含まれるマカフィー® セキュア サーチ拡張ファイルが有効になっていないため、保護の強化は利用できません。 今すぐ有効にしてください。確認画面が表示されたら [$settings_preference_ap_alert_allow$] を選択してください。",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "有効にする"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "保護の強化に含まれるマカフィー® セキュア サーチ拡張ファイルがインストールされていないため、保護の強化は利用できません。 今すぐ Chrome ウェブストアで追加してください。"
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "マカフィーのクラウドベースの Threat Intelligence サービスを使用して脅威を特定します"
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "検索結果が色別で表示されるため、安全なサイトをすぐに把握できます"
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "検索結果でアクセスに危険な Web サイトにフラグを立てます"
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "マカフィー セキュア サーチ"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "プライバシーと個人情報を保護します。"
+   },
+   "settings_preference_ap_title": {
+      "message": "保護の強化"
+   },
+   "settings_preference_reset_button": {
+      "message": "リセット"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "%PRODUCTNAME% の通知を無視しましたか？通知を元に戻しますか？ 通知をリセットしてすべてのタイプの %PRODUCTNAME% メッセージの取得を再開します。"
+   },
+   "settings_preference_reset_title": {
+      "message": "設定のリセット"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "LinkedIn"
+   },
+   "settings_preference_sma_message": {
+      "message": "これらは、注釈を付けるサイトです。"
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "ソーシャル メディア フィードのリンクが色別で表示されるので、安全なリンクがすぐに把握できます。"
+   },
+   "settings_preference_sma_title": {
+      "message": "ソーシャル メディアの保護"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "YouTube"
+   },
+   "settings_preference_title": {
+      "message": "追加サービス"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "ブロックした煩わしい広告"
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "ブロックしたクリプトジャッキング"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "ブロックした危険なダウンロード"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "スキャンしたダウンロード"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "スキャンしたリンク"
+   },
+   "settings_statistics_message": {
+      "message": "これまでの保護状況:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "ブロックした危険なページ"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "スキャンしたページ数"
+   },
+   "settings_statistics_subtitle": {
+      "message": "インターネットを安全に利用できるように保護しています。"
+   },
+   "settings_statistics_title": {
+      "message": "統計"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "件のブロックしたトラッカー"
+   },
+   "settings_subtitle": {
+      "message": "お使いの Web 保護をカスタマイズしましょう。"
+   },
+   "settings_tab_about": {
+      "message": "バージョン情報"
+   },
+   "settings_tab_preference": {
+      "message": "優先順位"
+   },
+   "settings_tab_statistics": {
+      "message": "統計"
+   },
+   "settings_tab_whitelist": {
+      "message": "ホワイトリスト"
+   },
+   "settings_title": {
+      "message": "Web 保護"
+   },
+   "settings_whitelist_input": {
+      "message": "Web アドレスを入力..."
+   },
+   "settings_whitelist_title": {
+      "message": "信用するサイト"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "$sidebar_action_panel_web_protection_preferences$ をカスタマイズしてください。",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "Web 保護の基本設定"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "現在の保護状態を以下に示します。"
+   },
+   "sidebar_adblock_toggle": {
+      "message": "このページ上でのこのアクセスのみ広告を表示"
+   },
+   "sidebar_ads_blocked": {
+      "message": "このページでブロックした煩わしい広告"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "とてもうれしいです。"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "マカフィー製品で保護するか $sidebar_badge_collection_block_page_description_italic$ で保護するかは、お客様自身で決めてください。",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "完了しました"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "お互いにとって満足のいくものとしましょう。"
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "そのサイトの罠にはかかりません"
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "マカフィーが脅威を阻止します。"
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "ブロックされています - 安全性が何より重要です。"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "駆除いただきありがとうございます。"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "そのコンテンツがブロックできてうれしいです。 それでは、お客様にとって重要な内容について確認していきましょう。"
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "このサイトをクリーンな状態に保ちます。"
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "アクセスすることを選択した場合は、このサイトは信頼されたサイトのリストに追加されます。"
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "とりあえずサイトにアクセスする"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "ブロックを継続する"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "このサイトは、「フィッシング詐欺」サイトのようです。 つまり、信頼できる組織になりすましてメールを送信し、パスワードやクレジット カードの詳細などの個人情報を共有させようとする手口です。"
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "お客様が罠にかからないため、別のところで「フィッシング詐欺」を行い個人情報を盗み出すことになります。"
+   },
+   "sidebar_block_page_description_red": {
+      "message": "マカフィーが安全に保護しています。正当な理由からお客様の操作を停止させました。"
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "きわめて高い危険性があるため、これ以上継続いただくことは推奨していません。"
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "100% 確信しているわけではありませんが、次のようなタイプの脅威を伴う可能性があるためブロックしました。"
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "シート ベルトを締めずに運転をするようなものです。リスクを回避しましょう。"
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "このサイトの脅威について詳しくは次を参照してください:"
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "このサイトの脅威について詳しくは次を参照してください:"
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "このサイトは、次のような脅威で溢れています。"
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "次のタイプの脅威が潜んでいます。"
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "このサイトは、次のような脅威で溢れています。"
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "次のタイプの脅威が潜んでいます。"
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "このサイトはブロックされたため、お客様の個人情報を盗み出すことはできません"
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "この「フィッシング詐欺」サイトはブロックされています"
+   },
+   "sidebar_block_page_title_red": {
+      "message": "この危険なサイトをブロックしました"
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "この危険なサイトはブロックされています"
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "このサイトは罠である可能性があります"
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "この危険なサイトはブロックされています"
+   },
+   "sidebar_crypto_blocked": {
+      "message": "ブロックしたクリプトジャッキング"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "ブロックした危険なページ"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "ファイルがお客様に被害を及ぼす前に削除するようお知らせいただきありがとうございます。 私たちは優れたセキュリティ チームですね。"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "とてもうれしいです。"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "不正なファイルを検出しました"
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "手動で削除することはできるかもしれません。 ファイルの保存先に移動して、そこで削除を実行してみてください"
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "名前:"
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "閉じる"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "場所:"
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "ダウンロード ソース:"
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "申し訳ございません、こちらは機能していません。"
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "削除する"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "ダウンロード ソース:"
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "名前:"
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "ファイルにはウイルス、スパイウェア、不審なプログラムが含まれているようです。"
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "とりあえず保持する"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "ファイルを開く前に削除すれば、被害を及ぼすことなく安全を保つことができます。"
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "ダウンロードしたファイルは危険なファイルです"
+   },
+   "sidebar_everything_looks_good": {
+      "message": "問題はありません。"
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "Web 保護が有効になっており、保護が提供されています。 設定を確認して、統計を表示する場合:"
+   },
+   "sidebar_get_help": {
+      "message": "ヘルプを見る"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "Web 保護の基本設定に移動します"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "とりあえず表示する"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "ブロックを継続する"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "不審なコンテンツは脅威をもたらす可能性があります。 このコンテンツが安全であると確信してコンテンツを表示する場合は、許可することができます。"
+   },
+   "sidebar_iframe_block_title": {
+      "message": "安全を保つためにこのコンテンツをブロックしました"
+   },
+   "sidebar_pages_scanned": {
+      "message": "スキャンしたページ数"
+   },
+   "sidebar_privacy": {
+      "message": "プライバシー通知"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "閉じる"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "この Web サイトにアクセスすると、他のユーザーがこのサイトのソフトウェアを使用してあなたの PC にこっそりとアクセスし、あなたの個人情報を盗み出す可能性があります。"
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "特定の Web サイトでソフトウェアをダウンロードする場合や自分の個人情報を入力する場合は、そのサイトが信用できるサイトであるかどうかを確認してください。"
+   },
+   "sidebar_rat_detection_title": {
+      "message": "この Web サイトでは、他のユーザーがあなたの PC を制御することができます"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "今後はこの警告を表示しない"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "スキャンを実行した結果、脅威は見つかりませんでした。"
+   },
+   "sidebar_site_report_description_red": {
+      "message": "不審なサイトや危険な動作がないか、定期的にサイトをスキャンしています。 このサイトは安全ではありません。"
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "さらに詳細を確認し、このサイトが次にスキャンされるときにこのサイトの安全性についてお知らせします。"
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "このサイトをスキャンした結果、安全性に問題があることがわかりました。 注意が必要です。"
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "このタイプの Web サイトは次のようなものです:"
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "Web サイトの脅威:"
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "潜在的な Web サイトのタイプや脅威:"
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "Web サイトの脅威:"
+   },
+   "sidebar_site_report_title_green": {
+      "message": "このサイトは安全なようです"
+   },
+   "sidebar_site_report_title_red": {
+      "message": "危険なサイトです"
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "このサイトの安全状態は不明です"
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "このサイトは危険な可能性があります"
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "OK"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "セキュア サーチを有効にしたので、閲覧する前にサイトの安全性を表示できるようになりました。"
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "検索結果では、各 Web サイトの横に色別に表示されたアイコンが表示されます。 緑色が表示されている場合は安全に閲覧できます。黄色の場合は危険な可能性、赤色の場合は危険であることを示すため、サイトの閲覧は避けるようにしてください。"
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "これで、回避すべきサイトを把握することができます"
+   },
+   "sidebar_subtitle": {
+      "message": "これまでの保護状況:"
+   },
+   "sidebar_terms": {
+      "message": "利用条件"
+   },
+   "sidebar_title": {
+      "message": "インターネットを安全に利用できるように保護しています。"
+   },
+   "sidebar_tracker_blocked": {
+      "message": "このページでブロックしたトラッカー"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "ブロックした危険なアイテム"
+   },
+   "sidebar_version": {
+      "message": "バージョン"
+   },
+   "sidebar_view_site_report": {
+      "message": "サイト レポートを表示する"
+   },
+   "sidebar_view_stats": {
+      "message": "マカフィーの保護内容をすべて表示します"
+   },
+   "site_report_category_subtitle": {
+      "message": "Web サイトのカテゴリ:"
+   },
+   "site_report_category_title": {
+      "message": "このサイトについて"
+   },
+   "site_report_main_message_danger": {
+      "message": "サイトを定期的にスキャンし、不審なアクティビティや不正な活動を確認していますが、このサイトは安全ではありません。 詳細については、以下をご覧ください。"
+   },
+   "site_report_main_message_safe": {
+      "message": "このサイトを入念に調査し、すべて確認しました。 安心してご利用ください。"
+   },
+   "site_report_main_message_unknown": {
+      "message": "現在、お知らせできる情報はありません。 このサイトを次にスキャンしたときに、脅威レベルを更新します。"
+   },
+   "site_report_main_message_warning": {
+      "message": "このサイトをスキャンした結果、万全な状態でないことが判明しました。 注意してクリックしてください。"
+   },
+   "site_report_main_title": {
+      "message": "サイト レポート"
+   },
+   "site_report_main_url_danger": {
+      "message": "$url$ が危険な理由",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "$url$ は安全である可能性が高いです",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "安全性を判断する前に、もう少し詳しい調査が必要です"
+   },
+   "site_report_main_url_warning": {
+      "message": "$url$ が危険かもしれない理由",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "非常に危険"
+   },
+   "site_report_status_rating_safe": {
+      "message": "安全"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "不明"
+   },
+   "site_report_status_rating_warning": {
+      "message": "やや危険"
+   },
+   "site_report_status_text": {
+      "message": "Web サイトの状況:"
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% - Web サイトの安全度"
+   },
+   "sma_personalize_button": {
+      "message": "保護をパーソナライズする"
+   },
+   "sma_subtitle": {
+      "message": "新機能のソーシャル メディアの保護では、ソーシャル メディア サイト上のリンクを色分けし、どのリンクが安全かを示します。お客様のデジタル ライフがさらに安全になりました！"
+   },
+   "sma_title": {
+      "message": "安心してフィードをスクロールできます"
+   },
+   "smadesc": {
+      "message": "色分けされたリンクにより、安全にクリックできるリンクがわかるため、安心してフィードを閲覧することができます。"
+   },
+   "smatitle": {
+      "message": "ソーシャル メディアの安全なリンクと危険なリンクを把握する"
+   },
+   "ss_first_annotation_desc": {
+      "message": "色分けされた検索結果でセキュリティを確保 - 安全なサイトと危険なサイトを区別することができます。"
+   },
+   "ss_first_annotation_title": {
+      "message": "危険な検索結果をブロック"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "セキュア サーチをオンにする"
+   },
+   "summarydesc": {
+      "message": "閲覧、検索、オンライン ショッピングを安全に行っていただけるようマカフィーが実行したすべての手順をまとめた情報が表示されます。"
+   },
+   "summarytitle": {
+      "message": "リアルタイム セキュリティ ダッシュボード"
+   },
+   "typodesc": {
+      "message": "ハッカーは、本物のように見せたアドレスを使用してサイトを作成します − これは「タイポスクワッティング」です。 URL のタイプミスにより URL がわからなくなった場合は、正しい URL に安全に戻します。 "
+   },
+   "typosquatting_action_accept": {
+      "message": "リスクを容認して続行する"
+   },
+   "typosquatting_action_back": {
+      "message": "戻る"
+   },
+   "typosquatting_footer_description": {
+      "message": "ウェブサイトのアドレスを間違えて入力すると、目的のものとは異なるサイトが表示されます。 これらのサイトは、スケアウェアやマルウェアで攻撃を仕掛けてきたり、個人情報の入力を要求したり、フィッシング詐欺でパスワードを盗み出そうとする可能性があります。 このようなサイトへの移動を防ぐため、警告が表示されました。"
+   },
+   "typosquatting_footer_link": {
+      "message": "タイポスクワッティングの詳細を見る"
+   },
+   "typosquatting_footer_title": {
+      "message": "このページが表示された理由"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "マカフィー® トータル プロテクションを入手"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "正しいサイトにアクセス"
+   },
+   "typosquatting_message_button_search": {
+      "message": "検索"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "%PRODUCTNAME% tが正しいサイトを表示します。"
+   },
+   "typosquatting_message_description_search": {
+      "message": "間違ったアドレスを入力したようです。 %PRODUCTNAME% が正しいサイトを表示します。"
+   },
+   "typosquatting_message_title": {
+      "message": "目的のページは"
+   },
+   "typosquatting_notice_body": {
+      "message": "現在のオンライン環境は保護されています - マカフィー® トータル プロテクションですべてのデバイスを保護してください。"
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "これまでに $pagesScanned$ ページをスキャンしました。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "これまでに $pagesScanned$ ページをスキャンしました。",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME% - タイポスクワッティング"
+   },
+   "typotitle": {
+      "message": "実在するサイトを装った危険なサイトを回避する"
+   }
+}

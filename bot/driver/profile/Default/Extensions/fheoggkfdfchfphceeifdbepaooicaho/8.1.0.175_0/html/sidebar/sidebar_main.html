@@ -1,0 +1,109 @@
+<section>
+  <header>
+    <div class='top'>
+      <div class='top__logo'>
+        <img x-mcsrc src='images/web_advisor/logo.png' alt='WebAdvisor logo' />
+      </div>
+      <div class='top__menu-icons'>
+        <img id='settings' x-mcsrc src='images/sidebar/settings.svg' />
+      </div>
+      <div class='top__menu-icons'>
+        <img id='close' x-mcsrc src='images/web_advisor/x-icon.svg' />
+      </div>
+    </div>
+    <div class='bottom'>
+      <img x-mcsrc src='images/sidebar/popup-logo.svg' />
+    </div>
+  </header>
+  <div class='innerbody'>
+    <div id='sidebar_title' class='innerbody__title'></div>
+    <div id='sidebar_subtitle' class='innerbody__title-message'></div>
+    <div class='innerbody__stats-box'>
+      <div class='innerbody__stats-box__item'>
+        <img x-mcsrc src='images/statistics/pages-scanned-icon.svg' />
+        <span>
+          <span id='num-pages-scanned' class='innerbody__stats-box__item__number'>0</span>
+          &nbsp;
+          <span id='sidebar_pages_scanned' x-mclocalizedtext='true'></span>
+        </span>
+      </div>
+      <div id='sidebar_statsrow_unsafe_blocked' class='innerbody__stats-box__item'>
+        <img x-mcsrc src='images/statistics/downloads-blocked-icon.svg' />
+        <span>
+          <span id='num-unsafe-blocked' class='innerbody__stats-box__item__number'>0</span>
+          &nbsp;
+          <span id='sidebar_unsafe_blocked' x-mclocalizedtext='true'></span>
+        </span>
+      </div>
+      <div class='innerbody__stats-box__item'>
+        <img x-mcsrc src='images/statistics/pages-blocked-icon.svg' />
+        <span>
+          <span id='num-pages-blocked' class='innerbody__stats-box__item__number'>0</span>
+          &nbsp;
+          <span id='sidebar_dangerous_blocked' x-mclocalizedtext='true'></span>
+        </span>
+      </div>
+      <div  id='sidebar_statsrow_crypto' class='innerbody__stats-box__item'>
+        <img x-mcsrc src='images/statistics/crypto-blocked-icon.svg' />
+        <span>
+          <span id='num-crypto-blocked' class='innerbody__stats-box__item__number'>0</span>
+          &nbsp;
+          <span id='sidebar_crypto_blocked' x-mclocalizedtext='true'></span>
+        </span>
+      </div>
+      <div id='sidebar_adblock_enabled'>
+        <div id='adblock_ads_blocked' class='innerbody__stats-box__item'>
+          <img x-mcsrc src='images/statistics/ads-blocked-icon.svg' />
+          <span>
+            <span id='num-ads-blocked' class='innerbody__stats-box__item__number'>0</span>
+            &nbsp;
+            <span id='sidebar_ads_blocked' x-mclocalizedtext='true'></span>
+          </span>
+        </div>
+        <div id='adblock_trackers_blocked' class='innerbody__stats-box__item'>
+          <img x-mcsrc src='images/statistics/tracker-icon.svg' />
+          <span>
+            <span id='num-trackers-blocked' class='innerbody__stats-box__item__number'>0</span>
+            &nbsp;
+            <span id='sidebar_tracker_blocked' x-mclocalizedtext='true'></span>
+          </span>
+        </div>
+        <div class='innerbody__stats-box__item space-between'>
+          <span id='sidebar_adblock_toggle' x-mclocalizedtext='true'></span>
+          &nbsp;
+          <label class='switch'>
+            <input class='adblock-switch' type='checkbox'><span class='slider'></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar_adblock_view_site_report"></div>
+    <div class='innerbody__message'>
+      <div class='innerbody__message__title'></div>
+      <div class='innerbody__message__desc'>
+      </div>
+      <div class='innerbody__message__action'>
+        <a id='innerbody__message__action_text'></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id='sidebar_footer_view_stats' class='footer-top__view-stats'>
+        <a id='sidebar_view_stats' x-mclocalizedtext='true' />
+    </div>
+    <div class='footer-top'>
+      <div id='sidebar_view_site_report' x-mclocalizedtext='true' class='footer-top__site-report'></div>
+      <a href='https://service.mcafee.com/default.aspx' target='_blank' id='sidebar_get_help' x-mclocalizedtext='true' class='footer-top__help'></a>
+      <div class='footer-top__socialmedia'>
+        <a href='https://www.linkedin.com/company/mcafee' target='_blank'><img x-mcsrc src='images/socialmedia/linkedin.svg' /></a>
+        <a href='https://twitter.com/McAfee_Home' target='_blank'><img x-mcsrc src='images/socialmedia/twitter.svg' /></a>
+        <a href='https://www.facebook.com/McAfee/' target='_blank'><img x-mcsrc src='images/socialmedia/facebook.svg' /></a>
+      </div>
+    </div>
+    <div class='footer-bottom'>
+      <div id='sidebar_version' x-mclocalizedtext='true' class='footer-bottom__version'></div>
+      <a href='https://www.mcafee.com/legal?tab=product' target='_blank' id='sidebar_terms' x-mclocalizedtext='true' class='footer-bottom__terms'></a>
+      <a href='https://www.mcafee.com/legal?tab=privacy' target='_blank' id='sidebar_privacy' x-mclocalizedtext='true' class='footer-bottom__privacy'></a>
+    </div>
+  </footer>
+</section>

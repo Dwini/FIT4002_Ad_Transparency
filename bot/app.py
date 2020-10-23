@@ -39,7 +39,7 @@ def main():
         if creating:
             bot = botCreator()
         else:
-            bot = Bot(AD_USERNAME)
+            bot = Bot(os.getenv('PROFILE_USERNAME'))
 
         # Driver setup
         session = get_driver(bot.position)
@@ -53,9 +53,6 @@ def main():
 
         # Setup the webscraber object to scrape ads.
         ws = webscraper(session, bot, yt_ad.ALL)
-
-        # perform google login.
-        ws.login()
 
         # randomly choose to youtube search or google search.
         ws.activate_bot()

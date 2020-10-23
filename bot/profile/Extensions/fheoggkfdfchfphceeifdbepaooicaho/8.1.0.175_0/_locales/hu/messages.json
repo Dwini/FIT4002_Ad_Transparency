@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "A család online hozzáférésének kezelése"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "Pénzügyi adatainak védelme"
+   },
+   "annotation_balloon_color_green": {
+      "message": "Ez a hivatkozás biztonságos"
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "Naponta tesztelve"
+   },
+   "annotation_balloon_color_red": {
+      "message": "A hivatkozás veszélyes"
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "Ez a hivatkozás még nincs besorolva"
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "Ez a hivatkozás gyanús"
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "Webhelyjelentés megtekintése"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "$ads_counter$ hirdetés blokkolva",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "$ads_counter$ hirdetés blokkolva",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "$tracker_counter$ követő blokkolva",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "$tracker_counter$ követő blokkolva",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "$download_scanning_counter$ letöltés megvizsgálása",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "$download_scanning_counter$ letöltés megvizsgálása",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "További recepteket fedezhet fel a(z) $search_text$ keresésre vonatkozóan",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "További cikkeket fedezhet fel a(z) $search_text$ keresésre vonatkozóan",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "Még több találatot fedezhet fel a(z) $search_text$ keresésre vonatkozóan",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "Összehasonlíthatja a különböző árakat a(z) $search_text$ keresésre vonatkozóan",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "További információkhoz juthat a(z) $search_text$ keresésre vonatkozóan",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "Még többet megtudhat ($search_text$)",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "Vállalom a kockázatot"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "A McAfee® Total Protection letöltése"
+   },
+   "block_page_go_back": {
+      "message": "Vissza"
+   },
+   "block_page_message": {
+      "message": "Hűha! Biztosan oda szeretne lépni?"
+   },
+   "block_page_notice_body": {
+      "message": "Gondoskodunk róla, hogy böngészőjét biztonságosan használhassa. A McAfee® Total Protection segítségével a védelmet minden készülékére kiterjesztheti. Vegye igénybe a VPN, a személyazonosság-védelem, a Fájlzár és az egyéb szolgáltatásainkat."
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "Eddig $pagesScanned$ oldalt vizsgáltunk meg Önnek.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "Eddig $pagesScanned$ oldalt vizsgáltunk meg Önnek.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "Erre a webhelyre látogatva úgy találtuk, hogy az legalább egy kockázatos viselkedést mutat."
+   },
+   "block_page_popover_title": {
+      "message": "Miért jelenik meg ez?"
+   },
+   "block_page_risky_url": {
+      "message": "felkeresése kockázatos lehet."
+   },
+   "block_page_search_input": {
+      "message": "Keresés (z) %PRODUCTNAME% segítségével"
+   },
+   "block_page_state_danger": {
+      "message": "Nagyon kockázatos"
+   },
+   "block_page_state_warning": {
+      "message": "Kissé kockázatos"
+   },
+   "block_page_status_text": {
+      "message": "Webhely státusza:"
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% - Webhelybiztonsági besorolások"
+   },
+   "block_page_view_site_report": {
+      "message": "Webhelyjelentés megtekintése"
+   },
+   "category_id_100_description": {
+      "message": "Olyan weboldalak, amelyek virtuális művészeti galériákat, művészek webhelyeit (beleértve a szobrászatot és fényképészetet), múzeumokat, népi szokásokat és egyes országok szokásait mutatják be."
+   },
+   "category_id_100_name": {
+      "message": "Művészet, kultúra, örökség"
+   },
+   "category_id_101_description": {
+      "message": "Olyan weboldalak, amelyek elsősorban alkohol (mint például sör, bor és tömény italok) használatát támogatják vagy népszerűsítik, vagy ilyen italokat értékesítenek. Ebbe a kategóriába esnek a koktélreceptekre és az otthoni előállításra vonatkozó utasítások is."
+   },
+   "category_id_101_name": {
+      "message": "Alkohol"
+   },
+   "category_id_102_description": {
+      "message": "Olyan weboldalak, amelyek szándékosan lehetővé teszik, hogy a felhasználók az IP-címüket és egyéb személyazonosító adataikat elrejtve böngésszenek a helyi szűrési szabályzatok kijátszása, illetve bármilyen weboldal elérése érdekében. A névtelenítő weboldalak blokkolják a nyomon követő technológiákat is, mint a cookie-kat vagy a böngészőelőzményeket. Egyes módszerekkel megakadályozható az operációs rendszer verziójának és a weboldalelőzmények weboldal részére történő továbbítása. Ebbe a kategóriába tartoznak az olyan oldalak, amelyek ingyenes proxy IP-címet biztosítanak, vagy a szűrés kikerüléséhez nyújtanak segítséget."
+   },
+   "category_id_102_name": {
+      "message": "Névtelenítők"
+   },
+   "category_id_103_name": {
+      "message": "Felnőtt tartalom"
+   },
+   "category_id_104_description": {
+      "message": "Olyan weboldalak, amelyek anonim webböngészést tesznek lehetővé ilyen szolgáltatás nyújtásának explicit szándéka nélkül. Ebbe a kategóriába tartoznak az URL-fordítók, a weboldal-gyorsítótárazó és egyéb szolgáltatások, amelyek névtelenítő szolgáltatásként működhetnek, de nem kifejezett céljuk a szűrőszoftverek kikerülése."
+   },
+   "category_id_104_name": {
+      "message": "Névtelenítő segédprogramok"
+   },
+   "category_id_105_description": {
+      "message": "Weboldalak, amelyek üzleti információkat nyújtanak, például vállalati áttekintéseket vagy üzleti tervezésre és stratégiákra vonatkozó adatokat. Ebbe a kategóriába tartoznak az olyan információk, szolgáltatások vagy termékek, amelyek más vállalkozásoknak nyújtanak segítséget a tervezéshez, az irányításhoz és a vállalkozás piaci pozicionálásához. Ebbe a kategóriába tartoznak az MLM rendszerű vállalkozások, amennyiben a hangsúly az üzletmeneten van. Ez a kategória nem terjed ki a személyes és a webhosztoló oldalakra."
+   },
+   "category_id_105_name": {
+      "message": "Üzlet"
+   },
+   "category_id_106_description": {
+      "message": "Olyan weboldalak, amelyek webalapú, valós idejű üzenetküldést tesznek lehetővé nyilvános és privát csevegőszobákban. Ide tartozik az IRC. Az azonnali üzenetküldés nem ebbe a kategóriába tartozik. A kockázatok közé tartozik a sértő, a hatékonyságot negatívan befolyásoló tartalom és a bizalmas információk szivárogtatása."
+   },
+   "category_id_106_name": {
+      "message": "Csevegés"
+   },
+   "category_id_108_description": {
+      "message": "Olyan weboldalak, amelyek általános tájékoztatást kínálnak, például közszolgáltatásokkal, regionális információkkal, közlekedési menetrendekkel, térképekkel vagy időjárás-jelentéssel kapcsolatosan."
+   },
+   "category_id_108_name": {
+      "message": "Nyilvános adatok"
+   },
+   "category_id_109_description": {
+      "message": "Olyan weboldalak, amelyek a McAfee véleménye szerint illegális vagy bűncselekménynek minősülő tevékenységek végrehajtásával kapcsolatos utasításokat tartalmaznak. Az utasítások például gyilkosságra vagy öngyilkosságra, szabotázsra, bombakészítésre, zárfeltörésre, szolgáltatáslopásra, bűnüldözés elkerülésére vagy drogteszten való csalásra vonatkoznak. Ebbe a kategóriába tartozhat továbbá az illegális tartalom megosztására, a csalások végrehajtására és a fogyasztói csalásokra vonatkozó információk."
+   },
+   "category_id_109_name": {
+      "message": "Potenciális bűncselekmények"
+   },
+   "category_id_110_description": {
+      "message": "Olyan webhelyek, amelyek illegális vagy rekreációs drogok vásárlásával, előállításával vagy használatával kapcsolatos információkat szolgáltatnak. Ebbe a kategóriába tartoznak a kábítószeres kellékek bemutatása, értékesítése vagy azok használatának ismertetése, a legális drogokra vonatkozó tanácsadás, mint például a szipuzásra, a vényköteles gyógyszerekkel, illetve az egyéb legális anyagokkal való visszaélésre vonatkozó információk."
+   },
+   "category_id_110_name": {
+      "message": "Kábítószerek"
+   },
+   "category_id_111_description": {
+      "message": "Tudományos tartalmakkal (matematika, történelem) foglalkozó weboldalak, iskolai vagy egyetemi weboldalak, illetve oktatási adminisztrációs oldalak (iskolai hírek, tanári segédoldalak)."
+   },
+   "category_id_111_name": {
+      "message": "Oktatás, tájékoztatás"
+   },
+   "category_id_112_description": {
+      "message": "Olyan weboldalak, amelyek mozival, színházzal, zenével, tévével, infotainmenttel, szórakoztatóipari pletykákkal, hírekkel foglalkoznak, valamint celebekkel, mint például színészekkel és zenészekkel. Ebbe a kategóriába sorolhatók az olyan webhelyek, amelyek webes szórakoztatást kínálnak, mint például horoszkópok és rajongói klubok."
+   },
+   "category_id_112_name": {
+      "message": "Szórakozás"
+   },
+   "category_id_113_description": {
+      "message": "Ez a kategória az Ijesztő tartalom, a Diszkrimináció, a Pornográfia, az Erőszak vagy az Erőszak játékokban, rajzfilmekben kategóriákkal használatos az ezen kategóriákba eső extrém tartalmú URL-ek azonosításához. Erre példa az illegális pornográfia, amely a Pornográfia, a Potenciális bűncselekmények és az Extrém kategóriába esik."
+   },
+   "category_id_113_name": {
+      "message": "Extrém"
+   },
+   "category_id_114_description": {
+      "message": "Olyan weboldalak, amelyek pénzügyi információkat nyújtanak, vagy online pénzügyi fiókokhoz/számlákhoz biztosítanak hozzáférést. Ebbe a kategóriába soroljuk azokat a weboldalakat, amelyek pénzügyi tájékoztatást nyújtanak, beleértve a pénzkezeléssel kapcsolatos híreket és szolgáltatásokat, de bizalmas pénzügyi számlaadatokhoz (mint például pénzügyi statisztikákhoz, egyes területekkel, mint például adózással, jelzálogkölcsönnel, biztosítással, akkreditációval vagy befektetéssel kapcsolatos tanácsadáshoz) nem biztosítanak hozzáférést. Az online pénzügyi számlákhoz való hozzáférés a személyes és az üzleti banki ügyleteket, a pénzkezelést, az adótanácsadást, a befektetési alapokat, a hitelkártyákat, a hitelszövetkezeteket, a biztosítást, az egyéb pénzügyi publikációkat és szolgáltatásokat foglalja magában. Ebbe a kategóriába tartoznak a részvényinformációk (de a részvénykereskedelem nem), a lakásfinanszírozás és a kormányzati pénzügyi információk."
+   },
+   "category_id_114_name": {
+      "message": "Pénzügyek, banki tevékenység"
+   },
+   "category_id_115_description": {
+      "message": "Olyan oldalak, amelyek lehetővé teszik, hogy a felhasználók szerencsejátékban próbálják ki magukat, online fogadást kössenek, vagy olyan szerencsejátékra alkalmas szoftvert kínálnak, amelyek online fogadást tesznek lehetővé (kaszinójátékok, sportfogadás és lottózás). Ez a kategória a lottózáshoz kapcsolódik, amennyiben a szelvények online vásárolhatók meg, illetve online lehet játszani."
+   },
+   "category_id_115_name": {
+      "message": "Szerencsejáték"
+   },
+   "category_id_116_description": {
+      "message": "Olyan weboldalak, amelyek online szerencsejátékra adnak lehetőséget, és kapcsolódó információkat biztosítanak (például elkerülő megoldások, kódok, demók, emulátorok, online versenyek vagy szerepjátékversenyek, játékklánok, játékgyártók webhelyei, fantázia vagy virtuális sportligák, és egyéb játékoldalak nyerési lehetőség nélkül). Ebbe a kategóriába a játékkonzolok (például a Microsoft Xbox® és a Sony PlayStation®) tartoznak."
+   },
+   "category_id_116_name": {
+      "message": "Játékok"
+   },
+   "category_id_117_description": {
+      "message": "Olyan weboldalak, amelyek kormányzati vagy katonai szervezetek (például kormányzati irodák vagy ügynökségek, rendőrség, tűzoltóság, polgári védelem, terrorelhárítás, vagy nemzetek feletti szervezetek, mint például az ENSZ vagy az Európai Unió) által kezelt tartalommal rendelkeznek. Ebben a kategóriában katonai és veterán egészségügyi létesítmények szerepelnek."
+   },
+   "category_id_117_name": {
+      "message": "Kormányzat, hadsereg"
+   },
+   "category_id_118_description": {
+      "message": "Olyan weboldalak, amelyek a McAfee véleménye szerint számítógépes csalással, bűnözéssel vagy rosszindulatú tevékenységgel kapcsolatosan instrukciókat biztosítanak, vagy ilyen tevékenységeket egyéb módon elősegítenek. Ide a számítógépes bűnözéshez kapcsolódó weboldalak tartoznak, amelyek rosszindulatú, hackeléshez szükséges információkat vagy eszközöket kínálnak, amelyek segítségével engedély nélkül hozzá lehet férni számítógépekhez és hálózatokhoz (rootkitek, kiddy scriptek). Ebbe a kategóriába sorolhatók továbbá az elektronikus csalás más formái, mint például a betárcsázós csalás és az elektronikus készülékek illegális manipulálása."
+   },
+   "category_id_118_name": {
+      "message": "Potenciális kódfeltörés, számítógépes bűnözés"
+   },
+   "category_id_119_description": {
+      "message": "Egészséggel kapcsolatos és egészségügyi szolgáltatásoktól szóló weboldalak. Egészségügyi információk, beleértve az olyan témaköröket, mint az általános (fizikai és mentális) közérzet javítása (étrend, fitnesz vagy gyermeknevelés). Az egészségügyi szolgáltatók közé tartoznak az egészségbiztosítást kínáló cégek, a kórházak, a klinikák és a független orvosok."
+   },
+   "category_id_119_name": {
+      "message": "Egészség"
+   },
+   "category_id_120_description": {
+      "message": "Komikus vagy vicces tartalmú weboldalak. Ebbe a kategóriába tartoznak a viccekkel, a humoros jelenetekkel, a képregényekkel foglalkozó webhelyek és a szatirikus oldalak. Ez a kategória tartalmazhat felkavaró regénytartalmakat is, amelyek gyakran a képregényekre jellemzők."
+   },
+   "category_id_120_name": {
+      "message": "Humor, képregények"
+   },
+   "category_id_121_description": {
+      "message": "Azok a weboldalak, amelyek a McAfee véleménye szerint olyan információkat biztosítanak, amelyek explicit módon támogatják személyek egyes csoportjainak elnyomását vagy diszkriminációját. Ebbe a kategóriába tartoznak a faji vagy etnikai származáson, valláson, nemzeti hovatartozáson, nemen, életkoron, fogyatékosságon vagy szexuális irányultságon alapuló hátrányos megkülönböztetést támogató elképzelések. Ide tartozhatnak olyan politikai pártok és szervezetek, amelyek gyűlöletre biztatnak, valamint az extrém internetes zaklatás is."
+   },
+   "category_id_121_name": {
+      "message": "Diszkrimináció"
+   },
+   "category_id_122_description": {
+      "message": "Olyan weboldalak, amelyek kizárólag olyan felhasználóknak kínál valós idejű hálózati kommunikációt, akik szerepelnek egy tag partnerlistájában, illetve azonnali üzenetküldési munkamenetben vesznek részt. A legtöbb azonnali üzenetküldő szoftver kínál olyan szolgáltatásokat, mint a fájltovábbítás, a PC-PC telefonhívás, és követni tudja, hogy a többi személy mikor jelentkezik be és ki. Az ilyen webhelyek kapcsán felmerül a bizalmas adatok szivárgása, a kifogásolható tartalom vagy a fájlmegosztás veszélye is."
+   },
+   "category_id_122_name": {
+      "message": "Azonnali üzenetküldés"
+   },
+   "category_id_123_description": {
+      "message": "Részvények online vételét, eladását, vagy kereskedését kínáló weboldalak. Ebbe a kategóriába tartoznak a ticker tape információk, amelyek segítségével megtekinthetők a valós idejű részvényárak és a pénzügyi spreadekre való spekuláció a részvénypiacon. Az egyéb fogadások a Szerencsejáték kategóriába esnek. Ez a kategória nem foglalja magában az olyan webhelyeket, amelyek információt nyújtanak a részvényekről, de részvények vételét, eladását és kereskedését nem teszik lehetővé."
+   },
+   "category_id_123_name": {
+      "message": "Részvénykereskedelem"
+   },
+   "category_id_124_description": {
+      "message": "Olyan weboldalak, amelyek folyamatos audio- vagy videoközvetítéshez (online rádió, tévé vagy podcast) kínálnak szoftvert vagy hozzáférést."
+   },
+   "category_id_124_name": {
+      "message": "Internetes rádió, tv"
+   },
+   "category_id_125_description": {
+      "message": "Munkakereséshez kapcsolódó weboldalak, beleértve az önéletrajzírással, az interjúkkal, a karrierváltással, az álláshirdetésekkel és a nagy munkaadatbázisokkal foglalkozó webhelyeket. Ebbe a kategóriába sorolhatók továbbá azok a vállalati weboldalak is, amelyek munkalehetőségeket kínálnak, fizetéseket hasonlítanak össze, átmeneti munkalehetőségeket, illetve vállalaton belüli munkalehetőségeket kínálnak."
+   },
+   "category_id_125_name": {
+      "message": "Munkakeresés"
+   },
+   "category_id_126_description": {
+      "message": "Olyan weboldalak, amelyek törvényes módon nyújtanak információt az adatvédelemről. Ebbe a kategóriába tartoznak az üzleti és személyes adatok védelmével, a szellemi tulajdonjogokkal, az adatvédelemmel, illetve az internetes, a magánhálózati vagy az egyéb sávszélességgel kapcsolatos szolgáltatások (mint például telekommunikáció) infrastruktúrájával kapcsolatos információk. A lehetséges kockázatok közé tartozik a Potenciális kódfeltörés, számítógépes bűnözés. Az olyan webhelyek, amelyek nagy kockázatot jelentő tartalommal rendelkeznek, és ahol nem lehet világosan megkülönböztetni az etikus és a nem etikus hackereket, szintén ebbe a kategóriába tartozhatnak, valamint a Potenciális kódfeltörés, számítógépes bűnözés kategóriába. Bizonyos tartalmakkal visszaélve kijátszható a védelem, és illegális tevékenységeket lehet végrehajtani."
+   },
+   "category_id_126_name": {
+      "message": "Adatbiztonság"
+   },
+   "category_id_127_description": {
+      "message": "Társas érintkezéssel foglalkozó weboldalak (például online társkereső, randi oldalak, escort szolgáltatások vagy potenciális házastársak bemutatását célzó oldalak). Ebbe a kategóriába számos olyan oldal tartozik, amely lehetővé teszi, hogy a tagok valós idejű üzenetek révén egymással kommunikáljanak. Az ebbe a kategóriába eső webhelyek lehetővé tehetik a nemkívánatos felekkel és az olyan tagprofilokkal való kapcsolat kialakulását, amelyek kifogásolható információkat tartalmaznak."
+   },
+   "category_id_127_name": {
+      "message": "Társkeresés, közösségi hálózat"
+   },
+   "category_id_128_description": {
+      "message": "Olyan webhelyek, amelyek médiafájlokat, szoftvereket vagy segédprogramokat értékesítenek, amelyek letölthetők és mobiltelefonon használhatók. Erre példának hozhatjuk fel a csengőhangokat, a logókat/szkineket, a játékokat, a képernyővédőket, a szövegalapú dallamokat, valamint az SMS-hez, az MMS-hez, a WAP-hoz és az egyéb telefonos protokollokhoz használható szoftvereket."
+   },
+   "category_id_128_name": {
+      "message": "Mobiltelefon"
+   },
+   "category_id_129_description": {
+      "message": "Olyan oldalak, ahonnan audio- vagy videofájlokat (például MP3, WAV, AVI és MPEG formátumban) lehet letölteni. A fájlok mentése és lejátszása a felhasználó számítógépén történik."
+   },
+   "category_id_129_name": {
+      "message": "Médialetöltések"
+   },
+   "category_id_130_description": {
+      "message": "Olyan weboldalak, amelyek kifejezetten a számítógép beállításainak vagy a tevékenység eltérítésére írt kódot telepítenek. Ebbe a kategóriába sorolhatók az öntelepítő alkalmazások (más néven „drive-by” végrehajtható fájlok letöltése), a trójai programok és az olyan vírusok, amelyek a böngésző vagy egyéb alkalmazások biztonsági réseit használják ki. Az egyes weboldalak később elveszíthetik rosszindulatú státuszukat, és más kategóriába kerülhetnek. A rosszindulatú webhelyek célja, hogy kárt okozzanak egy másik számítógépen."
+   },
+   "category_id_130_name": {
+      "message": "Kártevő webhelyek"
+   },
+   "category_id_131_description": {
+      "message": "Weboldalak, amelyek hozzáférést (http://) biztosítanak Usenet-hírcsoportokhoz és a hírcsoportokba feltöltött fájlok archívumaihoz. Ebbe a kategóriába sorolhatók az olyan online csoportok, amelyek hasonló közösségi célú tartalommegjelenítést kínálnak. Az ebbe a kategóriába sorolt URL-ek sértő tartalmúak lehetnek."
+   },
+   "category_id_131_name": {
+      "message": "Usenet-hírek"
+   },
+   "category_id_132_description": {
+      "message": "Nem pornográf jellegű weboldalak, amelyek meztelen emberi testet ábrázolnak. Ebbe a kategóriába tartoznak a klasszikus szobrok és festmények, a művészi aktábrázolások, egyes naturista képek, illetve a részletes orvosi ábrák."
+   },
+   "category_id_132_name": {
+      "message": "Meztelenség"
+   },
+   "category_id_133_description": {
+      "message": "Karitatív szervezetek vagy oktatási csoportok weboldalai, amelyek egy adott célt szolgálnak, és nagyobb közösséget (például klubokat, lobbikat, közösségeket, NGO-kat, szakszervezeteket és érdekvédelmi csoportokat) szolgálnak ki. Ilyen például a szabadkőművesek, a cserkészek, az Elks, vagy a Big Brother szervezetek."
+   },
+   "category_id_133_name": {
+      "message": "Nonprofit, érdekképviselet, civil szervezetek"
+   },
+   "category_id_134_description": {
+      "message": "Online híreket biztosító weboldalak, mint például nemzetközi vagy regionális hírközlés és publikáció. Ebben a kategóriában a hírtartalmat biztosító webportálok találhatók."
+   },
+   "category_id_134_name": {
+      "message": "Általános hírek"
+   },
+   "category_id_136_description": {
+      "message": "Termékek és szolgáltatások online kereskedelmével foglalkozó weboldalak. A különféle termékeket értékesítő weboldalak esetén felmerülhet annak a kockázata, hogy a felhasználók olyan termékekhez is hozzáférhetnek, amelyek általában egyéb kategóriákba (Pornográfia, Fegyverek, Meztelenség vagy Erőszak) tartoznak. Egyes webhelyek más kategóriákba (mint például Pornográfia és Fegyverek) sorolt elemekhez is hozzáférést biztosíthatnak."
+   },
+   "category_id_136_name": {
+      "message": "Online vásárlás"
+   },
+   "category_id_137_description": {
+      "message": "Olyan weboldalak, amelyek csábító vagy hiányos ruhadarabokat, fehérneműt és fürdőruhákat, illetve szupermodellek vagy celebritások fotósorozatait mutatják be meztelen ábrázolás nélkül."
+   },
+   "category_id_137_name": {
+      "message": "Provokatív öltözködés"
+   },
+   "category_id_138_description": {
+      "message": "Olyan webhelyek, amelyek számítógépek és felhasználók között üzleti vagy személyes célra fájlcserét tesznek lehetővé (például letölthető zeneszámok). A P2P ügyfelek lehetővé teszik, hogy a felhasználók peer-felhasználói hálózaton keressenek vagy cseréljenek fájlokat. Gyakran tartalmaznak kémprogramokat vagy valós idejű csevegési lehetőségeket. Ide tartoznak a BitTorrent oldalak."
+   },
+   "category_id_138_name": {
+      "message": "P2P, fájlmegosztás"
+   },
+   "category_id_139_description": {
+      "message": "Politikai pártokkal, politikusokkal foglalkozó, és különféle témakörökben véleményeket bemutató weboldalak. Ebbe a kategóriába tartozhatnak a drogokkal kapcsolatos törvények és vélemények. Ebbe a kategóriába sorolhatók a politikai pártokat, a politikai kampányokat és véleményeket bemutató URL-ek különféle témakörökben, beleértve a politikai vitákat."
+   },
+   "category_id_139_name": {
+      "message": "Politika, vélemény"
+   },
+   "category_id_140_description": {
+      "message": "Olyan személyes oldalak, amelyek közös domainnel rendelkeznek, és amelyeket internetszolgáltató, egyetemi/oktatási kiszolgáló vagy valamilyen ingyenes weboldalállomás hosztol. Ebbe a kategóriába sorolhatók az egyedi domainek, amelyek személyes adatokat tartalmaznak, mint például a személyes oldalak. Személyes oldalak, amelyek sértő tartalmúak lehetnek."
+   },
+   "category_id_140_name": {
+      "message": "Személyes oldalak"
+   },
+   "category_id_141_description": {
+      "message": "Olyan weboldalak, amelyek jelentős átjáróként vagy könyvtárként szolgálnak a weben található tartalmak eléréséhez. Számos portál kínál különféle belső webhelyszolgáltatást vagy -funkciót, mint például keresőmotort, levelezőszolgáltatást, híreket vagy szórakozási lehetőségeket. Ebbe a kategóriába sorolhatók a különféle tartalmú levelezőlistákat kínáló webhelyek."
+   },
+   "category_id_141_name": {
+      "message": "Portálwebhelyek"
+   },
+   "category_id_142_description": {
+      "message": "Olyan weboldalak, amelyek távoli elérést biztosítanak valamilyen programhoz, online szolgáltatáshoz vagy teljes számítógépes rendszerhez. Bár a távoli hozzáférést legitim módon alkalmazzák egy számítógép távolról történő futtatásához, biztonsági kockázat merülhet fel, például hátsó kapun keresztüli elérés formájában. A hátsó kapun keresztüli elérés, amelyet az eredeti programozó írt, lehetővé teszi, hogy a rendszert egy másik fél irányítsa a felhasználó tudta nélkül."
+   },
+   "category_id_142_name": {
+      "message": "Távoli hozzáférés"
+   },
+   "category_id_143_description": {
+      "message": "Olyan weboldalak, amelyek nem a fő vallások körébe tartozó vallásos témákkal és spirituális hiedelmekkel kapcsolatos tartalommal rendelkeznek. Ebbe a kategóriába tartoznak a vallási viták, cikkek és információk helyi kongregációk vagy csoportok számára (például egy egyházközség honlapja, amennyiben a webhely nem tartozik a Fő világvallások kategóriába). Ebbe a kategóriába sorolható a vallásokat összehasonlító vagy a vallásokról és az ideológiákról szóló webhelyek."
+   },
+   "category_id_143_name": {
+      "message": "Vallás, ideológia"
+   },
+   "category_id_144_description": {
+      "message": "Olyan weboldalak, amelyek a közös feladathoz tétlen vagy használaton kívüli számítógépes erőforrásokat használnak. A feladat lehet vállalati vagy nemzetközi jellegű. Ismert példa a SETI program és a Humán genom projekt, amelyek az adatok elemzéséhez éppen nem használt számítógépek ezreit használják."
+   },
+   "category_id_144_name": {
+      "message": "Erőforrás-megosztás"
+   },
+   "category_id_145_description": {
+      "message": "Olyan weboldalak, amelyek keresési találatokat biztosítanak, amelyek alapján a felhasználó a kulcsszavak alapján megkeresheti a kért információkat."
+   },
+   "category_id_145_name": {
+      "message": "Keresőmotorok"
+   },
+   "category_id_146_description": {
+      "message": "Profi vagy szervezett rekreációs sportokkal kapcsolatos weboldalak. Ebbe a kategóriába tartoznak a sporttal kapcsolatos hírek, események és információk, mint például játéktippek, stratégiák, játszmapontok vagy játékosok cseréje."
+   },
+   "category_id_146_name": {
+      "message": "Sport"
+   },
+   "category_id_147_description": {
+      "message": "Olyan weboldalak, amelyek médiafájlok közvetítését biztosítják, vagy a teljes fájl átvitele előtt megfelelő beépülő modulokkal lehetővé teszik az audio- vagy vizuális adatokba való betekintést."
+   },
+   "category_id_147_name": {
+      "message": "Médiafolyam"
+   },
+   "category_id_148_description": {
+      "message": "Olyan webodalak, amelyek shareware és szabadszoftverek letölthető példányait tárolják. A shareware-t becsületkasszás alapon teszik közzé: így maga a shareware ingyenesen letölthető, de a programozó egy kisebb összeget kér, ha a szoftver megfelelő, és azt gyakran használják. A szabadszoftver teljesen ingyenes szoftver."
+   },
+   "category_id_148_name": {
+      "message": "Shareware, szabadszoftver"
+   },
+   "category_id_149_description": {
+      "message": "Olyan weboldalak, amelyek a McAfee véleménye szerint szexuális érdeklődést felkeltő vagy erotikus anyagokat tartalmaznak. Ez a kategória a fétisoldalakat, -animációkat, -képregényeket, -történeteket és az illegális pornográfiát foglalja magában."
+   },
+   "category_id_149_name": {
+      "message": "Pornográfia"
+   },
+   "category_id_150_description": {
+      "message": "Olyan oldalak, amelyek a személyes vagy a vállalati adatvédelmet és biztonságot sértik. Ebbe a kategóriába a következők tartoznak:\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>URL-ek, amelyek olyan szoftvereket töltenek le vagy programokat hajtanak végre, amelyek összegyűjtik a felhasználó adatait, és azokat egy harmadik félnek elküldik a felhasználó kifejezett tudomása vagy beleegyezése nélkül.\u003C/li>\u003Cli>Olyan szoftverek, amelyek megfigyelik a mások számítógépein végzett műveleteket a billentyűzet megfigyelése révén (billentyűzetfigyelők).\u003C/li>\u003Cli>Olyan webhelyek, amelyekről lehet tudni, hogy kémprogramokat vagy reklámszoftvereket tartalmaznak.\u003C/li>\u003C/ul>Ez a kategória nem azonos a Kártevő webhelyek kategóriával a szándékbeli eltérés miatt. A kémprogramok és a billentyűzetfigyelők titokban adatokat gyűjtenek, majd azokat továbbítják egy másik félnek. A rosszindulatú webhely célja valamilyen szoftver telepítése vagy a felhasználó tudta vagy beleegyezése nélkül bizonyos műveletek végrehajtása."
+   },
+   "category_id_150_name": {
+      "message": "Kémprogram, reklámszoftver, billentyűzetfigyelők"
+   },
+   "category_id_151_description": {
+      "message": "Olyan weboldalak, amelyek dohánytermékek, dohányzási kellékek (beleértve a cigarettákat, a szivarokat, a pipákat, a snüsszt és a bagót) eladásával, promóciójával vagy támogatásával foglalkoznak."
+   },
+   "category_id_151_name": {
+      "message": "Dohány"
+   },
+   "category_id_152_description": {
+      "message": "Olyan weboldalak, amelyek privát vagy üzleti utazáshoz (szállodákkal, üdülőhelyekkel, légitársaságokkal, szárazföldi közlekedéssel, autóbérléssel, utazási irodákkal kapcsolatos, valamint általános turista- és utazási információk) vehetők igénybe. Ebbe a kategóriába tartoznak azok az oldalak is, ahol jegyet vagy szállást lehet foglalni."
+   },
+   "category_id_152_name": {
+      "message": "Utazás"
+   },
+   "category_id_153_description": {
+      "message": "Olyan weboldalak, amelyek valós vagy életszerű képeket vagy szövegeket tartalmaznak, amelyek emberek, állatok vagy intézmények elleni fizikai támadást ábrázolnak, írnak le vagy támogatnak, például háború, öngyilkosság, csonkítás, darabolás bemutatásával."
+   },
+   "category_id_153_name": {
+      "message": "Erőszak"
+   },
+   "category_id_154_description": {
+      "message": "Olyan weboldalak, amelyek reklámokat hosztolnak, illetve hirdetéseket készítő programokat kínálnak. Példaként olyan bannereken, felugró ablakokban és egyéb statikus vagy dinamikusan generált hirdetésekben látható hivatkozásokat, forráskódokat vagy kisalkalmazásokat tudunk felsorolni, amelyek weboldalakon jelennek meg. Ezzel a kategóriával a weboldalakon megjelenő hirdetéseket lehet blokkolni, és nem a hirdetéseket vagy a hirdetési szolgáltatásokat kínáló vállalatokat."
+   },
+   "category_id_154_name": {
+      "message": "Webes reklámok"
+   },
+   "category_id_155_description": {
+      "message": "Olyan weboldalak, amelyek fegyverek (pisztolyok, kések, kardok, paintball fegyverek és muníció, robbanószerek és fegyverekhez használt kiegészítők) vásárlásával, készítésével, módosításával és használatával kapcsolatosan nyújtanak tájékoztatást."
+   },
+   "category_id_155_name": {
+      "message": "Fegyverek"
+   },
+   "category_id_156_description": {
+      "message": "Olyan weboldalak, amelyeken keresztül a felhasználók e-mailt küldhetnek és fogadhatnak a weben. Az ilyen weboldalak az e-mailben érkező csatolt fájlok veszélyes tartalmának teszik ki a felhasználókat, illetve biztonsági kockázatot jelenthetnek a saját adatok szivárgása vagy elveszítése révén."
+   },
+   "category_id_156_name": {
+      "message": "Webes levelezés"
+   },
+   "category_id_157_description": {
+      "message": "Olyan weboldalak, amelyeken keresztül a felhasználók telefonhívást kezdeményezhetnek online, vagy ilyen célból információhoz vagy szoftverekhez juthatnak hozzá. Webes telefonszolgáltatás, más néven internetes telefónia vagy VoIP. Webes telefonszolgáltatások, beleértve a PC–PC, PC-telefon és telefon–telefon szolgáltatásokat, amelyek TCP-/IP-hálózatot használnak."
+   },
+   "category_id_157_name": {
+      "message": "Webes telefon"
+   },
+   "category_id_158_description": {
+      "message": "Olyan weboldalak, amelyek online aukciót és áruk vagy szolgáltatások értékesítését teszik lehetővé. Ebbe a kategóriába tartoznak az aukciókkal és értékesítéssel foglalkozó oldalak. Az online aukciókat ritkán követik figyelemmel. Az ilyen webhelyeken olyan anyagokkal találkozhatnak a felhasználók, amelyek a Pornográfia, a Fegyverek, a Meztelenség vagy az Erőszak kategóriába eshetnek."
+   },
+   "category_id_158_name": {
+      "message": "Aukciók, apróhirdetések"
+   },
+   "category_id_159_description": {
+      "message": "Weboldalak, amelyek hozzáférést (http://) biztosítanak Usenet-hírcsoportokhoz, vagy vitának adnak helyet, illetve felhasználó által generált tartalmak közzétételét teszik lehetővé (például egy adott érdekcsoportra vonatkozóan valós idejű üzenetküldést valósít meg). Ebbe a kategóriába esnek a hírcsoportokba feltöltött fájlok archívumai."
+   },
+   "category_id_159_name": {
+      "message": "Fórumok, hirdetőtáblák"
+   },
+   "category_id_160_description": {
+      "message": "Durva, közönséges és obszcén nyelvezetet vagy jelbeszédet tartalmazó weboldalak."
+   },
+   "category_id_160_name": {
+      "message": "Profanitás"
+   },
+   "category_id_161_description": {
+      "message": "Olyan webhelyek, amelyek támogatják a plagizálást és a csalást ingyenesen vagy díj ellenében kínált írásos beszámolók és dolgozatok, illetve vizsgakérdések és válaszok közzétételével."
+   },
+   "category_id_161_name": {
+      "message": "Segítség iskolai csaláshoz"
+   },
+   "category_id_162_description": {
+      "message": "Olyan weboldalak, amelyek szexuális tevékenységeket ismertetnek vagy ábrázolnak, de nem vágykeltő vagy erotikus célúak. A szexuális tartalmú anyagok közé tartozik a szexuális felvilágosítás, a szexuális kiszólások, humor vagy a szextermékek."
+   },
+   "category_id_162_name": {
+      "message": "Szexuális anyagok"
+   },
+   "category_id_163_description": {
+      "message": "Olyan weboldalak, amelyek ízléstelennek, gusztustalannak, sokkolónak vagy ijesztőnek minősülhetnek. Ebbe a kategóriába kerül az ízléstelen humor, az emésztéssel kapcsolatos testi funkciók, orvosi és baleseti eseményekről készült felkavaró fotók (vérrel és sebesülésekkel), a testmódosítás extrém formái (vágások, nemi szervek piercingje stb.) vagy az állatkínzás sokkoló bemutatása."
+   },
+   "category_id_163_name": {
+      "message": "Ijesztő tartalom"
+   },
+   "category_id_164_description": {
+      "message": "Olyan weboldalak, amelyek képspecifikus keresési találatokat biztosítanak, például miniatűrképeket."
+   },
+   "category_id_164_name": {
+      "message": "Vizuális keresőmotor"
+   },
+   "category_id_165_description": {
+      "message": "Technikai vagy üzleti témájú weboldalak, amelyek online üzenetküldési vagy való idejű csevegési szolgáltatást nyújtanak (például technikai támogatáshoz vagy interaktív üzleti kommunikációhoz). Bár a felhasználók bármilyen tartalmat közzétehetnek, ezek a fórumok kevésbé kockázatosak a sértő tartalmakat illetően. Az olyan webhelyek, amelyek különféle témájú fórumokat biztosítanak, beleértve a technikai és az üzleti tartalmakat, csak a Fórumok, hirdetőtáblák vagy a Csevegés kategóriába sorolhatók. Az elsősorban technikai vagy üzleti témájú fórumok csak a Technikai, üzleti fórumok kategóriába sorolhatók."
+   },
+   "category_id_165_name": {
+      "message": "Technikai, üzleti fórumok"
+   },
+   "category_id_166_description": {
+      "message": "Szerencsejátékkal kapcsolatos tájékoztatást nyújtó oldalak, amelyek konkrét szerencsejátékra nem adnak lehetőséget. Ebbe a kategóriába tartoznak azok a kaszinóval kapcsolatos oldalak, amelyek nem kínálnak online szerencsejátékra lehetőséget, szerencsejátékkal kapcsolatos hivatkozásokat, tippeket, lottóeredményeket, valamint nem teszik lehetővé a lóversenyeket, az autóversenyeket vagy a vitorlásversenyeket."
+   },
+   "category_id_166_name": {
+      "message": "Szerencsejátékkal kapcsolatos"
+   },
+   "category_id_167_description": {
+      "message": "Weboldalak, amelyek szöveges üzenetküldést tesznek lehetővé. Ide tartozik a mobiltelefonokra, a PDA-kra, a faxokra a szöveges üzenetek küldése, valamint a belső webhelyeken a felhasználók közötti vagy az egyes webhelyek közötti üzenetküldés."
+   },
+   "category_id_167_name": {
+      "message": "Üzenetküldés"
+   },
+   "category_id_168_description": {
+      "message": "Olyan weboldalak, amelyek játék, képregény vagy képregényalbum formájában fantasy vagy fikció útján erőszakot mutatnak be. Ide tartoznak a fizikai bántalmazásról vagy közelharcról, illetve súlyos sérülésekről, valamint fegyverek és robbanószerek által okozott pusztításról készült képek és leírások."
+   },
+   "category_id_168_name": {
+      "message": "Erőszak játékokban, rajzfilmekben"
+   },
+   "category_id_169_description": {
+      "message": "Olyan weboldalakra mutat, amelyek általában álhíreket tartalmazó e-mailben érkeznek, és amelyek célja a felhasználó számlaadatainak ellopása. Ezek a webhelyek valami másnak adják ki magukat, illetve legitim vállalati weboldalként tüntetik fel oldalukat, amelynek segítségével megtéveszthetik a felhasználót, és hozzájuthatnak a felhasználó számlaadataihoz csalás vagy lopás céljából."
+   },
+   "category_id_169_name": {
+      "message": "Adathalászat"
+   },
+   "category_id_170_description": {
+      "message": "Olyan weboldalak, amelyeken keresztül a felhasználók mappákat vagy fájlokat tudnak egy online hálózati kiszolgálóra feltölteni fájlok vagy mappák biztonsági mentése, megosztása, szerkesztése vagy visszatöltése érdekében egy másik webböngészőből."
+   },
+   "category_id_170_name": {
+      "message": "Személyes hálózati tárolóhely"
+   },
+   "category_id_171_description": {
+      "message": "Egyes weboldalakra mutató hivatkozások, amelyek kéretlen levélszemétnek minősülő e-mailekben érkeznek. A levélszemét küldésére alkalmas URL-ek tartalmazhatnak termékmarketinget, de akár potenciálisan sértő vagy csalárd webhelyek is lehetnek. Ebbe a kategóriába tartoznak a kifejezetten levélszemét küldésére kialakított webhelyek, például levélszemét blogok vagy a hozzászólásokban szereplő levélszemét."
+   },
+   "category_id_171_name": {
+      "message": "Kéretlen szolgáltatások URL-címei"
+   },
+   "category_id_172_description": {
+      "message": "Olyan weboldalak, amelyek hozzáférést biztosítanak élő vagy interaktív webalkalmazásokhoz (például böngészőalapú irodai csomagokhoz és groupware szoftverekhez). Ebbe a kategóriába olyan webhelyek tartoznak, amelyek elsősorban üzleti vagy tudományos témakörökkel, illetve személyes érdeklődési körökkel foglalkoznak."
+   },
+   "category_id_172_name": {
+      "message": "Interaktív webalkalmazások"
+   },
+   "category_id_174_description": {
+      "message": "Olyan weboldalak, amelyek ruhák, kozmetikumok, ékszerek és egyéb divathoz kapcsolódó termékek, kiegészítők vagy szolgáltatások értékesítésével foglalkoznak. Ebbe a kategóriába esnek a termékértékelések és -összehasonlítások, az általános fogyasztói információk, és szolgáltatások, mint például fodrászat, szolárium, tetoválás és piercing."
+   },
+   "category_id_174_name": {
+      "message": "Divat, szépség"
+   },
+   "category_id_175_description": {
+      "message": "Számítógépes szoftverekkel és hardverrel kapcsolatos weboldalak, beleértve a szállítókat, a termékmarketinget és az értékeléseket, a szoftverek és a hardverek központi telepítését és karbantartását, a szoftverfrissítéseket, valamint az olyan bővítményeket, mint a szkriptek, a beépülő modulok vagy illesztőprogramok. A hardverek közé tartoznak a számítógép-alkatrészek, a kiegészítők, valamint a számítógépekhez és hálózatokhoz használt elektronikus berendezések. Ebbe a kategóriába sorolható a szoftverek és hardverek marketingje, a szoftvertermékekkel foglalkozó magazinok, a hardvertermékek értékelései vagy az iparági trendek."
+   },
+   "category_id_175_name": {
+      "message": "Szoftver, hardver"
+   },
+   "category_id_176_description": {
+      "message": "Olyan weboldalak, amelyek a McAfee véleménye szerint információt biztosítanak potenciálisan kalóz vagy illegálisan megosztott szoftverekre vagy elektronikus médiafájlokra (mint például szerzői jogvédelem alá eső zeneszámok vagy filmek), illetve illegális licenckulcs-generátorok, szoftverfeltörések és sorozatszámok megosztására vonatkozóan."
+   },
+   "category_id_176_name": {
+      "message": "Potenciálisan törvénytelen szoftverek"
+   },
+   "category_id_177_description": {
+      "message": "Egy vagy több webhelyhez képeket, médiafájlokat vagy JavaScriptet hosztoló kiszolgálók URL-jei, amelyek célja a tartalom-visszakeresés felgyorsítása meglevő webkiszolgálók, például Apache esetén. A tartalomkiszolgálók általában nem rendelkeznek posztolt tartalommal vagy webhely-navigációval a böngésző felhasználók számára. A képeket hosztoló kiszolgálók nem teszik lehetővé, hogy a felhasználók a fényképek közt böngésszenek."
+   },
+   "category_id_177_name": {
+      "message": "Tartalomkiszolgáló"
+   },
+   "category_id_178_description": {
+      "message": "Olyan weboldalak, amelyek webhelyek közzétételéhez és karbantartásához kínálnak szolgáltatásokat (webdizájn, domainregisztráció, internetszolgáltatók, webes szolgáltatásokat kínáló szélessávú internetkapcsolatot kínáló vagy telekommunikációs cégek)."
+   },
+   "category_id_178_name": {
+      "message": "Internetszolgáltatások"
+   },
+   "category_id_179_description": {
+      "message": "Olyan webhelyek, amelyeket a felhasználók médiafájlok és fotók (például online fotóalbumok) feltöltésére, keresésére és megosztására használhatnak. Ebbe a kategóriába esnek a fájlmegosztással kapcsolatos általános kockázatok a konkrét tartalom meghatározása nélkül. Egyes URL-ek sértő tartalommal rendelkezhetnek."
+   },
+   "category_id_179_name": {
+      "message": "Médiamegosztás"
+   },
+   "category_id_180_description": {
+      "message": "Nem pornográf jellegű weboldalak, amelyek meztelen emberi testet ábrázolnak (klasszikus szobrok és festmények vagy orvosi ábrák)."
+   },
+   "category_id_180_name": {
+      "message": "Járulékos meztelenség"
+   },
+   "category_id_181_description": {
+      "message": "Olyan weboldalak, amelyek személyes vagy üzleti használatra szánt termékeket vagy szolgáltatásokat reklámoznak online, de a termékeket és a szolgáltatásokat nem értékesítik az interneten. Ebbe a kategóriába olyan webhelyek tartoznak, amelyek általában egy vállalatot mutatnak be a termékek és a szolgáltatásokat ismertetve, amelyek azonban az adott webhelyről közvetlenül nem szerezhetők be. Ilyenek például az autógyártók webhelyei, az esküvői fotós szolgáltatások vagy a grafikai szolgáltatások."
+   },
+   "category_id_181_name": {
+      "message": "Marketing, eladáshelyi szolgáltatás"
+   },
+   "category_id_183_description": {
+      "message": "Korábban tartalomszolgáltatóként működő weboldalak, amelyek domainjét eladták, vagy már nem használják, és már nincsenek regisztrálva. A parkoltatott domainek már nem hosztolnak saját tartalmat, de gyakran a felhasználókat átirányítják valamilyen általános oldalra, amely arról tájékoztat, hogy az adott domain eladó, vagy olyan általános keresőmotorhoz vagy portáloldalra irányít át, amelyek közül néhány érvényes keresési eredményeket nyújt."
+   },
+   "category_id_183_name": {
+      "message": "Parkolt tartományok"
+   },
+   "category_id_184_description": {
+      "message": "Olyan weboldalak, amelyek értékeléseket és leírásokat tartalmaznak, és vényköteles gyógyszereket, vény nélkül kapható gyógyszereket, fogamzásgátló szereket és étrend-kiegészítőket forgalmaznak és értékesítenek."
+   },
+   "category_id_184_name": {
+      "message": "Gyógyszerek"
+   },
+   "category_id_185_description": {
+      "message": "Olyan weboldalak, amelyek éttermekről, bárokról, étkeztetésről, ételszállításról (beleértve az online rendelést is) nyújtanak információt. Ebbe a kategóriába olyan webhelyek tartoznak, amelyek adott helyekkel, nyitvatartási idővel, árakkal, menükkel kapcsolatos és étkezési információkkal szolgálnak. Ebbe a kategóriába tartoznak az éttermekre és a kávézókra vonatkozó útmutatók és értékelések."
+   },
+   "category_id_185_name": {
+      "message": "Éttermek"
+   },
+   "category_id_186_description": {
+      "message": "Olyan weboldalak, amelyek kereskedelmi vagy lakossági ingatlanközvetítési szolgáltatásokat és információkat nyújtanak. A szolgáltatások és az információk körébe tartoznak a következők: lakások vagy kereskedelmi egységek értékesítése vagy bérbeadása, lakásokkal, ingatlanokkal kapcsolatos útmutatók, valamint felméréssel és brókeri tevékenységgel kapcsolatos információk. Az ebbe a kategóriába sorolt webhelyeken bemutató lakásokat tekinthet meg."
+   },
+   "category_id_186_name": {
+      "message": "Ingatlan"
+   },
+   "category_id_187_description": {
+      "message": "Rekreációs szervezetek és létesítmények weboldalai, amelyek rekreációs tevékenységekkel és hobbikkal kapcsolatos tartalommal rendelkeznek. Ebbe a kategóriába a nyilvános uszodákkal, állatkertekkel, vásárokkal, fesztiválokkal, vidámparkokkal, rekreációs lehetőségekkel, kirándulással, horgászattal, madármegfigyeléssel vagy bélyeggyűjtéssel kapcsolatos információk tartoznak."
+   },
+   "category_id_187_name": {
+      "message": "Kikapcsolódás, hobbi"
+   },
+   "category_id_188_description": {
+      "message": "Dinamikus tartalommal rendelkező webhelyek, amelyek gyakran változnak, mivel a felhasználók bármikor posztolhatnak, vagy módosíthatják a tartalmat. Ebbe a kategóriába az olyan dinamikus tartalommal kapcsolatos kockázatok tartoznak, amelyek a veszélytelentől a sértőig terjednek. Számos blog és wikibejegyzés foglalkozik egy adott témával vagy tárggyal. Ez a kategória gyakran más kategóriákkal együtt használatos (mint például Vitatott nézetek, Oktatás, tájékoztatás, Sport, Politika, vélemény vagy Meztelenség) a webhely témakörétől függően. Bizonyos tartalmak sértők lehetnek."
+   },
+   "category_id_188_name": {
+      "message": "Blogok, wiki"
+   },
+   "category_id_189_description": {
+      "message": "Olyan weboldalak, amelyek révén a felhasználók digitális képeslapokat és üdvözlőkártyákat küldhetnek az interneten. A digitális képeslapokkal üdvözlő vagy érzelmeket kifejező üzeneteket lehet küldeni – leggyakrabban születésnap vagy ünnepnapok alkalmával. Egyes digitális képeslapküldő webhelyek felnőtt humor könyvtárral is rendelkeznek. Ezen webhelyek esetén felmerül a bizalmas vagy a személyes információk szivárogtatásának, a kifogásolható tartalom, a kártevő programok vagy a káros csatolmányok kockázata is."
+   },
+   "category_id_189_name": {
+      "message": "Digitális képeslapok"
+   },
+   "category_id_190_description": {
+      "message": "Olyan weboldalak, amelyek eltérő értelmezést kínálnak lényeges történelmi tényekre, például a kommunizmus bűneinek vagy a holokauszt tagadásával. Ez a kategória olyan webhelyeket foglal magában, amelyek legitim tudományos értéket is hordoznak, azonban számos ilyen oldal törvénybe ütköző módon manipulálja a történelmi tényeket valamilyen politikai cél érdekében. Az ebbe a kategóriába tartozó URL-ek egyes országokban illegálisnak vagy sértőnek minősülő tartalommal rendelkezhetnek."
+   },
+   "category_id_190_name": {
+      "message": "Történelmi revizionizmus"
+   },
+   "category_id_191_description": {
+      "message": "Olyan weboldalak, amelyek oktatási célból számítógépes információkat nyújtanak IT, programozás és tanúsítás területen. Példák: Linux felhasználói csoportok, UNIX-parancsok, szoftverekkel kapcsolatos oktatóanyagok vagy technikai kifejezések listái. Ebben a kategóriában a legtöbb webhely nagyobb domainek alkönyvtára."
+   },
+   "category_id_191_name": {
+      "message": "Technikai adatok"
+   },
+   "category_id_192_description": {
+      "message": "Olyan webhelyek, amelyek online társkereső, randi-, escort, valamint házasságközvetítő hálózatokat támogatnak. Ebbe a kategóriába tartoznak az olyan webhelyek, amelyek személyes vagy csoportos profilokat biztosítanak, és lehetővé teszik, hogy a tagok kapcsolatba léphessenek egymással valós idejű kommunikáció, üzenetküldés, nyilvános hirdetmények és médiamegosztás révén. Az ebbe a kategóriába eső webhelyek lehetővé tehetik a nemkívánatos felekkel és az olyan tagprofilokkal való kapcsolat kialakulását, amelyek kifogásolható információkat tartalmaznak."
+   },
+   "category_id_192_name": {
+      "message": "Társkeresés, személyes hirdetések"
+   },
+   "category_id_193_description": {
+      "message": "Fogyasztói közlekedési eszközök (mint például személygépkocsik, teherautók, terepjárók, motorbiciklik és robogók) gyártóinak és kereskedőinek webhelyei. Ebbe a kategóriába sorolhatók azok a webhelyek is, amelyek termékmarketinggel foglalkoznak, értékeléseket, összehasonlításokat, árinformációkat, nyújtanak, illetve autóvásárokról, autóexpókról számolnak be, és gépjárművekről általános fogyasztói információt kínálnak."
+   },
+   "category_id_193_name": {
+      "message": "Gépjárművek"
+   },
+   "category_id_194_description": {
+      "message": "Olyan weboldalak, amelyek közösségi hálózati szolgáltatásokat nyújtanak szakmai vagy üzleti célra. Ebbe a kategóriába tartoznak az olyan webhelyek, amelyek személyes vagy csoportos profilokat biztosítanak, és lehetővé teszik, hogy a tagok kapcsolatba léphessenek egymással valós idejű kommunikáció, üzenetküldés, nyilvános hirdetmények és médiamegosztás révén. Ebbe a kategóriába esnek az öregdiákok webhelyei is, amelyek közösségi kommunikációt is lehetővé tesznek."
+   },
+   "category_id_194_name": {
+      "message": "Szakmai hálózat"
+   },
+   "category_id_195_description": {
+      "message": "Olyan közösségi jellegű weboldalak, amelyek különböző célokat (barátság, társkeresés, szakmai célok vagy személyes érdeklődési kör) szolgálnak. Az ilyen webhelyek személyes vagy csoportos profilokat biztosítanak, és lehetővé teszik, hogy a tagok kapcsolatba léphessenek egymással valós idejű kommunikáció, üzenetküldés, nyilvános hirdetmények és médiamegosztás révén. Az ebbe a kategóriába eső webhelyek lehetővé tehetik a nemkívánatos felekkel és az olyan tagprofilokkal való kapcsolat kialakulását, amelyek kifogásolható információkat tartalmaznak."
+   },
+   "category_id_195_name": {
+      "message": "Közösségi hálózatok"
+   },
+   "category_id_196_description": {
+      "message": "Olyan weboldalak, ahol a felhasználók kifejezéseket vagy szövegblokkokat írhatnak be egyik nyelvről egy másikra való fordítás céljából. Ebbe a kategóriába tartoznak a nyelvazonosító weboldalak is."
+   },
+   "category_id_196_name": {
+      "message": "Szövegfordítók"
+   },
+   "category_id_197_description": {
+      "message": "Olyan weboldalak, amelyek elsősorban üzleti célú elő megbeszéléseket, videokonferenciákat és interaktív prezentációkat hosztolnak. A webes megbeszéléseken gyakran kerül sor audio- és videotartalom továbbítására, és lehetővé teszik például az online prezentációk átvitelét vagy irodai alkalmazások általi megosztását. Az ebbe a kategóriába tartozó URL-ek sávszélességgel összefüggő és biztonsági kockázatot rejthetnek (például saját adatok elvesztése vagy szivárgása)."
+   },
+   "category_id_197_name": {
+      "message": "Webes értekezletek"
+   },
+   "category_id_198_description": {
+      "message": "Olyan oldalak, amelyek politikai érzékenységet feltehetően sértő véleményeket tartalmaznak, vagy véleményeltéréshez vezethetnek. Az ilyen tartalmak főleg a közvélemény extrém megnyilvánulásai. Ide tartoznak az öngyilkosságot, az anorexiát, valamint a xenofób, a rasszista, a fundamentalista nézeteket, a félretájékoztatást vagy egy adott embercsoport kritikus vizsgálatát támogató tartalmak."
+   },
+   "category_id_198_name": {
+      "message": "Vitatott nézetek"
+   },
+   "category_id_199_description": {
+      "message": "IP-címek (és az azokhoz kapcsolódó domainek), amelyek az internethez kapcsolódnak DSL- vagy kábeles modem segítségével. Mivel az ilyen tartalmat általában nem HTTP-n keresztüli webes elérésre terveztek, az internet ezen IP-címeken keresztüli elérése gyanús viselkedésre utalhat. Az ilyen viselkedés az otthoni számítógépen található kártevő programhoz kapcsolódhat, vagy olyan otthoni átjárókhoz, amelyeket anonim internethasználatra konfiguráltak."
+   },
+   "category_id_199_name": {
+      "message": "Helyi IP-cím"
+   },
+   "category_id_200_description": {
+      "message": "A biztonsági rés kihasználása esetén olyan kódról van szó, amely a böngésző szoftverhibáját használja ki. A kód hatására a böngésző viselkedése kiszámíthatatlanná válik: leáll, helyi fájlokat ír vagy olvas, vírust terjeszt vagy kémprogramot telepít. A rosszindulatú kód kihasználhatja a HTML, a JavaScript, az Images, az ActiveX, a Java és az egyes webtechnológiákat. A biztonsági rés kihasználása (más néven drive-by letöltés) során a védelem nélküli számítógépre gyakran a fogyasztó tudomása nélkül valamilyen kód települ, és a kód billentyűzethasználatot figyelő vagy trójai programot telepít a jelszavak ellopása vagy a számítógép bottá alakítása érdekében. Ebbe a kategóriába esnek az olyan URL-ek, amelyek a böngészőkben található biztonsági rés kihasználását teszik lehetővé vagy hajtják végre."
+   },
+   "category_id_200_name": {
+      "message": "Böngésző biztonsági rését kihasználó programok"
+   },
+   "category_id_201_description": {
+      "message": "Olyan webhelyek, amelyek fogyasztókat akarnak kirabolni vagy megtéveszteni. A tevékenység lehet hamisított termékek értékesítése, eredetileg ingyenesen elérhető termékek eladása, vagy egy másik vállalat brandjének nem megfelelő használata. Ebbe a kategóriába esnek azok a webhelyek, amelyek a felhasználók kedvességét vagy nemtörődömségét használják ki, és csalárd módon karitatív célra pénzt gyűjtenek, vagy csalárd befektetési megoldásokat kínálnak. Ebbe a kategóriába sorolhatók azok a webhelyek is, amelyekre már sok fogyasztó panaszt tett, mivel átvágták őket, vagy nem kapták meg a kínált szolgáltatást."
+   },
+   "category_id_201_name": {
+      "message": "Fogyasztóvédelem"
+   },
+   "category_id_202_description": {
+      "message": "Olyan weboldalak, amelyek gyermekek ellen elkövetett szexuális visszaéléssel kapcsolatos tartalommal rendelkeznek, amelyet a világ bármely pontján hosztolhatnak, illetve az Egyesült Királyságban hosztolt, bűnügyileg obszcénnak és gyűlöletpropagandának minősülő tartalom."
+   },
+   "category_id_202_name": {
+      "message": "Törvénytelen az Egyesült Királyságban"
+   },
+   "category_id_203_description": {
+      "message": "Olyan weboldalak, amelyek főbb világvallásokhoz kapcsolódó vallásos témakörökkel és információkkal rendelkeznek. Ide tartoznak az olyan vallásos tartalmú webhelyek, amelyek vitának, meggyőződéseknek, nem megosztó megjegyzéseknek, cikkeknek és információknak adnak helyet helyi vallási közösségek részére (például egy templom vagy egy zsinagóga honlapja). Ebbe a kategóriába tartoznak az olyan vallások mint a baha'I, a buddhizmus, a kínai hagyományos vallás, a kereszténység, a hinduizmus, a dzsainizmus, az iszlám, a zsidó vallás, a shinto, a szikh, a tenrikyô vallás és a zoroasztrizmus."
+   },
+   "category_id_203_name": {
+      "message": "Fő világvallások"
+   },
+   "category_id_204_description": {
+      "message": "Olyan weboldalak, amelyek lehetővé teszik, hogy a felhasználók véletlenül káros vagy zavaró kódot töltsenek le. Ebbe a kategóriába tartoznak az olyan letölthető fájlok, mint például a képernyővédők, az eszköztárak és a fájlmegosztó programok, amelyek reklámszoftvereket, kémprogramokat, vírusokat és más kártékony számítógépes kódokat tartalmaznak. Előfordul, hogy a kártevő program a felhasználó tudomása nélkül töltődik le, amikor az Igen vagy a Beleegyezem gombra kattint a feltételek részleteinek elolvasása nélkül. Ez a számítógép lelassulásához, a jelszavak ellopásához, illetve értékes személyes fájlok elvesztéséhez vagy sérüléséhez vezethet."
+   },
+   "category_id_204_name": {
+      "message": "Kártevő letöltések"
+   },
+   "category_id_205_description": {
+      "message": "Weboldalak, amelyek potenciálisan nemkívánatos programokat tartalmaznak. A kéretlen programok célja általában jóindulatú, de módosítják a számítógép védelmét vagy a számítógép felhasználójának adatvédelmét. Azok a számítógép-használók, akik aggódnak a biztonság vagy az adatvédelem miatt, tájékozódni szeretnének az ilyen szoftverekről, és egyes esetekben el szeretnék azokat távolítani számítógépükről."
+   },
+   "category_id_205_name": {
+      "message": "PUP-ok"
+   },
+   "category_id_600_description": {
+      "message": "Családbarát weboldalak, amelyek kifejezetten legfeljebb tízéves gyermekek részére készültek."
+   },
+   "category_id_600_name": {
+      "message": "Gyermekeknek"
+   },
+   "category_id_601_description": {
+      "message": "Weboldalak, amelyek történelmi tényekről szóló tartalommal rendelkeznek. Ebbe a kategóriába a felsőbb szintű oktatás számára megfelelő tartalom sorolható, de az Oktatás kategória az alapoktatás számára alkalmas tartalommal rendelkezik. Egy holocaustot ábrázoló fényképeket bemutató webhely sértő lehet, de tudományos értéket is hordozhat."
+   },
+   "category_id_601_name": {
+      "message": "Történelem"
+   },
+   "category_id_602_description": {
+      "message": "Hirdetőtáblák, csevegőszobák, keresőmotorok és webes levelezőoldalak, amelyeket egy adott személy vagy csoport felügyel, aki jogosult a nem megfelelőnek ítélt üzenetek vagy tartalmak blokkolására."
+   },
+   "category_id_602_name": {
+      "message": "Moderált"
+   },
+   "category_id_603_description": {
+      "message": "Csak szöveges vagy audiotartalom, amely nem tartalmaz képeket. Ez a kategória kivételként használható az olyan szókimondó szöveg vagy rögzített anyag engedélyezésekor, ahol a képeket blokkolni szeretné a Pornográfia, az Erőszak vagy a Szexuális anyagok kategóriák segítségével. Könyvtárak vagy egyetemek használhatják ezt a kategóriát a sértő képek nyilvános létesítményekben való megjelenítésének megakadályozása érdekében."
+   },
+   "category_id_603_name": {
+      "message": "Csak szöveg vagy hang"
+   },
+   "crypto_allow_desc": {
+      "message": "Ha blokkoljuk a kriptojackinget, Ön dönthet úgy, hogy engedélyezi azt. Ezt nem javasoljuk, de Ön dönti el, hogy támogatja-e az olyan webhelyeket, amelyek kriptojacking útján jutnak pénzhez."
+   },
+   "crypto_allow_title": {
+      "message": "Engedélyezni szeretné a kriptojackinget?"
+   },
+   "crypto_footer_message1": {
+      "message": "A McAfee és a McAfee logó a McAfee, LLC vagy leányvállalatainak bejegyzett védjegyei, illetve védjegyei az Egyesült Államokban és más országokban."
+   },
+   "crypto_footer_message2": {
+      "message": "Más nevek és márkák mások tulajdonában lehetnek. Szerzői jog ©2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "Segítünk megakadályozni, hogy számítógépének teljesítményét és erőforrásait kriptojackerek használják ki."
+   },
+   "crypto_header_title": {
+      "message": "Kriptojacking-blokkoló be van kapcsolva"
+   },
+   "crypto_own_desc": {
+      "message": "Nem kell feltétlenül kriptovalutával rendelkeznie ahhoz, hogy kriptojackerek áldozatává váljon. A kriptojackerek a számítógép erőforrásaihoz akarnak hozzáférni, és nem az Ön tulajdonában levő kriptovalutához."
+   },
+   "crypto_own_title": {
+      "message": "Ahhoz, hogy kriptojackerek áldozatává váljon, mindenképpen kell  kriptovalutával rendelkeznie?"
+   },
+   "crypto_protect_desc": {
+      "message": "A(z) %PRODUCTNAME% bővítmény legyen folyamatosan bekapcsolva, hogy a kriptojacking blokkoló védelmet nyújthasson a kriptojackerek ellen. Tájékoztatjuk, ha kriptojacking támadást akadályozunk meg."
+   },
+   "crypto_protect_title": {
+      "message": "Hogyan védhetem meg magam?"
+   },
+   "crypto_signs_desc1": {
+      "message": "Lassú böngészés"
+   },
+   "crypto_signs_desc2": {
+      "message": "Túl gyorsan lemerülő akkumulátor"
+   },
+   "crypto_signs_desc3": {
+      "message": "Hangos ventilátor"
+   },
+   "crypto_signs_desc4": {
+      "message": "Megnövekedett áramhasználat"
+   },
+   "crypto_signs_title": {
+      "message": "Milyen jelei vannak annak, hogy kriptojacking áldozatává vált?"
+   },
+   "crypto_title": {
+      "message": "McAfee Kriptojacking-blokkoló"
+   },
+   "crypto_whatis_point1": {
+      "message": "Miközben Ön böngészik, számítógépéhez egyes webhelyeken keresztül kriptojackerek (hackerek) férnek hozzá."
+   },
+   "crypto_whatis_point2": {
+      "message": "Eltérítik számítógépének teljesítményét (a CPU-t és a memóriát), és azt komplex feladatok végrehajtásához használják fel."
+   },
+   "crypto_whatis_point3": {
+      "message": "Online pénz, úgynevezett kriptovaluta után kutatnak."
+   },
+   "crypto_whatis_title": {
+      "message": "Mi az a kriptojacking?"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "Kriptojacking engedélyezése ezen a webhelyen"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "További tájékoztatás"
+   },
+   "cryptojacking_banner_message": {
+      "message": "Ezen a webhelyek kriptojackinget blokkoltunk. Számítógépének erőforrásai biztonságban vannak, és nyugodtan folytathatja a böngészést. $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "Teszteltük a webhelyet, és blokkoltunk potenciálisan veszélyes vagy gyanús webhelyekről származó tartalmakat. Csak akkor engedélyezze ezt a tartalmat, ha biztos benn, hogy megbízható webhelyről származik."
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "Összes blokkolt tartalom megtekintése"
+   },
+   "overlay_accept_ss": {
+      "message": "Fogadja el a McAfee® Secure Search keresőmotorként való használatát"
+   },
+   "overlay_add_ss": {
+      "message": "A McAfee® Secure Search hozzáadása a böngészőhöz"
+   },
+   "overlay_ss_description": {
+      "message": "Megjelöljük a kockázatos webhelyeket a keresési találatoknál, hogy tudja, hogy mely helyek kereshetők fel biztonságban, és melyek nem."
+   },
+   "overlay_step_1": {
+      "message": "1. LÉPÉS"
+   },
+   "overlay_step_2": {
+      "message": "2. LÉPÉS"
+   },
+   "phishingdesc": {
+      "message": "A hackerek hivatalosnak tűnő adathalász e-mailekkel és weboldalakkal próbálják kicsalni a felhasználókból az információkat. Mi elvágjuk előlük ezt a lehetőséget, hogy esélyük se legyen."
+   },
+   "phishingtitle": {
+      "message": "Tartsa biztonságban a személyes adatait"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "McAfee® WebAdvisor"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "Szeretné hozzáadni a biztonságos keresést, hogy néhány lépéssel mindig megelőzze a rosszfiúkat?"
+   },
+   "search_toast_body_text_test": {
+      "message": "Igénybe szeretné venni a biztonságos keresést, hogy tudja, hogy mely webhelyek kereshetők fel biztonságosan?"
+   },
+   "search_toast_done": {
+      "message": "Kész"
+   },
+   "search_toast_heading_compliant": {
+      "message": "Nincs biztonságos keresés funkciója – legyen óvatos"
+   },
+   "search_toast_heading_test": {
+      "message": "Biztonsági tanácsot kap a keresési találatoknál"
+   },
+   "search_toast_no_thanks": {
+      "message": "Köszönöm, nem"
+   },
+   "search_toast_ok": {
+      "message": "OK"
+   },
+   "search_toast_option_compliant": {
+      "message": "Igen, hozzáadom a biztonságos keresés funkciót a böngészőhöz, és az alapértelmezett keresést erre módosítom: $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "Igen, hozzáadom a biztonságos keresés funkciót, és az alapértelmezett keresést erre módosítom: $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "A biztonságos keresés funkcióval elkerülheti a keresési eredmények között található veszélyes webhelyeket."
+   },
+   "search_toast_sub_heading_test": {
+      "message": "A biztonságos keresés megjelöli a veszélyes webhelyeket a keresési találatoknál."
+   },
+   "search_toast_yes": {
+      "message": "Igen"
+   },
+   "securesearchdesc": {
+      "message": "Böngésszen gondtalanul a színkódolt keresési eredmények segítségével: mi megmondjuk, hogy melyik weboldal biztonságos, és melyik gyanús."
+   },
+   "securesearchtitle": {
+      "message": "Kerülje a kockázatos találatokat"
+   },
+   "settings_about_adblock": {
+      "message": "A böngészőt lelassító reklámok és felugró ablakok blokkolása"
+   },
+   "settings_about_adblock_tracking": {
+      "message": "Önt követő és adatokat gyűjtő cookie-k blokkolása"
+   },
+   "settings_about_block_download": {
+      "message": "Kockázatos letöltések blokkolása"
+   },
+   "settings_about_cryptojackers": {
+      "message": "Annak megakadályozása, hogy a(z) $settings_about_cryptojackers_link$ ellopja számítógépének erőforrásait",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "kriptojacker"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "Gondoskodjon róla, hogy a tűzfal és a vírusvédelem legyen bekapcsolva"
+   },
+   "settings_about_flag_website": {
+      "message": "Veszélyes webhelyek megjelölése"
+   },
+   "settings_about_help_link_message": {
+      "message": "Segítség kérése"
+   },
+   "settings_about_help_message": {
+      "message": "Mindenkinek szüksége van néha egy kis segítségre."
+   },
+   "settings_about_help_title": {
+      "message": "Segítség és technikai tanácsadás kérése"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "Olvassa el az adatvédelmi közleményt"
+   },
+   "settings_about_privacy_message": {
+      "message": "A McAfee számára rendkívül fontos az adatvédelem."
+   },
+   "settings_about_privacy_title": {
+      "message": "Adatvédelmi közlemény"
+   },
+   "settings_about_product_affid": {
+      "message": "Leányvállalat azonosítója: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "Bináris verzió: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "Bővítmény verziója: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "Termékverzió"
+   },
+   "settings_about_share_title": {
+      "message": "A(z) %PRODUCTNAME% megosztása barátaival"
+   },
+   "settings_about_subtitle": {
+      "message": "A(z) %PRODUCTNAME% segítséget nyújt ahhoz, hogy jobb döntéseket hozhasson az online világban."
+   },
+   "settings_about_title": {
+      "message": "NÉVJEGY"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "Tájékoztasson a keresés eredményének biztonságosságáról bármely keresőmotorra vonatkozóan."
+   },
+   "settings_preference_annotation_none": {
+      "message": "Ne tájékoztasson a keresési eredményekkel kapcsolatban."
+   },
+   "settings_preference_annotation_ss": {
+      "message": "A keresés eredményének biztonságosságáról csak a Biztonságos keresésben tájékoztasson."
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "Különböző színekkel jelöljük meg a keresési találatokat, amely alapján láthatja, hogy mely webhelyek biztonságosak."
+   },
+   "settings_preference_annotation_title": {
+      "message": "Biztonságos keresés"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "Megakadályozza, hogy tolakodó hirdetések lelassítsák a böngészőt"
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "Távol tartja a cookie-kat, amelyek követik Önt és adatokat gyűjtenek"
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "Hirdetésblokkoló és követőblokkoló"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "Hozzáadás"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "Engedélyezés"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "Nem rendelkezik Hozzáadott védelemmel, mert az annak részét képező McAfee® Secure Search bővítmény nincs engedélyezve. Engedélyezze, és válassza a(z) $settings_preference_ap_alert_allow$ lehetőséget, ha a program az Ön engedélyét kéri.",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "Engedélyezés"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "Nem rendelkezik Hozzáadott védelemmel, mert az annak részét képező McAfee® Secure Search bővítmény nincs telepítve. Adja most hozzá a Chrome webáruházból."
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "Felhőalapú szolgáltatásokat használ a fenyegetések azonosításához"
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "A színkóddal ellátott keresési találatok alapján láthatja, hogy mely webhelyek kereshetők fel biztonságosan"
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "Megjelöli a keresési találatoknál azokat a webhelyeket, amelyek felkeresése nem biztonságos"
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "McAfee Secure Search"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "Gondoskodjon a személyes és egyéb adatok védelméről."
+   },
+   "settings_preference_ap_title": {
+      "message": "További védelem"
+   },
+   "settings_preference_reset_button": {
+      "message": "Alaphelyzetbe állítás"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "Nem vette figyelembe a(z) %PRODUCTNAME% értesítését, és most megbánta? Állítsa vissza az értesítéseket, hogy a %PRODUCTNAME% összes típusú üzenetét megkapja megint."
+   },
+   "settings_preference_reset_title": {
+      "message": "Beállítások alaphelyzetbe állítása"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "Linkedin"
+   },
+   "settings_preference_sma_message": {
+      "message": "Az alábbi webhelyeket látjuk el jegyzetekkel."
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "A közösségi média hírfolyamában különböző színekkel jelöljük a hivatkozásokat, hogy tudja, hogy melyek biztonságosak."
+   },
+   "settings_preference_sma_title": {
+      "message": "Közösségi média védelme"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "Youtube"
+   },
+   "settings_preference_title": {
+      "message": "TOVÁBBI SZOLGÁLTATÁSOK"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "blokkolt tolakodó hirdetés"
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "blokkolt kriptojacking támadás"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "letiltott nem biztonságos letöltés"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "megvizsgált letöltés"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "megvizsgált hivatkozás"
+   },
+   "settings_statistics_message": {
+      "message": "A következőket tettük eddig:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "letiltott veszélyes weboldal"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "megvizsgált weboldal"
+   },
+   "settings_statistics_subtitle": {
+      "message": "Szeretnénk online védelméről gondoskodni."
+   },
+   "settings_statistics_title": {
+      "message": "STATISZTIKA"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "követő blokkolva"
+   },
+   "settings_subtitle": {
+      "message": "Szabja testre a webes védelmet."
+   },
+   "settings_tab_about": {
+      "message": "Névjegy"
+   },
+   "settings_tab_preference": {
+      "message": "Beállítás"
+   },
+   "settings_tab_statistics": {
+      "message": "Statisztika"
+   },
+   "settings_tab_whitelist": {
+      "message": "Engedélyezett címek listája"
+   },
+   "settings_title": {
+      "message": "Webes védelem"
+   },
+   "settings_whitelist_input": {
+      "message": "Írja be a webcímet..."
+   },
+   "settings_whitelist_title": {
+      "message": "MEGBÍZHATÓ WEBHELYEK"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "Testreszabhatja a következőt: $sidebar_action_panel_web_protection_preferences$.",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "Webes védelem beállításai"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "Így gondoskodunk a védelméről."
+   },
+   "sidebar_adblock_toggle": {
+      "message": "A hirdetések csak ezen látogatás során láthatók ezen az oldalon"
+   },
+   "sidebar_ads_blocked": {
+      "message": "az oldalon blokkolt tolakodó hirdetés"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "Rendben!"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "Nem tudjuk, hogy mi a jobb: ha mi kérünk segítséget az Ön védelméhez, vagy ha a(z) $sidebar_badge_collection_block_page_description_italic$ segít megvédeni Önt...",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "Ön"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "Ezzel mindenki nyer."
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "Az a webhely nem tudja átverni Önt"
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "A fenyegetéseknek annyi"
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "Blokkoltunk. Jobb félni, mint megijedni!"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "Köszönjük, hogy megtisztította!"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "Köszönjük, hogy megengedte, hogy blokkoljuk ezt a tartalmat. Térjünk vissza az Ön számára fontos dolgokhoz."
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "A webhelyet tisztán tartjuk!"
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "Ha mindezek ellenére felkeresi, hozzáadjuk ezt a webhelyet a megbízható webhelyek listájához."
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "Mindenképpen felkeresem"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "Maradjon blokkolva"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "\"Adathalász\" webhelynek tűnik. Ez annyit jelent, hogy e-maileket küldhet Önnek egy megbízható szervezet nevében, és megpróbálja rávenni Önt személyes adatainak (mint jelszavainak és hitelkártyaadatainak) megosztására."
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "Valahova máshova kell menni halászni, mert Ön nem kapta be a csalit."
+   },
+   "sidebar_block_page_description_red": {
+      "message": "Szeretnénk biztonságáról gondoskodni, tehát volt okunk, hogy megállítottuk Önt."
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "Túl kockázatosnak tűnik, így még a legnagyobb ellenségünket (ha lenne ilyen) sem küldenénk oda."
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "Nem vagyunk 100%-osan biztosak benne, de blokkoltuk, mert a következő veszélyforrások leselkedhetnek Önre:"
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "Ez olyan mintha biztonsági öv nélkül vezetne. Miért kockáztatna?"
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "Tudjon meg többet a webhelyen leselkedő veszélyforrásokról:"
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "Tudjon meg többet a webhelyen leselkedő veszélyforrásokról:"
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "Ezen a webhelyen hemzsegnek a veszélyforrások:"
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "Ilyen típusú fenyegetések várakoznak:"
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "Ezen a webhelyen hemzsegnek a veszélyforrások:"
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "Ilyen típusú fenyegetések várakoznak:"
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "Blokkoltuk ez a webhelyet, hogy ne lophassa el az Ön személyes adatait"
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "Blokkoltuk ezt az \"adathalász\" webhelyet"
+   },
+   "sidebar_block_page_title_red": {
+      "message": "Blokkoltuk ezt a veszélyes webhelyet"
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "Ez a veszélyes webhely blokkolva van"
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "Ez a webhely csapdának tűnik"
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "Blokkoltuk ezt a kockázatos webhelyet"
+   },
+   "sidebar_crypto_blocked": {
+      "message": "blokkolt kriptojacking támadás"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "letiltott veszélyes weboldal"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "Köszönjük, hogy megengedte,m hogy megszabaduljunk ettől a fájltól, mielőtt bajt okozott volna. Elég jó biztonsági csapat vagyunk!"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "Rendben!"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "Töröltük a rossz fájlt"
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "Talán nagyobb szerencsével jár, ha manuálisan próbálja meg eltávolítani. Lépjen a fájl mentési helyére, és próbálja meg onnan törölni a fájlt."
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "Név:"
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "Rendben"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "Hely:"
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "Letöltés forrása:"
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "Sajnos nem működik"
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "Törölje"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "Letöltés forrása:"
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "Név:"
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "Úgy tűnik, hogy vírusokat, kémprogramokat vagy egyéb nemkívánatos programokat tartalmaz."
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "Mindenképpen megtartom"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "Ha töröljük, mielőtt azt megnyitná, távol tudjuk tartani a bajt."
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "A letöltött fájl veszélyes"
+   },
+   "sidebar_everything_looks_good": {
+      "message": "Úgy tűnik, minden rendben."
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "A webes védelem be van kapcsolva, és gondoskodik az Ön védelméről. Át szeretné tekinteni a beállításokat, vagy a statisztikát szeretné megtekinteni?"
+   },
+   "sidebar_get_help": {
+      "message": "Segítség kérése"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "Ugrás a Webes védelem beállításaihoz"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "Mindenképpen meg szeretném tekinteni"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "Maradjon blokkolva"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "Gyanúsnak tűnik, és kárt okozhat. Ha biztos benne, hogy a tartalom biztonságos, és meg szeretné tekinteni, engedélyezheti."
+   },
+   "sidebar_iframe_block_title": {
+      "message": "Blokkoltuk a tartalmat az Ön biztonsága érdekében"
+   },
+   "sidebar_pages_scanned": {
+      "message": "megvizsgált weboldal"
+   },
+   "sidebar_privacy": {
+      "message": "Adatvédelmi közlemény"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "Rendben"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "Az erről a a webhelyről származó szoftverek lehetővé teszik, hogy mások hozzáférhessenek az Ön PC-jéhez. Ilyen módon csalók is hozzáférhetnek a személyes adataihoz."
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "Ha szoftver letöltését vagy személyes adatok megadását kérik, győződjön meg róla, hogy ezt egy olyan személy kéri, akiben Ön megbízik."
+   },
+   "sidebar_rat_detection_title": {
+      "message": "Ez a webhely lehetővé teszi, hogy mások irányítsák az Ön PC-jét"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "Ne figyelmeztessenek ezen a webhelyen újból"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "Megvizsgáltuk, és nem találtunk veszélyforrásokat."
+   },
+   "sidebar_site_report_description_red": {
+      "message": "Rendszeresen megvizsgáljuk a webhelyeket gyanús és veszélyes viselkedés jeleit keresve. Ez nem biztonságos."
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "Tovább kutakodunk, és a következő vizsgálatkor megmondjuk, hogy kockázatos-e vagy biztonságos."
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "Megvizsgáltuk ezt a webhelyet, és nem annyira biztonságos, mint amilyennek lennie kéne. Körültekintően keresse fel."
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "Ilyen típusú webhelynek tűnik:"
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "Webhely veszélyforrásai:"
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "Lehetséges webhelytípusok vagy fenyegetések:"
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "Webhely veszélyforrásai:"
+   },
+   "sidebar_site_report_title_green": {
+      "message": "Ez a webhely biztonságosnak tűnik"
+   },
+   "sidebar_site_report_title_red": {
+      "message": "Ez a webhely veszélyes"
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "Ennek a webhelynek a biztonsági státusza nem ismert"
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "Ez a webhely kockázatosnak tűnik"
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "Rendben"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "Bekapcsolta a biztonságos keresést, így most még mielőtt felkeresne egy webhelyet, meg tudjuk mutatni, hogy mely webhelyek tűnnek biztonságosnak, és melyek veszélyesnek."
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "A keresési találatoknál színkódolt ikonok láthatók az egyes webhelyek mellett. A zöldek nyugodtan felkereshetők, de tartsa távol magát a kockázatos sárgáktól és a veszélyes pirosaktól."
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "Így tudni fogja, hogy mely webhelyeket kell elkerülnie"
+   },
+   "sidebar_subtitle": {
+      "message": "A következőket tettük eddig:"
+   },
+   "sidebar_terms": {
+      "message": "Feltételek"
+   },
+   "sidebar_title": {
+      "message": "Szeretnénk online védelméről gondoskodni."
+   },
+   "sidebar_tracker_blocked": {
+      "message": "blokkolt követő az oldalon"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "letiltott nem biztonságos elem"
+   },
+   "sidebar_version": {
+      "message": "Verzió"
+   },
+   "sidebar_view_site_report": {
+      "message": "Webhelyjelentés megtekintése"
+   },
+   "sidebar_view_stats": {
+      "message": "Tekintse meg az összes védelmi módszert"
+   },
+   "site_report_category_subtitle": {
+      "message": "Webhely-kategória:"
+   },
+   "site_report_category_title": {
+      "message": "A webhely bemutatása"
+   },
+   "site_report_main_message_danger": {
+      "message": "Rendszeresen megvizsgáljuk a webhelyeket gyanús és rosszindulatú tevékenységek után kutatva, és úgy tűnik, hogy ez a webhely nem biztonságos. Alább további részleteket talál."
+   },
+   "site_report_main_message_safe": {
+      "message": "Átvizsgáltunk a webhelyet, és minden rendben van. Használja ki az előnyeit."
+   },
+   "site_report_main_message_unknown": {
+      "message": "Egyelőre nincs közzétehető információnk. A webhely következő vizsgálatakor frissítjük a fenyegetettségi szintet."
+   },
+   "site_report_main_message_warning": {
+      "message": "Megvizsgáltuk ezt a webhelyet, és nem annyira biztonságos, mint amilyennek lennie kéne. Óvatosan kattintson."
+   },
+   "site_report_main_title": {
+      "message": "Webhelyjelentés"
+   },
+   "site_report_main_url_danger": {
+      "message": "Ezért veszélyes a(z) $url$",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "Úgy tűnik, hogy a(z) $url$ biztonságos",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "Kicsit mélyebbre kell ásnunk, mielőtt döntenénk"
+   },
+   "site_report_main_url_warning": {
+      "message": "Ezért lehet a(z) $url$ veszélyes",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "Nagyon kockázatos"
+   },
+   "site_report_status_rating_safe": {
+      "message": "Biztonságos"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "Ismeretlen"
+   },
+   "site_report_status_rating_warning": {
+      "message": "Kissé kockázatos"
+   },
+   "site_report_status_text": {
+      "message": "Webhely státusza:"
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% - Webhelybiztonsági besorolások"
+   },
+   "sma_personalize_button": {
+      "message": "Védelmem testreszabása"
+   },
+   "sma_subtitle": {
+      "message": "Új közösségi média védelmünk különféle színekkel jelöli meg az egyes hivatkozásokat, hogy Ön tudja, hogy mely webhelyeket keresheti fel nyugodtan. Digitális élete során így jóval nagyobb biztonságot élvezhet!"
+   },
+   "sma_title": {
+      "message": "Biztonságban nézheti át a hírfolyamot"
+   },
+   "smadesc": {
+      "message": "Böngésszen nyugodtan a hírcsatornájában: a színkódolt hivatkozások megmondják, hogy melyikre kattinthat biztonságosan."
+   },
+   "smatitle": {
+      "message": "Tudja, hogy a közösségi oldalakra mutató hivatkozások közül melyik biztonságos, és melyik kockázatos"
+   },
+   "ss_first_annotation_desc": {
+      "message": "A színkóddal ellátott keresési találatoknak köszönhetően nyugodtan böngészhet. Megmondjuk, hogy mely webhelyek biztonságosak, és melyek gyanúsak."
+   },
+   "ss_first_annotation_title": {
+      "message": "Tartsa távol magát a kockázatos keresési találatoktól"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "A Secure Search bekapcsolása"
+   },
+   "summarydesc": {
+      "message": "Percrekész összefoglalást biztosítunk az eddigi intézkedéseinkről, hogy biztonságos online böngészést, keresést és vásárlást biztosíthassunk."
+   },
+   "summarytitle": {
+      "message": "Valós idejű biztonsági irányítópult"
+   },
+   "typodesc": {
+      "message": "A hackerek az eredetihez igen hasonló címeket felhasználva hoznak létre webhelyeket. Ez az úgynevezett \"typosquatting\". Visszatereljük biztonságos területre, ha az URL elírása miatt rossz helyre tévedne. "
+   },
+   "typosquatting_action_accept": {
+      "message": "Vállalom a kockázatot, és folytatom"
+   },
+   "typosquatting_action_back": {
+      "message": "Visszalépés"
+   },
+   "typosquatting_footer_description": {
+      "message": "Ha elírja egy webhely címét, olyan webhelyre kerülhet, amelyet nem szándékozott felkeresni. Ezek a webhelyek ijesztgető szoftverekkel vagy kártevő programokkal bombázhatják Önt, személyes adatokat kérhetnek, hozzájuthatnak a jelszavakhoz stb. Segítünk abban, hogy elkerülhesse az ilyen webhelyeket."
+   },
+   "typosquatting_footer_link": {
+      "message": "További információk az URL-eltérítéssel kapcsolatban"
+   },
+   "typosquatting_footer_title": {
+      "message": "Hogyan kerültem ide?"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "A McAfee® Total Protection letöltése"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "Oda szeretnék lépni"
+   },
+   "typosquatting_message_button_search": {
+      "message": "Keresés"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "Engedje meg, hogy a(z) %PRODUCTNAME% a megfelelő webhelyre vezesse Önt."
+   },
+   "typosquatting_message_description_search": {
+      "message": "Úgy tűnik, hibás címet írt be. Engedje meg, hogy a(z) %PRODUCTNAME% a megfelelő webhelyre vezesse Önt."
+   },
+   "typosquatting_message_title": {
+      "message": "Erre gondolt?"
+   },
+   "typosquatting_notice_body": {
+      "message": "Gondoskodunk róla, hogy biztonságban legyen online. A McAfee® Total Protection segítségével a védelmet minden készülékére kiterjesztheti."
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "Eddig $pagesScanned$ oldalt vizsgáltunk meg Önnek.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "Eddig $pagesScanned$ oldalt vizsgáltunk meg Önnek.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME% - URL-eltérítés"
+   },
+   "typotitle": {
+      "message": "Valósnak tűnő veszélyes webhelyek"
+   }
+}

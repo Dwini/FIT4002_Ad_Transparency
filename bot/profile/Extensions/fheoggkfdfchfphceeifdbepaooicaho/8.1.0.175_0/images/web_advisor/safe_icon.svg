@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="159px" height="159px" viewBox="0 0 159 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>safe-symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="67.5" cy="67.5" r="67.5"></circle>
+        <filter x="-14.1%" y="-12.6%" width="128.1%" height="128.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.151749321 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="View-site-report" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="WA-site-report-safe" transform="translate(-192.000000, -240.000000)">
+            <g id="safe-symbol" transform="translate(204.000000, 250.000000)">
+                <g id="Group-9">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <polygon id="Fill-5" fill="#0BD175" points="55.0716662 93.4616849 30.6982598 69.4230834 36.8941931 63.0696315 55.2152805 81.1329628 95.0853588 43.582962 101.137678 50.0739345"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

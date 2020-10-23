@@ -1,0 +1,28 @@
+/*!
+ * 
+ * MCAFEE RESTRICTED CONFIDENTIAL
+ * Copyright (c) 2020 McAfee, LLC
+ * 
+ * The source code contained or described herein and all documents related
+ * to the source code ("Material") are owned by McAfee or its
+ * suppliers or licensors. Title to the Material remains with McAfee
+ * or its suppliers and licensors. The Material contains trade
+ * secrets and proprietary and confidential information of McAfee or its
+ * suppliers and licensors. The Material is protected by worldwide copyright
+ * and trade secret laws and treaty provisions. No part of the Material may
+ * be used, copied, reproduced, modified, published, uploaded, posted,
+ * transmitted, distributed, or disclosed in any way without McAfee's prior
+ * express written permission.
+ * 
+ * No license under any patent, copyright, trade secret or other intellectual
+ * property right is granted to or conferred upon you by disclosure or
+ * delivery of the Materials, either expressly, by implication, inducement,
+ * estoppel or otherwise. Any license under such intellectual property rights
+ * must be expressed and approved by McAfee in writing.
+ * 
+ * 
+ */
+.jumbo__image{margin-bottom:16px !important}#jumbo__title{font-size:24px;line-height:32px;color:#212934}#jumbo__description{margin:auto;margin-top:16px;width:300px}#jumbo__content_I,#jumbo__content_II_list{margin-top:10px;line-height:24px;letter-spacing:0.01em;color:#000000;list-style:none}#jumbo__content_I_description{margin-top:10px}ul{margin-top:12px;list-style-type:disc}ul li{margin-top:16px}.list__img{width:30px;height:30px;left:22px;top:493px;float:left}.list__text{padding-left:15px;font-size:12px;color:#000000;margin-bottom:10px}.button__text_get{height:21px;line-height:21px;display:flex;align-items:center;text-align:center;color:#FFFFFF;order:0;align-self:center;margin:0}.button__mtp_get{display:flex;flex-direction:column;padding:10px 16px;background:#387EFE;border-radius:4px;order:0;align-self:center;margin:10px 0px}#link__mtp_remind{background:#FFFFFF;display:flex;flex-direction:column;border-radius:4px;order:0;align-self:center;margin:10px 0px}.link__text_remind{line-height:21px;display:flex;align-items:center;text-align:center;color:#387EFE;order:0;align-self:center;margin:0px 0px;cursor:pointer;font-weight:600;font-size:16px}.sidebar__buttons{display:flex;flex:1;justify-content:flex-end;flex-direction:column;background-color:white;bottom:0;position:sticky}.sidebar__buttons .sidebar__buttons-border{box-shadow:0px -2px 4px rgba(0,0,0,0.15);padding:4px 18px}.sidebar__jumbo{padding:24px 18px !important}.sidebar{display:flex;flex:1;flex-direction:column;margin:0 !important}.main-container__scroll-wrapper{display:flex;flex:1}
+
+
+/*# sourceMappingURL=../../sourceMap/chrome/sidebar_mtp_upsell.map*/

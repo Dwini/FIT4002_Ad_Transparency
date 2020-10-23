@@ -1,0 +1,28 @@
+/*!
+ * 
+ * MCAFEE RESTRICTED CONFIDENTIAL
+ * Copyright (c) 2020 McAfee, LLC
+ * 
+ * The source code contained or described herein and all documents related
+ * to the source code ("Material") are owned by McAfee or its
+ * suppliers or licensors. Title to the Material remains with McAfee
+ * or its suppliers and licensors. The Material contains trade
+ * secrets and proprietary and confidential information of McAfee or its
+ * suppliers and licensors. The Material is protected by worldwide copyright
+ * and trade secret laws and treaty provisions. No part of the Material may
+ * be used, copied, reproduced, modified, published, uploaded, posted,
+ * transmitted, distributed, or disclosed in any way without McAfee's prior
+ * express written permission.
+ * 
+ * No license under any patent, copyright, trade secret or other intellectual
+ * property right is granted to or conferred upon you by disclosure or
+ * delivery of the Materials, either expressly, by implication, inducement,
+ * estoppel or otherwise. Any license under such intellectual property rights
+ * must be expressed and approved by McAfee in writing.
+ * 
+ * 
+ */
+.alert__filename,.alert__source,.alert__location{display:flex}.alert__filename p,.alert__source p,.alert__location p{display:flex;align-items:center}.alert__filename p span:first-of-type,.alert__source p span:first-of-type,.alert__location p span:first-of-type{margin-right:4px}.alert__filename p span:last-of-type,.alert__source p span:last-of-type,.alert__location p span:last-of-type{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:260px}.alert__filename p #ap_download_scanning_source_name,.alert__source p #ap_download_scanning_source_name,.alert__location p #ap_download_scanning_source_name{width:194px}.alert__filename .text,.alert__source .text,.alert__location .text{color:#C01818;text-align:left}.alert__filename .text--bold,.alert__source .text--bold,.alert__location .text--bold{font-weight:bold}.sidebar__footer{margin-top:24px}.sidebar__footer p{margin-top:10px}
+
+
+/*# sourceMappingURL=../../sourceMap/chrome/sidebar_ds_file_not_deleted.map*/

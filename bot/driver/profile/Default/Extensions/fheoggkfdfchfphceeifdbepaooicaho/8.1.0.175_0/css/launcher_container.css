@@ -1,0 +1,28 @@
+/*!
+ * 
+ * MCAFEE RESTRICTED CONFIDENTIAL
+ * Copyright (c) 2020 McAfee, LLC
+ * 
+ * The source code contained or described herein and all documents related
+ * to the source code ("Material") are owned by McAfee or its
+ * suppliers or licensors. Title to the Material remains with McAfee
+ * or its suppliers and licensors. The Material contains trade
+ * secrets and proprietary and confidential information of McAfee or its
+ * suppliers and licensors. The Material is protected by worldwide copyright
+ * and trade secret laws and treaty provisions. No part of the Material may
+ * be used, copied, reproduced, modified, published, uploaded, posted,
+ * transmitted, distributed, or disclosed in any way without McAfee's prior
+ * express written permission.
+ * 
+ * No license under any patent, copyright, trade secret or other intellectual
+ * property right is granted to or conferred upon you by disclosure or
+ * delivery of the Materials, either expressly, by implication, inducement,
+ * estoppel or otherwise. Any license under such intellectual property rights
+ * must be expressed and approved by McAfee in writing.
+ * 
+ * 
+ */
+div[class^='mc-launcher-container-']{width:40px;height:40px;justify-content:center;align-items:center;display:flex;position:relative}div[class^='mc-launcher-container-']:hover{background:#E6E9F0;border-radius:20px}img[class^='mc-app-button-']{cursor:pointer;width:25px;height:22px}div[class^='mc-app-container-']{border-radius:8px;display:none;position:absolute;right:-8px;top:47px;background-color:#FFFFFF;box-shadow:0 0 5px 4px rgba(0,0,0,0.15);border:none}div.mc-attached-tooltip{border-radius:8px;position:absolute;right:-8px;top:47px;box-shadow:0 0 5px 4px rgba(0,0,0,0.15);border:none}div.mc-tip{content:"";position:relative;width:0;height:0;border-width:10px;border-style:solid;border-color:transparent transparent #5A6175 transparent;top:-98px;left:239px}
+
+
+/*# sourceMappingURL=../../sourceMap/chrome/launcher_container.map*/

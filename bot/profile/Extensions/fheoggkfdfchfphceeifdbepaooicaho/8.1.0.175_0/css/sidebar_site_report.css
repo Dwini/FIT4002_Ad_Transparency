@@ -1,0 +1,28 @@
+/*!
+ * 
+ * MCAFEE RESTRICTED CONFIDENTIAL
+ * Copyright (c) 2020 McAfee, LLC
+ * 
+ * The source code contained or described herein and all documents related
+ * to the source code ("Material") are owned by McAfee or its
+ * suppliers or licensors. Title to the Material remains with McAfee
+ * or its suppliers and licensors. The Material contains trade
+ * secrets and proprietary and confidential information of McAfee or its
+ * suppliers and licensors. The Material is protected by worldwide copyright
+ * and trade secret laws and treaty provisions. No part of the Material may
+ * be used, copied, reproduced, modified, published, uploaded, posted,
+ * transmitted, distributed, or disclosed in any way without McAfee's prior
+ * express written permission.
+ * 
+ * No license under any patent, copyright, trade secret or other intellectual
+ * property right is granted to or conferred upon you by disclosure or
+ * delivery of the Materials, either expressly, by implication, inducement,
+ * estoppel or otherwise. Any license under such intellectual property rights
+ * must be expressed and approved by McAfee in writing.
+ * 
+ * 
+ */
+.jumbo__image--red,.jumbo__image--yellow,.jumbo__image--green,.jumbo__image--unknown{display:none}.jumbo__site-url--red{border:1px solid #C01818;color:#C01818;background-color:#FFF4F4}.jumbo__site-url--yellow{border:1px solid #B86707;color:#953B09;background-color:#FFF6E8}.jumbo__site-url--green{border:1px solid #10BC7E;color:#056B46;background-color:#E2FFF4}.jumbo__site-url{display:flex;align-items:center;justify-content:center;max-width:310px;height:32px;margin:16px auto 0 auto;padding:0 12px;border-radius:16px;font-weight:600;font-size:14px}.jumbo__site-url img{padding:0 3px}#jumbo__title{font-size:24px}#jumbo__title,#jumbo__description{margin:auto;margin-top:16px;width:280px}#jumbo__description{width:300px}#threats__title{font-size:16px}.sidebar__footer{margin-top:24px}
+
+
+/*# sourceMappingURL=../../sourceMap/chrome/sidebar_site_report.map*/

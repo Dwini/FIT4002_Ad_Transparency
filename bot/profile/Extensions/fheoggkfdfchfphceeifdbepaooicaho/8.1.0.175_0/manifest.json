@@ -1,0 +1,45 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "images/browser_action/disabled_16.png",
+         "32": "images/browser_action/disabled_32.png"
+      },
+      "default_title": "__MSG_res_PRODUCT_NAME_TRADEMARKED__"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "exclude_matches": [ "http://*/*.pdf", "https://*/*.pdf" ],
+      "js": [ "punycode.js", "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "iframe_handler.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "css": [ "css/search_modifier.css", "css/app_launcher.css", "css/email_launcher.css", "css/launcher_container.css" ],
+      "exclude_matches": [ "http://*/*.pdf", "https://*/*.pdf" ],
+      "js": [ "content_before_loaded.js" ],
+      "matches": [ "http://us.search.yahoo.com/*", "https://us.search.yahoo.com/*", "http://search.yahoo.com/*", "https://search.yahoo.com/*", "http://video.search.yahoo.com/*", "https://video.search.yahoo.com/*", "http://images.search.yahoo.com/*", "https://images.search.yahoo.com/*", "http://news.search.yahoo.com/*", "https://news.search.yahoo.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_res_PRODUCT_NAME_TRADEMARKED__",
+   "icons": {
+      "128": "images/webadvisor.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrOrksCVomv4HZxXZu6eb3fMbFPlYcSWHnBa0eGSLlBx4YJU3hgqATLB9FrVu1I2kjEKU02kDNejzwnooAjAMpQLMN6rDnVLt/xgvBvwfUcqVOX2vmJvzBFUNhrShiAco662ZtJRD2B4MshsjoggFtWvpBDi3VXRzpr1I0jA0tUwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "57.0",
+   "name": "__MSG_res_PRODUCT_NAME_TRADEMARKED__",
+   "permissions": [ "tabs", "\u003Call_urls>", "downloads", "nativeMessaging", "webRequest", "storage", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "8.1.0.175",
+   "web_accessible_resources": [ "html/*.html", "images/*.png", "images/*.gif", "images/*.svg", "json/*.json", "fonts/*.ttf", "css/*.css" ]
+}

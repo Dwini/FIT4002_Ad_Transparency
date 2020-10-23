@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="typosquatting_title" x-mclocalizedtext="true"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+  <link href=".././css/typosquatting.css" rel="stylesheet"></head>
+  <body>
+    <div>
+      <section class="container">
+        <!-- block header -->
+        <div class="ts__header">
+          <img src="../images/web_advisor/logo.png" alt="WebAdvisor logo" />
+        </div>
+        <!-- block body (message and actions) -->
+        <div class="ts__body">
+          <!-- message -->
+          <div class="body__message">
+            <img src="../images/web_advisor/typo-squatting/danger_icon.png" alt="danger icon" height="72" width="80" />
+            <div class="message__main">
+              <h2 id="typosquatting_message_title" x-mclocalizedtext="true"></h2>
+              <a id="typosquatting_message_suggested_link"></a>
+            </div>
+            <hr>
+            <p id="typosquatting_message_description" class="message__paragraph"></p>
+            <!-- search bar -->
+            <div class="message__search">
+              <div class="message__search_bar">
+                <input id="typosquatting_message_search_input" x-inputplaceholder="true" type="text" placeholder="">
+                <img id="search-btn" src="../images/web_advisor/search_icon.svg" alt="search icon">
+              </div>
+              <!-- search suggestions -->
+              <div class="search__suggest">
+                <ul>
+                </ul>
+              </div>
+            </div>
+            <!-- Point of action button -->
+            <button id="typosquatting_message_button" class="message__action"></button>
+          </div>
+          <!-- actions -->
+          <div class="body__actions">
+            <a id="typosquatting_action_back" class="actions__back" x-mclocalizedtext="true"></a>
+            <a id="typosquatting_action_accept" class="actions__accept" x-mclocalizedtext="true"></a>
+          </div>
+        </div>
+        <!-- block footer -->
+        <div class="ts__footer">
+          <div class="footer__title">
+            <h2 id="typosquatting_footer_title" x-mclocalizedtext="true"></h2>
+            <img id="footer_toggle_icon" src="../images/web_advisor/typo-squatting/double_arrow_down.png" alt="toggle icon" height="12" width="8">
+          </div>
+          <div class="footer__message">
+            <p id="typosquatting_footer_description" x-mclocalizedtext="true"></p>
+            <a id="typosquatting_footer_link" x-mclocalizedtext="true" href="https://blogs.mcafee.com/consumer/what-is-typosquatting/" target="_blank"></a>
+          </div>
+        </div>
+      </section>
+      <!-- notice: MTP upsell -->
+      <section>
+        <div id="notice_container" class="notice__container" x-mcwssupsell="false">
+          <div class="notice__desc">
+            <p id="typosquatting_notice_title" class="notice__title"></p>
+            <p class="notice__body">
+              <span id="typosquatting_notice_body" x-mclocalizedtext="true"></span>
+            </p>
+          </div>
+          <button id="typosquatting_get_mtp_btn" class="get__mtp__btn" x-mclocalizedtext="true"></button>
+        </div>
+      </section>
+    </div>
+  <script type="text/javascript" src="../typosquatting.js"></script></body>
+</html>

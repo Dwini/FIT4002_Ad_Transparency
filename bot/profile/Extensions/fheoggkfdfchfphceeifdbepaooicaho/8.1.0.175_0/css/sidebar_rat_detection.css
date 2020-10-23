@@ -1,0 +1,28 @@
+/*!
+ * 
+ * MCAFEE RESTRICTED CONFIDENTIAL
+ * Copyright (c) 2020 McAfee, LLC
+ * 
+ * The source code contained or described herein and all documents related
+ * to the source code ("Material") are owned by McAfee or its
+ * suppliers or licensors. Title to the Material remains with McAfee
+ * or its suppliers and licensors. The Material contains trade
+ * secrets and proprietary and confidential information of McAfee or its
+ * suppliers and licensors. The Material is protected by worldwide copyright
+ * and trade secret laws and treaty provisions. No part of the Material may
+ * be used, copied, reproduced, modified, published, uploaded, posted,
+ * transmitted, distributed, or disclosed in any way without McAfee's prior
+ * express written permission.
+ * 
+ * No license under any patent, copyright, trade secret or other intellectual
+ * property right is granted to or conferred upon you by disclosure or
+ * delivery of the Materials, either expressly, by implication, inducement,
+ * estoppel or otherwise. Any license under such intellectual property rights
+ * must be expressed and approved by McAfee in writing.
+ * 
+ * 
+ */
+.sidebar__container{display:flex;flex:1;flex-direction:column;margin:0 !important}.sidebar__jumbo{padding:0 !important}.jumbo__image{width:197px !important;height:205px !important;margin-bottom:16px !important}.jumbo__description{margin-left:22px;margin-right:22px;text-align:left}.jumbo__title{font-size:28px;font-weight:600;line-height:36px;color:#212934}#sidebar_rat_detection_information_I{margin-top:30px;font-size:17px;line-height:24px;letter-spacing:0.01em}#sidebar_rat_detection_information_II{margin-top:20px;font-size:17px;line-height:24px;letter-spacing:0.01em}.sidebar__buttons{display:flex;flex:1;justify-content:flex-end;flex-direction:column;background-color:white;bottom:0;position:sticky;align-items:center}.button__got__it{background:#387EFE;border-radius:4px;margin:22px 0px;width:295px}.button__text{color:#FFFFFF}.link__text{line-height:21px;color:#387EFE;font-weight:600;font-size:16px;cursor:pointer;margin-bottom:25px;width:250px}.main-container__scroll-wrapper{display:flex;flex:1}
+
+
+/*# sourceMappingURL=../../sourceMap/chrome/sidebar_rat_detection.map*/

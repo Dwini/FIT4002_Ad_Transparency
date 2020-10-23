@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "Upravljajte pristupom internetu za vašu obitelj"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "Zaštitite vaše financijske informacije"
+   },
+   "annotation_balloon_color_green": {
+      "message": "Ova veza je sigurna"
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "Dnevno testirano"
+   },
+   "annotation_balloon_color_red": {
+      "message": "Ova poveznica je opasna"
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "Ova veza nije ocijenjena"
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "Ova veza je sumnjiva"
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "Prikaz izvješća o mjestu"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "$ads_counter$ oglasa blokirano",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "$ads_counter$ oglas blokiran",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "$tracker_counter$ alata za praćenje blokirano",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "$tracker_counter$ alat za praćenje blokiran",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "Pregled $download_scanning_counter$ preuzimanja",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "Pregled $download_scanning_counter$ preuzimanje",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "Oktrijte više recepata vezano za $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "Otkrijte više članaka vezano za $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "Otkrijte još rezultata za $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "Usporedite različite cijene za $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "Otkrijte više vezano za $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "Otkrijte više $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "Prihvati rizik"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "Nabavite McAfee® Total Protection"
+   },
+   "block_page_go_back": {
+      "message": "Natrag"
+   },
+   "block_page_message": {
+      "message": "Stani! Jeste li sigurni da želite ići tamo?"
+   },
+   "block_page_notice_body": {
+      "message": "Čuvamo vas u sigurnima u pretraživaču - proširite zaštitu na sve svoje uređaje pomoću McAfee® Total Protection. Nabavite VPN, identity protection, File Lock i više."
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "Skenirali smo $pagesScanned$ stranica za vas do sada.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "Skenirali smo $pagesScanned$ stranicu za vas do sada.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "Kad smo posjetili stranicu, otkrili smo da pokazuje jedno ili više riskantnih ponašanja."
+   },
+   "block_page_popover_title": {
+      "message": "Zašto vam se ovo prikazuje?"
+   },
+   "block_page_risky_url": {
+      "message": "može biti rizično za posjet."
+   },
+   "block_page_search_input": {
+      "message": "Pretraži sa %PRODUCTNAME%"
+   },
+   "block_page_state_danger": {
+      "message": "Vrlo rizično"
+   },
+   "block_page_state_warning": {
+      "message": "Umjereno rizično"
+   },
+   "block_page_status_text": {
+      "message": "Status web mjesta:"
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% - Ocjene sigurnosti web stranica"
+   },
+   "block_page_view_site_report": {
+      "message": "Prikaz izvješća o mjestu"
+   },
+   "category_id_100_description": {
+      "message": "Web stranice koje sadrže virtualne umjetničke galerije, stranice umjetnika (uključujući skulpture i fotografiju), muzeje, etničke običaje i običaje zemalja."
+   },
+   "category_id_100_name": {
+      "message": "Umjetnost/kultura/baština"
+   },
+   "category_id_101_description": {
+      "message": "Web stranice koje uglavnom prodaju, promiču ili zagovaraju korištenje alkohola, poput piva, vina i žestokih pića. Ova kategorija uključuje i recepte za koktele i upute za izradu piva kod kuće."
+   },
+   "category_id_101_name": {
+      "message": "Alkohol"
+   },
+   "category_id_102_description": {
+      "message": "Web stranice koje namjerno omogućavaju korisnicima da pregledavaju Internet skrivajući svoju IP adresu ili druge osobne podatke koji identificiraju, kako bi zaobišli lokalne propise o filtriranju i pristupili bilo kojoj web stranici. Web stranice za anonimizaciju također blokiraju tehnologije za praćenje, poput kolačića ili povijesti preglednika. Neke metode sprječavaju i prosljeđivanje verzije operacijskog sustava i povijesti web stranice na web stranicu. Ova kategorija uključuje stranice koje nude besplatne posredničke IP adrese ili opisuju kako zaobići filtriranje."
+   },
+   "category_id_102_name": {
+      "message": "Anonimizatori"
+   },
+   "category_id_103_name": {
+      "message": "Teme za odrasle"
+   },
+   "category_id_104_description": {
+      "message": "Web stranice koje rezultiraju anonimnim pregledavanjem Interneta bez izrazite namjere za pružanjem takve usluge. Ova kategorija uključuje URL prevoditelje, predmemoriranje web stranice i druge usluge koje bi mogle služiti za anonimizaciju, no bez izrazite namjere zaobilaska softvera za filtriranje."
+   },
+   "category_id_104_name": {
+      "message": "Uslužni programi za anonimnost"
+   },
+   "category_id_105_description": {
+      "message": "Web stranice koje nude informacije povezane s tvrtkom, poput korporativnih pregleda ili poslovnog planiranja i strategija. Ova kategorija uključuje i informacije, usluge ili proizvode koji pomažu drugim tvrtkama u planiranju, upravljanju i reklamiranju svojih pothvata. Ova kategorija uključuje pothvate marketinga na više razina kad je fokus na vođenju tvrtke. Ova kategorija ne uključuje osobne stranice i stranice za web hosting."
+   },
+   "category_id_105_name": {
+      "message": "Posao"
+   },
+   "category_id_106_description": {
+      "message": "Web stranice koje nude internetske društvene poruke u stvarnom vremenu u javnim ili privatnim sobama za razgovore. Ova kategorija uključuje IRC. Ova kategorija ne uključuje instant poruke. Rizici uključuju Uvredljivi sadržaj, ozbiljne nedostatke glede produktivnosti i curenje osjetljivih informacija."
+   },
+   "category_id_106_name": {
+      "message": "Čavrljanje"
+   },
+   "category_id_108_description": {
+      "message": "Web stranice koje nude opće referentne informacije, poput pružatelja javnih usluga, regionalnih informacija, prijevoznih rasporeda, karata ili vremenskih izvješća."
+   },
+   "category_id_108_name": {
+      "message": "Javni podaci"
+   },
+   "category_id_109_description": {
+      "message": "Web stranice za koje McAfee vjeruje kako nude upute za počinjenje nezakonitih ili kriminalnih radnji. Upute uključuju počinjenje ubojstva ili samoubojstva, sabotažu, izradu bombe, obijanje brava, krađu usluga, izbjegavanje snaga zakona ili varanje na testiranju na droge. Ova kategorija također može uključivati informacije o tome kako širiti nezakoniti sadržaj, počiniti prijevaru ili varanje potrošača."
+   },
+   "category_id_109_name": {
+      "message": "Potencijalne kriminalne aktivnosti"
+   },
+   "category_id_110_description": {
+      "message": "Web stranice koje nude informacije o kupnji, proizvodnji i korištenju nezakonitih ili rekreativnih droga. Ova kategorija uključuje prikazivanje, prodaju ili opisivanje korištenja lijeka paraphernalia, te savjete o zakonitim sredstvima koja se koriste za drogiranje, poput udisanja ljepila ili zloporabe lijekova na recept, odnosno o zloporabi drugih dopuštenih tvari."
+   },
+   "category_id_110_name": {
+      "message": "Opojne droge"
+   },
+   "category_id_111_description": {
+      "message": "Web stranice posvećene akademskom sadržaju, poput akademskih tema (matematika, povijest), web stranice škola ili sveučilišta i stranice za obrazovnu administraciju (školski odbori, učiteljski kurikulum)."
+   },
+   "category_id_111_name": {
+      "message": "Obrazovanje/reference"
+   },
+   "category_id_112_description": {
+      "message": "Web stranice koje pružaju informacije o kinu, kazalištu, glazbi, televiziji, zabavi, tračevima i novostima iz industrije zabave, te stranice o slavnim osobama poput glumaca ili glazbenika. Ova kategorija uključuje i stranice na kojima je sadržaj posvećen zabavi na Internetu, poput horoskopa ili fan klubova."
+   },
+   "category_id_112_name": {
+      "message": "Zabava"
+   },
+   "category_id_113_description": {
+      "message": "Ova se kategorija koristi s kategorijama Jezivi sadržaj, Diskriminacija, Pornografija, Nasilje ili Nasilje u igrama/crtićima, kako bi se identificirali URL-ovi koji su u ovim kategorijama ekstremni. Primjer je ilegalna pornografija, koja je u kategorijama Pornografija, Moguće kriminalne aktivnosti i Ekstremno."
+   },
+   "category_id_113_name": {
+      "message": "Ekstremno"
+   },
+   "category_id_114_description": {
+      "message": "Web stranice koje nude financijske informacije ili pristup mrežnim financijskim računima. Ova kategorija uključuje web stranice koje nude financije informacije, uključujući novosti ili usluge koje se bave upravljanjem novcem, no ne nude pristup informacijama financijskih računa, poput financijskih statistika, ili konzultacije u područjima kao što su porez, hipoteke, osiguranje, akreditacije ili ulaganja. Pristup mrežnim financijskim računima uključuje osobne ili poslovne informacije povezane s bankarstvom, upravljanjem novcem, poreznim savjetovanjem, zajedničkim fondovima, kreditnim karticama, kreditnim zadrugama, osiguranjem, te drugim financijskim objavama i uslugama. Ova kategorija uključuje informacije o dionicama (no ne o trgovanju dionicama), kućnim financijama, te financijske informacije povezane s državom."
+   },
+   "category_id_114_name": {
+      "message": "Financije/bankarstvo"
+   },
+   "category_id_115_description": {
+      "message": "Web stranice koje omogućavaju korisnicima klađenje ili plaćanje oklada mrežno, odnosno nude softver za kocku koji omogućava mrežno klađenje, poput igara u kasinu, kladionica, sportskog klađenja i lutrije. Ova kategorija uključuje lutriju ako možete mrežnim putem kupiti listiće ili igrati."
+   },
+   "category_id_115_name": {
+      "message": "Kockanje"
+   },
+   "category_id_116_description": {
+      "message": "Web stranice koje nude mrežne igre i povezane informacije poput trikova, kodova, demonstracija, emulatora mrežnih natjecanja ili igara s igranjem uloga, klanove igrača, stranice proizvođača igara, lige za fantasy ili virtualne sportske igre, te ostale stranice za igranje bez mogućnosti za dobit. Ova kategorija uključuje igraće konzole, kao što su Microsoft Xbox® i Sony PlayStation®."
+   },
+   "category_id_116_name": {
+      "message": "Igre"
+   },
+   "category_id_117_description": {
+      "message": "Web stranice koje uključuju sadržaj kojeg održavaju državne ili vojne organizacije, poput državnih podružnica ili agencija, policije, vatrogasaca, civilne obrane, protuterorističkih organizacija ili nadnacionalnih organizacija, poput Ujedinjenih Naroda ili Europske Unije. Ova kategorija uključuje vojne i veteranske medicinske ustanove."
+   },
+   "category_id_117_name": {
+      "message": "Vlada/vojska"
+   },
+   "category_id_118_description": {
+      "message": "Web stranice za koje McAfee vjeruje kako nude upute ili na neki drugi način omogućavaju prijevaru, zločin ili zlonamjernu aktivnost koja je usmjerena na računala. Ova kategorija uključuje web stranice koje se odnose na računalni kriminal, a koje uključuju zlonamjerne informacije za hakiranje ili alate koji pojedincima pomažu neovlašteno pristupiti računalima i mrežama (korijenski kompleti, kiddy skripte). Ova kategorija uključuje i ostala područja elektronskih prijevara, poput prijevara pozivatelja i nezakonitih manipulacija elektronskim uređajima."
+   },
+   "category_id_118_name": {
+      "message": "Potencijalno hakiranje/računalni kriminal"
+   },
+   "category_id_119_description": {
+      "message": "Web stranice koje pokrivaju sve informacije povezane sa zdravljem i zdravstvenim uslugama. Zdravstvene informacije uključuju teme o poboljšanju blagostanja pojedinca, bilo da se radi o tjelesnom ili mentalnom zdravlju (prehrana, vježbanje ili roditeljstvo). Zdravstvene usluge uključuju pružatelje poput zdravstvenog osiguranja, bolnica, klinika i neovisnih liječnika."
+   },
+   "category_id_119_name": {
+      "message": "Zdravlje"
+   },
+   "category_id_120_description": {
+      "message": "Web stranice koje nude komični ili smiješni sadržaj. Ova kategorija uključuje stranice sa vicevima, skečevima, stripovima i satirom. Ova kategorija može uključivati i sadržaj grafičkih romana, što se često povezuje sa stripom."
+   },
+   "category_id_120_name": {
+      "message": "Humor/stripovi"
+   },
+   "category_id_121_description": {
+      "message": "Web stranice za koje McAfee vjeruje kako nude sadržaj koji eksplicitno potiče na zlostavljanje ili diskriminaciju određene skupine pojedinaca. Ova kategorija uključuje promicanje plana protiv grupa, na temelju rase, religije, nacionalnosti, spola, dobi, invaliditeta ili seksualne orijentacije. Ova kategorija može uključivati političke stranke i organizacije s posebnim planom koji se temelji na mržnji, te maltretiranje putem Interneta ako je ekstremno."
+   },
+   "category_id_121_name": {
+      "message": "Diskriminacija"
+   },
+   "category_id_122_description": {
+      "message": "Web stranice koje nude softver za komunikaciju u stvarnom vremenu putem mreže samo za korisnike koji su se priključili popisu kontakata članova ili sesiji instant poruka. Većina softvera za instant poruke uključuje značajke poput prijenosa datoteka, poziva s računala na računalo, te može pratiti kad se drugi ljudi prijavljuju i odjavljuju. Ove bi stranice mogle biti sumnjive i glede curenja osjetljivih podataka, sumnjivog sadržaja ili dijeljenja datoteka."
+   },
+   "category_id_122_name": {
+      "message": "Razmjena izravnih poruka"
+   },
+   "category_id_123_description": {
+      "message": "Web stranice koje nude kupnju, prodaju ili trgovanje dionicama putem mreže. Ova kategorija uključuje i informacije elektronskog uređaja za dionice, koje omogućavaju uvid u cijene dionica i klađenje na financijsku razliku na tržištu dionica u stvarnom vremenu. Ostala klađenja se nalaze u kategoriji Kocka. Ova kategorija ne uključuje stranice koje nude informacije o dionicama, ali ne nude kupnju, prodaju ili trgovanje dionicama."
+   },
+   "category_id_123_name": {
+      "message": "Trgovina dionicama"
+   },
+   "category_id_124_description": {
+      "message": "Web stranice koje nude softver ili pristup neprekidnom zvučnom ili video prijenosu, poput Internet radija, TV programa ili podcasta."
+   },
+   "category_id_124_name": {
+      "message": "Internetski radio/TV"
+   },
+   "category_id_125_description": {
+      "message": "Web stranice povezane sa traženjem posla, uključujući one koje se bave pisanjem životopisa, intervjuima, promjenom karijere, povjerljivim oglašavanjem i velikim bazama podataka poslova. Ova kategorija uključuje i korporativne web stranice koje oglašavaju slobodna radna mjesta, stranice za usporedbu plaća, privremeno zapošljavanje i stranice tvrtki koje oglašavaju slobodna radna mjesta."
+   },
+   "category_id_125_name": {
+      "message": "Pretraživanje poslova"
+   },
+   "category_id_126_description": {
+      "message": "Web stranice koje utemeljeno nude informacije o zaštiti podataka. Ova kategorija uključuje detaljne informacije o čuvanju poslovnih ili osobnih podataka, intelektualnom vlasništvu, privatnosti i infrastrukturi na Internetu, privatnim mrežama ili drugim uslugama dijeljenja pojasa poput telekomunikacija. Mogući rizici uključuju moguće hakiranje/računalni kriminal. Stranice sa sadržajem visokog rizika i bez jasne razlike između “crne magije” i “bijele magije” bi se također mogle naći u ovoj kategoriji, kao i u kategoriji Moguće hakiranje/računalni zločin. Neki bi se sadržaji mogli upotrijebiti za proboj sigurnosti ili počinjenje nezakonitih djela."
+   },
+   "category_id_126_name": {
+      "message": "Sigurnost podataka"
+   },
+   "category_id_127_description": {
+      "message": "Web stranice koje se fokusiraju na društvenu interakciju, poput pronalaska partnera putem mreže, školskih okupljanja, dopisivanja, eskort usluga ili upoznavanja potencijalnih supružnika. Ova kategorija uključuje brojne stranice koje svojim članovima omogućavaju socijalnu interakciju putem objave poruka u stvarnom vremenu. Stranice u ovoj kategoriji bi također mogle omogućiti kontakt s nepoželjnim stranama i članskim profilima koji sadrže upitne informacije."
+   },
+   "category_id_127_name": {
+      "message": "Izlasci/društveno umrežavanje"
+   },
+   "category_id_128_description": {
+      "message": "Web stranice koje prodaju mediju, softver ili alate za mobilne telefone, koji se mogu preuzeti i isporučiti na mobilne telefone. Primjeri uključuju melodije zvona, logotipe/izglede, igre, čuvare zaslona, tekstne melodije i softver za SMS, MMS, WAP i druge protokole za mobilne telefone."
+   },
+   "category_id_128_name": {
+      "message": "Mobitel"
+   },
+   "category_id_129_description": {
+      "message": "Web stranice koje nude zvučne ili video datoteke za preuzimanje, poput MP3, WAV, AVI i MPEG formata. Datoteke se spremaju i reproduciraju s računala korisnika."
+   },
+   "category_id_129_name": {
+      "message": "Preuzimanje medijskih sadržaja"
+   },
+   "category_id_130_description": {
+      "message": "Web stranice koje angažiraju kod posebno dizajniran za otimanje postavki ili aktivnosti vašeg računala. Ova kategorija uključuje aplikacije koje se same instaliraju (zovu se “drive-by” preuzimanja izvršivih datoteka), trojanske konje, te viruse koji iskorištavaju sigurnosne slabosti preglednika i drugih aplikacija. Web stranica kasnije može izgubiti svoj zlonamjerni status i premjestiti se u u drugu kategoriju. Zlonamjerne stranice imaju za cilj poduzimati radnje na drugom računalu kako bi prouzročile štetu."
+   },
+   "category_id_130_name": {
+      "message": "Zlonamjerna web-mjesta"
+   },
+   "category_id_131_description": {
+      "message": "Web stranice koje pružaju pristup (http://) grupama novosti Usenet i arhivama datoteka učitanih na grupe novosti. Ova kategorija uključuje i mrežne grupe koje nude slične objave sadržaja usmjerenog na zajednicu. URL-ovi u ovoj kategoriji mogu sadržavati uvredljiv sadržaj."
+   },
+   "category_id_131_name": {
+      "message": "Novosti na podmreži Usenet"
+   },
+   "category_id_132_description": {
+      "message": "Web stranice koje imaju nepornografske slike nagog ljudskog tijela. Ova kategorija uključuje klasične skulpture i slike, umjetničke nage fotografije, neke naturističke slike i detaljne medicinske ilustracije."
+   },
+   "category_id_132_name": {
+      "message": "Golotinja"
+   },
+   "category_id_133_description": {
+      "message": "Web stranice humanitarnih ili obrazovnih skupina koje ispunjavaju navedenu misiju koja je na korist većoj zajednici, poput klubova, lobija, zajednica, neprofitnih organizacija, radničkih unija i zagovaračkih skupina. Primjeri su Masoni, Elks, izviđači ili Veliki brat."
+   },
+   "category_id_133_name": {
+      "message": "Neprofitne/zastupničke/nevladine organizacije"
+   },
+   "category_id_134_description": {
+      "message": "Web stranice koje nude mrežne medije novosti, poput međunarodnih ili regionalnih prijenosa i objava vijesti. Ova kategorija uključuje stranice portala koje nude sadržaj vijesti."
+   },
+   "category_id_134_name": {
+      "message": "Općenite vijesti"
+   },
+   "category_id_136_description": {
+      "message": "Web stranice koje nude proizvode ili usluge putem mreže. Web stranice koje prodaju široki asortiman proizvoda mogu predstavljati rizik za korisnike zbog nuđenja pristupa stavkama koje se inače nalaze u kategorijama Pornografija, Oružje, Golotinja ili Nasilje. Neke stranice mogu nuditi pristup stavkama u drugim kategorijama, poput Pornografije i Oružja."
+   },
+   "category_id_136_name": {
+      "message": "Internetska kupnja"
+   },
+   "category_id_137_description": {
+      "message": "Web stranice koje uključuju atraktivnu ili oskudnu odjeću, donje rublje ili kupaće kostime, odnosno kolekcije fotografija supermodela ili slavnih osoba, ali ne uključuju golotinju."
+   },
+   "category_id_137_name": {
+      "message": "Provokativno odijevanje"
+   },
+   "category_id_138_description": {
+      "message": "Web stranice koje dopuštaju razmjenu datoteka između računala i korisnika za poslovne ili privatne potrebe, poput glazbe za preuzimanje. P2P klijenti omogućavaju korisnicima da traže i razmjenjuju datoteke iz peer-user mreže. One često uključuju softver za špijuniranje ili mogućnosti razgovora u stvarnom vremenu. Ova kategorija uključuje BitTorrent web stranice."
+   },
+   "category_id_138_name": {
+      "message": "P2P/dijeljenje datoteka"
+   },
+   "category_id_139_description": {
+      "message": "Web stranice koje pokrivaju političke stranke, pojedince u političkom životu, te mišljenja o različitim temama. Ova kategorija može uključivati i zakone i politička mišljenja o drogama. Ova kategorija uključuje URL-ove za političke stranke, političke kampanje i mišljenja o raznim temama, uključujući političke debate."
+   },
+   "category_id_139_name": {
+      "message": "Politika/stavovi"
+   },
+   "category_id_140_description": {
+      "message": "Osobne početne stranice koje dijele zajedničku domenu, poput onih koje održava ISP, poslužitelji sveučilišta/obrazovne ustanove ili besplatni domaćin web stranice. Ova kategorija uključuje i jedinstvene domene koje sadrže osobne podatke, poput osobne početne stranice. Osobne početne stranice mogu sadržavati uvredljivi sadržaj."
+   },
+   "category_id_140_name": {
+      "message": "Osobne stranice"
+   },
+   "category_id_141_description": {
+      "message": "Web stranice koje služe kao glavni prolazi ili direktoriji na sadržaj na webu. Većina portal stranica nudi niz internih značajki stranice ili usluge poput tražilica, e-pošte, novosti i zabave. Stranice s popisima za slanje e-pošte uz niz sadržaja u ovoj su kategoriji."
+   },
+   "category_id_141_name": {
+      "message": "Stranice portala"
+   },
+   "category_id_142_description": {
+      "message": "Web stranice koje nude daljinski pristup programu, mrežnoj usluzi ili cijelom računalnom sustavu. Iako se daljinski pristup često koristi osnovano za korištenje računala s udaljene lokacije, to stvara sigurnosni rizik, poput pristupa na stražnja vrata. Pristup na stražnja vrata, kojeg je napisao originalni programer, omogućava trećoj strani kontrolu nad računalom bez znanja korisnika."
+   },
+   "category_id_142_name": {
+      "message": "Udaljeni pristup"
+   },
+   "category_id_143_description": {
+      "message": "Web stranice koje uključuju sadržaj povezan s religijskim temama i uvjerenjima glede ljudske spiritualnosti koja nisu u okviru velikih religija. Ova kategorija uključuje religijske rasprave, uvjerenja, članke i informacije lokalnih vjerskih zajednica ili skupina, poput početne stranice crkve, osim ako se stranica već nalazi u kategoriji Velike globalne religije. Ova kategorija uključuje i komparativne religije, odnosno stranice koje uključuju religije i ideologije."
+   },
+   "category_id_143_name": {
+      "message": "Religija/ideologija"
+   },
+   "category_id_144_description": {
+      "message": "Web stranice koje koriste neaktivne ili nekorištene računalne resurse kako bi se fokusirale na zajednički zadatak. Taj zadatak može biti na razini tvrtke ili međunarodni. Dobro poznati primjeri su program SETI i Projekt ljudskog genoma, koji koriste slobodno vrijeme tisuća dobrovoljno uključenih računala za analizu podataka."
+   },
+   "category_id_144_name": {
+      "message": "Dijeljenje resursa"
+   },
+   "category_id_145_description": {
+      "message": "Web stranice koje nude rezultate pretraživanja koji korisnicima omogućavaju pronalazak informacija na Internetu na temelju ključnih riječi."
+   },
+   "category_id_145_name": {
+      "message": "Tražilice"
+   },
+   "category_id_146_description": {
+      "message": "Web stranice povezane s profesionalnim ili organiziranim amaterskim sportovima. Ova kategorija uključuje sportske novosti, događanja i informacije poput savjeta za igru, strategija, rezultata utakmica ili trgovanja igračima."
+   },
+   "category_id_146_name": {
+      "message": "Sport"
+   },
+   "category_id_147_description": {
+      "message": "Web stranice koje nude strujanje medije, odnosno sadrže dodatke za softver za prikaz zvučnih ili video podataka prije nego je dovršen prijenos cijele datoteke."
+   },
+   "category_id_147_name": {
+      "message": "Strujeći multimedijski sadržaji"
+   },
+   "category_id_148_description": {
+      "message": "Web stranice koje su repozitoriji kopija dijeljenog i besplatnog softvera koji se mogu preuzeti. Dijeljeni softver se distribuira na temelju sustava zasluga u kojem se softver isporučuje besplatno, ali autor zahtijeva malu naknadu ako je program odgovarajući i redovito se koristi. Besplatni softver je dostupan bez ikakve naknade."
+   },
+   "category_id_148_name": {
+      "message": "Javno dostupni softver/softver za besplatno korištenje"
+   },
+   "category_id_149_description": {
+      "message": "Web stranice za koje McAfee vjeruje kako sadržavaju materijale koji bi trebali biti seksualno uzbudljivi ili erotski. Ova kategorija uključuje fetiš stranice, animacije, crtiće, priče i nezakonitu pornografiju."
+   },
+   "category_id_149_name": {
+      "message": "Pornografija"
+   },
+   "category_id_150_description": {
+      "message": "Web stranice koje krše osobnu ili korporativnu privatnost i sigurnost. Ova kategorija uključuje:\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>URL-ove koji preuzimaju softver ili izvršavaju programe koji prikupljaju korisničke informacije i šalju ih trećoj strani bez znanja i izričitog pristanka korisnika.\u003C/li>\u003Cli>Softver koji prati aktivnost na tuđim računalima snimanjem dodira tipki (Keyloggers).\u003C/li>\u003Cli>Stranice koje distribuiraju softver za kojeg se zna da sadrži softver za špijuniranje ili oglašavanje.\u003C/li>\u003C/ul>Ova se kategorija razlikuje od Zlonamjernih stranica zbog svoje namjere. Softver za špijuniranje i keyloggers tajno prikupljaju i šalju informacije trećoj strani. Zlonamjerna stranica namjerava instalirati softver ili poduzeti radnje bez znanja i odobrenja korisnika."
+   },
+   "category_id_150_name": {
+      "message": "Špijunski softver/program s neželjenim oglasima/programi koji bilježe šifre"
+   },
+   "category_id_151_description": {
+      "message": "Web stranice koje prodaju, promiču ili zagovaraju korištenje duhanskih proizvoda, duhana paraphernalia, uključujući cigarete, cigare, lule, te duhan za ušmrkavanje ili žvakanje."
+   },
+   "category_id_151_name": {
+      "message": "Duhan"
+   },
+   "category_id_152_description": {
+      "message": "Web stranice koje promiču osobna ili poslovna putovanja, poput hotela, odmarališta, zrakoplovnih tvrtki, kopnenog prijevoza, rent-a-car-a, putničkih agencija i općenitih turističkih i putničkih informacija. Ova kategorija uključuje i stranice za kupnju karata i smještaja."
+   },
+   "category_id_152_name": {
+      "message": "Putovanja"
+   },
+   "category_id_153_description": {
+      "message": "Web stranice koje sadrže stvarne ili vjerne slike ili tekst koji dočarava, opisuje ili zagovara tjelesne napade na ljude, životinje ili institucije, poput prikaza rata, samoubojstva, sakaćenja ili komadanja."
+   },
+   "category_id_153_name": {
+      "message": "Nasilje"
+   },
+   "category_id_154_description": {
+      "message": "Web stranice koje nude vođenje oglasa ili programe koji stvaraju oglase. Primjeri uključuju poveznice, izvorni kod ili priključke za zastave, skočne prozore i druge vrste statički ili dinamički generiranih oglasa koji se pojavljuju na web stranicama. Ova je kategorija namijenjena blokiranju oglasa na web stranicama, ne tvrtkama koje pružaju oglase ili usluge oglašavanja."
+   },
+   "category_id_154_name": {
+      "message": "Web-oglasi"
+   },
+   "category_id_155_description": {
+      "message": "Web stranice koje pružaju informacije o kupnji, izradi, izmjeni ili korištenju oružja, poput pištolja, noževa, mačeva, pištolja za paintball i municije, eksploziva i dodataka za oružje."
+   },
+   "category_id_155_name": {
+      "message": "Oružje"
+   },
+   "category_id_156_description": {
+      "message": "Web stranice koje omogućavaju korisnicima da šalju ili primaju poruke e-pošte putem Interneta. Ove stranice mogu korisnike izložiti štetnom sadržaju koji se isporučuje putem priloga za e-poštu, odnosno mogu predstavljati sigurnosni rizik, poput curenja ili gubitka vlasničkih podataka."
+   },
+   "category_id_156_name": {
+      "message": "Web-pošta"
+   },
+   "category_id_157_description": {
+      "message": "Web stranice koje omogućavaju korisnicima uspostavu telefonskih poziva putem Interneta ili pribavljanje informacija ili softvera za ovu svrhu. Usluga web telefona se naziva i internetska telefonija ili VoIP. Usluga web telefona uključuje usluge povezivanja računalo-računalo, računalo-telefon i telefon-telefon putem TCP/IP mreža."
+   },
+   "category_id_157_name": {
+      "message": "Web-telefon"
+   },
+   "category_id_158_description": {
+      "message": "Web stranice koje nude nuđenje i prodaju predmeta ili usluga putem mreže. Ova kategorija uključuje web stranice koje se fokusiraju na nuđenje i prodaju. Mrežne se aukcije rijetko nadziru. Ove stranice mogu korisnike izložiti materijalima koji su također u kategorijama poput Pornografije, Oružja, Golotinje ili Nasilja."
+   },
+   "category_id_158_name": {
+      "message": "Dražbe/mali oglasi"
+   },
+   "category_id_159_description": {
+      "message": "Web stranice koje pružaju pristup (http://) Usenet grupama za novosti ili vode rasprave i imaju sadržaj kojeg generiraju korisnici, poput objave poruka u stvarnom vremenu za interesnu skupinu. Ova kategorija uključuje i arhive i datoteke učitane na skupinu za novosti."
+   },
+   "category_id_159_name": {
+      "message": "Forumi/oglasne ploče"
+   },
+   "category_id_160_description": {
+      "message": "Web stranice koje uključuju neotesan, vulgaran ili opscen jezik ili geste."
+   },
+   "category_id_160_name": {
+      "message": "Vulgarno"
+   },
+   "category_id_161_description": {
+      "message": "Web stranice koje promiču plagijate ili varanje, nudeći besplatno ili uz naknadu seminarske radove, pismene eseje ili odgovore za ispite."
+   },
+   "category_id_161_name": {
+      "message": "Podaci o varanju u školi"
+   },
+   "category_id_162_description": {
+      "message": "Web stranice koje opisuju ili prikazuju spolni čin, no namjera im nije na budu uzbudljive ili erotične. Primjeri seksualnih materijala uključuju spolno obrazovanje, seksualne nagovještaje, humor ili robu povezanu sa seksom."
+   },
+   "category_id_162_name": {
+      "message": "Seksualni materijali"
+   },
+   "category_id_163_description": {
+      "message": "Web stranice sa sadržajem koji se može smatrati neukusnim, odvratnim, šokantnim ili jezivim. Ova kategorija uključuje neukusni humor, funkcije tjelesnog izlučivanja, medicinske fotografije ili fotografije mjesta nesreće (koje sadrže krv ili rane), ekstremne oblike promjena na tijelu (rezanje, žigosanje ili genitalni piercing), te šokantne prikaze nehumanog postupanja sa životinjama."
+   },
+   "category_id_163_name": {
+      "message": "Uznemirujući sadržaj"
+   },
+   "category_id_164_description": {
+      "message": "Web stranice koje nude rezultate pretraživanja vezane za sliku, poput sličica."
+   },
+   "category_id_164_name": {
+      "message": "Vizualna tražilica"
+   },
+   "category_id_165_description": {
+      "message": "Web stranice s tehničkim ili poslovnim fokusom, koje nude objavu mrežnih poruka ili razgovore u stvarnom vremenu, poput tehničke podrške ili interaktivne poslovne komunikacije. Iako korisnici mogu objavljivati sve vrste sadržaja, ovi forumi predstavljaju manji rizik u smislu uvredljivog sadržaja. Stranice koje nude različite forume s temama, uključujući tehnički i poslovni sadržaj, su samo u kategorijama Foruma/Oglasnih ploča ili Razgovora. Forumi s uglavnom tehničkim ili poslovnim fokusom se nalaze samo u kategoriji Tehnički/poslovni forumi."
+   },
+   "category_id_165_name": {
+      "message": "Tehnički/poslovni forumi"
+   },
+   "category_id_166_description": {
+      "message": "Web stranice koje nude informacije o kockanju, bez načina za stvarno kockanje. Ova kategorija uključuje stranice povezane s kasinom, koje ne nude kockanje putem mreže, poveznice za kockanje, savjete, sportske odabire, rezultate lutrije, te klađenje na konje, automobile ili brodove."
+   },
+   "category_id_166_name": {
+      "message": "Kockarski sadržaji"
+   },
+   "category_id_167_description": {
+      "message": "Web stranice koje nude tekstualne poruke. Primjeri uključuju tekstualne poruke za mobilne telefone, PDA uređaje, faks uređaje, te interne poruke korisnika korisniku ili stranice stranici."
+   },
+   "category_id_167_name": {
+      "message": "Razmjena poruka"
+   },
+   "category_id_168_description": {
+      "message": "Web stranice koje nude izmišljene prikaze nasilja u kontekstu igara, stripova, crtića ili grafičkih romana. Ova kategorija uključuje slike i tekstualne opise tjelesnih napada ili borbe prsa o prsa, te teške ozljede i uništenja uzrokovana oružjem ili eksplozivima."
+   },
+   "category_id_168_name": {
+      "message": "Nasilje u igrama/crtanim filmovima"
+   },
+   "category_id_169_description": {
+      "message": "Poveznice na web stranice koje obično dolaze u obmanjujućim porukama e-pošte, kojima je cilj ukrasti podatke o računu korisnika. Ove stranice se lažno predstavljaju i izgledaju kao prave web stranice tvrtke, kako bi prevarile korisnika i pribavile informacije o njegovom računu radi prijevare ili krađe."
+   },
+   "category_id_169_name": {
+      "message": "Phishing"
+   },
+   "category_id_170_description": {
+      "message": "Web stranice koje omogućavaju korisnicima da učitavaju mape i datoteke na mrežni poslužitelj radi sigurnosnog kopiranja, dijeljenja, uređivanja ili vraćanja datoteka ili mapa iz bilo kojeg preglednika."
+   },
+   "category_id_170_name": {
+      "message": "Osobno mjesto za pohranu na mreži"
+   },
+   "category_id_171_description": {
+      "message": "Poveznice na web stranice koje dolaze u neželjenim spam porukama e-pošte. Spam URL sadržaj se kreće od marketinga proizvoda do mogućih uvredljivih ili prijetvornih stranica. Ova kategorija uključuje stranice stvorene za potrebe spama, poput blogova za spam ili spam komentara."
+   },
+   "category_id_171_name": {
+      "message": "Neželjeni URL-ovi"
+   },
+   "category_id_172_description": {
+      "message": "Web stranice koje nude pristup živim ili interaktivnim web aplikacijama, poput uredskih kompleta utemeljenih na pregledniku i softvera za grupe. Ova kategorija uključuje stranice s poslovnim, akademskim ili individualnim fokusom."
+   },
+   "category_id_172_name": {
+      "message": "Interaktivne web-aplikacije"
+   },
+   "category_id_174_description": {
+      "message": "Web stranice koje oglašavaju odjeću, kozmetiku, nakit i druge modne proizvode, dodatke ili usluge. Ova kategorija uključuje i recenzije proizvoda, usporedbe, te opće informacije potrošača, te usluge poput frizerskih salona, salona za tamnjenje, salona za tetovaže i studija za piercing."
+   },
+   "category_id_174_name": {
+      "message": "Moda/ljepota"
+   },
+   "category_id_175_description": {
+      "message": "Web stranice povezane s računalnim softverom ili hardverom, uključujući dobavljače, marketing i recenzije proizvoda, puštanje i rad i održavanje softvera i hardvera, te ažuriranja i dodatke za softver, poput skripti, dodataka ili pokretačkih programa. Hardver uključuje dijelove računala, dodatke i elektronsku opremu koja se koristi s računalima i mrežama. Ova kategorija uključuje marketing za softver i hardver, te časopise koji se bave recenzijama softverskih ili hardverskih proizvoda ili industrijskim trendovima."
+   },
+   "category_id_175_name": {
+      "message": "Softver/hardver"
+   },
+   "category_id_176_description": {
+      "message": "Web stranice za koje McAfee vjeruje kako su možda ‘piratske’ ili da nezakonito distribuiraju softver ili elektronske medije, poput glazbe ili filmova zaštićenih autorskim pravima ili šire ilegalne generatore ključeva za licence, te serijske brojeve."
+   },
+   "category_id_176_name": {
+      "message": "Potencijalni ilegalni softver"
+   },
+   "category_id_177_description": {
+      "message": "URL-ovi za poslužitelje koji drže slike, medijske datoteke ili JavaScript za jednu ili više stranica i kojima je namjera ubrzati povrat sadržaja za postojeće web poslužitelje, kao što je Apache. Poslužitelji sadržaja obično nemaju sadržaj objavljen niti dostupan surferima putem navigacije po stranici. Poslužitelji sadržaja koji drže slike ne dopuštaju korisnicima pregledavanje fotografija."
+   },
+   "category_id_177_name": {
+      "message": "Poslužitelj sadržaja"
+   },
+   "category_id_178_description": {
+      "message": "Web stranice koje nude usluge objave i održavanja internetskih stranica poput web dizajna, registracije domena, pružatelja usluge Interneta, te kompanija za širokopojasnu vezu i telekomunikacije koje nude web usluge."
+   },
+   "category_id_178_name": {
+      "message": "Internetske usluge"
+   },
+   "category_id_179_description": {
+      "message": "Web stranice koje korisnicima omogućavaju učitavanje, pretraživanje i dijeljenje medijskih datoteka i fotografija, poput mrežnih albuma s fotografijama. Ova kategorija uključuje općenite rizike dijeljenja medija, no ne cilja specifični sadržaj. Neki URL-ovi mogu uključivati i uvredljiv sadržaj."
+   },
+   "category_id_179_name": {
+      "message": "Dijeljenje medijskih sadržaja"
+   },
+   "category_id_180_description": {
+      "message": "Web stranice koje sadrže nepornografske slike nagog ljudskog tijela, poput onih u klasičnim skulpturama i slikama, te medicinskih slika."
+   },
+   "category_id_180_name": {
+      "message": "Nepornografska golotinja"
+   },
+   "category_id_181_description": {
+      "message": "Web koje promiču pojedinačne ili skupne proizvode ili usluge tvrtki na webu, koje ne prodaju svoje proizvode ili usluge putem mreže. Ova kategorija uključuje stranice koje su zapravo pregled tvrtke, opis usluga ili proizvoda koji se ne mogu kupiti izravno na tim stranicama. Primjeri uključuju stranice proizvođača automobila, usluge fotografiranja vjenčanja ili usluge grafičkog dizajna."
+   },
+   "category_id_181_name": {
+      "message": "Marketing/trgovanje"
+   },
+   "category_id_183_description": {
+      "message": "Web stranice koje su ranije nudile sadržaj, ali su njihove domene prodane ili napuštene, te više nisu registrirane. Parkirane domene nemaju vlastiti sadržaj, nego obično preusmjeravaju korisnike na generičku stranicu koja navodi da je naziv domene za prodaju, ili ih preusmjerava na generičku tražilicu i stranicu portala, od kojih neke daju valjane rezultate tražilice."
+   },
+   "category_id_183_name": {
+      "message": "Parkirana domena"
+   },
+   "category_id_184_description": {
+      "message": "Web stranice koje nude recenzije i opise ili promiču ili oglašavaju lijekove na recept, lijekove koji se mogu kupiti, kontracepciju ili dodatke prehrani."
+   },
+   "category_id_184_name": {
+      "message": "Farmacija"
+   },
+   "category_id_185_description": {
+      "message": "Web stranice koje nude informacije o restoranima, barovima, catering uslugama, dostavi hrane, uključujući naručivanje putem mreže. Ova kategorija uključuje stranice koje nude informacije o lokaciji, radnom vremenu, cijenama, jelovnicima i povezanim nutritivnim informacijama. Ova kategorija uključuje i vodiče i recenzije za restorane, te kafiće i coffee shopove."
+   },
+   "category_id_185_name": {
+      "message": "Restorani"
+   },
+   "category_id_186_description": {
+      "message": "Web stranice koje nude usluge trgovanja komercijalnim ili stambenim nekretninama, te informacije. Usluge i informacije uključuju prodaju i najam prostora za život ili maloprodaju, te vodiče za stanove, smještaj i imovinu, te informacije o procjeni i posredovanju. Ova kategorija uključuje stranice koje vam omogućavaju pregledavanje oglednih domova."
+   },
+   "category_id_186_name": {
+      "message": "Nekretnine"
+   },
+   "category_id_187_description": {
+      "message": "Web stranice za amaterske organizacije i ustanove koje uključuju sadržaj posvećen rekreativnim aktivnostima i hobijima. Ova kategorija uključuje informacije o javnim bazenima, zoološkim vrtovima, sajmovima, festivalima, zabavnim parkovima, vodičima za rekreaciju, pecanju, promatranju ptica ili skupljanju poštanskih maraka."
+   },
+   "category_id_187_name": {
+      "message": "Rekreacija/hobiji"
+   },
+   "category_id_188_description": {
+      "message": "Web stranice koje sadrže dinamički sadržaj, koji se često mijenja jer korisnici mogu objavljivati ili uređivati sadržaj u svakom trenutku. Ova kategorija uključuje rizike s dinamičkim sadržajem koji se može kretati od bezopasnog do uvredljivog. Brojni se blogovi i wiki stranice fokusiraju na određenu temu. Ova se kategorija često koristi s drugima, poput Kontroverznih mišljenja, Obrazovanja/preporuka, Sporta, Politike/mišljenja ili Golotinje, ovisno o fokusu ili temi stranice. Neki bi sadržaj mogao biti uvredljiv."
+   },
+   "category_id_188_name": {
+      "message": "Blogovi/Wiki"
+   },
+   "category_id_189_description": {
+      "message": "Web stranice koje ljudima omogućavaju slanje i primanje digitalnih razglednica i čestitki putem Interneta. Digitalne razglednice šalju pozdrave ili lijepe osjećaje, obično za posebne prigode poput rođendana i blagdana. Neke stranice s digitalnim razglednicama imaju direktorij sa specifičnim humorom za odrasle. Ove bi stranice također mogle biti sumnjive u smislu curenja osjetljivih ili vlasničkih podataka, upitnog sadržaja, zlonamjernog softvera ili štetnih datoteka kao priloga."
+   },
+   "category_id_189_name": {
+      "message": "Digitalne razglednice"
+   },
+   "category_id_190_description": {
+      "message": "Web stranice koje poriču ili nude drugačiju interpretaciju značajnih povijesnih činjenica, poput poricanja holokausta. Ova kategorija uključuje stranice koje bi mogle imati osnovanu akademsku vrijednost, no mnoge od njih uključuju neutemeljenu manipulaciju povijesti u političke svrhe. Neki URL-ovi u ovoj kategoriji bi mogli uključivati sadržaj koji se u nekim državama smatra protuzakonitim ili uvredljivim."
+   },
+   "category_id_190_name": {
+      "message": "Povijesni revizionizam"
+   },
+   "category_id_191_description": {
+      "message": "Web stranice koje nude računalne informacije s obrazovnim fokusom u područjima poput Informacijske tehnologije, računalnog programiranja i certificiranja. Primjeri uključuju grupe Linux korisnika, UNIX naredbe, priručnike s uputama za softver, odnosno rječnike tehničkih pojmova. Većina bi stranica u ovoj kategoriji mogle biti poddirektoriji većih domena."
+   },
+   "category_id_191_name": {
+      "message": "Tehnički podaci"
+   },
+   "category_id_192_description": {
+      "message": "Web stranice koje nude infrastrukturu za mrežno hodanje, traženje partnera, eskort usluge ili predstavljanje mogućih supružnika. Ova kategorija uključuje stranice koje nude osobne ili grupne profile, te omogućavaju svojim članovima interakciju putem komunikacije u stvarnom vremenu, objave poruka, javnih oglasnih ploča i dijeljenja medija. Stranice u ovoj kategoriji bi također mogle omogućiti kontakt s nepoželjnim stranama i članskim profilima koji sadrže upitne informacije."
+   },
+   "category_id_192_name": {
+      "message": "Izlasci/osobni oglasi"
+   },
+   "category_id_193_description": {
+      "message": "Web stranice za proizvođače i zastupnike za transportna vozila, poput automobila, kombija, kamiona, terenaca, motocikala i skutera. Ova kategorija uključuje i stranice koje nude marketing, recenzije i usporedbe proizvoda, informacije o cijenama, auto sajmovima i izložbama, te opće informacije o motornim vozilima."
+   },
+   "category_id_193_name": {
+      "message": "Motorna vozila"
+   },
+   "category_id_194_description": {
+      "message": "Web stranice koje nude društvene mreže isključivo za profesionalne ili poslovne potrebe. Ova kategorija uključuje stranice koje nude osobne ili grupne profile, te omogućavaju svojim članovima interakciju putem komunikacije u stvarnom vremenu, objave poruka, javnih oglasnih ploča i dijeljenja medija. Ova kategorija uključuje i alumni stranice koje imaju funkciju umrežavanja."
+   },
+   "category_id_194_name": {
+      "message": "Profesionalno umrežavanje"
+   },
+   "category_id_195_description": {
+      "message": "Web stranice koje omogućavaju društvene mreže za razne potrebe, poput prijateljstva, hodanja, profesije ili teme od interesa. Ove stranice nude osobne ili grupne profile, te omogućavaju interakciju među članovima putem komunikacije u stvarnom vremenu, objave poruka, javnih oglasnih ploča i dijeljenja medije. Stranice u ovoj kategoriji bi također mogle omogućiti kontakt s nepoželjnim stranama i članskim profilima koji sadrže upitne informacije."
+   },
+   "category_id_195_name": {
+      "message": "Društveno umrežavanje"
+   },
+   "category_id_196_description": {
+      "message": "Web stranice koje omogućavaju korisnicima unos fraza ili blokiranje prevođenja teksta s jednog jezika na drugi. Ova kategorija uključuje i stranice za identifikaciju jezika."
+   },
+   "category_id_196_name": {
+      "message": "Prevoditelji teksta"
+   },
+   "category_id_197_description": {
+      "message": "Web stranice koje nude sastanke uživo, video konferencije i interaktivne prezentacije, uglavnom u poslovne svrhe. Web sastanci općenito uključuju strujanje audio i video sadržaja, te omogućavaju prijenos podataka ili uredsko dijeljenje aplikacija, poput mrežnih prezentacija. URL-ovi u ovoj kategoriji mogu predstavljati rizike za propusnost, te sigurnosne rizike poput gubitka ili curenja vlasničkih podataka."
+   },
+   "category_id_197_name": {
+      "message": "Web-sastanci"
+   },
+   "category_id_198_description": {
+      "message": "Web stranice koje uključuju mišljenja koja će vjerojatno vrijeđati političke ili društvene osjećaje ili poticati kontroverzu. Većina ovog sadržaja spada u ekstremna javna mišljenja. Primjeri uključuju dogovore o samoubojstvu, poticanje anoreksije, ksenofobiju, etnocentrizam, fundamentalističke stavove, dezinformacije ili kritički pregled neke skupine ljudi."
+   },
+   "category_id_198_name": {
+      "message": "Kontroverzna mišljenja"
+   },
+   "category_id_199_description": {
+      "message": "IP adrese (i s njima povezane domene) koje pristupaju Internetu putem DSL modema ili kabelskih modema. Kako ovaj sadržaj nije primarno namijenjen za pristup Internetu putem protokola HTTP, pristup Internetu putem ovih IP adresa može ukazivati na sumnjivo ponašanje. Ovo bi ponašanje moglo biti povezano sa zlonamjernim softverom koji se nalazi na vašem kućnom računalu ili sa kod kuće izgrađenim prolazima kojima je svrha omogućiti anonimni pristup Internetu."
+   },
+   "category_id_199_name": {
+      "message": "Korisničke IP adrese"
+   },
+   "category_id_200_description": {
+      "message": "Iskorištavanje preglednika je komad koda koji iskorištava softverski nedostatak u web pregledniku, kako bi kod natjerao preglednik da učini nešto neočekivano, uključujući prekid rada, čitanje ili pisanje lokalnih datoteka, širenje virusa ili instalaciju softvera. Zlonamjerni kod može iskorištavati HTML, JavaScript, Images, ActiveX, Java i druge web tehnologije. Iskorištavanja, koja se ponekad nazivaju i drive-by preuzimanja, mogu sama sebe pozivati na nezaštićenim računalima bez znanja potrošača, dok kod može instalirati bilježenje dodira tipki (za krađu lozinki) i Trojanske programe (kako bi računalo postalo 'bot’). Ova kategorija uključuje URL-ove koji distribuiraju ili izvršavaju iskorištavanja preglednika."
+   },
+   "category_id_200_name": {
+      "message": "Zloupotrebe preglednika"
+   },
+   "category_id_201_description": {
+      "message": "Web stranice koje pokušavaju opljačkati ili prevariti potrošače. Neki primjeri njihovih aktivnosti uključuju prodaju krivotvorenih proizvoda, prodaju proizvoda koji su izvorno besplatni ili nepravilno korištenje brenda druge tvrtke. Ova kategorija uključuje web stranice koje iskorištavaju ljubaznost ili neznanje, poput lažnog prikupljanja novca za humanitarne potrebe ili vođenje lažnih ulagačkih shema. Ova kategorija uključuje i stranice na kojima su brojni potrošači prijavili prijevaru ili neprimanje usluge."
+   },
+   "category_id_201_name": {
+      "message": "Zaštita potrošača"
+   },
+   "category_id_202_description": {
+      "message": "Web stranice koje sadržavaju sadržaj o zlostavljanju djece i koje se održavaju bilo gdje u svijetu, kao i kriminalno opscene stranice ili stranice sa sadržajem koji potiče na rasnu mržnju koje se održavaju u Ujedinjenom Kraljevstvu."
+   },
+   "category_id_202_name": {
+      "message": "Protuzakonito u Velikoj Britaniji"
+   },
+   "category_id_203_description": {
+      "message": "Web stranice sa sadržajem o religijskim temama i informacijama u svezi s velikim religijama. Ova kategorija uključuje stranice koje pokrivaju religijski sadržaj poput rasprava, uvjerenja, ne-kontroverznih komentara, članaka i informacija za lokalne vjerske zajednice, poput početnih stranica crkve ili sinagoge. Religije u ovoj kategoriji su: baha'I, budizam, kineska tradicionalna, kršćanstvo, hinduizam, islam, jainizam, judaizam, Shinto, sikhizam, tenrikyo, zoroastrijanizam."
+   },
+   "category_id_203_name": {
+      "message": "Velike globalne religije"
+   },
+   "category_id_204_description": {
+      "message": "Web stranice koje omogućavaju korisniku da nenamjerno preuzme kod koji je štetan ili dosadan. Ova kategorija uključuje datoteke za preuzimanje poput čuvara zaslona, alatnih traka i programa za dijeljenje datoteke koji sadrže oglašivački ili špijunski softver, viruse i drugi zlonamjerni računalni kod. Ponekad se zlonamjerni softver dodaje bez znanja korisnika kad kliknu na “Da” ili “Slažem se” bez čitanja potpunih uvjeta korištenja. Učinci mogu uključivati usporavanje računala, krađu lozinki i gubitak ili oštećenje vrijednih osobnih datoteka."
+   },
+   "category_id_204_name": {
+      "message": "Zlonamjerna preuzimanja"
+   },
+   "category_id_205_description": {
+      "message": "Web stranice koje sadrže potencijalno neželjene programe (PUP). PUP-ovi se obično rade zbog neke koristi, no mijenjaju sigurnost računala ili privatnost korisnika računala. Korisnici računala koje brine sigurnost i privatnost će možda htjeti biti informirani o ovom softveru, a u nekim će slučajevima možda poželjeti ukloniti ovaj softver sa svojih računala."
+   },
+   "category_id_205_name": {
+      "message": "Potencijalno neželjeni programi"
+   },
+   "category_id_600_description": {
+      "message": "Web stranice sigurne za obitelj, osobito za djecu u dobi od oko deset godina i manje."
+   },
+   "category_id_600_name": {
+      "message": "Za djecu"
+   },
+   "category_id_601_description": {
+      "message": "Web stranice koje nude sadržaj o povijesnim činjenicama. Ova kategorija uključuje sadržaj prikladan za više obrazovanje, no kategorija Obrazovanje uključuje sadržaj za osnovnoškolsko obrazovanje. Primjerice, stranica s fotografijama iz Holokausta može biti uvredljiva, no ima akademsku vrijednost."
+   },
+   "category_id_601_name": {
+      "message": "Povijest"
+   },
+   "category_id_602_description": {
+      "message": "Oglasne ploče, sobe za razgovore, tražilice ili stranice za web poštu koje nadziru pojedinac ili skupina s ovlastima za blokiranje poruka ili sadržaja koje smatraju neprikladnima."
+   },
+   "category_id_602_name": {
+      "message": "Moderirano"
+   },
+   "category_id_603_description": {
+      "message": "Sadržaj koji uključuje samo tekst ili zvuk, bez slika. Ova se kategorija može koristiti kao iznimka, kako bi se dopustio pristup eksplicitnim tekstualnim ili snimljenim materijalima, kad želite da se slike blokiraju putem kategorija Pornografija, Nasilje ili Seksualni materijali. Knjižnice ili sveučilišta mogu koristiti ovu kategoriju kako bi spriječili prikaz uvredljivog grafičkog sadržaja u svojim javnim prostorima."
+   },
+   "category_id_603_name": {
+      "message": "Samo tekst/glas"
+   },
+   "crypto_allow_desc": {
+      "message": "Kada blokiramo kriptootimanje, možete odabrati ćelite li to dopustiti. Ne preporučujemo to, ali imate tu opciju ako želite podupirati stranice koje zarađuju novce putem kriptootimanja."
+   },
+   "crypto_allow_title": {
+      "message": "Želite dopustiti kriptootimanje?"
+   },
+   "crypto_footer_message1": {
+      "message": "McAfee i logotip McAfee zaštitni su znakovi ili registrirani zaštitni znakovi tvrtke McAfee LLC ili njezinih podružnica u Sjedinjenim Američkim Državama i drugim zemljama."
+   },
+   "crypto_footer_message2": {
+      "message": "Druga imena ili znakovi mogu biti vlasništvo drugih. Copyright ©2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "Spriječiti ćemo kriptootimače u krađi napajanja i resursa vašeg računala."
+   },
+   "crypto_header_title": {
+      "message": "Blokator kriptootimanja je uključen"
+   },
+   "crypto_own_desc": {
+      "message": "Ne morate posjedovati kriptovalute da biste bili žrtva kriptootimanja. Kritpohakeri pristupaju resurse vašeg računala, ne kriptovalute koje možda posjedujete."
+   },
+   "crypto_own_title": {
+      "message": "Ne morate posjedovati kriptovalute da biste bili žrtva kriptootimanja?"
+   },
+   "crypto_protect_desc": {
+      "message": "Neka vaše proširenje %PRODUCTNAME% bude uključeno tako da vas bloker kriptootimanja može zaštititi od kriptootimanja. Javit ćemo vam kad blokiramo pokušaj kriptootimanja."
+   },
+   "crypto_protect_title": {
+      "message": "Kako se možete zaštitit?"
+   },
+   "crypto_signs_desc1": {
+      "message": "Sporo pregledavanje stranica"
+   },
+   "crypto_signs_desc2": {
+      "message": "Prebrzo trošenje baterije"
+   },
+   "crypto_signs_desc3": {
+      "message": "Glasan ventilator"
+   },
+   "crypto_signs_desc4": {
+      "message": "Povećano potrošnje energije"
+   },
+   "crypto_signs_title": {
+      "message": "Koji su znakovi da ste bili žrtva kriptootimanja?"
+   },
+   "crypto_title": {
+      "message": "McAfee blokator kriptootimanja"
+   },
+   "crypto_whatis_point1": {
+      "message": "Kriptootimači (hakeri) pristupaju vašem računalu preko web stranica, dok ih pregledavate."
+   },
+   "crypto_whatis_point2": {
+      "message": "Otimaju napajanje vašeg računala (njegov CPU i memoriju) kako bi obavljači složene zadatke."
+   },
+   "crypto_whatis_point3": {
+      "message": "Zarađuju kriptovalute, novac na internetu."
+   },
+   "crypto_whatis_title": {
+      "message": "Što je kriptootimanje"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "Dopustite kriptootimanje na ovoj stranici"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "Naučite više."
+   },
+   "cryptojacking_banner_message": {
+      "message": "Blokirali smo kriptootimanje na ovoj stranici. Resursi vašeg računala su sigurni i možete nastaviti s pretraživanjem. $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "Testirali smo ovu stranicu i blokirali smo sadržaj koji dolazi s potencijalno opasnih ili sumnjivih mjesta. Dopustite ovaj sadržaj samo ako ste sigurni da dolazi od sigurnih stranica."
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "Pogledajte blokirani sadržaj"
+   },
+   "overlay_accept_ss": {
+      "message": "Sad pristanite na promjenu pretraživača na McAfee® sigurno pretraživanje"
+   },
+   "overlay_add_ss": {
+      "message": "Dodajte McAfee® sigurno pretraživanje svom pregledniku"
+   },
+   "overlay_ss_description": {
+      "message": "Označavamo riskantne stranice u rezultatima vaše pretrage, pa ćete znati koje su sigurne za posjet, a koje nisu."
+   },
+   "overlay_step_1": {
+      "message": "KORAK 1"
+   },
+   "overlay_step_2": {
+      "message": "KORAK 2"
+   },
+   "phishingdesc": {
+      "message": "Hakeri pokušavaju dobiti vaše podatke tako što vas privlače sa  \"phishing\" e-mailovima koji izgledaju službeno i web lokacijama. Mi ćemo prekinuti vezu kako se ne bi zakačili."
+   },
+   "phishingtitle": {
+      "message": "Čuvajte svoje osobne podatke"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "McAfee® WebAdvisor"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "Želite li dodati Sigurno pretraživanje i ostati ispred?"
+   },
+   "search_toast_body_text_test": {
+      "message": "Želite li dodati Sigurno pretraživanje i znati koje su stranice sigurne za posjetiti?"
+   },
+   "search_toast_done": {
+      "message": "Gotovo"
+   },
+   "search_toast_heading_compliant": {
+      "message": "Nemate Sigurno pretraživanje - budite oprezni"
+   },
+   "search_toast_heading_test": {
+      "message": "Primite sigurnosne savjete u svoji rezultatima pretrage"
+   },
+   "search_toast_no_thanks": {
+      "message": "Ne, hvala"
+   },
+   "search_toast_ok": {
+      "message": "U redu"
+   },
+   "search_toast_option_compliant": {
+      "message": "Da, dodaj Sigurno pretraživanje mom pregledniku i promijeni moju zadanu pretragu na $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "Da, dodaj Sigurno pretraživanje i promijeni moju zadanu pretragu na $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "Sigurno pretraživanje držat će opasne stranice podalje od vaših rezultata pretraživanja."
+   },
+   "search_toast_sub_heading_test": {
+      "message": "Sigurno pretraživanje označava riskantne stranice u vašim rezultatima pretraživanja."
+   },
+   "search_toast_yes": {
+      "message": "Da"
+   },
+   "securesearchdesc": {
+      "message": "Pregledavajte bezbrižno rezultate s rezultatima pretraživanja u boji - reći ćemo vam koje su web lokacije sigurne, a koje sumnjive."
+   },
+   "securesearchtitle": {
+      "message": "Uklonite se rizičnih rezultata pretraživanja"
+   },
+   "settings_about_adblock": {
+      "message": "Blokirajte oglase i skočne prozore koji usporavaju vaš preglednik"
+   },
+   "settings_about_adblock_tracking": {
+      "message": "Blokirajte kolačiće koji vas prate i prikupljaju vaše podatke"
+   },
+   "settings_about_block_download": {
+      "message": "Blokirajte rizična preuzimanja"
+   },
+   "settings_about_cryptojackers": {
+      "message": "Blokiranje $settings_about_cryptojackers_link$ od krađe resursa vašeg računala",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "kriptootimači"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "Pobrinite se da su vatrozid i zaštita od virusa uključeni"
+   },
+   "settings_about_flag_website": {
+      "message": "Označite opasne web stranice"
+   },
+   "settings_about_help_link_message": {
+      "message": "Potražite pomoć odmah"
+   },
+   "settings_about_help_message": {
+      "message": "Svi ponekad trebamo pomoć."
+   },
+   "settings_about_help_title": {
+      "message": "Potražite pomoć i tehničku podršku"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "Pročitajte Obavijest o privatnosti"
+   },
+   "settings_about_privacy_message": {
+      "message": "McAfee ozbiljno shvaća vašu privatnost."
+   },
+   "settings_about_privacy_title": {
+      "message": "Obavijest o privatnosti"
+   },
+   "settings_about_product_affid": {
+      "message": "ID partnera: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "Binarna verzija: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "Verzija dodatka: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "Verzija proizvoda"
+   },
+   "settings_about_share_title": {
+      "message": "Podijelite %PRODUCTNAME% s prijateljima"
+   },
+   "settings_about_subtitle": {
+      "message": "%PRODUCTNAME% vam pomaže donositi bolje odluke o tome što radite na mreži."
+   },
+   "settings_about_title": {
+      "message": "O PROGRAMU"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "Obavijesti me ako je rezultat pretraživanja siguran u bilo kojoj tražilici."
+   },
+   "settings_preference_annotation_none": {
+      "message": "Nemoj me obavijestiti o rezultatima pretraživanja."
+   },
+   "settings_preference_annotation_ss": {
+      "message": "Obavijesti me ako je rezultat pretraživanja siguran samo u Sigurnom pretraživanju."
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "Označili smo bojom vaše rezultate pretraživanja kako bismo vam pokazali koje su stranice sigurne."
+   },
+   "settings_preference_annotation_title": {
+      "message": "Sigurno pretraživanje"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "Zaustavlja napadne oglase i skočne prozore u usporavanju vašeg preglednika"
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "Drži podalje kolačiće koji vas prate i prikupljaju vaše podatke"
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "Blokator praćenja i blokator za oglase"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "Dodaj"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "Odobri"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "Nemate dodatnu zaštitu jer McAfee® Secure Search proširenje, koje dio nje, nije omogućeno. Omogućite ga sada i odaberite $settings_preference_ap_alert_allow$ kada vas pita za dozvolu.",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "Omogući"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "Nemate dodatnu zaštitu jer McAfee® Secure Search proširenje, koje dio nje, nije instalirano. Dodajte sada iz Chrome Web Store."
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "Koristi našu inteligentnu uslugu obrane od prijetnji utemeljenu na oblaku kako bi identificirao prijetnje"
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "Bojom označeni rezultati pretraživanja kako bismo vam pokazali koje je stranice sigurno posjetiti"
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "U vašim rezultatima pretraživanja označava one koje nije sigurno posjetiti"
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "McAfee sigurno pretraživanje"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "Zaštitite svoju privatnost i podatke."
+   },
+   "settings_preference_ap_title": {
+      "message": "Dodatna zaštita"
+   },
+   "settings_preference_reset_button": {
+      "message": "Ponovno postavi"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "Jeste li zanemarili obavijest iz %PRODUCTNAME%, a sad zbog toga žalite? Poništite obavijesti kako biste ponovno počeli primati sve vrste poruka za %PRODUCTNAME%."
+   },
+   "settings_preference_reset_title": {
+      "message": "Ponovno postavljanje postavki"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "Linkedin"
+   },
+   "settings_preference_sma_message": {
+      "message": "Ovo su stranice koje ćemo promatrati."
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "Označit ćemo bojom ove poveznice na novosti s društvenih mreža kako bismo vam pokazali koje su sigurne."
+   },
+   "settings_preference_sma_title": {
+      "message": "Zaštita društvenih medija"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "Youtube"
+   },
+   "settings_preference_title": {
+      "message": "DODATNE USLUGE"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "blokirani napadni oglasi"
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "blokirani pokušaji kriptootimanja"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "blokirana nesigurna preuzimanja"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "pregledana preuzimanja"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "pregledane poveznice"
+   },
+   "settings_statistics_message": {
+      "message": "Dosad smo učinili sljedeće:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "blokirane opasne stranice"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "pregledane stranice"
+   },
+   "settings_statistics_subtitle": {
+      "message": "Mi smo to kako biste bili sigurni na mreži."
+   },
+   "settings_statistics_title": {
+      "message": "STATISTIKE"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "alat za praćenje blokiran"
+   },
+   "settings_subtitle": {
+      "message": "Prilagodite svoju zaštitu na webu."
+   },
+   "settings_tab_about": {
+      "message": "O aplikaciji"
+   },
+   "settings_tab_preference": {
+      "message": "Preferencije"
+   },
+   "settings_tab_statistics": {
+      "message": "Statistike"
+   },
+   "settings_tab_whitelist": {
+      "message": "Popis dopuštenih"
+   },
+   "settings_title": {
+      "message": "Zaštita na webu"
+   },
+   "settings_whitelist_input": {
+      "message": "Unesite web-adresu..."
+   },
+   "settings_whitelist_title": {
+      "message": "STRANICE KOJE SMATRATE POUZDANIMA"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "Prilagodite vašu $sidebar_action_panel_web_protection_preferences$.",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "Preferencije zaštite na webu"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "Evo kako vas sad štitimo."
+   },
+   "sidebar_adblock_toggle": {
+      "message": "Prikaži oglase na ovoj stranici samo za ovaj posjet"
+   },
+   "sidebar_ads_blocked": {
+      "message": "blokirani napadni oglasi na ovoj stranici"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "Daj pet!"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "Ne znamo što je bolje - da vam pomognemo da vas zaštitimo ili da vam $sidebar_badge_collection_block_page_description_italic$ pomogne da vas zaštiti...",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "vi ste"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "Nazovimo to dobitnom kombinacijom."
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "Ova vas stranica ne može namamiti"
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "Te prijetnje nemaju šanse"
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "Blokirano je -bolje biti siguran nego požaliti!"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "Hvala vam što ste to počistili!"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "Hvala što ste nam dopustili da blokiramo taj sadržaj. Sad se vratimo na stvari koje su vam važne."
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "Držimo ovu stranicu urednom!"
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "Ako se svejedno odlučite za posjet, dodat ćemo ovu stranicu vašem popisu stranica od povjerenja."
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "Odvedi me svejedno tamo"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "Ostavi blokirano"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "Čini se kako je ovo stranica za 'phishing'. To znači kako vam može slati poruke e-pošte pretvarajući se da je organizacija od povjerenja, kako bi vas prevarila da date svoje osobne podatke, poput lozinki i informacija s kreditne kartice."
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "Morat će 'pecati' negdje drugdje kako bi ukrala osobne podatke, jer vi niste zagrizli mamac."
+   },
+   "sidebar_block_page_description_red": {
+      "message": "Želimo da budete sigurni, pa smo vas prekinuli iz dobrog razloga."
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "Izgleda previše riskantno, pa tamo ne bismo poslali ni najgoreg neprijatelja (kad bismo ga imali)."
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "Nismo 100% sigurni, ali smo je blokirali jer bi mogla donijeti ove vrste prijetnji:"
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "Poput vožnje bez pojasa, zašto riskirati?"
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "Doznajte više o prijetnjama s ove stranice:"
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "Doznajte više o prijetnjama s ove stranice:"
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "Ova je stranica puna ovih prijetnji:"
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "Ove vrste prijetnji samo čekaju:"
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "Ova je stranica puna ovih prijetnji:"
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "Ove vrste prijetnji samo čekaju:"
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "Blokirali smo ovu stranicu kako ne bi mogla ukrasti vaše osobne informacije"
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "Ova je stranica za 'phishing' blokirana"
+   },
+   "sidebar_block_page_title_red": {
+      "message": "Blokirali smo ovu opasnu stranicu"
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "Ova je opasna stranica blokirana"
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "Ova bi stranica mogla biti zamka"
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "Ova je riskantna stranica blokirana"
+   },
+   "sidebar_crypto_blocked": {
+      "message": "blokirani pokušaji kriptootimanja"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "blokirane opasne stranice"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "Hval što ste nam dopustili da tu datoteku bacimo prije nego vam našteti. Mi smo stvarno dobar sigurnosni tim!"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "Daj pet!"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "Izbrisali smo lošu datoteku"
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "Možda ćete imati više sreće s ručnim brisanjem. Idite na mjesto na koje je spremljena datoteka, pa je pokušajte tamo izbrisati."
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "Naziv:"
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "Shvaćam"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "Lokacija:"
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "Izvor preuzimanja:"
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "Žao nam je, ne radi"
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "Izbriši"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "Izvor preuzimanja:"
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "Naziv:"
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "Čini se da uključuje viruse, softver za špijuniranje ili druge potencijalno neželjene programe."
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "Želim je svejedno zadržati"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "Ako je izbrišemo sad, prije nego je otvorite, možemo eliminirati prijetnju."
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "Datoteka koju ste preuzeli je opasna"
+   },
+   "sidebar_everything_looks_good": {
+      "message": "Sve izgleda dobro!"
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "Vaša zaštita na webu je uključena i pazi na vas. Želite pregledati svoje postavke ili pogledati statistike?"
+   },
+   "sidebar_get_help": {
+      "message": "Potražite pomoć"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "Idite na preferencije za zaštitu na webu"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "Svejedno ga želim vidjeti"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "Ostavi blokirano"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "Izgleda sumnjivo i može vam naštetiti. Ako ste sigurni da je ovaj sadržaj u redu i želite ga vidjeti, možete to dopustiti."
+   },
+   "sidebar_iframe_block_title": {
+      "message": "Blokirali smo ovaj sadržaj kako biste bili sigurni"
+   },
+   "sidebar_pages_scanned": {
+      "message": "pregledane stranice"
+   },
+   "sidebar_privacy": {
+      "message": "Obavijest o privatnosti"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "Shvaćam"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "Softver s ove web stranice pruža drugim ljudima pristup vašem računalu - prevaranti ga mogu koristiti za tajno pristupanje vašim osobnim podacima."
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "Ako se od vas traži preuzimanje softvera ili davanje vaših osobnih podataka, budite sigurni da je netko kome vjerujete."
+   },
+   "sidebar_rat_detection_title": {
+      "message": "Ova web stranica omogućuje drugim ljudima kontrolu vašeg računala"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "Nemojte me više upozoravati na ovoj stranici"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "Pregledali smo je i nismo otkrili nikakve prijetnje."
+   },
+   "sidebar_site_report_description_red": {
+      "message": "Redovito pregledavamo stranice glede sumnjive i opasne aktivnosti. Ova nije sigurna."
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "Kopat ćemo dublje i javiti vam izgleda li ova stranica sigurno ili riskantno sljedeći put kad je pregledamo."
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "Pregledali smo ovu stranicu i otkrili kako nije sigurna koliko bi trebala biti. Posjetite s oprezom."
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "Čini se kako je ovo vrsta web stranice:"
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "Prijetnje s web stranice:"
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "Moguća vrsta web stranice ili prijetnje:"
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "Prijetnje s web stranice:"
+   },
+   "sidebar_site_report_title_green": {
+      "message": "Ova stranica izgleda sigurno"
+   },
+   "sidebar_site_report_title_red": {
+      "message": "Ova je stranica opasna"
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "Sigurnosni status ove stranice je nepoznat"
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "Ova stranica izgleda riskantno"
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "Shvaćam"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "Uključili ste Sigurno pretraživanje, pa vam sad možemo pokazati koje stranice izgledaju sigurno ili opasno prije nego ih posjetite."
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "U rezultatima svoje pretrage ćete vidjeti ikone u boji uz svaku web stranicu. Slobodno posjetite zelene, a držite se podalje od riskantnih žutih i opasnih crvenih."
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "Sad ćete znati koje stranice treba izbjegavati"
+   },
+   "sidebar_subtitle": {
+      "message": "Dosad smo učinili sljedeće:"
+   },
+   "sidebar_terms": {
+      "message": "Odredbe i uvjeti"
+   },
+   "sidebar_title": {
+      "message": "Ovdje smo da bismo vam pomogli u zaštiti na mreži."
+   },
+   "sidebar_tracker_blocked": {
+      "message": "blokirani alati za praćenje na ovoj stranici"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "blokirane nesigurne stavke"
+   },
+   "sidebar_version": {
+      "message": "Verzija"
+   },
+   "sidebar_view_site_report": {
+      "message": "Prikaz izvješća o mjestu"
+   },
+   "sidebar_view_stats": {
+      "message": "Pogledajte na koje vas sve načine štitimo"
+   },
+   "site_report_category_subtitle": {
+      "message": "Kategorija web stranice:"
+   },
+   "site_report_category_title": {
+      "message": "O ovoj stranici"
+   },
+   "site_report_main_message_danger": {
+      "message": "Redovito provjeravamo stranice glede sumnjive i zlonamjerne aktivnosti — a ova jednostavno nije sigurna. Više pojedinosti ćete pronaći u nastavku."
+   },
+   "site_report_main_message_safe": {
+      "message": "Pročešljali smo ovu stranicu i sve se čini u redu. Uživajte."
+   },
+   "site_report_main_message_unknown": {
+      "message": "Trenutno nemamo s vama što podijeliti. Ažurirat ćemo razinu prijetnje sljedeći put kad pregledamo ovu stranicu."
+   },
+   "site_report_main_message_warning": {
+      "message": "Pregledali smo ovu stranicu i otkrili kako nije sigurna koliko bi trebala biti. Kliknite s oprezom."
+   },
+   "site_report_main_title": {
+      "message": "Izvješće o stranici"
+   },
+   "site_report_main_url_danger": {
+      "message": "Evo zašto je $url$ opasan",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "Čini se kako je $url$ siguran",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "Prije odluke moramo kopati dublje"
+   },
+   "site_report_main_url_warning": {
+      "message": "Evo zašto $url$ može biti rizičan",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "Vrlo rizično"
+   },
+   "site_report_status_rating_safe": {
+      "message": "Sigurno"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "Nepoznato"
+   },
+   "site_report_status_rating_warning": {
+      "message": "Umjereno rizično"
+   },
+   "site_report_status_text": {
+      "message": "Status web mjesta:"
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% - Ocjene sigurnosti web stranica"
+   },
+   "sma_personalize_button": {
+      "message": "Personaliziraj moju zaštitu"
+   },
+   "sma_subtitle": {
+      "message": "Naše nove veze u boji zaštite socijalnih medija na ovim web lokacijama društvenih medija prikazuju vam koje su sigurne - vaš digitalni život je upravo postao sigurniji!"
+   },
+   "sma_title": {
+      "message": "Pomičite se kroz vaše novosti s povjerenjem"
+   },
+   "smadesc": {
+      "message": "Pregledajte feed sa povjerenim vezama označenim bojama koje vam govore koje je sigurno kliknuti."
+   },
+   "smatitle": {
+      "message": "Saznajte koje su veze na društvenim medijima sigurne - a koje rizične"
+   },
+   "ss_first_annotation_desc": {
+      "message": "Pregledavajte bezbrižno rezultate s rezultatima pretraživanja u boji - reći ćemo vam koje su web lokacije sigurne, a koje sumnjive."
+   },
+   "ss_first_annotation_title": {
+      "message": "Udaljite se od rizičnih rezultata pretraživanja"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "Uključite Secure Search"
+   },
+   "summarydesc": {
+      "message": "Pokazat ćemo vam najnovije informacije o svim koracima koje smo poduzeli da bismo vam osigurali sigurnost dok pregledavate, pretražujete i kupujete na mreži."
+   },
+   "summarytitle": {
+      "message": "Vaša sigurnosna nadzorna ploča u stvarnom vremenu"
+   },
+   "typodesc": {
+      "message": "Hakeri stvaraju web mjesta koristeći adrese koje izgledaju gotovo identično stvarnoj - ovo je \"kucanje na tipkanju\". Usmjerit ćemo vas na sigurno ako vas pogreška u URL-u odvede u krivom smjeru. "
+   },
+   "typosquatting_action_accept": {
+      "message": "Prihvati rizik i nastavi"
+   },
+   "typosquatting_action_back": {
+      "message": "Natrag"
+   },
+   "typosquatting_footer_description": {
+      "message": "Kada netočno unesete adresu web-mjesta, možete završiti na web-mjestima koja niste namjeravali posjetiti. Ova vas web-mjesta mogu bombardirati scareware softverom, zlonamjernim softverom, zahtijevati vaše osobne podatke, ukrasti vam lozinke i više. Mi smo tu kako bismo se pobrinuli da izbjegnete takve stranice."
+   },
+   "typosquatting_footer_link": {
+      "message": "Pročitajte više o typosquattingu (zloupotreba namjernom pogreškom u URL nazivu)"
+   },
+   "typosquatting_footer_title": {
+      "message": "Kako sam došao ovdje?"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "Nabavite McAfee® Total Protection"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "Odvedi me tamo"
+   },
+   "typosquatting_message_button_search": {
+      "message": "Pretraži"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "Neka vas %PRODUCTNAME% odvede na pravu stranicu."
+   },
+   "typosquatting_message_description_search": {
+      "message": "Izgleda da ste unijeli krivu adresu. Neka vas %PRODUCTNAME% odvede na pravu stranicu."
+   },
+   "typosquatting_message_title": {
+      "message": "Jeste li mislili"
+   },
+   "typosquatting_notice_body": {
+      "message": "Činimo sve kako biste bili sigurni na mreži - proširite zaštitu na sve svoje uređaje pomoću McAfee® Total Protection."
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "Skenirali smo $pagesScanned$ stranica za vas do sada.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "Skenirali smo $pagesScanned$ stranica za vas do sada.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME% - Typosquatting"
+   },
+   "typotitle": {
+      "message": "Odmaknite se od opasnih mjesta koja se pretvaraju da su stvarna"
+   }
+}

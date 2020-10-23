@@ -1,0 +1,1671 @@
+{
+   "MTP_UPSELL_FAMILY_CATEGORY": {
+      "message": "Administre el acceso en línea de su familia"
+   },
+   "MTP_UPSELL_FINANCIAL_CATEGORY": {
+      "message": "Proteja su información financiera"
+   },
+   "annotation_balloon_color_green": {
+      "message": "Este vínculo es seguro"
+   },
+   "annotation_balloon_color_hackersafe": {
+      "message": "Evaluado diariamente"
+   },
+   "annotation_balloon_color_red": {
+      "message": "Este vínculo es peligroso"
+   },
+   "annotation_balloon_color_unknown": {
+      "message": "Este vínculo no está clasificado"
+   },
+   "annotation_balloon_color_yellow": {
+      "message": "Este vínculo es sospechoso"
+   },
+   "annotation_balloon_view_site_report": {
+      "message": "Ver el reporte de sitio web"
+   },
+   "balloon_adblock_notification_ad_plural": {
+      "message": "$ads_counter$ anuncios bloqueados",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_ad_singular": {
+      "message": "$ads_counter$ anuncio bloqueado",
+      "placeholders": {
+         "ads_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_plural": {
+      "message": "$tracker_counter$ rastreadores bloqueados",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_adblock_notification_tracker_singular": {
+      "message": "$tracker_counter$ rastreador bloqueado",
+      "placeholders": {
+         "tracker_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_plural": {
+      "message": "Analizando $download_scanning_counter$ descargas",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_download_scanning_notification_singular": {
+      "message": "Analizando $download_scanning_counter$ descarga",
+      "placeholders": {
+         "download_scanning_counter": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_cooking": {
+      "message": "Descubra más recetas relacionadas a: $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_news": {
+      "message": "Descubra más artículos sobre: $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_search": {
+      "message": "Descubra más resultados de: $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_shopping": {
+      "message": "Compare los distintos precios de: $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_streaming": {
+      "message": "Descubra más sobre: $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "balloon_find_similar_pages_notification_travel": {
+      "message": "Descubra más: $search_text$",
+      "placeholders": {
+         "search_text": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_accept_risk": {
+      "message": "Aceptar el riesgo"
+   },
+   "block_page_get_mtp_btn": {
+      "message": "Adquiera McAfee® Total Protection"
+   },
+   "block_page_go_back": {
+      "message": "Atrás"
+   },
+   "block_page_message": {
+      "message": "¡Vaya! ¿Realmente quiere ingresar allí?"
+   },
+   "block_page_notice_body": {
+      "message": "Estamos manteniendo su seguridad en su navegador: extienda la protección a todos sus dispositivos con McAfee® Total Protection. Obtenga una VPN, protección de identidad, el Bloqueador de archivos, y mucho más."
+   },
+   "block_page_notice_title_multi_pages": {
+      "message": "Hemos analizado $pagesScanned$ páginas para usted hasta ahora.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_notice_title_single_page": {
+      "message": "Hemos analizado $pagesScanned$ página para usted hasta ahora.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "block_page_popover_message": {
+      "message": "Cuando visitamos este sitio, notamos que presenta uno o más comportamientos riesgosos."
+   },
+   "block_page_popover_title": {
+      "message": "¿Por qué está viendo esto?"
+   },
+   "block_page_risky_url": {
+      "message": "puede ser riesgoso ingresar."
+   },
+   "block_page_search_input": {
+      "message": "Buscar con %PRODUCTNAME%"
+   },
+   "block_page_state_danger": {
+      "message": "Muy riesgoso"
+   },
+   "block_page_state_warning": {
+      "message": "Ligeramente riesgoso"
+   },
+   "block_page_status_text": {
+      "message": "Estado de sitio web:"
+   },
+   "block_page_title": {
+      "message": "%PRODUCTNAME% - Calificaciones de seguridad de sitios web"
+   },
+   "block_page_view_site_report": {
+      "message": "Ver el reporte de sitio web"
+   },
+   "category_id_100_description": {
+      "message": "Páginas web que contienen galerías de arte virtuales, sitios de artistas (entre ellos de escultura y fotografía), museos, costumbres étnicas y costumbres por país."
+   },
+   "category_id_100_name": {
+      "message": "Arte/Cultura/Patrimonio"
+   },
+   "category_id_101_description": {
+      "message": "Páginas web que principalmente venden, promueven o defienden el consumo de alcohol, como en el caso de cerveza, vino y licor. Esta categoría también incluye recetas para cocteles e instrucciones para elaborar cerveza doméstica."
+   },
+   "category_id_101_name": {
+      "message": "Alcohol"
+   },
+   "category_id_102_description": {
+      "message": "Páginas web que deliberadamente permiten a los usuarios navegar por la red ocultando su dirección de IP u otra información de identificación personal, con el fin de omitir políticas de filtrado locales y acceder a cualquier página web. Las páginas web que anonimizan también bloquean las tecnologías de rastreo, tales como las cookies o el historial de búsqueda. Algunos métodos también impiden enviar a la página web la versión de OS y el historial de páginas web. Esta categoría incluye páginas que proporcionan direcciones de IP proxy o que explican cómo omitir el filtrado."
+   },
+   "category_id_102_name": {
+      "message": "Anonimizadores"
+   },
+   "category_id_103_name": {
+      "message": "Temas adultos"
+   },
+   "category_id_104_description": {
+      "message": "Páginas web que causan la navegación anónima en la red sin el intento explícito de proveer tal servicio. Esta categoría incluye traductores de URL, almacenamiento en caché de páginas web y otros servicios que pudieran funcionar como anonimizadores, aunque sin el objetivo explícito de omitir el software de filtrado."
+   },
+   "category_id_104_name": {
+      "message": "Utilidades de anonimización"
+   },
+   "category_id_105_description": {
+      "message": "Páginas web que proveen información comercial, como perfiles corporativos o planeación y estrategias comerciales. Esta categoría también incluye información, servicios o productos que ayuden a otros negocios a planear, administrar y comercializar sus empresas. Esta categoría incluye alianzas de comercialización en múltiples niveles cuando la atención está en administrar el negocio. Esta categoría no incluye páginas personales ni páginas de hospedaje de sitios web."
+   },
+   "category_id_105_name": {
+      "message": "Empresas"
+   },
+   "category_id_106_description": {
+      "message": "Páginas web que proveen servicios de mensajería social en tiempo real en la web, en salas de chat públicas y privadas. Esta categoría incluye IRC. Esta categoría no incluye mensajería instantánea. Los riesgos incluyen Contenido ofensivo, efectos perjudiciales en la productividad y fuga de información confidencial."
+   },
+   "category_id_106_name": {
+      "message": "Chat"
+   },
+   "category_id_108_description": {
+      "message": "Páginas web que proveen información de referencia, como proveedores de servicios públicos, informacón regional, transporte, horarios, mapas o reportes meteorológicos."
+   },
+   "category_id_108_name": {
+      "message": "Información pública"
+   },
+   "category_id_109_description": {
+      "message": "Páginas web que McAfee crea que proveen instrucciones para cometer actividades ilegales o delictivas. Las instrucciones incluyen cometer asesinato o suicidio, sabotaje, fabricación de bombas, apertura de candados, robo de servicios, evasión de la implementación de la ley o manipulación de pruebas de detección de drogas. Esta categoría también puede incluir información sobre cómo distribuir contenido ilegal, perpetrar fraudes o estafas al consumidor."
+   },
+   "category_id_109_name": {
+      "message": "Actividades delictivas potenciales"
+   },
+   "category_id_110_description": {
+      "message": "Sitios web que proveen información sobre la compra, fabricación y uso de drogas ilegales o recreativas. Esta categoría incluye mostrar, vender o explicar el uso de parafernalia para drogas, así como consejos sobre drogas que se pueden adquirir de manera legal, como la inhalación de pegamento, el uso indebido de medicamentos de prescripción o el abuso de otras sustancais legales."
+   },
+   "category_id_110_name": {
+      "message": "Drogas"
+   },
+   "category_id_111_description": {
+      "message": "Páginas web dedicadas a contenido académico, como asignaturas académicas (matemáticas, historia), páginas web de escuelas o universidades y páginas de administración educativa (juntas directivas escolares, programa académico de los profesores)."
+   },
+   "category_id_111_name": {
+      "message": "Educación/Referencias"
+   },
+   "category_id_112_description": {
+      "message": "Páginas web que proporcionan información sobre cine, teatro, música, televisión, entretenimiento e información, noticias y cotilleo de la industria del entretenimiento y sitios sobre celebridades, tales como actores y músicos. Esta categoría también incluye sitios cuyo contenido se destina a proporcionar entretenimiento en la web, tales como horóscopos o clubes de fans."
+   },
+   "category_id_112_name": {
+      "message": "Entretenimiento"
+   },
+   "category_id_113_description": {
+      "message": "Esta categoría se usa con las categorías de Contenido grotesco, Discriminación, Pornografía, Violencia o Juegos/dibujos animados violentos para identificar URL que se encuentran en los extremos de estas categorías. Un ejemplo es la pornografía ilegal, que se encuentra en las categorías de Pornografía, Actividades delictivas potenciales y Extremo."
+   },
+   "category_id_113_name": {
+      "message": "Extremo"
+   },
+   "category_id_114_description": {
+      "message": "Páginas web que proveen información financiera o acceso a cuentas financieras en línea. Esta categoría incluye páginas web que proveen información financiera que incluye noticias o servicios relacionados con la administración de dinero, aunque no provean acceso a información confidencial sobre cuentas financieras, como estadísticas financieras; o consultoría en áreas como impuestos, hipotecas, seguros, acreditación o inversiones. El acceso a cuentas financieras en línea incluye banca personal o empresarial, administración de dinero, consultoría fiscal, fondos de inversión, tarjetas de crédito, cooperativas de crédito, seguro otras publicaciones y servicios financieros. Esta categoría incluye información bursátil (pero no comercio bursátil), finanzas domésticas e información financiera pública."
+   },
+   "category_id_114_name": {
+      "message": "Finanzas/Bancos"
+   },
+   "category_id_115_description": {
+      "message": "Páginas web que permiten a los usuarios apostar en línea o proporcionar software para juegos de apuestas que permita apostar en línea, tales como los juegos de casino, sorteos, apuestas deportivas y loterías. Esta categoría incluye loterías si puede comprar los boletos o jugar en línea."
+   },
+   "category_id_115_name": {
+      "message": "Apuestas"
+   },
+   "category_id_116_description": {
+      "message": "Páginas web que ofrecen juegos en línea e información relacionada, tales como trampas, códigos, demos, emuladores, concursos en línea o juegos de rol, grupos de videojugadores, sitios de fabricantes de juegos, ligas deportivas de fantasía o virtuales y otros sitios de videojuegos sin oportunidad de lucro. Esta categoría incluye consolas de videojuegos, como Microsoft Xbox® y Sony PlayStation®."
+   },
+   "category_id_116_name": {
+      "message": "Juegos"
+   },
+   "category_id_117_description": {
+      "message": "Páginas web cuyo contenido es mantenido por organizaciones gubernamentales o militares, tales como poderes o agencias gubernamentales, departamentos de policía, departamentos de bomberos, defensa civil, organizaciones que luchan contra el terrorismo o u organizaciones supranacionales, como Naciones Unidas o la Unión Europea. Esta categoría incluye establecimientos de atención médica para militares y veteranos."
+   },
+   "category_id_117_name": {
+      "message": "Administración pública/Ejército"
+   },
+   "category_id_118_description": {
+      "message": "Páginas web que McAfee crea que proveen instrucciones o de otro modo facilitan fraudes, delitos o actividades maliciosas de tipo informático. Esta categoría incluye páginas web relacionadas con delitos informáticos que incluyen información maliciosa para piratería o herramientas que ayudan a las personas a obtener acceso no autorizado a computadoras y redes (rootkits, kiddy scripts). Esta categoría también incluye otros ámbitos del fraude electrónico, como las estafas de marcadores telefónicos y la manipulación ilegal de dispositivos electrónicos."
+   },
+   "category_id_118_name": {
+      "message": "Hacking/delitos informáticos potenciales"
+   },
+   "category_id_119_description": {
+      "message": "Páginas web que abarcan todo tipo de información sobre salud y servicios de atención médica. Información sobre salud incluye temas para mejorar el bienestar de una persona, ya sea para la salud física o mental (dieta, nutrición, condición deportiva o crianza). Servicios de atención médica incluyen proveedores tales como seguros médicos, hospitales, clínicas y médicos independientes."
+   },
+   "category_id_119_name": {
+      "message": "Salud"
+   },
+   "category_id_120_description": {
+      "message": "Páginas web que proporcionan contenido cómico o gracioso. Esta categoría incluye sitios con bromas, sketches, cómics y páginas de sátira. Esta categoría puede incluir también contenido de novelas gráficas, que se suele asociar con los cómics."
+   },
+   "category_id_120_name": {
+      "message": "Humor/Cómics"
+   },
+   "category_id_121_description": {
+      "message": "Páginas web que McAfee crea que proporcionan información que fomenta explícitamente la opresión o la discriminación de un grupo específico de personas. Esta categoría incluye promover una agenda contra grupos con base en la raza, religión, nacionalidad, sexo, edad, discapacidad u orientación sexual. Esta categoría puede incluir partidos políticos y organizaciones con una agenda de odio específica, así como ciberacoso cuando es extremo."
+   },
+   "category_id_121_name": {
+      "message": "Discriminación"
+   },
+   "category_id_122_description": {
+      "message": "Páginas web que proporcionan software para la comunicación en tiempo real mediante una red exclusiva para usuarios que se unieron a una lista de contactos de un miembro o a una sesión de mensajería instantánea. La mayoría de los software de mensajería instantánea incluyen funciones como transferencia de archivos, llamadas telefónicas entre computadoras y pueden rastrear cuando otras personas inician y cierran sesión. Estos sitios también pueden generar inquietudes acerca de la fuga de información confidencial, contenido cuestionable o uso compartido de archivos."
+   },
+   "category_id_122_name": {
+      "message": "Mensajería instantánea"
+   },
+   "category_id_123_description": {
+      "message": "Páginas web que ofrecen comprar, vender o comercializar acciones en línea. Esta categoría también incluye información en pantallas informativas que permite visualizar los precios de las acciones en tiempo real y realizar apuestas financieras en el mercado bursátil. Otros tipos de apuestas se encuentran en la categoría de Apuestas. Esta categoría no incluye sitios que ofrecen información sobre acciones, pero que no ofrecen comprar, vender o comercializar acciones."
+   },
+   "category_id_123_name": {
+      "message": "Transacciones bursátiles"
+   },
+   "category_id_124_description": {
+      "message": "Páginas web que proveen software o acceso a la emisión continua de audio o video, como la radio por internet, la programación televisiva o la emisión de podcasts."
+   },
+   "category_id_124_name": {
+      "message": "Radio/TV por Internet"
+   },
+   "category_id_125_description": {
+      "message": "Páginas web relacionadas con una búsqueda de empleo que incluya sitios enfocados en la redacción de curriculum vitae, entrevistas, cambios de carrera profesional, anuncios clasificados y grandes bases de datos de empleos vacantes. Esta categoría también incluye páginas web corporativas con listas de empleos vacantes, sitios de comparación salarial, empleo temporal y sitios de puestos vacantes de una empresa."
+   },
+   "category_id_125_name": {
+      "message": "Búsqueda de empleo"
+   },
+   "category_id_126_description": {
+      "message": "Páginas web que proveen de manera legítima información sobre la protección de datos. Esta categoría incluye información detallada para salvaguardar datos empresariales o personales, la propiedad intelectual, la privacidad y la infraestructura en internet, redes privadas u otros servicios de banda ancha, como las telecomunicaciones. Los posibles riesgos incluyen Hacking/delitos informáticos potenciales. Los sitios con contenido de alto riesgo y sin distinción clara entre delincuencia informática (\"black hat\") y hacking ético (\"white hat\") pueden estar también en esta categoría y en la de Hacking/delitos informáticos potenciales. Algunos contenidos pueden explotarse para vulnerar la seguridad o cometer actos ilícitos."
+   },
+   "category_id_126_name": {
+      "message": "Protección de datos"
+   },
+   "category_id_127_description": {
+      "message": "Páginas web enfocadas en la interacción social, como las citas, amistades, reuniones escolares, amigos por correspondencia, servicios de acompañamiento o presentación de posibles cónyuges en línea. Esta categoría incluye varios sitios que permiten a sus miembros interactuar socialmente mediante la publicación de mensajes en tiempo real. Los sitios de esta categoría también pueden permitir el contacto con partes no deseadas y perfiles de miembros que contienen información cuestionable."
+   },
+   "category_id_127_name": {
+      "message": "Redes sociales"
+   },
+   "category_id_128_description": {
+      "message": "Páginas web que venden materiales audiovisuales, software o herramientas para teléfonos móviles que pueden descargarse y entregarse en teléfonos móviles. Algunos ejemplos son tonos de llamada, logotipos/aspectos, juegos, protectores de pantalla, melodías basadas en texto y software para SMS, MMS, WAP y otros protocolos de telefonía móvil."
+   },
+   "category_id_128_name": {
+      "message": "Teléfonos móviles"
+   },
+   "category_id_129_description": {
+      "message": "Páginas web que proveen archivos de audio o video para descargar, en formatos tales como MP3, WAV, AVI y MPEG. Los archivos se guardan en la computadora del usuario y desde allí se reproducen."
+   },
+   "category_id_129_name": {
+      "message": "Descargas multimedia"
+   },
+   "category_id_130_description": {
+      "message": "Páginas web que despliegan código diseñado específicamente para apropiarse de la configuración o la actividad de su computadora. Esta categoría incluye aplicaciones que se instalan por sí mismas (llamadas descargas ocultas de archivos ejecutables), troyanos y virus que explotan las vulnerabilidades de seguridad en navegadores u otras aplicaciones. Una página web puede perder posteriormente su estatus malicioso y pasar a otra categoría. Los sitios maliciosos pretenden actuar en otra computadora para causar daños."
+   },
+   "category_id_130_name": {
+      "message": "Sitios maliciosos"
+   },
+   "category_id_131_description": {
+      "message": "Páginas web que proveen acceso (http://) a grupos de noticias de Usenet y archivos comprimidos cargados en grupos de noticias. Esta categoría también incluye grupos en línea que ofrecen la publicación de contenido comunitario similar. Las URL en esta categoría pueden incluir contenido ofensivo."
+   },
+   "category_id_131_name": {
+      "message": "Noticias de Usenet"
+   },
+   "category_id_132_description": {
+      "message": "Páginas web que tienen imágenes no pornográficas del cuerpo humano desnudo. Esta categoría incluye pinturas y esculturas clásicas, fotografías artísticas de desnudos, algunas imágenes de naturismo e ilustraciones médicas detalladas."
+   },
+   "category_id_132_name": {
+      "message": "Desnudos"
+   },
+   "category_id_133_description": {
+      "message": "Páginas web de grupos caritativos o educativos que cumplen una misión declarada y se benefician de la comunidad en general, tales como clubes, grupos de presión, comunidades, organizaciones sin ánimo de lucro, sindicatos de trabajadores y grupos de defensa. Algunos ejemplos son los masones, los Elks, los Boy Scouts, las Girl Scouts o los Big Brothers."
+   },
+   "category_id_133_name": {
+      "message": "Organizaciones sin ánimo de lucro/Grupos de defensa/ONG"
+   },
+   "category_id_134_description": {
+      "message": "Páginas web que proveen medios de noticias en línea, tales como la emisión y publicación de noticias internacionales o regionales. Esta categoría incluye portales que proveen contenido informativo."
+   },
+   "category_id_134_name": {
+      "message": "Noticias generales"
+   },
+   "category_id_136_description": {
+      "message": "Páginas web que venden productos o servicios en línea. Páginas web que venden una amplia gama de productos que pueden conllevar un riesgo para los usuarios al ofrecer acceso a elementos que normalmente están en otras categorías, como Pornografía, Armas, Desnudos o Violencia. Algunos sitios pueden ofrecer acceso a elementos en otras categorías, tales como Pornografía y Armas."
+   },
+   "category_id_136_name": {
+      "message": "Compras online"
+   },
+   "category_id_137_description": {
+      "message": "Páginas web con imágenes que contienen atuendos atractivos o reveladores, lencería y trajes de baño o colecciones de fotografías de supermodelos o celebridades, pero que no implican desnudos."
+   },
+   "category_id_137_name": {
+      "message": "Atuendos provocativos"
+   },
+   "category_id_138_description": {
+      "message": "Páginas web que permiten el intercambio de archivos entre computadoras y usuarios para uso profesional o personal, como música descargable. Los clientes P2P permiten a los usuarios buscar e intercambiar archivos en una red punto a punto. Suelen incluir spyware o capacidades de chat en tiempo real. Esta categoría incluye páginas web de BitTorrent."
+   },
+   "category_id_138_name": {
+      "message": "P2P/Uso compartido de archivos"
+   },
+   "category_id_139_description": {
+      "message": "Páginas web que abarcan partidos políticos, personalidades de la vida política y opinión de diversos temas. Esta categoría también puede abarcar legislación y opinión política en materia de drogas. Esta categoría incluye URL para partidos políticos, campañas políticas y opiniones sobre diversos temas, entre ellos debates políticos."
+   },
+   "category_id_139_name": {
+      "message": "Politica/Opinión"
+   },
+   "category_id_140_description": {
+      "message": "Páginas de inicio personales que comparten un dominio común, tales como las alojadas por ISP, servidores universitarios/educativos o hosts gratuitos de páginas web. Esta categoría también incluye dominios particulares que contienen información personal, tales como una página web personal. Las páginas web personales pueden incluir contenido ofensivo."
+   },
+   "category_id_140_name": {
+      "message": "Páginas personales"
+   },
+   "category_id_141_description": {
+      "message": "Páginas web que sirven como puertas de enlace o directorios principales de contenido en la web. Varios portales también proveen una variedad de funciones o servicios del sitio interno, tales como motores de búsqueda, correo electrónico, noticias y entretenimiento. Los sitios de listas de distribución de correo con una variedad de contenido están en esta categoría."
+   },
+   "category_id_141_name": {
+      "message": "Portales"
+   },
+   "category_id_142_description": {
+      "message": "Páginas web que proporcionan acceso remoto a un programa, servicio en línea o un sistema informático entero. Aunque el acceso remoto se suele usar de manera legítima para ejecutar una computadora desde una ubicación remota, crea un riesgo para la seguridad, como puede ser un acceso de puerta trasera. El acceso de puerta trasera, escrito por el programador original, permite que otro controle el sistema sin que el usuario lo sepa."
+   },
+   "category_id_142_name": {
+      "message": "Acceso remoto"
+   },
+   "category_id_143_description": {
+      "message": "Páginas web con contenido relacionado con temas religiosos y creencias en la espiritualidad humana que no se encuentran entre las principales religiones. Esta categoría incluye debate, creencias, artículos e información religiosa para congregaciones o grupos locales, tales como la página web de una iglesia, a menos que el sitio ya se encuentre en la categoría de Principales religiones del mundo. Esta categoría también incluye religión comparativa o sitios que incluyen religiones e ideologías."
+   },
+   "category_id_143_name": {
+      "message": "Religión/Ideología"
+   },
+   "category_id_144_description": {
+      "message": "Páginas web que aprovechan recursos informáticos inactivos o sin usar para centrarse en una tarea común. La tarea puede ser a nivel empresarial o internacional. Ejemplos bien conocidos son el programa SETI y el Proyecto Genoma Humano, que hacen uso del tiempo inactivo de miles de computadoras ofrecidas voluntariamente para analizar datos."
+   },
+   "category_id_144_name": {
+      "message": "Uso compartido de recursos"
+   },
+   "category_id_145_description": {
+      "message": "Páginas web que proveen resultados de búsqueda que permiten a los usuarios encontrar información en internet mediante palabras clave."
+   },
+   "category_id_145_name": {
+      "message": "Motores de búsqueda"
+   },
+   "category_id_146_description": {
+      "message": "Páginas web relacionadas con deportes profesionales o recreativos organizados. Esta categoría incluye noticias de deportes, eventos e información como consejos y estrategias de juego, puntajes de juego o intercambio entre jugadores."
+   },
+   "category_id_146_name": {
+      "message": "Deportes"
+   },
+   "category_id_147_description": {
+      "message": "Páginas web que proveen contenido multimedia o contienen complementos de software para mostrar datos de audio e imagen antes de que se haya transmitido el archivo completo."
+   },
+   "category_id_147_name": {
+      "message": "Transmisión multimedia en tiempo real"
+   },
+   "category_id_148_description": {
+      "message": "Páginas web que son depósitos de copias descargables de shareware y freeware. El shareware se distribuye mediante un sistema de honor, según el cual el shareware se entrega de forma gratuita, pero el autor solicita un pequeño pago si el programa es adecuado y se usa periódicamente. El freeware es software que está disponible sin costo alguno."
+   },
+   "category_id_148_name": {
+      "message": "Shareware/Freeware"
+   },
+   "category_id_149_description": {
+      "message": "Páginas web que McAfee cree que contienen materiales destinados a estimular el interés sexual o ser eróticos. Esta categoría incluye páginas de fetiches, animación, caricaturas, historias y pornografía ilegal."
+   },
+   "category_id_149_name": {
+      "message": "Pornografía"
+   },
+   "category_id_150_description": {
+      "message": "Páginas web que infringen la privacidad y la seguridad personal o corporativa. Esta categoría incluye:\u003Cbr/>\u003Cbr/>\u003Cul>\u003Cli>URL que descargan software o ejecutan programas que recopilan información del usuario y la envían a un tercero sin el conocimiento o consentimiento explícito del usuario.\u003C/li>\u003Cli>Software que monitorea o rastrea la actividad en la computadora de otros al registrar las teclas pulsadas (keylogger).\u003C/li>\u003Cli>Sitios que distribuyen software que contiene spyware o adware.\u003C/li>\u003C/ul>Esta categoría es diferente de la categoría de Sitios maliciosos, debido a su intención. El spyware y los keyloggers recopilan y envían información a otra parte de manera encubierta. Un sitio malicioso que pretende instalar software o actuar sin la aprobación o el conocimiento del usuario."
+   },
+   "category_id_150_name": {
+      "message": "Spyware / Adware / Registradores de pulsaciones de teclado"
+   },
+   "category_id_151_description": {
+      "message": "Páginas web que venden, promueven o defienden el uso de productos de tabaco, parafernalia de tabaco, lo que incluye cigarrillos, puros, pipas, tabaco en polvo y para masticar."
+   },
+   "category_id_151_name": {
+      "message": "Tabaco"
+   },
+   "category_id_152_description": {
+      "message": "Páginas web que promueven viajes personales o de negocios, tales como hoteles, centros turísticos, aerolíneas, transportación terrestre, renta de autos, agencias de viaje e información general turística y de viaje. Esta categoría también incluye sitios para comprar boletos o alojamiento."
+   },
+   "category_id_152_name": {
+      "message": "Viajes"
+   },
+   "category_id_153_description": {
+      "message": "Páginas que contienen imágenes reales o realistas o texto que presenta, describe o promueve agresiones físicas contra personas, animales o instituciones, tales como representaciones de guerra, suicidio, mutilaciones o desmembramientos."
+   },
+   "category_id_153_name": {
+      "message": "Violencia"
+   },
+   "category_id_154_description": {
+      "message": "Páginas que proveen alojamiento de anuncios o programas que crean anuncios. Algunos ejemplos son vínculos, código fuente o applets para banners, ventanas emergentes y otros tipos de anuncios generados de manera estática o dinámica que aparecen en páginas web. Esta categoría está prevista para el bloqueo de anuncios en páginas web, no de las compañías que proveen anuncios o servicios de publicidad."
+   },
+   "category_id_154_name": {
+      "message": "Publicidad web"
+   },
+   "category_id_155_description": {
+      "message": "Páginas web que proveen información sobre la compra, fabricación, modificación o uso de armas, tales como pistolas, cuchillos, espadas, pistolas de bolas de pintura y municiones, explosivos y accesorios para armas."
+   },
+   "category_id_155_name": {
+      "message": "Armas"
+   },
+   "category_id_156_description": {
+      "message": "Páginas web que permiten a los usuarios enviar o recibir correo electrónico a través de internet. Estos sitios pueden exponer a los usuarios a contenido perjudicial entregado mediante archivos adjuntos de correo electrónico, o pueden presentar un riesgo para la seguridad, como la fuga o la pérdida de datos privados."
+   },
+   "category_id_156_name": {
+      "message": "Correo web"
+   },
+   "category_id_157_description": {
+      "message": "Páginas web que permiten a los usuarios hacer llamadas telefónicas a través de internet u obtener información o software para este fin. El servicio de telefonía web también se denomina telefonía por internet o VoIP. El servicio de telefonía web incluye servicios de PC a PC, PC a teléfono y teléfono a teléfono que se conectan mediante redes TCP/IP."
+   },
+   "category_id_157_name": {
+      "message": "Telefonía por Internet"
+   },
+   "category_id_158_description": {
+      "message": "Páginas web que proveen la oferta y venta en línea de artículos o servicios. Esta categoría incluye páginas web que se enfocan en la oferta y venta. Las subastas en línea rara vez se monitorean. Estos sitios pueden exponer a los usuarios a material que también se encuentra en categorías como Pornografía, Armas, Desnudos o Violencia."
+   },
+   "category_id_158_name": {
+      "message": "Subastas/Anuncios por palabras"
+   },
+   "category_id_159_description": {
+      "message": "Páginas web que proveen acceso (http://) a grupos de noticias de Usenet o mantienen debates y publican contenido generado por usuarios, tales como la publicación de mensajes en tiempo real para un grupo de interés. Esta categoría también incluye archivos comprimidos cargados en grupos de noticias."
+   },
+   "category_id_159_name": {
+      "message": "Foros/Tablones de anuncios"
+   },
+   "category_id_160_description": {
+      "message": "Páginas web que contienen lenguaje o gestos crudos, vulgares u obscenos."
+   },
+   "category_id_160_name": {
+      "message": "Obscenidades"
+   },
+   "category_id_161_description": {
+      "message": "Páginas que promueven el plagio y el engaño al proveer artículos, ensayos escritos o respuestas de exámenes de manera gratuita o mediante un pago."
+   },
+   "category_id_161_name": {
+      "message": "Fraude académico"
+   },
+   "category_id_162_description": {
+      "message": "Páginas web que describen o muestran actos sexuales, aunque no están destinadas a despertar el interés sexual o ser eróticas. Algunos ejemplos de materiales sexuales son los relativos a la educación sexual, connotaciones sexuales, humor o mercancía relacionada con el sexo."
+   },
+   "category_id_162_name": {
+      "message": "Material sexual"
+   },
+   "category_id_163_description": {
+      "message": "Páginas web con contenido que puede considerarse de mal gusto, grosero, chocante o macabro. Esta categoría incluye los chistes de mal gusto, las funciones excretoras corporales, fotografías gráficas de escenas médicas o accidentes (que contienen sangre o heridas), formas extremas de modificación corporal (cortes, marcado o piercing genital) o representaciones chocantes de tratamiento animal inhumano."
+   },
+   "category_id_163_name": {
+      "message": "Contenido repulsivo"
+   },
+   "category_id_164_description": {
+      "message": "Páginas web que proveen resultados de búsquedas de imágenes específicas, tales como imágenes en miniatura."
+   },
+   "category_id_164_name": {
+      "message": "Motor de búsqueda visual"
+   },
+   "category_id_165_description": {
+      "message": "Páginas web con un enfoque técnico o comercial que proveen la publicación de mensajes en línea o chat en tiempo real, tales como soporte técnico o comunicación empresarial interactiva. Aunque los usuarios pueden publicar cualquier tipo de contenido, estos foros tienden a presentar menos riesgo de incluir contenido ofensivo. Los sitios que ofrecen una variedad de foros con temas que incluyen contenido técnico y comercial se encuentran solo en las categorías de Foro/Tablones de anuncios o Chat. Los foros con un enfoque principal técnico o comercial solo se encuentran en la categoría de Foros técnicos/de negocios."
+   },
+   "category_id_165_name": {
+      "message": "Foros técnicos/de negocios"
+   },
+   "category_id_166_description": {
+      "message": "Páginas web que ofrecen información sobre apuestas sin proporcionar los medios para apostar. Esta categoría incluye páginas web relacionadas con casinos que no ofrecen apuestas en línea, vínculos a apuestas, elecciones deportivas, resultados de lotería y carreras de caballos, autos o botes."
+   },
+   "category_id_166_name": {
+      "message": "Relacionado con apuestas"
+   },
+   "category_id_167_description": {
+      "message": "Páginas web que proveen mensajería de texto. Algunos ejemplos son mensajería de texto a teléfonos móviles, localizadores personales, máquinas de fax y mensajería interna de un sitio web entre usuarios o mensajería entre sitios."
+   },
+   "category_id_167_name": {
+      "message": "Mensajería"
+   },
+   "category_id_168_description": {
+      "message": "Páginas web que proveen representaciones fantasiosas o ficticias de violencia en el contexto de juegos, cómics, caricaturas o novelas gráficas. Esta categoría incluye imágenes y descripciones textuales de agresiones físicas o combate cuerpo a cuerpo y lesiones graves y destrucción causadas por armas o explosivos."
+   },
+   "category_id_168_name": {
+      "message": "Violencia en juegos/dibujos animados"
+   },
+   "category_id_169_description": {
+      "message": "Vínculos a páginas web que suelen llegar en un correo electrónico engañoso, establecidas para robar la información de la cuenta del usuario. Estos sitios se representan a sí mismos de manera falsa y se presentan como páginas web de empresas legítimas con el fin de engañar y obtener información de las cuentas de usuarios para cometer fraude o robo."
+   },
+   "category_id_169_name": {
+      "message": "Phishing"
+   },
+   "category_id_170_description": {
+      "message": "Páginas web que permiten a los usuarios cargar carpetas y archivos a un servidor de red en línea para hacer copias de seguridad, compartir, editar o recuperar archivos o carpetas de cualquier navegador web."
+   },
+   "category_id_170_name": {
+      "message": "Almacenamiento en red personal"
+   },
+   "category_id_171_description": {
+      "message": "Vínculos a páginas web que llegan en correos electrónicos de spam, no solicitados. El contenido de las URL spam va desde la comercialización de productos hasta sitios potencialmente ofensivos y fraudulentos. Esta categoría incluye sitios construidos solo para fines de spam, tales como los blogs de spam o los comentarios spam."
+   },
+   "category_id_171_name": {
+      "message": "URL de spam"
+   },
+   "category_id_172_description": {
+      "message": "Páginas web que proveen acceso a aplicaciones web en vivo o interactivas, tales como suites de escritorio y programas informáticos compartidos. Esta categoría incluye sitios con enfoque empresarial, académico o individual."
+   },
+   "category_id_172_name": {
+      "message": "Aplicaciones web interactivas"
+   },
+   "category_id_174_description": {
+      "message": "Páginas web que comercializan ropa, cosméticos, joyería y otros productos accesorios o servicios de moda. Esta categoría también incluye revisiones, comparaciones e información general para el consumidor sobre productos y servicios tales como estéticas, salones de bronceado, estudios de tatuaje y estudios de piercing."
+   },
+   "category_id_174_name": {
+      "message": "Moda/Belleza"
+   },
+   "category_id_175_description": {
+      "message": "Páginas web relacionadas con software y hardware de computadora, que incluye proveedores, venta de productos y revisiones, instalación y mantenimiento de software y hardware y actualizaciones de software y complementos tales como scripts, complementos plug-in y controladores. El hardware incluye piezas de computadora, accesorios y equipos electrónicos usados con computadoras y redes. Esta categoría incluye la comercialización de software y hardware, y revistas enfocadas en las revisiones de productos de software o hardware o tendencias de la industria."
+   },
+   "category_id_175_name": {
+      "message": "Software/Hardware"
+   },
+   "category_id_176_description": {
+      "message": "Páginas web que McAfee crea que ofrecen información para de manera potencial \"piratear\" o distribuir ilegalmente software o medios electrónicos, tales como música o películas con derechos de autor, la distribución de generadores ilegales de claves de licencia, cracks de software y números de serie."
+   },
+   "category_id_176_name": {
+      "message": "Software ilegal potencial"
+   },
+   "category_id_177_description": {
+      "message": "URL para servidores que alojan imágenes, archivos multimedia o JavaScript para uno o más sitios y están destinadas a acelerar la recuperación de contenido para servidores web existentes, tales como Apache. Los servidores de contenido generalmente no tienen contenido publicado o navegación a través del sitio para navegantes de la web. Los servidores de contenido que alojan imágenes no permiten a los usuarios navegar por las fotografías."
+   },
+   "category_id_177_name": {
+      "message": "Servidor de contenido"
+   },
+   "category_id_178_description": {
+      "message": "Páginas web que proporcionan servicios para la publicación y el mantenimiento de sitios de internet, tales como diseño web, registro de dominios, proveedores de servicio de internet y empresas de banda ancha y telecomunicaciones que proveen servicios web."
+   },
+   "category_id_178_name": {
+      "message": "Servicios por Internet"
+   },
+   "category_id_179_description": {
+      "message": "Páginas web que permiten a los usuarios cargar, buscar y compartir archivos multimedia y fotografías, tales como álbumes de fotografías en línea. Esta categoría abarca los riesgos generales del uso compartido de multimedia, pero no se enfoca en contenido específico. algunas URL también pueden incluir contenido ofensivo."
+   },
+   "category_id_179_name": {
+      "message": "Compartir contenido multimedia"
+   },
+   "category_id_180_description": {
+      "message": "Páginas web que contienen imágenes no pornográficas del cuerpo humano desnudo, como las de las esculturas y pinturas clásicas o las imágenes médicas."
+   },
+   "category_id_180_name": {
+      "message": "Desnudos coyunturales"
+   },
+   "category_id_181_description": {
+      "message": "Páginas web que promueven productos o servicios personales o empresariales en la web, pero no venden sus productos o servicios en línea. Esta categoría incluye sitios web que son generalmente el perfil de una compañía, que describen servicios o productos que no se pueden adquirir directamente de estos sitios. Algunos ejemplos son sitios de fabricantes de automóviles, servicios de fotografía de bodas o servicios de diseño gráfico."
+   },
+   "category_id_181_name": {
+      "message": "Marketing/Comercialización"
+   },
+   "category_id_183_description": {
+      "message": "Páginas web que una vez ofrecían contenido, pero cuyos dominios se vendieron o se abandonaron y ya no están registrados. Los dominios estacionados no alojan su propio contenido, sino que generalmente redireccionan a los usuarios a una página genérica que indica que el nombre de dominio está a la venta, o redirigen a los usuarios a un portal y motor de búsqueda genérico, algunos de los cuales proveen resultados del motor de búsqueda válidos."
+   },
+   "category_id_183_name": {
+      "message": "Dominio reservado"
+   },
+   "category_id_184_description": {
+      "message": "Páginas web que proporcionan revisiones, descripciones y comercializan o venden medicamentos con prescripción, de venta libre, anticonceptivos o suplementos dietéticos."
+   },
+   "category_id_184_name": {
+      "message": "Productos farmacéuticos"
+   },
+   "category_id_185_description": {
+      "message": "Páginas web que proporcionan información sobre restaurantes, bares, servicios de banquetes, comida para llevar y entrega a domicilio, incluido el pedido en línea. Esta categoría incluye sitios que proporcionan información sobre la ubicación, los horarios, los precios y los menús, así como información nutricional relacionada. Esta categoría también incluye guías y revisiones de restaurantes, cafeterías y tiendas de café."
+   },
+   "category_id_185_name": {
+      "message": "Restaurantes"
+   },
+   "category_id_186_description": {
+      "message": "Páginas web que proporcionan información y servicios comerciales o residenciales para bienes inmuebles. Información y servicios incluye la venta y renta de espacios habitacionales o comerciales y guías para departamentos, vivienda y bienes inmuebles, así como información sobre valuación e intermediación. Esta categoría incluye sitios que le permiten navegar por casas modelo."
+   },
+   "category_id_186_name": {
+      "message": "Inmobiliarias"
+   },
+   "category_id_187_description": {
+      "message": "Páginas web para organizaciones e instalaciones recreativas que incluyen contenido destinado a actividades recreativas y hobbies. Esta categoría incluye información sobre albercas públicas, zoológicos, ferias, festivales, parques de diversiones, guías de recreación, caminata, pesca, observación de aves o colección de sellos."
+   },
+   "category_id_187_name": {
+      "message": "Tiempo libre/Hobbies"
+   },
+   "category_id_188_description": {
+      "message": "Páginas web que incluyen contenido dinámico, que suele cambiar, debido a que los usuarios publican o editan contenido en cualquier momento. Esta categoría abarca los riesgos con el contenido dinámico que puede variar de inofensivo a ofensivo. Varios blogs y wikis se enfocan en una temática o asunto. Esta categoría se suele usar con otras, como la de Opiniones controvertidas, Educación/referencia, Deportes, Política/opinión o Desnudos, según el enfoque o tema del sitio. Cierto contenido puede ser ofensivo."
+   },
+   "category_id_188_name": {
+      "message": "Blogs/Wiki"
+   },
+   "category_id_189_description": {
+      "message": "Páginas web que permiten a la gente enviar y recibir tarjetas postales y de felicitación digitales a través de internet. Las tarjetas postales digitales dan mensajes de felicitación o sentimientos, generalmente en ocasiones especiales como cumpleaños o festividades. Algunos sitios de tarjetas postales digitales tienen un directorio de humor para adultos específico. Estos sitios pueden también generar inquietudes sobre la fuga de información confidencial o privada, contenido cuestionable, malware o archivos adjuntos dañinos."
+   },
+   "category_id_189_name": {
+      "message": "Postales digitales"
+   },
+   "category_id_190_description": {
+      "message": "Páginas web que denuncian u ofrecen diferentes interpretaciones de hechos históricos importantes, como la negación del Holocausto. Esta categoría incluye sitios que pueden tener un valor académico legítimo, sin embargo, muchos de estos sitios incluyen la manipulación ilegítima de la historia para fines políticos. Algunas URL en esta categoría pueden tener contenido que se considera ilegal u ofensivo en algunos países."
+   },
+   "category_id_190_name": {
+      "message": "Revisionismo histórico"
+   },
+   "category_id_191_description": {
+      "message": "Páginas web que proporcionan información informática con un enfoque educativo en áreas tales como Tecnología de la información, programación informática y certificación. Algunos ejemplos son los grupos de usuarios de Linux, comandos de UNIX, tutoriales de software o diccionarios de términos técnicos. La mayoría de sitios en esta categoría pueden ser subdirectorios de dominios más grandes."
+   },
+   "category_id_191_name": {
+      "message": "Información técnica"
+   },
+   "category_id_192_description": {
+      "message": "Páginas web que proporcionan el establecimiento de contactos sociales para citas en línea, encontrar pareja, servicios de acompañamiento o presentación de posibles cónyuges. Esta categoría incluye sitios que proveen perfiles personales o grupales y permiten a sus miembros interactuar mediante la comunicación en tiempo real, la publicación de mensajes, boletines públicos y el uso compartido de multimedia. Los sitios de esta categoría también pueden permitir el contacto con partes no deseadas y perfiles de miembros que contienen información cuestionable."
+   },
+   "category_id_192_name": {
+      "message": "Citas/Contactos"
+   },
+   "category_id_193_description": {
+      "message": "Sitios web de fabricantes y distribuidores de vehículos de transporte de consumo, como autos, camionetas, camiones, todoterrenos, motocicletas y scooters. Esta categoría también incluye sitios que proveen la comercialización de productos, revisiones, comparaciones, información de precios, ferias de autos, exposiciones de autos e información general para el consumidor sobre vehículos de motor."
+   },
+   "category_id_193_name": {
+      "message": "Vehículos a motor"
+   },
+   "category_id_194_description": {
+      "message": "Páginas web que proveen relaciones sociales exclusivamente para fines profesionales o comerciales. Esta categoría incluye sitios que proveen perfiles personales y de grupos, y permiten a sus miembros interactuar mediante la comunicación en tiempo real, la publicación de mensajes, boletines públicos y el uso compartido de materiales multimedia. Esta categoría también contiene sitios de alumnos que tienen la función de mantener contactos sociales."
+   },
+   "category_id_194_name": {
+      "message": "Redes profesionales"
+   },
+   "category_id_195_description": {
+      "message": "Páginas web que permiten relaciones sociales para una variedad de propósitos, como amistad, citas, cuestiones profesionales o temas de interés. Estos sitios proveen perfiles personales o de grupos, y permiten la interacción entre sus miembros a través de la comunicación en tiempo real, publicación de mensajes, boletines públicos y uso compartido de materiales multimedia. Los sitios de esta categoría también pueden permitir el contacto con partes no deseadas y perfiles de miembros que contienen información cuestionable."
+   },
+   "category_id_195_name": {
+      "message": "Redes sociales"
+   },
+   "category_id_196_description": {
+      "message": "Páginas web que permiten a los usuarios escribir frases o un bloque de texto para traducirlo de un idioma a otro. Esta categoría incluye también páginas web identificadoras de idiomas."
+   },
+   "category_id_196_name": {
+      "message": "Traductores de texto"
+   },
+   "category_id_197_description": {
+      "message": "Páginas web que alojan encuentros en vivo, videoconferencias y presentaciones interactivas, principalmente para empresas. Los encuentros en la web incluyen generalmente la emisión de audio y video, y permiten la transferencia de datos o compartir aplicaciones de uso administrativo, tales como presentaciones en línea. Las URL en esta categoría pueden presentar riesgos de ancho de banda y riesgos de seguridad, como la pérdida o la fuga de datos privados."
+   },
+   "category_id_197_name": {
+      "message": "Ciberreunión"
+   },
+   "category_id_198_description": {
+      "message": "Páginas web que contienen opiniones que probablemente hieran sensibilidades políticas o sociales e inciten controversia. Mucho de este contenido se encuentra en los extremos de la opinión pública. Algunos ejemplos son pactos suicidas, puntos de vista proanorexia, xenófobos, etnocéntricos, fundamentalistas, desinformación o examen crítico de un grupo de personas."
+   },
+   "category_id_198_name": {
+      "message": "Opiniones controvertidas"
+   },
+   "category_id_199_description": {
+      "message": "Direcciones de IP (y cualquier dominio asociado a ellas) que accedan a internet mediante módems DSL o módems de cable. Debido a que este contenido por lo general no está destinado al acceso a internet mediante HTTP, el acceso a internet a través de estas direcciones IP puede indicar conducta sospechosa. Esta conducta puede estar relacionada con malware ubicado en la computadora doméstica o en puertas desarrolladas internamente establecidas para permitir el acceso anónimo a internet."
+   },
+   "category_id_199_name": {
+      "message": "Direcciones IP residenciales"
+   },
+   "category_id_200_description": {
+      "message": "Un exploit de navegador es una pieza de código que explota un error de software en un navegador web para que el código haga que el navegador realice algo imprevisto, como dejar de ejecutarse, leer o escribir archivos locales, propagar un virus o instalar spyware. El código malicioso puede explotar las tecnologías HTML, JavaScript, Images, ActiveX, Java y otras tecnologías web. Los exploits, a veces denominados descargas ocultas, pueden instalarse a sí mismos en computadoras sin protección, con frecuencia sin que el consumidor lo sepa, en donde el código puede instalar registradores de pulsaciones (para robar contraseñas) y troyanos (para convertir una computadora en un \"bot\"). Esta categoría incluye URL que distribuyen o ejecutan cualquier exploit de navegador."
+   },
+   "category_id_200_name": {
+      "message": "Exploits del navegador"
+   },
+   "category_id_201_description": {
+      "message": "Sitios web que tratan de robar o engañar a los consumidores. Algunos ejemplos de sus actividades incluyen vender productos falsificados, vender productos que originalmente se proporcionaron gratuitamente o usar de manera inadecuada la marca de otra empresa. Esta categoría incluye sitios web que explotan la generosidad o la ignorancia, por ejemplo al recaudar de manera fraudulenta dinero para una organización caritativa o ejecutar esquemas de inversión fraudulentos. Esta categoría también incluye sitios en los que varios consumidores reportaron haber sido estafados o que no recibieron los servicios."
+   },
+   "category_id_201_name": {
+      "message": "Protección del consumidor"
+   },
+   "category_id_202_description": {
+      "message": "Páginas web que incluyen contenido de abuso sexual infantil alojadas en cualquier lugar del mundo, y páginas con contenido delictivamente obsceno e incitación al odio racial alojadas en el Reino Unido."
+   },
+   "category_id_202_name": {
+      "message": "Ilegal en el Reino Unido"
+   },
+   "category_id_203_description": {
+      "message": "Páginas web con contenido sobre temas religiosos e información relacionada con las principales religiones. Esta categoría incluye sitios que abarcan contenido religioso, tales como debate, creencias, comentarios no controversiales, artículos e información para congregaciones locales, como la página web de una iglesia o sinagoga. Las religiones en esta categoría son el bahaísmo, budismo chino tradicional, cristianismo, hinduismo, islam, jainismo, judaísmo, sintoísmo, sijismo, tenrikyo, zoroastrismo."
+   },
+   "category_id_203_name": {
+      "message": "Principales religiones del mundo"
+   },
+   "category_id_204_description": {
+      "message": "Páginas que permiten a un usuario descargar de manera involuntaria código dañino o molesto. Esta categoría incluye archivos descargables, tales como protectores de pantalla, barras de herramientas y programas para compartir archivos que contienen adware, spyware, virus y otros códigos informáticos maliciosos. A veces, el malware se añade sin que el usuario lo sepa, como cuando hace clic en \"Sí\" o \"Acepto\" sin leer los términos y condiciones completos. Los efectos pueden incluir la disminución de la velocidad de la computadora, el robo de contraseñas y la pérdida o el daño de archivos personales valiosos."
+   },
+   "category_id_204_name": {
+      "message": "Descargas maliciosas"
+   },
+   "category_id_205_description": {
+      "message": "Páginas web que contienen programas potencialmente no deseados (PUP). Los PUP se suelen hacer para un objetivo benéfico, pero alteran la seguridad de una computadora o la privacidad del usuario de la computadora. Los usuarios de computadoras que se preocupan por la seguridad o la privacidad pueden querer estar informados sobre este software y, en algunos casos, querrán eliminar este software de sus computadoras."
+   },
+   "category_id_205_name": {
+      "message": "PUP"
+   },
+   "category_id_600_description": {
+      "message": "Páginas web que son seguras para las familias, en especial para niños de aproximadamente diez años y menos."
+   },
+   "category_id_600_name": {
+      "message": "Para niños"
+   },
+   "category_id_601_description": {
+      "message": "Páginas web que proveen contenido sobre hechos históricos. Esta categoría incluye contenido adecuado para la educación secundaria, pero la categoría de Educación incluye contenido para la educación primaria. Por ejemplo, un sitio con fotografías del Holocausto puede ser ofensivo, pero tiene valor académico."
+   },
+   "category_id_601_name": {
+      "message": "Historial"
+   },
+   "category_id_602_description": {
+      "message": "Tableros de anuncios, salas de chat, motores de búsqueda o sitios de correo web que son supervisados por una persona o un grupo con la autoridad para bloquear mensajes o contenido que se considere inadecuado."
+   },
+   "category_id_602_name": {
+      "message": "Contenido moderado"
+   },
+   "category_id_603_description": {
+      "message": "Contenido que sea solo texto o audio y no incluya imágenes. Esta categoría puede usarse como una excepción para permitir texto explícito y material grabado al que acceder cuando desee imágenes bloqueadas mediante las categorías de Pornografía, Violencia o Material sexual. Las bibliotecas o las universidades pueden usar esta categoría para evitar mostrar imágenes ofensivas en sus instalaciones públicas."
+   },
+   "category_id_603_name": {
+      "message": "Texto/Sonido solamente"
+   },
+   "crypto_allow_desc": {
+      "message": "Cuando bloqueemos el cryptojacking, usted puede elegir permitirlo. No lo recomendamos, pero tiene la opción, si es que desea admitir sitios web que ganan dinero mediante cryptojacking."
+   },
+   "crypto_allow_title": {
+      "message": "¿Desea permitir el cryptojacking?"
+   },
+   "crypto_footer_message1": {
+      "message": "McAfee y el logotipo de McAfee son marcas comerciales o marcas registradas de McAfee, LLC o de sus filiales en los Estados Unidos y otros países."
+   },
+   "crypto_footer_message2": {
+      "message": "El resto de los nombres y las marcas pueden ser propiedad de otras entidades. Copyright ©2020 McAfee, LLC"
+   },
+   "crypto_header_subtitle": {
+      "message": "Ayudamos a impedir que los cryptojackers roben la potencia y los recursos de su computadora."
+   },
+   "crypto_header_title": {
+      "message": "El Bloqueador de cryptojacking está activado"
+   },
+   "crypto_own_desc": {
+      "message": "No necesita poseer ninguna criptomoneda para experimentar el cryptojacking. Los cryptojackers acceden a los recursos de su computadora, no a las criptomonedas que pueda poseer."
+   },
+   "crypto_own_title": {
+      "message": "¿Es necesario poseer criptomonedas para ser sometido a cryptojacking?"
+   },
+   "crypto_protect_desc": {
+      "message": "Conserve la extensión de su %PRODUCTNAME% para que nuestro Bloqueador de cryptojacking pueda ayudar a protegerlo de los cryptojackers. Le informaremos cuando bloqueemos intentos de cryptojacking."
+   },
+   "crypto_protect_title": {
+      "message": "¿Cómo puede protegerse a sí mismo?"
+   },
+   "crypto_signs_desc1": {
+      "message": "Navegación lenta"
+   },
+   "crypto_signs_desc2": {
+      "message": "La batería se descarga muy pronto"
+   },
+   "crypto_signs_desc3": {
+      "message": "Ventilador ruidoso"
+   },
+   "crypto_signs_desc4": {
+      "message": "Mayor uso de electricidad"
+   },
+   "crypto_signs_title": {
+      "message": "¿Cuáles son los signos de que lo han sometido a cryptojacking?"
+   },
+   "crypto_title": {
+      "message": "Bloqueador de cryptojacking de McAfee"
+   },
+   "crypto_whatis_point1": {
+      "message": "Los cryptojackers (hackers) acceden a su computadora a través de sitios web mientras navega."
+   },
+   "crypto_whatis_point2": {
+      "message": "Secuestran la potencia de su computadora (su CPU y su memoria) para que los ayude a completar tareas complejas."
+   },
+   "crypto_whatis_point3": {
+      "message": "Obtienen cryptomonedas, que son dinero en línea."
+   },
+   "crypto_whatis_title": {
+      "message": "Qué es el cryptojacking"
+   },
+   "cryptojacking_banner_allow_btn": {
+      "message": "Permitir cryptojacking en este sitio"
+   },
+   "cryptojacking_banner_learn_more": {
+      "message": "Más información."
+   },
+   "cryptojacking_banner_message": {
+      "message": "Bloqueamos el cryptojacking en este sitio. Los recursos de su computadora están seguros y puede seguir navegando. $cryptojacking_banner_learn_more$",
+      "placeholders": {
+         "cryptojacking_banner_learn_more": {
+            "content": "$1"
+         }
+      }
+   },
+   "iframe_banner_message": {
+      "message": "Evaluamos esta página y el contenido bloqueado que procede de sitios potencialmente peligrosos o sospechosos. Permita este contenido solo si está seguro de que procede de sitios seguros."
+   },
+   "iframe_banner_view_all_btn": {
+      "message": "Ver todo el contenido bloqueado"
+   },
+   "overlay_accept_ss": {
+      "message": "Ahora acepte cambiar su motor de búsqueda a la Búsqueda segura de MAfee®"
+   },
+   "overlay_add_ss": {
+      "message": "Añada la Búsqueda segura de McAfee® a su navegador"
+   },
+   "overlay_ss_description": {
+      "message": "Marcamos los sitios riesgosos en sus resultados de búsqueda, para que sepa cuáles sitios son seguros de visitar y cuáles no."
+   },
+   "overlay_step_1": {
+      "message": "PASO 1"
+   },
+   "overlay_step_2": {
+      "message": "PASO 2"
+   },
+   "phishingdesc": {
+      "message": "Los hackers intentan robarle datos mediante stios web y correos electrónicos de “phishing” que parecen auténticos. Les cortaremos la línea para que no puedan pescarlo."
+   },
+   "phishingtitle": {
+      "message": "Mantenga segura su información personal"
+   },
+   "res_PRODUCT_NAME": {
+      "message": "%PRODUCTNAME%"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED": {
+      "message": "McAfee® WebAdvisor"
+   },
+   "res_PRODUCT_NAME_TRADEMARKED_PPS": {
+      "message": "McAfee® Security"
+   },
+   "search_engine_bing": {
+      "message": "Bing"
+   },
+   "search_engine_yahoo": {
+      "message": "Yahoo"
+   },
+   "search_engine_yandex": {
+      "message": "Yandex"
+   },
+   "search_toast_body_text_compliant": {
+      "message": "¿Le gustaría agregar Búsqueda segura y mantenerse por delante de los malos?"
+   },
+   "search_toast_body_text_test": {
+      "message": "¿Desea añadir Búsqueda segura y saber qué sitios son seguros para visitar?"
+   },
+   "search_toast_done": {
+      "message": "Listo"
+   },
+   "search_toast_heading_compliant": {
+      "message": "No tiene Búsqueda segura: tenga cuidado"
+   },
+   "search_toast_heading_test": {
+      "message": "Obtenga consejos de seguridad en los resultados de sus búsquedas"
+   },
+   "search_toast_no_thanks": {
+      "message": "No, gracias"
+   },
+   "search_toast_ok": {
+      "message": "Aceptar"
+   },
+   "search_toast_option_compliant": {
+      "message": "Sí, añadir Búsqueda segura a mi navegador y cambiar mi búsqueda predeterminada a $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_option_test": {
+      "message": "Sí, añadir Búsqueda segura y cambiar mi búsqueda predeterminada a $search_provider$.",
+      "placeholders": {
+         "search_provider": {
+            "content": "$1"
+         }
+      }
+   },
+   "search_toast_sub_heading_compliant": {
+      "message": "Búsqueda segura elimina los sitios peligrosos de los resultados de sus búsquedas."
+   },
+   "search_toast_sub_heading_test": {
+      "message": "Búsqueda segura lo aleja de los sitios peligrosos de los resultados de sus búsquedas."
+   },
+   "search_toast_yes": {
+      "message": "Sí"
+   },
+   "securesearchdesc": {
+      "message": "Navegue sin preocupaciones con resultados de las búsquedas codificados por colores: le mostraremos qué sitios son seguros y los que despiertan sospechas."
+   },
+   "securesearchtitle": {
+      "message": "Evite los resultados riesgosos en las búsquedas"
+   },
+   "settings_about_adblock": {
+      "message": "Bloquear anuncios y ventanas emergentes que ralentizan su navegador"
+   },
+   "settings_about_adblock_tracking": {
+      "message": "Bloquear las cookies que lo rastrean y recopilan su información"
+   },
+   "settings_about_block_download": {
+      "message": "Bloquear descargas inseguras"
+   },
+   "settings_about_cryptojackers": {
+      "message": "Evitar que $settings_about_cryptojackers_link$ sustraigan recursos de su computadora",
+      "placeholders": {
+         "settings_about_cryptojackers_link": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_cryptojackers_link": {
+      "message": "cryptojackers"
+   },
+   "settings_about_firewall_antivirus": {
+      "message": "Asegurarse de que su firewall y su antivirus estén activados"
+   },
+   "settings_about_flag_website": {
+      "message": "Marcar sitios web peligrosos"
+   },
+   "settings_about_help_link_message": {
+      "message": "Obtener ayuda ahora"
+   },
+   "settings_about_help_message": {
+      "message": "Todos necesitamos que nos echen una mano a veces."
+   },
+   "settings_about_help_title": {
+      "message": "Obtener ayuda y soporte técnico"
+   },
+   "settings_about_privacy_link_message": {
+      "message": "Leer el aviso de privacidad"
+   },
+   "settings_about_privacy_message": {
+      "message": "McAfee se toma muy en serio su privacidad."
+   },
+   "settings_about_privacy_title": {
+      "message": "Aviso de privacidad"
+   },
+   "settings_about_product_affid": {
+      "message": "Id. de afiliada: $affid$",
+      "placeholders": {
+         "affid": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_binary_version": {
+      "message": "Versión binaria: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_extension_version": {
+      "message": "Versión de la extensión: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_about_product_title": {
+      "message": "Versión del producto"
+   },
+   "settings_about_share_title": {
+      "message": "Compartir %PRODUCTNAME% con amigos"
+   },
+   "settings_about_subtitle": {
+      "message": "%PRODUCTNAME% lo ayuda a tomar mejores decisiones acerca de lo que hace en línea."
+   },
+   "settings_about_title": {
+      "message": "ACERCA DE"
+   },
+   "settings_page_title": {
+      "message": "%PRODUCTNAME%"
+   },
+   "settings_preference_annotation_all": {
+      "message": "Comunicarme si un resultado de búsqueda es seguro en cualquier motor de búsqueda."
+   },
+   "settings_preference_annotation_none": {
+      "message": "No comunicarme sobre los resultados de búsquedas."
+   },
+   "settings_preference_annotation_ss": {
+      "message": "Comunicarme si un resultado de búsqueda es seguro solo en Búsqueda segura."
+   },
+   "settings_preference_annotation_subtitle": {
+      "message": "Codificaremos los resultados de sus búsquedas por color para mostrarle los sitios que son seguros."
+   },
+   "settings_preference_annotation_title": {
+      "message": "Búsqueda segura"
+   },
+   "settings_preference_ap_ab_protection_first_point": {
+      "message": "Impide que los anuncios intrusivos y las ventanas emergentes disminuyan el rendimiento de su navegador"
+   },
+   "settings_preference_ap_ab_protection_second_point": {
+      "message": "Excluye las cookies que lo rastrean y recopilan su información"
+   },
+   "settings_preference_ap_ab_title": {
+      "message": "Bloqueador de anuncios y Bloqueados de rastreadores"
+   },
+   "settings_preference_ap_alert_add": {
+      "message": "Agregar"
+   },
+   "settings_preference_ap_alert_allow": {
+      "message": "Permitir"
+   },
+   "settings_preference_ap_alert_disabled": {
+      "message": "No tiene Protección Adicional porque no está activada la extensión de búsqueda segura de McAfee® que la incluye. Actívelo ahora y elija $settings_preference_ap_alert_allow$ cuando se le pida permiso.",
+      "placeholders": {
+         "settings_preference_ap_alert_allow": {
+            "content": "$1"
+         }
+      }
+   },
+   "settings_preference_ap_alert_enable": {
+      "message": "Activar"
+   },
+   "settings_preference_ap_alert_not_installed": {
+      "message": "No tiene Protección Adicional porque no está instalada la extensión de búsqueda segura de McAfee® que la incluye. Agréguela ahora desde la tienda Chrome Web Store."
+   },
+   "settings_preference_ap_ss_protection_first_point": {
+      "message": "Utiliza nuestro servicio de inteligencia de amenazas en la nube para identificar amenazas"
+   },
+   "settings_preference_ap_ss_protection_second_point": {
+      "message": "Resultados de búsqueda codificados por color para mostrarle los sitios que son seguros de visitar"
+   },
+   "settings_preference_ap_ss_protection_third_point": {
+      "message": "Marca los sitios web en los resultados de sus búsquedas que no son seguros de visitar"
+   },
+   "settings_preference_ap_ss_title": {
+      "message": "Búsqueda segura de McAfee"
+   },
+   "settings_preference_ap_subtitle": {
+      "message": "Proteja su privacidad y sus datos."
+   },
+   "settings_preference_ap_title": {
+      "message": "Protección adicional"
+   },
+   "settings_preference_reset_button": {
+      "message": "Restablecer"
+   },
+   "settings_preference_reset_subtitle": {
+      "message": "¿Ignoró una notificación de %PRODUCTNAME% y desearía no haberlo hecho? Restablezca las notificaciones para comenzar a recibir nuevamente todo tipo de mensajes de %PRODUCTNAME%."
+   },
+   "settings_preference_reset_title": {
+      "message": "Restablecer configuración"
+   },
+   "settings_preference_sma_facebook": {
+      "message": "Facebook"
+   },
+   "settings_preference_sma_instagram": {
+      "message": "Instagram"
+   },
+   "settings_preference_sma_linkedin": {
+      "message": "Linkedin"
+   },
+   "settings_preference_sma_message": {
+      "message": "Estos son los sitios en los que anotaremos."
+   },
+   "settings_preference_sma_reddit": {
+      "message": "Reddit"
+   },
+   "settings_preference_sma_subtitle": {
+      "message": "Codificaremos por color los vínculos en sus fuentes de redes sociales para mostrarle los que son seguros."
+   },
+   "settings_preference_sma_title": {
+      "message": "Protección en redes sociales"
+   },
+   "settings_preference_sma_twitter": {
+      "message": "Twitter"
+   },
+   "settings_preference_sma_youtube": {
+      "message": "YouTube"
+   },
+   "settings_preference_title": {
+      "message": "SERVICIOS ADICIONALES"
+   },
+   "settings_statistics_ads_blocked": {
+      "message": "anuncios intrusivos bloqueados"
+   },
+   "settings_statistics_crypto_blocked": {
+      "message": "intentos de cryptojacking bloqueados"
+   },
+   "settings_statistics_downloads_blocked": {
+      "message": "descargas inseguras bloqueadas"
+   },
+   "settings_statistics_downloads_scanned": {
+      "message": "descargas analizadas"
+   },
+   "settings_statistics_links_scanned": {
+      "message": "vínculos analizados"
+   },
+   "settings_statistics_message": {
+      "message": "Esto es lo que hemos hecho hasta ahora:"
+   },
+   "settings_statistics_pages_blocked": {
+      "message": "páginas peligrosas bloqueadas"
+   },
+   "settings_statistics_pages_scanned": {
+      "message": "páginas analizadas"
+   },
+   "settings_statistics_subtitle": {
+      "message": "Estamos aquí para mantenerlo seguro en línea."
+   },
+   "settings_statistics_title": {
+      "message": "ESTADÍSTICAS"
+   },
+   "settings_statistics_trackers_blocked": {
+      "message": "rastreadores bloqueados"
+   },
+   "settings_subtitle": {
+      "message": "Personalice su protección web."
+   },
+   "settings_tab_about": {
+      "message": "Acerca de"
+   },
+   "settings_tab_preference": {
+      "message": "Preferencia"
+   },
+   "settings_tab_statistics": {
+      "message": "Estadísticas"
+   },
+   "settings_tab_whitelist": {
+      "message": "Lista blanca"
+   },
+   "settings_title": {
+      "message": "Protección web"
+   },
+   "settings_whitelist_input": {
+      "message": "Escriba una dirección web…"
+   },
+   "settings_whitelist_title": {
+      "message": "SITIOS EN QUE CONFÍA"
+   },
+   "sidebar_action_panel_settings_link": {
+      "message": "Personalice su $sidebar_action_panel_web_protection_preferences$.",
+      "placeholders": {
+         "sidebar_action_panel_web_protection_preferences": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_action_panel_web_protection_preferences": {
+      "message": "Preferencias de protección web"
+   },
+   "sidebar_adblock_subtitle": {
+      "message": "Así es como lo estamos protegiendo ahora."
+   },
+   "sidebar_adblock_toggle": {
+      "message": "Mostrar anuncios en esta página solo en esta visita"
+   },
+   "sidebar_ads_blocked": {
+      "message": "anuncios intrusivos bloqueados en esta página"
+   },
+   "sidebar_badge_collection_block_page_btn_accept": {
+      "message": "¡Chóquelas!"
+   },
+   "sidebar_badge_collection_block_page_description": {
+      "message": "No sabemos qué es mejor: que logremos ayudar a protegerlo, o que usted mismo ayude a protegerse ($sidebar_badge_collection_block_page_description_italic$)…",
+      "placeholders": {
+         "sidebar_badge_collection_block_page_description_italic": {
+            "content": "$1"
+         }
+      }
+   },
+   "sidebar_badge_collection_block_page_description_italic": {
+      "message": "usted está"
+   },
+   "sidebar_badge_collection_block_page_description_sub": {
+      "message": "Considerémoslo una ganancia para todos."
+   },
+   "sidebar_badge_collection_block_page_phishing_title": {
+      "message": "Ese sitio puede hostigarlo"
+   },
+   "sidebar_badge_collection_block_page_red_title": {
+      "message": "Esas amenazas no conseguirán nada"
+   },
+   "sidebar_badge_collection_block_page_yellow_title": {
+      "message": "Está bloqueado: ¡más vale prevenir que lamentar!"
+   },
+   "sidebar_badge_collection_iframe_block_btn_accept": {
+      "message": "¡Gracias por limpiarlo!"
+   },
+   "sidebar_badge_collection_iframe_block_description": {
+      "message": "Gracias por dejarnos bloquear ese contenido. Ahora volvamos a revisar las cosas que son importantes para usted."
+   },
+   "sidebar_badge_collection_iframe_block_title": {
+      "message": "¡Mantenemos este sitio libre de desorden!"
+   },
+   "sidebar_block_page_actions_description": {
+      "message": "Si elige visitarlo de cualquier manera, añadiremos este sitio a su lista de sitios web de confianza."
+   },
+   "sidebar_block_page_btn_accept_risk": {
+      "message": "Llevarme allí de cualquier manera"
+   },
+   "sidebar_block_page_btn_block": {
+      "message": "Mantenerlo bloqueado"
+   },
+   "sidebar_block_page_description_phishing": {
+      "message": "Parece ser un sitio de \"phishing\". Eso significa que podría enviarle correos electrónicos pretendiendo ser una organización de confianza para engañarlo y hacer que comparta información personal, como contraseñas y datos de tarjetas de crédito."
+   },
+   "sidebar_block_page_description_phishing_variant_2": {
+      "message": "Tendrá que ir a hacer \"phishing\" a otra parte para sustraer información personal, puesto que usted no morderá el anzuelo."
+   },
+   "sidebar_block_page_description_red": {
+      "message": "Estamos aquí para mantenerlo seguro, así que lo detuvimos por varios motivos."
+   },
+   "sidebar_block_page_description_red_variant_2": {
+      "message": "Parece demasiado riesgoso, no enviaríamos allí ni a nuestros peores enemigos (si tuviéramos alguno)."
+   },
+   "sidebar_block_page_description_yellow": {
+      "message": "No estamos 100% seguros, pero lo bloqueamos porque puede que lo atrape con estos tipos de amenazas:"
+   },
+   "sidebar_block_page_description_yellow_variant_2": {
+      "message": "Como manejar sin cinturón de seguridad, ¿por qué arriesgarse?"
+   },
+   "sidebar_block_page_threats_title_phishing": {
+      "message": "Conozca más sobre las amenazas de este sitio web:"
+   },
+   "sidebar_block_page_threats_title_phishing_variant_2": {
+      "message": "Conozca más sobre las amenazas de este sitio web:"
+   },
+   "sidebar_block_page_threats_title_red": {
+      "message": "Este sitio está lleno de estas amenazas:"
+   },
+   "sidebar_block_page_threats_title_red_variant_2": {
+      "message": "Le esperan estos tipos de amenazas:"
+   },
+   "sidebar_block_page_threats_title_yellow": {
+      "message": "Este sitio está lleno de estas amenazas:"
+   },
+   "sidebar_block_page_threats_title_yellow_variant_2": {
+      "message": "Le esperan estos tipos de amenazas:"
+   },
+   "sidebar_block_page_title_phishing": {
+      "message": "Bloqueamos este sitio para que no pueda sustraer su información personal"
+   },
+   "sidebar_block_page_title_phishing_variant_2": {
+      "message": "Este sitio de \"phishing\" está bloqueado"
+   },
+   "sidebar_block_page_title_red": {
+      "message": "Bloqueamos este sitio peligroso"
+   },
+   "sidebar_block_page_title_red_variant_2": {
+      "message": "Este sitio peligroso está bloqueado"
+   },
+   "sidebar_block_page_title_yellow": {
+      "message": "Puede que este sitio web sea una trampa"
+   },
+   "sidebar_block_page_title_yellow_variant_2": {
+      "message": "Este sitio riesgoso está bloqueado"
+   },
+   "sidebar_crypto_blocked": {
+      "message": "intentos de cryptojacking bloqueados"
+   },
+   "sidebar_dangerous_blocked": {
+      "message": "páginas peligrosas bloqueadas"
+   },
+   "sidebar_ds_file_deleted_description": {
+      "message": "Gracias por dejar que nos deshiciéramos de ese archivo antes de que pudiera hacerle daño. ¡Somos un equipo de protección bastante bueno!"
+   },
+   "sidebar_ds_file_deleted_high_five": {
+      "message": "¡Chóquelas!"
+   },
+   "sidebar_ds_file_deleted_title": {
+      "message": "Eliminamos ese archivo perjudicial"
+   },
+   "sidebar_ds_file_not_deleted_description": {
+      "message": "Tal vez tenga mejor suerte si los elimina manualmente. Vaya a la ubicación donde está guardado el archivo e intente eliminarlo desde allí."
+   },
+   "sidebar_ds_file_not_deleted_filename": {
+      "message": "Nombre:"
+   },
+   "sidebar_ds_file_not_deleted_got_it": {
+      "message": "Entendido"
+   },
+   "sidebar_ds_file_not_deleted_location": {
+      "message": "Ubicación:"
+   },
+   "sidebar_ds_file_not_deleted_source": {
+      "message": "Descargar fuente:"
+   },
+   "sidebar_ds_file_not_deleted_title": {
+      "message": "Lo sentimos, no funciona"
+   },
+   "sidebar_ds_malicious_delete_file": {
+      "message": "Eliminarlo"
+   },
+   "sidebar_ds_malicious_file_location": {
+      "message": "Descargar fuente:"
+   },
+   "sidebar_ds_malicious_filename": {
+      "message": "Nombre:"
+   },
+   "sidebar_ds_malicious_first_description": {
+      "message": "Parece que incluye virus, spyware u otros programas potencialmente no deseados."
+   },
+   "sidebar_ds_malicious_keep_file": {
+      "message": "Quiero conservarlo de cualquier manera"
+   },
+   "sidebar_ds_malicious_second_description": {
+      "message": "Si lo eliminamos ahora antes de que lo abra, podemos mantenerlo protegido."
+   },
+   "sidebar_ds_malicious_title": {
+      "message": "El archivo que descargó es peligroso"
+   },
+   "sidebar_everything_looks_good": {
+      "message": "¡Todo parece correcto!"
+   },
+   "sidebar_everything_looks_good_desc": {
+      "message": "Su protección web está activada y velando por usted. ¿Desea revisar su configuración o ver sus estadísticas?"
+   },
+   "sidebar_get_help": {
+      "message": "Obtener ayuda"
+   },
+   "sidebar_go_to_web_protection": {
+      "message": "Vaya a las preferencias de protección web"
+   },
+   "sidebar_iframe_block_accept_risk": {
+      "message": "Quiero verlo de cualquier manera"
+   },
+   "sidebar_iframe_block_btn_block": {
+      "message": "Mantenerlo bloqueado"
+   },
+   "sidebar_iframe_block_description": {
+      "message": "Parece sospechoso y podría causarle daño. Si está seguro de que este contenido es seguro y desea verlo, puede permitirlo."
+   },
+   "sidebar_iframe_block_title": {
+      "message": "Bloqueamos este contenido para mantenerlo seguro"
+   },
+   "sidebar_pages_scanned": {
+      "message": "páginas analizadas"
+   },
+   "sidebar_privacy": {
+      "message": "Aviso de privacidad"
+   },
+   "sidebar_rat_detection_got_it_btn_text": {
+      "message": "Entendido"
+   },
+   "sidebar_rat_detection_information_I": {
+      "message": "El software de este sitio web otorga a otras personas acceso a su PC: los estafadores podrían usarlo obtener secretamente acceso a sus datos personales."
+   },
+   "sidebar_rat_detection_information_II": {
+      "message": "Si le piden que descargue software o que proporcione su información personal, asegúrese de que sea alguien en quien confía."
+   },
+   "sidebar_rat_detection_title": {
+      "message": "Este sitio web permite que otras personas controlen su PC"
+   },
+   "sidebar_rat_detection_whitelist_btn": {
+      "message": "No advertirme sobre este sitio de nuevo"
+   },
+   "sidebar_site_report_description_green": {
+      "message": "Lo analizamos y no encontramos ninguna amenaza."
+   },
+   "sidebar_site_report_description_red": {
+      "message": "Analizamos los sitios web periódicamente en busca de actividad sospechosa y peligrosa. Este no es seguro."
+   },
+   "sidebar_site_report_description_unknown": {
+      "message": "Investigaremos más a fondo y le informaremos si este sitio parece seguro o riesgoso la próxima vez que lo analicemos."
+   },
+   "sidebar_site_report_description_yellow": {
+      "message": "Analizamos este sitio y encontramos que no es tan seguro como debiera ser. Visítelo con precaución."
+   },
+   "sidebar_site_report_threats_title_green": {
+      "message": "Parece que se trata de este tipo de sitio web:"
+   },
+   "sidebar_site_report_threats_title_red": {
+      "message": "Amenazas de sitio web:"
+   },
+   "sidebar_site_report_threats_title_unknown": {
+      "message": "Posible tipo o amenazas de sitio web:"
+   },
+   "sidebar_site_report_threats_title_yellow": {
+      "message": "Amenazas de sitio web:"
+   },
+   "sidebar_site_report_title_green": {
+      "message": "Este sitio parece seguro"
+   },
+   "sidebar_site_report_title_red": {
+      "message": "Este sitio es peligroso"
+   },
+   "sidebar_site_report_title_unknown": {
+      "message": "Se desconoce el estado de seguridad de este sitio"
+   },
+   "sidebar_site_report_title_yellow": {
+      "message": "Este sitio parece riesgoso"
+   },
+   "sidebar_ss_accepted_btn_got_it": {
+      "message": "Entendido"
+   },
+   "sidebar_ss_accepted_description": {
+      "message": "Activó la Búsqueda segura, por lo que ahora podemos mostrarle los sitios que parecen seguros o peligrosos antes de visitarlos."
+   },
+   "sidebar_ss_accepted_sub_description": {
+      "message": "En los resultados de su búsqueda verá iconos codificados por color junto a cada sitio web. Visite con confianza los de color verde y aléjese de los riesgosos de color amarillo y los peligrosos de color rojo."
+   },
+   "sidebar_ss_accepted_title": {
+      "message": "Ahora sabrá qué sitios evitar"
+   },
+   "sidebar_subtitle": {
+      "message": "Esto es lo que hemos hecho hasta ahora:"
+   },
+   "sidebar_terms": {
+      "message": "Términos y condiciones"
+   },
+   "sidebar_title": {
+      "message": "Estamos aquí para ayudarlo a mantenerse seguro en línea."
+   },
+   "sidebar_tracker_blocked": {
+      "message": "rastreadores bloqueados en esta página"
+   },
+   "sidebar_unsafe_blocked": {
+      "message": "elementos inseguros bloqueados"
+   },
+   "sidebar_version": {
+      "message": "Versión"
+   },
+   "sidebar_view_site_report": {
+      "message": "Ver el reporte de sitio web"
+   },
+   "sidebar_view_stats": {
+      "message": "Vea todas las formas en que lo hemos protegido"
+   },
+   "site_report_category_subtitle": {
+      "message": "Categoría de sitio web:"
+   },
+   "site_report_category_title": {
+      "message": "Acerca de este sitio"
+   },
+   "site_report_main_message_danger": {
+      "message": "Analizamos periódicamente los sitios para determinar si hay actividad sospechosa y maliciosa, y este simplemente no es seguro. A continuación, encontrará más información."
+   },
+   "site_report_main_message_safe": {
+      "message": "Revisamos este sitio y todo está correcto. ¡Que lo disfrute!"
+   },
+   "site_report_main_message_unknown": {
+      "message": "No tenemos nada que compartir por el momento. Actualizaremos el nivel de amenaza la próxima vez que analicemos este sitio."
+   },
+   "site_report_main_message_warning": {
+      "message": "Analizamos este sitio y encontramos que no es tan seguro como debiera ser. Haga clic con precaución."
+   },
+   "site_report_main_title": {
+      "message": "Reporte de sitio web"
+   },
+   "site_report_main_url_danger": {
+      "message": "$url$ es peligroso por esta razón",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_safe": {
+      "message": "Parece que $url$ es seguro",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_main_url_unknown": {
+      "message": "Necesitamos indagar más antes de determinar"
+   },
+   "site_report_main_url_warning": {
+      "message": "$url$ podría tener riesgo por esta razón",
+      "placeholders": {
+         "url": {
+            "content": "$1"
+         }
+      }
+   },
+   "site_report_status_rating_danger": {
+      "message": "Muy riesgoso"
+   },
+   "site_report_status_rating_safe": {
+      "message": "Seguro"
+   },
+   "site_report_status_rating_unknown": {
+      "message": "Desconocido"
+   },
+   "site_report_status_rating_warning": {
+      "message": "Ligeramente riesgoso"
+   },
+   "site_report_status_text": {
+      "message": "Estado de sitio web:"
+   },
+   "site_report_title": {
+      "message": "%PRODUCTNAME% - Calificaciones de seguridad de sitios web"
+   },
+   "sma_personalize_button": {
+      "message": "Personalizar mi protección"
+   },
+   "sma_subtitle": {
+      "message": "Nuestra nueva Protección de Redes Sociales codifica con colores los vínculos en los sitios de redes sociales para mostrar lo que son seguros… para asegurar aún más su vida digital."
+   },
+   "sma_title": {
+      "message": "Explore su información con confianza."
+   },
+   "smadesc": {
+      "message": "Navegue por la red con confianza, ya que los códigos de color en los vínculos le indican los que pueden seguirse con seguridad."
+   },
+   "smatitle": {
+      "message": "Sepa qué vínculos son seguros en las redes sociales… y cuáles pueden ser peligrosos."
+   },
+   "ss_first_annotation_desc": {
+      "message": "Navegue sin problemas viendo los resultados de las búsquedas codificados en color: le indicaremos los sitios seguros y los sospechosos."
+   },
+   "ss_first_annotation_title": {
+      "message": "Prevéngase de resultados peligrosos en las búsquedas"
+   },
+   "ss_first_annotation_turn_on": {
+      "message": "Active Búsqueda Segura"
+   },
+   "summarydesc": {
+      "message": "Le mostraremos un resumen actualizado de todos las medidas que hemos tomado para ayudar a mantenerlo seguro mientras explora, busca y hace compras en línea."
+   },
+   "summarytitle": {
+      "message": "Su panel de seguridad en tiempo real"
+   },
+   "typodesc": {
+      "message": "Los hackers crean sitios con direcciones que son casi idénticas a las auténticas para aprovecharse de pequeños errores de tipeo. Lo llevaremos de vuelta a la seguridad si un error en una URL lo conduce fuera del camino. "
+   },
+   "typosquatting_action_accept": {
+      "message": "Aceptar el riesgo y continuar"
+   },
+   "typosquatting_action_back": {
+      "message": "Anterior"
+   },
+   "typosquatting_footer_description": {
+      "message": "Cuando teclea incorrectamente la dirección de un sitio web, puede llegar sin querer a sitios que no pretendía visitar. Estos sitios pueden bombardearlo con scareware o malware, pedirle su información personal, conseguir contraseñas (phishing), entre otras cosas. Estamos aquí para asegurarnos de que evite estos sitios."
+   },
+   "typosquatting_footer_link": {
+      "message": "Lea más sobre el typosquatting"
+   },
+   "typosquatting_footer_title": {
+      "message": "¿Cómo llegué aquí?"
+   },
+   "typosquatting_get_mtp_btn": {
+      "message": "Adquiera McAfee® Total Protection"
+   },
+   "typosquatting_message_button_direct": {
+      "message": "Llevarme allí"
+   },
+   "typosquatting_message_button_search": {
+      "message": "Buscar"
+   },
+   "typosquatting_message_description_direct": {
+      "message": "Deje que %PRODUCTNAME% lo lleve al sitio correcto."
+   },
+   "typosquatting_message_description_search": {
+      "message": "Parece que introdujo una dirección incorrecta. Deje que %PRODUCTNAME% lo guíe al sitio correcto."
+   },
+   "typosquatting_message_title": {
+      "message": "Quiso decir"
+   },
+   "typosquatting_notice_body": {
+      "message": "Estamos manteniéndolo seguro en línea: extienda la protección a todos sus dispositivos con McAfee® Total Protection."
+   },
+   "typosquatting_notice_title_multi_pages": {
+      "message": "Hemos analizado $pagesScanned$ páginas para usted hasta ahora.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_notice_title_single_page": {
+      "message": "Hemos analizado $pagesScanned$ página para usted hasta ahora.",
+      "placeholders": {
+         "pagesScanned": {
+            "content": "$1"
+         }
+      }
+   },
+   "typosquatting_title": {
+      "message": "%PRODUCTNAME%: Typosquatting"
+   },
+   "typotitle": {
+      "message": "No deje que los sitios falsos lo engañen"
+   }
+}
