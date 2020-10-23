@@ -5,7 +5,6 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import os, sys
 import logging
 
-import driver.proxy as proxy
 from driver.session import get_session
 from driver.location import set_location_in_chrome
 
