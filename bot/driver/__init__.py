@@ -1,8 +1,8 @@
 import os
 
-from driver.driver import create_driver, create_driver_with_proxy
-from driver.session import get_session
-from driver.location import set_location, check_location
+from driver import create_driver, create_driver_with_proxy
+from session import get_session
+from location import set_location, check_location
 
 def get_driver(position=None):
     driver = None
