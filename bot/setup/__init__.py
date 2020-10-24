@@ -44,5 +44,5 @@ def timeout_action(_signo, _stack_frame):
 
 def initial_setup():
     check_env()
-    create_dirs()
+    #create_dirs()
     configure_logger()
