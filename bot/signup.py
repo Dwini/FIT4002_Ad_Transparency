@@ -1,7 +1,4 @@
-from selenium.webdriver import Chrome, ChromeOptions
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
@@ -26,12 +23,6 @@ class botCreator:
         self.curBot = Bot(self.strFirstname, self.strLastname, self.strUsername, self.strPassword, self.gender)
 
         # todo: move this to app python file v
-        options = webdriver.ChromeOptions()
-        # need to replace argument with actual one we will be using
-        options.add_argument(r"C:\Users\aiden\AppData\Local\Google\Chrome\User Data")
-        browser = webdriver.Chrome(ChromeDriverManager().install(), options=options)
-        browser.get(
-            'https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fhl%3Den%26sa%3DX%26ved%3D0ahUKEwjbldiThc7pAhVQwzgGHbC3Bw0QPAgH&hl=en&dsh=S-1458628831%3A1590376291910546&gmb=exp&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp')
 
         # define options.
         # print('setting options')
@@ -49,13 +40,7 @@ class botCreator:
         cookie_cta.click()"""
         # todo: move this to app python file ^
 
-        self.tab_entry(browser)
-        self.accountNext(browser)
-        time.sleep(10)
-        self.finalise(browser)
-        self.personalNext(browser)
-        time.sleep(20)
-        browser.close()
+      
         self.successful()
 
     def tabEntry(self, browser):
