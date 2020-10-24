@@ -8,8 +8,6 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 import base64
 import math
-import requests
-import multiprocessing
 import logging
 
 log = logging.getLogger()

@@ -1,12 +1,5 @@
-import pandas as pd
-import time
-import sys
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-from requests_html import HTMLSession
 from time import sleep
 import random
 import logging
