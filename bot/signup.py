@@ -40,7 +40,7 @@ class botCreator:
         cookie_cta.click()"""
         # todo: move this to app python file ^
 
-
+      
         self.successful()
 
     def tabEntry(self, browser):
