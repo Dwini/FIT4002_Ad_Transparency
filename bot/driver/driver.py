@@ -108,8 +108,6 @@ def create_chrome_driver(ip=None, pos=None):
             'disable-zero-browsers-open-for-tests',
             'disable-popup-blocking',
             'enable-automation',
-            'remote-debugging',
-            'remote-debugging-port',
             'test-type',
             'use-mock-keychain',
             'enable-blink-features',
@@ -117,13 +115,8 @@ def create_chrome_driver(ip=None, pos=None):
             'disable-client-side-phishing-detection',
             'disable-hang-monitor',
             'disable-prompt-on-repost',
-            'enable-logging',
-            'password-store',
-            'remote-debugging-targets',
-            'password-store',
-            'remote-debugging',
-            'remote',
-            'debugging'
+            'enable-logging'
+
         ])
 
 
