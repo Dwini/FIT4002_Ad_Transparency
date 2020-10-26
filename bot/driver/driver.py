@@ -4,7 +4,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import os, sys
 import logging
-
+from driver.location import set_location_in_chrome
 
 log = logging.getLogger()
 
