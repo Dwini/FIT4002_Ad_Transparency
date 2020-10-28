@@ -89,12 +89,12 @@ def create_driver_with_proxy(pos):
 
 def create_chrome_driver(ip=None, pos=None):
     chromeOptions = webdriver.ChromeOptions()
-    dirname = os.path.dirname(__file__)
-    user_data = os.path.join(dirname + "/profile")
+    #dirname = os.path.dirname(__file__)
+    user_data = os.path.join(os.getcwd() + "/profile")
 
 
     chromeOptions.add_argument("--user-data-dir=" + user_data)
-    if os.getenv('HEADLESS') == 1:
+    if os.getenv('HEADLESS') == "1":
         chromeOptions.add_argument("--headless")
 
     chromeOptions.add_experimental_option(
