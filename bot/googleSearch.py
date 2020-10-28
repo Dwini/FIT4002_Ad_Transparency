@@ -4,6 +4,7 @@ import pandas as pd
 import time
 from math import floor
 from selenium.webdriver.common.keys import Keys
+from requests_html import HTMLSession
 from time import sleep
 import requests
 from website_traverse import webTraverse
@@ -34,7 +35,8 @@ class googleSearch:
     def search_keywords(self, num_links_to_visit=2):
         #print('seting up profile')
 
-
+        # this sections is for collecting Ads
+        session = HTMLSession()
         ad_list = []  # empty list to store ad details
 
         # Get Keywords
@@ -64,7 +66,7 @@ class googleSearch:
             log.warning("Couldn't find google search box, skipping... ")
 
         try:
-           self.webdriver.get('https://google.com/search?q=' + keyword) # For collecting ads
+            r = session.get('https://google.com/search?q=' + keyword) # For collecting ads
         except:
             log.warning("Could not connect to Google, trying again... ")
 
