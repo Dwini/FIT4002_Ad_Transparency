@@ -66,7 +66,7 @@ def scrape_ad(bot, driver, iframe):
             "html": "innerHTML"
         }, timeout=10)
         r.raise_for_status()
-
+        log.info('Uploaded an Ad: ' + adLink)
     except:
         log.error("Connection for Screenshot failed")
 

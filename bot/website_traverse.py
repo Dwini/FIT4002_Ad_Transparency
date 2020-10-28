@@ -77,8 +77,8 @@ class webTraverse:
                 getGoogleAds(self.driver, self.bot)
 
             if traverseDepth > 0:
-                self.click_local_links(traverseDepth)
                 traverseDepth = traverseDepth - 1
+                self.click_local_links(traverseDepth)
 
             self.random_wait_and_scroll()
 
@@ -137,7 +137,7 @@ class webTraverse:
                     log.info('Clicked a local link')
                     break
                 except:
-                    log.error('Failed to click local link')
+                    continue
 
     def isElementClickable(self, element):
 
