@@ -33,9 +33,9 @@
                 <th>Logged In</th>
               </tr>
               <tr>
-                <td><a href="//{{ data['ad']['link'] }}">{{ data['ad']['link'] }}</a></td>
+                <td><a href="{{ data['ad']['link'] }}">{{ data['ad']['link'] }}</a></td>
                 <td>{{ data['ad']['datetime'] }}</td>
-                <td>{{ data['ad']['current_page'] }}</td>
+                <td><a href="{{ data['ad']['current_page'] }}">{{ data['ad']['current_page'] }}<a></td>
                 <td>{{ data['ad']['logged_in'] }}</td>
               </tr>
             </table>

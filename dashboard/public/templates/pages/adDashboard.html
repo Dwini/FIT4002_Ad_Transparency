@@ -55,9 +55,9 @@
                   <td><a href="//{{ ad['link'] }}">{{ ad['link'] }}</a></td>
                 {% endif %}
                 {% if ad['current_page']|length > 20 %}
-                  <td><a href="//{{ ad['current_page'] }}">{{ ad['current_page'][:20] }}...</a></td>
+                  <td><a href="{{ ad['current_page'] }}">{{ ad['current_page'][:20] }}...</a></td>
                 {% else %}
-                  <td><a href="//{{ ad['current_page'] }}">{{ ad['current_page'] }}</a></td>
+                  <td><a href="{{ ad['current_page'] }}">{{ ad['current_page'] }}</a></td>
                 {% endif %}
                 <td>{{ ad['logged_in'] }}</td>
                 <td>{{ ad['datetime'] }}</td>
