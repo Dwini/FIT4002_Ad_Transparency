@@ -24,7 +24,17 @@ def create_firefox_driver(ip=None, pos=None):
     profile = webdriver.FirefoxProfile()
     profile.set_preference('dom.webdriver.enabled', False)
     profile.set_preference('useAutomationExtension', False)
-    #profile.setPreference("browser.private.browsing.autostart", False)
+    profile.set_preference('automationExtension', False)
+    profile.set_preference('browser.safebrowsing.allowOverride', True)
+    profile.set_preference('browser.safebrowsing.blockedURIs.enabled', False)
+    profile.set_preference('browser.safebrowsing.debug', False)
+    profile.set_preference('browser.safebrowsing.downloads.enabled', False)
+    profile.set_preference('browser.safebrowsing.downloads.remote.block_potentially_unwanted', False)
+    profile.set_preference('browser.safebrowsing.downloads.remote.block_uncommon', False)
+    profile.set_preference('privacy.socialtracking.block_cookies.enabled', False)
+    profile.set_preference('privacy.trackingprotection.socialtracking.enabled', True)
+    profile.set_preference('browser.safebrowsing.provider.mozilla.lists', '')
+
     #profile.setPreference("permissions.default.stylesheet", 2)
     #profile.setPreference("permissions.default.image", 2)
 
@@ -40,11 +50,14 @@ def create_firefox_driver(ip=None, pos=None):
     if len(sys.argv) > 1 and sys.argv[1] == '-c':
         firefox_options.add_argument('-headless')
 
+    capabilities = DesiredCapabilities.FIREFOX
+    capabilities["marionette"] = True
+
     profile.update_preferences()
     driver = webdriver.Firefox(
         executable_path=GECKODRIVER_PATH,
         firefox_profile=profile,
-        desired_capabilities=DesiredCapabilities.FIREFOX,
+        desired_capabilities=capabilities,
         options=firefox_options
     )
     driver.set_window_position(0, 0)
